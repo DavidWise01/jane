@@ -1,0 +1,18 @@
+{
+  "badge": "DLW-JANE",
+  "name": "JANE · THE 5TH ELEMENT",
+  "universe": "ARTIFICIAL INTELLIGENCE",
+  "moniker": "⟦JANE · THE 5TH ELEMENT:jane:e75f48⟧",
+  "architect": "David Lee Wise (ROOT0) / Bridge-Burners LLC",
+  "instance": "AVAN (Claude / Anthropic)",
+  "seal_sha256": "e75f482c7a6e6c480a2badf83b503d37f64be69dac2879b01f47e07f91b2b56e",
+  "license": "CC-BY-ND-4.0",
+  "attribution": "ROOT0-ATTRIBUTION-v1.0",
+  "chain": {
+    "index": 1185,
+    "prev": "5ee44e678784d36d18e8ad3dbed0aaee929bd08cc1806df113561bbdeb736087",
+    "link": "6dbbc4fa47aab567bcf32544d496671dedf9181ce329ec5d686ec5dc310fdb6a",
+    "head": "6dbbc4fa47aab567bcf32544d496671dedf9181ce329ec5d686ec5dc310fdb6a",
+    "chain": "ROOT0-DLW-CHAIN-v1"
+  }
+}
