@@ -1,0 +1,26 @@
+name: JANE B82 bounded governance audit
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "scripts/jane-b82-audit.cjs"
+      - ".github/workflows/jane-b82-first-work.yml"
+      - "governance/JANE-B82-PROVENANCE-CAUSE-HYPOTHESES-v1.0.md"
+permissions:
+  contents: read
+jobs:
+  jane-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Execute bounded read-only kernel audit
+        run: node scripts/jane-b82-audit.cjs
+      - uses: actions/upload-artifact@v4
+        with:
+          name: jane-b82-audit
+          path: b82/audit-report.json
+          if-no-files-found: error
