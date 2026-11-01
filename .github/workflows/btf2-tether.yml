@@ -1,0 +1,38 @@
+name: BTF2 public ecosphere tether
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 5 * * *"
+  push:
+    paths:
+      - "scripts/btf2/index-repos.cjs"
+      - ".github/workflows/btf2-tether.yml"
+permissions:
+  contents: write
+concurrency:
+  group: btf2-catalog
+  cancel-in-progress: false
+jobs:
+  index-public-repositories:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Discover all public repositories
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/btf2/index-repos.cjs
+      - name: Commit only BTF2 public catalog
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add btf2/catalog.json
+          if ! git diff --cached --quiet; then
+            git commit -m "data(btf2): refresh public repo pin catalog"
+            git push
+          fi
