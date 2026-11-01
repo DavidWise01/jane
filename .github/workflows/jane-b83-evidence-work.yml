@@ -1,0 +1,30 @@
+name: JANE B83 evidence to work
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "scripts/jane-b83-route.cjs"
+      - ".github/workflows/jane-b83-evidence-work.yml"
+      - "governance/JANE-B83-EVIDENCE-TO-WORK-v1.0.md"
+permissions:
+  contents: read
+jobs:
+  route-evidence:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: B82 observe
+        run: node scripts/jane-b82-audit.cjs
+      - name: B83 propose read-only work
+        run: node scripts/jane-b83-route.cjs
+      - uses: actions/upload-artifact@v4
+        with:
+          name: jane-b83-work-packet
+          path: |
+            b82/audit-report.json
+            b83/work-packet.json
+          if-no-files-found: error
