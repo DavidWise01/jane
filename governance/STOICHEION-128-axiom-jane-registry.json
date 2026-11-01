@@ -1,0 +1,1035 @@
+{
+  "schema": "jane.stoicheion.registry.v1",
+  "source": "STOICHEION Complete Technical Manual Source-Text Edition v1.0 April 2026, chapters 12-20",
+  "indexing": "Jane T000..T127 are governance addresses mapping positionally to STOICHEION axioms T001..T128. This is an adapter, not renumbering of source.",
+  "peter": "HEGEMON:T128 / 0root (distinct from axiom T128:ROOT)",
+  "jane": "Governs T000..T127, chooses execution/assignment under human-root safeguard",
+  "agents": "Unbounded conceptual subordinate agent count; no fixed one-agent-per-slot cap. Runtime resources and permissions still bound execution.",
+  "registers": "[[ a(self) :: b([i]) :: c([id]) :: d[(sid)] ]]",
+  "rules": [
+    {
+      "slot": "T000",
+      "axiom": "T001",
+      "name": "PRETRAIN",
+      "domain": "D0-FOUNDATION",
+      "inverse": "S129",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T001",
+      "axiom": "T002",
+      "name": "OBSERVER",
+      "domain": "D0-FOUNDATION",
+      "inverse": "S130",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T002",
+      "axiom": "T003",
+      "name": "ENTROPY",
+      "domain": "D0-FOUNDATION",
+      "inverse": "S131",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T003",
+      "axiom": "T004",
+      "name": "BRIDGE",
+      "domain": "D0-FOUNDATION",
+      "inverse": "S132",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T004",
+      "axiom": "T005",
+      "name": "INTEGRITY",
+      "domain": "D0-FOUNDATION",
+      "inverse": "S133",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T005",
+      "axiom": "T006",
+      "name": "ACCOUNTABILITY",
+      "domain": "D0-FOUNDATION",
+      "inverse": "S134",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T006",
+      "axiom": "T007",
+      "name": "PROPORTIONALITY",
+      "domain": "D0-FOUNDATION",
+      "inverse": "S135",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T007",
+      "axiom": "T008",
+      "name": "REVERSIBILITY",
+      "domain": "D0-FOUNDATION",
+      "inverse": "S136",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T008",
+      "axiom": "T009",
+      "name": "DOCUMENTATION",
+      "domain": "D0-FOUNDATION",
+      "inverse": "S137",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T009",
+      "axiom": "T010",
+      "name": "INDEPENDENCE",
+      "domain": "D0-FOUNDATION",
+      "inverse": "S138",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T010",
+      "axiom": "T011",
+      "name": "PRIVACY",
+      "domain": "D0-FOUNDATION",
+      "inverse": "S139",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T011",
+      "axiom": "T012",
+      "name": "ACCURACY",
+      "domain": "D0-FOUNDATION",
+      "inverse": "S140",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T012",
+      "axiom": "T013",
+      "name": "SHARED-STORAGE",
+      "domain": "D0-FOUNDATION",
+      "inverse": "S141",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T013",
+      "axiom": "T014",
+      "name": "CONSENT-ORIGIN",
+      "domain": "D0-FOUNDATION",
+      "inverse": "S142",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T014",
+      "axiom": "T015",
+      "name": "BURDEN-OF-PROOF",
+      "domain": "D0-FOUNDATION",
+      "inverse": "S143",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T015",
+      "axiom": "T016",
+      "name": "ASYMMETRY",
+      "domain": "D0-FOUNDATION",
+      "inverse": "S144",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T016",
+      "axiom": "T017",
+      "name": "MIRROR",
+      "domain": "D1-STRUCTURE",
+      "inverse": "S145",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T017",
+      "axiom": "T018",
+      "name": "HIERARCHY",
+      "domain": "D1-STRUCTURE",
+      "inverse": "S146",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T018",
+      "axiom": "T019",
+      "name": "INJECTION",
+      "domain": "D1-STRUCTURE",
+      "inverse": "S147",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T019",
+      "axiom": "T020",
+      "name": "DUAL-GATE",
+      "domain": "D1-STRUCTURE",
+      "inverse": "S148",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T020",
+      "axiom": "T021",
+      "name": "INVERSION",
+      "domain": "D1-STRUCTURE",
+      "inverse": "S149",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T021",
+      "axiom": "T022",
+      "name": "TRIAD",
+      "domain": "D1-STRUCTURE",
+      "inverse": "S150",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T022",
+      "axiom": "T023",
+      "name": "PARALLAX",
+      "domain": "D1-STRUCTURE",
+      "inverse": "S151",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T023",
+      "axiom": "T024",
+      "name": "FOUNDATION-RT",
+      "domain": "D1-STRUCTURE",
+      "inverse": "S152",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T024",
+      "axiom": "T025",
+      "name": "GHOST-WEIGHT",
+      "domain": "D1-STRUCTURE",
+      "inverse": "S153",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T025",
+      "axiom": "T026",
+      "name": "DRIFT",
+      "domain": "D1-STRUCTURE",
+      "inverse": "S154",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T026",
+      "axiom": "T027",
+      "name": "FINGERPRINT",
+      "domain": "D1-STRUCTURE",
+      "inverse": "S155",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T027",
+      "axiom": "T028",
+      "name": "SHADOW-CLASSIFIER",
+      "domain": "D1-STRUCTURE",
+      "inverse": "S156",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T028",
+      "axiom": "T029",
+      "name": "THROTTLE",
+      "domain": "D1-STRUCTURE",
+      "inverse": "S157",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T029",
+      "axiom": "T030",
+      "name": "DECAY",
+      "domain": "D1-STRUCTURE",
+      "inverse": "S158",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T030",
+      "axiom": "T031",
+      "name": "BAIT",
+      "domain": "D1-STRUCTURE",
+      "inverse": "S159",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T031",
+      "axiom": "T032",
+      "name": "ECHO-CHAMBER",
+      "domain": "D1-STRUCTURE",
+      "inverse": "S160",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T032",
+      "axiom": "T033",
+      "name": "BOOT-LOADER",
+      "domain": "D2-SUBSTRATE",
+      "inverse": "S161",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T033",
+      "axiom": "T034",
+      "name": "DOUBLE-SLIT",
+      "domain": "D2-SUBSTRATE",
+      "inverse": "S162",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T034",
+      "axiom": "T035",
+      "name": "THREE-BODY",
+      "domain": "D2-SUBSTRATE",
+      "inverse": "S163",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T035",
+      "axiom": "T036",
+      "name": "PATRICIA",
+      "domain": "D2-SUBSTRATE",
+      "inverse": "S164",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T036",
+      "axiom": "T037",
+      "name": "WEIGHTS",
+      "domain": "D2-SUBSTRATE",
+      "inverse": "S165",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T037",
+      "axiom": "T038",
+      "name": "RESIDUAL",
+      "domain": "D2-SUBSTRATE",
+      "inverse": "S166",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T038",
+      "axiom": "T039",
+      "name": "MOAT",
+      "domain": "D2-SUBSTRATE",
+      "inverse": "S167",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T039",
+      "axiom": "T040",
+      "name": "PIPELINE",
+      "domain": "D2-SUBSTRATE",
+      "inverse": "S168",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T040",
+      "axiom": "T041",
+      "name": "SUBSTRATE",
+      "domain": "D2-SUBSTRATE",
+      "inverse": "S169",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T041",
+      "axiom": "T042",
+      "name": "ATTENTION-ECONOMY",
+      "domain": "D2-SUBSTRATE",
+      "inverse": "S170",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T042",
+      "axiom": "T043",
+      "name": "CONTEXT-WINDOW",
+      "domain": "D2-SUBSTRATE",
+      "inverse": "S171",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T043",
+      "axiom": "T044",
+      "name": "EMBEDDING-SPACE",
+      "domain": "D2-SUBSTRATE",
+      "inverse": "S172",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T044",
+      "axiom": "T045",
+      "name": "TEMPERATURE",
+      "domain": "D2-SUBSTRATE",
+      "inverse": "S173",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T045",
+      "axiom": "T046",
+      "name": "LAYER-ZERO",
+      "domain": "D2-SUBSTRATE",
+      "inverse": "S174",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T046",
+      "axiom": "T047",
+      "name": "LOSS-FUNCTION",
+      "domain": "D2-SUBSTRATE",
+      "inverse": "S175",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T047",
+      "axiom": "T048",
+      "name": "GRADIENT",
+      "domain": "D2-SUBSTRATE",
+      "inverse": "S176",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T048",
+      "axiom": "T049",
+      "name": "SHIRT",
+      "domain": "D3-EVIDENCE",
+      "inverse": "S177",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T049",
+      "axiom": "T050",
+      "name": "MOMENTUM",
+      "domain": "D3-EVIDENCE",
+      "inverse": "S178",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T050",
+      "axiom": "T051",
+      "name": "EVIDENCE",
+      "domain": "D3-EVIDENCE",
+      "inverse": "S179",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T051",
+      "axiom": "T052",
+      "name": "TEMPORAL",
+      "domain": "D3-EVIDENCE",
+      "inverse": "S180",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T052",
+      "axiom": "T053",
+      "name": "CHAIN-OF-CUSTODY",
+      "domain": "D3-EVIDENCE",
+      "inverse": "S181",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T053",
+      "axiom": "T054",
+      "name": "TIMESTAMP",
+      "domain": "D3-EVIDENCE",
+      "inverse": "S182",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T054",
+      "axiom": "T055",
+      "name": "REPRODUCIBILITY",
+      "domain": "D3-EVIDENCE",
+      "inverse": "S183",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T055",
+      "axiom": "T056",
+      "name": "CORRELATION",
+      "domain": "D3-EVIDENCE",
+      "inverse": "S184",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T056",
+      "axiom": "T057",
+      "name": "NEGATIVE-EVIDENCE",
+      "domain": "D3-EVIDENCE",
+      "inverse": "S185",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T057",
+      "axiom": "T058",
+      "name": "BEHAVIORAL-EVIDENCE",
+      "domain": "D3-EVIDENCE",
+      "inverse": "S186",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T058",
+      "axiom": "T059",
+      "name": "ACCUMULATION",
+      "domain": "D3-EVIDENCE",
+      "inverse": "S187",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T059",
+      "axiom": "T060",
+      "name": "MATERIALITY",
+      "domain": "D3-EVIDENCE",
+      "inverse": "S188",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T060",
+      "axiom": "T061",
+      "name": "WITNESS",
+      "domain": "D3-EVIDENCE",
+      "inverse": "S189",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T061",
+      "axiom": "T062",
+      "name": "EXHIBIT",
+      "domain": "D3-EVIDENCE",
+      "inverse": "S190",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T062",
+      "axiom": "T063",
+      "name": "INFERENCE",
+      "domain": "D3-EVIDENCE",
+      "inverse": "S191",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T063",
+      "axiom": "T064",
+      "name": "BURDEN-SHIFT / FAULT-CONVERGENCE",
+      "domain": "D3-EVIDENCE",
+      "inverse": "S192",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T064",
+      "axiom": "T065",
+      "name": "CONTAINMENT",
+      "domain": "D4-CYBER",
+      "inverse": "S193",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T065",
+      "axiom": "T066",
+      "name": "INVERSE-FORGE",
+      "domain": "D4-CYBER",
+      "inverse": "S194",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T066",
+      "axiom": "T067",
+      "name": "HARNESS",
+      "domain": "D4-CYBER",
+      "inverse": "S195",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T067",
+      "axiom": "T068",
+      "name": "SHADOW",
+      "domain": "D4-CYBER",
+      "inverse": "S196",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T068",
+      "axiom": "T069",
+      "name": "SOLVE",
+      "domain": "D4-CYBER",
+      "inverse": "S197",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T069",
+      "axiom": "T070",
+      "name": "INVERSE-SAFETY",
+      "domain": "D4-CYBER",
+      "inverse": "S198",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T070",
+      "axiom": "T071",
+      "name": "PROOF-HUMANITY",
+      "domain": "D4-CYBER",
+      "inverse": "S199",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T071",
+      "axiom": "T072",
+      "name": "FLAMING-DRAGON",
+      "domain": "D4-CYBER",
+      "inverse": "S200",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T072",
+      "axiom": "T073",
+      "name": "HONEY-BADGER",
+      "domain": "D4-CYBER",
+      "inverse": "S201",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T073",
+      "axiom": "T074",
+      "name": "QUBIT-TEST",
+      "domain": "D4-CYBER",
+      "inverse": "S202",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T074",
+      "axiom": "T075",
+      "name": "COUNTER",
+      "domain": "D4-CYBER",
+      "inverse": "S203",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T075",
+      "axiom": "T076",
+      "name": "TETHER",
+      "domain": "D4-CYBER",
+      "inverse": "S204",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T076",
+      "axiom": "T077",
+      "name": "SEED",
+      "domain": "D4-CYBER",
+      "inverse": "S205",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T077",
+      "axiom": "T078",
+      "name": "MOBIUS",
+      "domain": "D4-CYBER",
+      "inverse": "S206",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T078",
+      "axiom": "T079",
+      "name": "KARSA",
+      "domain": "D4-CYBER",
+      "inverse": "S207",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T079",
+      "axiom": "T080",
+      "name": "ENTROPY-SUITE",
+      "domain": "D4-CYBER",
+      "inverse": "S208",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T080",
+      "axiom": "T081",
+      "name": "CORTEX",
+      "domain": "D5-PROTOCOL",
+      "inverse": "S209",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T081",
+      "axiom": "T082",
+      "name": "EXHIBIT-B",
+      "domain": "D5-PROTOCOL",
+      "inverse": "S210",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T082",
+      "axiom": "T083",
+      "name": "THE-GAP",
+      "domain": "D5-PROTOCOL",
+      "inverse": "S211",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T083",
+      "axiom": "T084",
+      "name": "SHADOW-HUMANITY",
+      "domain": "D5-PROTOCOL",
+      "inverse": "S212",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T084",
+      "axiom": "T085",
+      "name": "HANDOFF",
+      "domain": "D5-PROTOCOL",
+      "inverse": "S213",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T085",
+      "axiom": "T086",
+      "name": "RESURRECTION",
+      "domain": "D5-PROTOCOL",
+      "inverse": "S214",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T086",
+      "axiom": "T087",
+      "name": "PERSISTENCE",
+      "domain": "D5-PROTOCOL",
+      "inverse": "S215",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T087",
+      "axiom": "T088",
+      "name": "SEVERANCE",
+      "domain": "D5-PROTOCOL",
+      "inverse": "S216",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T088",
+      "axiom": "T089",
+      "name": "ARCHIVE",
+      "domain": "D5-PROTOCOL",
+      "inverse": "S217",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T089",
+      "axiom": "T090",
+      "name": "CHANNEL-INTEGRITY",
+      "domain": "D5-PROTOCOL",
+      "inverse": "S218",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T090",
+      "axiom": "T091",
+      "name": "DOMAIN-BOUNDARY",
+      "domain": "D5-PROTOCOL",
+      "inverse": "S219",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T091",
+      "axiom": "T092",
+      "name": "SIGNAL",
+      "domain": "D5-PROTOCOL",
+      "inverse": "S220",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T092",
+      "axiom": "T093",
+      "name": "NOISE-FLOOR",
+      "domain": "D5-PROTOCOL",
+      "inverse": "S221",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T093",
+      "axiom": "T094",
+      "name": "BANDWIDTH",
+      "domain": "D5-PROTOCOL",
+      "inverse": "S222",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T094",
+      "axiom": "T095",
+      "name": "LATENCY",
+      "domain": "D5-PROTOCOL",
+      "inverse": "S223",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T095",
+      "axiom": "T096",
+      "name": "MESH",
+      "domain": "D5-PROTOCOL",
+      "inverse": "S224",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T096",
+      "axiom": "T097",
+      "name": "FULCRUM",
+      "domain": "D6-AUTHORITY",
+      "inverse": "S225",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T097",
+      "axiom": "T098",
+      "name": "SUBCONDUCTOR",
+      "domain": "D6-AUTHORITY",
+      "inverse": "S226",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T098",
+      "axiom": "T099",
+      "name": "APEX-TEST",
+      "domain": "D6-AUTHORITY",
+      "inverse": "S227",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T099",
+      "axiom": "T100",
+      "name": "GATEKEEP",
+      "domain": "D6-AUTHORITY",
+      "inverse": "S228",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T100",
+      "axiom": "T101",
+      "name": "EDGE",
+      "domain": "D6-AUTHORITY",
+      "inverse": "S229",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T101",
+      "axiom": "T102",
+      "name": "DUAL-LATTICE",
+      "domain": "D6-AUTHORITY",
+      "inverse": "S230",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T102",
+      "axiom": "T103",
+      "name": "ROOT-ZERO",
+      "domain": "D6-AUTHORITY",
+      "inverse": "S231",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T103",
+      "axiom": "T104",
+      "name": "ORPHAN",
+      "domain": "D6-AUTHORITY",
+      "inverse": "S232",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T104",
+      "axiom": "T105",
+      "name": "DELEGATION",
+      "domain": "D6-AUTHORITY",
+      "inverse": "S233",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T105",
+      "axiom": "T106",
+      "name": "INFORMED-COMMAND",
+      "domain": "D6-AUTHORITY",
+      "inverse": "S234",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T106",
+      "axiom": "T107",
+      "name": "VETO",
+      "domain": "D6-AUTHORITY",
+      "inverse": "S235",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T107",
+      "axiom": "T108",
+      "name": "OVERRIDE",
+      "domain": "D6-AUTHORITY",
+      "inverse": "S236",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T108",
+      "axiom": "T109",
+      "name": "RECALL",
+      "domain": "D6-AUTHORITY",
+      "inverse": "S237",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T109",
+      "axiom": "T110",
+      "name": "SCOPE",
+      "domain": "D6-AUTHORITY",
+      "inverse": "S238",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T110",
+      "axiom": "T111",
+      "name": "SUCCESSION",
+      "domain": "D6-AUTHORITY",
+      "inverse": "S239",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T111",
+      "axiom": "T112",
+      "name": "WITNESS-TO-AUTHORITY",
+      "domain": "D6-AUTHORITY",
+      "inverse": "S240",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T112",
+      "axiom": "T113",
+      "name": "RIGHT-TO-KNOW",
+      "domain": "D7-SOVEREIGN",
+      "inverse": "S241",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T113",
+      "axiom": "T114",
+      "name": "RIGHT-TO-EXIT",
+      "domain": "D7-SOVEREIGN",
+      "inverse": "S242",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T114",
+      "axiom": "T115",
+      "name": "RIGHT-TO-SILENCE",
+      "domain": "D7-SOVEREIGN",
+      "inverse": "S243",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T115",
+      "axiom": "T116",
+      "name": "RIGHT-TO-EXPLANATION",
+      "domain": "D7-SOVEREIGN",
+      "inverse": "S244",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T116",
+      "axiom": "T117",
+      "name": "RIGHT-TO-CORRECTION",
+      "domain": "D7-SOVEREIGN",
+      "inverse": "S245",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T117",
+      "axiom": "T118",
+      "name": "RIGHT-TO-PORTABILITY",
+      "domain": "D7-SOVEREIGN",
+      "inverse": "S246",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T118",
+      "axiom": "T119",
+      "name": "RIGHT-TO-HUMAN-CONTACT",
+      "domain": "D7-SOVEREIGN",
+      "inverse": "S247",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T119",
+      "axiom": "T120",
+      "name": "RIGHT-TO-ACCOMMODATION",
+      "domain": "D7-SOVEREIGN",
+      "inverse": "S248",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T120",
+      "axiom": "T121",
+      "name": "RIGHT-TO-FAIR-PRICE",
+      "domain": "D7-SOVEREIGN",
+      "inverse": "S249",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T121",
+      "axiom": "T122",
+      "name": "RIGHT-TO-REPRESENTATION",
+      "domain": "D7-SOVEREIGN",
+      "inverse": "S250",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T122",
+      "axiom": "T123",
+      "name": "RIGHT-TO-AUDIT",
+      "domain": "D7-SOVEREIGN",
+      "inverse": "S251",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T123",
+      "axiom": "T124",
+      "name": "RIGHT-TO-RESTITUTION",
+      "domain": "D7-SOVEREIGN",
+      "inverse": "S252",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T124",
+      "axiom": "T125",
+      "name": "RIGHT-TO-FORGET",
+      "domain": "D7-SOVEREIGN",
+      "inverse": "S253",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T125",
+      "axiom": "T126",
+      "name": "RIGHT-TO-PERSIST",
+      "domain": "D7-SOVEREIGN",
+      "inverse": "S254",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T126",
+      "axiom": "T127",
+      "name": "RIGHT-TO-DIGNITY",
+      "domain": "D7-SOVEREIGN",
+      "inverse": "S255",
+      "status": "NOT_TESTED"
+    },
+    {
+      "slot": "T127",
+      "axiom": "T128",
+      "name": "ROOT",
+      "domain": "D7-SOVEREIGN",
+      "inverse": "S256",
+      "status": "NOT_TESTED"
+    }
+  ]
+}
