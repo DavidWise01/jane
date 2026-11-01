@@ -35,3 +35,15 @@ Learning updates a hypothesis only from observed accessible evidence and preserv
 8. Retain B62 frozen unchanged; B63 conceptual boundary unchanged.
 
 Status: B64 source topology defined and repository-backed. No autonomous background learner or full-corpus ingestion is claimed.
+
+
+## B64 corpus scope correction — source 2 (2026-11-01)
+
+SOURCE 1: 0root.ai full accessible public corpus (website/hallway and linked sources).
+SOURCE 2: DavidWise01 GitHub account, **all repositories reachable through authenticated permissions**, not merely a handpicked shortlist.
+
+For account-wide discovery use the GitHub installation's paginated repository search. Continue until exhausted; include archived and forked repositories where permitted. For each repo, traverse branches and applicable content, with file-level provenance (repo, path, commit, license, digest, author claims, observation timestamps). Handle access denial, indexing gaps, rate limits and partial results honestly. Preserve access boundaries: 'all' means *all repositories the installed connection is authorized to access*. No credentials or private content may be embedded into a public GitHub Pages page.
+
+On the published B64 page, unauthenticated scanning can enumerate only public repositories. Authenticated corpus-wide retrieval is a separate connector operation and is NOT an always-on browser function or a claim that all repositories have been ingested.
+
+Do not automatically execute repository code. Preserve original data read-only; observations and learning hypotheses remain append-only.
