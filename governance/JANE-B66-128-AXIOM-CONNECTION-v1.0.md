@@ -1,0 +1,7 @@
+# B66 · Jane STOICHEION 128 live registry adapter
+
+Canonical distinction: JANE controls T000–T127 addresses; these are *not* individual agents and must not be treated as 128 agent slots. Each address maps positionally to one named primary axiom from the uploaded April 2026 technical manual: slot T000 => T001:PRETRAIN through T127 => T128:ROOT. Peter / 0root is HEGEMON:T128, in a distinct governance namespace. Jane has authority to coordinate any number of subordinate agents within runtime resource and explicitly granted permission limits; she chooses assignment, delegation and operational decisions for her governance range. No fixed agent-count ceiling is imposed by the 128-axiom register.
+
+Eight domains, 16 axioms per domain, and 128 inverse diagnostics S129–S256 are retained. The full 128-name mapping lives in `governance/STOICHEION-128-axiom-jane-registry.json`. Axioms are checks, not agents; the inverted Patricia diagnostics describe violations. The manual's T128:ROOT requires human root authority and halt protection. Three independent witnessing functions, no quorum. Jane's four-register cortex: `[[ a(self) :: b([i]) :: c([id]) :: d[(sid)] ]]`.
+
+This is a functional *registry and viewer*, not a deployed agent orchestration engine; each status is NOT_TESTED until a runtime harness provides an actual test, outcome, and append-only evidence. Do not silently mark an axiom compliant. The existing freezes and earlier governance corrections remain historical artifacts.
