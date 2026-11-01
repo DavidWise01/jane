@@ -1,0 +1,32 @@
+name: B86 FORMIC repository observers
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "37 6 * * *"
+permissions:
+  contents: read
+jobs:
+  observe-repositories:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Public repository discovery
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/btf2/index-repos.cjs
+      - name: FORMIC scoped observation
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/btf2/formic-repo-observers.cjs
+      - uses: actions/upload-artifact@v4
+        with:
+          name: b86-formic-observations
+          path: |
+            btf2/catalog.json
+            btf2/formic-observers.json
+            btf2/formic-events.jsonl
+          if-no-files-found: error
