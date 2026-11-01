@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JANE · B62 | Four-Register Cortex</title>
+<style>
+:root{color-scheme:dark;--bg:#041217;--panel:#09252a;--teal:#54f4de;--orange:#ff9a52;--text:#d9f7f4;--muted:#83aaa9}*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 50% 20%,#134149,#041217 66%);color:var(--text);font:14px/1.5 ui-monospace,SFMono-Regular,Consolas,monospace}header{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;padding:18px clamp(16px,3vw,42px);border-bottom:1px solid #24535b}h1{margin:0;font-size:clamp(24px,3.5vw,42px);letter-spacing:.12em}h2{margin:0 0 15px;font-size:16px;letter-spacing:.12em;color:var(--teal)}.sub{color:var(--muted)}a{color:var(--teal)}main{max-width:1500px;margin:auto;padding:24px;display:grid;grid-template-columns:minmax(0,1.4fr) minmax(310px,.8fr);gap:20px}section{border:1px solid #23555e;border-radius:18px;background:#09242bd9;padding:22px;min-width:0}.main{min-height:520px}svg{width:100%;height:auto;display:block}.side{display:grid;gap:20px;align-content:start}.pill{border:1px solid #318b83;color:var(--teal);border-radius:99px;padding:6px 11px}.frozen{color:var(--orange);border-color:var(--orange)}pre{overflow:auto;padding:16px;border-radius:12px;background:#03171c;color:#b6eee7}.reg{display:grid;grid-template-columns:35px 65px 1fr;gap:12px;padding:13px;border-top:1px solid #225159}.reg b{color:var(--teal)}.reg small{color:var(--muted)}.metric{display:grid;grid-template-columns:1fr auto;border-bottom:1px solid #23474d;padding:9px 0}.metric strong{color:var(--orange)}button{background:#123c42;border:1px solid #3eaaa5;color:#e5fffa;border-radius:9px;padding:10px 14px;cursor:pointer;font:inherit}button:hover{background:#20575b}.toolbar{display:flex;gap:9px;flex-wrap:wrap;margin-top:18px}.node{fill:#0d3439;stroke:#53e9da;stroke-width:2}.route{fill:none;stroke:#ff9853;stroke-width:2.5;stroke-dasharray:7 9;animation:move 15s linear infinite}@keyframes move{to{stroke-dashoffset:-220}}.nodeText{fill:#dbffff;text-anchor:middle;font-size:22px;font-weight:bold}.smallText{fill:#82d7d2;text-anchor:middle;font-size:12px}.center{fill:#04181c;stroke:#52efdb}.foot{padding:20px 30px;text-align:center;color:var(--muted)}@media(max-width:850px){main{grid-template-columns:1fr}.main{min-height:auto}}@media(prefers-reduced-motion:reduce){.route{animation:none}}
+</style></head>
+<body><header><div><div class="sub">ROOT0 / JANE / FROZEN KERNEL</div><h1>BOUND 62 <span style="color:var(--teal)">| FOUR REGISTERS</span></h1><div class="sub">One event identity. Independent evidence. Append-only history.</div></div><span class="pill frozen">v1.0.0 · SPEC FROZEN</span></header>
+<main><section class="main"><h2>CAUSAL PROVENANCE TOPOLOGY</h2>
+<svg viewBox="0 0 720 500" role="img" aria-label="Four-register closed cycle: a self, b intent, c observation, d memory">
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6" fill="none" stroke="#ff9853" stroke-width="1.3"/></marker><filter id="glow"><feGaussianBlur stdDeviation="3" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+<path class="route" marker-end="url(#arrow)" d="M360 103 L557 208 L360 397 L163 292 L360 103"/>
+<path d="M360 110V390 M160 250H560" stroke="#2a6065" stroke-dasharray="3 8"/>
+<g><circle class="node" cx="360" cy="95" r="67"/><text class="nodeText" x="360" y="88">a</text><text class="smallText" x="360" y="112">(self)</text></g>
+<g><circle class="node" cx="568" cy="250" r="67"/><text class="nodeText" x="568" y="244">b</text><text class="smallText" x="568" y="267">([i])</text></g>
+<g><circle class="node" cx="360" cy="404" r="67"/><text class="nodeText" x="360" y="396">c</text><text class="smallText" x="360" y="422">([id])</text></g>
+<g><circle class="node" cx="152" cy="250" r="67"/><text class="nodeText" x="152" y="244">d</text><text class="smallText" x="152" y="267">[(sid)]</text></g>
+<circle class="center" cx="360" cy="250" r="54"/><text x="360" y="247" text-anchor="middle" fill="#d8fffb" font-size="16">EVENT</text><text x="360" y="271" text-anchor="middle" fill="#ffad70" font-size="22">Eₙ</text></svg>
+<div class="toolbar"><button id="trace">Illustrate one event</button><button id="reset">Reset sample</button><button id="copy">Copy canonical structure</button></div>
+<pre id="record" aria-live="polite">EVENT: NONE
+EMULATOR: NOT CONNECTED
+RUNTIME: UNVERIFIED
+
+[[ a(self) :: b([i]) :: c([id]) :: d[(sid)] ]]</pre>
+</section>
+<div class="side"><section><h2>REGISTER ASSIGNMENT</h2><div class="reg"><b>a</b><span>self</span><small>Continuity · sole controller authority</small></div><div class="reg"><b>b</b><span>i</span><small>Intent · prediction before execution</small></div><div class="reg"><b>c</b><span>id</span><small>Measured observation · prediction error</small></div><div class="reg"><b>d</b><span>sid</span><small>Temporal consequence · append only</small></div></section>
+<section><h2>BOUNDARY STATUS</h2><div class="metric"><span>Canonical registers</span><strong>4 / 4</strong></div><div class="metric"><span>Action controller</span><strong>a(self)</strong></div><div class="metric"><span>Quorum</span><strong>NONE</strong></div><div class="metric"><span>Specification</span><strong>FROZEN</strong></div><div class="metric"><span>Measured ROM cycle</span><strong>UNVERIFIED</strong></div><div class="metric"><span>Next bound</span><strong>B63</strong></div></section>
+<section><h2>IMMUTABLE REFERENCE</h2><p class="sub">This page is a non-destructive, read-only visualization of the committed B62 specification. The sample event button creates fictional demonstration data only, never emulator evidence.</p><p><a href="../freezes/JANE-B62-v1.0.0.md">Canonical B62 specification</a></p><p><a href="https://github.com/DavidWise01/jane/blob/1522d9e4d5fb7e2e8109ef7e25dd6a473357c8e5/freezes/JANE-B62-v1.0.0.md">Pinned specification commit</a></p><p><a href="../">Jane homepage</a></p></section></div></main>
+<footer class="foot">JANE · B62 v1.0.0 · 2026-10-31 · DESIGN FREEZE / NO CLAIM OF EXECUTED TESTS</footer>
+<script>
+const canonical='[[ a(self) :: b([i]) :: c([id]) :: d[(sid)] ]]';
+const display=document.getElementById('record');
+document.getElementById('trace').onclick=()=>{display.textContent=['DEMONSTRATION TRACE ONLY · NOT MEASURED','event_id: E-DEMO-0001','a(self): proposed button A · 1 frame','b([i]): predicted state UNKNOWN','c([id]): observed state UNKNOWN (no emulator)','d[(sid)]: NOT APPENDED · no evidence','causal verification: PENDING','',canonical].join('\n')};
+document.getElementById('reset').onclick=()=>{display.textContent='EVENT: NONE\nEMULATOR: NOT CONNECTED\nRUNTIME: UNVERIFIED\n\n'+canonical};
+document.getElementById('copy').onclick=async()=>{try{await navigator.clipboard.writeText(canonical)}catch(e){display.textContent=canonical}};
+</script></body></html>
