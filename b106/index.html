@@ -1,0 +1,40 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>JANE B106 Verified 3D Family Mesh</title><style>:root{color-scheme:dark}*{box-sizing:border-box}body{background:#05151e;color:#defaf4;font:13px/1.5 Consolas,monospace;margin:0}header{padding:16px 22px;border-bottom:1px solid #325a62}h1{font-size:clamp(24px,3.6vw,40px);margin:0;color:#a0f4dc}main{display:grid;grid-template-columns:minmax(350px,3fr) minmax(280px,1fr);height:calc(100vh - 105px)}canvas{width:100%;height:100%;touch-action:none;display:block;background:radial-gradient(ellipse at center,#173744,#07131e 75%)}aside{padding:16px;background:#112831;overflow:auto;border-left:1px solid #375c63}input,button{padding:9px;background:#133c45;border:1px solid #79d0bf;color:white;border-radius:8px;font:inherit}input{width:100%}button{cursor:pointer;margin:3px}pre{overflow-wrap:anywhere;white-space:pre-wrap}small,p{color:#b8d5d2}a{color:#92edce}.gradient{height:18px;border-radius:6px;background:linear-gradient(to right,hsl(170 84% 57%),hsl(90 84% 57%),hsl(50 84% 57%),hsl(10 84% 57%))}@media(max-width:800px){main{display:block;height:auto}canvas{height:60vh}aside{min-height:340px}}</style></head><body><header><small>HON-184 · FORMIC FAMILY · PETER:T128 / JANE:T000–T127</small><h1>B106 · Verified 3D Family Mesh</h1><small>Drag rotate · scroll zoom · connected mesh · color gradient · persistent identities</small></header><main><canvas id="view"></canvas><aside><h3>Mesh verification</h3><pre id="audit">Loading…</pre><div class="gradient"></div><small>Teal: unchanged · gold: mixed · red: changed · gray: unknown · cyan: baseline</small><p><input id="filter" placeholder="Find a repository"></p><p><button id="reset">Reset camera</button><button id="rotate">Auto-rotate: off</button></p><h3>Selected child</h3><pre id="selected">Click a node.</pre><p id="source">Seeking committed family records…</p><p><a href="../b105/">B105</a> · <a href="https://0root.ai/">0root.ai</a></p><small>Links reflect geometric proximity, not proven code dependency. A reserved identity does not mean a running autonomous agent.</small></aside></main><script>
+const $=id=>document.getElementById(id),canvas=$('view'),ctx=canvas.getContext('2d');
+let nodes=[],edges=[],projected=[],rx=-.38,ry=.54,zoom=1,selected=-1,spin=false,down=false,last=null,moved=false,frame=0;
+function rgb(p){if(p.state==='BASELINE_NEW')return '#59dbf4';if(p.pressure==null)return '#788793';return 'hsl('+(170-160*Math.max(0,Math.min(1,p.pressure)))+' 84% 57%)'}
+function unitSphere(i,n){const y=1-2*(i+.5)/n,az=i*Math.PI*(3-Math.sqrt(5)),r=Math.sqrt(Math.max(0,1-y*y));return {x:r*Math.cos(az),y,z:r*Math.sin(az)}}
+function graph(a){
+ nodes=a.map((m,i)=>({...unitSphere(i,a.length),m}));
+ const n=nodes.length,parent=Array.from({length:n},(_,i)=>i);
+ const find=x=>{while(parent[x]!==x){parent[x]=parent[parent[x]];x=parent[x]}return x};
+ function add(a,b,set){if(a===b)return;const x=Math.min(a,b),y=Math.max(a,b);set.add(x+','+y)}
+ const set=new Set();
+ // A deterministic guaranteed-connected backbone: consecutive indices form a spanning path.
+ for(let i=1;i<n;i++)add(i-1,i,set);
+ // Additional geographic proximity edges, undirected and deduplicated.
+ for(let i=0;i<n;i++){const neighbors=[];for(let j=0;j<n;j++){if(i===j)continue;const p=nodes[i],q=nodes[j];neighbors.push({j,d:(p.x-q.x)**2+(p.y-q.y)**2+(p.z-q.z)**2})}neighbors.sort((a,b)=>a.d-b.d||a.j-b.j);for(const e of neighbors.slice(0,3))add(i,e.j,set)}
+ edges=[...set].map(x=>x.split(',').map(Number));
+ const deg=Array(n).fill(0);for(const [a,b] of edges){deg[a]++;deg[b]++;let pa=find(a),pb=find(b);if(pa!==pb)parent[pa]=pb}
+ const comps=new Set(parent.map((_,i)=>find(i))).size,valid=edges.every(([a,b])=>a>=0&&b<n&&a!==b);
+ const unique=new Set(a.map(x=>x.repo.toLowerCase())).size;
+ $('audit').textContent=JSON.stringify({nodes:n,unique_repositories:unique,edges:edges.length,connected_components:comps,min_degree:n?Math.min(...deg):0,max_degree:n?Math.max(...deg):0,unit_radius_error_max:Math.max(0,...nodes.map(p=>Math.abs(Math.hypot(p.x,p.y,p.z)-1))),checks:(valid&&unique===n&&(n===0||comps===1))?'PASS':'FAIL'},null,2);
+ draw()
+}
+function project(p,w,h){const C=Math.cos(ry),S=Math.sin(ry),c=Math.cos(rx),s=Math.sin(rx);const x=C*p.x+S*p.z,z=-S*p.x+C*p.z,y=c*p.y-s*z,Z=s*p.y+c*z;const scale=zoom*Math.min(w,h)*.59/(1.8-.48*Z);return{x:w/2+x*scale,y:h/2+y*scale,z:Z,scale}}
+function draw(){const d=window.devicePixelRatio||1,w=canvas.clientWidth,h=canvas.clientHeight;canvas.width=Math.max(1,Math.floor(w*d));canvas.height=Math.max(1,Math.floor(h*d));ctx.setTransform(d,0,0,d,0,0);ctx.clearRect(0,0,w,h);projected=nodes.map(n=>project(n,w,h));ctx.lineWidth=.9;for(const [a,b] of edges){const p=projected[a],q=projected[b];if(!p||!q)continue;ctx.strokeStyle='rgba(125,195,210,0.29)';ctx.beginPath();ctx.moveTo(p.x,p.y);ctx.lineTo(q.x,q.y);ctx.stroke()}for(const i of nodes.map((_,i)=>i).sort((a,b)=>projected[a].z-projected[b].z)){const p=projected[i],n=nodes[i];ctx.beginPath();ctx.arc(p.x,p.y,i===selected?6.3:3.6,0,Math.PI*2);ctx.fillStyle=rgb(n.m);ctx.fill();if(i===selected){ctx.strokeStyle='#fff';ctx.lineWidth=2;ctx.stroke()}}ctx.beginPath();ctx.arc(w/2,h/2,27,0,Math.PI*2);ctx.fillStyle='#1e414b';ctx.fill();ctx.strokeStyle='#ffc18b';ctx.stroke();ctx.fillStyle='#ffdcad';ctx.textAlign='center';ctx.fillText('0ROOT',w/2,h/2+4)}
+function select(i){selected=i;$('selected').textContent=JSON.stringify(nodes[i].m,null,2);draw()}
+canvas.onpointerdown=e=>{down=true;moved=false;last=[e.clientX,e.clientY];canvas.setPointerCapture(e.pointerId)};
+canvas.onpointermove=e=>{if(!down)return;const dx=e.clientX-last[0],dy=e.clientY-last[1];if(Math.abs(dx)+Math.abs(dy)>1)moved=true;ry+=dx*.008;rx=Math.max(-1.55,Math.min(1.55,rx+dy*.008));last=[e.clientX,e.clientY];draw()};
+canvas.onpointerup=e=>{down=false;if(moved)return;const r=canvas.getBoundingClientRect(),x=e.clientX-r.left,y=e.clientY-r.top;let best=-1,dist=11;projected.forEach((p,i)=>{const d=Math.hypot(x-p.x,y-p.y);if(d<dist){best=i;dist=d}});if(best>=0)select(best)};
+canvas.onwheel=e=>{e.preventDefault();zoom=Math.max(.4,Math.min(4,zoom*Math.exp(-e.deltaY*.001)));draw()};
+$('reset').onclick=()=>{rx=-.38;ry=.54;zoom=1;draw()};$('rotate').onclick=()=>{spin=!spin;$('rotate').textContent='Auto-rotate: '+(spin?'on':'off');if(spin)requestAnimationFrame(tick)};
+function tick(){if(!spin)return;ry+=.003;draw();requestAnimationFrame(tick)}
+$('filter').oninput=()=>{const q=$('filter').value.toLowerCase();if(!q)return;const i=nodes.findIndex(n=>n.m.repo.toLowerCase().includes(q));if(i>=0)select(i)};
+window.onresize=draw;
+(async()=>{let arr=[];for(const [url,key] of [['../b104/homecoming.json','children'],['../b103/family.json','children'],['../b102/children.json','members']]){try{const r=await fetch(url,{cache:'no-store'});if(!r.ok)continue;arr=(await r.json())[key]||[];if(arr.length)break}catch{}}
+if(!arr.length){try{const r=await fetch('../btf2/catalog.json',{cache:'no-store'});if(r.ok)arr=((await r.json()).repos||[]).map(x=>({repo:'DavidWise01/'+x.name}))}catch{}}
+let statuses={};try{const r=await fetch('../b88/collation.json',{cache:'no-store'});if(r.ok){const j=await r.json();for(const e of j.events||[])statuses[String(e.repo).toLowerCase()]=e.status}}catch{}
+const known=new Map();for(const x of arr){if(!x.repo)continue;const key=x.repo.toLowerCase(),state=statuses[key]||'UNKNOWN';if(!known.has(key))known.set(key,{...x,state,pressure:state==='CHANGED'?1:state==='UNCHANGED'?0:null})}
+$('source').textContent=known.size+' public repository identities · '+Object.keys(statuses).length+' change statuses available';graph([...known.values()].sort((a,b)=>a.repo.localeCompare(b.repo)));
+})()
+</script></body></html>
