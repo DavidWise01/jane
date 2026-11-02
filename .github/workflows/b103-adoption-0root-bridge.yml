@@ -1,0 +1,33 @@
+name: B103 family adoption and 0root bridge
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "19 */6 * * *"
+permissions:
+  contents: write
+concurrency:
+  group: b103-adoption
+  cancel-in-progress: false
+jobs:
+  bridge:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Refresh public repository catalog
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/btf2/index-repos.cjs
+      - name: Discover children
+        run: node scripts/btf2/b102-discover-children.cjs
+      - name: Adopt and probe 0root public bridge
+        run: node scripts/btf2/b103-adopt-and-bridge.cjs
+      - name: Publish derived family directory
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add b102/children.json b102/discovered.jsonl b103/family.json
+          git diff --cached --quiet || (git commit -m "data(jane): B103 family adoption and 0root bridge" && git push)
