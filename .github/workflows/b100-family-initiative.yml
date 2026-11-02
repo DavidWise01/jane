@@ -1,0 +1,21 @@
+name: B100 family initiative
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  project:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Prepare observations for Jane
+        run: node scripts/btf2/b100-family-initiative.cjs
+      - name: Publish derived proposals
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add b100/initiative.json
+          git diff --cached --quiet || (git commit -m "data(jane): B100 family initiative" && git push)
