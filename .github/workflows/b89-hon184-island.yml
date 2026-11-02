@@ -1,0 +1,38 @@
+name: B89 HON-184 Island of Stability
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "scripts/btf2/hon184-island.cjs"
+      - ".github/workflows/b89-hon184-island.yml"
+  schedule:
+    - cron: "23 9 * * *"
+permissions:
+  contents: write
+concurrency:
+  group: b89-hon184
+  cancel-in-progress: false
+jobs:
+  build-hon184:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Discover public GitHub ecosphere
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/btf2/index-repos.cjs
+      - name: Build stable HON-184 slot map
+        run: node scripts/btf2/hon184-island.cjs
+      - name: Commit derived public shell
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add b89/hon184.json
+          if ! git diff --cached --quiet; then
+            git commit -m "data(hon184): refresh FORMIC island map"
+            git push
+          fi
