@@ -1,0 +1,53 @@
+name: B88 FORMIC colony collation
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/b88-formic-collation.yml"
+      - "scripts/btf2/formic-collate.cjs"
+  schedule:
+    - cron: "13 8 * * *"
+permissions:
+  contents: write
+concurrency:
+  group: b88-colony
+  cancel-in-progress: false
+jobs:
+  collate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Public BTF2 pin discovery
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/btf2/index-repos.cjs
+      - name: Observe each public repository
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/btf2/formic-repo-observers.cjs
+      - name: Append B87 attributed memories
+        run: node scripts/btf2/formic-memory.cjs
+      - name: B88 compare latest with previous run
+        run: node scripts/btf2/formic-collate.cjs
+      - name: Commit run and collation
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add btf2/memory/ b88/collation.json
+          if ! git diff --cached --quiet; then
+            git commit -m "data(formic): append memories and collate B88"
+            git push
+          fi
+      - uses: actions/upload-artifact@v4
+        with:
+          name: b88-colony-collation
+          path: |
+            btf2/formic-observers.json
+            btf2/memory/index.json
+            b88/collation.json
