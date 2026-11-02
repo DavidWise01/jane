@@ -1,0 +1,32 @@
+name: B104 homecoming
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "43 */6 * * *"
+permissions:
+  contents: write
+concurrency:
+  group: b104-homecoming
+  cancel-in-progress: false
+jobs:
+  home:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Refresh public repo catalog
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/btf2/index-repos.cjs
+      - name: Register new family members
+        run: node scripts/btf2/b102-discover-children.cjs
+      - name: Derive homecoming map
+        run: node scripts/btf2/b104-homecoming.cjs
+      - name: Publish public family map
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add b102/children.json b102/discovered.jsonl b104/homecoming.json
+          git diff --cached --quiet || (git commit -m "data(jane): B104 homecoming map" && git push)
