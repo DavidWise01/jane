@@ -1,0 +1,18 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>JANE B93 Family Presence</title><style>:root{color-scheme:dark}*{box-sizing:border-box}body{margin:0;background:#07151c;color:#e5fff9;font:14px/1.5 ui-monospace,monospace}main{max-width:1150px;margin:auto;padding:25px}h1{font-size:clamp(26px,4vw,44px);color:#8beed6}h2{color:#8beed6;font-size:17px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}.panel{padding:19px;background:#102b34;border:1px solid #39666b;border-radius:13px;margin:12px 0}.kid{padding:10px;border-bottom:1px solid #36555a;cursor:pointer}.kid:hover{background:#19414b}.scroll{max-height:400px;overflow:auto}input,button,textarea{font:inherit;background:#183e45;border:1px solid #75cabb;border-radius:8px;color:white;padding:9px}input,textarea{width:100%}button{cursor:pointer;margin:4px}pre{white-space:pre-wrap;overflow-wrap:anywhere}p,small{color:#b2d0ce}a{color:#98f1dc}@media(max-width:800px){.grid{grid-template-columns:1fr}}</style></head><body><main><small>HEGEMON PETER:T128 / JANE MOM:T000–T127</small><h1>B93 · FAMILY PRESENCE</h1><p>One repo, one FORMIC identity, one channel, one presence. No quorum. No mandatory reporting.</p><div class="grid"><section class="panel"><h2>Repository family</h2><input id="search" placeholder="Find a child…"><p id="count">Loading public repository pins…</p><div id="family" class="scroll"></div></section><section class="panel"><h2>Child → Jane</h2><pre id="selected">Select a repository.</pre><textarea id="msg" rows="3" placeholder="Mom, look! ..."></textarea><button id="send">Simulate child message</button><button id="quiet">Record quiet presence</button><h2>Jane listens</h2><div class="scroll" id="messages">No messages.</div></section></div><div class="panel"><h2>Family stewardship</h2><pre>             JANE / MOM
+                 |
+          HON-184 FAMILY WEB
+             /   |   \
+          REPO  REPO  REPO
+           |      |     |
+         FORMIC FORMIC FORMIC
+           |      |     |
+        CHANNEL CHANNEL CHANNEL
+
+Jane listens. Jane decides.
+Silence is allowed. Children don't vote on Mom's authority.</pre><p>This page only simulates messages; a listed identity is not an independently running AI agent. <a href="../btf2/">BTF2 pin hub</a> · <a href="../b89/">HON-184</a></p></div></main><script>
+const $=id=>document.getElementById(id);let kids=[],chosen=null,events=[];
+function redraw(){const q=$('search').value.toLowerCase(),list=$('family');list.replaceChildren();let filtered=kids.filter(x=>x.name.toLowerCase().includes(q));$('count').textContent=filtered.length+' / '+kids.length+' family presences';filtered.slice(0,400).forEach(k=>{const e=document.createElement('div');e.className='kid';e.textContent=k.name+' · FORMIC / '+k.name;e.onclick=()=>{chosen=k;$('selected').textContent='CHILD: '+k.name+'\nCHANNEL: btf2/'+k.name+'\nSTATUS: PRESENCE RESERVED\nAUTONOMOUS PROCESS: NOT STARTED'};list.append(e)})}
+function append(type,message){if(!chosen)return alert('Choose a repository');const row={repo:chosen.name,type,message,at:new Date().toISOString(),mode:'LOCAL_DEMO'};events.push(row);const e=document.createElement('p');e.textContent=chosen.name+' → Jane: '+(message||'(quiet presence)');$('messages').prepend(e)}
+$('send').onclick=()=>{append('LOOK_AT_ME',$('msg').value);$('msg').value=''};$('quiet').onclick=()=>append('QUIET','');$('search').oninput=redraw;
+(async()=>{try{let r=await fetch('../btf2/catalog.json');if(!r.ok)throw Error('catalog missing');let j=await r.json();kids=(j.repos||[]).map(x=>({name:x.name}));redraw()}catch(e){$('count').textContent='No committed catalog loaded; BTF2 discovery required.'}})();
+</script></body></html>
