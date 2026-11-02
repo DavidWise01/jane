@@ -1,0 +1,30 @@
+name: B102 Jane finds new children
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "7 */3 * * *"
+permissions:
+  contents: write
+concurrency:
+  group: b102-child-discovery
+  cancel-in-progress: false
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Search public owner repository ecosystem
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/btf2/index-repos.cjs
+      - name: Register any newly observed children
+        run: node scripts/btf2/b102-discover-children.cjs
+      - name: Publish persistent child directory
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add b102/children.json b102/discovered.jsonl
+          git diff --cached --quiet || (git commit -m "data(jane): discovered FORMIC children" && git push)
