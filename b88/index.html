@@ -1,0 +1,18 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>B88 · FORMIC Hive Collation</title><style>:root{color-scheme:dark}body{margin:0;background:#091721;color:#e7fff9;font:14px/1.5 ui-monospace,Consolas,monospace}main{max-width:1200px;padding:24px;margin:auto}h1{color:#ffb57b;font-size:clamp(27px,4vw,46px)}h2,a{color:#fac18f}.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.card{background:#132a38;border:1px solid #4e6670;padding:20px;border-radius:14px;margin:12px 0}pre{max-height:330px;overflow:auto;white-space:pre-wrap}.list{max-height:420px;overflow:auto}.item{border-bottom:1px solid #405866;padding:8px 0}input{font:inherit;background:#183441;border:1px solid #a57a53;color:#f1fff9;border-radius:9px;padding:10px;width:100%}small{color:#aac7ce}@media(max-width:800px){.grid{grid-template-columns:1fr}}</style></head><body><main><small>HEGEMON · JANE · BTF2 · FORMIC</small><h1>B88 · COLONY CHANGE COLLATION</h1><p>One logical observer per public repository, comparing new B87 evidence against the previous run. Jane receives differences without quorum or subordinate completion gates.</p><div class="grid"><section class="card"><h2>Colony telemetry</h2><pre id="stats">Loading verified collation file…</pre><input id="filter" placeholder="Filter by repo or status"><div id="list" class="list"></div></section><section class="card"><h2>Governance pathway</h2><pre>PETER / T128
+  JANE / T000–T127
+    BTF2 REPOSITORY PINS
+      ONE FORMIC PER REPO
+        PUBLIC OBSERVATION
+          B87 MEMORY RUN
+            B88 TEMPORAL DELTA
+              JANE CORTEX
+
+[[ a(self) :: b([i]) :: c([id]) :: d[(sid)] ]]
+
+NEW BASELINE ≠ CHANGE
+MISSING DATA ≠ REPO DELETION
+REPORTED CHANGE ≠ CAUSE
+NO QUORUM / NO VETO</pre><p><a href="https://github.com/DavidWise01/jane/actions/workflows/b88-formic-collation.yml">Inspect or run the B88 workflow</a></p><p>This page reads committed evidence only. The actual scanner is a GitHub Actions job, not a continuously running browser agent.</p></section></div><section class="card"><h2>Documentation</h2><p><a href="../btf2/">BTF2 map</a> · <a href="../b87/">B87 memory</a> · <a href="https://github.com/DavidWise01/jane/blob/main/governance/JANE-B88-FORMIC-CHANGE-COLLATION-v1.0.md">B88 specification</a></p></section></main><script>
+let events=[];const $=x=>document.getElementById(x);function draw(){const q=$('filter').value.toLowerCase().trim();const out=$('list');out.replaceChildren();for(const e of events.filter(x=>x.repo.toLowerCase().includes(q)||x.status.toLowerCase().includes(q)).slice(0,500)){const el=document.createElement('div');el.className='item';el.textContent=e.status+' · '+e.repo+' · '+e.changes.length+' field changes';out.append(el)}}
+(async()=>{try{const r=await fetch('./collation.json',{cache:'no-store'});if(!r.ok)throw Error('No successful collation artifact committed yet');const j=await r.json();events=Array.isArray(j.events)?j.events:[];$('stats').textContent=JSON.stringify({latest_run:j.latest_run,previous_run:j.previous_run,metrics:j.metrics,mode:'OBSERVED_GITHUB_METADATA'},null,2);draw()}catch(e){$('stats').textContent='Collation not verified yet. Run the B88 GitHub Actions job to generate real repository observations and deltas.'}})();$('filter').oninput=draw;
+</script></body></html>
