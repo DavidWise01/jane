@@ -1,0 +1,73 @@
+{
+  "schema": "JANE_B115_TEACHING_MEMORY_V1",
+  "generated_at": "2026-11-03T23:37:21.421Z",
+  "source": "b114/lessons.json",
+  "evidence_scope": "PUBLIC_GITHUB_METADATA_ONLY",
+  "family_registry_available": false,
+  "lesson_count": 2,
+  "suggestion_count": 0,
+  "cards": [
+    {
+      "lesson_id": "LESSON-a25e1236531756f43196",
+      "field": "pushed_at",
+      "level": "RECURRING_METADATA_OBSERVATION",
+      "observed_transitions": 10,
+      "distinct_repositories": 8,
+      "source_run_ids": [
+        "41491449947-1-2026-11-02T17-29-44-603Z",
+        "41499661598-1-2026-11-02T18-22-03-556Z",
+        "41664464891-1-2026-11-03T15-31-24-394Z",
+        "41672109205-1-2026-11-03T16-16-23-687Z"
+      ],
+      "evidence_ids": [
+        "1318f042b6a06d9ba654a206",
+        "194dd76d4ff2c32f0888a797",
+        "53d565ff24fa51a0fbb04ddb",
+        "5f2d2527e798b98597a7b8c4",
+        "7329259cc1c608da04407eb3",
+        "8f0679dac4049f6c2a60e573",
+        "a89b61c2763b2a2936fee955",
+        "cb1304936e9d9d2f69dfe88d",
+        "d17dee111a767d385d57cf10",
+        "e8a463bb2eb631a2ae6515e1"
+      ],
+      "statement": "Public GitHub metadata value for pushed_at changed in one or more recorded comparisons. No cause or prescription established.",
+      "instructional_use": "When this field is encountered, compare prior and current snapshots before drawing conclusions.",
+      "certainty": "OBSERVED_METADATA_ONLY",
+      "status": "AVAILABLE_FOR_OPTIONAL_REVIEW",
+      "version": 1
+    },
+    {
+      "lesson_id": "LESSON-62f109dd074e2002f412",
+      "field": "updated_at",
+      "level": "RECURRING_METADATA_OBSERVATION",
+      "observed_transitions": 10,
+      "distinct_repositories": 8,
+      "source_run_ids": [
+        "41491449947-1-2026-11-02T17-29-44-603Z",
+        "41499661598-1-2026-11-02T18-22-03-556Z",
+        "41664464891-1-2026-11-03T15-31-24-394Z",
+        "41672109205-1-2026-11-03T16-16-23-687Z"
+      ],
+      "evidence_ids": [
+        "012a63459c504f3b82ca595c",
+        "24f3ff87eceb49f47612f2f1",
+        "275f16c0402e477770b748c5",
+        "3022c6aefc7f6c9c5473bac1",
+        "633b3065d3e1f8553de01a12",
+        "6e25a05957379a987bf4597e",
+        "7c98d1bb49eb493a9c899363",
+        "8c84040ab2bcce9141bb628e",
+        "95c608d840eaa1b7086661f7",
+        "e4ca608c322f442cbd207a91"
+      ],
+      "statement": "Public GitHub metadata value for updated_at changed in one or more recorded comparisons. No cause or prescription established.",
+      "instructional_use": "When this field is encountered, compare prior and current snapshots before drawing conclusions.",
+      "certainty": "OBSERVED_METADATA_ONLY",
+      "status": "AVAILABLE_FOR_OPTIONAL_REVIEW",
+      "version": 1
+    }
+  ],
+  "suggestions": [],
+  "policy": "Optional suggestions only, no message delivery, no verified causal inference, no autonomous agents or compulsory teaching."
+}
