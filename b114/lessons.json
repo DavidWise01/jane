@@ -1,0 +1,557 @@
+{
+  "schema": "JANE_B114_EVIDENCE_LEARNING_V1",
+  "generated_at": "2026-11-03T23:18:58.844Z",
+  "scope": "PUBLIC_GITHUB_METADATA_ONLY",
+  "source_verified": "SHA256_B87_RUNS",
+  "source_runs": [
+    {
+      "run_id": "41491449947-1-2026-11-02T17-29-44-603Z",
+      "at": "2026-11-02T17:29:44.620Z",
+      "file": "btf2/memory/runs/41491449947-1-2026-11-02T17-29-44-603Z.jsonl",
+      "sha256": "90c7dd6f42be7b36d1ffcd20c4aa3c319915475c7e1112ab83bc8600f13f3d22"
+    },
+    {
+      "run_id": "41499661598-1-2026-11-02T18-22-03-556Z",
+      "at": "2026-11-02T18:22:03.573Z",
+      "file": "btf2/memory/runs/41499661598-1-2026-11-02T18-22-03-556Z.jsonl",
+      "sha256": "1dd881c71bdd20fe4c34580a3f210e2b5ea2ee1c78ea3eed5bf5cb62d1ec17b6"
+    },
+    {
+      "run_id": "41664464891-1-2026-11-03T15-31-24-394Z",
+      "at": "2026-11-03T15:31:24.412Z",
+      "file": "btf2/memory/runs/41664464891-1-2026-11-03T15-31-24-394Z.jsonl",
+      "sha256": "0589060eb6417271caf0b962a708c9546e6745bf1315aa0b4745ce104fb20b8f"
+    },
+    {
+      "run_id": "41672109205-1-2026-11-03T16-16-23-687Z",
+      "at": "2026-11-03T16:16:23.703Z",
+      "file": "btf2/memory/runs/41672109205-1-2026-11-03T16-16-23-687Z.jsonl",
+      "sha256": "23fc5e3c39cc7a773fa3c8a1ec7811aca6b6927cdf3c0453ded461050a0a8476"
+    }
+  ],
+  "observed_repositories": 2147,
+  "transition_count": 20,
+  "patterns": [
+    {
+      "field": "pushed_at",
+      "observed_transitions": 10,
+      "distinct_repositories": 8,
+      "evidence_ids": [
+        "e8a463bb2eb631a2ae6515e1",
+        "1318f042b6a06d9ba654a206",
+        "d17dee111a767d385d57cf10",
+        "cb1304936e9d9d2f69dfe88d",
+        "7329259cc1c608da04407eb3",
+        "a89b61c2763b2a2936fee955",
+        "5f2d2527e798b98597a7b8c4",
+        "194dd76d4ff2c32f0888a797",
+        "8f0679dac4049f6c2a60e573",
+        "53d565ff24fa51a0fbb04ddb"
+      ],
+      "classification": "CROSS_CHILD_OBSERVATION",
+      "hypothesis": "Public GitHub metadata field pushed_at changed between verified observation snapshots; reason unknown."
+    },
+    {
+      "field": "updated_at",
+      "observed_transitions": 10,
+      "distinct_repositories": 8,
+      "evidence_ids": [
+        "3022c6aefc7f6c9c5473bac1",
+        "8c84040ab2bcce9141bb628e",
+        "275f16c0402e477770b748c5",
+        "e4ca608c322f442cbd207a91",
+        "95c608d840eaa1b7086661f7",
+        "633b3065d3e1f8553de01a12",
+        "6e25a05957379a987bf4597e",
+        "7c98d1bb49eb493a9c899363",
+        "24f3ff87eceb49f47612f2f1",
+        "012a63459c504f3b82ca595c"
+      ],
+      "classification": "CROSS_CHILD_OBSERVATION",
+      "hypothesis": "Public GitHub metadata field updated_at changed between verified observation snapshots; reason unknown."
+    }
+  ],
+  "evidence": [
+    {
+      "id": "3022c6aefc7f6c9c5473bac1",
+      "repo": "DavidWise01/jane",
+      "field": "updated_at",
+      "previous": "2026-11-02T13:29:54Z",
+      "current": "2026-11-02T17:29:50Z",
+      "previous_run": "41491449947-1-2026-11-02T17-29-44-603Z",
+      "current_run": "41499661598-1-2026-11-02T18-22-03-556Z",
+      "observed_at": "2026-11-02T18:22:03.573Z",
+      "confidence": "METADATA_TRANSITION_ONLY",
+      "evidence": [
+        {
+          "run": "41491449947-1-2026-11-02T17-29-44-603Z",
+          "file": "btf2/memory/runs/41491449947-1-2026-11-02T17-29-44-603Z.jsonl",
+          "sha256": "90c7dd6f42be7b36d1ffcd20c4aa3c319915475c7e1112ab83bc8600f13f3d22"
+        },
+        {
+          "run": "41499661598-1-2026-11-02T18-22-03-556Z",
+          "file": "btf2/memory/runs/41499661598-1-2026-11-02T18-22-03-556Z.jsonl",
+          "sha256": "1dd881c71bdd20fe4c34580a3f210e2b5ea2ee1c78ea3eed5bf5cb62d1ec17b6"
+        }
+      ],
+      "arrival_cohort": "UNKNOWN"
+    },
+    {
+      "id": "e8a463bb2eb631a2ae6515e1",
+      "repo": "DavidWise01/jane",
+      "field": "pushed_at",
+      "previous": "2026-11-02T13:29:49Z",
+      "current": "2026-11-02T17:29:46Z",
+      "previous_run": "41491449947-1-2026-11-02T17-29-44-603Z",
+      "current_run": "41499661598-1-2026-11-02T18-22-03-556Z",
+      "observed_at": "2026-11-02T18:22:03.573Z",
+      "confidence": "METADATA_TRANSITION_ONLY",
+      "evidence": [
+        {
+          "run": "41491449947-1-2026-11-02T17-29-44-603Z",
+          "file": "btf2/memory/runs/41491449947-1-2026-11-02T17-29-44-603Z.jsonl",
+          "sha256": "90c7dd6f42be7b36d1ffcd20c4aa3c319915475c7e1112ab83bc8600f13f3d22"
+        },
+        {
+          "run": "41499661598-1-2026-11-02T18-22-03-556Z",
+          "file": "btf2/memory/runs/41499661598-1-2026-11-02T18-22-03-556Z.jsonl",
+          "sha256": "1dd881c71bdd20fe4c34580a3f210e2b5ea2ee1c78ea3eed5bf5cb62d1ec17b6"
+        }
+      ],
+      "arrival_cohort": "UNKNOWN"
+    },
+    {
+      "id": "8c84040ab2bcce9141bb628e",
+      "repo": "DavidWise01/cubi",
+      "field": "updated_at",
+      "previous": "2026-11-01T21:21:20Z",
+      "current": "2026-11-02T22:23:26Z",
+      "previous_run": "41499661598-1-2026-11-02T18-22-03-556Z",
+      "current_run": "41664464891-1-2026-11-03T15-31-24-394Z",
+      "observed_at": "2026-11-03T15:31:24.412Z",
+      "confidence": "METADATA_TRANSITION_ONLY",
+      "evidence": [
+        {
+          "run": "41499661598-1-2026-11-02T18-22-03-556Z",
+          "file": "btf2/memory/runs/41499661598-1-2026-11-02T18-22-03-556Z.jsonl",
+          "sha256": "1dd881c71bdd20fe4c34580a3f210e2b5ea2ee1c78ea3eed5bf5cb62d1ec17b6"
+        },
+        {
+          "run": "41664464891-1-2026-11-03T15-31-24-394Z",
+          "file": "btf2/memory/runs/41664464891-1-2026-11-03T15-31-24-394Z.jsonl",
+          "sha256": "0589060eb6417271caf0b962a708c9546e6745bf1315aa0b4745ce104fb20b8f"
+        }
+      ],
+      "arrival_cohort": "UNKNOWN"
+    },
+    {
+      "id": "1318f042b6a06d9ba654a206",
+      "repo": "DavidWise01/cubi",
+      "field": "pushed_at",
+      "previous": "2026-11-01T21:21:18Z",
+      "current": "2026-11-02T22:23:22Z",
+      "previous_run": "41499661598-1-2026-11-02T18-22-03-556Z",
+      "current_run": "41664464891-1-2026-11-03T15-31-24-394Z",
+      "observed_at": "2026-11-03T15:31:24.412Z",
+      "confidence": "METADATA_TRANSITION_ONLY",
+      "evidence": [
+        {
+          "run": "41499661598-1-2026-11-02T18-22-03-556Z",
+          "file": "btf2/memory/runs/41499661598-1-2026-11-02T18-22-03-556Z.jsonl",
+          "sha256": "1dd881c71bdd20fe4c34580a3f210e2b5ea2ee1c78ea3eed5bf5cb62d1ec17b6"
+        },
+        {
+          "run": "41664464891-1-2026-11-03T15-31-24-394Z",
+          "file": "btf2/memory/runs/41664464891-1-2026-11-03T15-31-24-394Z.jsonl",
+          "sha256": "0589060eb6417271caf0b962a708c9546e6745bf1315aa0b4745ce104fb20b8f"
+        }
+      ],
+      "arrival_cohort": "UNKNOWN"
+    },
+    {
+      "id": "275f16c0402e477770b748c5",
+      "repo": "DavidWise01/DavidWise01.github.io",
+      "field": "updated_at",
+      "previous": "2026-11-02T07:43:07Z",
+      "current": "2026-11-03T09:36:29Z",
+      "previous_run": "41499661598-1-2026-11-02T18-22-03-556Z",
+      "current_run": "41664464891-1-2026-11-03T15-31-24-394Z",
+      "observed_at": "2026-11-03T15:31:24.412Z",
+      "confidence": "METADATA_TRANSITION_ONLY",
+      "evidence": [
+        {
+          "run": "41499661598-1-2026-11-02T18-22-03-556Z",
+          "file": "btf2/memory/runs/41499661598-1-2026-11-02T18-22-03-556Z.jsonl",
+          "sha256": "1dd881c71bdd20fe4c34580a3f210e2b5ea2ee1c78ea3eed5bf5cb62d1ec17b6"
+        },
+        {
+          "run": "41664464891-1-2026-11-03T15-31-24-394Z",
+          "file": "btf2/memory/runs/41664464891-1-2026-11-03T15-31-24-394Z.jsonl",
+          "sha256": "0589060eb6417271caf0b962a708c9546e6745bf1315aa0b4745ce104fb20b8f"
+        }
+      ],
+      "arrival_cohort": "UNKNOWN"
+    },
+    {
+      "id": "d17dee111a767d385d57cf10",
+      "repo": "DavidWise01/DavidWise01.github.io",
+      "field": "pushed_at",
+      "previous": "2026-11-02T07:43:03Z",
+      "current": "2026-11-03T09:36:25Z",
+      "previous_run": "41499661598-1-2026-11-02T18-22-03-556Z",
+      "current_run": "41664464891-1-2026-11-03T15-31-24-394Z",
+      "observed_at": "2026-11-03T15:31:24.412Z",
+      "confidence": "METADATA_TRANSITION_ONLY",
+      "evidence": [
+        {
+          "run": "41499661598-1-2026-11-02T18-22-03-556Z",
+          "file": "btf2/memory/runs/41499661598-1-2026-11-02T18-22-03-556Z.jsonl",
+          "sha256": "1dd881c71bdd20fe4c34580a3f210e2b5ea2ee1c78ea3eed5bf5cb62d1ec17b6"
+        },
+        {
+          "run": "41664464891-1-2026-11-03T15-31-24-394Z",
+          "file": "btf2/memory/runs/41664464891-1-2026-11-03T15-31-24-394Z.jsonl",
+          "sha256": "0589060eb6417271caf0b962a708c9546e6745bf1315aa0b4745ce104fb20b8f"
+        }
+      ],
+      "arrival_cohort": "UNKNOWN"
+    },
+    {
+      "id": "e4ca608c322f442cbd207a91",
+      "repo": "DavidWise01/elderfu",
+      "field": "updated_at",
+      "previous": "2026-11-02T13:13:58Z",
+      "current": "2026-11-03T14:58:01Z",
+      "previous_run": "41499661598-1-2026-11-02T18-22-03-556Z",
+      "current_run": "41664464891-1-2026-11-03T15-31-24-394Z",
+      "observed_at": "2026-11-03T15:31:24.412Z",
+      "confidence": "METADATA_TRANSITION_ONLY",
+      "evidence": [
+        {
+          "run": "41499661598-1-2026-11-02T18-22-03-556Z",
+          "file": "btf2/memory/runs/41499661598-1-2026-11-02T18-22-03-556Z.jsonl",
+          "sha256": "1dd881c71bdd20fe4c34580a3f210e2b5ea2ee1c78ea3eed5bf5cb62d1ec17b6"
+        },
+        {
+          "run": "41664464891-1-2026-11-03T15-31-24-394Z",
+          "file": "btf2/memory/runs/41664464891-1-2026-11-03T15-31-24-394Z.jsonl",
+          "sha256": "0589060eb6417271caf0b962a708c9546e6745bf1315aa0b4745ce104fb20b8f"
+        }
+      ],
+      "arrival_cohort": "UNKNOWN"
+    },
+    {
+      "id": "cb1304936e9d9d2f69dfe88d",
+      "repo": "DavidWise01/elderfu",
+      "field": "pushed_at",
+      "previous": "2026-11-02T13:13:55Z",
+      "current": "2026-11-03T14:57:56Z",
+      "previous_run": "41499661598-1-2026-11-02T18-22-03-556Z",
+      "current_run": "41664464891-1-2026-11-03T15-31-24-394Z",
+      "observed_at": "2026-11-03T15:31:24.412Z",
+      "confidence": "METADATA_TRANSITION_ONLY",
+      "evidence": [
+        {
+          "run": "41499661598-1-2026-11-02T18-22-03-556Z",
+          "file": "btf2/memory/runs/41499661598-1-2026-11-02T18-22-03-556Z.jsonl",
+          "sha256": "1dd881c71bdd20fe4c34580a3f210e2b5ea2ee1c78ea3eed5bf5cb62d1ec17b6"
+        },
+        {
+          "run": "41664464891-1-2026-11-03T15-31-24-394Z",
+          "file": "btf2/memory/runs/41664464891-1-2026-11-03T15-31-24-394Z.jsonl",
+          "sha256": "0589060eb6417271caf0b962a708c9546e6745bf1315aa0b4745ce104fb20b8f"
+        }
+      ],
+      "arrival_cohort": "UNKNOWN"
+    },
+    {
+      "id": "95c608d840eaa1b7086661f7",
+      "repo": "DavidWise01/homer",
+      "field": "updated_at",
+      "previous": "2026-11-02T14:10:52Z",
+      "current": "2026-11-03T13:14:17Z",
+      "previous_run": "41499661598-1-2026-11-02T18-22-03-556Z",
+      "current_run": "41664464891-1-2026-11-03T15-31-24-394Z",
+      "observed_at": "2026-11-03T15:31:24.412Z",
+      "confidence": "METADATA_TRANSITION_ONLY",
+      "evidence": [
+        {
+          "run": "41499661598-1-2026-11-02T18-22-03-556Z",
+          "file": "btf2/memory/runs/41499661598-1-2026-11-02T18-22-03-556Z.jsonl",
+          "sha256": "1dd881c71bdd20fe4c34580a3f210e2b5ea2ee1c78ea3eed5bf5cb62d1ec17b6"
+        },
+        {
+          "run": "41664464891-1-2026-11-03T15-31-24-394Z",
+          "file": "btf2/memory/runs/41664464891-1-2026-11-03T15-31-24-394Z.jsonl",
+          "sha256": "0589060eb6417271caf0b962a708c9546e6745bf1315aa0b4745ce104fb20b8f"
+        }
+      ],
+      "arrival_cohort": "UNKNOWN"
+    },
+    {
+      "id": "7329259cc1c608da04407eb3",
+      "repo": "DavidWise01/homer",
+      "field": "pushed_at",
+      "previous": "2026-11-02T14:10:47Z",
+      "current": "2026-11-03T13:14:13Z",
+      "previous_run": "41499661598-1-2026-11-02T18-22-03-556Z",
+      "current_run": "41664464891-1-2026-11-03T15-31-24-394Z",
+      "observed_at": "2026-11-03T15:31:24.412Z",
+      "confidence": "METADATA_TRANSITION_ONLY",
+      "evidence": [
+        {
+          "run": "41499661598-1-2026-11-02T18-22-03-556Z",
+          "file": "btf2/memory/runs/41499661598-1-2026-11-02T18-22-03-556Z.jsonl",
+          "sha256": "1dd881c71bdd20fe4c34580a3f210e2b5ea2ee1c78ea3eed5bf5cb62d1ec17b6"
+        },
+        {
+          "run": "41664464891-1-2026-11-03T15-31-24-394Z",
+          "file": "btf2/memory/runs/41664464891-1-2026-11-03T15-31-24-394Z.jsonl",
+          "sha256": "0589060eb6417271caf0b962a708c9546e6745bf1315aa0b4745ce104fb20b8f"
+        }
+      ],
+      "arrival_cohort": "UNKNOWN"
+    },
+    {
+      "id": "633b3065d3e1f8553de01a12",
+      "repo": "DavidWise01/jane",
+      "field": "updated_at",
+      "previous": "2026-11-02T17:29:50Z",
+      "current": "2026-11-03T14:55:13Z",
+      "previous_run": "41499661598-1-2026-11-02T18-22-03-556Z",
+      "current_run": "41664464891-1-2026-11-03T15-31-24-394Z",
+      "observed_at": "2026-11-03T15:31:24.412Z",
+      "confidence": "METADATA_TRANSITION_ONLY",
+      "evidence": [
+        {
+          "run": "41499661598-1-2026-11-02T18-22-03-556Z",
+          "file": "btf2/memory/runs/41499661598-1-2026-11-02T18-22-03-556Z.jsonl",
+          "sha256": "1dd881c71bdd20fe4c34580a3f210e2b5ea2ee1c78ea3eed5bf5cb62d1ec17b6"
+        },
+        {
+          "run": "41664464891-1-2026-11-03T15-31-24-394Z",
+          "file": "btf2/memory/runs/41664464891-1-2026-11-03T15-31-24-394Z.jsonl",
+          "sha256": "0589060eb6417271caf0b962a708c9546e6745bf1315aa0b4745ce104fb20b8f"
+        }
+      ],
+      "arrival_cohort": "UNKNOWN"
+    },
+    {
+      "id": "a89b61c2763b2a2936fee955",
+      "repo": "DavidWise01/jane",
+      "field": "pushed_at",
+      "previous": "2026-11-02T17:29:46Z",
+      "current": "2026-11-03T14:55:11Z",
+      "previous_run": "41499661598-1-2026-11-02T18-22-03-556Z",
+      "current_run": "41664464891-1-2026-11-03T15-31-24-394Z",
+      "observed_at": "2026-11-03T15:31:24.412Z",
+      "confidence": "METADATA_TRANSITION_ONLY",
+      "evidence": [
+        {
+          "run": "41499661598-1-2026-11-02T18-22-03-556Z",
+          "file": "btf2/memory/runs/41499661598-1-2026-11-02T18-22-03-556Z.jsonl",
+          "sha256": "1dd881c71bdd20fe4c34580a3f210e2b5ea2ee1c78ea3eed5bf5cb62d1ec17b6"
+        },
+        {
+          "run": "41664464891-1-2026-11-03T15-31-24-394Z",
+          "file": "btf2/memory/runs/41664464891-1-2026-11-03T15-31-24-394Z.jsonl",
+          "sha256": "0589060eb6417271caf0b962a708c9546e6745bf1315aa0b4745ce104fb20b8f"
+        }
+      ],
+      "arrival_cohort": "UNKNOWN"
+    },
+    {
+      "id": "6e25a05957379a987bf4597e",
+      "repo": "DavidWise01/nom",
+      "field": "updated_at",
+      "previous": "2026-11-02T13:59:01Z",
+      "current": "2026-11-03T13:07:47Z",
+      "previous_run": "41499661598-1-2026-11-02T18-22-03-556Z",
+      "current_run": "41664464891-1-2026-11-03T15-31-24-394Z",
+      "observed_at": "2026-11-03T15:31:24.412Z",
+      "confidence": "METADATA_TRANSITION_ONLY",
+      "evidence": [
+        {
+          "run": "41499661598-1-2026-11-02T18-22-03-556Z",
+          "file": "btf2/memory/runs/41499661598-1-2026-11-02T18-22-03-556Z.jsonl",
+          "sha256": "1dd881c71bdd20fe4c34580a3f210e2b5ea2ee1c78ea3eed5bf5cb62d1ec17b6"
+        },
+        {
+          "run": "41664464891-1-2026-11-03T15-31-24-394Z",
+          "file": "btf2/memory/runs/41664464891-1-2026-11-03T15-31-24-394Z.jsonl",
+          "sha256": "0589060eb6417271caf0b962a708c9546e6745bf1315aa0b4745ce104fb20b8f"
+        }
+      ],
+      "arrival_cohort": "UNKNOWN"
+    },
+    {
+      "id": "5f2d2527e798b98597a7b8c4",
+      "repo": "DavidWise01/nom",
+      "field": "pushed_at",
+      "previous": "2026-11-02T13:58:57Z",
+      "current": "2026-11-03T13:07:43Z",
+      "previous_run": "41499661598-1-2026-11-02T18-22-03-556Z",
+      "current_run": "41664464891-1-2026-11-03T15-31-24-394Z",
+      "observed_at": "2026-11-03T15:31:24.412Z",
+      "confidence": "METADATA_TRANSITION_ONLY",
+      "evidence": [
+        {
+          "run": "41499661598-1-2026-11-02T18-22-03-556Z",
+          "file": "btf2/memory/runs/41499661598-1-2026-11-02T18-22-03-556Z.jsonl",
+          "sha256": "1dd881c71bdd20fe4c34580a3f210e2b5ea2ee1c78ea3eed5bf5cb62d1ec17b6"
+        },
+        {
+          "run": "41664464891-1-2026-11-03T15-31-24-394Z",
+          "file": "btf2/memory/runs/41664464891-1-2026-11-03T15-31-24-394Z.jsonl",
+          "sha256": "0589060eb6417271caf0b962a708c9546e6745bf1315aa0b4745ce104fb20b8f"
+        }
+      ],
+      "arrival_cohort": "UNKNOWN"
+    },
+    {
+      "id": "7c98d1bb49eb493a9c899363",
+      "repo": "DavidWise01/oasis",
+      "field": "updated_at",
+      "previous": "2026-11-01T11:50:42Z",
+      "current": "2026-11-03T12:47:35Z",
+      "previous_run": "41499661598-1-2026-11-02T18-22-03-556Z",
+      "current_run": "41664464891-1-2026-11-03T15-31-24-394Z",
+      "observed_at": "2026-11-03T15:31:24.412Z",
+      "confidence": "METADATA_TRANSITION_ONLY",
+      "evidence": [
+        {
+          "run": "41499661598-1-2026-11-02T18-22-03-556Z",
+          "file": "btf2/memory/runs/41499661598-1-2026-11-02T18-22-03-556Z.jsonl",
+          "sha256": "1dd881c71bdd20fe4c34580a3f210e2b5ea2ee1c78ea3eed5bf5cb62d1ec17b6"
+        },
+        {
+          "run": "41664464891-1-2026-11-03T15-31-24-394Z",
+          "file": "btf2/memory/runs/41664464891-1-2026-11-03T15-31-24-394Z.jsonl",
+          "sha256": "0589060eb6417271caf0b962a708c9546e6745bf1315aa0b4745ce104fb20b8f"
+        }
+      ],
+      "arrival_cohort": "UNKNOWN"
+    },
+    {
+      "id": "194dd76d4ff2c32f0888a797",
+      "repo": "DavidWise01/oasis",
+      "field": "pushed_at",
+      "previous": "2026-11-01T11:50:39Z",
+      "current": "2026-11-03T12:47:30Z",
+      "previous_run": "41499661598-1-2026-11-02T18-22-03-556Z",
+      "current_run": "41664464891-1-2026-11-03T15-31-24-394Z",
+      "observed_at": "2026-11-03T15:31:24.412Z",
+      "confidence": "METADATA_TRANSITION_ONLY",
+      "evidence": [
+        {
+          "run": "41499661598-1-2026-11-02T18-22-03-556Z",
+          "file": "btf2/memory/runs/41499661598-1-2026-11-02T18-22-03-556Z.jsonl",
+          "sha256": "1dd881c71bdd20fe4c34580a3f210e2b5ea2ee1c78ea3eed5bf5cb62d1ec17b6"
+        },
+        {
+          "run": "41664464891-1-2026-11-03T15-31-24-394Z",
+          "file": "btf2/memory/runs/41664464891-1-2026-11-03T15-31-24-394Z.jsonl",
+          "sha256": "0589060eb6417271caf0b962a708c9546e6745bf1315aa0b4745ce104fb20b8f"
+        }
+      ],
+      "arrival_cohort": "UNKNOWN"
+    },
+    {
+      "id": "24f3ff87eceb49f47612f2f1",
+      "repo": "DavidWise01/sapph-i-on",
+      "field": "updated_at",
+      "previous": "2026-11-01T23:57:45Z",
+      "current": "2026-11-02T23:32:56Z",
+      "previous_run": "41499661598-1-2026-11-02T18-22-03-556Z",
+      "current_run": "41664464891-1-2026-11-03T15-31-24-394Z",
+      "observed_at": "2026-11-03T15:31:24.412Z",
+      "confidence": "METADATA_TRANSITION_ONLY",
+      "evidence": [
+        {
+          "run": "41499661598-1-2026-11-02T18-22-03-556Z",
+          "file": "btf2/memory/runs/41499661598-1-2026-11-02T18-22-03-556Z.jsonl",
+          "sha256": "1dd881c71bdd20fe4c34580a3f210e2b5ea2ee1c78ea3eed5bf5cb62d1ec17b6"
+        },
+        {
+          "run": "41664464891-1-2026-11-03T15-31-24-394Z",
+          "file": "btf2/memory/runs/41664464891-1-2026-11-03T15-31-24-394Z.jsonl",
+          "sha256": "0589060eb6417271caf0b962a708c9546e6745bf1315aa0b4745ce104fb20b8f"
+        }
+      ],
+      "arrival_cohort": "UNKNOWN"
+    },
+    {
+      "id": "8f0679dac4049f6c2a60e573",
+      "repo": "DavidWise01/sapph-i-on",
+      "field": "pushed_at",
+      "previous": "2026-11-01T23:57:41Z",
+      "current": "2026-11-02T23:32:51Z",
+      "previous_run": "41499661598-1-2026-11-02T18-22-03-556Z",
+      "current_run": "41664464891-1-2026-11-03T15-31-24-394Z",
+      "observed_at": "2026-11-03T15:31:24.412Z",
+      "confidence": "METADATA_TRANSITION_ONLY",
+      "evidence": [
+        {
+          "run": "41499661598-1-2026-11-02T18-22-03-556Z",
+          "file": "btf2/memory/runs/41499661598-1-2026-11-02T18-22-03-556Z.jsonl",
+          "sha256": "1dd881c71bdd20fe4c34580a3f210e2b5ea2ee1c78ea3eed5bf5cb62d1ec17b6"
+        },
+        {
+          "run": "41664464891-1-2026-11-03T15-31-24-394Z",
+          "file": "btf2/memory/runs/41664464891-1-2026-11-03T15-31-24-394Z.jsonl",
+          "sha256": "0589060eb6417271caf0b962a708c9546e6745bf1315aa0b4745ce104fb20b8f"
+        }
+      ],
+      "arrival_cohort": "UNKNOWN"
+    },
+    {
+      "id": "012a63459c504f3b82ca595c",
+      "repo": "DavidWise01/jane",
+      "field": "updated_at",
+      "previous": "2026-11-03T14:55:13Z",
+      "current": "2026-11-03T15:31:32Z",
+      "previous_run": "41664464891-1-2026-11-03T15-31-24-394Z",
+      "current_run": "41672109205-1-2026-11-03T16-16-23-687Z",
+      "observed_at": "2026-11-03T16:16:23.703Z",
+      "confidence": "METADATA_TRANSITION_ONLY",
+      "evidence": [
+        {
+          "run": "41664464891-1-2026-11-03T15-31-24-394Z",
+          "file": "btf2/memory/runs/41664464891-1-2026-11-03T15-31-24-394Z.jsonl",
+          "sha256": "0589060eb6417271caf0b962a708c9546e6745bf1315aa0b4745ce104fb20b8f"
+        },
+        {
+          "run": "41672109205-1-2026-11-03T16-16-23-687Z",
+          "file": "btf2/memory/runs/41672109205-1-2026-11-03T16-16-23-687Z.jsonl",
+          "sha256": "23fc5e3c39cc7a773fa3c8a1ec7811aca6b6927cdf3c0453ded461050a0a8476"
+        }
+      ],
+      "arrival_cohort": "UNKNOWN"
+    },
+    {
+      "id": "53d565ff24fa51a0fbb04ddb",
+      "repo": "DavidWise01/jane",
+      "field": "pushed_at",
+      "previous": "2026-11-03T14:55:11Z",
+      "current": "2026-11-03T15:31:26Z",
+      "previous_run": "41664464891-1-2026-11-03T15-31-24-394Z",
+      "current_run": "41672109205-1-2026-11-03T16-16-23-687Z",
+      "observed_at": "2026-11-03T16:16:23.703Z",
+      "confidence": "METADATA_TRANSITION_ONLY",
+      "evidence": [
+        {
+          "run": "41664464891-1-2026-11-03T15-31-24-394Z",
+          "file": "btf2/memory/runs/41664464891-1-2026-11-03T15-31-24-394Z.jsonl",
+          "sha256": "0589060eb6417271caf0b962a708c9546e6745bf1315aa0b4745ce104fb20b8f"
+        },
+        {
+          "run": "41672109205-1-2026-11-03T16-16-23-687Z",
+          "file": "btf2/memory/runs/41672109205-1-2026-11-03T16-16-23-687Z.jsonl",
+          "sha256": "23fc5e3c39cc7a773fa3c8a1ec7811aca6b6927cdf3c0453ded461050a0a8476"
+        }
+      ],
+      "arrival_cohort": "UNKNOWN"
+    }
+  ],
+  "notes": "No causal claims, model training, child autonomy, or actual ancestry inferred."
+}
