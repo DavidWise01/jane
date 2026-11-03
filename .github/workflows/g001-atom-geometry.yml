@@ -1,0 +1,21 @@
+name: G001 a.t.o.m Granddaughter Geometry
+on:
+  push:
+    paths:
+      - 'granddaughter1/**'
+      - 'scripts/btf2/atom-g001-kernel.cjs'
+      - 'scripts/btf2/test-atom-g001.cjs'
+      - '.github/workflows/g001-atom-geometry.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Test 26-cell first-granddaughter toroid
+        run: node scripts/btf2/test-atom-g001.cjs
