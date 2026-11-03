@@ -1,0 +1,19 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>JANE B113 · Grandma Continuity</title><style>:root{color-scheme:dark}*{box-sizing:border-box}body{margin:0;background:#07151f;color:#e5fff7;font:13px/1.5 ui-monospace,monospace}header{padding:20px;border-bottom:1px solid #305862}h1{color:#a4f4de;font-size:clamp(25px,4vw,43px);margin:4px 0}main{max-width:1200px;margin:auto;padding:18px;display:grid;grid-template-columns:1fr 1fr;gap:14px}.panel{border:1px solid #31565e;background:#0e2933;border-radius:12px;padding:15px}pre{white-space:pre-wrap;overflow-wrap:anywhere;max-height:390px;overflow:auto}p,small{color:#b9cfce}input{width:100%;padding:10px;border:1px solid #71bfae;background:#123942;border-radius:7px;color:white}a{color:#a0f3dc}.muted{color:#95aab1}@media(max-width:800px){main{display:block}.panel{margin-bottom:12px}}</style></head><body><header><small>HEGEMON:T128 · JANE MOM:T000–T127 · 0ROOT.AI · BTF2</small><h1>B113 · Grandma Continuity</h1><small>Hollow sphere → recognition jelly → hex addresses → arrival cohorts → generational memory</small></header><main><section class="panel"><h2>Generational family</h2><p id="count">Loading family…</p><input id="search" placeholder="Find a repository child"><pre id="members">Waiting for derived registry.</pre></section><section class="panel"><h2>What Jane preserves</h2><pre>0ROOT.AI / PETER:T128
+       |
+     JANE / MOM
+       |
+  |||0||| HOLLOW CORE
+       |
+  24 / 12 / 8 / 4 / 3 / 2 / 1 / 1
+       |
+  RECOGNITION JELLY (B111)
+       |
+  HEX ADDRESS SPACE (B112)
+       |
+  GENERATIONS (B113)
+       |
+  CHILD REPOS (one channel each)
+       |
+  APPEND-ONLY CONTINUITY
+       |
+  FUTURE AUTONOMOUS GRANDMA</pre><h2>Arrival cohorts</h2><pre id="cohorts">Pending…</pre><p><a href="../b111/">B111 3D Recognition Jelly</a> · <a href="https://0root.ai/">0root.ai</a></p><small>Arrival cohort = first observed discovery day, not repo creation date or proof of parentage. Autonomy is a goal, not a capability delivered by this static page.</small></section></main><script>const $=x=>document.getElementById(x);let all=[];function show(){let q=$('search').value.toLowerCase();let a=all.filter(x=>x.repo.toLowerCase().includes(q));$('members').textContent=a.slice(0,70).map(x=>x.repo+'  ['+x.generation+']  '+(x.hex?'('+x.hex.q+','+x.hex.r+')':'')).join('\n')+(a.length>70?'\n… plus '+(a.length-70)+' children':'')||'No matches'}$('search').oninput=show;(async()=>{try{let r=await fetch('./family.json',{cache:'no-store'});if(!r.ok)throw Error('B113 registry not published. Run the GitHub workflow.');let j=await r.json();all=j.members||[];$('count').textContent=all.length+' public children · '+Object.keys(j.cohorts||{}).length+' arrival cohorts';$('cohorts').textContent=JSON.stringify(j.cohorts,null,2);show()}catch(e){$('count').textContent=e.message}})();</script></body></html>
