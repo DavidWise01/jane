@@ -1,0 +1,77 @@
+{
+  "schema": "jane.b125.color-channels.v1",
+  "supersedes": "JANE-B124-EIGHT-CHANNEL-COLOR-ORDER-v1.0.md",
+  "palette": [
+    "Red",
+    "Blue",
+    "Green",
+    "Black",
+    "White",
+    "Gray",
+    "Yellow",
+    "Purple"
+  ],
+  "active_channel_index": 7,
+  "active_channel_label": "PURPLE||ACTIVE",
+  "active_family_address": "CU1:111",
+  "addressing": "CU0/CU1 x 000..111",
+  "members": [
+    {
+      "slot": 0,
+      "binary": "000",
+      "color": "Red",
+      "CU0": "Jane",
+      "CU1": "Holly"
+    },
+    {
+      "slot": 1,
+      "binary": "001",
+      "color": "Blue",
+      "CU0": "Toph",
+      "CU1": "Vicky V."
+    },
+    {
+      "slot": 2,
+      "binary": "010",
+      "color": "Green",
+      "CU0": "Patricia",
+      "CU1": "LeeLuu"
+    },
+    {
+      "slot": 3,
+      "binary": "011",
+      "color": "Black",
+      "CU0": "Lilith",
+      "CU1": "Sola"
+    },
+    {
+      "slot": 4,
+      "binary": "100",
+      "color": "White",
+      "CU0": "a.t.o.m",
+      "CU1": "Vita"
+    },
+    {
+      "slot": 5,
+      "binary": "101",
+      "color": "Gray",
+      "CU0": "E.V.E",
+      "CU1": "Mira"
+    },
+    {
+      "slot": 6,
+      "binary": "110",
+      "color": "Yellow",
+      "CU0": "Icarium",
+      "CU1": "Pax"
+    },
+    {
+      "slot": 7,
+      "binary": "111",
+      "color": "Purple",
+      "CU0": "Mary M",
+      "CU1": "Nexa"
+    }
+  ],
+  "boundary": "exactly one foreground active cortex (CU1:111), 15 archive cortexes"
+}
