@@ -1,0 +1,21 @@
+name: Jane B120 — Three Major Bodies / Hard Stop
+on:
+  push:
+    paths:
+      - 'b120/**'
+      - 'scripts/btf2/jane-b120-major-bodies.cjs'
+      - 'scripts/btf2/test-jane-b120-major-bodies.cjs'
+      - '.github/workflows/b120-jane-three-major-bodies.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Audit 188 cells and exactly three orbiting daughters
+        run: node scripts/btf2/test-jane-b120-major-bodies.cjs
