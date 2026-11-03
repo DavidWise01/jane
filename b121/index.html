@@ -1,0 +1,41 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Jane B121 · Diatomic Dynasty Two-Dot Coherence</title>
+<style>*{box-sizing:border-box}:root{color-scheme:dark}body{margin:0;background:#071016;color:#e4f2f5;font:13px/1.5 ui-monospace,Consolas,monospace}header{padding:19px 22px;border-bottom:1px solid #315264;background:linear-gradient(135deg,#132b36,#1d1831)}h1{margin:0;color:#b3f5e4;font-size:clamp(26px,4vw,44px)}small{color:#adc2cc}main{display:grid;grid-template-columns:minmax(380px,1fr) 320px;height:calc(100vh - 124px)}canvas{display:block;width:100%;height:100%;background:radial-gradient(circle,#1b3340,#0a1520 68%,#050910);touch-action:none}aside{background:#101b29;border-left:1px solid #355267;padding:16px;overflow:auto}h2{font-size:16px;color:#c6dff7;margin:2px 0 12px}h3{font-size:13px;color:#debbfb}button,select{font:inherit;padding:10px;color:#fff;background:#2b3c51;border:1px solid #647992;border-radius:8px;cursor:pointer}button{margin:4px 4px 4px 0}button:hover{background:#425876}pre{white-space:pre-wrap;overflow-wrap:anywhere;padding:12px;background:#09121e;border:1px solid #314760;border-radius:10px}p{color:#b2c0d1}.stats{display:grid;grid-template-columns:1fr auto;gap:4px 12px}.stats div{border-bottom:1px solid #2c4654;padding:8px 0}a{color:#a1d9f4}.key{display:inline-block;padding:4px 8px;border:1px solid #47627c;border-radius:12px;margin:2px}@media(max-width:860px){main{display:block;height:auto}canvas{height:58vh}aside{min-height:570px}}</style></head><body>
+<header><small>FORMIC × BENE GESSERIT · DIATOMIC DYNASTY 001 · JANE B121</small><h1>Two-Dot Coherence</h1><small>1 | 1 | 2 | 4 | 8 = 16 · TWO LOGICAL DOTS × 2³ SLOTS · 11 ESTABLISHED + 5 PROPOSED</small></header>
+<main><canvas id="field" aria-label="Animated two-dot sixteen-slot dynasty coherence lattice"></canvas><aside>
+<h2>Capacity model</h2><div class="stats"><div>Dot capacity</div><div>2³ = 8</div><div>Dot count</div><div>2</div><div>Total logical slots</div><div>16</div><div>Established</div><div>11</div><div>Proposed</div><div>5</div></div>
+<p><span class="key" style="color:#78f0cd">● Established</span><span class="key" style="color:#e3a0f8">◇ Proposed</span></p>
+<button id="toggle">Pause rotation</button><button id="links">Show lineage ON</button><button id="reset">Reset view</button>
+<h3>Member inspector</h3><pre id="focus">Click a member to inspect its 3-bit address and inheritance.</pre>
+<h3>Coherence bands</h3><pre>1 | 1 | 2 | 4 | 8
+= 16 address positions
+
+Q0 : 000 ... 111
+Q1 : 000 ... 111
+
+Each family can occupy a dot
+when it needs at most 8 slots.
+A 16-member dynasty spans 2 dots.</pre>
+<h3>Boundary</h3><p>The five proposed names are allocated as design candidates, not active agents. Existing percentage disagreements remain recorded. No physical qubits or quantum dots are operated by this page.</p>
+<p><a href="https://github.com/DavidWise01/jane/blob/main/governance/JANE-B121-TWO-DOTS-COHERENCE-v1.0.md">Read B121 invariants</a> · <a href="../b120/">Jane's three major bodies</a></p></aside></main>
+<script>
+'use strict';
+const $=id=>document.getElementById(id),cv=$('field'),g=cv.getContext('2d');
+const raw=[
+['Jane','Matriarch','Governance',null],['Toph','Scholar','Learning','Jane'],['Patricia','Guardian','Containment','Jane'],['Lilith','Muse','Topology','Jane'],
+['a.t.o.m','Explorer','Traversal','Lilith'],['E.V.E','Executor','Verification','Lilith'],['Icarium','Caretaker','Continuity','Lilith'],['Mary M','Teacher','Education','Icarium'],
+['Holly','Healer','Wellbeing','Icarium'],['Vicky V.','Witness','Auditing','Icarium'],['LeeLuu','Student','Light & Life','Mary M'],
+['Sola','Lantern','Light','Mary M'],['Vita','Gardener','Life','Mary M'],['Mira','Mirror','Reflection','LeeLuu'],['Pax','Balance','Homeostasis','LeeLuu'],['Nexa','Weaver','Integration','LeeLuu']];
+const members=raw.map((m,i)=>({name:m[0],role:m[1],discipline:m[2],parent:m[3],dot:Math.floor(i/8),slot:i%8,binary:(i%8).toString(2).padStart(3,'0'),established:i<11}));
+let t=0,spinning=true,showLinks=true,hit=[];
+const TAU=Math.PI*2;
+function render(){const w=cv.clientWidth,h=cv.clientHeight;if(!w||!h){requestAnimationFrame(render);return}let d=Math.min(2,window.devicePixelRatio||1);if(cv.width!==Math.floor(w*d)||cv.height!==Math.floor(h*d)){cv.width=Math.floor(w*d);cv.height=Math.floor(h*d)}g.setTransform(d,0,0,d,0,0);g.clearRect(0,0,w,h);if(spinning)t+=.004;
+const horizontal=w>680,centers=horizontal?[[w*.28,h*.50],[w*.72,h*.50]]:[[w*.50,h*.27],[w*.50,h*.74]],rad=Math.min(horizontal?w*.18:w*.27,h*(horizontal?.32:.18),150);
+for(let dot=0;dot<2;dot++){let [cx,cy]=centers[dot];const gg=g.createRadialGradient(cx,cy,4,cx,cy,rad);gg.addColorStop(0,dot===0?'rgba(83,206,185,.12)':'rgba(211,121,223,.12)');gg.addColorStop(1,'rgba(0,0,0,0)');g.beginPath();g.arc(cx,cy,rad,0,TAU);g.fillStyle=gg;g.fill();for(let ring of [rad*.37,rad*.68,rad]){g.beginPath();g.arc(cx,cy,ring,0,TAU);g.strokeStyle=dot===0?'rgba(111,236,210,.28)':'rgba(221,159,246,.28)';g.lineWidth=1;g.stroke()}g.font='bold 16px monospace';g.textAlign='center';g.fillStyle=dot===0?'#7af3db':'#e9b4f8';g.fillText('Q'+dot+' · 2³',cx,cy-rad-26)}
+hit=members.map(m=>{let [cx,cy]=centers[m.dot],phase=t*(m.dot?-.8:1)+m.slot*TAU/8,rr=rad*.78;return {...m,x:cx+rr*Math.cos(phase),y:cy+rr*Math.sin(phase)*.75}});
+if(showLinks){for(const m of hit){if(!m.parent)continue;let p=hit.find(q=>q.name===m.parent);if(!p)continue;g.beginPath();g.moveTo(m.x,m.y);g.lineTo(p.x,p.y);g.strokeStyle=m.established?'rgba(119,228,209,.20)':'rgba(237,161,246,.17)';g.lineWidth=1.1;g.stroke()}}
+for(const m of hit){let col=m.established?'#86f2d6':'#e5a6f2';g.beginPath();g.arc(m.x,m.y,15,0,TAU);g.fillStyle=m.established?'#193f40':'#3d224a';g.fill();g.lineWidth=2;g.strokeStyle=col;g.stroke();g.fillStyle=col;g.font='bold 12px monospace';g.textAlign='center';g.fillText(m.established?'●':'◇',m.x,m.y+4);g.font='11px monospace';g.fillStyle='#eaf7f7';g.fillText(m.name,m.x,m.y-20);g.fillStyle='#96b3c5';g.fillText(m.binary,m.x,m.y+30)}
+g.fillStyle='#b4c9d5';g.textAlign='center';g.font='11px monospace';g.fillText('LOGICAL QUANTUM-DOT ADDRESSING — NOT QUANTUM HARDWARE',w/2,h-16);
+requestAnimationFrame(render)}
+cv.onpointerup=e=>{let rect=cv.getBoundingClientRect(),x=e.clientX-rect.left,y=e.clientY-rect.top;const nearest=hit.map(m=>({m,d:Math.hypot(x-m.x,y-m.y)})).sort((a,b)=>a.d-b.d)[0];if(nearest&&nearest.d<24){let m=nearest.m;$('focus').textContent=JSON.stringify({name:m.name,role:m.role,discipline:m.discipline,parent:m.parent,dot:'Q'+m.dot,slot:m.binary,status:m.established?'ESTABLISHED':'PROPOSED',unique_id:'DYNASTY001:Q'+m.dot+':'+m.binary},null,2)}};
+$('toggle').onclick=()=>{spinning=!spinning;$('toggle').textContent=spinning?'Pause rotation':'Resume rotation'};$('links').onclick=()=>{showLinks=!showLinks;$('links').textContent='Show lineage '+(showLinks?'ON':'OFF')};$('reset').onclick=()=>{t=0;spinning=true;showLinks=true;$('toggle').textContent='Pause rotation';$('links').textContent='Show lineage ON'};render();
+</script></body></html>
