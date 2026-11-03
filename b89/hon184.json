@@ -1,10 +1,10 @@
 {
   "schema": "HON184_B89_V1",
   "mission": "HEGEMON M001 / Internet Time Dilation",
-  "generated_at": "2026-11-02T19:35:03.088Z",
+  "generated_at": "2026-11-03T17:09:23.151Z",
   "status": "DERIVED_GITHUB_PUBLIC_METADATA",
   "slot_count": 184,
-  "pin_count": 2146,
+  "pin_count": 2147,
   "collision_slots": 184,
   "unknown_count": 0,
   "source": "BTF2 PUBLIC CATALOG",
@@ -642,6 +642,17 @@
       "url": "https://github.com/DavidWise01/arc-reactor-mk24",
       "agent_id": "FORMIC-d122b1536f65e6d6",
       "hon184_slot": 124,
+      "band": "N",
+      "observation_status": "UNCHANGED",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "pin": "BTF2",
+      "repo": "DavidWise01/archon",
+      "url": "https://github.com/DavidWise01/archon",
+      "agent_id": "FORMIC-dc0a2b60c8db400b",
+      "hon184_slot": 161,
       "band": "N",
       "observation_status": "UNCHANGED",
       "archived": false,
@@ -24259,7 +24270,7 @@
     },
     {
       "slot": 161,
-      "occupancy": 13
+      "occupancy": 14
     },
     {
       "slot": 162,
