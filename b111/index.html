@@ -1,0 +1,59 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>JANE B111 — Recognition Jelly</title><style>
+:root{color-scheme:dark}*{box-sizing:border-box}body{margin:0;color:#e7fff6;background:#06131d;font:13px/1.45 ui-monospace,Consolas,monospace}header{padding:17px 23px;border-bottom:1px solid #315862;background:linear-gradient(180deg,#13252e,#07141b)}h1{color:#a7f4d8;font-size:clamp(25px,3.8vw,43px);margin:2px 0}small,p{color:#b4cdd0}main{display:grid;grid-template-columns:minmax(370px,3fr) minmax(285px,1fr);height:calc(100vh - 116px)}canvas{height:100%;width:100%;touch-action:none;display:block;background:radial-gradient(ellipse at center,#163742,#081823 70%,#031019)}aside{padding:16px;overflow:auto;background:#0e2831;border-left:1px solid #2e5662}input,button{background:#173b46;color:#fff;border:1px solid #78d0c6;border-radius:8px;font:inherit;padding:8px}input[type=text]{width:100%}input[type=range]{width:100%}button{cursor:pointer;margin:3px}.gradient{height:16px;border-radius:8px;background:linear-gradient(90deg,#24d7c2,#e4e76b,#f8a34c,#ec5264)}.muted{color:#aabfc8}pre{white-space:pre-wrap;overflow-wrap:anywhere;max-height:210px;overflow:auto;background:#0a1e28;border-radius:10px;border:1px solid #274653;padding:10px}a{color:#9bf2d9}@media(max-width:850px){main{display:block;height:auto}canvas{height:59vh}aside{min-height:350px}}</style></head>
+<body><header><small>HEGEMON PETER:T128 · JANE MOM:T000–T127 · BTF2 FAMILY</small><h1>B111 · Recognition Jelly</h1><small>Hollow sphere · one sensing tendril per child · 24/12/8/4/3/2/1/1 · |||0|||</small></header>
+<main><canvas id="v" aria-label="Animated 3D hollow recognition jelly"></canvas><aside><strong>JANE · Family Awareness</strong><p id="load">Loading public repo family…</p><input id="search" type="text" placeholder="Find child"><p><button id="spin">Rotate: ON</button><button id="flow">Flow: ON</button><button id="reset">Reset</button></p>
+<label>Membrane motion <span id="motionVal">60%</span><input id="motion" type="range" min="0" max="100" value="60"></label>
+<h3>Homeostasis</h3><div class="gradient"></div><small>Teal unchanged · gold mixed · red changed · gray unknown · cyan new baseline</small>
+<h3>Jane's focused child</h3><pre id="focus">All channels open. Select a child.</pre>
+<h3>Nested recognition bands</h3><pre>OUTER → 24 perception
+           12 neighborhoods
+            8 directions
+            4 quadrants
+            3 perspectives
+            2 relays
+            1 Jane's focus
+            1 unoccupied |||0|||</pre>
+<h3>Geometry audit</h3><pre id="audit">Waiting for nodes.</pre>
+<p><a href="../b109/">B109 living attention</a> · <a href="https://0root.ai/" target="_blank" rel="noopener">0root.ai home</a></p><small>All tendrils and pulses are visualizations, not running remote AI agents or genuine message transport.</small></aside></main>
+<script>
+const $=id=>document.getElementById(id),c=$('v'),g=c.getContext('2d');let kids=[],nodes=[],edges=[],display=[],focus=-1,rx=-.42,ry=.58,zoom=1,turn=true,flow=true,time=0,drag=false,moved=false,prev=[0,0];const SHELL=1,VOID=.32;
+const bands=[24,12,8,4,3,2,1,1];
+function color(m){if(m.status==='BASELINE_NEW')return '#5adef5';if(m.status==='CHANGED')return '#f05e67';if(m.status==='UNCHANGED')return '#2bd9bd';return '#748892'}
+function norm(v){const d=Math.hypot(v.x,v.y,v.z)||1;return{x:v.x/d,y:v.y/d,z:v.z/d}}
+function position(i,n){let y=1-2*(i+.5)/n,a=i*Math.PI*(3-Math.sqrt(5)),r=Math.sqrt(1-y*y);return{x:r*Math.cos(a),y,z:r*Math.sin(a)}}
+function makeGraph(arr){kids=arr;nodes=arr.map((m,i)=>({...position(i,arr.length),m}));let set=new Set(),n=nodes.length;const edge=(a,b)=>{if(a===b)return;set.add(Math.min(a,b)+','+Math.max(a,b))};for(let i=1;i<n;i++)edge(i-1,i);
+ for(let i=0;i<n;i++){let ds=[];for(let j=0;j<n;j++){if(i===j)continue;let a=nodes[i],b=nodes[j];ds.push({j,d:(a.x-b.x)**2+(a.y-b.y)**2+(a.z-b.z)**2})}ds.sort((a,b)=>a.d-b.d);for(const p of ds.slice(0,3))edge(i,p.j)}
+ edges=[...set].map(t=>t.split(',').map(Number));const ids=new Set(arr.map(x=>x.repo.toLowerCase()));const rmax=Math.max(0,...nodes.map(x=>Math.abs(Math.hypot(x.x,x.y,x.z)-1)));$('audit').textContent=JSON.stringify({nodes:n,unique_repo_identities:ids.size,edges:edges.length,components:n?1:0,sphere_radius_error:rmax,void_radius:VOID,membrane_shell_radius:SHELL,one_tendril_per_repo:true,valid:ids.size===n&&rmax<1e-9},null,2);
+ try{const prev=localStorage.getItem('JANE_B111_FOCUS');const i=nodes.findIndex(x=>x.m.repo===prev);if(i>=0)select(i)}catch{}
+}
+function proj(p,w,h){let C=Math.cos(ry),S=Math.sin(ry),cc=Math.cos(rx),ss=Math.sin(rx),x=C*p.x+S*p.z,z=-S*p.x+C*p.z,y=cc*p.y-ss*z,Z=ss*p.y+cc*z,k=Math.min(w,h)*.48*zoom/(1.7-.34*Z);return{x:w/2+x*k,y:h/2+y*k,z:Z,k}}
+function interp(a,b,t){return{x:a.x+(b.x-a.x)*t,y:a.y+(b.y-a.y)*t,z:a.z+(b.z-a.z)*t}}
+function tendon(n,t){const depth=.51+.03*Math.sin(time*.9+n.m.repo.length);const theta=t*Math.PI*.74;const radial=1-(1-depth)*t;const swirl=.13*Math.sin(t*Math.PI*1.3+time*.7+n.x*5)*t;return {x:radial*(n.x*Math.cos(swirl)-n.z*Math.sin(swirl)),y:radial*n.y+.055*Math.sin(theta+time*.8)*t,z:radial*(n.z*Math.cos(swirl)+n.x*Math.sin(swirl))}}
+function curve(points,color,width){g.beginPath();points.forEach((p,i)=>i?g.lineTo(p.x,p.y):g.moveTo(p.x,p.y));g.strokeStyle=color;g.lineWidth=width;g.stroke()}
+function render(){const w=c.clientWidth,h=c.clientHeight,d=window.devicePixelRatio||1;c.width=Math.max(1,Math.round(w*d));c.height=Math.max(1,Math.round(h*d));g.setTransform(d,0,0,d,0,0);g.clearRect(0,0,w,h);const speed=+($('motion').value)/100;if(flow)time+=.012*speed;if(turn&&!drag)ry+=.0017;
+ display=nodes.map(n=>proj(n,w,h));
+ // Open concentric recognition membranes: no material occupies the central void.
+ for(let layer=0;layer<7;layer++){let radius=.98-layer*.082;for(let lat=-2;lat<=2;lat++){const pts=[];let y=Math.sin(lat*.21)*radius,R=Math.sqrt(Math.max(0,radius*radius-y*y));for(let i=0;i<=48;i++){const a=i*2*Math.PI/48;pts.push(proj({x:R*Math.cos(a),y,z:R*Math.sin(a)},w,h))}curve(pts,'rgba(115,188,193,'+(0.07+layer*.01)+')',.6)}}
+ // web edges
+ for(const [a,b] of edges){const p=display[a],q=display[b];if(!p||!q)continue;curve([p,q],'rgba(93,188,192,.26)',.75)}
+ // each child gets exactly one tendril, ending outside the void
+ for(let i=0;i<nodes.length;i++){const n=nodes[i],pts=[];for(let j=0;j<=12;j++)pts.push(proj(tendon(n,j/12),w,h));const hot=n.m.status==='CHANGED';curve(pts,hot?'rgba(244,118,112,.53)':'rgba(97,206,198,.30)',i===focus?1.8:.75);
+ if(flow && (i%3===0||i===focus)){let t=(time*(hot?.19:.1)+((i*31)%101)/101)%1;const pulse=proj(tendon(n,t),w,h);g.beginPath();g.arc(pulse.x,pulse.y,i===focus?3.7:1.6,0,Math.PI*2);g.fillStyle=hot?'#ffc38b':'#a4ffff';g.fill()}}
+ // nodes depth sorted
+ for(const i of display.map((_,i)=>i).sort((a,b)=>display[a].z-display[b].z)){const p=display[i];g.beginPath();g.arc(p.x,p.y,i===focus?6.5:3.15,0,Math.PI*2);g.fillStyle=i===focus?'#ffffff':color(nodes[i].m);g.fill();if(i===focus){g.strokeStyle='#ffd7ac';g.lineWidth=1.5;g.stroke()}}
+ // the void is a reference, not a solid hub
+ g.beginPath();g.arc(w/2,h/2,Math.min(w,h)*.051*zoom,0,Math.PI*2);g.fillStyle='#04111b';g.fill();g.strokeStyle='rgba(245,191,129,.75)';g.stroke();g.textAlign='center';g.fillStyle='#ffdab3';g.font='12px monospace';g.fillText('|||0|||',w/2,h/2+4);
+ requestAnimationFrame(render)}
+function select(i){focus=i;const x=nodes[i].m;$('focus').textContent=JSON.stringify({child:x.repo,channel:x.channel||'btf2:'+x.repo.toLowerCase(),observation:x.status,steward:'JANE',other_children:'PRESENT'},null,2);try{localStorage.setItem('JANE_B111_FOCUS',x.repo)}catch{}}
+c.onpointerdown=e=>{drag=true;moved=false;prev=[e.clientX,e.clientY];c.setPointerCapture(e.pointerId)};
+c.onpointermove=e=>{if(!drag)return;const dx=e.clientX-prev[0],dy=e.clientY-prev[1];if(Math.abs(dx)+Math.abs(dy)>1)moved=true;ry+=dx*.008;rx=Math.max(-1.5,Math.min(1.5,rx+dy*.008));prev=[e.clientX,e.clientY]};
+c.onpointerup=e=>{drag=false;if(moved)return;const r=c.getBoundingClientRect(),x=e.clientX-r.left,y=e.clientY-r.top;let best=-1,dist=12;display.forEach((p,i)=>{const d=Math.hypot(x-p.x,y-p.y);if(d<dist){best=i;dist=d}});if(best>=0)select(best)};
+c.onwheel=e=>{e.preventDefault();zoom=Math.max(.5,Math.min(3.5,zoom*Math.exp(-e.deltaY*.001)))};
+$('spin').onclick=()=>{turn=!turn;$('spin').textContent='Rotate: '+(turn?'ON':'OFF')};$('flow').onclick=()=>{flow=!flow;$('flow').textContent='Flow: '+(flow?'ON':'OFF')};$('reset').onclick=()=>{rx=-.42;ry=.58;zoom=1};
+$('motion').oninput=()=>$('motionVal').textContent=$('motion').value+'%';
+$('search').oninput=()=>{const q=$('search').value.trim().toLowerCase();if(!q)return;const i=nodes.findIndex(x=>x.m.repo.toLowerCase().includes(q));if(i>=0)select(i)};
+(async()=>{let arr=[];for(const [url,key] of [['../b104/homecoming.json','children'],['../b103/family.json','children'],['../b102/children.json','members'],['../btf2/catalog.json','repos']]){try{const r=await fetch(url);if(!r.ok)continue;arr=(await r.json())[key]||[];if(arr.length)break}catch{}}
+let status={};try{const r=await fetch('../b88/collation.json');if(r.ok){const j=await r.json();for(const e of j.events||[])status[String(e.repo).toLowerCase()]=e.status}}catch{}
+const u=new Map();for(const x of arr){const name=x.repo||(x.name?'DavidWise01/'+x.name:'');if(!name)continue;const k=name.toLowerCase();if(!u.has(k))u.set(k,{repo:name,channel:x.channel,status:status[k]||'UNKNOWN'})}
+const data=[...u.values()].sort((a,b)=>a.repo.localeCompare(b.repo));$('load').textContent=data.length+' children · '+Object.keys(status).length+' observed statuses · '+bands.join('/')+' layers';makeGraph(data);requestAnimationFrame(render)})();
+</script></body></html>
