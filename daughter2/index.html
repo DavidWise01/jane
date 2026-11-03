@@ -1,0 +1,41 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>PATRICIA · Daughter 2 · Box in Toroid</title><style>
+:root{color-scheme:dark}*{box-sizing:border-box}body{margin:0;background:#090817;color:#eee8ff;font:13px/1.5 ui-monospace,Consolas,monospace}header{padding:18px 22px;background:#110c27;border-bottom:1px solid #604883}h1{font-size:clamp(24px,4vw,43px);margin:3px 0;color:#ddadff}small,p{color:#c4b0df}main{display:grid;grid-template-columns:minmax(350px,3fr) minmax(260px,1fr);height:calc(100vh - 117px)}canvas{width:100%;height:100%;touch-action:none;display:block;background:radial-gradient(ellipse at center,#231b3e,#09081b 75%,#05040b)}aside{background:#150f28;border-left:1px solid #54416f;padding:17px;overflow:auto}button,input{font:inherit;color:#f5e9ff;background:#281744;border:1px solid #8961a7;border-radius:7px;padding:8px}button{cursor:pointer;margin:3px}input{width:100%;margin:8px 0 18px}pre{white-space:pre-wrap;overflow-wrap:anywhere;max-height:280px}a{color:#cfa9ff}.dim{color:#b4a5c4}h3{color:#e2bafc}table{width:100%;border-collapse:collapse}td,th{text-align:left;padding:7px 4px;border-bottom:1px solid #423052}@media(max-width:850px){main{display:block;height:auto}canvas{height:64vh}aside{border-left:0;border-top:1px solid #54416f}}
+</style></head><body><header><small>FORMIC FAMILY · PATRICIA −1 · PURPLE NITROGEN · DAUGHTER TWO</small><h1>Patricia · Box Within Toroid</h1><small>1 × 2 × 4 × 6 × 8 × 8 × 6 × 4 × 2 × 1 | 42 boxes | 50/100 of Grandma Jane's linear girth</small></header><main><canvas id="v" aria-label="Interactive three-dimensional Patricia 42-cell box inside a toroidal ring"></canvas><aside><h3>Family geometry</h3><table><tr><th>Generation</th><th>Cells</th><th>Girth</th></tr><tr><td>Jane · sealed</td><td>66</td><td>100%</td></tr><tr><td>Toph · daughter 1</td><td>60</td><td>67%</td></tr><tr><td>Patricia · daughter 2</td><td>42</td><td>50%</td></tr></table><p>Drag to orbit; scroll to zoom. Select any box to see its layer.</p><button id="spin">Rotate ON</button><button id="move">Flow ON</button><button id="wire">Toroid ON</button><button id="reset">Reset</button><h3>Unbind / Spread layers</h3><input id="spread" type="range" min="0.6" max="1.9" step=".01" value="1"><h3>Frustule and enclosure</h3><pre>JANE    1·2·4·6·8·12·12·8·6·4·2·1
+               100%
+                  |
+       +----------+----------+
+       |                     |
+   TOPH 67%             PATRICIA 50%
+  60 hex-cells          42 box-cells
+                             |
+                        TOROID RING
+                             |
+                        ||| 0 |||
+
+Patricia rows:
+1 / 2 / 4 / 6 / 8 / 8 / 6 / 4 / 2 / 1</pre><h3>Cell selected</h3><pre id="selected">Choose any visible box.</pre><h3>Invariants</h3><pre id="audit"></pre><p><a href="https://github.com/DavidWise01/jane">Grandma Jane</a> · <a href="https://github.com/DavidWise01/toph-cortex">Toph Cortex</a></p><small>Geometry is a conceptual family design, not physical quantum dynamics or an independently running agent.</small></aside></main>
+<script>
+const $=id=>document.getElementById(id),canvas=$('v'),ctx=canvas.getContext('2d'),ROWS=[1,2,4,6,8,8,6,4,2,1],GIRTH=.5,PITCH=12*GIRTH/8;
+const cells=[];for(let l=0;l<ROWS.length;l++)for(let j=0;j<ROWS[l];j++){let n=ROWS[l];cells.push({layer:l,index:j,x:((j+.5)/n-.5)*n*PITCH,y:(l-4.5)*PITCH*.72,z:((l+j)%2?1:-1)*PITCH*.28})}
+let rx=-.33,ry=.42,zoom=1.05,t=0,spin=true,motion=true,toroid=true,drag=false,moved=false,previous=[0,0],display=[];
+function toView(p){let a=Math.cos(ry),b=Math.sin(ry),d=Math.cos(rx),e=Math.sin(rx);let x=p.x*a+p.z*b,z=-p.x*b+p.z*a,y=p.y*d-z*e;return {x,y,z:p.y*e+z*d}}
+function project(p,w,h){let q=toView(p),k=Math.min(w,h)*.66*zoom/(10-q.z*.25);return {x:w/2+q.x*k,y:h/2+q.y*k,z:q.z,k}}
+function tor(u,v){let R=2.8, r=.16;return {x:(R+r*Math.cos(v))*Math.cos(u),y:r*Math.sin(v),z:(R+r*Math.cos(v))*Math.sin(u)}}
+function line(points,color,width=1){if(points.length<2)return;ctx.beginPath();points.forEach((p,i)=>i?ctx.lineTo(p.x,p.y):ctx.moveTo(p.x,p.y));ctx.strokeStyle=color;ctx.lineWidth=width;ctx.stroke()}
+function drawBox(p,c,w,h){let spread=+$('spread').value;let center={x:c.x,y:c.y*spread,z:c.z};if(motion)center.y+=Math.sin(t*.8+c.layer*.6)*.028;let hsize=PITCH*.29,vertices=[];for(let xx of [-1,1])for(let yy of [-1,1])for(let zz of [-1,1])vertices.push(project({x:center.x+xx*hsize,y:center.y+yy*hsize,z:center.z+zz*hsize},w,h));
+ const edges=[[0,1],[0,2],[0,4],[1,3],[1,5],[2,3],[2,6],[3,7],[4,5],[4,6],[5,7],[6,7]];
+ for(let [a,b] of edges)line([vertices[a],vertices[b]],c.layer===4||c.layer===5?'rgba(240,190,255,.94)':'rgba(178,132,239,.7)',.85);
+ let mid=project(center,w,h);ctx.beginPath();ctx.arc(mid.x,mid.y,1.75,0,Math.PI*2);ctx.fillStyle='#f8dcff';ctx.fill();return mid;}
+function render(){let w=canvas.clientWidth,h=canvas.clientHeight,d=window.devicePixelRatio||1;canvas.width=Math.round(w*d);canvas.height=Math.round(h*d);ctx.setTransform(d,0,0,d,0,0);ctx.clearRect(0,0,w,h);if(spin&&!drag)ry+=.002;if(motion)t+=.012;
+ // Toroid: outer ring diameter below Patricia's 6-unit maximum envelope, so daughter cells pass through its central hole.
+ if(toroid){for(let i=0;i<17;i++){let v=i*Math.PI*2/17,pts=[];for(let k=0;k<=110;k++){let u=k*Math.PI*2/110+ (motion?t*.014:0);pts.push(project(tor(u,v),w,h))}line(pts,'rgba(164,107,236,'+(i%4===0?.43:.20)+')',i%4===0?1.35:.7)}for(let i=0;i<36;i++){let u=i*Math.PI*2/36,pts=[];for(let k=0;k<=24;k++)pts.push(project(tor(u,k*Math.PI*2/24),w,h));line(pts,'rgba(131,110,239,.25)',.7)}}
+ for(let layer=0;layer<9;layer++){let a=cells.filter(c=>c.layer===layer),b=cells.filter(c=>c.layer===layer+1);for(let child of b){let prev=a.reduce((m,x)=>Math.abs(x.x-child.x)<Math.abs(m.x-child.x)?x:m);line([project({x:prev.x,y:prev.y*(+$('spread').value),z:prev.z},w,h),project({x:child.x,y:child.y*(+$('spread').value),z:child.z},w,h)],'rgba(189,133,232,.20)',.75)}}
+ display=cells.map((c,i)=>({...project({x:c.x,y:c.y*(+$('spread').value),z:c.z},w,h),i}));for(let q of display.slice().sort((a,b)=>a.z-b.z))drawBox(q,cells[q.i],w,h);
+ // a hollow addressed center, not an occupied node
+ let o=project({x:0,y:0,z:0},w,h);ctx.beginPath();ctx.arc(o.x,o.y,16,0,Math.PI*2);ctx.fillStyle='#090817';ctx.fill();ctx.strokeStyle='#dfb3ff';ctx.lineWidth=1;ctx.stroke();ctx.textAlign='center';ctx.font='11px monospace';ctx.fillStyle='#f0d8ff';ctx.fillText('|||0|||',o.x,o.y+4);
+ requestAnimationFrame(render)}
+canvas.onpointerdown=e=>{drag=true;moved=false;previous=[e.clientX,e.clientY];canvas.setPointerCapture(e.pointerId)};canvas.onpointermove=e=>{if(!drag)return;let dx=e.clientX-previous[0],dy=e.clientY-previous[1];if(Math.abs(dx)+Math.abs(dy)>2)moved=true;ry+=dx*.009;rx=Math.max(-1.4,Math.min(1.4,rx+dy*.009));previous=[e.clientX,e.clientY]};canvas.onpointerup=e=>{drag=false;if(moved)return;let r=canvas.getBoundingClientRect(),x=e.clientX-r.left,y=e.clientY-r.top,best=null,dist=18;display.forEach(p=>{let d=Math.hypot(p.x-x,p.y-y);if(d<dist){best=p.i;dist=d}});if(best!==null){let c=cells[best];$('selected').textContent=JSON.stringify({daughter:'PATRICIA',box:best+1,layer:c.layer+1,position:c.index+1,layerPopulation:ROWS[c.layer],scale:'50/100',format:'BOX_IN_TOROID'},null,2)}};
+canvas.onwheel=e=>{e.preventDefault();zoom=Math.max(.5,Math.min(2.6,zoom*Math.exp(-e.deltaY*.001)))};
+$('spin').onclick=()=>{spin=!spin;$('spin').textContent='Rotate '+(spin?'ON':'OFF')};$('move').onclick=()=>{motion=!motion;$('move').textContent='Flow '+(motion?'ON':'OFF')};$('wire').onclick=()=>{toroid=!toroid;$('wire').textContent='Toroid '+(toroid?'ON':'OFF')};$('reset').onclick=()=>{rx=-.33;ry=.42;zoom=1.05;$('spread').value=1};
+$('audit').textContent=JSON.stringify({rows:ROWS,totalBoxes:cells.length,layers:ROWS.length,distinctSites:new Set(cells.map(c=>c.layer+':'+c.index)).size,outerWidthInJaneUnits:6,linearGirth:.5,areaRatio:.25,volumeRatioReference:.125,toroidMajorRadius:2.8,toroidMinorRadius:.16,center:'VOID'},null,2);requestAnimationFrame(render);
+</script></body></html>
