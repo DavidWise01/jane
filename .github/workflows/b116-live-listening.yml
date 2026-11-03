@@ -35,5 +35,5 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add b114/lessons.json b115/teaching.json b115/catalogue.jsonl b116/responses.jsonl b116/listening.json
+          git add -A -- b114 b115 b116
           git diff --cached --quiet || (git commit -m "data(jane): B116 observed listening responses" && git push)
