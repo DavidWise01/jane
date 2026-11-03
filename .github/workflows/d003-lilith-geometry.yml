@@ -1,0 +1,21 @@
+name: D003 Lilith toroid geometry
+on:
+  push:
+    paths:
+      - 'daughter3/**'
+      - 'scripts/btf2/lilith-d003-kernel.cjs'
+      - 'scripts/btf2/test-lilith-d003.cjs'
+      - '.github/workflows/d003-lilith-geometry.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check the third-daughter toroidal invariants
+        run: node scripts/btf2/test-lilith-d003.cjs
