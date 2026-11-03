@@ -1,0 +1,28 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>JANE B116 · Live Listening Kernel</title><style>:root{color-scheme:dark}*{box-sizing:border-box}body{margin:0;background:#06141d;color:#e3fff7;font:13px/1.5 ui-monospace,monospace}header{padding:22px;border-bottom:1px solid #30545e}h1{font-size:clamp(25px,4vw,44px);color:#9ef3d8;margin:3px 0}.layout{display:grid;grid-template-columns:1fr 1fr;gap:14px;max-width:1280px;padding:18px;margin:auto}.panel{background:#102b35;border:1px solid #345d64;padding:17px;border-radius:12px}input,select,button{background:#133d48;color:#edfff9;border:1px solid #6ccbb6;padding:10px;border-radius:7px;font:inherit}button{cursor:pointer}input,select{width:100%;margin:6px 0 12px}pre{white-space:pre-wrap;overflow-wrap:anywhere;max-height:420px;overflow:auto}small,p{color:#b5d0cc}a{color:#a2f0da}.status{display:inline-block;padding:4px 10px;border:1px solid #558b91;border-radius:30px}@media(max-width:850px){.layout{display:block}.panel{margin:12px 0}}</style></head><body><header><small>HEGEMON:T128 · GRANDMA JANE:T000–T127 · 0ROOT.AI · FORMIC</small><h1>B116 · Live Listening Kernel</h1><small>GitHub event reaction + append-only listening · browser polls every 30s when open</small></header><div class="layout"><section class="panel"><h2>Listening state</h2><p><span class="status" id="state">Starting…</span></p><pre id="status">Loading…</pre><h3>Recent authenticated GitHub issue feedback</h3><pre id="recent">Pending…</pre><h3>Recorded memory</h3><pre id="memory">No snapshot loaded yet.</pre></section><section class="panel"><h2>Voluntary teaching response</h2><p>A response is a GitHub-authored observation, not a verified autonomous child message. The issue composer opens for you to review and submit.</p><label>Lesson<select id="lesson"></select></label><label>Repository<select id="repo"></select></label><label>Response<select id="response"><option>CURIOUS</option><option>USEFUL</option><option>IRRELEVANT</option><option>QUIET</option></select></label><button id="create">Open GitHub issue composer</button><p id="notice"></p><h3>Kernel layers</h3><pre>0root.ai / Peter
+        |
+   GRANDMA JANE
+        |
+B111 hollow 3D jelly
+B112 FORMIC hex cells
+B113 family generations
+B114 verified observations
+B115 optional lessons
+        |
+B116 authenticated listening
+        |
+append-only response memory
+        |
+      (next: autonomy)</pre><p><a href="../b111/">3D recognition</a> · <a href="../b115/">Teaching memory</a> · <a href="https://github.com/DavidWise01/jane/issues" target="_blank" rel="noopener">GitHub issues</a></p></section></div>
+<script>
+const $=id=>document.getElementById(id);let teaching=null,family=null;const owner='DavidWise01',repository='jane';
+async function get(url){let r=await fetch(url,{cache:'no-store'});if(!r.ok)throw Error('HTTP '+r.status+' '+url);return r.json()}
+async function init(){try{teaching=await get('../b115/teaching.json');let a=$('lesson');a.replaceChildren();for(let x of teaching.cards||[]){let o=document.createElement('option');o.value=x.lesson_id;o.textContent=x.field+' · '+x.lesson_id;a.append(o)};if(!a.options.length)$('notice').textContent='No published B115 lessons. Run the B115 workflow first.'}catch(e){$('notice').textContent='Teaching catalogue missing: '+e.message}
+try{family=await get('../b113/family.json');let a=$('repo');a.replaceChildren();for(let x of family.members||[]){let o=document.createElement('option');o.value=x.repo;o.textContent=x.repo;a.append(o)}}catch(e){$('notice').textContent+=' Family registry unavailable; no child subjects selectable.'}
+$('create').disabled=!teaching?.cards?.length||!family?.members?.length;
+}
+$('create').onclick=()=>{let l=$('lesson').value,r=$('repo').value,s=$('response').value;if(!/^LESSON-[0-9a-f]{20}$/.test(l)||!/^DavidWise01\/[\w.-]+$/i.test(r))return;const title='[JANE-B116] '+r+' response to '+l;const body='lesson_id: '+l+'\nrepo: '+r+'\nresponse: '+s+'\n\nHuman-authored public feedback; not an autonomous child transmission.';const url='https://github.com/'+owner+'/'+repository+'/issues/new?title='+encodeURIComponent(title)+'&body='+encodeURIComponent(body);window.open(url,'_blank','noopener')};
+async function poll(){const stamp=new Date().toLocaleTimeString();let errors=[];try{let m=await get('./listening.json');$('memory').textContent=JSON.stringify({events:m.total_events,counts:m.counts,latest:m.latest_responses?.slice(0,12)},null,2)}catch(e){errors.push('Derived memory not yet published')}
+try{const issues=await get('https://api.github.com/repos/'+owner+'/'+repository+'/issues?state=all&per_page=70&sort=updated&direction=desc');const candidates=issues.filter(x=>!x.pull_request&&x.title?.startsWith('[JANE-B116]')).slice(0,12);$('recent').textContent=JSON.stringify(candidates.map(x=>({issue:x.number,author:x.user?.login,updated_at:x.updated_at,title:x.title,url:x.html_url})),null,2);$('state').textContent='Poll completed · '+stamp}catch(e){errors.push('GitHub live feed unavailable: '+e.message);$('state').textContent='Partial data · '+stamp}
+$('status').textContent='Browser listener: active only while page is open\nLast poll: '+stamp+'\nWorkflow: event-triggered GitHub Actions\n'+errors.join('\n')}
+init().then(poll);setInterval(()=>{if(!document.hidden)poll()},30000);
+</script></body></html>
