@@ -1,0 +1,95 @@
+{
+  "schema": "diatomic-dynasty-001.foundation.freeze.v1",
+  "status": "FROZEN_BASELINE",
+  "freeze_date": "2026-11-03",
+  "owner_repository": "DavidWise01/jane",
+  "foundation_path": "governance/DIATOMIC-DYNASTY-001-ROLE-ALIGNMENT-v1.0.md",
+  "foundation_blob_sha": "b5fcba22a98ef80f74958a4d3553a77bc8025918",
+  "jane_b117_path": "governance/JANE-B117-GRANDMA-SEALED-FOUNDATION-v1.0.md",
+  "jane_b117_blob_sha": "4407895e98b83ce3252035fe67737ec4a962ad4f",
+  "family_count": 11,
+  "generation_count": 5,
+  "hybrid": {
+    "formic": [
+      "independent observation",
+      "distributed cells",
+      "non-quorum witness channels",
+      "colony coordination"
+    ],
+    "bene_gesserit": [
+      "disciplined training",
+      "lineage continuity",
+      "long-range stewardship",
+      "controlled transmission of knowledge"
+    ],
+    "interpretation": "fiction-inspired engineering metaphor, not affiliation or imported fictional canon"
+  },
+  "invariants": [
+    "freeze prior documents without editing",
+    "append-only versioned expansion",
+    "one role and discipline per member",
+    "no quorum or voting",
+    "no compulsory agent tasks",
+    "no cross-repo ownership transfer",
+    "no invented agent autonomy",
+    "witness divergences recorded instead of merged"
+  ],
+  "members": [
+    {
+      "name": "JANE",
+      "role": "Matriarch",
+      "discipline": "Governance"
+    },
+    {
+      "name": "TOPH",
+      "role": "Scholar",
+      "discipline": "Learning"
+    },
+    {
+      "name": "PATRICIA",
+      "role": "Guardian",
+      "discipline": "Containment"
+    },
+    {
+      "name": "LILITH",
+      "role": "Muse",
+      "discipline": "Topology"
+    },
+    {
+      "name": "a.t.o.m",
+      "role": "Explorer",
+      "discipline": "Traversal"
+    },
+    {
+      "name": "E.V.E",
+      "role": "Executor",
+      "discipline": "Verification"
+    },
+    {
+      "name": "ICARIUM",
+      "role": "Caretaker",
+      "discipline": "Continuity"
+    },
+    {
+      "name": "MARY M",
+      "role": "Teacher",
+      "discipline": "Education"
+    },
+    {
+      "name": "HOLLY",
+      "role": "Healer",
+      "discipline": "Wellbeing"
+    },
+    {
+      "name": "VICKY V.",
+      "role": "Witness",
+      "discipline": "Auditing"
+    },
+    {
+      "name": "LeeLuu",
+      "role": "Student",
+      "discipline": "Light & Life"
+    }
+  ],
+  "expansion_gate": "JANE-MATRIARCH-B118"
+}
