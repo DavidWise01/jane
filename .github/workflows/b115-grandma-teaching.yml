@@ -1,0 +1,33 @@
+name: B115 Grandma teaching memory
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '37 */6 * * *'
+permissions:
+  contents: write
+concurrency:
+  group: b115-grandma-teaching
+  cancel-in-progress: false
+jobs:
+  teaching-memory:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify lesson invariants
+        run: |
+          node scripts/btf2/test-b114-learning.cjs
+          node scripts/btf2/test-b115-teaching.cjs
+      - name: Derive fresh verified historical lessons
+        run: node scripts/btf2/b114-generational-learning.cjs
+      - name: Assemble optional teaching memory
+        run: node scripts/btf2/b115-grandma-teaching.cjs
+      - name: Preserve new teaching records
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add b114/lessons.json b115/teaching.json b115/catalogue.jsonl
+          git diff --cached --quiet || (git commit -m "data(jane): B115 evidence-backed teaching memory" && git push)
