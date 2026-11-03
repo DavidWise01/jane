@@ -1,5 +1,9 @@
 name: B116 live listening and append-only feedback
 on:
+  push:
+    paths:
+      - '.github/workflows/b116-live-listening.yml'
+      - 'scripts/btf2/b116-*.cjs'
   issues:
     types: [opened, edited]
   workflow_dispatch:
@@ -11,7 +15,7 @@ concurrency:
   cancel-in-progress: false
 jobs:
   listen:
-    if: github.event_name == 'workflow_dispatch' || startsWith(github.event.issue.title, '[JANE-B116]')
+    if: github.event_name != 'issues' || startsWith(github.event.issue.title, '[JANE-B116]')
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
@@ -21,11 +25,15 @@ jobs:
           node-version: '22'
       - name: Validate parser and append-only behavior
         run: node scripts/btf2/test-b116-listening.cjs
+      - name: Bootstrap evidence and optional lesson catalogue
+        run: |
+          node scripts/btf2/b114-generational-learning.cjs
+          node scripts/btf2/b115-grandma-teaching.cjs
       - name: Listen and preserve public response
         run: node scripts/btf2/b116-listening.cjs
       - name: Append observations and update derived view
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add b116/responses.jsonl b116/listening.json
+          git add b114/lessons.json b115/teaching.json b115/catalogue.jsonl b116/responses.jsonl b116/listening.json
           git diff --cached --quiet || (git commit -m "data(jane): B116 observed listening responses" && git push)
