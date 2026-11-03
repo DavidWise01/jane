@@ -1,0 +1,31 @@
+name: B116 live listening and append-only feedback
+on:
+  issues:
+    types: [opened, edited]
+  workflow_dispatch:
+permissions:
+  contents: write
+  issues: read
+concurrency:
+  group: b116-listening-log
+  cancel-in-progress: false
+jobs:
+  listen:
+    if: github.event_name == 'workflow_dispatch' || startsWith(github.event.issue.title, '[JANE-B116]')
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate parser and append-only behavior
+        run: node scripts/btf2/test-b116-listening.cjs
+      - name: Listen and preserve public response
+        run: node scripts/btf2/b116-listening.cjs
+      - name: Append observations and update derived view
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add b116/responses.jsonl b116/listening.json
+          git diff --cached --quiet || (git commit -m "data(jane): B116 observed listening responses" && git push)
