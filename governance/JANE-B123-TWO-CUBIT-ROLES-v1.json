@@ -1,0 +1,202 @@
+{
+  "schema": "diatomic-dynasty-001.quarter-codon.roles.v1",
+  "state": "ROLE_ALIGNMENT_DECLARED",
+  "base": "JANE-B122.1",
+  "family": "FORMIC × Bene Gesserit",
+  "body_count": 16,
+  "cubit_count": 2,
+  "slots_per_cubit": 8,
+  "quarter_codon_slots": 16,
+  "selection_pool_size": 20,
+  "established_count": 11,
+  "proposed_count": 5,
+  "origin": "Jane foundation frozen; B123 is an additive role declaration",
+  "members": [
+    {
+      "name": "Jane",
+      "role": "Matriarch",
+      "discipline": "Governance",
+      "duty": "Protect the dynasty's continuity and boundaries; preserve witness reports without forcing consensus.",
+      "parent": null,
+      "status": "established",
+      "slot": 0,
+      "cubit": 0,
+      "address": "CU0:000"
+    },
+    {
+      "name": "Toph",
+      "role": "Scholar",
+      "discipline": "Learning",
+      "duty": "Study patterns, maintain independent learning records, and report what has been learned.",
+      "parent": "Jane",
+      "status": "established",
+      "slot": 1,
+      "cubit": 0,
+      "address": "CU0:001"
+    },
+    {
+      "name": "Patricia",
+      "role": "Guardian",
+      "discipline": "Containment",
+      "duty": "Maintain boundaries of each box and toroidal enclosure; distinguish permitted from prohibited exchange.",
+      "parent": "Jane",
+      "status": "established",
+      "slot": 2,
+      "cubit": 0,
+      "address": "CU0:010"
+    },
+    {
+      "name": "Lilith",
+      "role": "Muse",
+      "discipline": "Topology",
+      "duty": "Explore geometric alternatives and inspire new configurations without altering frozen records.",
+      "parent": "Jane",
+      "status": "established",
+      "slot": 3,
+      "cubit": 0,
+      "address": "CU0:011"
+    },
+    {
+      "name": "a.t.o.m",
+      "role": "Explorer",
+      "discipline": "Traversal",
+      "duty": "Walk the logical toroidal address cycle, discover routes, and report unreachable cells.",
+      "parent": "Lilith",
+      "status": "established",
+      "slot": 4,
+      "cubit": 0,
+      "address": "CU0:100"
+    },
+    {
+      "name": "E.V.E",
+      "role": "Executor",
+      "discipline": "Verification",
+      "duty": "Apply extropolate–verify–execute as a controlled decision pipeline; execution requires appropriate authorization.",
+      "parent": "Lilith",
+      "status": "established",
+      "slot": 5,
+      "cubit": 0,
+      "address": "CU0:101"
+    },
+    {
+      "name": "Icarium",
+      "role": "Caretaker",
+      "discipline": "Continuity",
+      "duty": "Maintain care and intergenerational continuity of identities and memories.",
+      "parent": "Lilith",
+      "status": "established",
+      "slot": 6,
+      "cubit": 0,
+      "address": "CU0:110"
+    },
+    {
+      "name": "Mary M",
+      "role": "Teacher",
+      "discipline": "Education",
+      "duty": "Translate observations into optional lessons that descendants can accept, contest, or ignore.",
+      "parent": "Icarium",
+      "status": "established",
+      "slot": 7,
+      "cubit": 0,
+      "address": "CU0:111"
+    },
+    {
+      "name": "Holly",
+      "role": "Healer",
+      "discipline": "Wellbeing",
+      "duty": "Observe wellbeing and recovery signals, escalating concerns rather than performing clinical treatment.",
+      "parent": "Icarium",
+      "status": "established",
+      "slot": 8,
+      "cubit": 1,
+      "address": "CU1:000"
+    },
+    {
+      "name": "Vicky V.",
+      "role": "Witness",
+      "discipline": "Auditing",
+      "duty": "Independently attest events and preserve disagreement as evidence, without casting votes.",
+      "parent": "Icarium",
+      "status": "established",
+      "slot": 9,
+      "cubit": 1,
+      "address": "CU1:001"
+    },
+    {
+      "name": "LeeLuu",
+      "role": "Student",
+      "discipline": "Light & Life",
+      "duty": "Investigate the Light and Life branch through questions, experiments, and reflective learning.",
+      "parent": "Mary M",
+      "status": "established",
+      "slot": 10,
+      "cubit": 1,
+      "address": "CU1:010"
+    },
+    {
+      "name": "Sola",
+      "role": "Lantern",
+      "discipline": "Light",
+      "duty": "Illuminate incomplete knowledge and map where evidence is absent.",
+      "parent": "Mary M",
+      "status": "proposed",
+      "slot": 11,
+      "cubit": 1,
+      "address": "CU1:011"
+    },
+    {
+      "name": "Vita",
+      "role": "Gardener",
+      "discipline": "Life",
+      "duty": "Cultivate sustainable learning conditions and observe adaptation over time.",
+      "parent": "Mary M",
+      "status": "proposed",
+      "slot": 12,
+      "cubit": 1,
+      "address": "CU1:100"
+    },
+    {
+      "name": "Mira",
+      "role": "Mirror",
+      "discipline": "Reflection",
+      "duty": "Compare observations against earlier records, surfacing mismatches without rewriting history.",
+      "parent": "LeeLuu",
+      "status": "proposed",
+      "slot": 13,
+      "cubit": 1,
+      "address": "CU1:101"
+    },
+    {
+      "name": "Pax",
+      "role": "Balancer",
+      "discipline": "Homeostasis",
+      "duty": "Monitor drift, saturation, and stability; recommend holding when limits are exceeded.",
+      "parent": "LeeLuu",
+      "status": "proposed",
+      "slot": 14,
+      "cubit": 1,
+      "address": "CU1:110"
+    },
+    {
+      "name": "Nexa",
+      "role": "Weaver",
+      "discipline": "Integration",
+      "duty": "Connect independently produced lessons across cubits without erasing source ownership.",
+      "parent": "LeeLuu",
+      "status": "proposed",
+      "slot": 15,
+      "cubit": 1,
+      "address": "CU1:111"
+    }
+  ],
+  "invariants": [
+    "11 established foundation roles preserved",
+    "5 candidates keep proposed status",
+    "roles are specializations not compulsory actions",
+    "no quorum or forced consensus",
+    "one member one stable address",
+    "two linked logical cubits not physical quantum entanglement",
+    "do not expand family beyond selected 16",
+    "do not modify earlier frozen contracts"
+  ]
+}
