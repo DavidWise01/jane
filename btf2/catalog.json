@@ -3,7 +3,7 @@
   "pin_label": "BTF2",
   "owner": "DavidWise01",
   "source": "GitHub public owner REST API",
-  "generated_at": "2026-11-03T12:47:12.973Z",
+  "generated_at": "2026-11-03T23:34:00.243Z",
   "count": 2147,
   "complete": true,
   "repos": [
@@ -34,7 +34,7 @@
       "homepage": "https://davidwise01.github.io/0root-provenance/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-10-08T02:33:44Z",
+      "updated_at": "2026-11-03T22:24:53Z",
       "default_branch": "main"
     },
     {
@@ -84,7 +84,7 @@
       "homepage": "https://davidwise01.github.io/3lock/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-07-27T15:20:12Z",
+      "updated_at": "2026-11-03T22:20:48Z",
       "default_branch": "main"
     },
     {
@@ -184,7 +184,7 @@
       "homepage": "https://davidwise01.github.io/adas-law-victorian/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-07-27T15:20:53Z",
+      "updated_at": "2026-11-03T22:23:24Z",
       "default_branch": "master"
     },
     {
@@ -224,7 +224,7 @@
       "homepage": "https://davidwise01.github.io/aeon-entangled/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-07-27T15:23:07Z",
+      "updated_at": "2026-11-03T22:21:51Z",
       "default_branch": "main"
     },
     {
@@ -234,7 +234,7 @@
       "homepage": "https://davidwise01.github.io/aeon-flux/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-07-27T15:21:00Z",
+      "updated_at": "2026-11-03T22:20:20Z",
       "default_branch": "main"
     },
     {
@@ -244,7 +244,7 @@
       "homepage": "https://davidwise01.github.io/aeon-servers/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-07-27T15:23:36Z",
+      "updated_at": "2026-11-03T22:21:54Z",
       "default_branch": "main"
     },
     {
@@ -274,7 +274,7 @@
       "homepage": "https://davidwise01.github.io/ai-external-audit-toolkit/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-07-27T15:21:36Z",
+      "updated_at": "2026-11-03T22:21:47Z",
       "default_branch": "main"
     },
     {
@@ -294,7 +294,7 @@
       "homepage": "https://davidwise01.github.io/ai-ip-audit/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-07-27T15:23:44Z",
+      "updated_at": "2026-11-03T22:22:04Z",
       "default_branch": "main"
     },
     {
@@ -304,7 +304,7 @@
       "homepage": "https://davidwise01.github.io/ai-psychosis-tools/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-07-27T15:24:10Z",
+      "updated_at": "2026-11-03T22:22:00Z",
       "default_branch": "main"
     },
     {
@@ -314,7 +314,7 @@
       "homepage": "https://davidwise01.github.io/ai-witness-books/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-07-27T15:22:45Z",
+      "updated_at": "2026-11-03T22:21:09Z",
       "default_branch": "main"
     },
     {
@@ -364,7 +364,7 @@
       "homepage": "https://davidwise01.github.io/al-h2o-reactor/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-07-27T15:24:08Z",
+      "updated_at": "2026-11-03T22:22:44Z",
       "default_branch": "master"
     },
     {
@@ -454,7 +454,7 @@
       "homepage": "https://davidwise01.github.io/alpha40-box/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-07-27T15:25:43Z",
+      "updated_at": "2026-11-03T22:23:49Z",
       "default_branch": "main"
     },
     {
@@ -584,7 +584,7 @@
       "homepage": "https://davidwise01.github.io/arc-reactor-mk24/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-07-27T15:24:29Z",
+      "updated_at": "2026-11-03T22:22:58Z",
       "default_branch": "master"
     },
     {
@@ -594,7 +594,7 @@
       "homepage": "",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-11-03T04:27:25Z",
+      "updated_at": "2026-11-03T23:32:03Z",
       "default_branch": "main"
     },
     {
@@ -674,7 +674,7 @@
       "homepage": "https://davidwise01.github.io/astraea/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-06-21T16:13:56Z",
+      "updated_at": "2026-11-03T22:23:41Z",
       "default_branch": "master"
     },
     {
@@ -744,7 +744,7 @@
       "homepage": "https://davidwise01.github.io/atlas/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-11-02T16:52:32Z",
+      "updated_at": "2026-11-03T23:32:34Z",
       "default_branch": "main"
     },
     {
@@ -904,7 +904,7 @@
       "homepage": "https://davidwise01.github.io/attribution-standard/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-07-27T15:25:22Z",
+      "updated_at": "2026-11-03T22:22:36Z",
       "default_branch": "main"
     },
     {
@@ -1174,7 +1174,7 @@
       "homepage": "https://davidwise01.github.io/black-company/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-07-27T15:25:17Z",
+      "updated_at": "2026-11-03T23:32:49Z",
       "default_branch": "main"
     },
     {
@@ -1344,7 +1344,7 @@
       "homepage": "https://davidwise01.github.io/bridge-burner/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-07-27T15:24:20Z",
+      "updated_at": "2026-11-03T22:23:17Z",
       "default_branch": "master"
     },
     {
@@ -1354,7 +1354,7 @@
       "homepage": "https://davidwise01.github.io/bridge-burners/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-07-27T15:24:28Z",
+      "updated_at": "2026-11-03T23:32:45Z",
       "default_branch": "main"
     },
     {
@@ -1414,7 +1414,7 @@
       "homepage": "https://davidwise01.github.io/cameron-howe/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-07-27T15:30:11Z",
+      "updated_at": "2026-11-03T22:19:59Z",
       "default_branch": "main"
     },
     {
@@ -1424,7 +1424,7 @@
       "homepage": "https://davidwise01.github.io/cannon/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-06-21T16:13:58Z",
+      "updated_at": "2026-11-03T22:23:45Z",
       "default_branch": "master"
     },
     {
@@ -1584,7 +1584,7 @@
       "homepage": "https://davidwise01.github.io/charlottes-web/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-07-27T15:30:31Z",
+      "updated_at": "2026-11-03T22:23:03Z",
       "default_branch": "master"
     },
     {
@@ -1654,7 +1654,7 @@
       "homepage": "https://davidwise01.github.io/chromatic-laser/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-07-27T15:25:16Z",
+      "updated_at": "2026-11-03T22:21:41Z",
       "default_branch": "main"
     },
     {
@@ -1844,7 +1844,7 @@
       "homepage": "https://davidwise01.github.io/claude-design-akasha/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-07-27T15:28:14Z",
+      "updated_at": "2026-11-03T22:20:27Z",
       "default_branch": "main"
     },
     {
@@ -1894,7 +1894,7 @@
       "homepage": "https://davidwise01.github.io/closure-loop-engine/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-07-27T15:28:49Z",
+      "updated_at": "2026-11-03T23:32:00Z",
       "default_branch": "main"
     },
     {
@@ -1904,7 +1904,7 @@
       "homepage": "https://davidwise01.github.io/closure-loop-methodology/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-07-27T15:29:24Z",
+      "updated_at": "2026-11-03T22:20:30Z",
       "default_branch": "main"
     },
     {
@@ -2034,7 +2034,7 @@
       "homepage": "https://davidwise01.github.io/confabulation-spiral/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-07-27T15:29:07Z",
+      "updated_at": "2026-11-03T23:32:41Z",
       "default_branch": "main"
     },
     {
@@ -2414,7 +2414,7 @@
       "homepage": "https://davidwise01.github.io/DavidWise01.github.io/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-11-03T09:36:29Z",
+      "updated_at": "2026-11-03T23:26:28Z",
       "default_branch": "main"
     },
     {
@@ -2894,7 +2894,7 @@
       "homepage": "",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-11-03T04:37:48Z",
+      "updated_at": "2026-11-03T23:31:42Z",
       "default_branch": "main"
     },
     {
@@ -2924,7 +2924,7 @@
       "homepage": "https://davidwise01.github.io/elementals/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-07-27T16:09:56Z",
+      "updated_at": "2026-11-03T23:33:22Z",
       "default_branch": "main"
     },
     {
@@ -3154,7 +3154,7 @@
       "homepage": "https://davidwise01.github.io/eve-constitution/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-07-27T16:09:08Z",
+      "updated_at": "2026-11-03T22:24:28Z",
       "default_branch": "main"
     },
     {
@@ -3174,7 +3174,7 @@
       "homepage": "https://davidwise01.github.io/eve-tooling/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-07-27T16:09:47Z",
+      "updated_at": "2026-11-03T22:21:20Z",
       "default_branch": "main"
     },
     {
@@ -3294,7 +3294,7 @@
       "homepage": "https://davidwise01.github.io/fiddler/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-07-27T16:09:40Z",
+      "updated_at": "2026-11-03T22:23:48Z",
       "default_branch": "main"
     },
     {
@@ -3364,7 +3364,7 @@
       "homepage": "https://davidwise01.github.io/fission-compression-core/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-07-27T16:10:47Z",
+      "updated_at": "2026-11-03T22:20:13Z",
       "default_branch": "main"
     },
     {
@@ -3514,7 +3514,7 @@
       "homepage": "https://davidwise01.github.io/FractalKernel/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-06-21T16:13:23Z",
+      "updated_at": "2026-11-03T22:19:45Z",
       "default_branch": "master"
     },
     {
@@ -3564,7 +3564,7 @@
       "homepage": "https://davidwise01.github.io/fusion/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-07-29T23:49:54Z",
+      "updated_at": "2026-11-03T23:32:06Z",
       "default_branch": "main"
     },
     {
@@ -3904,7 +3904,7 @@
       "homepage": "https://davidwise01.github.io/gap-cycle/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-07-27T16:10:17Z",
+      "updated_at": "2026-11-03T23:32:54Z",
       "default_branch": "main"
     },
     {
@@ -4214,7 +4214,7 @@
       "homepage": "https://davidwise01.github.io/gravity-processor/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-07-27T16:11:19Z",
+      "updated_at": "2026-11-03T22:21:47Z",
       "default_branch": "main"
     },
     {
@@ -4244,7 +4244,7 @@
       "homepage": "https://davidwise01.github.io/green-paper/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-07-27T16:11:14Z",
+      "updated_at": "2026-11-03T22:19:48Z",
       "default_branch": "main"
     },
     {
@@ -4284,7 +4284,7 @@
       "homepage": "https://davidwise01.github.io/grok-lineage/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-07-27T16:11:53Z",
+      "updated_at": "2026-11-03T22:22:06Z",
       "default_branch": "main"
     },
     {
@@ -4464,7 +4464,7 @@
       "homepage": "https://davidwise01.github.io/hardware-lab/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-08-24T00:38:43Z",
+      "updated_at": "2026-11-03T22:21:50Z",
       "default_branch": "main"
     },
     {
@@ -4584,7 +4584,7 @@
       "homepage": "https://davidwise01.github.io/hephaestus/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-10-06T18:12:19Z",
+      "updated_at": "2026-11-03T22:23:27Z",
       "default_branch": "master"
     },
     {
@@ -4594,7 +4594,7 @@
       "homepage": "https://davidwise01.github.io/hephaestus-forge/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-07-27T16:11:44Z",
+      "updated_at": "2026-11-03T23:33:30Z",
       "default_branch": "main"
     },
     {
@@ -4674,7 +4674,7 @@
       "homepage": "https://davidwise01.github.io/higgs-suite/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-07-27T16:11:13Z",
+      "updated_at": "2026-11-03T23:32:11Z",
       "default_branch": "main"
     },
     {
@@ -4724,7 +4724,7 @@
       "homepage": "https://davidwise01.github.io/holograms/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-07-27T16:12:42Z",
+      "updated_at": "2026-11-03T23:32:14Z",
       "default_branch": "main"
     },
     {
@@ -4734,7 +4734,7 @@
       "homepage": "https://davidwise01.github.io/homer/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-11-03T00:11:12Z",
+      "updated_at": "2026-11-03T23:32:38Z",
       "default_branch": "main"
     },
     {
@@ -4744,7 +4744,7 @@
       "homepage": "https://davidwise01.github.io/honey-badger/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-07-27T16:13:27Z",
+      "updated_at": "2026-11-03T22:19:54Z",
       "default_branch": "main"
     },
     {
@@ -4954,7 +4954,7 @@
       "homepage": "https://davidwise01.github.io/infinite-jest/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-07-27T16:13:13Z",
+      "updated_at": "2026-11-03T22:20:19Z",
       "default_branch": "main"
     },
     {
@@ -5064,7 +5064,7 @@
       "homepage": "",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-11-03T10:43:19Z",
+      "updated_at": "2026-11-03T23:29:37Z",
       "default_branch": "main"
     },
     {
@@ -5154,7 +5154,7 @@
       "homepage": "https://davidwise01.github.io/joint-bill-of-rights/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-07-27T16:12:29Z",
+      "updated_at": "2026-11-03T22:21:58Z",
       "default_branch": "main"
     },
     {
@@ -5294,7 +5294,7 @@
       "homepage": "https://davidwise01.github.io/karsa/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-07-27T16:12:43Z",
+      "updated_at": "2026-11-03T22:20:23Z",
       "default_branch": "main"
     },
     {
@@ -5574,7 +5574,7 @@
       "homepage": "https://davidwise01.github.io/kernels/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-07-27T16:13:45Z",
+      "updated_at": "2026-11-03T23:31:43Z",
       "default_branch": "main"
     },
     {
@@ -5624,7 +5624,7 @@
       "homepage": "https://davidwise01.github.io/knowledge-gates/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-07-27T16:14:00Z",
+      "updated_at": "2026-11-03T22:23:55Z",
       "default_branch": "main"
     },
     {
@@ -5684,7 +5684,7 @@
       "homepage": "https://davidwise01.github.io/language-of-the-machine/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-07-27T16:13:40Z",
+      "updated_at": "2026-11-03T22:23:59Z",
       "default_branch": "main"
     },
     {
@@ -5794,7 +5794,7 @@
       "homepage": "https://davidwise01.github.io/library/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-07-27T16:13:35Z",
+      "updated_at": "2026-11-03T23:32:33Z",
       "default_branch": "main"
     },
     {
@@ -5834,7 +5834,7 @@
       "homepage": "https://davidwise01.github.io/lineage/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-07-29T23:49:55Z",
+      "updated_at": "2026-11-03T22:19:52Z",
       "default_branch": "main"
     },
     {
@@ -5844,7 +5844,7 @@
       "homepage": "https://davidwise01.github.io/lineage-engine/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-06-21T16:13:48Z",
+      "updated_at": "2026-11-03T22:23:20Z",
       "default_branch": "master"
     },
     {
@@ -5854,7 +5854,7 @@
       "homepage": "https://davidwise01.github.io/lineage-kernel/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-07-27T16:14:23Z",
+      "updated_at": "2026-11-03T22:21:23Z",
       "default_branch": "main"
     },
     {
@@ -5864,7 +5864,7 @@
       "homepage": "https://davidwise01.github.io/lineage-proven/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-09-09T02:56:52Z",
+      "updated_at": "2026-11-03T22:24:18Z",
       "default_branch": "main"
     },
     {
@@ -5874,7 +5874,7 @@
       "homepage": "https://davidwise01.github.io/liquid/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-07-27T16:14:23Z",
+      "updated_at": "2026-11-03T23:33:27Z",
       "default_branch": "main"
     },
     {
@@ -6054,7 +6054,7 @@
       "homepage": "https://davidwise01.github.io/lumen/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-07-27T16:14:34Z",
+      "updated_at": "2026-11-03T22:23:22Z",
       "default_branch": "master"
     },
     {
@@ -6104,7 +6104,7 @@
       "homepage": "https://mainflux.com",
       "fork": true,
       "archived": false,
-      "updated_at": "2026-04-25T23:15:05Z",
+      "updated_at": "2026-11-03T22:19:49Z",
       "default_branch": "master"
     },
     {
@@ -6334,7 +6334,7 @@
       "homepage": "https://davidwise01.github.io/merkle-bloom/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-07-27T16:15:04Z",
+      "updated_at": "2026-11-03T22:19:56Z",
       "default_branch": "main"
     },
     {
@@ -6424,7 +6424,7 @@
       "homepage": "https://davidwise01.github.io/midjourney-assets/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-07-27T16:14:56Z",
+      "updated_at": "2026-11-03T22:22:12Z",
       "default_branch": "main"
     },
     {
@@ -6484,7 +6484,7 @@
       "homepage": "https://davidwise01.github.io/mimz-core/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-07-27T16:14:57Z",
+      "updated_at": "2026-11-03T22:22:14Z",
       "default_branch": "main"
     },
     {
@@ -6504,7 +6504,7 @@
       "homepage": "https://davidwise01.github.io/mimzy-core/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-07-27T16:14:55Z",
+      "updated_at": "2026-11-03T22:20:00Z",
       "default_branch": "main"
     },
     {
@@ -6524,7 +6524,7 @@
       "homepage": "https://davidwise01.github.io/mirror-lattice/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-07-27T16:14:02Z",
+      "updated_at": "2026-11-03T23:33:44Z",
       "default_branch": "main"
     },
     {
@@ -6544,7 +6544,7 @@
       "homepage": "https://davidwise01.github.io/mirror-solve/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-07-27T16:14:55Z",
+      "updated_at": "2026-11-03T22:21:02Z",
       "default_branch": "main"
     },
     {
@@ -6634,7 +6634,7 @@
       "homepage": "https://davidwise01.github.io/moirai/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-07-27T16:13:51Z",
+      "updated_at": "2026-11-03T22:23:29Z",
       "default_branch": "master"
     },
     {
@@ -6684,7 +6684,7 @@
       "homepage": "https://davidwise01.github.io/morpheus/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-07-27T16:03:34Z",
+      "updated_at": "2026-11-03T22:21:06Z",
       "default_branch": "main"
     },
     {
@@ -6864,7 +6864,7 @@
       "homepage": "https://davidwise01.github.io/nanite-factory/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-07-27T16:15:07Z",
+      "updated_at": "2026-11-03T22:20:15Z",
       "default_branch": "main"
     },
     {
@@ -6994,7 +6994,7 @@
       "homepage": "https://davidwise01.github.io/nine-body-audit/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-07-27T16:15:49Z",
+      "updated_at": "2026-11-03T22:23:01Z",
       "default_branch": "master"
     },
     {
@@ -7084,7 +7084,7 @@
       "homepage": "https://davidwise01.github.io/nom/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-11-03T00:07:41Z",
+      "updated_at": "2026-11-03T23:32:39Z",
       "default_branch": "main"
     },
     {
@@ -7094,7 +7094,7 @@
       "homepage": "https://davidwise01.github.io/nomos/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-10-06T18:13:02Z",
+      "updated_at": "2026-11-03T22:23:51Z",
       "default_branch": "main"
     },
     {
@@ -7184,7 +7184,7 @@
       "homepage": "https://davidwise01.github.io/oasis/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-11-01T11:50:42Z",
+      "updated_at": "2026-11-03T22:24:23Z",
       "default_branch": "main"
     },
     {
@@ -7604,7 +7604,7 @@
       "homepage": "https://davidwise01.github.io/persistence-protocol/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-07-27T16:15:36Z",
+      "updated_at": "2026-11-03T22:24:30Z",
       "default_branch": "main"
     },
     {
@@ -7664,7 +7664,7 @@
       "homepage": "https://davidwise01.github.io/photonic/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-10-28T17:14:56Z",
+      "updated_at": "2026-11-03T23:33:24Z",
       "default_branch": "main"
     },
     {
@@ -7744,7 +7744,7 @@
       "homepage": "https://davidwise01.github.io/physis/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-07-27T16:17:03Z",
+      "updated_at": "2026-11-03T22:23:39Z",
       "default_branch": "master"
     },
     {
@@ -7804,7 +7804,7 @@
       "homepage": "https://davidwise01.github.io/plasmonic/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-07-27T16:15:49Z",
+      "updated_at": "2026-11-03T23:33:48Z",
       "default_branch": "main"
     },
     {
@@ -7834,7 +7834,7 @@
       "homepage": "https://davidwise01.github.io/plutus/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-07-27T16:15:52Z",
+      "updated_at": "2026-11-03T22:21:20Z",
       "default_branch": "main"
     },
     {
@@ -7844,7 +7844,7 @@
       "homepage": "https://davidwise01.github.io/pocket-universe/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-08-24T22:41:28Z",
+      "updated_at": "2026-11-03T22:19:40Z",
       "default_branch": "main"
     },
     {
@@ -7924,7 +7924,7 @@
       "homepage": "https://davidwise01.github.io/positronic-law/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-09-14T00:49:09Z",
+      "updated_at": "2026-11-03T22:21:00Z",
       "default_branch": "main"
     },
     {
@@ -8004,7 +8004,7 @@
       "homepage": "https://davidwise01.github.io/prompt-library/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-07-27T16:17:11Z",
+      "updated_at": "2026-11-03T22:22:09Z",
       "default_branch": "main"
     },
     {
@@ -8294,7 +8294,7 @@
       "homepage": "https://davidwise01.github.io/recluce/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-07-27T16:16:14Z",
+      "updated_at": "2026-11-03T23:33:05Z",
       "default_branch": "main"
     },
     {
@@ -8324,7 +8324,7 @@
       "homepage": "https://davidwise01.github.io/red-hat/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-07-27T16:18:00Z",
+      "updated_at": "2026-11-03T23:32:10Z",
       "default_branch": "main"
     },
     {
@@ -8424,7 +8424,7 @@
       "homepage": "https://davidwise01.github.io/ringworld/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-07-27T16:18:09Z",
+      "updated_at": "2026-11-03T23:33:03Z",
       "default_branch": "main"
     },
     {
@@ -8444,7 +8444,7 @@
       "homepage": "https://davidwise01.github.io/riverworld/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-07-27T16:16:59Z",
+      "updated_at": "2026-11-03T23:32:59Z",
       "default_branch": "main"
     },
     {
@@ -8484,7 +8484,7 @@
       "homepage": "https://davidwise01.github.io/root0-essays/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-07-27T16:18:17Z",
+      "updated_at": "2026-11-03T22:21:17Z",
       "default_branch": "main"
     },
     {
@@ -8494,7 +8494,7 @@
       "homepage": "https://davidwise01.github.io/root0-philosophy-books/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-09-14T17:29:39Z",
+      "updated_at": "2026-11-03T22:21:12Z",
       "default_branch": "main"
     },
     {
@@ -8504,7 +8504,7 @@
       "homepage": "https://davidwise01.github.io/root0-registry/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-07-27T16:18:17Z",
+      "updated_at": "2026-11-03T22:22:24Z",
       "default_branch": "main"
     },
     {
@@ -8514,7 +8514,7 @@
       "homepage": "https://davidwise01.github.io/root0-software/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-07-27T16:18:31Z",
+      "updated_at": "2026-11-03T22:21:56Z",
       "default_branch": "main"
     },
     {
@@ -8524,7 +8524,7 @@
       "homepage": "https://davidwise01.github.io/root0-tools/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-07-27T16:18:18Z",
+      "updated_at": "2026-11-03T22:21:49Z",
       "default_branch": "main"
     },
     {
@@ -8534,7 +8534,7 @@
       "homepage": "https://davidwise01.github.io/root0-validator/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-07-27T16:18:29Z",
+      "updated_at": "2026-11-03T22:22:38Z",
       "default_branch": "main"
     },
     {
@@ -8704,7 +8704,7 @@
       "homepage": "https://davidwise01.github.io/seed/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-07-27T16:17:41Z",
+      "updated_at": "2026-11-03T23:33:35Z",
       "default_branch": "main"
     },
     {
@@ -8714,7 +8714,7 @@
       "homepage": "https://davidwise01.github.io/seed-kernel/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-06-21T16:14:31Z",
+      "updated_at": "2026-11-03T22:21:42Z",
       "default_branch": "main"
     },
     {
@@ -8884,7 +8884,7 @@
       "homepage": "https://davidwise01.github.io/shadowqueen/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-07-27T16:18:00Z",
+      "updated_at": "2026-11-03T22:24:28Z",
       "default_branch": "main"
     },
     {
@@ -9014,7 +9014,7 @@
       "homepage": "https://davidwise01.github.io/singularity-well/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-07-27T16:17:47Z",
+      "updated_at": "2026-11-03T23:33:40Z",
       "default_branch": "main"
     },
     {
@@ -9214,7 +9214,7 @@
       "homepage": "https://davidwise01.github.io/solar-jetman/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-10-16T23:28:51Z",
+      "updated_at": "2026-11-03T22:23:07Z",
       "default_branch": "master"
     },
     {
@@ -9354,7 +9354,7 @@
       "homepage": "https://davidwise01.github.io/stargate/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-07-27T16:18:16Z",
+      "updated_at": "2026-11-03T22:20:25Z",
       "default_branch": "main"
     },
     {
@@ -9404,7 +9404,7 @@
       "homepage": "https://davidwise01.github.io/stoicheion/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-07-27T15:32:17Z",
+      "updated_at": "2026-11-03T22:20:56Z",
       "default_branch": "main"
     },
     {
@@ -9414,7 +9414,7 @@
       "homepage": "https://davidwise01.github.io/stoicheion-api/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-07-27T16:18:41Z",
+      "updated_at": "2026-11-03T22:24:32Z",
       "default_branch": "main"
     },
     {
@@ -9424,7 +9424,7 @@
       "homepage": "https://davidwise01.github.io/stoicheion-qif/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-07-27T16:18:25Z",
+      "updated_at": "2026-11-03T22:22:41Z",
       "default_branch": "main"
     },
     {
@@ -9574,7 +9574,7 @@
       "homepage": "https://davidwise01.github.io/swarm-os/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-07-27T16:19:47Z",
+      "updated_at": "2026-11-03T22:20:38Z",
       "default_branch": "main"
     },
     {
@@ -9614,7 +9614,7 @@
       "homepage": "https://davidwise01.github.io/symbiot-os/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-07-27T16:18:27Z",
+      "updated_at": "2026-11-03T22:20:34Z",
       "default_branch": "main"
     },
     {
@@ -9874,7 +9874,7 @@
       "homepage": "https://davidwise01.github.io/terminus-doctrine/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-07-27T16:20:03Z",
+      "updated_at": "2026-11-03T22:24:13Z",
       "default_branch": "main"
     },
     {
@@ -9944,7 +9944,7 @@
       "homepage": "https://davidwise01.github.io/ternary-spec/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-07-27T16:08:41Z",
+      "updated_at": "2026-11-03T22:22:31Z",
       "default_branch": "main"
     },
     {
@@ -9954,7 +9954,7 @@
       "homepage": "https://davidwise01.github.io/terra-prime-kernel/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-07-27T16:20:02Z",
+      "updated_at": "2026-11-03T22:20:55Z",
       "default_branch": "main"
     },
     {
@@ -10334,7 +10334,7 @@
       "homepage": "https://davidwise01.github.io/the-arch/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-07-27T16:20:24Z",
+      "updated_at": "2026-11-03T22:24:10Z",
       "default_branch": "main"
     },
     {
@@ -13444,7 +13444,7 @@
       "homepage": "https://davidwise01.github.io/The-Garden/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-07-27T15:22:42Z",
+      "updated_at": "2026-11-03T22:19:35Z",
       "default_branch": "main"
     },
     {
@@ -19894,7 +19894,7 @@
       "homepage": "https://davidwise01.github.io/the.source/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-07-27T16:25:16Z",
+      "updated_at": "2026-11-03T22:19:38Z",
       "default_branch": "main"
     },
     {
@@ -20074,7 +20074,7 @@
       "homepage": "",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-10-28T23:18:56Z",
+      "updated_at": "2026-11-03T20:03:22Z",
       "default_branch": "main"
     },
     {
@@ -20364,7 +20364,7 @@
       "homepage": "https://davidwise01.github.io/transmon/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-07-27T16:06:45Z",
+      "updated_at": "2026-11-03T23:33:39Z",
       "default_branch": "main"
     },
     {
@@ -20384,7 +20384,7 @@
       "homepage": "https://davidwise01.github.io/triados/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-07-27T16:26:17Z",
+      "updated_at": "2026-11-03T22:23:33Z",
       "default_branch": "master"
     },
     {
@@ -20414,7 +20414,7 @@
       "homepage": "https://davidwise01.github.io/tripod/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-07-27T16:26:22Z",
+      "updated_at": "2026-11-03T22:23:37Z",
       "default_branch": "master"
     },
     {
@@ -20424,7 +20424,7 @@
       "homepage": "https://davidwise01.github.io/tripod-cardinal/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-07-27T16:25:11Z",
+      "updated_at": "2026-11-03T22:22:54Z",
       "default_branch": "master"
     },
     {
@@ -20434,7 +20434,7 @@
       "homepage": "https://davidwise01.github.io/tripod-energy-suite/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-07-27T16:24:49Z",
+      "updated_at": "2026-11-03T22:22:49Z",
       "default_branch": "master"
     },
     {
@@ -20444,7 +20444,7 @@
       "homepage": "https://davidwise01.github.io/tripod-pck/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-07-27T16:25:58Z",
+      "updated_at": "2026-11-03T22:22:55Z",
       "default_branch": "master"
     },
     {
@@ -20454,7 +20454,7 @@
       "homepage": "https://davidwise01.github.io/tripod-quantum-dots/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-07-27T16:24:50Z",
+      "updated_at": "2026-11-03T22:22:51Z",
       "default_branch": "master"
     },
     {
@@ -20464,7 +20464,7 @@
       "homepage": "https://davidwise01.github.io/tripod-waveform/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-07-27T16:24:53Z",
+      "updated_at": "2026-11-03T22:22:46Z",
       "default_branch": "master"
     },
     {
@@ -20474,7 +20474,7 @@
       "homepage": "https://davidwise01.github.io/tripod-whitepapers/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-07-27T16:26:06Z",
+      "updated_at": "2026-11-03T22:21:05Z",
       "default_branch": "main"
     },
     {
@@ -20804,7 +20804,7 @@
       "homepage": "https://davidwise01.github.io/unity-tensor/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-07-27T16:25:00Z",
+      "updated_at": "2026-11-03T22:21:26Z",
       "default_branch": "main"
     },
     {
@@ -21124,7 +21124,7 @@
       "homepage": "https://davidwise01.github.io/wheel-of-time/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-07-27T16:12:43Z",
+      "updated_at": "2026-11-03T23:32:51Z",
       "default_branch": "main"
     },
     {
@@ -21164,7 +21164,7 @@
       "homepage": "https://davidwise01.github.io/whisper-lattice-log/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-06-21T16:13:25Z",
+      "updated_at": "2026-11-03T22:20:52Z",
       "default_branch": "master"
     },
     {
@@ -21174,7 +21174,7 @@
       "homepage": "https://davidwise01.github.io/white-gold-wielder/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-07-27T16:18:48Z",
+      "updated_at": "2026-11-03T23:32:58Z",
       "default_branch": "main"
     },
     {
@@ -21274,7 +21274,7 @@
       "homepage": "https://davidwise01.github.io/without-remorse/",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-07-27T16:19:32Z",
+      "updated_at": "2026-11-03T23:33:19Z",
       "default_branch": "main"
     },
     {
