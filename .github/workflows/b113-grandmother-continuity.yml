@@ -1,0 +1,39 @@
+name: B113 Grandmother Continuity
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '53 */6 * * *'
+permissions:
+  contents: write
+concurrency:
+  group: b113-grandmother
+  cancel-in-progress: false
+jobs:
+  generations:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Test FORMIC math and family continuity
+        run: |
+          node scripts/btf2/test-formic-hex.cjs
+          node scripts/btf2/test-b113-generations.cjs
+      - name: Refresh public child directory
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          node scripts/btf2/index-repos.cjs
+          node scripts/btf2/b102-discover-children.cjs
+      - name: Preserve lattice addresses and arrival cohorts
+        run: |
+          node scripts/btf2/b112-formic-lattice.cjs
+          node scripts/btf2/b113-generations.cjs
+      - name: Commit derived public registry and append-only birth log
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add btf2/catalog.json b102/children.json b102/discovered.jsonl b112/registry.json b112/assignments.jsonl b113/family.json b113/births.jsonl
+          git diff --cached --quiet || (git commit -m "data(jane): preserve FORMIC generations" && git push)
