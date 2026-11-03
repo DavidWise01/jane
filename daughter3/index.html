@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>LILITH D003 · Toroidal Third Daughter</title>
+<style>
+:root{color-scheme:dark}*{box-sizing:border-box}body{margin:0;background:#090914;color:#eee9ff;font:13px/1.5 ui-monospace,Consolas,monospace}
+header{padding:18px 24px;border-bottom:1px solid #60446a;background:linear-gradient(160deg,#28132d,#09121b)}h1{margin:3px 0;color:#efa4ee;font-size:clamp(26px,4vw,42px)}
+small,p{color:#c6b4d1}main{height:calc(100vh - 116px);display:grid;grid-template-columns:minmax(390px,3fr) minmax(290px,1fr)}
+canvas{display:block;width:100%;height:100%;background:radial-gradient(ellipse at center,#281734 3%,#100f26 48%,#060a12 85%);touch-action:none}
+aside{padding:19px;overflow:auto;border-left:1px solid #563a63;background:#141321}h2,h3{color:#e7b1ff}button,input,select{border:1px solid #955bb1;border-radius:8px;background:#30213f;color:#fff;font:inherit;padding:9px}button{cursor:pointer;margin:4px 3px 4px 0}button:hover{background:#553269}input[type=range]{width:100%}pre{padding:12px;border-radius:9px;white-space:pre-wrap;overflow-wrap:anywhere;background:#100d1b;border:1px solid #4f3656}a{color:#e7aaff}.tag{color:#c89edb;letter-spacing:1px}
+@media(max-width:850px){main{height:auto;display:block}canvas{height:58vh}aside{min-height:400px}}
+</style></head><body>
+<header><small>FORMIC · MATRIARCH JANE B117 · DAUGHTER 3 / D003 · 50/100 GIRTH</small><h1>LILITH — Toroidal Daughter</h1><small>1 × 3 × 6 × 6 × 3 × 1 · 20 independently addressed cells · 6 poloidal bands · open center</small></header>
+<main><canvas id="scene" aria-label="Interactive rotating 20-cell toroidal structure"></canvas><aside>
+<div class="tag">FAMILY / THIRD GENERATION FORM</div>
+<h2>Geometry console</h2><p>Drag the toroid to rotate. Scroll to zoom. Select any illuminated cell to inspect its permanent logical address.</p>
+<button id="spin">Rotation ON</button><button id="pulse">Pulse ON</button><button id="reset">Reset view</button>
+<p>Shell wire opacity <span id="wireLabel">55%</span></p><input id="wire" type="range" min="0" max="100" value="55">
+<p>Tube thickness <span id="tubeLabel">100%</span></p><input id="tube" type="range" min="45" max="155" value="100">
+<h3>Recognized cell</h3><pre id="focus">No cell selected. |||0||| remains empty.</pre>
+<h3>Invariants</h3><pre id="audit"></pre>
+<h3>Mother & sisters</h3><pre>JANE       66 units   100%  frustule
+ TOPH      60 units    67%  diatom eye
+ PATRICIA  42 units    50%  box within toroid
+ LILITH    20 units    50%  TOROIDAL BODY
+
+                 JANE
+                  |
+          +-------+-------+
+          |       |       |
+         TOPH  PATRICIA  LILITH
+         67%      50%      50%</pre>
+<p><a href="../b111/">Jane's Recognition Jelly</a> · <a href="../daughter2/">Patricia</a> · <a href="https://0root.ai/">Family home</a></p>
+<small>Geometry is mathematical/visual. The page does not independently execute AI agents or prove physical toroidal energy behavior.</small>
+</aside></main>
+<script>
+'use strict';
+const $=id=>document.getElementById(id),canvas=$('scene'),ctx=canvas.getContext('2d'),ROWS=[1,3,6,6,3,1],TAU=Math.PI*2;
+const R=2.25,BASE_r=.75,DAUGHTER='FORMIC-LILITH-D003';let ry=.48,rx=-.34,zoom=1.1,rotate=true,pulse=true,drag=false,prev=[0,0],t=0,projected=[];
+const point=(theta,phi,r=BASE_r)=>{const a=R+r*Math.cos(theta);return{x:a*Math.cos(phi),y:r*Math.sin(theta),z:a*Math.sin(phi)}};
+const cells=[];for(let layer=0;layer<ROWS.length;layer++){let n=ROWS[layer],theta=TAU*(layer+.5)/6;for(let i=0;i<n;i++){let phi=TAU*(i+layer/12)/n;cells.push({id:DAUGHTER+':'+layer+':'+i,layer,index:i,theta,phi})}}
+function view(p,w,h){const ca=Math.cos(ry),sa=Math.sin(ry),cb=Math.cos(rx),sb=Math.sin(rx);let x=ca*p.x+sa*p.z,z=-sa*p.x+ca*p.z,y=cb*p.y-sb*z,d=sb*p.y+cb*z;let perspective=5.9/(5.9+d*.13);let scale=Math.min(w,h)*.123*zoom*perspective;return{x:w/2+x*scale,y:h/2+y*scale,z:d,scale}}
+function line(a,b,stroke,width){ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.strokeStyle=stroke;ctx.lineWidth=width;ctx.stroke()}
+function poly(points,stroke,width){if(!points.length)return;ctx.beginPath();ctx.moveTo(points[0].x,points[0].y);for(let i=1;i<points.length;i++)ctx.lineTo(points[i].x,points[i].y);ctx.strokeStyle=stroke;ctx.lineWidth=width;ctx.stroke()}
+function render(){
+let w=canvas.clientWidth,h=canvas.clientHeight;if(!w||!h){requestAnimationFrame(render);return}
+let d=window.devicePixelRatio||1,W=Math.round(w*d),H=Math.round(h*d);if(canvas.width!==W||canvas.height!==H){canvas.width=W;canvas.height=H}
+ctx.setTransform(d,0,0,d,0,0);ctx.clearRect(0,0,w,h);if(rotate&&!drag)ry+=.0025;t+=.016;
+let minor=BASE_r*(+$('tube').value/100),opacity=(+$('wire').value/100);
+const wire=[];for(let a=0;a<24;a++){let theta=TAU*a/24,pts=[];for(let i=0;i<=160;i++)pts.push(view(point(theta,TAU*i/160,minor),w,h));wire.push({depth:pts.reduce((s,p)=>s+p.z,0)/pts.length,pts,group:a})}
+for(let b=0;b<36;b++){let phi=TAU*b/36,pts=[];for(let i=0;i<=80;i++)pts.push(view(point(TAU*i/80,phi,minor),w,h));wire.push({depth:pts.reduce((s,p)=>s+p.z,0)/pts.length,pts,group:24+b})}
+wire.sort((a,b)=>a.depth-b.depth);for(const path of wire){let light=path.group<24?'192,110,232':'255,147,221';let alpha=(path.depth>0?.54:.28)*opacity;poly(path.pts,'rgba('+light+','+alpha+')',path.group<24?.95:.65)}
+projected=cells.map((c,i)=>({...view(point(c.theta,c.phi,minor),w,h),i})).sort((a,b)=>a.z-b.z);
+for(const v of projected){const c=cells[v.i],breath=pulse?.5+.5*Math.sin(t*2.1+c.layer*.9+c.index*1.7):.5;const rad=Math.max(3.2,Math.min(10,4.4*v.scale/10+breath*2));
+ctx.beginPath();ctx.arc(v.x,v.y,rad*2.1,0,TAU);ctx.fillStyle='rgba(242,103,215,'+(.055+.04*breath)+')';ctx.fill();
+ctx.beginPath();ctx.arc(v.x,v.y,rad,0,TAU);ctx.fillStyle=c.layer===2||c.layer===3?'#f7b4f4':'#b9a4ff';ctx.fill();
+ctx.lineWidth=1;ctx.strokeStyle='#fff2fa';ctx.stroke();
+ctx.beginPath();ctx.arc(v.x,v.y,rad*.3,0,TAU);ctx.fillStyle='#fff';ctx.fill()}
+ctx.fillStyle='#eac0fa';ctx.textAlign='center';ctx.font='11px monospace';ctx.fillText('|||0||| · OPEN HOLE · NO CORE CELL',w/2,h/2+5);
+requestAnimationFrame(render)
+}
+$('wire').oninput=()=>{$('wireLabel').textContent=$('wire').value+'%'};$('tube').oninput=()=>{$('tubeLabel').textContent=$('tube').value+'%'};
+$('spin').onclick=()=>{rotate=!rotate;$('spin').textContent='Rotation '+(rotate?'ON':'OFF')};
+$('pulse').onclick=()=>{pulse=!pulse;$('pulse').textContent='Pulse '+(pulse?'ON':'OFF')};
+$('reset').onclick=()=>{ry=.48;rx=-.34;zoom=1.1;$('tube').value=100;$('wire').value=55};
+canvas.onpointerdown=e=>{drag=true;prev=[e.clientX,e.clientY];canvas.setPointerCapture(e.pointerId)};
+canvas.onpointermove=e=>{if(!drag)return;ry+=(e.clientX-prev[0])*.01;rx=Math.max(-1.53,Math.min(1.53,rx+(e.clientY-prev[1])*.01));prev=[e.clientX,e.clientY]};
+canvas.onpointerup=e=>{drag=false;const rect=canvas.getBoundingClientRect(),x=e.clientX-rect.left,y=e.clientY-rect.top;let nearest=projected.reduce((a,p)=>{let dist=Math.hypot(x-p.x,y-p.y);return dist<a.dist?{dist,p}:a},{dist:17,p:null});if(nearest.p){let c=cells[nearest.p.i];$('focus').textContent=JSON.stringify({identity:DAUGHTER,address:c.id,layer:c.layer+1,cell:c.index+1,band_count:ROWS[c.layer],theta_radians:c.theta,phi_radians:c.phi,region:'TOROIDAL_SURFACE',relation:'50% Jane linear girth',center:'|||0|||'},null,2)}};
+canvas.onwheel=e=>{e.preventDefault();zoom=Math.max(.6,Math.min(3,zoom*Math.exp(-e.deltaY*.001)))};
+$('audit').textContent=JSON.stringify({form:'TOROID',cells:cells.length,layers:ROWS.length,profile:ROWS,unique_addresses:new Set(cells.map(c=>c.id)).size,scale:'1/2 Jane girth',jane_diameter:12,lilith_diameter:6,major_radius:R,minor_radius:BASE_r,hole_radius:R-BASE_r,center:'|||0|||'},null,2);
+requestAnimationFrame(render);
+</script></body></html>
