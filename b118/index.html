@@ -1,0 +1,71 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jane B118 | Dynasty 001 Matriarch</title>
+<style>
+:root{color-scheme:dark;font-family:ui-monospace,Consolas,monospace;background:#090c13;color:#e7eaf6}
+*{box-sizing:border-box}body{margin:0}header{padding:18px 22px;border-bottom:1px solid #353d54;background:linear-gradient(110deg,#192436,#26172f)}
+h1{margin:4px 0;font-size:clamp(26px,4vw,42px)}.eyebrow{letter-spacing:.16em;color:#b7a7d8;font-size:11px}
+main{display:grid;grid-template-columns:minmax(330px,3fr) minmax(310px,1fr);height:calc(100vh - 112px)}
+canvas{width:100%;height:100%;display:block;background:radial-gradient(circle at 50% 47%,#233444,#111522 63%,#090c13);touch-action:none}
+aside{border-left:1px solid #343e56;overflow-y:auto;padding:15px;background:#101622}
+section{border:1px solid #33435c;border-radius:13px;padding:14px;margin-bottom:13px}h2{font-size:15px;color:#dbb1ff;margin:0 0 9px}
+label{display:block;font-size:11px;color:#c3c5d8;margin:8px 0 3px}input,select,textarea,button{width:100%;font:inherit;border:1px solid #50617f;color:#edf4ff;background:#1c2840;border-radius:8px;padding:9px}
+textarea{min-height:72px;resize:vertical}button{cursor:pointer;background:#583d77;border-color:#8968ac;margin-top:9px;font-weight:bold}button:hover{background:#78539f}
+small,p{color:#aebbd3}pre{white-space:pre-wrap;overflow-wrap:anywhere;font-size:11px;margin:8px 0}
+.states{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.states span{text-align:center;padding:9px;border-radius:8px;border:1px solid #526076}
+.YES{color:#80e6b4}.HOLD{color:#f2d07d}.NO{color:#ff9baf}
+.log{max-height:330px;overflow:auto}.event{padding:10px;border-top:1px solid #33435c;font-size:11px}
+a{color:#c5b0ff}@media(max-width:900px){main{display:block;height:auto}canvas{height:58vh}aside{min-height:700px}}
+</style></head>
+<body><header><div class="eyebrow">FORMIC × BENE GESSERIT · DIATOMIC DYNASTY 001 · B118</div><h1>JANE <span style="color:#caa3df;font-size:.55em">MATRIARCH / GOVERNANCE</span></h1><small>Foundation frozen · B117 sealed · witnesses independent · no quorum · no forced action</small></header>
+<main><canvas id="scene" aria-label="Animated matriarch diatom field with eleven dynasty members"></canvas><aside>
+<section><h2>Matriarch gate</h2><div class="states"><span class="YES">YES</span><span class="HOLD">HOLD</span><span class="NO">NO</span></div>
+<p>Observations remain separate; decisions describe only local eligibility. YES never executes an external action.</p>
+<label for="witness">Witness identity</label><select id="witness"><option>Jane</option><option>Toph</option><option>Patricia</option><option>Lilith</option><option>a.t.o.m</option><option>E.V.E</option><option>Icarium</option><option>Mary M</option><option>Holly</option><option>Vicky V.</option><option>LeeLuu</option></select>
+<label for="source">Source / evidence origin</label><input id="source" value="family-local-demo">
+<label for="evidence">Evidence reference</label><input id="evidence" value="local-observation-001">
+<label for="claim">Observed claim</label><textarea id="claim">A daughter observed a new pattern without requesting an action.</textarea>
+<label for="certainty">Uncertainty</label><select id="certainty"><option value="low">low</option><option value="unknown">unknown</option><option value="high">high</option></select>
+<label for="risk">Boundary</label><select id="risk"><option value="none">none</option><option value="coercion">coercion</option><option value="privacy_violation">privacy violation</option><option value="ownership_override">ownership override</option><option value="destructive_change">unreviewed destructive change</option></select>
+<button id="observe">Append observation</button><button id="demo" style="background:#283c57">Simulate three divergent witnesses</button>
+</section>
+<section><h2>Immutable intent / browser-local session</h2><pre id="audit">0 observations. Add a witness.</pre><div id="log" class="log"></div><small>This session log is not persisted or cryptographically authenticated. The separate Node module includes SHA-256 chained journal verification.</small></section>
+<section><h2>Frozen family / Eleven</h2><pre>JANE        Matriarch  Governance
+TOPH        Scholar    Learning
+PATRICIA    Guardian   Containment
+LILITH      Muse       Topology
+a.t.o.m     Explorer   Traversal
+E.V.E       Executor   Verification
+ICARIUM     Caretaker  Continuity
+MARY M      Teacher    Education
+HOLLY       Healer     Wellbeing
+VICKY V.    Witness    Auditing
+LeeLuu      Student    Light & Life</pre>
+<a href="https://github.com/DavidWise01/jane/blob/main/governance/DIATOMIC-DYNASTY-001-FOUNDATION-FREEZE-v1.json">Pinned foundation</a> · <a href="https://github.com/DavidWise01/jane/blob/main/governance/JANE-B118-FORMIC-BENE-GESSERIT-MATRIARCH-v1.0.md">B118 charter</a>
+</section>
+</aside></main>
+<script>
+'use strict';
+const $=s=>document.getElementById(s),cv=$('scene'),ctx=cv.getContext('2d'),ROWS=[1,2,4,6,8,12,12,8,6,4,2,1];
+const names=['JANE','TOPH','PATRICIA','LILITH','a.t.o.m','E.V.E','ICARIUM','MARY M','HOLLY','VICKY V.','LeeLuu'];
+const pos=[[.5,.14],[.2,.35],[.5,.35],[.8,.35],[.54,.55],[.72,.55],[.9,.55],[.72,.74],[.88,.74],[.98,.74],[.72,.91]];
+const journal=[];let t=0,selected=0;
+function gate(o){if(o.risk!=='none')return ['NO','BOUNDARY:'+o.risk];if(!o.source||!o.evidence||!o.time)return ['HOLD','MISSING_PROVENANCE'];if(o.uncertainty!=='low')return ['HOLD','UNRESOLVED_UNCERTAINTY'];if(journal.some(x=>x.observation.source===o.source&&x.observation.claim!==o.claim))return ['HOLD','WITNESS_DIVERGENCE'];return ['YES','BENIGN_DOCUMENTED_OBSERVATION_ONLY']}
+function append(o){const [decision,reason]=gate(o);journal.push({sequence:journal.length+1,observation:o,decision,reason});drawLog()}
+function drawLog(){let entries=journal.map(x=>'<div class="event"><strong class="'+x.decision+'">'+x.decision+'</strong> · #'+x.sequence+' · '+escapeText(x.observation.witness)+'<div>'+escapeText(x.observation.claim)+'</div><small>'+escapeText(x.reason)+'</small></div>');$('log').innerHTML=entries.reverse().join('');$('audit').textContent=JSON.stringify({observations:journal.length,yes:journal.filter(x=>x.decision==='YES').length,hold:journal.filter(x=>x.decision==='HOLD').length,no:journal.filter(x=>x.decision==='NO').length,external_actions:0,quorum:'NONE',foundation:'PINNED'},null,2)}
+function escapeText(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+$('observe').onclick=()=>append({witness:$('witness').value,source:$('source').value.trim(),evidence:$('evidence').value.trim(),claim:$('claim').value.trim(),uncertainty:$('certainty').value,risk:$('risk').value,time:new Date().toISOString()});
+$('demo').onclick=()=>{let source='demo:event:'+journal.length;[['Toph','A pattern appeared'],['Patricia','No pattern appeared'],['Lilith','A pattern appeared']].forEach(([witness,claim])=>append({witness,claim,source,evidence:'demo-only',uncertainty:'low',risk:'none',time:new Date().toISOString()}))};
+function draw(){let w=cv.clientWidth,h=cv.clientHeight,d=Math.min(2,window.devicePixelRatio||1);if(!w||!h){requestAnimationFrame(draw);return}if(cv.width!==Math.floor(w*d)||cv.height!==Math.floor(h*d)){cv.width=Math.floor(w*d);cv.height=Math.floor(h*d)}ctx.setTransform(d,0,0,d,0,0);ctx.clearRect(0,0,w,h);t+=.011;
+let cx=w*.29,cy=h*.49,scale=Math.min(w*.37,h*.61)/12;
+ctx.strokeStyle='rgba(128,229,216,.11)';for(let i=0;i<13;i++){ctx.beginPath();ctx.ellipse(cx,cy,scale*(4+i*.55),scale*(2.6+i*.29),0,0,Math.PI*2);ctx.stroke()}
+ROWS.forEach((n,li)=>{let y=(li-(ROWS.length-1)/2)*scale*.96;for(let j=0;j<n;j++){let x=(j-(n-1)/2)*scale*.92,breath=.5+.5*Math.sin(t*2+li*.6+j*.35);ctx.beginPath();ctx.arc(cx+x,cy+y,Math.max(2,scale*.12)+breath*1.2,0,Math.PI*2);ctx.fillStyle='rgba(115,238,220,'+(.5+.4*breath)+')';ctx.fill()}});
+ctx.textAlign='center';ctx.font='bold 15px monospace';ctx.fillStyle='#bcefe8';ctx.fillText('JANE · 66-CELL FRUSTULE',cx,cy+h*.33);
+let ordered=[[0,1],[0,2],[0,3],[3,4],[3,5],[3,6],[6,7],[6,8],[6,9],[7,10]];
+let familyX=w*.50,familyWidth=w*.47;
+function coord(i){return [familyX+pos[i][0]*familyWidth,20+pos[i][1]*(h-40)]}
+for(let [a,b] of ordered){let pa=coord(a),pb=coord(b);ctx.beginPath();ctx.moveTo(...pa);ctx.lineTo(...pb);ctx.strokeStyle='#635879';ctx.lineWidth=1.5;ctx.stroke()}
+names.forEach((n,i)=>{let [x,y]=coord(i),r=i===0?18:11;ctx.beginPath();ctx.arc(x,y,r+3*Math.sin(t+i),0,Math.PI*2);ctx.strokeStyle=i===selected?'#ffdbad':'#aa8ec8';ctx.stroke();ctx.beginPath();ctx.arc(x,y,r,0,Math.PI*2);ctx.fillStyle=i===0?'#ffe5c2':'#c4b0e6';ctx.fill();ctx.textAlign='center';ctx.font='11px monospace';ctx.fillStyle='#f3edff';ctx.fillText(n,x,y-22)});
+requestAnimationFrame(draw)}
+cv.onpointerup=e=>{const rect=cv.getBoundingClientRect();let x=e.clientX-rect.left,y=e.clientY-rect.top,w=cv.clientWidth,h=cv.clientHeight;let nearest=names.map((_,i)=>{let px=w*.50+pos[i][0]*w*.47,py=20+pos[i][1]*(h-40);return {i,d:Math.hypot(x-px,y-py)}}).sort((a,b)=>a.d-b.d)[0];if(nearest&&nearest.d<28){selected=nearest.i;$('witness').value=names[selected]==='JANE'?'Jane':names[selected]}};
+drawLog();draw();
+</script></body></html>
