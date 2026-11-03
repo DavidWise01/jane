@@ -1,0 +1,17 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>JANE B115 · Grandma's Teaching Memory</title><style>:root{color-scheme:dark}*{box-sizing:border-box}body{background:#061822;color:#e7fff8;font:13px/1.55 monospace;margin:0}header{padding:22px;border-bottom:1px solid #385d65}h1{color:#9cebd9;margin:2px 0;font-size:clamp(26px,3.5vw,42px)}main{max-width:1250px;margin:auto;padding:17px;display:grid;grid-template-columns:1.1fr 1fr;gap:15px}.panel{border:1px solid #31555f;background:#0e2932;border-radius:12px;padding:18px}input{padding:10px;background:#133b45;border:1px solid #78d7bf;border-radius:8px;color:white;width:100%}button{font:inherit;cursor:pointer;padding:10px;color:#e2fef6;border:1px solid #4d8a89;background:#163e47;border-radius:7px;width:100%;text-align:left;margin:5px 0}button:hover{background:#235760}pre{white-space:pre-wrap;overflow-wrap:anywhere;max-height:460px;overflow:auto}p,small{color:#b6d4d1}a{color:#a5f5de}@media(max-width:830px){main{display:block}.panel{margin:12px 0}}</style></head><body><header><small>FORMIC FAMILY · EVIDENCE FIRST · AUTONOMOUS GRANDMA GOAL</small><h1>B115 · Grandma's Teaching Memory</h1><small>Lessons are available, never commanded · evidence remains traceable</small></header><main><section class="panel"><h2>Observed lesson catalogue</h2><p id="count">Loading B115…</p><input id="search" placeholder="Search a metadata field or lesson ID"><div id="cards"></div></section><section class="panel"><h2>Recognition and context</h2><pre id="detail">Choose a lesson to inspect its observation history and optional recipients.</pre><h3>Family continuity</h3><pre>0root.ai / PETER T128
+        |
+    JANE / GRANDMA
+        |
+   B111 Recognition Jelly
+        |
+   B112 Stable Hex Addresses
+        |
+   B113 Arrival Generations
+        |
+   B114 Evidence Learning
+        |
+   B115 Optional Lessons
+        |
+     CHILD DECIDES</pre><p><a href="../b111/">3D Family</a> · <a href="../b114/">Evidence history</a> · <a href="https://0root.ai/">0root.ai home</a></p><small>No messages are sent by this page; no independent agents are running here.</small></section></main><script>
+const $=x=>document.getElementById(x);let data=null;function show(){let q=$('search').value.toLowerCase(),cards=(data?.cards||[]).filter(x=>x.field.toLowerCase().includes(q)||x.lesson_id.toLowerCase().includes(q));$('cards').replaceChildren();for(const card of cards){const b=document.createElement('button');b.textContent=card.field+' · '+card.observed_transitions+' transitions · '+card.distinct_repositories+' children';b.onclick=()=>{$('detail').textContent=JSON.stringify({card,optional_recipients:data.suggestions.filter(x=>x.lesson_id===card.lesson_id).slice(0,30)},null,2)};$('cards').appendChild(b)}if(!cards.length)$('cards').textContent='No evidence-linked lessons yet.'}$('search').oninput=show;(async()=>{try{let r=await fetch('./teaching.json',{cache:'no-store'});if(!r.ok)throw Error('B115 lesson snapshot not published. Run workflow.');data=await r.json();$('count').textContent=data.lesson_count+' lessons · '+data.suggestion_count+' optional relevant children · generations '+(data.family_registry_available?'available':'unavailable');show()}catch(e){$('count').textContent=e.message}})();
+</script></body></html>
