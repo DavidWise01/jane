@@ -1,0 +1,25 @@
+name: B118 Jane Governance Boundary
+on:
+  push:
+    paths:
+      - 'b118/**'
+      - 'governance/DIATOMIC-DYNASTY-001-FOUNDATION-FREEZE-v1.json'
+      - 'governance/JANE-B118-FORMIC-BENE-GESSERIT-MATRIARCH-v1.0.md'
+      - 'scripts/btf2/jane-b118-governance.cjs'
+      - 'scripts/btf2/test-jane-b118-governance.cjs'
+      - '.github/workflows/b118-jane-governance.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Test matriarch witness journal and non-quorum gate
+        run: node scripts/btf2/test-jane-b118-governance.cjs
+      - name: Check frozen family count
+        run: node -e "const m=require('./governance/DIATOMIC-DYNASTY-001-FOUNDATION-FREEZE-v1.json');if(m.family_count!==11||m.members.length!==11)process.exit(1)"
