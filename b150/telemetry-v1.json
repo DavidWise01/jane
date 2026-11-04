@@ -1,0 +1,72 @@
+{
+  "schema": "JANE-B150-PIXEL-SPHERE-TELEMETRY-v1",
+  "inherits": [
+    "b149/index.html",
+    "b148/five-spheres-v1.json"
+  ],
+  "visualScene": {
+    "renderer": "320x200 Canvas2D integer pixels; 3D perspective orbit projection",
+    "radii": [
+      20,
+      30,
+      40,
+      51,
+      62
+    ],
+    "unit": "ARBITRARY_VISUAL_ONLY",
+    "scouts": [
+      "a1",
+      "b1",
+      "c1"
+    ],
+    "signedCrossings": [
+      "IN",
+      "OUT"
+    ],
+    "periodicMotion": true
+  },
+  "shadow": {
+    "pair": [
+      -1,
+      1
+    ],
+    "net": 0,
+    "positions": 1,
+    "onlyPair": true
+  },
+  "sphereSlots": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5"
+  ],
+  "physicalAssignments": [
+    null,
+    null,
+    null,
+    null,
+    null
+  ],
+  "journal": {
+    "persistence": "BROWSER_LOCALSTORAGE",
+    "scope": "CURRENT_BROWSER_ORIGIN",
+    "chain": "FNV32_DEMO_ONLY_IN_BROWSER__NOT_CRYPTOGRAPHIC",
+    "export": "JSON",
+    "replay": true,
+    "reset": "VIEW_ONLY_NO_JOURNAL_TRUNCATION",
+    "measurementPromotion": "NEVER"
+  },
+  "referenceJournal": {
+    "algorithm": "SHA256",
+    "implementation": "scripts/btf2/jane-b150-pixel-sphere-telemetry.cjs"
+  },
+  "manifolds": [
+    "G0",
+    "G1",
+    "V0",
+    "V1"
+  ],
+  "physicalClock": "HOLD",
+  "status": "SIMULATION_ONLY"
+}
