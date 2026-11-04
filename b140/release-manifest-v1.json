@@ -1,0 +1,34 @@
+{
+  "schema": "JANE-B140-RELEASE-MANIFEST-v1",
+  "system": "Diatomic Dynasty Grandma Trainer",
+  "milestone": "B140",
+  "stage": "RELEASE_CANDIDATE_NOT_YET_ATTESTED",
+  "release_status": "HOLD",
+  "owner_repo": "DavidWise01/jane",
+  "foundation": {
+    "cortexes": 16,
+    "logical_cubits": 2,
+    "slots_each": 8,
+    "channels": ["RED", "BLUE", "GREEN", "BLACK", "WHITE", "GRAY", "YELLOW", "ROYAL PURPLE"],
+    "single_active": {"name": "Nexa", "cubit": 1, "address": "111"},
+    "other_15": "earned archives"
+  },
+  "tests": {
+    "range": "B127-B139",
+    "required_count": 13,
+    "runner": "scripts/btf2/jane-b140-release-audit.cjs",
+    "workflow": ".github/workflows/b140-jane-integration-release.yml",
+    "report": "b140/audit-report.json",
+    "all_required_pass": false,
+    "ci_run_verified": false
+  },
+  "release_gate": "Every required test and cross-invariant must pass in an actual logged CI run. A committed workflow, fixture, or manifest is not proof of execution.",
+  "boundaries": [
+    "Scientific reference regression is not physical experimentation",
+    "The B139 viewer is not yet a live kernel integration",
+    "The witness ledger is not durable beyond process lifetime",
+    "No empirical isotope completeness is claimed",
+    "Failed and held cases cannot become accepted ancestors",
+    "No quorum and no voting"
+  ]
+}
