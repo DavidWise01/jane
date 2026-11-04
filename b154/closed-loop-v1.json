@@ -1,0 +1,41 @@
+{
+  "schema": "JANE-B154-CLOSED-LOOP-MIRROR-v1",
+  "from": "b153/hon-braces-v1.json",
+  "braces": [
+    "H",
+    "O",
+    "N"
+  ],
+  "witnesses": [
+    "a1",
+    "b1",
+    "c1"
+  ],
+  "cellsPerBrace": 122,
+  "forwardSteps": 122,
+  "reverseSteps": 122,
+  "totalStepsPerBrace": 244,
+  "totalSignedSteps": 732,
+  "boxCount": 62,
+  "torusCount": 60,
+  "forwardSeams": [
+    "62 -> 63",
+    "122 -> 1"
+  ],
+  "reverseSeams": [
+    "1 -> 122",
+    "63 -> 62"
+  ],
+  "audit": {
+    "expectedUniqueDepartures": 122,
+    "expectedUniqueArrivals": 122,
+    "returnToStart": true,
+    "mirrorExact": true,
+    "hashChain": "SHA256_PER_NODE_TRACE",
+    "onFailure": "HOLD_AND_PRESERVE_TRACE"
+  },
+  "firstShadowOnly": true,
+  "noQuorum": true,
+  "physicalPromotion": false,
+  "status": "STRUCTURAL_SIMULATION_ONLY"
+}
