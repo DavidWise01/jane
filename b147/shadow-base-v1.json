@@ -1,0 +1,19 @@
+{
+  "schema": "JANE-B147.1-BASE11-SHADOW-v1",
+  "notation": {
+    "base": 11,
+    "alternative": "-+5",
+    "written": "+1+1",
+    "primaryEffective": 1,
+    "shadowEffective": -1,
+    "projected": 0,
+    "rule": "Both written tokens are +1, but the shadow role contributes -1 to the projection."
+  },
+  "positions": ["sag a", "nib sun", "nib", "earth", "earth sun"],
+  "sourceGraph": "b147/dual-graph-v1.json",
+  "scope": "USER_DEFINED_ENCODING",
+  "physicalClaim": "UNVERIFIED",
+  "reinterpretationOfBase11": "UNSPECIFIED_RADIX_VS_SYMBOLIC_CARDINALITY",
+  "forceEdgesPreserved": 6,
+  "tetrahedralUnboundPairPreserved": ["nib sun", "earth"]
+}
