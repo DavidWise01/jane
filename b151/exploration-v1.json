@@ -13,7 +13,7 @@
     "S4",
     "S5"
   ],
-  "score": "100 - 25*visits + 11*holds - 0.1*abs(currentRadius-targetRadius) - (previousSlot==slot ? 5 : 0)",
+  "score": "100 - 25*visits + 35*holds - 0.1*abs(currentRadius-targetRadius) - (previousSlot==slot ? 5 : 0)",
   "tie": "LOWEST_SLOT_ID",
   "witnessIsolation": true,
   "decisionEvidence": "APPEND_INDEPENDENTLY",
