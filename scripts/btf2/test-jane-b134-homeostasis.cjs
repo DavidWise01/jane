@@ -1,0 +1,22 @@
+#!/usr/bin/env node
+'use strict';
+const assert=require('node:assert/strict');
+const {Homeostasis,review}=require('./jane-b134-homeostasis.cjs');
+const H=new Homeostasis('Kr-84 model',['sealed','cold','warm','open','pressure']);
+const P={nuclear:'PASS',chemical:'PASS',environment:'PASS',provenance:'PASS',repeatability:'PASS'};
+const add=(id,context,gates=P,origin=null)=>H.submit({id,context,gates,evidence:'mock evaluated observation',origin});
+add('S1','sealed');add('C1','cold');add('W1','warm');
+add('O1','open',{...P,environment:'FAIL'});
+add('P1','pressure',{...P,repeatability:'UNKNOWN'});
+let r=H.report();assert.equal(r.coveragePercent,100);assert.equal(r.currentPassPercent,60);assert.equal(r.decision,'HOLD');
+assert.equal(r.counts.REJECT,1);assert.equal(r.counts.HOLD,1);
+add('O2','open',P,'O1');add('P2','pressure',P,'P1');
+r=H.report();assert.equal(r.currentPassPercent,100);assert.equal(r.decision,'PROMOTE');
+add('W2','warm',{...P,provenance:'UNKNOWN'},'W1');
+r=H.report();assert.equal(r.currentPassPercent,80);assert.equal(r.decision,'HOLD');
+assert.equal(H.events[2].outcome,'PASS');
+assert.deepEqual(H.audit(),{entries:8,chainVerified:true,invalidPromotions:0});
+assert.throws(()=>H.submit({id:'BAD',context:'vacuum',gates:P,evidence:'x'}),/Invalid/);
+assert.throws(()=>add('S1','sealed'),/Invalid/);
+assert.throws(()=>review({...P,nuclear:'PENDING'}),/Every gate/);
+console.log('PASS B134: 8 trials, coverage 100%, pass 60% -> 100% -> 80%, promotion revoked under latest HOLD, history intact');
