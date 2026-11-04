@@ -1,0 +1,71 @@
+{
+  "schema": "JANE-B147.2-FIRST-SHADOW-FIVE-SPHERES-v1",
+  "supersedes": "b147/shadow-base-v1.json#five-shadow-interpretation",
+  "canonicalNotation": "{ -1, 1 } > 1 ; -+5",
+  "declaredBaseLabel": 11,
+  "firstPair": {
+    "tokens": [
+      -1,
+      1
+    ],
+    "shadowApplied": true,
+    "effectivePositionCount": 1,
+    "netSignedValue": 0,
+    "operation": "PAIR_RESOLVES_TO_ONE_POSITION",
+    "note": "Net signed value zero is not the number of resulting positions."
+  },
+  "remaining": {
+    "signedSphereCount": 5,
+    "shadowApplied": false,
+    "polarity": [
+      "-",
+      "+"
+    ],
+    "sphereSlots": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "topology": "UNASSIGNED",
+    "meaning": "five signed sphere boundaries, not five shadow copies"
+  },
+  "contextualExamples": [
+    {
+      "name": "ionosphere",
+      "status": "PHYSICAL_REGION_EXAMPLE_NOT_ASSIGNED_TO_SLOT"
+    },
+    {
+      "name": "heliosphere",
+      "status": "PHYSICAL_REGION_EXAMPLE_NOT_ASSIGNED_TO_SLOT"
+    }
+  ],
+  "bodies": [
+    "sag a",
+    "nib sun",
+    "nib",
+    "earth",
+    "earth sun"
+  ],
+  "preserved": {
+    "forceEdges": 6,
+    "geometricPairs": 6,
+    "unboundCorePair": [
+      "nib sun",
+      "earth"
+    ],
+    "manifolds": {
+      "gravity": 2,
+      "void": 2
+    },
+    "signedDirections": 6
+  },
+  "status": "SYMBOLIC_STRUCTURE_ONLY",
+  "unresolved": [
+    "Whether base 11 denotes cardinality, numbering, or radix",
+    "Exact assignment of sphere names to the five signed slots",
+    "Whether signed polarity indicates radial inward/outward or another operator",
+    "How proposed spheres couple to the gravitational model"
+  ]
+}
