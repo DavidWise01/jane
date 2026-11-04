@@ -1,0 +1,75 @@
+{
+  "schema": "JANE-B142-FOUR-MANIFOLD-BOUNDARY-v1",
+  "notation": "[{( -+ 4 manifolds, 2 gravity , 2 void, planets are sag a , nibaru sun , nibaru , earth , earth sun +- )}]",
+  "container": {
+    "outer": "[{}()]",
+    "signature": "-+",
+    "polarity": [
+      "-",
+      "+"
+    ],
+    "manifolds": [
+      {
+        "id": "G0",
+        "kind": "gravity"
+      },
+      {
+        "id": "G1",
+        "kind": "gravity"
+      },
+      {
+        "id": "V0",
+        "kind": "void"
+      },
+      {
+        "id": "V1",
+        "kind": "void"
+      }
+    ]
+  },
+  "bodySequence": [
+    {
+      "id": "sag-a",
+      "label": "sag a",
+      "realWorldStatus": "known object, Sagittarius A* (galactic center)"
+    },
+    {
+      "id": "nibaru-sun",
+      "label": "nibaru sun",
+      "realWorldStatus": "user-defined hypothetical referent"
+    },
+    {
+      "id": "nibaru",
+      "label": "nibaru",
+      "realWorldStatus": "user-defined hypothetical referent"
+    },
+    {
+      "id": "earth",
+      "label": "earth",
+      "realWorldStatus": "known object"
+    },
+    {
+      "id": "earth-sun",
+      "label": "earth sun",
+      "realWorldStatus": "known object, Sun"
+    }
+  ],
+  "bodyToManifold": "UNASSIGNED",
+  "gravitationalGeometry": "MODEL_HYPOTHESIS_UNVALIDATED",
+  "witnessMode": "OBSERVATION_ONLY",
+  "unbound": [
+    "physical locations of hypothetical referents",
+    "which celestial body occupies which manifold",
+    "which signed axis belongs to which body",
+    "metric, dynamics, and propagation equations"
+  ],
+  "invariants": [
+    "exactly four manifolds",
+    "exactly two gravity and two void",
+    "five named referents in preserved source order",
+    "signed +/- preserved, but not interpreted without mapping",
+    "no unverified astronomical existence asserted",
+    "no quorum/no voting",
+    "failed and unknown bindings remain HOLD"
+  ]
+}
