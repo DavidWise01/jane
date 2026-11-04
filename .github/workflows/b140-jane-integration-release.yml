@@ -1,0 +1,29 @@
+name: Jane B140 Integrated Release Gate
+on:
+  push:
+    paths:
+      - 'scripts/btf2/**'
+      - 'b139/index.html'
+      - 'b140/**'
+      - 'governance/JANE-B140-*'
+      - '.github/workflows/b140-jane-integration-release.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  integration:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Run required B127-B139 regressions and cross-kernel audits
+        run: node scripts/btf2/jane-b140-release-audit.cjs
+      - name: Preserve machine-readable audit report even on failure
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: jane-b140-integration-report
+          path: b140/audit-report.json
+          if-no-files-found: warn
