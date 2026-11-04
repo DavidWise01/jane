@@ -1,0 +1,21 @@
+name: Jane B130 Krypton Isotope Trainer
+on:
+  push:
+    paths:
+      - 'scripts/btf2/jane-b130-krypton-trainer.cjs'
+      - 'scripts/btf2/test-jane-b130-krypton-trainer.cjs'
+      - 'governance/JANE-B130-KRYPTON-STABILITY-INVARIANT-v1.0.md'
+      - '.github/workflows/b130-krypton-isotope-trainer.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate isotope addresses and trainer stability gates
+        run: node scripts/btf2/test-jane-b130-krypton-trainer.cjs
