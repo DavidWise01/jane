@@ -1,0 +1,49 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Jane B141 | Read-Only Evidence Observatory</title>
+<style>
+:root{color-scheme:dark;--bg:#080d16;--panel:#141c2a;--edge:#3e4a60;--text:#e9eced;--mute:#a2b1c0;--amber:#ffad66;--purple:#7851a9}
+*{box-sizing:border-box}body{font:14px/1.55 system-ui,Segoe UI,Arial,sans-serif;margin:0;background:radial-gradient(circle at 70% 0%,#281c3c,transparent 48%),var(--bg);color:var(--text)}
+header{padding:24px 28px;border-bottom:1px solid var(--edge)}h1{font-size:clamp(22px,3vw,34px);margin:3px 0}h2{font-size:18px;color:var(--amber);margin:0 0 8px}h3{font-size:15px;margin:10px 0}p{margin:7px 0;color:#bdc7d5}small,.mute{color:var(--mute)}
+main{padding:18px;display:grid;grid-template-columns:1fr 1fr;gap:14px;max-width:1500px;margin:auto}
+section{background:var(--panel);border:1px solid var(--edge);border-radius:13px;padding:18px;min-width:0}
+.full{grid-column:1/-1}select,button{border:1px solid #65738d;border-radius:7px;background:#243147;color:var(--text);padding:9px 12px;font:inherit;cursor:pointer}button:hover{border-color:var(--amber)}
+.row{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px}.chips{display:flex;gap:6px;flex-wrap:wrap}.chip{padding:5px 9px;border-radius:50px;border:1px solid var(--edge)}.color-dot{width:14px;height:14px;display:inline-block;border-radius:50%;vertical-align:middle;margin-right:5px;border:1px solid #fff6}
+table{border-collapse:collapse;width:100%}td,th{padding:8px;border-bottom:1px solid #354258;text-align:left}th{color:var(--mute)}pre{white-space:pre-wrap;word-break:break-word;background:#0a111c;padding:12px;border-radius:8px;border:1px solid #354258}.warn{border-left:3px solid #edb858;background:#26221c;padding:10px}.ok{color:#77e5b6}.fail{color:#ffa3a3}.muted{color:var(--mute)}a{color:#ffcd9c}#cortexes{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:6px;margin-top:12px}.seat{font-size:11px;padding:10px 2px;border-radius:7px;text-align:center;border:1px solid #ffffff30;cursor:pointer}.seat:focus-visible{outline:3px solid white}.seat.active{outline:2px solid #d8baff}#trace a{overflow-wrap:anywhere}
+@media(max-width:850px){main{grid-template-columns:1fr}.full{grid-column:auto}#cortexes{grid-template-columns:repeat(4,minmax(0,1fr))}}
+</style></head><body>
+<header><small>JANE / B141 / AUDIT CONTINUITY</small><h1>Grandma Dynasty · Read-Only Evidence Observatory</h1><p>Versioned repository JSON → schema gate → rendered observations. No silent promotion, no votes, no mutable source.</p></header>
+<main>
+<section class="full"><div class="row"><div><h2>Source integrity</h2><p id="status" role="status">LOADING repository evidence…</p></div><button id="reload">Reload source</button></div><p class="warn">This dataset is a curated project snapshot, not a live nuclear-data feed or laboratory result. A valid schema verifies structure, not the truth of the recorded science.</p><pre id="meta">Waiting for the source adapter.</pre></section>
+<section><h2>16 Cortexes · two analytical cubits</h2><p>15 earned archives · one Royal Purple active seat. Exact inherited color order.</p><div id="cortexes"></div><pre id="seatDetail">Select a cortex to inspect provenance.</pre></section>
+<section><h2>Grandma isotope subset</h2><label for="grandma">Choose elemental reference</label> <select id="grandma"></select><div id="isotopes"></div><p class="muted">Natural-composition entries only. This does not enumerate every known nuclide.</p></section>
+<section><h2>Existing reaction edges</h2><div id="reactions"></div><p class="muted">Source-linked examples are not verified by this browser. The physical reaction gate remains separate.</p></section>
+<section><h2>Three independent witnesses</h2><div id="witnesses"></div><p class="muted">Synthetic interval examples, not external measurements. No quorum or majority approval.</p></section>
+<section class="full"><h2>Cross-bound provenance</h2><div id="trace"></div><p><a href="../b139/">Earlier B139 interactive audit room</a> · <a href="https://github.com/DavidWise01/jane">GitHub source</a></p><p class="muted">No local storage or file mutation. Browser only reads <code>./data/evidence-v1.json</code>. A failed fetch or validation produces HOLD and no evidence cards.</p></section>
+</main><script src="./adapter-v1.js"></script><script>
+'use strict';
+const E=id=>document.getElementById(id), colors=['#fa595f','#3d8bff','#30d991','#1f2937','#f9fafb','#9ca3af','#facc15','#7851a9'];
+function appendText(node,text,tag='p'){const e=document.createElement(tag);e.textContent=text;node.append(e);return e}
+function clear(){for(const id of ['cortexes','seatDetail','grandma','isotopes','reactions','witnesses','trace'])E(id).replaceChildren()}
+function render(d,meta){
+ E('status').textContent='SCHEMA PASS · READ-ONLY · RELEASE HOLD';E('status').className='ok';
+ E('meta').textContent=JSON.stringify({schema:d.schema,source:d.sourceRepo,scope:d.scope,release:d.releaseStatus,counts:meta.summary,sourcePath:'b141/data/evidence-v1.json'},null,2);
+ d.cortex.forEach((m,i)=>{let b=document.createElement('button');b.className='seat'+(m.active?' active':'');b.style.background=colors[i%8];b.style.color=[4,5,6].includes(i%8)?'#131822':'white';b.textContent=m.name;b.title='C'+m.cubit+':'+m.address+' · '+m.channel;b.addEventListener('click',()=>E('seatDetail').textContent=JSON.stringify(m,null,2));E('cortexes').append(b)});
+ E('seatDetail').textContent=JSON.stringify(d.cortex.find(m=>m.active),null,2);
+ d.elements.forEach(f=>{const o=document.createElement('option');o.value=String(f.Z);o.textContent=f.symbol+' · Z='+f.Z;E('grandma').append(o)});
+ function showFamily(){E('isotopes').replaceChildren();const f=d.elements.find(x=>x.Z===Number(E('grandma').value));if(!f)return;appendText(E('isotopes'),'Grandma '+f.symbol+' · '+f.masses.length+' natural-composition isotope entries','h3');appendText(E('isotopes'),f.masses.map(A=>f.symbol+'-'+A+' (N='+String(A-f.Z)+')').join('  ·  '));const a=document.createElement('a');a.href=f.source;a.textContent='CIAAW source';a.target='_blank';a.rel='noopener noreferrer';E('isotopes').append(a)}
+ E('grandma').value='36';E('grandma').onchange=showFamily;showFamily();
+ const t=document.createElement('table');t.innerHTML='<thead><tr><th>Inputs</th><th>Outputs</th><th>Classification</th></tr></thead>';const tbody=document.createElement('tbody');for(const r of d.reactions){const row=document.createElement('tr');for(const label of [r.inputs.join(' + '),r.outputs.join(' + '),r.outcome])appendText(row,label,'td');tbody.append(row)}t.append(tbody);E('reactions').append(t);
+ for(const w of d.witnesses){const p=document.createElement('p');p.textContent=w.id+': ['+w.interval.join(', ')+'] · '+w.sourceType;E('witnesses').append(p)}
+ const ul=document.createElement('ul');for(const [title,path] of Object.entries(d.provenance)){const li=document.createElement('li'),a=document.createElement('a');a.href='https://github.com/'+d.sourceRepo+'/blob/main/'+path;a.target='_blank';a.rel='noopener noreferrer';a.textContent=title+' · '+path;li.append(a);ul.append(li)}E('trace').append(ul);
+}
+async function load(){
+ clear();E('status').textContent='LOADING repository evidence…';E('status').className='muted';E('meta').textContent='';
+ try{
+  const res=await fetch('./data/evidence-v1.json',{cache:'no-store'});
+  if(!res.ok)throw Error('HTTP '+res.status);
+  const d=await res.json(),report=JaneB141.validate(d);
+  if(!report.ok)throw Error('Schema rejected: '+report.errors.join('; '));
+  render(d,report);
+ }catch(error){clear();E('status').textContent='HOLD · SOURCE NOT VERIFIED';E('status').className='fail';E('meta').textContent=String(error.message||error)}
+}
+E('reload').addEventListener('click',load);load();
+</script></body></html>
