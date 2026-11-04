@@ -1,0 +1,92 @@
+{
+  "schema": "JANE-B143-SIX-DIRECTIONS-v1",
+  "sourceNotation": "[{( x^2 , y^2 :: `z^2` )}]",
+  "parent": "b142/four-manifold-boundary-v1.json",
+  "manifolds": [
+    {
+      "id": "G0",
+      "kind": "gravity"
+    },
+    {
+      "id": "G1",
+      "kind": "gravity"
+    },
+    {
+      "id": "V0",
+      "kind": "void"
+    },
+    {
+      "id": "V1",
+      "kind": "void"
+    }
+  ],
+  "axes": [
+    {
+      "id": "x",
+      "square": "x^2"
+    },
+    {
+      "id": "y",
+      "square": "y^2"
+    },
+    {
+      "id": "z",
+      "square": "z^2",
+      "delimiter": "::",
+      "quoted": true
+    }
+  ],
+  "directions": [
+    {
+      "id": "+x",
+      "axis": "x",
+      "sign": 1
+    },
+    {
+      "id": "-x",
+      "axis": "x",
+      "sign": -1
+    },
+    {
+      "id": "+y",
+      "axis": "y",
+      "sign": 1
+    },
+    {
+      "id": "-y",
+      "axis": "y",
+      "sign": -1
+    },
+    {
+      "id": "+z",
+      "axis": "z",
+      "sign": 1
+    },
+    {
+      "id": "-z",
+      "axis": "z",
+      "sign": -1
+    }
+  ],
+  "axisSquaredMagnitude": "x^2+y^2+z^2",
+  "bodySequence": [
+    "sag a",
+    "nibaru sun",
+    "nibaru",
+    "earth",
+    "earth sun"
+  ],
+  "bodyToDirection": "UNASSIGNED",
+  "bodyToManifold": "UNASSIGNED",
+  "physicalMetric": "NOT_SPECIFIED",
+  "physicalStatus": "ABSTRACT_SIGNED_COORDINATE_MODEL",
+  "interpretation": "Six orthogonal directions as + and - along three coordinate axes; squared coordinates alone do not preserve sign.",
+  "boundaries": [
+    "Four fields are distinct from six directions",
+    "Each direction address is separate from its squared magnitude",
+    "No body-location mapping invented",
+    "Void is a user-defined modelling class, not an established negative-gravity field",
+    "No time dilation inferred without a metric and observed measurements",
+    "Original B142 and B141 remain unchanged"
+  ]
+}
