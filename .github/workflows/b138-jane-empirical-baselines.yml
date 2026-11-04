@@ -1,0 +1,20 @@
+name: Jane B138 Empirical Baselines
+on:
+  push:
+    paths:
+      - 'scripts/btf2/jane-b138-empirical-controls.cjs'
+      - 'scripts/btf2/test-jane-b138-empirical-controls.cjs'
+      - 'governance/JANE-B138-EMPIRICAL-BASELINES-v1.0.md'
+      - '.github/workflows/b138-jane-empirical-baselines.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  baseline-regression:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node scripts/btf2/test-jane-b138-empirical-controls.cjs
