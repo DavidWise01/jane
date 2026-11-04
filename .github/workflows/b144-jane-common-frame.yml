@@ -1,0 +1,20 @@
+name: Jane B144 Common Coordinate Frame
+on:
+  push:
+    paths:
+      - 'b144/**'
+      - 'scripts/btf2/jane-b144-common-frame.cjs'
+      - 'scripts/btf2/test-jane-b144-common-frame.cjs'
+      - '.github/workflows/b144-jane-common-frame.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node scripts/btf2/test-jane-b144-common-frame.cjs
