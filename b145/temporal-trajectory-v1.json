@@ -1,0 +1,117 @@
+{
+  "schema": "JANE-B145-TEMPORAL-TRAJECTORY-v1",
+  "parent": [
+    "b142/four-manifold-boundary-v1.json",
+    "b143/six-directions-v1.json",
+    "b144/coordinate-frame-v1.json"
+  ],
+  "temporalFrame": {
+    "id": "LOCAL_INERTIAL_REFERENCE",
+    "originMeters": [
+      0,
+      0,
+      0
+    ],
+    "axisOrder": [
+      "x",
+      "y",
+      "z"
+    ],
+    "timeUnit": "seconds",
+    "positionUnit": "meters",
+    "velocityUnit": "meters_per_second",
+    "timestampOrigin": "MODEL_EPOCH_T0",
+    "measurementStatus": "SYNTHETIC"
+  },
+  "signedDirections": [
+    "+x",
+    "-x",
+    "+y",
+    "-y",
+    "+z",
+    "-z"
+  ],
+  "manifoldLabels": [
+    "G0:gravity",
+    "G1:gravity",
+    "V0:void",
+    "V1:void"
+  ],
+  "celestialReferents": [
+    "sag a",
+    "nibaru sun",
+    "nibaru",
+    "earth",
+    "earth sun"
+  ],
+  "assumptions": [
+    "Single declared inertial frame for SR test cases",
+    "Constant velocity over each declared segment",
+    "Time coordinate monotonically increases",
+    "No velocity inferred for hypothetical celestial referents",
+    "Do not combine gravity and motion formula without one explicitly specified spacetime metric"
+  ],
+  "examples": [
+    {
+      "id": "REST",
+      "frame": "LOCAL_INERTIAL_REFERENCE",
+      "t0": 0,
+      "t1": 10,
+      "position0": [
+        0,
+        0,
+        0
+      ],
+      "velocity": [
+        0,
+        0,
+        0
+      ],
+      "classification": "SYNTHETIC_REFERENCE"
+    },
+    {
+      "id": "SLOW_X",
+      "frame": "LOCAL_INERTIAL_REFERENCE",
+      "t0": 0,
+      "t1": 10,
+      "position0": [
+        0,
+        0,
+        0
+      ],
+      "velocity": [
+        100,
+        0,
+        0
+      ],
+      "classification": "SYNTHETIC_REFERENCE"
+    },
+    {
+      "id": "HALF_C_Z_MINUS",
+      "frame": "LOCAL_INERTIAL_REFERENCE",
+      "t0": 0,
+      "t1": 10,
+      "position0": [
+        0,
+        0,
+        0
+      ],
+      "velocity": [
+        0,
+        0,
+        -149896229
+      ],
+      "classification": "SYNTHETIC_REFERENCE"
+    }
+  ],
+  "specialRelativity": {
+    "rateFormula": "dτ/dt = sqrt(1 - (vx^2 + vy^2 + vz^2)/c^2)",
+    "cMetersPerSecond": 299792458,
+    "scope": "Inertial Minkowski frame and constant-speed straight worldline segment",
+    "source": "https://www.einstein-online.info/en/spotlight/proper_time/",
+    "status": "TEXTBOOK_REFERENCE_ONLY"
+  },
+  "gravity": "B144_SCHWARZSCHILD_REFERENCE_SEPARATE",
+  "combinedClockRate": "HOLD_UNTIL_METRIC_AND_WORLDLINE_GIVEN",
+  "releaseStatus": "HOLD"
+}
