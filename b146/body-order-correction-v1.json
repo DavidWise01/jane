@@ -1,0 +1,52 @@
+{
+  "schema": "JANE-B146.1-CANONICAL-BODY-ORDER-v1",
+  "supersedes": "b146/distance-gravity-source-v1.json#bodyOrder",
+  "reason": "User explicitly corrected the five-body sequence",
+  "canonicalOrder": [
+    "sag a",
+    "nib sun",
+    "nib",
+    "earth",
+    "earth sun"
+  ],
+  "bodyLabels": {
+    "sag a": "Sag A*",
+    "nib sun": "Nib Sun",
+    "nib": "Nib",
+    "earth": "Earth",
+    "earth sun": "Earth Sun"
+  },
+  "note": "The previous B146 body order and edge assignments are historical, not the active canonical sequence.",
+  "connections": "HOLD_REMAP_REQUIRED",
+  "nestedEarth": "NOT_ASSUMED",
+  "unchanged": {
+    "manifolds": [
+      {
+        "id": "G0",
+        "kind": "gravity"
+      },
+      {
+        "id": "G1",
+        "kind": "gravity"
+      },
+      {
+        "id": "V0",
+        "kind": "void"
+      },
+      {
+        "id": "V1",
+        "kind": "void"
+      }
+    ],
+    "directions": [
+      "+x",
+      "-x",
+      "+y",
+      "-y",
+      "+z",
+      "-z"
+    ]
+  },
+  "physicalClockRate": "HOLD",
+  "scientificStatus": "UNVERIFIED_MODEL"
+}
