@@ -1,11 +1,11 @@
 {
   "schema": "JANE_B115_TEACHING_MEMORY_V1",
-  "generated_at": "2026-11-03T23:37:21.421Z",
+  "generated_at": "2026-11-04T06:55:47.033Z",
   "source": "b114/lessons.json",
   "evidence_scope": "PUBLIC_GITHUB_METADATA_ONLY",
-  "family_registry_available": false,
+  "family_registry_available": true,
   "lesson_count": 2,
-  "suggestion_count": 0,
+  "suggestion_count": 16,
   "cards": [
     {
       "lesson_id": "LESSON-a25e1236531756f43196",
@@ -68,6 +68,135 @@
       "version": 1
     }
   ],
-  "suggestions": [],
+  "suggestions": [
+    {
+      "repo": "DavidWise01/cubi",
+      "channel": "btf2:davidwise01/cubi",
+      "generation": "ARRIVAL_2026-11-03",
+      "lesson_id": "LESSON-a25e1236531756f43196",
+      "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
+      "mode": "AVAILABLE_NOT_SENT"
+    },
+    {
+      "repo": "DavidWise01/cubi",
+      "channel": "btf2:davidwise01/cubi",
+      "generation": "ARRIVAL_2026-11-03",
+      "lesson_id": "LESSON-62f109dd074e2002f412",
+      "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
+      "mode": "AVAILABLE_NOT_SENT"
+    },
+    {
+      "repo": "DavidWise01/DavidWise01.github.io",
+      "channel": "btf2:davidwise01/davidwise01.github.io",
+      "generation": "ARRIVAL_2026-11-03",
+      "lesson_id": "LESSON-a25e1236531756f43196",
+      "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
+      "mode": "AVAILABLE_NOT_SENT"
+    },
+    {
+      "repo": "DavidWise01/DavidWise01.github.io",
+      "channel": "btf2:davidwise01/davidwise01.github.io",
+      "generation": "ARRIVAL_2026-11-03",
+      "lesson_id": "LESSON-62f109dd074e2002f412",
+      "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
+      "mode": "AVAILABLE_NOT_SENT"
+    },
+    {
+      "repo": "DavidWise01/elderfu",
+      "channel": "btf2:davidwise01/elderfu",
+      "generation": "ARRIVAL_2026-11-03",
+      "lesson_id": "LESSON-a25e1236531756f43196",
+      "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
+      "mode": "AVAILABLE_NOT_SENT"
+    },
+    {
+      "repo": "DavidWise01/elderfu",
+      "channel": "btf2:davidwise01/elderfu",
+      "generation": "ARRIVAL_2026-11-03",
+      "lesson_id": "LESSON-62f109dd074e2002f412",
+      "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
+      "mode": "AVAILABLE_NOT_SENT"
+    },
+    {
+      "repo": "DavidWise01/homer",
+      "channel": "btf2:davidwise01/homer",
+      "generation": "ARRIVAL_2026-11-03",
+      "lesson_id": "LESSON-a25e1236531756f43196",
+      "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
+      "mode": "AVAILABLE_NOT_SENT"
+    },
+    {
+      "repo": "DavidWise01/homer",
+      "channel": "btf2:davidwise01/homer",
+      "generation": "ARRIVAL_2026-11-03",
+      "lesson_id": "LESSON-62f109dd074e2002f412",
+      "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
+      "mode": "AVAILABLE_NOT_SENT"
+    },
+    {
+      "repo": "DavidWise01/jane",
+      "channel": "btf2:davidwise01/jane",
+      "generation": "ARRIVAL_2026-11-03",
+      "lesson_id": "LESSON-a25e1236531756f43196",
+      "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
+      "mode": "AVAILABLE_NOT_SENT"
+    },
+    {
+      "repo": "DavidWise01/jane",
+      "channel": "btf2:davidwise01/jane",
+      "generation": "ARRIVAL_2026-11-03",
+      "lesson_id": "LESSON-62f109dd074e2002f412",
+      "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
+      "mode": "AVAILABLE_NOT_SENT"
+    },
+    {
+      "repo": "DavidWise01/nom",
+      "channel": "btf2:davidwise01/nom",
+      "generation": "ARRIVAL_2026-11-03",
+      "lesson_id": "LESSON-a25e1236531756f43196",
+      "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
+      "mode": "AVAILABLE_NOT_SENT"
+    },
+    {
+      "repo": "DavidWise01/nom",
+      "channel": "btf2:davidwise01/nom",
+      "generation": "ARRIVAL_2026-11-03",
+      "lesson_id": "LESSON-62f109dd074e2002f412",
+      "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
+      "mode": "AVAILABLE_NOT_SENT"
+    },
+    {
+      "repo": "DavidWise01/oasis",
+      "channel": "btf2:davidwise01/oasis",
+      "generation": "ARRIVAL_2026-11-03",
+      "lesson_id": "LESSON-a25e1236531756f43196",
+      "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
+      "mode": "AVAILABLE_NOT_SENT"
+    },
+    {
+      "repo": "DavidWise01/oasis",
+      "channel": "btf2:davidwise01/oasis",
+      "generation": "ARRIVAL_2026-11-03",
+      "lesson_id": "LESSON-62f109dd074e2002f412",
+      "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
+      "mode": "AVAILABLE_NOT_SENT"
+    },
+    {
+      "repo": "DavidWise01/sapph-i-on",
+      "channel": "btf2:davidwise01/sapph-i-on",
+      "generation": "ARRIVAL_2026-11-03",
+      "lesson_id": "LESSON-a25e1236531756f43196",
+      "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
+      "mode": "AVAILABLE_NOT_SENT"
+    },
+    {
+      "repo": "DavidWise01/sapph-i-on",
+      "channel": "btf2:davidwise01/sapph-i-on",
+      "generation": "ARRIVAL_2026-11-03",
+      "lesson_id": "LESSON-62f109dd074e2002f412",
+      "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
+      "mode": "AVAILABLE_NOT_SENT"
+    }
+  ],
   "policy": "Optional suggestions only, no message delivery, no verified causal inference, no autonomous agents or compulsory teaching."
 }
