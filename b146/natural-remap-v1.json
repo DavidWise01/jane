@@ -1,0 +1,144 @@
+{
+  "schema": "JANE-B146.2-NATURAL-POSITIONAL-REMAP-v1",
+  "method": "POSITIONAL_INDEX_PRESERVING",
+  "parent": [
+    "b146/distance-gravity-source-v1.json",
+    "b146/body-order-correction-v1.json"
+  ],
+  "sourceArtifactSha256": "b03110e432cd637314e9cfc7d16bdf6703dd8ca6ff46f2510ef3bf26fb6f6d50",
+  "canonicalOrder": [
+    "sag a",
+    "nib sun",
+    "nib",
+    "earth",
+    "earth sun"
+  ],
+  "coreVertices": [
+    "sag a",
+    "nib sun",
+    "nib",
+    "earth"
+  ],
+  "terminalReferent": "earth sun",
+  "origin": "sag a",
+  "manifolds": [
+    {
+      "id": "G0",
+      "kind": "gravity"
+    },
+    {
+      "id": "G1",
+      "kind": "gravity"
+    },
+    {
+      "id": "V0",
+      "kind": "void"
+    },
+    {
+      "id": "V1",
+      "kind": "void"
+    }
+  ],
+  "directions": [
+    "+x",
+    "-x",
+    "+y",
+    "-y",
+    "+z",
+    "-z"
+  ],
+  "edges": [
+    {
+      "id": "u1",
+      "notation": "x²",
+      "from": "sag a",
+      "to": "nib sun",
+      "distanceBand": "long",
+      "forceBand": "weak+gravity",
+      "nonzeroGap": true,
+      "sourceEdgeId": "u1",
+      "sourcePosition": 1,
+      "classification": "CORE_EDGE",
+      "status": "USER_MODEL_UNVERIFIED"
+    },
+    {
+      "id": "u2",
+      "notation": "y²",
+      "from": "nib sun",
+      "to": "nib",
+      "distanceBand": "medium",
+      "forceBand": "medium",
+      "nonzeroGap": true,
+      "sourceEdgeId": "u2",
+      "sourcePosition": 2,
+      "classification": "CORE_EDGE",
+      "status": "USER_MODEL_UNVERIFIED"
+    },
+    {
+      "id": "u3",
+      "notation": "z²",
+      "from": "nib",
+      "to": "earth",
+      "distanceBand": "medium",
+      "forceBand": "medium+weak",
+      "nonzeroGap": true,
+      "sourceEdgeId": "u3",
+      "sourcePosition": 3,
+      "classification": "CORE_EDGE",
+      "status": "USER_MODEL_UNVERIFIED"
+    },
+    {
+      "id": "u4",
+      "notation": "x²::y²",
+      "from": "earth",
+      "to": "earth sun",
+      "distanceBand": "short",
+      "forceBand": "medium+strong",
+      "nonzeroGap": true,
+      "sourceEdgeId": "u4",
+      "sourcePosition": 4,
+      "classification": "TERMINAL_LINK",
+      "status": "USER_MODEL_UNVERIFIED"
+    },
+    {
+      "id": "u5",
+      "notation": "y²::z²",
+      "from": "sag a",
+      "to": "nib",
+      "distanceBand": "unquantified",
+      "forceBand": "epicycle",
+      "nonzeroGap": true,
+      "sourceEdgeId": "u5",
+      "sourcePosition": 5,
+      "classification": "CORE_EDGE",
+      "status": "USER_MODEL_UNVERIFIED"
+    },
+    {
+      "id": "u6",
+      "notation": "z²::x²",
+      "from": "sag a",
+      "to": "earth",
+      "distanceBand": "unquantified",
+      "forceBand": "double epicycle",
+      "nonzeroGap": true,
+      "sourceEdgeId": "u6",
+      "sourcePosition": 6,
+      "classification": "CORE_EDGE",
+      "status": "USER_MODEL_UNVERIFIED"
+    }
+  ],
+  "tetrahedron": {
+    "requiredCoreEdges": 6,
+    "presentCoreEdges": 5,
+    "missingCorePair": [
+      "nib sun",
+      "earth"
+    ],
+    "resolution": "HOLD_UNSPECIFIED",
+    "terminalLinkSeparate": true
+  },
+  "distanceValuesMeters": null,
+  "physicalMetric": null,
+  "clockPrediction": null,
+  "decision": "STRUCTURAL_REMAP_ONLY_PHYSICS_HOLD"
+}
