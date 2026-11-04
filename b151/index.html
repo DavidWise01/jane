@@ -108,7 +108,7 @@ const previousEvent=event;
 event=function(slot,dir,before,after,u,source='SIMULATION',witness='a1'){
  previousEvent(slot,dir,before,after,u,source,witness);
  const e=events[events.length-1];if(!e)return;
- const physicalRecord={...e,frame:'B151_VISUAL_UNITS',source:'B151_PIXEL_SCOUT',provenanceKind:'SIMULATION'};
+ const physicalRecord={...e,frame:'B150_VISUAL_UNITS',source:'B150_PIXEL_SCOUT',provenanceKind:'SIMULATION'};
  if(source!=='SIMULATION')physicalRecord.status='HOLD';
  const entry=ledgerEntry(physicalRecord);journal.push(entry);saveJournal();refreshJournal();
 };
@@ -166,7 +166,7 @@ const remember=(w)=>{
 };
 function choose(r){
  const prior=r.targetSlot||null;
- const candidates=remember(r.w).map(x=>({...x,score:100-25*x.visits+11*x.holds-.1*Math.abs(r.r-x.radius)-(prior===x.slot?5:0)}));
+ const candidates=remember(r.w).map(x=>({...x,score:100-25*x.visits+35*x.holds-.1*Math.abs(r.r-x.radius)-(prior===x.slot?5:0)}));
  candidates.sort((a,b)=>b.score-a.score||Number(a.slot.slice(1))-Number(b.slot.slice(1)));
  const selected=candidates[0];
  return {witness:r.w,targetSlot:selected.slot,targetRadius:selected.radius,score:selected.score,reason:selected.visits===0?'UNVISITED':selected.holds?'REVISIT_UNCERTAIN':'LOWEST_COVERAGE',basis:'OWN_WITNESS_OBSERVATIONS_ONLY',physicalPromotion:false};
