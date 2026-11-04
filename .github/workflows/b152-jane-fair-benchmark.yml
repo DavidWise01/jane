@@ -1,0 +1,21 @@
+name: Jane B152 Fair Scout Benchmark
+on:
+  push:
+    paths:
+      - 'b152/**'
+      - 'scripts/btf2/jane-b152-fair-benchmark.cjs'
+      - 'scripts/btf2/test-jane-b152-fair-benchmark.cjs'
+      - '.github/workflows/b152-jane-fair-benchmark.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  benchmark:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node scripts/btf2/test-jane-b152-fair-benchmark.cjs
+      - run: node -e "console.log(require('./scripts/btf2/jane-b152-fair-benchmark.cjs').compare())"
