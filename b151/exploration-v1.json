@@ -1,0 +1,32 @@
+{
+  "schema": "JANE-B151-SCOUT-MEMORY-EXPLORATION-v1",
+  "from": "b150/telemetry-v1.json",
+  "scouts": [
+    "a1",
+    "b1",
+    "c1"
+  ],
+  "slots": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5"
+  ],
+  "score": "100 - 25*visits + 11*holds - 0.1*abs(currentRadius-targetRadius) - (previousSlot==slot ? 5 : 0)",
+  "tie": "LOWEST_SLOT_ID",
+  "witnessIsolation": true,
+  "decisionEvidence": "APPEND_INDEPENDENTLY",
+  "measuredDistance": null,
+  "realSphereAssignments": [
+    null,
+    null,
+    null,
+    null,
+    null
+  ],
+  "oneShadowOnly": true,
+  "zeroQuorum": true,
+  "physicalPromotion": false,
+  "status": "DETERMINISTIC_SIMULATION_ONLY"
+}
