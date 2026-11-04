@@ -1,0 +1,94 @@
+{
+  "schema": "JANE-B153-HON-BRACED-122-v1",
+  "parent": [
+    "b152/benchmark-results-v1.json",
+    "b147/first-shadow-five-spheres-v1.json"
+  ],
+  "scope": "USER_DEFINED_TOPOLOGICAL_REGISTER_NOT_ATOMIC_ELECTRON_STRUCTURE",
+  "scouts": [
+    {
+      "witness": "a1",
+      "brace": "H",
+      "globalStart": 1,
+      "globalEnd": 122,
+      "color": "orange"
+    },
+    {
+      "witness": "b1",
+      "brace": "O",
+      "globalStart": 123,
+      "globalEnd": 244,
+      "color": "green"
+    },
+    {
+      "witness": "c1",
+      "brace": "N",
+      "globalStart": 245,
+      "globalEnd": 366,
+      "color": "teal"
+    }
+  ],
+  "cage": {
+    "id": "Box62",
+    "counts": [
+      1,
+      2,
+      4,
+      6,
+      8,
+      12,
+      12,
+      8,
+      6,
+      2,
+      1
+    ],
+    "positions": 62,
+    "localCells": [
+      1,
+      62
+    ]
+  },
+  "torus": {
+    "id": "Toroid60",
+    "counts": [
+      1,
+      3,
+      6,
+      9,
+      11,
+      11,
+      9,
+      6,
+      3,
+      1
+    ],
+    "positions": 60,
+    "localCells": [
+      63,
+      122
+    ]
+  },
+  "signedDirections": {
+    "ingress": "-",
+    "egress": "+",
+    "notAdditionalCells": true,
+    "physicalInterpretation": "UNSPECIFIED"
+  },
+  "firstShadow": {
+    "tokens": [
+      -1,
+      1
+    ],
+    "net": 0,
+    "foldedPositions": 1,
+    "onlyFirstPair": true
+  },
+  "cellAssignment": "CONTIGUOUS_BOX_THEN_TOROID_IN_EACH_BRACE",
+  "cellsPerBrace": 122,
+  "totalCells": 366,
+  "physicalPromotion": false,
+  "metricStatus": "HOLD",
+  "livePhysics": "UNVERIFIED",
+  "releaseStatus": "SIMULATION_ONLY"
+}
