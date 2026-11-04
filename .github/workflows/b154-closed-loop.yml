@@ -1,0 +1,20 @@
+name: Jane B154 Closed Loop Mirror
+on:
+  push:
+    paths:
+      - 'b154/**'
+      - 'scripts/btf2/jane-b154-closed-loop.cjs'
+      - 'scripts/btf2/test-jane-b154-closed-loop.cjs'
+      - '.github/workflows/b154-closed-loop.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node scripts/btf2/test-jane-b154-closed-loop.cjs
