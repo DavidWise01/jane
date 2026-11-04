@@ -1,0 +1,19 @@
+name: Jane B139 Audit Room Static Smoke Test
+on:
+  push:
+    paths:
+      - 'b139/index.html'
+      - 'scripts/btf2/test-jane-b139-audit-room.cjs'
+      - '.github/workflows/b139-jane-audit-room.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node scripts/btf2/test-jane-b139-audit-room.cjs
