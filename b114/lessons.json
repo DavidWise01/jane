@@ -1,6 +1,6 @@
 {
   "schema": "JANE_B114_EVIDENCE_LEARNING_V1",
-  "generated_at": "2026-11-03T23:37:21.351Z",
+  "generated_at": "2026-11-04T06:13:25.145Z",
   "scope": "PUBLIC_GITHUB_METADATA_ONLY",
   "source_verified": "SHA256_B87_RUNS",
   "source_runs": [
@@ -94,7 +94,7 @@
           "sha256": "1dd881c71bdd20fe4c34580a3f210e2b5ea2ee1c78ea3eed5bf5cb62d1ec17b6"
         }
       ],
-      "arrival_cohort": "UNKNOWN"
+      "arrival_cohort": "ARRIVAL_2026-11-03"
     },
     {
       "id": "e8a463bb2eb631a2ae6515e1",
@@ -118,7 +118,7 @@
           "sha256": "1dd881c71bdd20fe4c34580a3f210e2b5ea2ee1c78ea3eed5bf5cb62d1ec17b6"
         }
       ],
-      "arrival_cohort": "UNKNOWN"
+      "arrival_cohort": "ARRIVAL_2026-11-03"
     },
     {
       "id": "8c84040ab2bcce9141bb628e",
@@ -142,7 +142,7 @@
           "sha256": "0589060eb6417271caf0b962a708c9546e6745bf1315aa0b4745ce104fb20b8f"
         }
       ],
-      "arrival_cohort": "UNKNOWN"
+      "arrival_cohort": "ARRIVAL_2026-11-03"
     },
     {
       "id": "1318f042b6a06d9ba654a206",
@@ -166,7 +166,7 @@
           "sha256": "0589060eb6417271caf0b962a708c9546e6745bf1315aa0b4745ce104fb20b8f"
         }
       ],
-      "arrival_cohort": "UNKNOWN"
+      "arrival_cohort": "ARRIVAL_2026-11-03"
     },
     {
       "id": "275f16c0402e477770b748c5",
@@ -190,7 +190,7 @@
           "sha256": "0589060eb6417271caf0b962a708c9546e6745bf1315aa0b4745ce104fb20b8f"
         }
       ],
-      "arrival_cohort": "UNKNOWN"
+      "arrival_cohort": "ARRIVAL_2026-11-03"
     },
     {
       "id": "d17dee111a767d385d57cf10",
@@ -214,7 +214,7 @@
           "sha256": "0589060eb6417271caf0b962a708c9546e6745bf1315aa0b4745ce104fb20b8f"
         }
       ],
-      "arrival_cohort": "UNKNOWN"
+      "arrival_cohort": "ARRIVAL_2026-11-03"
     },
     {
       "id": "e4ca608c322f442cbd207a91",
@@ -238,7 +238,7 @@
           "sha256": "0589060eb6417271caf0b962a708c9546e6745bf1315aa0b4745ce104fb20b8f"
         }
       ],
-      "arrival_cohort": "UNKNOWN"
+      "arrival_cohort": "ARRIVAL_2026-11-03"
     },
     {
       "id": "cb1304936e9d9d2f69dfe88d",
@@ -262,7 +262,7 @@
           "sha256": "0589060eb6417271caf0b962a708c9546e6745bf1315aa0b4745ce104fb20b8f"
         }
       ],
-      "arrival_cohort": "UNKNOWN"
+      "arrival_cohort": "ARRIVAL_2026-11-03"
     },
     {
       "id": "95c608d840eaa1b7086661f7",
@@ -286,7 +286,7 @@
           "sha256": "0589060eb6417271caf0b962a708c9546e6745bf1315aa0b4745ce104fb20b8f"
         }
       ],
-      "arrival_cohort": "UNKNOWN"
+      "arrival_cohort": "ARRIVAL_2026-11-03"
     },
     {
       "id": "7329259cc1c608da04407eb3",
@@ -310,7 +310,7 @@
           "sha256": "0589060eb6417271caf0b962a708c9546e6745bf1315aa0b4745ce104fb20b8f"
         }
       ],
-      "arrival_cohort": "UNKNOWN"
+      "arrival_cohort": "ARRIVAL_2026-11-03"
     },
     {
       "id": "633b3065d3e1f8553de01a12",
@@ -334,7 +334,7 @@
           "sha256": "0589060eb6417271caf0b962a708c9546e6745bf1315aa0b4745ce104fb20b8f"
         }
       ],
-      "arrival_cohort": "UNKNOWN"
+      "arrival_cohort": "ARRIVAL_2026-11-03"
     },
     {
       "id": "a89b61c2763b2a2936fee955",
@@ -358,7 +358,7 @@
           "sha256": "0589060eb6417271caf0b962a708c9546e6745bf1315aa0b4745ce104fb20b8f"
         }
       ],
-      "arrival_cohort": "UNKNOWN"
+      "arrival_cohort": "ARRIVAL_2026-11-03"
     },
     {
       "id": "6e25a05957379a987bf4597e",
@@ -382,7 +382,7 @@
           "sha256": "0589060eb6417271caf0b962a708c9546e6745bf1315aa0b4745ce104fb20b8f"
         }
       ],
-      "arrival_cohort": "UNKNOWN"
+      "arrival_cohort": "ARRIVAL_2026-11-03"
     },
     {
       "id": "5f2d2527e798b98597a7b8c4",
@@ -406,7 +406,7 @@
           "sha256": "0589060eb6417271caf0b962a708c9546e6745bf1315aa0b4745ce104fb20b8f"
         }
       ],
-      "arrival_cohort": "UNKNOWN"
+      "arrival_cohort": "ARRIVAL_2026-11-03"
     },
     {
       "id": "7c98d1bb49eb493a9c899363",
@@ -430,7 +430,7 @@
           "sha256": "0589060eb6417271caf0b962a708c9546e6745bf1315aa0b4745ce104fb20b8f"
         }
       ],
-      "arrival_cohort": "UNKNOWN"
+      "arrival_cohort": "ARRIVAL_2026-11-03"
     },
     {
       "id": "194dd76d4ff2c32f0888a797",
@@ -454,7 +454,7 @@
           "sha256": "0589060eb6417271caf0b962a708c9546e6745bf1315aa0b4745ce104fb20b8f"
         }
       ],
-      "arrival_cohort": "UNKNOWN"
+      "arrival_cohort": "ARRIVAL_2026-11-03"
     },
     {
       "id": "24f3ff87eceb49f47612f2f1",
@@ -478,7 +478,7 @@
           "sha256": "0589060eb6417271caf0b962a708c9546e6745bf1315aa0b4745ce104fb20b8f"
         }
       ],
-      "arrival_cohort": "UNKNOWN"
+      "arrival_cohort": "ARRIVAL_2026-11-03"
     },
     {
       "id": "8f0679dac4049f6c2a60e573",
@@ -502,7 +502,7 @@
           "sha256": "0589060eb6417271caf0b962a708c9546e6745bf1315aa0b4745ce104fb20b8f"
         }
       ],
-      "arrival_cohort": "UNKNOWN"
+      "arrival_cohort": "ARRIVAL_2026-11-03"
     },
     {
       "id": "012a63459c504f3b82ca595c",
@@ -526,7 +526,7 @@
           "sha256": "23fc5e3c39cc7a773fa3c8a1ec7811aca6b6927cdf3c0453ded461050a0a8476"
         }
       ],
-      "arrival_cohort": "UNKNOWN"
+      "arrival_cohort": "ARRIVAL_2026-11-03"
     },
     {
       "id": "53d565ff24fa51a0fbb04ddb",
@@ -550,7 +550,7 @@
           "sha256": "23fc5e3c39cc7a773fa3c8a1ec7811aca6b6927cdf3c0453ded461050a0a8476"
         }
       ],
-      "arrival_cohort": "UNKNOWN"
+      "arrival_cohort": "ARRIVAL_2026-11-03"
     }
   ],
   "notes": "No causal claims, model training, child autonomy, or actual ancestry inferred."
