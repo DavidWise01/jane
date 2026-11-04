@@ -1,0 +1,93 @@
+{
+  "schema": "JANE-B152-BENCHMARK-SNAPSHOT-v1",
+  "source": "scripts/btf2/jane-b152-fair-benchmark.cjs",
+  "scenario": {
+    "id": "B152-SYNTHETIC-V1",
+    "steps": 12,
+    "starts": [
+      5,
+      27,
+      53
+    ],
+    "holdsBeforeClear": [
+      0,
+      0,
+      2,
+      0,
+      1
+    ],
+    "status": "SIMULATED_ONLY"
+  },
+  "nominal": {
+    "memory": {
+      "coverage": 15,
+      "uncertaintiesResolved": 6,
+      "remainingUnresolved": 0,
+      "repeatedHolds": 3,
+      "travelVisualUnits": 415,
+      "holds": 9,
+      "visits": 36
+    },
+    "roundRobin": {
+      "coverage": 15,
+      "uncertaintiesResolved": 5,
+      "remainingUnresolved": 1,
+      "repeatedHolds": 3,
+      "travelVisualUnits": 566,
+      "holds": 9,
+      "visits": 36
+    },
+    "verdict": "MEMORY_PARETO_DOMINATES",
+    "wins": [
+      "uncertaintiesResolved",
+      "remainingUnresolved",
+      "travelVisualUnits"
+    ],
+    "losses": []
+  },
+  "stress": {
+    "id": "ALL_HOLD",
+    "holdsBeforeClear": [
+      20,
+      20,
+      20,
+      20,
+      20
+    ],
+    "memory": {
+      "coverage": 3,
+      "uncertaintiesResolved": 0,
+      "remainingUnresolved": 3,
+      "repeatedHolds": 33,
+      "travelVisualUnits": 20,
+      "holds": 36,
+      "visits": 36
+    },
+    "roundRobin": {
+      "coverage": 15,
+      "uncertaintiesResolved": 0,
+      "remainingUnresolved": 15,
+      "repeatedHolds": 21,
+      "travelVisualUnits": 566,
+      "holds": 36,
+      "visits": 36
+    },
+    "verdict": "TRADEOFF_NO_UNQUALIFIED_WINNER",
+    "wins": [
+      "remainingUnresolved",
+      "travelVisualUnits"
+    ],
+    "losses": [
+      "coverage",
+      "repeatedHolds"
+    ]
+  },
+  "interpretation": {
+    "baseline": "FIXED_PER_WITNESS_ROUND_ROBIN",
+    "sameScenarioAndBudget": true,
+    "noClaimBeyondSimulation": true,
+    "physicalPromotion": false,
+    "quorum": false,
+    "sourceOfNumbers": "DETERMINISTIC_V8_FUNCTIONAL_EXECUTION_WITH_MOCK_DIGEST_SHA256_RUNTIME_STILL_UNVERIFIED"
+  }
+}
