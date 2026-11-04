@@ -1,0 +1,21 @@
+#!/usr/bin/env node
+'use strict';
+const assert=require('node:assert/strict');
+const {assess,UncertaintyJournal}=require('./jane-b135-uncertainty.cjs');
+const j=new UncertaintyJournal();
+const b={context:'synthetic-environment-A',metric:'synthetic-persistence-score',unit:'dimensionless',source:'synthetic deterministic fixture, not physical observation',confidence:0.95,threshold:0.8,direction:'minimum'};
+assert.equal(j.append({...b,id:'above',value:0.94,lower:0.9,upper:0.98}).status,'PASS');
+assert.equal(j.append({...b,id:'overlap',value:0.83,lower:0.72,upper:0.91}).status,'HOLD');
+assert.equal(j.append({...b,id:'below',value:0.61,lower:0.5,upper:0.75}).status,'FAIL');
+assert.equal(j.append({...b,id:'boundary-pass',value:0.85,lower:0.8,upper:0.9}).status,'PASS');
+assert.equal(j.append({...b,id:'boundary-hold',value:0.7,lower:0.6,upper:0.8}).status,'HOLD');
+const mx={...b,direction:'maximum',threshold:0.2};
+assert.equal(j.append({...mx,id:'maximum-pass',value:0.13,lower:0.1,upper:0.2}).status,'PASS');
+assert.equal(j.append({...mx,id:'maximum-hold',value:0.2,lower:0.1,upper:0.3}).status,'HOLD');
+assert.equal(j.append({...mx,id:'maximum-fail',value:0.3,lower:0.25,upper:0.4}).status,'FAIL');
+assert.throws(()=>assess({...b,id:'invalid',value:0.9,lower:0.96,upper:1}),/Invalid bounded/);
+assert.throws(()=>assess({...b,id:'invalid2',value:0.9,lower:0.8,upper:1,confidence:1}),/Invalid bounded/);
+assert.throws(()=>j.append({...b,id:'above',value:0.9,lower:0.8,upper:1}),/Duplicate/);
+assert.deepEqual(j.audit(),{observations:8,pass:3,fail:2,hold:3,integrity:true});
+assert.ok(Object.isFrozen(j.entries[0].result.measurement));
+console.log('PASS B135: eight synthetic intervals; 3 PASS, 2 FAIL, 3 HOLD; immutable hash journal');
