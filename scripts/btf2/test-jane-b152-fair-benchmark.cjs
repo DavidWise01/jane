@@ -14,5 +14,16 @@ const c=compare();assert.equal(c.physicalPromotion,false);assert.equal(c.quorum,
 assert.equal(c.memory.visits,3*SCENARIO.steps);assert.equal(c.roundRobin.visits,3*SCENARIO.steps);
 assert.deepEqual(compare(),c);
 assert.throws(()=>run('VOTING','a1'),/UNKNOWN/);assert.throws(()=>outcome('S6',1),/INVALID/);
+
+assert.equal(c.memory.travelVisualUnits,415);
+assert.equal(c.roundRobin.travelVisualUnits,566);
+assert.equal(c.memory.uncertaintiesResolved,6);
+assert.equal(c.roundRobin.uncertaintiesResolved,5);
+assert.equal(c.verdict,'MEMORY_PARETO_DOMINATES');
+const stress=compare({...SCENARIO,id:'ALL_HOLD',holdsBeforeClear:[20,20,20,20,20]});
+assert.equal(stress.verdict,'TRADEOFF_NO_UNQUALIFIED_WINNER');
+assert.ok(stress.memory.coverage<stress.roundRobin.coverage);
+assert.ok(stress.memory.repeatedHolds>stress.roundRobin.repeatedHolds);
+
 console.log('PASS B152 deterministic benchmark, equal visit budgets, three independent witnesses, tamper detection, no preselected winner');
 console.log(JSON.stringify({memory:c.memory,roundRobin:c.roundRobin,verdict:c.verdict,wins:c.wins,losses:c.losses}));
