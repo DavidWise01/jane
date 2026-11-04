@@ -1,0 +1,20 @@
+name: Jane B151 Independent Scout Exploration
+on:
+  push:
+    paths:
+      - 'b151/**'
+      - 'scripts/btf2/jane-b151-scout-exploration.cjs'
+      - 'scripts/btf2/test-jane-b151-scout-exploration.cjs'
+      - '.github/workflows/b151-jane-scout-exploration.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node scripts/btf2/test-jane-b151-scout-exploration.cjs
