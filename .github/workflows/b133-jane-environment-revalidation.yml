@@ -1,0 +1,20 @@
+name: Jane B133 Environmental Revalidation
+on:
+  push:
+    paths:
+      - 'scripts/btf2/jane-b133-environment-revalidation.cjs'
+      - 'scripts/btf2/test-jane-b133-environment-revalidation.cjs'
+      - 'governance/JANE-B133-ENVIRONMENT-REVALIDATION-v1.0.md'
+      - '.github/workflows/b133-jane-environment-revalidation.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node scripts/btf2/test-jane-b133-environment-revalidation.cjs
