@@ -1,0 +1,151 @@
+{
+  "schema": "JANE-B148-FIVE-SPHERE-BOUNDARY-v1",
+  "inherits": "b147/first-shadow-five-spheres-v1.json",
+  "primaryShadow": {
+    "input": [
+      -1,
+      1
+    ],
+    "sum": 0,
+    "foldedPositions": 1,
+    "onlyShadowPair": true
+  },
+  "signedSphereSlots": [
+    {
+      "id": "S1",
+      "minus": "UNASSIGNED",
+      "plus": "UNASSIGNED",
+      "physicalRegionId": null,
+      "center": null,
+      "innerBoundary": null,
+      "outerBoundary": null,
+      "distanceUnit": null,
+      "transitionRule": "UNSPECIFIED"
+    },
+    {
+      "id": "S2",
+      "minus": "UNASSIGNED",
+      "plus": "UNASSIGNED",
+      "physicalRegionId": null,
+      "center": null,
+      "innerBoundary": null,
+      "outerBoundary": null,
+      "distanceUnit": null,
+      "transitionRule": "UNSPECIFIED"
+    },
+    {
+      "id": "S3",
+      "minus": "UNASSIGNED",
+      "plus": "UNASSIGNED",
+      "physicalRegionId": null,
+      "center": null,
+      "innerBoundary": null,
+      "outerBoundary": null,
+      "distanceUnit": null,
+      "transitionRule": "UNSPECIFIED"
+    },
+    {
+      "id": "S4",
+      "minus": "UNASSIGNED",
+      "plus": "UNASSIGNED",
+      "physicalRegionId": null,
+      "center": null,
+      "innerBoundary": null,
+      "outerBoundary": null,
+      "distanceUnit": null,
+      "transitionRule": "UNSPECIFIED"
+    },
+    {
+      "id": "S5",
+      "minus": "UNASSIGNED",
+      "plus": "UNASSIGNED",
+      "physicalRegionId": null,
+      "center": null,
+      "innerBoundary": null,
+      "outerBoundary": null,
+      "distanceUnit": null,
+      "transitionRule": "UNSPECIFIED"
+    }
+  ],
+  "physicalExamples": [
+    {
+      "id": "IONOSPHERE",
+      "name": "Ionosphere",
+      "center": "Earth",
+      "boundary": "electron/ion population embedded in atmosphere; altitude variable",
+      "innerKm": 80,
+      "outerKm": 600,
+      "extentKind": "NOAA_APPROXIMATE_ALTITUDE_BAND_NOT_FIXED_SURFACE",
+      "source": "https://www.spaceweather.gov/phenomena/ionosphere",
+      "note": "Altitude above Earth surface; depends on illumination and solar conditions"
+    },
+    {
+      "id": "PLASMASPHERE",
+      "name": "Plasmasphere",
+      "center": "Earth",
+      "boundary": "cold dense plasma in inner magnetosphere with plasmapause",
+      "innerKm": null,
+      "outerKm": null,
+      "extentKind": "DYNAMIC_NO_SINGLE_FIXED_RADIUS",
+      "source": "https://www.spaceweather.gov/phenomena/earths-magnetosphere",
+      "note": "Overlaps magnetospheric region; not an independent concentric shell"
+    },
+    {
+      "id": "MAGNETOSPHERE",
+      "name": "Magnetosphere",
+      "center": "Earth",
+      "boundary": "magnetopause and magnetotail set by solar-wind interaction",
+      "innerKm": null,
+      "outerKm": null,
+      "extentKind": "DYNAMIC_SHAPE_NOT_ONE_RADIUS",
+      "source": "https://science.nasa.gov/heliophysics/focus-areas/magnetosphere-ionosphere/",
+      "note": "Sunward versus tailward directions differ sharply"
+    },
+    {
+      "id": "HELIOSPHERE",
+      "name": "Heliosphere",
+      "center": "Sun",
+      "boundary": "solar-wind domain bounded by heliopause",
+      "innerKm": null,
+      "outerKm": null,
+      "extentKind": "DYNAMIC_SPACE_REGION_NOT_ONE_RADIUS",
+      "source": "https://science.nasa.gov/mission/voyager/fact-sheet/",
+      "note": "The heliopause is not a fixed spherical radius"
+    },
+    {
+      "id": "ASTROSPHERE",
+      "name": "Astrosphere example",
+      "center": "HD 61005",
+      "boundary": "stellar-wind interaction with surrounding interstellar medium",
+      "innerKm": null,
+      "outerKm": null,
+      "extentKind": "OBSERVED_DISTINCT_STELLAR_SYSTEM",
+      "source": "https://www.nasa.gov/missions/chandra/young-sun-caught-blowing-bubbles-by-nasas-chandra/",
+      "note": "Separate stellar system; not nested inside Earth's or Sun's fields"
+    }
+  ],
+  "modelBodyOrder": [
+    "sag a",
+    "nib sun",
+    "nib",
+    "earth",
+    "earth sun"
+  ],
+  "manifoldKinds": [
+    "gravity",
+    "gravity",
+    "void",
+    "void"
+  ],
+  "directions": [
+    "+x",
+    "-x",
+    "+y",
+    "-y",
+    "+z",
+    "-z"
+  ],
+  "physicalMetric": null,
+  "gravitationalClockRate": null,
+  "status": "SYMBOLIC_PASS_PHYSICAL_ASSIGNMENT_HOLD"
+}
