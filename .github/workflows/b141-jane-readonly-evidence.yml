@@ -1,0 +1,20 @@
+name: Jane B141 Read-Only Evidence Adapter
+on:
+  push:
+    paths:
+      - 'b141/**'
+      - 'scripts/btf2/test-jane-b141-evidence-adapter.cjs'
+      - '.github/workflows/b141-jane-readonly-evidence.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Test schema, read-only adapter, and fail-closed mutation cases
+        run: node scripts/btf2/test-jane-b141-evidence-adapter.cjs
