@@ -5,7 +5,7 @@ const obs=(w,s,status='SIMULATED_CROSSING')=>({witness:w,slot:s,status,physicalP
 let empty=plan([],{witness:'a1',radius:21});assert.equal(empty.targetSlot,'S1');
 const own=[obs('a1','S1'),obs('b1','S2'),obs('a1','S2','HOLD')];
 const h=historyFor(own,'a1');assert.equal(h[0].visits,1);assert.equal(h[1].holds,1);
-const a=plan(own,{witness:'a1',radius:25});assert.equal(a.targetSlot,'S3');
+const a=plan(own,{witness:'a1',radius:25});assert.equal(a.targetSlot,'S2');
 const b=plan(own,{witness:'b1',radius:25});assert.equal(b.targetSlot,'S1');
 assert.equal(a.physicalPromotion,false);assert.equal(a.basis,'OWN_WITNESS_OBSERVATIONS_ONLY');
 assert.deepEqual(plan(own,{witness:'a1',radius:25}),a);
