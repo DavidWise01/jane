@@ -1,0 +1,145 @@
+{
+  "schema": "JANE-B147-DUAL-GRAPH-v1",
+  "order": [
+    "sag a",
+    "nib sun",
+    "nib",
+    "earth",
+    "earth sun"
+  ],
+  "core": [
+    "sag a",
+    "nib sun",
+    "nib",
+    "earth"
+  ],
+  "terminal": "earth sun",
+  "force": [
+    {
+      "id": "u1",
+      "notation": "x²",
+      "from": "sag a",
+      "to": "nib sun",
+      "distanceBand": "long",
+      "forceBand": "weak+gravity",
+      "classification": "CORE_FORCE",
+      "status": "DECLARED_NOT_MEASURED"
+    },
+    {
+      "id": "u2",
+      "notation": "y²",
+      "from": "nib sun",
+      "to": "nib",
+      "distanceBand": "medium",
+      "forceBand": "medium",
+      "classification": "CORE_FORCE",
+      "status": "DECLARED_NOT_MEASURED"
+    },
+    {
+      "id": "u3",
+      "notation": "z²",
+      "from": "nib",
+      "to": "earth",
+      "distanceBand": "medium",
+      "forceBand": "medium+weak",
+      "classification": "CORE_FORCE",
+      "status": "DECLARED_NOT_MEASURED"
+    },
+    {
+      "id": "u4",
+      "notation": "x²::y²",
+      "from": "earth",
+      "to": "earth sun",
+      "distanceBand": "short",
+      "forceBand": "medium+strong",
+      "classification": "TERMINAL_LINK",
+      "status": "DECLARED_NOT_MEASURED"
+    },
+    {
+      "id": "u5",
+      "notation": "y²::z²",
+      "from": "sag a",
+      "to": "nib",
+      "distanceBand": "unquantified",
+      "forceBand": "epicycle",
+      "classification": "CORE_FORCE",
+      "status": "DECLARED_NOT_MEASURED"
+    },
+    {
+      "id": "u6",
+      "notation": "z²::x²",
+      "from": "sag a",
+      "to": "earth",
+      "distanceBand": "unquantified",
+      "forceBand": "double epicycle",
+      "classification": "CORE_FORCE",
+      "status": "DECLARED_NOT_MEASURED"
+    }
+  ],
+  "geometry": [
+    {
+      "id": "g01",
+      "from": "sag a",
+      "to": "nib sun",
+      "kind": "GEOMETRIC_PAIR",
+      "sourceForceId": "u1",
+      "distanceMeters": null,
+      "sourceStatus": "SOURCE_FORCE_PAIR_MATCH"
+    },
+    {
+      "id": "g02",
+      "from": "sag a",
+      "to": "nib",
+      "kind": "GEOMETRIC_PAIR",
+      "sourceForceId": "u5",
+      "distanceMeters": null,
+      "sourceStatus": "SOURCE_FORCE_PAIR_MATCH"
+    },
+    {
+      "id": "g03",
+      "from": "sag a",
+      "to": "earth",
+      "kind": "GEOMETRIC_PAIR",
+      "sourceForceId": "u6",
+      "distanceMeters": null,
+      "sourceStatus": "SOURCE_FORCE_PAIR_MATCH"
+    },
+    {
+      "id": "g12",
+      "from": "nib sun",
+      "to": "nib",
+      "kind": "GEOMETRIC_PAIR",
+      "sourceForceId": "u2",
+      "distanceMeters": null,
+      "sourceStatus": "SOURCE_FORCE_PAIR_MATCH"
+    },
+    {
+      "id": "g13",
+      "from": "nib sun",
+      "to": "earth",
+      "kind": "GEOMETRIC_PAIR",
+      "sourceForceId": null,
+      "distanceMeters": null,
+      "sourceStatus": "UNBOUND_GEOMETRIC_PAIR"
+    },
+    {
+      "id": "g23",
+      "from": "nib",
+      "to": "earth",
+      "kind": "GEOMETRIC_PAIR",
+      "sourceForceId": "u3",
+      "distanceMeters": null,
+      "sourceStatus": "SOURCE_FORCE_PAIR_MATCH"
+    }
+  ],
+  "matched": 5,
+  "missing": [
+    [
+      "nib sun",
+      "earth"
+    ]
+  ],
+  "terminalLinks": 1,
+  "physicalStatus": "HOLD",
+  "combinedClockRate": "HOLD"
+}
