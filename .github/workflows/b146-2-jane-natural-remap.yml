@@ -1,0 +1,20 @@
+name: Jane B146.2 Natural Positional Remap
+on:
+  push:
+    paths:
+      - 'b146/natural-remap-v1.json'
+      - 'scripts/btf2/jane-b146-2-natural-remap.cjs'
+      - 'scripts/btf2/test-jane-b146-2-natural-remap.cjs'
+      - '.github/workflows/b146-2-jane-natural-remap.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node scripts/btf2/test-jane-b146-2-natural-remap.cjs
