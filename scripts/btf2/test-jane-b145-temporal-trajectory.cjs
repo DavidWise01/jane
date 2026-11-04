@@ -1,0 +1,27 @@
+#!/usr/bin/env node
+'use strict';
+const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
+const m=require('./jane-b145-temporal-trajectory.cjs');
+const d=JSON.parse(fs.readFileSync(path.resolve(__dirname,'../../b145/temporal-trajectory-v1.json'),'utf8'));
+assert.equal(m.validate(d).status,'STRUCTURAL_PASS');
+const [rest,slow,fast]=d.examples;
+const a=m.segment(rest),b=m.segment(slow),c=m.segment(fast);
+assert.equal(a.properSeconds,10);
+assert.deepEqual(b.displacementMeters,[1000,0,0]);
+assert.equal(b.position1Meters[0],1000);
+assert.equal(c.displacementMeters[2],-1498962290);
+assert.ok(Math.abs(c.ratio-Math.sqrt(.75))<1e-14);
+assert.ok(Math.abs(c.properSeconds-10*Math.sqrt(.75))<1e-13);
+assert.equal(m.rate([m.C,0,0]).status,'HOLD');
+assert.equal(m.rate([0,0,0]).ratio,1);
+assert.equal(m.segment({...rest,t1:0}).status,'HOLD');
+assert.equal(m.segment({...rest,frame:'GALACTIC_HYPOTHETICAL'}).status,'HOLD');
+assert.equal(m.segment({...rest,velocity:[m.C,0,0]}).status,'HOLD');
+assert.equal(m.verifyEndpoints(slow,[1000,0,0]).status,'CONSISTENT');
+assert.equal(m.verifyEndpoints(slow,[999,0,0]).status,'REJECT');
+const cl=m.compareClocks(fast,rest);assert.equal(cl.status,'REFERENCE_ONLY');assert.ok(cl.properTimeDifferenceSeconds<0);
+assert.equal(m.compareClocks(fast,{...rest,t0:1}).status,'HOLD');
+assert.equal(m.combinedGravityMotion().status,'HOLD');
+const corrupted=JSON.parse(JSON.stringify(d));corrupted.combinedClockRate='VERIFIED';assert.equal(m.validate(corrupted).status,'HOLD');
+assert.throws(()=>m.rate([1,2]),/FINITE_VECTOR3_REQUIRED/);
+console.log('PASS B145: signed 3D velocity, monotonic time, SR proper time, endpoint checks, no superluminal segments or gravity fusion');
