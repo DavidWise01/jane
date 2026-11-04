@@ -18,7 +18,7 @@ function plan(entries,{witness,radius,previousSlot=null}={}){
  const scores=states.map((s,i)=>({
   slot:s.slot,radius:RADII[i],
   visits:s.visits,holds:s.holds,clear:s.clear,
-  score:100-25*s.visits+11*s.holds-0.1*Math.abs(radius-RADII[i])-(previousSlot===s.slot?5:0)
+  score:100-25*s.visits+35*s.holds-0.1*Math.abs(radius-RADII[i])-(previousSlot===s.slot?5:0)
  }));
  scores.sort((a,b)=>b.score-a.score||SLOTS.indexOf(a.slot)-SLOTS.indexOf(b.slot));
  const choice=scores[0];
