@@ -1,0 +1,107 @@
+{
+  "schema": "JANE-B144-COMMON-FRAME-v1",
+  "parent": [
+    "b142/four-manifold-boundary-v1.json",
+    "b143/six-directions-v1.json"
+  ],
+  "notation": [
+    "[{( -+ 4 manifolds, 2 gravity , 2 void, planets are sag a , nibaru sun , nibaru , earth , earth sun +- )}]",
+    "[{( x^2 , y^2 :: `z^2` )}]"
+  ],
+  "coordinateFrame": {
+    "origin": [
+      0,
+      0,
+      0
+    ],
+    "units": "declared per observation",
+    "axes": [
+      "x",
+      "y",
+      "z"
+    ],
+    "directions": {
+      "x+": [
+        1,
+        0,
+        0
+      ],
+      "x-": [
+        -1,
+        0,
+        0
+      ],
+      "y+": [
+        0,
+        1,
+        0
+      ],
+      "y-": [
+        0,
+        -1,
+        0
+      ],
+      "z+": [
+        0,
+        0,
+        1
+      ],
+      "z-": [
+        0,
+        0,
+        -1
+      ]
+    },
+    "axisSquare": [
+      "x^2",
+      "y^2",
+      "z^2"
+    ]
+  },
+  "manifoldLabels": [
+    {
+      "id": "G0",
+      "kind": "gravity"
+    },
+    {
+      "id": "G1",
+      "kind": "gravity"
+    },
+    {
+      "id": "V0",
+      "kind": "void"
+    },
+    {
+      "id": "V1",
+      "kind": "void"
+    }
+  ],
+  "referents": [
+    "sag a",
+    "nibaru sun",
+    "nibaru",
+    "earth",
+    "earth sun"
+  ],
+  "mappings": {
+    "referentPositions": "UNASSIGNED",
+    "manifoldMetric": "UNSPECIFIED",
+    "bodyToManifold": "UNASSIGNED",
+    "voidDynamics": "UNSPECIFIED"
+  },
+  "clockReference": {
+    "model": "SCHWARZSCHILD_STATIONARY_EXTERIOR",
+    "formula": "dTau/dt = sqrt(1 - 2*G*M/(r*c^2))",
+    "G": 6.6743e-11,
+    "c": 299792458,
+    "assumptions": [
+      "single isolated spherically symmetric nonrotating mass",
+      "stationary observer at radius r in exterior region",
+      "comparison with Schwarzschild coordinate time normalized at infinity"
+    ],
+    "source": "https://web.mit.edu/8.962/www/lecnotes/8_962TA-lec-all.pdf",
+    "status": "TEXTBOOK_REFERENCE_NOT_NEW_DISCOVERY"
+  },
+  "validationStatus": "STRUCTURAL_AND_REFERENCE_ONLY",
+  "releaseStatus": "HOLD"
+}
