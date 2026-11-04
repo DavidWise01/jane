@@ -1,0 +1,20 @@
+name: Jane B153 H O N Braced 122
+on:
+  push:
+    paths:
+      - 'b153/**'
+      - 'scripts/btf2/jane-b153-hon-braces.cjs'
+      - 'scripts/btf2/test-jane-b153-hon-braces.cjs'
+      - '.github/workflows/b153-jane-hon-braces.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node scripts/btf2/test-jane-b153-hon-braces.cjs
