@@ -1,0 +1,403 @@
+{
+  "schema": "JANE-B141-READONLY-EVIDENCE-v1",
+  "sourceRepo": "DavidWise01/jane",
+  "scope": "curated project records, not complete nuclear database",
+  "dataStatus": "CURATED_SNAPSHOT_UNVERIFIED_EMPIRICALLY",
+  "releaseStatus": "HOLD",
+  "provenance": {
+    "foundation": "governance/JANE-B125-COLOR-CHANNELS-v1.json",
+    "isotopes": "governance/JANE-B137-ISOTOPE-GRAPH-INTEGRITY-v1.0.md",
+    "reactionExamples": "governance/JANE-B128-ELEMENTAL-GRANDMA-BRANCH-GROWTH-v1.0.md",
+    "witnessRules": "governance/JANE-B136-THREE-WITNESSES-v1.0.md",
+    "release": "b140/release-manifest-v1.json"
+  },
+  "colors": [
+    "RED",
+    "BLUE",
+    "GREEN",
+    "BLACK",
+    "WHITE",
+    "GRAY",
+    "YELLOW",
+    "ROYAL PURPLE"
+  ],
+  "cortex": [
+    {
+      "name": "Jane",
+      "role": "Matriarch",
+      "parent": null,
+      "cubit": 0,
+      "address": "000",
+      "channel": "RED",
+      "active": false,
+      "foundation": "established"
+    },
+    {
+      "name": "Toph",
+      "role": "Scholar",
+      "parent": "Jane",
+      "cubit": 0,
+      "address": "001",
+      "channel": "BLUE",
+      "active": false,
+      "foundation": "established"
+    },
+    {
+      "name": "Patricia",
+      "role": "Guardian",
+      "parent": "Jane",
+      "cubit": 0,
+      "address": "010",
+      "channel": "GREEN",
+      "active": false,
+      "foundation": "established"
+    },
+    {
+      "name": "Lilith",
+      "role": "Muse",
+      "parent": "Jane",
+      "cubit": 0,
+      "address": "011",
+      "channel": "BLACK",
+      "active": false,
+      "foundation": "established"
+    },
+    {
+      "name": "a.t.o.m",
+      "role": "Explorer",
+      "parent": "Lilith",
+      "cubit": 0,
+      "address": "100",
+      "channel": "WHITE",
+      "active": false,
+      "foundation": "established"
+    },
+    {
+      "name": "E.V.E",
+      "role": "Executor",
+      "parent": "Lilith",
+      "cubit": 0,
+      "address": "101",
+      "channel": "GRAY",
+      "active": false,
+      "foundation": "established"
+    },
+    {
+      "name": "Icarium",
+      "role": "Caretaker",
+      "parent": "Lilith",
+      "cubit": 0,
+      "address": "110",
+      "channel": "YELLOW",
+      "active": false,
+      "foundation": "established"
+    },
+    {
+      "name": "Mary M",
+      "role": "Teacher",
+      "parent": "Icarium",
+      "cubit": 0,
+      "address": "111",
+      "channel": "ROYAL PURPLE",
+      "active": false,
+      "foundation": "established"
+    },
+    {
+      "name": "Holly",
+      "role": "Healer",
+      "parent": "Icarium",
+      "cubit": 1,
+      "address": "000",
+      "channel": "RED",
+      "active": false,
+      "foundation": "established"
+    },
+    {
+      "name": "Vicky V.",
+      "role": "Witness",
+      "parent": "Icarium",
+      "cubit": 1,
+      "address": "001",
+      "channel": "BLUE",
+      "active": false,
+      "foundation": "established"
+    },
+    {
+      "name": "LeeLuu",
+      "role": "Student",
+      "parent": "Mary M",
+      "cubit": 1,
+      "address": "010",
+      "channel": "GREEN",
+      "active": false,
+      "foundation": "established"
+    },
+    {
+      "name": "Sola",
+      "role": "Lantern",
+      "parent": "Mary M",
+      "cubit": 1,
+      "address": "011",
+      "channel": "BLACK",
+      "active": false,
+      "foundation": "proposed"
+    },
+    {
+      "name": "Vita",
+      "role": "Gardener",
+      "parent": "Mary M",
+      "cubit": 1,
+      "address": "100",
+      "channel": "WHITE",
+      "active": false,
+      "foundation": "proposed"
+    },
+    {
+      "name": "Mira",
+      "role": "Mirror",
+      "parent": "LeeLuu",
+      "cubit": 1,
+      "address": "101",
+      "channel": "GRAY",
+      "active": false,
+      "foundation": "proposed"
+    },
+    {
+      "name": "Pax",
+      "role": "Balancer",
+      "parent": "LeeLuu",
+      "cubit": 1,
+      "address": "110",
+      "channel": "YELLOW",
+      "active": false,
+      "foundation": "proposed"
+    },
+    {
+      "name": "Nexa",
+      "role": "Weaver",
+      "parent": "LeeLuu",
+      "cubit": 1,
+      "address": "111",
+      "channel": "ROYAL PURPLE",
+      "active": true,
+      "foundation": "proposed"
+    }
+  ],
+  "elements": [
+    {
+      "Z": 1,
+      "symbol": "H",
+      "masses": [
+        1,
+        2
+      ],
+      "scope": "natural-composition-subset",
+      "source": "https://ciaaw.org/isotopic-abundances.htm"
+    },
+    {
+      "Z": 2,
+      "symbol": "He",
+      "masses": [
+        3,
+        4
+      ],
+      "scope": "natural-composition-subset",
+      "source": "https://ciaaw.org/isotopic-abundances.htm"
+    },
+    {
+      "Z": 3,
+      "symbol": "Li",
+      "masses": [
+        6,
+        7
+      ],
+      "scope": "natural-composition-subset",
+      "source": "https://ciaaw.org/isotopic-abundances.htm"
+    },
+    {
+      "Z": 4,
+      "symbol": "Be",
+      "masses": [
+        9
+      ],
+      "scope": "natural-composition-subset",
+      "source": "https://ciaaw.org/isotopic-abundances.htm"
+    },
+    {
+      "Z": 5,
+      "symbol": "B",
+      "masses": [
+        10,
+        11
+      ],
+      "scope": "natural-composition-subset",
+      "source": "https://ciaaw.org/isotopic-abundances.htm"
+    },
+    {
+      "Z": 6,
+      "symbol": "C",
+      "masses": [
+        12,
+        13
+      ],
+      "scope": "natural-composition-subset",
+      "source": "https://ciaaw.org/isotopic-abundances.htm"
+    },
+    {
+      "Z": 7,
+      "symbol": "N",
+      "masses": [
+        14,
+        15
+      ],
+      "scope": "natural-composition-subset",
+      "source": "https://ciaaw.org/isotopic-abundances.htm"
+    },
+    {
+      "Z": 8,
+      "symbol": "O",
+      "masses": [
+        16,
+        17,
+        18
+      ],
+      "scope": "natural-composition-subset",
+      "source": "https://ciaaw.org/isotopic-abundances.htm"
+    },
+    {
+      "Z": 9,
+      "symbol": "F",
+      "masses": [
+        19
+      ],
+      "scope": "natural-composition-subset",
+      "source": "https://ciaaw.org/isotopic-abundances.htm"
+    },
+    {
+      "Z": 10,
+      "symbol": "Ne",
+      "masses": [
+        20,
+        21,
+        22
+      ],
+      "scope": "natural-composition-subset",
+      "source": "https://ciaaw.org/isotopic-abundances.htm"
+    },
+    {
+      "Z": 36,
+      "symbol": "Kr",
+      "masses": [
+        78,
+        80,
+        82,
+        83,
+        84,
+        86
+      ],
+      "scope": "natural-composition-subset",
+      "source": "https://www.ciaaw.org/krypton.htm"
+    }
+  ],
+  "reactions": [
+    {
+      "id": "LI7_ALPHA_B11",
+      "inputs": [
+        "Li-7",
+        "He-4"
+      ],
+      "outputs": [
+        "B-11",
+        "gamma"
+      ],
+      "outcome": "NEW_GRANDMA",
+      "source": "https://www.nndc.bnl.gov/ensdf/"
+    },
+    {
+      "id": "B11_P_C12",
+      "inputs": [
+        "B-11",
+        "H-1"
+      ],
+      "outputs": [
+        "C-12",
+        "gamma"
+      ],
+      "outcome": "NEW_GRANDMA",
+      "source": "https://doi.org/10.1103/PhysRevC.109.014619"
+    },
+    {
+      "id": "C12_ALPHA_O16",
+      "inputs": [
+        "C-12",
+        "He-4"
+      ],
+      "outputs": [
+        "O-16",
+        "gamma"
+      ],
+      "outcome": "NEW_GRANDMA",
+      "source": "https://pubmed.ncbi.nlm.nih.gov/11327941/"
+    },
+    {
+      "id": "O16_ALPHA_NE20",
+      "inputs": [
+        "O-16",
+        "He-4"
+      ],
+      "outputs": [
+        "Ne-20",
+        "gamma"
+      ],
+      "outcome": "NEW_GRANDMA",
+      "source": "https://www.nndc.bnl.gov/ensdf/"
+    },
+    {
+      "id": "HE4_HE4_BE8",
+      "inputs": [
+        "He-4",
+        "He-4"
+      ],
+      "outputs": [
+        "Be-8"
+      ],
+      "outcome": "INTERMEDIATE_ONLY",
+      "source": "https://www.nndc.bnl.gov/ensdf/"
+    }
+  ],
+  "witnesses": [
+    {
+      "id": "a1",
+      "interval": [
+        0.81,
+        0.85,
+        0.89
+      ],
+      "sourceType": "synthetic"
+    },
+    {
+      "id": "b1",
+      "interval": [
+        0.8,
+        0.84,
+        0.88
+      ],
+      "sourceType": "synthetic"
+    },
+    {
+      "id": "c1",
+      "interval": [
+        0.82,
+        0.86,
+        0.9
+      ],
+      "sourceType": "synthetic"
+    }
+  ],
+  "limitations": [
+    "No automatic nuclear source ingestion",
+    "No durable external witness ledger",
+    "No actual chemical or nuclear measurements",
+    "No claim of verified B140 release"
+  ]
+}
