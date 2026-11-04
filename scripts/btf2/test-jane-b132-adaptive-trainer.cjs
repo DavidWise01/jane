@@ -1,0 +1,27 @@
+#!/usr/bin/env node
+'use strict';
+const assert=require('node:assert/strict'),{Trainer}=require('./jane-b132-adaptive-trainer.cjs');
+const pass={nuclear:'PASS',chemical:'PASS',environment:'PASS',provenance:'PASS',repeatability:'PASS'};
+const t=new Trainer();
+const a=t.submit({id:'KRF2-ROOM',configuration:'KrF2',environment:'room temperature',evidence:'ACS KrF2 overview',gates:{...pass,environment:'FAIL'}});
+assert.equal(a.decision,'REJECT');
+const b=t.submit({id:'KRF2-COLD',configuration:'KrF2',environment:'specified cold storage',evidence:'ACS KrF2 overview',origin:'KRF2-ROOM',gates:pass});
+assert.equal(b.decision,'PROMOTE');
+const c=t.submit({id:'RB85-WATER',configuration:'Rb85-metal',environment:'water',evidence:'NOAA CAMEO',gates:{...pass,chemical:'FAIL'}});
+assert.equal(c.decision,'REJECT');
+const d=t.submit({id:'RB85-INERT',configuration:'Rb85-metal',environment:'suitable isolated conditions',evidence:'NOAA CAMEO',origin:'RB85-WATER',gates:pass});
+assert.equal(d.decision,'PROMOTE');
+const e=t.submit({id:'KR85-ROOM',configuration:'Kr85 gas',environment:'ambient inert container',evidence:'IAEA',gates:{...pass,nuclear:'UNKNOWN'}});
+assert.equal(e.decision,'HOLD');
+assert.throws(()=>t.submit({id:'BAD-PARENT',configuration:'KrF2',environment:'ambient',evidence:'x',parentAccepted:'KRF2-ROOM',gates:pass}),/Accepted parent required/);
+assert.throws(()=>t.submit({id:'KRF2-ROOM',configuration:'KrF2',environment:'ambient',evidence:'x',gates:pass}),/Duplicate/);
+assert.throws(()=>t.submit({id:'MISSING-EVIDENCE',configuration:'x',environment:'x',gates:pass}),/evidence/);
+assert.throws(()=>t.submit({id:'UNKNOWN-GATE',configuration:'x',environment:'x',evidence:'x',gates:{...pass,nuclear:'MAYBE'}}),/gate/);
+const f=t.submit({id:'NEXT',configuration:'reviewed variant',environment:'specified target',evidence:'trial data',parentAccepted:'KRF2-COLD',gates:pass});
+assert.equal(f.decision,'PROMOTE');
+assert.deepEqual(t.verify(),{observed:6,promoted:3,rejected:2,held:1,verified:true,failed_in_active_pool:0});
+assert.equal(t.events[0].verdict.status,'REJECT');
+assert.equal(t.events[1].candidate.origin,'KRF2-ROOM');
+assert.equal(t.events[1].candidate.parentAccepted,null);
+assert.ok(Object.isFrozen(t.events[0].candidate.gates));
+console.log('PASS B132: failure retained, changed-context retry independently tested, no rejected parent inheritance');
