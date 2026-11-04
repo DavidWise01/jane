@@ -1,0 +1,20 @@
+name: Jane B143 Six Signed Directions
+on:
+  push:
+    paths:
+      - 'b143/**'
+      - 'scripts/btf2/jane-b143-six-directions.cjs'
+      - 'scripts/btf2/test-jane-b143-six-directions.cjs'
+      - '.github/workflows/b143-jane-six-directions.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node scripts/btf2/test-jane-b143-six-directions.cjs
