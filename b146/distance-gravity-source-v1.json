@@ -1,0 +1,133 @@
+{
+  "schema": "JANE-B146-DISTANCE-GRAVITY-SOURCE-v1",
+  "source": {
+    "file": "Pasted text(20261104-165050).txt",
+    "sha256": "b03110e432cd637314e9cfc7d16bdf6703dd8ca6ff46f2510ef3bf26fb6f6d50",
+    "kind": "uploaded-react-html-artifact"
+  },
+  "origin": "SAG A*",
+  "bodyOrder": [
+    "SAG A*",
+    "NIB SUN",
+    "NIBURU",
+    "EARTH SUN",
+    "EARTH"
+  ],
+  "vertices": [
+    "SAG A*",
+    "NIB SUN",
+    "NIBURU",
+    "EARTH SUN"
+  ],
+  "nestedEarth": {
+    "parent": "EARTH SUN",
+    "child": "EARTH"
+  },
+  "fields": [
+    {
+      "name": "G0",
+      "kind": "gravity"
+    },
+    {
+      "name": "G1",
+      "kind": "gravity"
+    },
+    {
+      "name": "V0",
+      "kind": "void"
+    },
+    {
+      "name": "V1",
+      "kind": "void"
+    }
+  ],
+  "userEdges": [
+    {
+      "id": "u1",
+      "notation": "x²",
+      "from": "SAG A*",
+      "to": "NIB SUN",
+      "distanceBand": "long",
+      "forceBand": "weak+gravity",
+      "nonzeroGap": true,
+      "sourceStatus": "USER_MODEL_UNVERIFIED"
+    },
+    {
+      "id": "u2",
+      "notation": "y²",
+      "from": "NIB SUN",
+      "to": "NIBURU",
+      "distanceBand": "medium",
+      "forceBand": "medium",
+      "nonzeroGap": true,
+      "sourceStatus": "USER_MODEL_UNVERIFIED"
+    },
+    {
+      "id": "u3",
+      "notation": "z²",
+      "from": "NIBURU",
+      "to": "EARTH SUN",
+      "distanceBand": "medium",
+      "forceBand": "medium+weak",
+      "nonzeroGap": true,
+      "sourceStatus": "USER_MODEL_UNVERIFIED"
+    },
+    {
+      "id": "u4",
+      "notation": "x²::y²",
+      "from": "EARTH SUN",
+      "to": "EARTH",
+      "distanceBand": "short",
+      "forceBand": "medium+strong",
+      "nonzeroGap": true,
+      "sourceStatus": "USER_MODEL_UNVERIFIED"
+    },
+    {
+      "id": "u5",
+      "notation": "y²::z²",
+      "from": "SAG A*",
+      "to": "NIBURU",
+      "distanceBand": "unquantified",
+      "forceBand": "epicycle",
+      "nonzeroGap": true,
+      "sourceStatus": "USER_MODEL_UNVERIFIED"
+    },
+    {
+      "id": "u6",
+      "notation": "z²::x²",
+      "from": "SAG A*",
+      "to": "EARTH SUN",
+      "distanceBand": "unquantified",
+      "forceBand": "double epicycle",
+      "nonzeroGap": true,
+      "sourceStatus": "USER_MODEL_UNVERIFIED"
+    }
+  ],
+  "tetrahedralPairCount": 6,
+  "sourceVertexOnlyPairs": 5,
+  "missingTetrahedronPair": [
+    "NIB SUN",
+    "EARTH SUN"
+  ],
+  "sourceMismatch": "The sixth labelled connection EARTH SUN↔EARTH is a nested child link, not an edge among the four tetrahedral vertices.",
+  "visualBounds": {
+    "lowerMeters": 3.15e-36,
+    "upperBillionLightYears": 93,
+    "displayedUniverseEarthRatio": 69000000000000000000,
+    "displayedEarthPlanckRatio": 7.9e+41,
+    "modelOnly": true
+  },
+  "orbitalNotation": {
+    "proposedFlipYears": 5400,
+    "toroidCells": 60,
+    "boxCells": 62,
+    "ticks": 8,
+    "degreePerTick": 45,
+    "tripleBlindDegrees": 120
+  },
+  "measuredSeparationMeters": null,
+  "verifiedMassesKg": null,
+  "physicalMetric": null,
+  "physicalClockRate": null,
+  "status": "HOLD_TOPOLOGY_AND_PHYSICAL_MEASUREMENT"
+}
