@@ -1,0 +1,13 @@
+'use strict';
+const assert=require('node:assert/strict'),{SLOTS,evaluate,Journal}=require('./jane-b149-sphere-transitions.cjs');
+const f={slot:'S1',direction:'OUT',id:'a1',witness:'a1',timestamp:'2026-11-04T18:00:00Z',frame:'DEMO_LOCAL',source:'simulation',before:.5,after:1.5,threshold:1,uncertainty:.1,evidenceKind:'SIMULATION'};
+assert.equal(SLOTS.length,5);assert.equal(evaluate(f).status,'SIMULATED_CROSSING');
+assert.equal(evaluate({...f,evidenceKind:'MEASURED_INDEPENDENT'}).status,'HOLD');
+assert.equal(evaluate({...f,uncertainty:.6}).status,'HOLD');
+assert.equal(evaluate({...f,direction:'IN'}).status,'HOLD');
+assert.equal(evaluate({...f,before:1.5,after:.5,direction:'IN'}).status,'SIMULATED_CROSSING');
+assert.throws(()=>evaluate({...f,uncertainty:-1}),/FINITE_MEASUREMENT/);
+const j=new Journal();j.append(f);j.append({...f,id:'b1',witness:'b1',before:1,after:1.5});
+assert.throws(()=>j.append(f),/DUPLICATE/);
+assert.deepEqual(j.audit(),{entries:2,hashChain:'PASS',quorum:false,physicalPromotions:0});
+console.log('PASS B149: signed sphere crossings, interval uncertainty, simulated vs measured HOLD, hash chain');
