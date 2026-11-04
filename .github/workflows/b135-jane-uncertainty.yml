@@ -1,0 +1,20 @@
+name: Jane B135 Measurement Uncertainty
+on:
+  push:
+    paths:
+      - 'scripts/btf2/jane-b135-uncertainty.cjs'
+      - 'scripts/btf2/test-jane-b135-uncertainty.cjs'
+      - 'governance/JANE-B135-UNCERTAINTY-INVARIANT-v1.0.md'
+      - '.github/workflows/b135-jane-uncertainty.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node scripts/btf2/test-jane-b135-uncertainty.cjs
