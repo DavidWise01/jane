@@ -1,0 +1,27 @@
+#!/usr/bin/env node
+'use strict';
+const assert=require('node:assert/strict');
+const m=require('./jane-b137-isotope-graph-integrity.cjs');
+const r=m.audit();
+assert.equal(r.naturalRows,26);
+assert.equal(r.supplementaryRows,2);
+assert.equal(r.declaredElements,11);
+assert.equal(r.allKnownNuclidesComplete,false);
+assert.equal(r.allKnownNuclideCoveragePercent,null);
+assert.equal(r.inheritedDocumentedEdges,5);
+assert.equal(r.inventedEdges,0);
+assert.equal(r.scopes.find(x=>x.element==='Kr').expected,6);
+assert.equal(m.entry('Kr-78').N,42);
+assert.equal(m.entry('Kr-81').kind,'trace_radioisotope');
+assert.equal(m.entry('Kr-85').kind,'trace_radioisotope');
+assert.equal(m.entry('Xe-132'),null);
+const short=m.classifyScope({Z:36,naturalMasses:[78,80,82]});
+assert.deepEqual(short.missing,[83,84,86]);
+assert.equal(short.naturalCoverage,50);
+assert.equal(m.classifyScope({Z:118,naturalMasses:[]}).scope,'NOT_DECLARED');
+const nuc={A:{A:2,Z:1},B:{A:3,Z:2},C:{A:5,Z:3}};
+assert.equal(m.balanceReaction({inputs:['A','B'],outputs:['C'],evidence:'https://example.com'},nuc).status,'ACCOUNTING_PASS');
+assert.equal(m.balanceReaction({inputs:['A'],outputs:['B'],evidence:'https://example.com'},nuc).status,'REJECT');
+assert.equal(m.balanceReaction({inputs:['A','B'],outputs:['C']},nuc).status,'HOLD');
+assert.equal(m.balanceReaction({inputs:['A'],outputs:['MISSING'],evidence:'https://example.com'},nuc).status,'HOLD');
+console.log('PASS B137: 26 natural isotope-composition records, 2 supplementary, 11 scoped elements, five inherited edge accounting checks, missing/unknown edges HOLD');
