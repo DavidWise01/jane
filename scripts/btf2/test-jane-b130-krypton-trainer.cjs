@@ -1,0 +1,20 @@
+#!/usr/bin/env node
+'use strict';
+const assert=require('node:assert/strict'),M=require('./jane-b130-krypton-trainer.cjs');
+const data=M.audit();
+assert.equal(data.records,12);assert.equal(data.strict.Kr.promoted,5);
+assert.equal(data.strict.Kr.held,3);assert.equal(data.strict.Br.promoted,2);
+assert.equal(data.strict.Rb.promoted,1);
+const lookup=(sym,A)=>M.ISOTOPES.find(i=>i.element===sym&&i.A===A);
+assert.equal(lookup('Kr',84).N,48);
+assert.equal(lookup('Kr',78).N,42);
+assert.equal(M.evaluate(lookup('Kr',78)).decision,'HOLD');
+assert.equal(M.evaluate(lookup('Kr',85)).promote,false);
+assert.equal(M.evaluate(lookup('Rb',87)).promote,false);
+assert.equal(M.evaluate(lookup('Kr',80)).promote,true);
+const r=M.evaluate(lookup('Kr',81),{mode:'operational_survival',years:229000});
+assert.ok(Math.abs(r.survivalProbability-0.5)<1e-12);assert.equal(r.promote,false);
+const r2=M.evaluate(lookup('Rb',87),{mode:'operational_survival',years:1e6});
+assert.ok(r2.survivalProbability>0.99998);assert.equal(r2.promote,false);
+assert.throws(()=>M.evaluate({Z:36,A:81,N:50,source:'x'}),/Invalid sourced isotope/);
+console.log('PASS B130: Br/Kr/Rb, strict vs finite-horizon persistence, radioactive never promoted, Kr78 holds');
