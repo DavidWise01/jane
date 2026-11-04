@@ -1,0 +1,20 @@
+name: Jane B132 Adaptive Generational Trainer
+on:
+  push:
+    paths:
+      - 'scripts/btf2/jane-b132-adaptive-trainer.cjs'
+      - 'scripts/btf2/test-jane-b132-adaptive-trainer.cjs'
+      - 'governance/JANE-B132-ADAPTIVE-TRAINER-v1.0.md'
+      - '.github/workflows/b132-jane-adaptive-trainer.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node scripts/btf2/test-jane-b132-adaptive-trainer.cjs
