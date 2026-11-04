@@ -1,0 +1,57 @@
+{
+  "schema": "JANE-B149-ANIMATED-SPHERE-OBSERVATORY-v1",
+  "oneShadow": {
+    "pair": [
+      -1,
+      1
+    ],
+    "net": 0,
+    "positions": 1,
+    "scope": "FIRST_PAIR_ONLY"
+  },
+  "slots": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5"
+  ],
+  "assignment": [
+    null,
+    null,
+    null,
+    null,
+    null
+  ],
+  "visualRadii": [
+    1.25,
+    2.05,
+    2.95,
+    4,
+    5.15
+  ],
+  "visualUnits": "ARBITRARY_NOT_PHYSICAL",
+  "manifolds": [
+    "G0:gravity",
+    "G1:gravity",
+    "V0:void",
+    "V1:void"
+  ],
+  "directions": [
+    "+x",
+    "-x",
+    "+y",
+    "-y",
+    "+z",
+    "-z"
+  ],
+  "canonicalBodies": [
+    "sag a",
+    "nib sun",
+    "nib",
+    "earth",
+    "earth sun"
+  ],
+  "actualPhysicalClock": null,
+  "releaseStatus": "HOLD"
+}
