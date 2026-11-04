@@ -5,7 +5,7 @@ B151 extends the B150 pixel art atom lab with three individually controlled scou
 Deterministic priority formula, evaluated per scout and per slot:
 
 ```
-score = 100 - 25*own_visits + 11*own_holds
+score = 100 - 25*own_visits + 35*own_holds
       - 0.1*abs(current_visual_radius - slot_visual_radius)
       - (previous_slot == candidate_slot ? 5 : 0)
 ```
