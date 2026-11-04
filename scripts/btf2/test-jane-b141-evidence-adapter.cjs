@@ -1,0 +1,21 @@
+#!/usr/bin/env node
+'use strict';
+const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
+const root=path.resolve(__dirname,'../..');
+const data=JSON.parse(fs.readFileSync(path.join(root,'b141/data/evidence-v1.json'),'utf8'));
+const v=require(path.join(root,'b141/adapter-v1.js'));
+const ok=v.validate(data);
+assert.equal(ok.ok,true,JSON.stringify(ok.errors));assert.equal(ok.summary.cortexes,16);assert.equal(ok.summary.elements,11);assert.equal(ok.summary.isotopeEntries,26);
+assert.equal(ok.summary.reactions,5);assert.equal(ok.summary.witnesses,3);
+const clone=()=>JSON.parse(JSON.stringify(data));
+let bad=clone();bad.cortex[15].active=false;assert.equal(v.validate(bad).ok,false);
+bad=clone();bad.colors[7]='GREEN';assert.equal(v.validate(bad).ok,false);
+bad=clone();bad.releaseStatus='PASS';assert.equal(v.validate(bad).ok,false);
+bad=clone();bad.elements[10].masses=[78,80];assert.equal(v.validate(bad).ok,false);
+bad=clone();bad.witnesses[1].id='a1';assert.equal(v.validate(bad).ok,false);
+const html=fs.readFileSync(path.join(root,'b141/index.html'),'utf8');
+assert.ok(html.includes("fetch('./data/evidence-v1.json'"));
+assert.ok(html.includes('JaneB141.validate(d)'));
+assert.ok(html.includes('HOLD · SOURCE NOT VERIFIED'));
+assert.ok(!html.includes('localStorage.setItem'));
+console.log('PASS B141: repository snapshot schema and read-only adapter; fail-closed tamper cases');
