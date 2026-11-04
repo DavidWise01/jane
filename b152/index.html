@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>JANE B152 | PIXEL MONKEY BENCHMARK ARCADE</title>
+<style>
+:root{--bg:#0b1120;--ink:#e5f2f0;--teal:#53dfc4;--orange:#ff9d5c;--violet:#b39afd;--edge:#466277;--panel:#142335}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:13px/1.5 Consolas,monospace}header{background:#172334;border-bottom:4px solid #3e526b;padding:12px 17px;display:flex;justify-content:space-between;align-items:center;gap:12px}h1{margin:0;font-size:clamp(16px,2.3vw,26px);color:var(--orange);text-shadow:2px 2px #613e54}h2{margin:0 0 10px;color:var(--teal);font-size:14px;letter-spacing:1px}small{color:#a8bdc9}.pill{border:2px solid #7b657c;padding:5px 10px;color:#ffda95}main{display:grid;grid-template-columns:minmax(300px,1fr) 350px;min-height:calc(100vh - 65px)}.screen{padding:14px;min-width:0}.frame{position:relative;border:6px ridge #687f89;background:#070f1e;box-shadow:0 0 0 5px #243344,0 10px 0 #080f18;aspect-ratio:16/10;overflow:hidden}.frame canvas{display:block;width:100%;height:100%;image-rendering:pixelated;image-rendering:crisp-edges;cursor:crosshair}.topBadge{position:absolute;left:9px;top:7px;color:#ffe2a2;text-shadow:1px 2px #192338;font-size:11px;pointer-events:none}.bottomBadge{position:absolute;right:10px;bottom:7px;background:#081521c9;color:#88e8d7;padding:2px 6px;pointer-events:none}.hud{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin:12px 0}.hud>div{border:2px solid var(--edge);background:#15283a;padding:8px}.hud strong{color:#ffe6b4;font-size:19px;display:block}.hud small{display:block;font-size:10px}aside{background:#111e2c;border-left:4px solid #375064;padding:13px;min-width:0}section{border:2px solid #375366;background:#18283a;padding:11px;margin-bottom:12px}button,select{background:#24394b;border:2px solid #688492;color:#fff7e7;padding:8px 10px;font:inherit;cursor:pointer;box-shadow:2px 3px #0c1621}button:hover,button:focus-visible{outline:1px solid #ffe2a2;background:#3c4b60}button.on{border-color:var(--orange);color:#ffc897}button:disabled{opacity:.5;cursor:default}.row{display:flex;gap:7px;align-items:center;flex-wrap:wrap;margin:8px 0}.row>*{flex:1}.slots{display:grid;grid-template-columns:repeat(5,1fr);gap:5px}.slots button{padding:7px 2px;font-size:11px}.readout{font-size:11px;color:#a9c9d0}input[type=range]{width:100%;accent-color:var(--orange)}pre{background:#071421;color:#a7f4db;padding:9px;max-height:200px;overflow:auto;white-space:pre-wrap;word-break:break-word;margin:7px 0}p{color:#b1c5cd;margin:8px 0}.warn{border-left:4px solid var(--orange);padding:8px;background:#342b30}.tiny{font-size:11px}a{color:#9edcf5}.kbd{color:#ffe5b0}footer{padding:5px 18px;color:#849fae}@media(max-width:950px){main{display:block}.frame{aspect-ratio:16/11}aside{border-left:0;border-top:4px solid #375064}.hud strong{font-size:14px}}
+</style></head><body>
+<header><div><small>JANE // B152 // RETRO PIXEL LABORATORY</small><h1>CODE MONKEYS: MEMORY vs ROUND ROBIN</h1><small>ORIGINAL PIXEL SPRITES · ONE SHADOW · FIVE SIGNED SPHERE REGISTERS</small></div><div class="pill">SCIENCE <b>HOLD</b></div></header>
+<main><div class="screen"><div class="frame"><canvas id="game" width="320" height="200" aria-label="Pixel-art atom observatory with monkey coder characters, rotating three-dimensional atomic orbital projection, and animated sphere boundaries"></canvas><span class="topBadge">ROOT0//B151</span><span class="bottomBadge" id="modeLabel">ATOM / 3D PROJECTION</span></div><div class="hud"><div><strong id="tick">0000</strong><small>SIM TICKS</small></div><div><strong id="cross">000</strong><small>SIGNED CROSSINGS</small></div><div><strong id="hold">000</strong><small>BOUNDARY HOLDS</small></div><div><strong id="seat">S1</strong><small>FOCUS SLOT</small></div></div><section><h2>KEYBOARD LAB</h2><p><span class="kbd">← →</span> spin the atom · <span class="kbd">↑ ↓</span> tilt · <span class="kbd">1–5</span> select sphere · <span class="kbd">SPACE</span> run/pause · <span class="kbd">P</span> send a scout. Mouse drag rotates the view.</p><p class="tiny">Three pixel scouts independently remember their own signed crossings and choose which shell to approach next in a 3D-projected atomic field. Readings and the independent witness trail survive reload in this browser when local storage is available. No physical measurements are implied.</p></section></div>
+<aside><section><h2>MONKEY WORKSTATION</h2><div class="row"><button id="pause">Ⅱ PAUSE</button><button id="probe">SEND SCOUT</button><button id="reset">RESET</button></div><div class="row"><button id="viewAtom" class="on">ATOM</button><button id="viewSpheres">SPHERES</button><button id="export">EXPORT LOG</button></div><label for="speed">SIM SPEED <span id="speedVal">1.0×</span></label><input id="speed" type="range" min="0.2" max="3" value="1" step="0.1"/><div class="slots" id="slots"></div><p id="focusText" class="readout">S1 — signed sphere register · unassigned physical region</p></section>
+<section><h2>BENCHMARK PIT · SAME WORLD / SAME BUDGET</h2>
+<div class="row"><button id="benchRun">RUN BOTH</button><button id="benchStress">ALL HOLD</button><button id="benchExport">EXPORT BENCH</button></div>
+<canvas id="benchRace" width="320" height="132" style="display:block;width:100%;height:auto;image-rendering:pixelated;border:3px solid #587289;background:#0b172a" aria-label="Pixel-art side by side comparison of independent scout exploration"></canvas>
+<pre id="benchReadout">The monkeys are ready to compare two exploration strategies under the same synthetic boundary rules.</pre>
+<p id="benchVerdict" class="warn tiny">The benchmark is simulation-only. Results do not prove physical time dilation or general learning.</p></section>
+<section><h2>ATOMIC THOUGHT</h2><pre>{ -1, +1 }  →  1 position
+ signed net   = 0
+ shadow       = FIRST PAIR ONLY
+
+             ● nucleus
+       ⟲ orbital paths ⟳
+
+ S1 S2 S3 S4 S5 = [- | +]
+ G0 G1 = gravity labels
+ V0 V1 = void labels
+ axis = ±X / ±Y / ±Z</pre><div class="warn tiny">The nucleus, orbital trails, electrons, and five sphere registers are conceptual illustrations. The physical ionosphere, magnetosphere and heliosphere are not concentric atomic orbitals.</div></section>
+<section><h2>SCOUT MEMORY · INDEPENDENT PLANS</h2><pre id="strategy">SCOUT PLANS INITIALIZING...</pre><p id="planStatus" class="tiny">Strategy decisions: append-only local journal</p><div class="row"><button id="replan">REPLAN SCOUTS</button><button id="replayPlans">REPLAY PLANS</button></div><h2>THREE INDEPENDENT WITNESSES</h2><div class="row"><button id="uncertain">UNCERTAIN</button><button id="conflict">CONFLICT</button><button id="clear">HIDE LOG</button><button id="replay">REPLAY</button></div><p id="persist" class="tiny">LOCAL JOURNAL: INITIALIZING</p><pre id="log" aria-live="polite">a1 / b1 / c1 are crossing.
+No quorum, no votes.
+No physical promotion.</pre></section>
+<section><h2>PHYSICAL REGIONS · REFERENCES ONLY</h2><p class="tiny">Earth's ionosphere, plasmasphere, magnetosphere; Sun's heliosphere; and the HD 61005 astrosphere remain independent examples. No S-slot assignment or fixed measured radius is implied.</p><p><a href="https://github.com/DavidWise01/jane/tree/main/b149" target="_blank" rel="noopener">View source / provenance</a></p></section></aside></main>
+<script>
+'use strict';
+const $=id=>document.getElementById(id),cv=$('game'),g=cv.getContext('2d');g.imageSmoothingEnabled=false;
+const W=320,H=200,C=['#ff945c','#ad8dff','#54e2bd','#5caef9','#f0b5eb'],radii=[20,30,40,51,62];let tick=0,spin=.25,tilt=.2,speed=1,playing=true,view='ATOM',focus=0,events=[],pass=0,hold=0,seq=0,scoutStart=-1,drag=false,px=0,py=0;
+const monkeys=[{id:'a1',x:19,shirt:'#ff985b',walk:0},{id:'b1',x:95,shirt:'#78cfad',walk:2},{id:'c1',x:171,shirt:'#b29aff',walk:4}];
+function box(x,y,w,h,c){g.fillStyle=c;g.fillRect(Math.round(x),Math.round(y),Math.ceil(w),Math.ceil(h))}
+function stroke(x,y,w,h,c){g.strokeStyle=c;g.lineWidth=1;g.strokeRect(Math.round(x)+.5,Math.round(y)+.5,w,h)}
+function txt(t,x,y,color='#d5e9ee',size=7){g.font=`${size}px monospace`;g.fillStyle=color;g.fillText(String(t),Math.round(x),Math.round(y))}
+// All sprite pixels are original and draw at the game's native low resolution.
+const SHAPE=['..KKKKKK..','.KBBBBBBK.','KBBTBBTBBK','KBBBBBBBBK','KBSSBBSSBK','KSSSSSSSSK','.KSSNNSSK.','..KSSSSK..','...KKKK...'];
+function sprite(x,y,scale,shirt,step){const p={K:'#332132',B:'#9d623f',T:'#c3895a',S:'#ecc092',N:'#59382d'};const s=Math.max(1,scale);for(let row=0;row<SHAPE.length;row++)for(let col=0;col<SHAPE[row].length;col++){let v=SHAPE[row][col];if(v!=='.')box(x+col*s,y+row*s,s,s,p[v])}box(x+2*s,y+9*s,6*s,3*s,shirt);box(x+(step%2===0?2:3)*s,y+12*s,s,2*s,'#6a5669');box(x+(step%2===0?7:6)*s,y+12*s,s,2*s,'#6a5669');box(x+4*s,y+3*s,s,s,'#121b27');box(x+7*s,y+3*s,s,s,'#121b27')}
+function proj(x,y,z){let ca=Math.cos(spin),sa=Math.sin(spin),ct=Math.cos(tilt),st=Math.sin(tilt);let X=x*ca+z*sa,Z=-x*sa+z*ca,Y=y*ct-Z*st,depth=y*st+Z*ct;let f=220/(220-depth);return{X:162+X*f,Y:87+Y*f,depth,f}}
+function segment3(a,b,color,step=1){let A=proj(...a),B=proj(...b);g.strokeStyle=color;g.beginPath();g.moveTo(Math.round(A.X),Math.round(A.Y));g.lineTo(Math.round(B.X),Math.round(B.Y));g.stroke()}
+function orbital(radius,phase,color,plane){const pts=[];let ct=Math.cos(plane),st=Math.sin(plane);for(let i=0;i<=72;i++){let u=i/72*Math.PI*2;pts.push([radius*Math.cos(u),radius*Math.sin(u)*ct,radius*Math.sin(u)*st])}for(let i=0;i<72;i+=1)segment3(pts[i],pts[i+1],color)}
+function atom(){for(let k=4;k>=0;k--){orbital(radii[k],k*.48,C[k]+'96',k*.55+.2)}
+ for(let k=4;k>=0;k--){let u=tick*.007*(1+.14*k)+k*1.33,rad=radii[k],p=proj(rad*Math.cos(u),rad*Math.sin(u)*Math.cos(k*.55),rad*Math.sin(u)*Math.sin(k*.55));box(p.X-2,p.Y-2,4,4,C[k]);box(p.X-1,p.Y-1,2,2,'#fff7d0')}
+ const center=proj(0,0,0);box(center.X-7,center.Y-7,14,14,'#552d5a');box(center.X-5,center.Y-5,10,10,'#ffae70');box(center.X-1,center.Y-7,3,14,'#fceab2');box(center.X-7,center.Y-1,14,3,'#e36e74');txt('ATOM',150,113,'#ffd5a2')}
+function sphereMode(){for(let k=4;k>=0;k--){let r=radii[k];for(let lat=-1;lat<=1;lat++){let pts=[];for(let i=0;i<=60;i++){const u=i/60*Math.PI*2,rr=r*Math.cos(lat*.5),Y=r*Math.sin(lat*.5);pts.push([rr*Math.cos(u),Y,rr*Math.sin(u)])}for(let i=0;i<60;i++)segment3(pts[i],pts[i+1],C[k]+'a0')}
+ orbital(r,0,C[k],1.57)}txt('5 SIGNED SLOTS',130,103,'#ffd8b4')}
+function backdrop(){box(0,0,W,H,'#0b1123');for(let i=0;i<90;i++){let x=((i*73+19)%318),y=((i*43+23)%160);if(i%4===0||((tick*.03+i*17)%41)<2)box(x,y,i%6===0?2:1,1,i%3===0?'#6c7e9e':'#344363')}
+ box(0,154,320,46,'#273d45');box(0,153,320,2,'#5b91a0');for(let i=0;i<32;i++){box(i*10,168+(i%3)*6,6,2,'#365f63');box(i*10+2,189,6,2,'#405b6b')}
+ box(0,140,320,13,'#132b37');for(let i=0;i<40;i++)box(i*8,144,4,2,i%2===0?'#38948e':'#354d67');}
+function drawLab(){box(7,159,303,38,'#172636');stroke(7,159,303,38,'#4d8290');for(const [i,m]of monkeys.entries()){let x=18+i*96;box(x-2,181,70,4,'#42717e');box(x+45,166,20,16,'#0a1927');stroke(x+45,166,20,16,m.shirt);txt(i===0?'LAB':i===1?'DATA':'TEST',x+47,174,m.shirt,6);sprite(x,164,1,m.shirt,Math.floor(tick/15)+i);txt(m.id,x+12,194,'#d7e7e6',6)}
+ box(270,164,29,23,'#3c354b');stroke(270,164,29,23,'#ac8edb');txt('>>',279,174,'#fbce8a');txt('SCI',275,183,'#e9d8ff',6)}
+function draw(){backdrop();if(view==='ATOM')atom();else sphereMode();drawLab();box(6,15,97,15,'#152a38');stroke(6,15,97,15,'#54798c');txt('S'+(focus+1)+' [- | +]',11,25,C[focus],8);txt(view==='ATOM'?'NUCLEUS: 1 / SHADOW: 0':'BOUNDARY PROBE: SYNTHETIC',8,43,'#a9d8d8',7);if(!playing)txt('PAUSED',146,22,'#ffb07e',9);$('tick').textContent=String(Math.floor(tick)).padStart(4,'0')}
+function event(slot,dir,before,after,u,source='SIMULATION',witness='a1'){const threshold=radii[slot],cross=dir==='OUT'?(before+u<threshold&&after-u>threshold):(before-u>threshold&&after+u<threshold),status=cross&&source==='SIMULATION'?'SIMULATED_CROSSING':'HOLD';let e={id:'pixel-'+(++seq),slot:'S'+(slot+1),direction:dir,witness,time:new Date().toISOString(),frame:'PIXEL_DEMO_FRAME',before,after,uncertainty:u,threshold,source,status,physicalPromotion:false};events.push(e);status==='HOLD'?hold++:pass++;$('cross').textContent=String(pass).padStart(3,'0');$('hold').textContent=String(hold).padStart(3,'0');$('log').textContent=events.slice(-9).reverse().map(e=>e.id+' '+e.witness+' '+e.slot+' '+e.direction+'\n'+e.status+' '+e.before.toFixed(1)+'→'+e.after.toFixed(1)).join('\n\n');}
+function probe(){const r=radii[focus];event(focus,'OUT',r-3,r+3,.2,'SIMULATION',monkeys[seq%3].id);scoutStart=tick}
+function select(i){focus=i;$('seat').textContent='S'+(i+1);$('slots').replaceChildren();for(let s=0;s<5;s++){let b=document.createElement('button');b.textContent='S'+(s+1);b.className=s===focus?'on':'';b.onclick=()=>select(s);$('slots').append(b)}$('focusText').textContent='S'+(i+1)+' · [- | +] · PHYSICAL BOUNDARY UNASSIGNED · VISUAL R='+radii[i];}
+let last=performance.now();function loop(now){let dt=Math.min(50,now-last);last=now;if(playing){tick+=dt*.052*speed;spin+=dt*.00016*speed; if(scoutStart>=0&&tick-scoutStart>20)scoutStart=-1}draw();requestAnimationFrame(loop)}
+$('pause').onclick=()=>{playing=!playing;$('pause').textContent=playing?'Ⅱ PAUSE':'▶ RUN'};$('probe').onclick=probe;$('reset').onclick=()=>{tick=0;spin=.25;tilt=.2;select(0)};$('viewAtom').onclick=()=>{view='ATOM';$('viewAtom').className='on';$('viewSpheres').className='';$('modeLabel').textContent='ATOM / 3D PROJECTION'};$('viewSpheres').onclick=()=>{view='SPHERES';$('viewSpheres').className='on';$('viewAtom').className='';$('modeLabel').textContent='SPHERE BOUNDARIES / 3D'};$('speed').oninput=e=>{speed=Number(e.target.value);$('speedVal').textContent=speed.toFixed(1)+'×'};
+$('uncertain').onclick=()=>{let r=radii[focus];event(focus,'OUT',r-.2,r+.2,.8,'UNVERIFIED','b1')};$('conflict').onclick=()=>{let r=radii[focus];event(focus,'IN',r-3,r+3,.1,'UNVERIFIED','c1')};$('clear').onclick=()=>{events=[];pass=hold=0;$('cross').textContent=$('hold').textContent='000';$('log').textContent='Session log cleared; no physical evidence modified.'};$('export').onclick=()=>{let data={schema:'JANE-B151-PIXEL-SIMULATION',shadowOnlyFirstPair:true,physicalRelease:'HOLD',events};let blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='jane-b149-pixel-witnesses.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)};
+window.addEventListener('keydown',e=>{if(['ArrowLeft','ArrowRight','ArrowUp','ArrowDown','Space'].includes(e.code))e.preventDefault();if(e.code==='ArrowLeft')spin-=.16;if(e.code==='ArrowRight')spin+=.16;if(e.code==='ArrowUp')tilt=Math.min(1.1,tilt+.12);if(e.code==='ArrowDown')tilt=Math.max(-1.1,tilt-.12);if(e.code==='Space')$('pause').click();if(e.code==='KeyP')probe();if(/^Digit[1-5]$/.test(e.code))select(Number(e.code.slice(-1))-1)});
+cv.addEventListener('pointerdown',e=>{drag=true;px=e.clientX;py=e.clientY;cv.setPointerCapture(e.pointerId)});cv.addEventListener('pointermove',e=>{if(!drag)return;spin+=(e.clientX-px)*.01;tilt=Math.max(-1.1,Math.min(1.1,tilt+(e.clientY-py)*.01));px=e.clientX;py=e.clientY});cv.addEventListener('pointerup',()=>drag=false);
+
+// B151 layer: moving pixel scouts, browser-local append journal, deterministic replay.
+// The browser chain is for accidental corruption detection, not cryptographic provenance.
+const STORAGE_KEY='jane-b150-sphere-observations-v1';
+const runners=[
+  {w:'a1',r:5,dir:1,phase:0.1,color:'#ff985b',last:5,trace:[]},
+  {w:'b1',r:27,dir:1,phase:2.25,color:'#78cfad',last:27,trace:[]},
+  {w:'c1',r:53,dir:-1,phase:4.4,color:'#b29aff',last:53,trace:[]}
+];
+let journal=[],journalVisible=true,storageOk=true,runnerLast=performance.now(),journalSequence=0;
+function checksum(str){let h=2166136261;for(let i=0;i<str.length;i++){h^=str.charCodeAt(i);h=Math.imul(h,16777619)}return(h>>>0).toString(16).padStart(8,'0')}
+function ledgerEntry(e){
+ const obs={...e,origin:'PIXEL_SCOUT_SIMULATION',physicalPromotion:false};
+ const prev=journal.length?journal[journal.length-1].hash:'GENESIS';
+ const sequence=journal.length+1;
+ const hash=checksum(JSON.stringify({sequence,prev,obs}));
+ return{sequence,prev,obs,hash};
+}
+function validateJournal(entries){
+ let prev='GENESIS';
+ for(let i=0;i<entries.length;i++){
+  const e=entries[i];
+  if(!e||e.sequence!==i+1||e.prev!==prev||e.hash!==checksum(JSON.stringify({sequence:e.sequence,prev:e.prev,obs:e.obs})))return false;
+  if(e.obs?.physicalPromotion!==false||!['SIMULATED_CROSSING','HOLD'].includes(e.obs?.status))return false;
+  prev=e.hash;
+ }
+ return true;
+}
+function saveJournal(){
+ if(!storageOk)return;
+ try{localStorage.setItem(STORAGE_KEY,JSON.stringify(journal));$('persist').textContent='LOCAL JOURNAL: '+journal.length+' ENTRIES · REPLAY READY · DEMO CHECKSUM'}
+ catch(e){storageOk=false;$('persist').textContent='LOCAL PERSISTENCE UNAVAILABLE · EXPORT JSON TO RETAIN'}
+}
+function refreshJournal(){
+ if(!journalVisible)return;
+ $('log').textContent=journal.length?journal.slice(-11).reverse().map(q=>q.sequence+' '+q.obs.witness+' '+q.obs.slot+' '+q.obs.direction+' '+q.obs.status+'\n'+q.obs.before.toFixed(2)+'→'+q.obs.after.toFixed(2)+' ±'+q.obs.uncertainty+' ['+q.hash+']').join('\n\n'):'NO RECORDED SCOUT OBSERVATIONS';
+ $('cross').textContent=String(journal.filter(q=>q.obs.status==='SIMULATED_CROSSING').length).padStart(3,'0');
+ $('hold').textContent=String(journal.filter(q=>q.obs.status==='HOLD').length).padStart(3,'0');
+}
+function restoreJournal(){
+ try{
+  const raw=localStorage.getItem(STORAGE_KEY);
+  if(raw){const parsed=JSON.parse(raw);
+   if(!Array.isArray(parsed)||!validateJournal(parsed)){storageOk=false;$('persist').textContent='HOLD · LOCAL JOURNAL INTEGRITY FAILURE';return}
+   journal=parsed;seq=Math.max(0,...parsed.map(e=>Number(String(e.obs?.id||'').split('-').at(-1))||0));
+  }
+  $('persist').textContent='LOCAL JOURNAL: '+journal.length+' ENTRIES · REPLAY READY · DEMO CHECKSUM';
+  refreshJournal();
+ }catch(e){storageOk=false;$('persist').textContent='LOCAL STORAGE UNAVAILABLE · SESSION ONLY'}
+}
+const previousEvent=event;
+event=function(slot,dir,before,after,u,source='SIMULATION',witness='a1'){
+ previousEvent(slot,dir,before,after,u,source,witness);
+ const e=events[events.length-1];if(!e)return;
+ const physicalRecord={...e,frame:'B150_VISUAL_UNITS',source:'B150_PIXEL_SCOUT',provenanceKind:'SIMULATION'};
+ if(source!=='SIMULATION')physicalRecord.status='HOLD';
+ const entry=ledgerEntry(physicalRecord);journal.push(entry);saveJournal();refreshJournal();
+};
+function moveRunners(dt){
+ for(const r of runners){
+  const old=r.r;let next=old+dt*.018*speed*r.dir;
+  if(next>70){next=70;r.dir=-1}
+  if(next<4){next=4;r.dir=1}
+  r.r=next;r.phase+=dt*.0004*speed;
+  for(let s=0;s<radii.length;s++){
+   const boundary=radii[s];
+   const sign=r.dir>0?'OUT':'IN';
+   const touched=(r.dir>0&&old<boundary&&next>=boundary)||(r.dir<0&&old>boundary&&next<=boundary);
+   if(touched)event(s,sign,old,next,.01,'SIMULATION',r.w);
+  }
+  const xyz=[r.r*Math.cos(r.phase),r.r*.23*Math.sin(r.phase*.7),r.r*Math.sin(r.phase)];
+  const p=proj(...xyz);
+  r.trace.push([p.X,p.Y]);if(r.trace.length>16)r.trace.shift();
+ }
+}
+function drawRunners(){
+ runners.forEach((r,i)=>{
+  if(r.trace.length>1){for(let k=1;k<r.trace.length;k++)segment2(r.trace[k-1],r.trace[k],r.color)}
+  const end=r.trace.at(-1);if(!end)return;
+  // Original chunky coder sprite, scaled 1:1 pixel for perspective walk.
+  sprite(end[0]-5,end[1]-11,1,r.color,Math.floor(tick/6)+i);
+  txt(r.w,end[0]-5,end[1]-14,r.color,6);
+ });
+ txt('SCOUTS WALKING  [SIGNED - / +]',9,52,'#8fedc7',7);
+}
+function segment2(a,b,color){g.beginPath();g.strokeStyle=color;g.moveTo(Math.round(a[0]),Math.round(a[1]));g.lineTo(Math.round(b[0]),Math.round(b[1]));g.stroke()}
+const priorDraw=draw;
+draw=function(){priorDraw();drawRunners()};
+const priorLoop=loop;
+loop=function(now){const dt=Math.min(50,now-runnerLast);runnerLast=now;if(playing)moveRunners(dt);priorLoop(now)};
+$('clear').onclick=()=>{journalVisible=false;$('log').textContent='DISPLAY HIDDEN · JOURNAL KEPT · CLICK REPLAY TO RESTORE';$('persist').textContent='LOCAL JOURNAL PRESERVED · '+journal.length+' ENTRIES'};
+$('replay').onclick=()=>{journalVisible=true;if(!validateJournal(journal)){$('persist').textContent='HOLD · JOURNAL INTEGRITY FAILURE';return}refreshJournal();$('persist').textContent='REPLAY PASS · '+journal.length+' ENTRIES · NO QUORUM · NO PHYSICAL PROMOTION'};
+$('reset').onclick=()=>{tick=0;spin=.25;tilt=.2;select(0);runners.forEach((r,i)=>{r.r=5+i*22;r.dir=1;r.trace=[]});$('persist').textContent='POSITION RESET · JOURNAL PRESERVED'};
+$('export').onclick=()=>{const bundle={schema:'JANE-B151-LOCAL-DEMO-EXPORT',hashAlgorithm:'FNV32_DEMO_NONCRYPTOGRAPHIC',base:{shadow:'{-1,+1}>1',signedSpheres:['S1','S2','S3','S4','S5']},physicalRelease:'HOLD',journal};const blob=new Blob([JSON.stringify(bundle,null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='jane-b150-pixel-sphere-journal.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)};
+restoreJournal();
+
+
+// B151 independent strategy layer: each witness reads only its own prior B150 journal entries.
+const STRATEGY_KEY='jane-b151-independent-plans-v1',RADS=[20,30,40,51,62];
+let decisions=[],decisionsStorage=true,plannerEnabled=true;
+const remember=(w)=>{
+ const counts=RADS.map((radius,i)=>({slot:'S'+(i+1),radius,visits:0,holds:0}));
+ for(const row of journal){const e=row.obs;
+  if(e.witness!==w||e.source!=='B150_PIXEL_SCOUT'||e.frame!=='B150_VISUAL_UNITS')continue;
+  const j=Number(e.slot?.slice(1))-1;if(!(j>=0&&j<5))continue;
+  if(e.status==='HOLD'){counts[j].visits++;counts[j].holds++}
+  else if(e.status==='SIMULATED_CROSSING')counts[j].visits++;
+ }
+ return counts;
+};
+function choose(r){
+ const prior=r.targetSlot||null;
+ const candidates=remember(r.w).map(x=>({...x,score:100-25*x.visits+35*x.holds-.1*Math.abs(r.r-x.radius)-(prior===x.slot?5:0)}));
+ candidates.sort((a,b)=>b.score-a.score||Number(a.slot.slice(1))-Number(b.slot.slice(1)));
+ const selected=candidates[0];
+ return {witness:r.w,targetSlot:selected.slot,targetRadius:selected.radius,score:selected.score,reason:selected.visits===0?'UNVISITED':selected.holds?'REVISIT_UNCERTAIN':'LOWEST_COVERAGE',basis:'OWN_WITNESS_OBSERVATIONS_ONLY',physicalPromotion:false};
+}
+function decisionEntry(choice){
+ const sequence=decisions.length+1,previous=decisions.at(-1)?.hash||'GENESIS';
+ const record={sequence,previous,choice,observationJournalHead:journal.at(-1)?.hash||'GENESIS',observationsRead:journal.length};
+ return {...record,hash:checksum(JSON.stringify(record))};
+}
+function checkDecisions(items){
+ let prior='GENESIS';
+ for(let i=0;i<items.length;i++){
+  const e=items[i],{hash,...record}=e;
+  if(record.sequence!==i+1||record.previous!==prior||hash!==checksum(JSON.stringify(record))||record.choice?.physicalPromotion!==false||record.choice?.basis!=='OWN_WITNESS_OBSERVATIONS_ONLY'||!['a1','b1','c1'].includes(record.choice.witness))return false;
+  prior=hash;
+ }
+ return true;
+}
+function storeDecisions(){
+ if(!decisionsStorage)return;
+ try{localStorage.setItem(STRATEGY_KEY,JSON.stringify(decisions));$('planStatus').textContent='B151 LOCAL STRATEGY: '+decisions.length+' SAVED · DEMO CHECKSUM'}
+ catch(e){decisionsStorage=false;$('planStatus').textContent='LOCAL STRATEGY STORAGE UNAVAILABLE · SESSION ONLY'}
+}
+function showPlans(){
+ $('strategy').textContent=runners.map(r=>{
+  const h=remember(r.w),seen=h.reduce((n,x)=>n+x.visits,0),uncertain=h.reduce((n,x)=>n+x.holds,0);
+  return r.w+' > '+(r.targetSlot||'...')+' '+(r.choiceReason||'WAIT')+'\n   OBS '+seen+' HOLD '+uncertain+' R='+r.r.toFixed(1)+' → '+(r.goal??r.r).toFixed(1);
+ }).join('\n\n');
+}
+function assign(r){
+ const c=choose(r);r.targetSlot=c.targetSlot;r.choiceReason=c.reason;
+ r.goal=r.r<c.targetRadius?c.targetRadius+1.5:c.targetRadius-1.5;
+ r.travelDir=Math.sign(r.goal-r.r)||1;
+ const d=decisionEntry(c);decisions.push(d);storeDecisions();showPlans();
+}
+function restoreDecisions(){
+ try{const raw=localStorage.getItem(STRATEGY_KEY);
+  if(raw){const parsed=JSON.parse(raw);if(!Array.isArray(parsed)||!checkDecisions(parsed)){decisionsStorage=false;$('planStatus').textContent='HOLD · STRATEGY CHAIN INVALID';return}decisions=parsed}
+  $('planStatus').textContent='B151 LOCAL STRATEGY: '+decisions.length+' REPLAYABLE CHOICES';
+ }catch(e){decisionsStorage=false;$('planStatus').textContent='STRATEGY STORAGE UNAVAILABLE'}
+}
+const previousMoveRunners=moveRunners;
+moveRunners=function(dt){
+ if(!plannerEnabled){previousMoveRunners(dt);return}
+ for(const r of runners){
+  if(r.goal===undefined)assign(r);
+  const old=r.r,step=dt*.018*speed;
+  let next=old+Math.sign(r.goal-old)*Math.min(step,Math.abs(r.goal-old));
+  r.r=next;r.phase+=dt*.0004*speed;
+  const dir=next>old?'OUT':next<old?'IN':null;
+  if(dir){for(let s=0;s<RADS.length;s++){
+   const threshold=RADS[s],crossed=dir==='OUT'?(old<threshold&&next>=threshold):(old>threshold&&next<=threshold);
+   if(crossed)event(s,dir,old,next,.01,'SIMULATION',r.w);
+  }}
+  const xyz=[r.r*Math.cos(r.phase),r.r*.23*Math.sin(r.phase*.7),r.r*Math.sin(r.phase)];
+  const p=proj(...xyz);r.trace.push([p.X,p.Y]);if(r.trace.length>16)r.trace.shift();
+  if(Math.abs(r.r-r.goal)<1e-7)assign(r);
+ }
+ if(Math.floor(tick)%10===0)showPlans();
+};
+const priorReset=$('reset').onclick;
+$('reset').onclick=()=>{priorReset();runners.forEach(r=>{r.goal=undefined;r.targetSlot=null;r.choiceReason='RESET'});showPlans()};
+$('replan').onclick=()=>runners.forEach(r=>assign(r));
+$('replayPlans').onclick=()=>{
+ if(!checkDecisions(decisions)){$('planStatus').textContent='HOLD · STRATEGY JOURNAL INTEGRITY';return}
+ $('planStatus').textContent='REPLAY PASS · '+decisions.length+' INDEPENDENT DECISIONS · NO QUORUM';
+ showPlans();
+};
+const priorExport=$('export').onclick;
+$('export').onclick=()=>{
+ const bundle={schema:'JANE-B151-LOCAL-DEMO-EXPORT',algorithm:'FNV32_DEMO_NONCRYPTOGRAPHIC',
+ physicalRelease:'HOLD',observationJournal:journal,decisionJournal:decisions,
+ summary:runners.map(r=>({witness:r.w,history:remember(r.w),next:choose(r)}))};
+ const blob=new Blob([JSON.stringify(bundle,null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');
+ a.href=url;a.download='jane-b151-scout-memory.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);
+};
+restoreDecisions();showPlans();
+
+
+// B152: parallel deterministic benchmark with no writes to the B150/B151 evidence journals.
+const B52={id:'B152-SYNTHETIC-V1',steps:12,starts:[5,27,53],holdsBeforeClear:[0,0,2,0,1]},slots52=['S1','S2','S3','S4','S5'];
+let raceData=null,raceFrame=0,racePlaying=false,benchSource=null;
+function run52(strategy,witness,scenario){
+ const wi=['a1','b1','c1'].indexOf(witness),visits=[0,0,0,0,0],holds=[0,0,0,0,0],clear=[0,0,0,0,0],seenHold=new Set(),resolved=new Set(),trace=[];
+ let radius=scenario.starts[wi],previous=null,repeatedHolds=0,travel=0;
+ for(let t=0;t<scenario.steps;t++){
+  let i;
+  if(strategy==='ROUND_ROBIN')i=(wi+t)%5;
+  else{
+   const ranking=visits.map((v,k)=>({index:k,score:100-25*v+35*holds[k]-.1*Math.abs(radius-RADS[k])-(previous==='S'+(k+1)?5:0)}));
+   ranking.sort((a,b)=>b.score-a.score||a.index-b.index);i=ranking[0].index;
+  }
+  const before=radius,after=RADS[i],distance=Math.abs(after-before);radius=after;travel+=distance;visits[i]++;
+  const status=visits[i]<=scenario.holdsBeforeClear[i]?'HOLD':'SIMULATED_CROSSING';
+  if(status==='HOLD'){if(seenHold.has('S'+(i+1)))repeatedHolds++;seenHold.add('S'+(i+1));holds[i]++}else{clear[i]++;if(seenHold.has('S'+(i+1)))resolved.add('S'+(i+1))}
+  trace.push({step:t+1,witness,slot:'S'+(i+1),status,before,after,distance,physicalPromotion:false});previous='S'+(i+1);
+ }
+ return{strategy,witness,trace,metrics:{coverage:visits.filter(Boolean).length,uncertaintiesResolved:resolved.size,remainingUnresolved:[...seenHold].filter(s=>!resolved.has(s)).length,repeatedHolds,travelVisualUnits:travel,holds:holds.reduce((a,b)=>a+b,0),visits:scenario.steps}};
+}
+function compare52(scenario){
+ const people=['a1','b1','c1'];
+ const memory=people.map(w=>run52('MEMORY',w,scenario)),roundRobin=people.map(w=>run52('ROUND_ROBIN',w,scenario));
+ const aggregate=rr=>{const out={coverage:0,uncertaintiesResolved:0,remainingUnresolved:0,repeatedHolds:0,travelVisualUnits:0,holds:0,visits:0};rr.forEach(r=>Object.keys(out).forEach(k=>out[k]+=r.metrics[k]));return out};
+ const a=aggregate(memory),b=aggregate(roundRobin);
+ const objectives=[['coverage',1],['uncertaintiesResolved',1],['remainingUnresolved',-1],['repeatedHolds',-1],['travelVisualUnits',-1]];
+ const wins=objectives.filter(([k,s])=>(a[k]-b[k])*s>0).map(x=>x[0]);
+ const losses=objectives.filter(([k,s])=>(a[k]-b[k])*s<0).map(x=>x[0]);
+ const verdict=!losses.length&&wins.length?'MEMORY_PARETO_DOMINATES':!wins.length&&losses.length?'ROUND_ROBIN_PARETO_DOMINATES':!wins.length&&!losses.length?'TIE':'TRADEOFF_NO_UNQUALIFIED_WINNER';
+ return{schema:'JANE-B152-BROWSER_BENCHMARK',scenario,memory,roundRobin,totals:{memory:a,roundRobin:b},wins,losses,verdict,physicalPromotion:false,quorum:false};
+}
+function startBench(stress=false){
+ const scenario=stress?{...B52,id:'ALL_HOLD',holdsBeforeClear:[20,20,20,20,20]}:B52;
+ const result=compare52(scenario);raceData=result;raceFrame=0;racePlaying=true;
+ const a=result.totals.memory,b=result.totals.roundRobin;
+ $('benchReadout').textContent='               MEMORY   ROUND\nCOVERAGE       '+String(a.coverage).padStart(5)+'   '+String(b.coverage).padStart(5)+'\nHOLD RESOLVED  '+String(a.uncertaintiesResolved).padStart(5)+'   '+String(b.uncertaintiesResolved).padStart(5)+'\nUNRESOLVED     '+String(a.remainingUnresolved).padStart(5)+'   '+String(b.remainingUnresolved).padStart(5)+'\nREPEAT HOLDS   '+String(a.repeatedHolds).padStart(5)+'   '+String(b.repeatedHolds).padStart(5)+'\nTRAVEL PIXELS  '+String(a.travelVisualUnits).padStart(5)+'   '+String(b.travelVisualUnits).padStart(5)+'\nVISITS         '+String(a.visits).padStart(5)+'   '+String(b.visits).padStart(5);
+ $('benchVerdict').textContent=scenario.id+' · '+result.verdict+' · '+(result.wins.length?'memory wins '+result.wins.join(', '):'')+(result.losses.length?' · loses '+result.losses.join(', '):'')+'. All evidence: synthetic HOLD for physical promotion.';
+}
+function renderRace(){
+ const cv=$('benchRace'),ctx=cv.getContext('2d');ctx.imageSmoothingEnabled=false;ctx.fillStyle='#0b172a';ctx.fillRect(0,0,320,132);
+ function text(t,x,y,color){ctx.fillStyle=color;ctx.font='8px monospace';ctx.fillText(t,x,y)}
+ text('CODE MONKEY BENCHMARK - '+(raceData?.scenario.id||'READY'),7,12,'#ffc98e');
+ if(!raceData){text('PRESS RUN BOTH TO START',45,70,'#7ce0c7');return}
+ const c=raceData,t=Math.min(c.scenario.steps,Math.floor(raceFrame));
+ for(let si=0;si<2;si++){
+  const row=si===0?c.memory:c.roundRobin,y=27+si*56;
+  text(si===0?'MEMORY SCOUTS':'ROUND-ROBIN SCOUTS',6,y,'#9cbbce');
+  ctx.strokeStyle='#547386';ctx.strokeRect(7,y+6,306,40);
+  for(let j=0;j<3;j++){
+   const entry=row[j].trace[Math.max(0,t-1)],base=y+14+j*10,trackX=19;
+   ctx.fillStyle=['#ff985b','#78cfad','#b29aff'][j];
+   const x=trackX+(entry?entry.after/70:row[j].trace[0].before/70)*264;
+   ctx.fillRect(x-3,base-3,7,6);ctx.fillStyle='#ffe3bf';ctx.fillRect(x-1,base-2,2,2);
+   text(['a1','b1','c1'][j],290,base+2,'#bfd3de');
+   if(t>0)text(entry.slot,Math.min(260,x+6),base+2,entry.status==='HOLD'?'#ff8989':'#70d8b3');
+  }
+ }
+ text('DECISION '+t+'/'+c.scenario.steps+'  |  '+c.verdict,5,129,'#fad3ae');
+}
+let benchLast=performance.now();
+function animateBench(now){if(racePlaying){raceFrame+=(now-benchLast)*.0035;if(raceFrame>=B52.steps){raceFrame=B52.steps;racePlaying=false}}benchLast=now;renderRace();requestAnimationFrame(animateBench)}
+$('benchRun').onclick=()=>startBench(false);
+$('benchStress').onclick=()=>startBench(true);
+$('benchExport').onclick=()=>{if(!raceData)return;const out={...raceData,exportedAt:new Date().toISOString(),status:'SIMULATED_ONLY_NOT_AN_ATTESTATION'};const url=URL.createObjectURL(new Blob([JSON.stringify(out,null,2)],{type:'application/json'}));const a=document.createElement('a');a.href=url;a.download='jane-b152-benchmark-'+raceData.scenario.id.toLowerCase()+'.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),800)};
+requestAnimationFrame(animateBench);startBench(false);
+
+select(0);requestAnimationFrame(loop);
+</script></body></html>
