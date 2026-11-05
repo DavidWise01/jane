@@ -50,7 +50,7 @@ function classify(proof,{refSha=null,fileState='UNKNOWN',checks=null,statuses=nu
   if(pending.length)reasons.push('BASE_CI_UNRESOLVED');
  }
  const unique=[...new Set(reasons)];
- return{schema:'JANE-B169-DRIFT-AND-CI-v1',repository:repo||null,baseSha:base||null,observedSha:refSha,
+ return{schema:'JANE-B169-DRIFT-AND-CI-v1',repository:repo||null,proposalSha256:proof?.sha256||null,baseSha:base||null,observedSha:refSha,
   status:unique.length?'HOLD':'BASE_OBSERVED_PASS_NOT_PROPOSAL_VALIDATED',reasons:unique,
   evidence:{targetFileState:fileState,checkRuns:checks?.length??null,commitStatuses:statuses?.length??null,
     observedCount,failed,pending,passed},
