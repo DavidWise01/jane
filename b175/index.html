@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>JANE B175 · FORMIC Scratch Integration Observatory</title>
+<style>
+:root{color-scheme:dark;--bg:#080f19;--panel:#172636;--line:#38566a;--fg:#e7f2ed;--orange:#ffad78;--green:#76e4ac;--teal:#79cfe0}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 50% 0%,#203e4c,var(--bg) 62%);font:14px/1.5 ui-monospace,Consolas,monospace;color:var(--fg)}
+header{padding:24px;max-width:1280px;margin:auto}h1{font-size:clamp(25px,4vw,45px);margin:0}h2{font-size:17px;color:var(--teal);margin:0 0 10px}
+.tag{color:var(--orange);letter-spacing:2px;font-size:12px}.muted,small{color:#abc3ce}.wrap{max-width:1280px;padding:0 20px 36px;margin:auto}
+.cols{display:grid;grid-template-columns:minmax(320px,1.2fr) minmax(290px,1fr);gap:16px}
+.panel{border:1px solid var(--line);border-radius:12px;background:var(--panel);padding:18px;margin-bottom:16px;overflow:hidden}
+pre{white-space:pre-wrap;overflow-wrap:anywhere;font-size:12px;background:#0a1621;padding:15px;border-radius:9px;color:#b9e9dd}
+a{color:#87dbcf}.bar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:12px 0}
+.button{display:inline-block;padding:9px 12px;border:1px solid #59828c;border-radius:7px;background:#223746;cursor:pointer;text-decoration:none;color:#e8ffff;font:inherit}
+.button:hover{background:#315264}
+input[type=file]{display:none}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:15px 0}
+.stat{border:1px solid var(--line);border-radius:9px;padding:11px;background:#0c1b27}.stat b{display:block;font-size:25px;color:var(--green)}.stat small{font-size:10px}
+table{border-collapse:collapse;width:100%;font-size:12px}td,th{border-bottom:1px solid #324e60;text-align:left;padding:9px;vertical-align:top}
+svg{width:100%;height:auto;max-height:300px;display:block}.foot{padding:14px 0;border-top:1px solid var(--line);font-size:12px}
+@media(max-width:840px){.cols{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}}
+</style></head>
+<body><header><div class="tag">DAVIDWISE01 / JANE / FORMIC / B175</div><h1>REPEATED <span style="color:var(--green)">TREE DIFF</span> PROOF</h1><p class="muted">TWO SCRATCH WORKSPACES · IDENTICAL MANIFESTS · ZERO REMOTE WRITES</p></header>
+<main class="wrap">
+<div class="stats">
+<div class="stat"><b id="observed">—</b><small>PROPOSALS OBSERVED</small></div>
+<div class="stat"><b id="passed">—</b><small>EXACT DELTA PASS</small></div>
+<div class="stat"><b id="held">—</b><small>HOLD</small></div>
+<div class="stat"><b>0</b><small>TARGET REPO CI EXECUTED</small></div>
+</div>
+<div class="cols">
+<div>
+<section class="panel"><h2>TWO-RUN MANIFEST REPRODUCIBILITY</h2>
+<svg viewBox="0 0 760 330" role="img" aria-label="Three independent witnesses feeding a scratch Git patch check">
+<rect x="10" y="8" width="740" height="312" rx="16" fill="#0a1723" stroke="#37566a"/>
+<g stroke="#628d9b" stroke-width="3" fill="none"><path d="M128 92V132H380V178M380 92V178M633 92V132H380"/><path d="M380 238V266"/></g>
+<g fill="#263644" stroke-width="2"><rect x="24" y="29" width="209" height="63" rx="8" stroke="#e69a6c"/><rect x="275" y="29" width="209" height="63" rx="8" stroke="#68cfa3"/><rect x="526" y="29" width="209" height="63" rx="8" stroke="#79cfe0"/><rect x="215" y="178" width="330" height="60" rx="9" stroke="#adcae0"/><rect x="215" y="266" width="330" height="40" rx="9" stroke="#f0b77a"/></g>
+<g font-family="monospace" font-size="15" font-weight="bold" text-anchor="middle" fill="#e7f2ed"><text x="128" y="52">a1 · B168</text><text x="128" y="76" font-size="12">EXACT PROOF</text><text x="380" y="52">b1 · B169</text><text x="380" y="76" font-size="12">LIVE BASE SHA</text><text x="633" y="52">c1 · B170</text><text x="633" y="76" font-size="12">LOCAL PATCH CHECK</text><text x="380" y="203">B171 · DIGEST + TIME BIND</text><text x="380" y="225" font-size="12">SAME PROPOSAL · ≤ 300 S</text><text x="380" y="292" font-size="13">B175 · SCRATCH GIT APPLY</text></g>
+</svg>
+<p class="muted">B174 is repeated in two separately created disposable workspaces. The complete before-and-after manifest is compared, not just the added file.</p></section>
+<section class="panel"><h2>ACTUAL EVALUATION REPORT</h2>
+<div class="bar"><label class="button" for="reportInput">IMPORT B175 JSON<input id="reportInput" type="file" accept=".json,application/json"></label>
+<a class="button" href="https://github.com/DavidWise01/jane/actions/workflows/b175-reproducibility.yml" target="_blank" rel="noopener">GITHUB WORKFLOW</a></div>
+<p id="status" class="muted">No actual B175 artifact imported; no target repository integration is claimed.</p>
+<div style="overflow-x:auto"><table><thead><tr><th>REPOSITORY</th><th>PROOF</th><th>RESULT</th></tr></thead><tbody id="rows"><tr><td colspan="3">Awaiting real report</td></tr></tbody></table></div>
+</section>
+</div>
+<div>
+<section class="panel"><h2>EXECUTION BOUNDARY</h2><pre>01  EXISTING B168 PROPOSAL
+02  FRESH B169 BASE OBSERVATION
+03  B170 LOCAL FILE CHECKS
+04  B171 TRIPLE EVIDENCE BIND
+05  VERIFY PINNED TREE + BLOBS
+06  INVENTORY ALL ORIGINAL FILES
+07  APPLY FIXED PATCH WITH GIT
+08  INVENTORY ALL FINAL FILES
+09  ASSERT EXACT ONE ADDITION
+10  CLEAN UP TEMP WORKSPACE
+
+PASS → REPRODUCIBLE_TREE_DELTA_NO_EXECUTION
+FAIL → HOLD
+
+NO REPO BUILD OR TEST EXECUTED
+NO PR CREATED
+NO AUTO-RETRY
+NO AUTO-MERGE</pre></section>
+<section class="panel"><h2>SNAPSHOT SECURITY LIMITS</h2><pre>OWNER: DavidWise01 (public only)
+SOURCE: exact pinned base SHA
+MAX GIT TREE ENTRIES: 200
+MAX TOTAL BLOB DATA: 2 MiB
+MAX SINGLE BLOB: 512 KiB
+
+REJECT: symlinks and submodules
+REJECT: path traversal and .git paths
+REJECT: stale refs and truncated trees
+VERIFY: Git blob SHA-1 per file
+VERIFY: all before/after file hashes
+PRESERVE: all original bytes / modes
+
+NO TARGET SCRIPTS EXECUTED
+NO DEFAULT BRANCH WRITES
+NO AUTOMATIC PR / MERGE</pre></section><section class="panel"><h2>BEFORE / AFTER MANIFEST</h2>
+<div class="stats"><div class="stat"><b id="mAdded">—</b><small>ADDED</small></div><div class="stat"><b id="mModified">—</b><small>MODIFIED</small></div><div class="stat"><b id="mDeleted">—</b><small>DELETED</small></div><div class="stat"><b id="mPreserved">—</b><small>PRESERVED</small></div></div>
+<pre id="mDetails">Expected delta:
++ .github/ISSUE_TEMPLATE/bug_report.md
+~ none
+- none
+
+Import a read-only B175 run artifact to inspect evidence.</pre>
+<p class="muted">Manifest hashes detect changes to the report but do not authenticate a human owner. The native Node audit is required to verify integrity.</p></section><section class="panel"><h2>TWO-RUN CONSISTENCY</h2>
+<pre id="reproDetails">RUN A: not observed
+RUN B: not observed
+BEFORE: not compared
+AFTER: not compared
+PERMITTED DELTA: not compared
+NO TARGET REPO CODE EXECUTED</pre>
+<p class="muted">Separate scratch workspaces do not represent independent implementations. Matching evidence grants no write permission.</p></section><section class="panel"><h2>CANONICAL SOURCES</h2>
+<p><a href="https://github.com/DavidWise01/jane/blob/main/scripts/btf2/jane-b175-reproducibility.cjs">B175 controlled integration kernel</a></p>
+<p><a href="https://github.com/DavidWise01/jane/blob/main/scripts/btf2/jane-b175-autonomous-reproducibility.cjs">B175 bounded autonomous scanner</a></p>
+<p><a href="https://github.com/DavidWise01/jane/blob/main/governance/JANE-B175-CONTROLLED-INTEGRATION-v1.0.md">B175 governing invariant</a></p>
+<p class="muted">A1, B1 and C1 report observations, never vote or create an ISA. The d view is read-only. Actual source code from discovered repositories is never executed.</p>
+</section></div></div>
+<div class="foot">B175 · FORMIC PERIMETER · OBSERVATION ONLY · 3 WITNESSES · NO QUORUM · ZERO ISA INSTRUCTIONS</div>
+</main>
+<script>
+const $=id=>document.getElementById(id);
+$('reportInput').addEventListener('change',async e=>{
+const f=e.target.files&&e.target.files[0];if(!f)return;
+try{
+const r=JSON.parse(await f.text());
+if(r.schema!=='JANE-B175-INTEGRATION-REPORT-v1'||r.mode!=='READ_ONLY'||!Array.isArray(r.entries)||
+r.governance?.automaticWrites!==false||r.governance?.automaticMerge!==false||r.governance?.targetRepositoryCodeExecuted!==false)
+throw Error('Unsafe or mismatched B175 format');
+$('observed').textContent=r.counts?.observed??r.entries.length;
+$('passed').textContent=r.counts?.reproducible??'—';
+$('held').textContent=r.counts?.held??'—';
+$('rows').replaceChildren();
+for(const item of r.entries.slice(0,80)){
+const tr=document.createElement('tr'),a=document.createElement('td'),b=document.createElement('td'),c=document.createElement('td');
+a.textContent=item.repository||'UNKNOWN';b.textContent=String(item.proposalSha256||'UNVERIFIED').slice(0,14);
+c.textContent=(item.status||'HOLD')+(item.independentWorkspaces===true?' / CLEANED':' / CLEANUP UNCONFIRMED')+(item.reason?' / '+item.reason:'');
+tr.append(a,b,c);$('rows').append(tr);
+}
+if(!r.entries.length){const tr=document.createElement('tr'),td=document.createElement('td');td.colSpan=3;td.textContent='HOLD_NO_PROPOSALS · No B168 proof supplied';tr.append(td);$('rows').append(tr)}
+const proof=r.entries.find(x=>x.status==='REPRODUCIBLE_TREE_DELTA_NO_EXECUTION');
+$('mAdded').textContent=proof?.repeats??'—';
+$('mModified').textContent=proof?.identicalBefore===true?'YES':'—';
+$('mDeleted').textContent=proof?.identicalAfter===true?'YES':'—';
+$('mPreserved').textContent=proof?.identicalAllowedDelta===true?'YES':'—';
+$('mDetails').textContent=proof?
+ 'REPETITIONS: '+proof.repeats+'\nPROPOSAL: '+proof.proposalSha256+
+ '\nBASE: '+proof.baseSha+'\nTREE: '+proof.sourceTreeSha+
+ '\nATTESTATION: '+proof.attestationSha256
+ :'No reproducibility pass in report.';
+$('reproDetails').textContent=proof?
+ 'RUN A MANIFEST: '+proof.sourceManifests?.[0]+
+ '\nRUN B MANIFEST: '+proof.sourceManifests?.[1]+
+ '\nBEFORE SAME: '+proof.identicalBefore+
+ '\nAFTER SAME: '+proof.identicalAfter+
+ '\nDELTA SAME: '+proof.identicalAllowedDelta+
+ '\nTARGET CODE EXECUTED: '+proof.codeExecutedFromTarget
+ :'No repeated evaluation evidence available.';
+$('status').textContent='Imported '+r.entries.length+' reproducibility observations. Browser does not cryptographically verify integrity; target repo CI remains untested.';
+}catch(err){$('status').textContent='HOLD: '+err.message}
+});
+</script></body></html>
