@@ -1,0 +1,72 @@
+{
+  "schema": "JANE-B156-D-DISPATCHER-v1",
+  "inherits": [
+    "b155/isa-v1.json",
+    "b154/closed-loop-v1.json"
+  ],
+  "notation": "[a:122,b:122,c:122:d=a+b+c::isa]",
+  "registers": {
+    "a": {
+      "brace": "H",
+      "witness": "a1",
+      "global": [
+        1,
+        122
+      ]
+    },
+    "b": {
+      "brace": "O",
+      "witness": "b1",
+      "global": [
+        123,
+        244
+      ]
+    },
+    "c": {
+      "brace": "N",
+      "witness": "c1",
+      "global": [
+        245,
+        366
+      ]
+    }
+  },
+  "d": {
+    "mode": "READ_ONLY_INSTRUCTION_DISPATCHER",
+    "cells": 366,
+    "additionalAllocation": 0,
+    "sourceRegisters": 3
+  },
+  "opcodes": [
+    "STEP",
+    "READ",
+    "WITNESS",
+    "ASSEMBLE",
+    "CHECK",
+    "INTERRUPT",
+    "RESUME"
+  ],
+  "pcStart": {
+    "a": 1,
+    "b": 1,
+    "c": 1
+  },
+  "checkpoint": {
+    "state": [
+      "pc",
+      "dispatchCount"
+    ],
+    "onInterrupt": "FREEZE_MUTATION",
+    "onResume": "VALIDATE_SNAPSHOT_HASH",
+    "journal": "APPEND_ONLY_SHA256_NODE",
+    "replay": "REEXECUTE_ALL_COMMANDS_FROM_GENESIS"
+  },
+  "signedSteps": [
+    "-",
+    "+"
+  ],
+  "firstShadowOnly": true,
+  "quorum": false,
+  "physicalPromotion": false,
+  "status": "SYMBOLIC_SIMULATION_ONLY"
+}
