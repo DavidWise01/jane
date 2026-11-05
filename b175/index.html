@@ -107,21 +107,21 @@ $('reportInput').addEventListener('change',async e=>{
 const f=e.target.files&&e.target.files[0];if(!f)return;
 try{
 const r=JSON.parse(await f.text());
-if(r.schema!=='JANE-B175-INTEGRATION-REPORT-v1'||r.mode!=='READ_ONLY'||!Array.isArray(r.entries)||
+if(r.schema!=='JANE-B175-INTEGRATION-REPORT-v1'||r.mode!=='READ_ONLY'||!Array.isArray(r.results)||
 r.governance?.automaticWrites!==false||r.governance?.automaticMerge!==false||r.governance?.targetRepositoryCodeExecuted!==false)
 throw Error('Unsafe or mismatched B175 format');
-$('observed').textContent=r.counts?.observed??r.entries.length;
+$('observed').textContent=r.counts?.observed??r.results.length;
 $('passed').textContent=r.counts?.reproducible??'—';
 $('held').textContent=r.counts?.held??'—';
 $('rows').replaceChildren();
-for(const item of r.entries.slice(0,80)){
+for(const item of r.results.slice(0,80)){
 const tr=document.createElement('tr'),a=document.createElement('td'),b=document.createElement('td'),c=document.createElement('td');
 a.textContent=item.repository||'UNKNOWN';b.textContent=String(item.proposalSha256||'UNVERIFIED').slice(0,14);
 c.textContent=(item.status||'HOLD')+(item.independentWorkspaces===true?' / CLEANED':' / CLEANUP UNCONFIRMED')+(item.reason?' / '+item.reason:'');
 tr.append(a,b,c);$('rows').append(tr);
 }
-if(!r.entries.length){const tr=document.createElement('tr'),td=document.createElement('td');td.colSpan=3;td.textContent='HOLD_NO_PROPOSALS · No B168 proof supplied';tr.append(td);$('rows').append(tr)}
-const proof=r.entries.find(x=>x.status==='REPRODUCIBLE_TREE_DELTA_NO_EXECUTION');
+if(!r.results.length){const tr=document.createElement('tr'),td=document.createElement('td');td.colSpan=3;td.textContent='HOLD_NO_PROPOSALS · No B168 proof supplied';tr.append(td);$('rows').append(tr)}
+const proof=r.results.find(x=>x.status==='REPRODUCIBLE_TREE_DELTA_NO_EXECUTION');
 $('mAdded').textContent=proof?.repeats??'—';
 $('mModified').textContent=proof?.identicalBefore===true?'YES':'—';
 $('mDeleted').textContent=proof?.identicalAfter===true?'YES':'—';
@@ -139,7 +139,7 @@ $('reproDetails').textContent=proof?
  '\nDELTA SAME: '+proof.identicalAllowedDelta+
  '\nTARGET CODE EXECUTED: '+proof.codeExecutedFromTarget
  :'No repeated evaluation evidence available.';
-$('status').textContent='Imported '+r.entries.length+' reproducibility observations. Browser does not cryptographically verify integrity; target repo CI remains untested.';
+$('status').textContent='Imported '+r.results.length+' reproducibility observations. Browser does not cryptographically verify integrity; target repo CI remains untested.';
 }catch(err){$('status').textContent='HOLD: '+err.message}
 });
 </script></body></html>
