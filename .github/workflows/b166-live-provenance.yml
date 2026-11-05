@@ -1,5 +1,11 @@
 name: JANE B166 Live Owner Provenance
 on:
+  push:
+    paths:
+      - 'scripts/btf2/jane-b166-live-provenance.cjs'
+      - 'scripts/btf2/test-jane-b166-live-provenance.cjs'
+      - '.github/workflows/b166-live-provenance.yml'
+      - 'b166/**'
   schedule:
     - cron: '31 9 * * *'
   workflow_dispatch:
