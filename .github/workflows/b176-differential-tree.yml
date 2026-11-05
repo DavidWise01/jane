@@ -1,0 +1,49 @@
+name: JANE B176 Independent Tree Inventory
+on:
+  push:
+    paths:
+      - 'scripts/btf2/jane-b174-tree-diff.cjs'
+      - 'scripts/btf2/jane-b176-differential-tree.cjs'
+      - 'scripts/btf2/test-jane-b176-differential-tree.cjs'
+      - 'scripts/btf2/jane-b176-autonomous-differential.cjs'
+      - 'scripts/btf2/test-jane-b176-autonomous-differential.cjs'
+      - 'ecosystem/proposals/**'
+      - 'b176/**'
+      - '.github/workflows/b176-differential-tree.yml'
+  schedule:
+    - cron: '53 13 * * *'
+  workflow_dispatch:
+permissions:
+  contents: read
+  checks: read
+  statuses: read
+concurrency:
+  group: jane-b176-differential-tree
+  cancel-in-progress: false
+jobs:
+  differential-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Native B174-B176 regressions
+        run: |
+          node scripts/btf2/test-jane-b174-tree-diff.cjs
+          node scripts/btf2/test-jane-b175-reproducibility.cjs
+          node scripts/btf2/test-jane-b176-differential-tree.cjs
+          node scripts/btf2/test-jane-b176-autonomous-differential.cjs
+      - name: Observe pinned source and independently inventory temporary worktree
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/btf2/jane-b176-autonomous-differential.cjs --output ecosystem/reports/b176-latest.json
+      - name: Preserve differential attestation report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: jane-b176-differential-tree
+          path: ecosystem/reports/b176-latest.json
+          if-no-files-found: warn
+          retention-days: 30
