@@ -64,6 +64,7 @@ async function readPinned(proof,token='',fetchFn=api){
  const commit=await fetchFn(root+'/git/commits/'+encode(base.commitSha),token);
  if(commit?.sha!==base.commitSha||!sha40(commit.tree?.sha))throw Error('UNPINNED_TREE');
  const tree=await fetchFn(root+'/git/trees/'+encode(commit.tree.sha)+'?recursive=1',token);
+ if(tree?.sha!==commit.tree.sha)throw Error('TREE_SHA_MISMATCH');
  const plan=planTree(tree);
  if(plan.status!=='SNAPSHOT_PLAN')throw Error(plan.reason);
  const blobs=[];let read=0;
