@@ -1,0 +1,34 @@
+name: JANE B164 Durable Repair History
+on:
+  schedule:
+    - cron: '07 9 * * *'
+  workflow_dispatch:
+permissions:
+  contents: read
+  pull-requests: read
+concurrency:
+  group: jane-b164-history
+  cancel-in-progress: false
+jobs:
+  read-history:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Regression for owner resets and cooldowns
+        run: node scripts/btf2/test-jane-b164-durable-repair.cjs
+      - name: Derive versioned durable history read-only
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/btf2/jane-b164-durable-repair.cjs --output ecosystem/reports/b164-latest.json
+      - name: Archive versioned history snapshot for this workflow run
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: jane-b164-repair-history
+          path: ecosystem/reports/b164-latest.json
+          if-no-files-found: warn
+          retention-days: 30
