@@ -1,0 +1,45 @@
+{
+  "schema": "JANE-B160-ECOSPHERE-AUTONOMY-BOUND-v1",
+  "purpose": "maximal constructive benefit to DavidWise01 GitHub ecosystem through autonomous evidence-gathering and bounded improvement proposals",
+  "scope": {
+    "owner": "DavidWise01",
+    "repoLimit": 2500,
+    "publicRepositoriesOnly": true,
+    "privateRepoNamesNeverPublished": true,
+    "archiveObservationOnly": true
+  },
+  "execution": {
+    "schedule": "daily 07:19 UTC",
+    "manualTrigger": true,
+    "implementation": "Python stdlib + GitHub REST GET",
+    "writes": "artifact only to current jane workflow, never cross-repo",
+    "outputs": [
+      "ecosystem-inventory artifact",
+      "machine-readable recommendations"
+    ],
+    "rateLimit": "max 30 pages * 100",
+    "notes": "Private repos need separate opt-in review and must not be published"
+  },
+  "topology": {
+    "H": "inventory and provenance",
+    "O": "repository health signals",
+    "N": "improvement proposals",
+    "d": "read-only 366-cell symbolic view; reports aggregate separately",
+    "witnesses": [
+      "a1",
+      "b1",
+      "c1"
+    ],
+    "quorum": false,
+    "observerDepth": 1,
+    "isaDefined": false
+  },
+  "governance": {
+    "noAutomaticPRs": true,
+    "noAutomaticMerges": true,
+    "noSecretsExport": true,
+    "noCodeExecutionFromDiscoveredRepos": true,
+    "scopeExpansionRequiresExplicitRepositoryPolicy": true
+  },
+  "nextBound": "B161 scoped per-repo opt-in agents with conservative PR-only fixes and regression proofs"
+}
