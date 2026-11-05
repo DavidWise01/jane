@@ -1,0 +1,32 @@
+{
+  "schema": "JANE-B168-PROOF-CARRYING-PROPOSAL-v1",
+  "owner": "DavidWise01",
+  "status": "READ_ONLY_PROOF_CONSTRUCTION",
+  "repair": "BUG_REPORT_TEMPLATE",
+  "requirements": {
+    "repository": "public eligible opted-in DavidWise01 repository",
+    "b167": "POLICY_EVIDENCE_PRESENT with no write or retry authorization",
+    "base": "exact 40-hex base commit SHA",
+    "target": "missing .github/ISSUE_TEMPLATE/bug_report.md",
+    "changes": "exact one ADD_FILE change from B161 template",
+    "checks": "explicit names; all UNEXECUTED",
+    "envelope": "SHA256 whole proposal",
+    "retries": "not allowed"
+  },
+  "outputs": [
+    "proposal JSON with exact diff",
+    "read-only proof audit",
+    "GitHub Actions artifact"
+  ],
+  "strictNoWrites": true,
+  "noMerge": true,
+  "observerDepth": 1,
+  "witnesses": [
+    "a1",
+    "b1",
+    "c1"
+  ],
+  "quorum": false,
+  "isaDefined": false,
+  "limitation": "A digest and candidate checks do not establish owner authorization or successful CI."
+}
