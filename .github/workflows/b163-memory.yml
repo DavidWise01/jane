@@ -1,0 +1,25 @@
+name: JANE B163 Repair Memory Read Only
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+  checks: read
+  statuses: read
+  pull-requests: read
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node scripts/btf2/test-jane-b163-repair-memory.cjs
+      - run: node scripts/btf2/jane-b162-formic-verifier.cjs --output ecosystem/reports/b162-for-b163.json
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - run: node scripts/btf2/jane-b163-repair-memory.cjs --input ecosystem/reports/b162-for-b163.json --output ecosystem/reports/b163-latest.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: formic-b163-repair-memory
+          path: ecosystem/reports/b163-latest.json
