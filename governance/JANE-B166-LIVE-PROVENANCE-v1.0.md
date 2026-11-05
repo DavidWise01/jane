@@ -1,0 +1,9 @@
+# B166 — Live pinned GitHub owner-intent provenance
+
+The B165 fixture-only evidence boundary is extended to read live GitHub REST metadata **without GitHub writes**. For public opted-in `DavidWise01` repositories, B166 obtains the default branch ref's exact commit SHA, then reads `.formic/retry-intent.json` and its change history against that pinned SHA. It matches the returned content byte length and Git blob hash against the latest path-changing commit, verifies GitHub's commit-verification signal and owner-account attribution, and compares the intent against the existing closed FORMIC PR and its head SHA.
+
+Every absent, ambiguous, mismatched, unreadable or out-of-scope piece of evidence returns HOLD. A passing record means `OWNER_INTENT_EVIDENCE_PRESENT`, **not** authenticated human consent or write permission. `GitHub verified` means GitHub verified the commit's signature under its rules; this cannot independently establish the human author's identity or current authorization. Owner intentions and capabilities remain separate; neither B166 nor its workflow can reopen, create, merge or retry PRs. The original B161 closed-PR suppression remains in force.
+
+The new scheduled read-only workflow publishes a run-specific evidence artifact, capped at eight opted-in public repositories per run. GitHub PR history remains its durable upstream reference. No private data or credentials should enter the reports. This is the same three-witness, one-observation-layer, read-only d view architecture; zero ISA instructions are defined.
+
+Next natural bound: B167 permit explicit trusted approval of *new* repair intents only after independent source-control policy and branch-protection validation, remaining draft-only and opt-in. Do not conflate CI green or account attribution with authorization.
