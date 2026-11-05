@@ -1,0 +1,9 @@
+{
+  "schema": "FORMIC-REPO-POLICY-v1",
+  "enabled": false,
+  "allowed_repairs": [
+    "BUG_REPORT_TEMPLATE"
+  ],
+  "max_open_pull_requests": 1,
+  "notes": "Copy to an individual repository at .formic/policy.json and explicitly set enabled:true only after reviewing. The robot may then draft a PR containing a missing bug report template; never merge it."
+}
