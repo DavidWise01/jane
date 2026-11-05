@@ -26,7 +26,7 @@ function versionedHistory(repo,prs,nowIso,options={}){
   events.push({pr:p.number,kind,createdAt:p.created_at,closedAt:p.closed_at||null,mergedAt:p.merged_at||null,headSha:p.head?.sha||null,sourceUrl:p.html_url||null});
  }
  events.sort((a,b)=>a.createdAt.localeCompare(b.createdAt)||a.pr-b.pr);
- let disposition='NO_PREVIOUS_PROPOSAL',remainingDays:null,ownerResetRequired=false;
+ let disposition='NO_PREVIOUS_PROPOSAL',remainingDays=null,ownerResetRequired=false;
  if(events.length){
   const latest=events.at(-1);
   if(latest.kind==='OPEN_PR'){disposition='HOLD_EXISTING_OPEN_PR';ownerResetRequired=true}
