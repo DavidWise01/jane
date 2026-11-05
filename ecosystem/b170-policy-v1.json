@@ -1,0 +1,44 @@
+{
+  "schema": "JANE-B170-ISOLATED-PATCH-EVALUATION-v1",
+  "mode": "LOCAL_FIXED_TEMPLATE_ONLY",
+  "scope": {
+    "owner": "DavidWise01",
+    "maxCommittedProofs": 8,
+    "inputDirectory": "ecosystem/proposals",
+    "trustedPatch": "B161 fixed bug report template only"
+  },
+  "checks": [
+    "PATCH_BYTES",
+    "PATCH_SHA256",
+    "FIXED_TEMPLATE",
+    "ISSUE_TEMPLATE_FRONT_MATTER",
+    "REPRO_STEPS",
+    "EXPECTED_AND_ACTUAL",
+    "SECRET_HYGIENE"
+  ],
+  "results": {
+    "positive": "LOCAL_CHECKS_PASS",
+    "negative": "HOLD",
+    "noProof": "HOLD_NO_PROPOSALS",
+    "meaning": "local fixed-template validation only, not target repo CI"
+  },
+  "execution": {
+    "temporaryWorkspace": true,
+    "removeAfterRun": true,
+    "executeForeignRepoCode": false,
+    "runRepoBuild": false,
+    "noGitHubWrites": true,
+    "noPullRequests": true,
+    "noMerges": true
+  },
+  "governance": {
+    "witnesses": [
+      "a1",
+      "b1",
+      "c1"
+    ],
+    "observerDepth": 1,
+    "noQuorum": true,
+    "isaDefined": false
+  }
+}
