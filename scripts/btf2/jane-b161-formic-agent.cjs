@@ -8,7 +8,7 @@ const TEMPLATE=['---','name: Bug report','about: Report a reproducible defect','
 function scoped(full){return typeof full==='string'&&/^DavidWise01\/[A-Za-z0-9_.-]+$/.test(full)}
 function repoGate(r){
  if(!r||!scoped(r.full_name))return'HOLD_OUT_OF_SCOPE';
- if(r.private||r.visibility==='private')return'HOLD_PRIVATE';
+ if(r.private!==false||(r.visibility&&r.visibility!=='public'))return'HOLD_PRIVATE_OR_NONPUBLIC';
  if(r.archived||r.disabled||r.fork)return'HOLD_ARCHIVED_DISABLED_OR_FORK';
  if(!r.default_branch)return'HOLD_DEFAULT_BRANCH';
  return'ELIGIBLE';
@@ -77,7 +77,7 @@ async function propose(repo,token){
  return{repo:repo.full_name,decision:'DRAFT_PR_OPENED',url:pr.html_url,number:pr.number};
 }
 async function main(){
- const args=process.argv.slice(2),fixture=args.includes('--fixture'),write=args.includes('--apply')&&process.env.FORMIC_ENABLE_PR_CREATION==='true'&&!fixture;
+ const args=process.argv.slice(2),fixture=args.includes('--fixture'),write=args.includes('--apply')&&process.env.FORMIC_ENABLE_PR_CREATION==='true'&&!!process.env.FORMIC_REPO_TOKEN&&!fixture;
  const output=args.includes('--output')?args[args.indexOf('--output')+1]:'ecosystem/reports/b161-latest.json';
  const token=process.env.FORMIC_REPO_TOKEN||process.env.GITHUB_TOKEN||'';
  const records=[];
