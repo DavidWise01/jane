@@ -27,5 +27,5 @@ assert.throws(()=>l.append({id:'foreign',boundaryId:'AB',side:'ARRIVAL',witness:
 assert.throws(()=>l.append({id:'ab-dep',boundaryId:'AB',side:'DEPARTURE',witness:'a1',sawCrossing:true,note:'',physicalPromotion:false}),/DUPLICATE/);
 assert.throws(()=>l.append({id:'invalid',boundaryId:'AB',side:'DEPARTURE',witness:'a1',sawCrossing:true,note:'',physicalPromotion:true}),/PROMOTION/);
 assert.throws(()=>l.open({boundaryId:'INVALID',from:62,to:63,sign:'+'}),/NOT_A_CROSS/);
-const tampered=l.logs.a1[0].record;tampered.sawCrossing=false;assert.equal(l.audit().status,'HOLD');
+const preserved=l.logs.a1[0];l.logs.a1[0]={...preserved,record:{...preserved.record,sawCrossing:false}};assert.equal(l.audit().status,'HOLD');
 console.log('PASS B159: paired independent reports, disagreement preservation, unmatched HOLD, source ownership, append-only SHA256 audit, no quorum');
