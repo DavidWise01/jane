@@ -1,0 +1,82 @@
+{
+  "schema": "JANE-B157-PRE-ISA-BOUNDARY-v1",
+  "userNotation": "[a:122 , b:122 , c:122 : d: a+b+c :: isa]",
+  "sourceRegisters": {
+    "a": {
+      "brace": "H",
+      "witness": "a1",
+      "global": [
+        1,
+        122
+      ]
+    },
+    "b": {
+      "brace": "O",
+      "witness": "b1",
+      "global": [
+        123,
+        244
+      ]
+    },
+    "c": {
+      "brace": "N",
+      "witness": "c1",
+      "global": [
+        245,
+        366
+      ]
+    }
+  },
+  "each": {
+    "boxLayerCounts": [
+      1,
+      2,
+      4,
+      6,
+      8,
+      12,
+      12,
+      8,
+      6,
+      2,
+      1
+    ],
+    "toroidLayerCounts": [
+      1,
+      3,
+      6,
+      9,
+      11,
+      11,
+      9,
+      6,
+      3,
+      1
+    ],
+    "boxCells": 62,
+    "toroidCells": 60,
+    "total": 122
+  },
+  "d": {
+    "definition": "a+b+c",
+    "view": "READ_ONLY_DERIVED",
+    "totalAddresses": 366,
+    "additionalCells": 0
+  },
+  "isa": {
+    "token": ":: isa",
+    "semantic": "UNASSIGNED",
+    "instructionsDefined": 0,
+    "opcodes": [],
+    "dispatcherDefined": false
+  },
+  "signedAccess": [
+    "-",
+    "+"
+  ],
+  "firstShadowOnly": true,
+  "physicalPromotion": false,
+  "noQuorum": true,
+  "supersedesInterpretation": "B155/B156 ISA CLAIMS; historical files retained",
+  "status": "PRE_ISA_STRUCTURE_PASS"
+}
