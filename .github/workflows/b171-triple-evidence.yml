@@ -1,0 +1,47 @@
+name: JANE B171 Triple Evidence Binding
+on:
+  push:
+    paths:
+      - 'scripts/btf2/jane-b171-triple-evidence.cjs'
+      - 'scripts/btf2/test-jane-b171-triple-evidence.cjs'
+      - 'scripts/btf2/jane-b169-drift-and-ci.cjs'
+      - 'ecosystem/proposals/**'
+      - 'b171/**'
+      - '.github/workflows/b171-triple-evidence.yml'
+  schedule:
+    - cron: '37 11 * * *'
+  workflow_dispatch:
+permissions:
+  contents: read
+  checks: read
+  statuses: read
+concurrency:
+  group: jane-b171-triple-evidence
+  cancel-in-progress: false
+jobs:
+  bind-evidence:
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: B168-B171 native regressions
+        run: |
+          node scripts/btf2/test-jane-b168-proof-proposal.cjs
+          node scripts/btf2/test-jane-b169-drift-and-ci.cjs
+          node scripts/btf2/test-jane-b170-isolated-evaluation.cjs
+          node scripts/btf2/test-jane-b171-triple-evidence.cjs
+      - name: Bind actual read-only evidence for committed proposals
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/btf2/jane-b171-triple-evidence.cjs --output ecosystem/reports/b171-latest.json
+      - name: Preserve read-only attestation as run artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: jane-b171-triple-evidence
+          path: ecosystem/reports/b171-latest.json
+          if-no-files-found: warn
+          retention-days: 30
