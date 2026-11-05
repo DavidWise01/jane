@@ -58,7 +58,7 @@ async function presence(repo,token){
  const [file,branch,prs]=await Promise.all([
   api(prefix+'/contents/'+TARGET+'?ref='+q(repo.default_branch),token,{optional:true}),
   api(prefix+'/git/ref/heads/'+BRANCH,token,{optional:true}),
-  api(prefix+'/pulls?state=open&head='+q(OWNER+':'+BRANCH)+'&per_page=5',token)
+  api(prefix+'/pulls?state=all&head='+q(OWNER+':'+BRANCH)+'&per_page=100',token)
  ]);
  return{fileExists:!!file,branchExists:!!branch,prExists:prs.length>0};
 }
