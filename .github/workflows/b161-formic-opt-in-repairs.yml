@@ -1,0 +1,33 @@
+name: Jane B161 FORMIC Per-Repo Draft PR
+on:
+  schedule:
+    - cron: '43 7 * * *'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: jane-b161-formic
+  cancel-in-progress: false
+jobs:
+  plan-or-propose:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Regression gates
+        run: node scripts/btf2/test-jane-b161-formic-agent.cjs
+      - name: Evaluate only opted-in repositories
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          FORMIC_REPO_TOKEN: ${{ secrets.FORMIC_REPO_TOKEN }}
+          FORMIC_ENABLE_PR_CREATION: ${{ vars.FORMIC_ENABLE_PR_CREATION || 'false' }}
+        run: node scripts/btf2/jane-b161-formic-agent.cjs --apply --output ecosystem/reports/b161-latest.json
+      - name: Store decisions and proposed PR links
+        uses: actions/upload-artifact@v4
+        with:
+          name: formic-b161-eligible-repo-decisions
+          path: ecosystem/reports/b161-latest.json
+          retention-days: 30
