@@ -1,0 +1,43 @@
+name: JANE B167 Independent Authorization Evidence
+on:
+  push:
+    paths:
+      - 'scripts/btf2/jane-b167-authorization.cjs'
+      - 'scripts/btf2/test-jane-b167-authorization.cjs'
+      - '.github/workflows/b167-authorization.yml'
+      - 'b167/**'
+  schedule:
+    - cron: '17 10 * * *'
+  workflow_dispatch:
+permissions:
+  contents: read
+  pull-requests: read
+concurrency:
+  group: jane-b167-authorization
+  cancel-in-progress: false
+jobs:
+  observe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Native Node regression suite
+        run: |
+          node scripts/btf2/test-jane-b165-owner-intent.cjs
+          node scripts/btf2/test-jane-b166-live-provenance.cjs
+          node scripts/btf2/test-jane-b167-authorization.cjs
+      - name: GET-only repository policy evidence scan
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/btf2/jane-b167-authorization.cjs --output ecosystem/reports/b167-latest.json
+      - name: Preserve B167 report as per-run artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: jane-b167-authorization-evidence
+          path: ecosystem/reports/b167-latest.json
+          if-no-files-found: warn
+          retention-days: 30
