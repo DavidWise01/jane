@@ -74,6 +74,11 @@ async function inspect(proof,token='',requestFn=request){
  // Read and compare ref before AND after all evidence to detect mid-observation drift.
  const root='/repos/'+scope,refRoute=root+'/git/ref/heads/'+q(base.branch);
  try{
+  const metadata=await requestFn(root,token);
+  if(metadata?.full_name!==scope||metadata?.owner?.login!==OWNER||metadata?.private!==false||
+     metadata?.archived===true||metadata?.disabled===true||metadata?.fork===true||
+     metadata?.default_branch!==base.branch)
+   return classify(proof,{readError:'REPOSITORY_SCOPE_OR_DEFAULT_BRANCH_CHANGED'});
   const first=await requestFn(refRoute,token);
   const firstSha=first?.object?.sha;
   if(!shaPattern.test(firstSha||'')||firstSha!==base.commitSha)return classify(proof,{refSha:firstSha,fileState:'UNKNOWN'});
