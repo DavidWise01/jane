@@ -1,0 +1,45 @@
+{
+  "schema": "JANE-B172-CONTROLLED-INTEGRATION-v1",
+  "owner": "DavidWise01",
+  "boundary": "Fixed B161 template Git apply in disposable scratch repo with B168–B171 evidence",
+  "scope": {
+    "maxCommittedProofs": 8,
+    "source": "ecosystem/proposals",
+    "repoOwner": "DavidWise01"
+  },
+  "required": [
+    "B168 audit PASS",
+    "B169 unchanged base/real base CI observed",
+    "B170 fixed patch local checks PASS and cleanup",
+    "B171 evidence digest and 300-second window pass",
+    "scratch git apply --check",
+    "scratch git apply",
+    "exact byte/sha256 validation",
+    "scratch cleaned"
+  ],
+  "positive": "SCRATCH_GIT_PATCH_PASS",
+  "negative": "HOLD",
+  "empty": "HOLD_NO_PROPOSALS",
+  "limitations": [
+    "Scratch Git repo does not include target repository tree",
+    "No target repository build or test execution",
+    "A patch that applies in scratch may fail in actual repo",
+    "GitHub authenticated approval not established",
+    "No PR or merge authority"
+  ],
+  "permissions": {
+    "githubContentsReadOnly": true,
+    "noDefaultBranchWrites": true,
+    "noCrossRepoWrites": true,
+    "noAutoRetry": true,
+    "noMerge": true
+  },
+  "governance": {
+    "a1": "proof",
+    "b1": "live base",
+    "c1": "local validation",
+    "observerDepth": 1,
+    "noQuorum": true,
+    "isaDefined": false
+  }
+}
