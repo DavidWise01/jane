@@ -1,0 +1,58 @@
+{
+  "schema": "JANE-B162-FORMIC-VERIFICATION-v1",
+  "purpose": "autonomous verification and failure-preserving observation of previously proposed FORMIC draft pull requests",
+  "scope": {
+    "owner": "DavidWise01",
+    "publicOnly": true,
+    "perRunMaxTargets": 10,
+    "requiresExplicitPolicy": true
+  },
+  "verifiedStates": [
+    "REVIEW_READY_NO_AUTO_MERGE",
+    "HOLD_CHECKS_FAILED",
+    "HOLD_CHECKS_PENDING",
+    "HOLD_CHECKS_UNAVAILABLE",
+    "HOLD_NO_CHECK_EVIDENCE",
+    "HOLD_CLOSED_PR_RETRY_SUPPRESSED",
+    "HOLD_NON_DRAFT_PR",
+    "NO_FORMIC_PR"
+  ],
+  "sources": {
+    "checkRuns": "GitHub check-runs API on exact PR head SHA",
+    "commitStatuses": "GitHub statuses API on exact PR head SHA",
+    "prHistory": "All PR states on FORMIC branch",
+    "policy": ".formic/policy.json"
+  },
+  "suppression": {
+    "afterFailedChecks": "HOLD, no automatic retry or force push",
+    "afterClosedPullRequest": "HOLD, no recreation under same FORMIC repair branch",
+    "manualMergeOnly": true,
+    "history": "Each scheduled run emits a separate immutable GitHub Actions artifact for the configured retention; does not change repository source"
+  },
+  "security": {
+    "githubApiMethods": [
+      "GET"
+    ],
+    "workflowPermissions": [
+      "contents:read",
+      "checks:read",
+      "statuses:read",
+      "pull-requests:read"
+    ],
+    "noRepoCodeExecution": true,
+    "noAutomaticWrites": true,
+    "token": "GITHUB_TOKEN or optional FORMIC_READ_TOKEN"
+  },
+  "kernel": {
+    "notation": "[a:122,b:122,c:122:d=a+b+c::isa]",
+    "isaDefined": false,
+    "observerDepth": 1,
+    "witnesses": [
+      "a1",
+      "b1",
+      "c1"
+    ],
+    "quorum": false,
+    "physicalPromotion": false
+  }
+}
