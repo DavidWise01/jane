@@ -1,0 +1,19 @@
+name: JANE B165 Owner Intent Evidence
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'scripts/btf2/jane-b165-owner-intent.cjs'
+      - 'scripts/btf2/test-jane-b165-owner-intent.cjs'
+      - 'b165/**'
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node scripts/btf2/test-jane-b165-owner-intent.cjs
