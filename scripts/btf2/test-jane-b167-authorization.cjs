@@ -28,4 +28,46 @@ const raw=JSON.stringify(approval),content={type:'file',path:'.formic/retry-auth
   content:Buffer.from(raw).toString('base64'),size:Buffer.byteLength(raw),sha:blobSha(raw)};
 assert.equal(decodeFile(content,'.formic/retry-authorization.json').status,'FILE_VERIFIED');
 assert.equal(decodeFile({...content,sha:'0'.repeat(40)},'.formic/retry-authorization.json').status,'HOLD');
-console.log('PASS B167 independent review policy, prior PR and digest match, expiry, protected branch, no PR/merge authority');
+console.log('PASS B167 independent policy unit gates');
+
+const {inspect}=require('./jane-b167-authorization.cjs');
+const pin='b'.repeat(40),intentCommit='c'.repeat(40),approvalCommit='d'.repeat(40);
+const original=Buffer.from(JSON.stringify(intent),'utf8');
+const authorized=Buffer.from(JSON.stringify(approval),'utf8');
+const file=(buf,path)=>({type:'file',path,encoding:'base64',content:buf.toString('base64'),
+  size:buf.length,sha:blobSha(buf.toString('utf8'))});
+const intentFile=file(original,'.formic/retry-intent.json');
+const approvalFile=file(authorized,'.formic/retry-authorization.json');
+const commit=(sha,source)=>({sha,files:[{filename:source.path,status:'modified',sha:source.sha}],
+  commit:{verification:{verified:true}},author:{login:'DavidWise01'},committer:{login:'DavidWise01'}});
+const previous=[{number:7,state:'closed',created_at:'2026-09-01T00:00:00Z',
+  closed_at:'2026-09-20T00:00:00Z',merged_at:null,
+  head:{ref:'formic/b161-bug-report',sha:intent.previous_head_sha}}];
+const mockRepo={full_name:repo,private:false,visibility:'public',archived:false,disabled:false,
+  fork:false,default_branch:'main'};
+function transport(overrides={}){
+ return async route=>{
+  if(route.includes('/git/ref/heads/'))return {object:{sha:pin}};
+  if(route.includes('/contents/.formic/retry-intent.json'))return intentFile;
+  if(route.includes('/contents/.formic/retry-authorization.json'))return approvalFile;
+  if(route.includes('/commits?path=.formic%2Fretry-intent.json'))return [{sha:intentCommit}];
+  if(route.includes('/commits?path=.formic%2Fretry-authorization.json'))return [{sha:approvalCommit}];
+  if(route.includes('/commits/'+intentCommit))return commit(intentCommit,intentFile);
+  if(route.includes('/commits/'+approvalCommit))return overrides.approvalCommit||commit(approvalCommit,approvalFile);
+  if(route.includes('/pulls?'))return previous;
+  if(route.includes('/branches/main/protection'))return overrides.protection===undefined?branchProtection:overrides.protection;
+  throw Error('UNEXPECTED_MOCK_ROUTE '+route);
+ };
+}
+(async()=>{
+ const good=await inspect(mockRepo,now,'',transport());
+ assert.equal(good.status,'POLICY_EVIDENCE_PRESENT');
+ assert.equal(good.mayCreatePR,false);
+ const badSignature=await inspect(mockRepo,now,'',transport({approvalCommit:{
+   ...commit(approvalCommit,approvalFile),commit:{verification:{verified:false}}}}));
+ assert.equal(badSignature.status,'HOLD');
+ const noProtection=await inspect(mockRepo,now,'',transport({protection:null}));
+ assert.equal(noProtection.status,'HOLD');
+ console.log('PASS B167 integration mock: same pinned SHA, independent file commits, branch protection');
+})().catch(e=>{console.error(e);process.exitCode=1});
+
