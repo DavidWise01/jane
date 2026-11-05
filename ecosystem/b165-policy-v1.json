@@ -1,0 +1,42 @@
+{
+  "schema": "JANE-B165-OWNER-INTENT-EVIDENCE-v1",
+  "owner": "DavidWise01",
+  "intentFile": ".formic/retry-intent.json",
+  "intentSchema": "FORMIC-RETRY-INTENT-v1",
+  "scope": "READ_ONLY_POLICY_EVIDENCE",
+  "required": [
+    "repository",
+    "repair",
+    "revision >= 2",
+    "allow_retry=true",
+    "previous_pr",
+    "previous_head_sha",
+    "rationale",
+    "expires_at",
+    "default_branch verified commit evidence",
+    "GitHub author and committer attribution",
+    "matching exact content digest"
+  ],
+  "result": {
+    "satisfied": "OWNER_INTENT_EVIDENCE_PRESENT",
+    "failed": "HOLD",
+    "grantsPRCreation": false,
+    "grantsMerge": false,
+    "overridesB161Suppression": false
+  },
+  "limits": {
+    "liveGitHubAttestation": "NOT_YET_WIRED",
+    "fixtureOnlyForB165": true,
+    "identity": "verified GitHub commit and account attribution are evidence, not independent identity verification"
+  },
+  "governance": {
+    "isaDefined": false,
+    "noQuorum": true,
+    "observerDepth": 1,
+    "witnesses": [
+      "a1",
+      "b1",
+      "c1"
+    ]
+  }
+}
