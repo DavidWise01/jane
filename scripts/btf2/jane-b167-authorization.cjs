@@ -73,16 +73,25 @@ async function inspect(repo,nowIso,token,fetchFn=api){
  const i=decodeFile(intentFile,INTENT_PATH),a=decodeFile(authFile,APPROVAL_PATH);
  if(i.status!=='FILE_VERIFIED'||a.status!=='FILE_VERIFIED')
   return{repository:full,status:'HOLD',reasons:[i.reason||'',' '+(a.reason||'')].filter(Boolean),mayCreatePR:false};
- const [historyCommits,historyPRs,protection]=await Promise.allSettled([
+ const [historyCommits,approvalCommits,historyPRs,protection]=await Promise.allSettled([
   fetchFn(root+'/commits?path='+enc(INTENT_PATH)+'&sha='+enc(pin)+'&per_page=2',token),
+  fetchFn(root+'/commits?path='+enc(APPROVAL_PATH)+'&sha='+enc(pin)+'&per_page=2',token),
   fetchFn(root+'/pulls?state=all&head='+enc('DavidWise01:'+BRANCH)+'&per_page=100',token),
   fetchFn(root+'/branches/'+enc(branch)+'/protection',token)
  ]);
- if(historyCommits.status!=='fulfilled'||historyPRs.status!=='fulfilled'||protection.status!=='fulfilled'||
+ if(historyCommits.status!=='fulfilled'||approvalCommits.status!=='fulfilled'||historyPRs.status!=='fulfilled'||protection.status!=='fulfilled'||
     !Array.isArray(historyCommits.value)||!historyCommits.value.length||
+    !Array.isArray(approvalCommits.value)||!approvalCommits.value.length||
     !Array.isArray(historyPRs.value)||historyPRs.value.length>=100)
   return{repository:full,status:'HOLD',reasons:['LIVE_PROVENANCE_OR_PROTECTION_UNAVAILABLE'],mayCreatePR:false};
  const commits=historyCommits.value,detail=await fetchFn(root+'/commits/'+enc(commits[0].sha),token);
+ const authDetail=await fetchFn(root+'/commits/'+enc(approvalCommits.value[0].sha),token);
+ if(authDetail?.sha!==approvalCommits.value[0].sha||
+    authDetail?.commit?.verification?.verified!==true||
+    authDetail?.author?.login!==OWNER||authDetail?.committer?.login!==OWNER||
+    !Array.isArray(authDetail?.files)||
+    !authDetail.files.some(f=>f.filename===APPROVAL_PATH&&['added','modified'].includes(f.status)&&f.sha===a.blob))
+   return{repository:full,status:'HOLD',reasons:['APPROVAL_COMMIT_UNVERIFIED'],mayCreatePR:false};
  const provenance=resolveAttestation(repo,intentFile,commits,detail,nowIso);
  if(provenance.status!=='EVIDENCE_PRESENT')
   return{repository:full,status:'HOLD',reasons:['B166_'+provenance.reason],mayCreatePR:false};
