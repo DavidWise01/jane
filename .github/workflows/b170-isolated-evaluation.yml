@@ -1,0 +1,40 @@
+name: JANE B170 Isolated Template Evaluation
+on:
+  push:
+    paths:
+      - 'scripts/btf2/jane-b170-isolated-evaluation.cjs'
+      - 'scripts/btf2/test-jane-b170-isolated-evaluation.cjs'
+      - 'ecosystem/proposals/**'
+      - 'b170/**'
+      - '.github/workflows/b170-isolated-evaluation.yml'
+  schedule:
+    - cron: '09 11 * * *'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: jane-b170-fixed-template-evaluation
+  cancel-in-progress: false
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Native B168 proof and B170 local regression
+        run: |
+          node scripts/btf2/test-jane-b168-proof-proposal.cjs
+          node scripts/btf2/test-jane-b170-isolated-evaluation.cjs
+      - name: Inspect any committed B168 proof envelopes using fixed local tests
+        run: node scripts/btf2/jane-b170-isolated-evaluation.cjs --output ecosystem/reports/b170-latest.json
+      - name: Preserve independent evaluation evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: jane-b170-local-evaluation
+          path: ecosystem/reports/b170-latest.json
+          if-no-files-found: warn
+          retention-days: 30
