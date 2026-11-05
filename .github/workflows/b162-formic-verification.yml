@@ -1,0 +1,38 @@
+name: JANE B162 FORMIC Autonomous PR Verification
+on:
+  schedule:
+    - cron: '11 8 * * *'
+  workflow_dispatch:
+permissions:
+  contents: read
+  checks: read
+  statuses: read
+  pull-requests: read
+concurrency:
+  group: jane-b162-formic-verification
+  cancel-in-progress: false
+jobs:
+  verify-opted-in-repairs:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: B161 policy and B162 verification tests
+        run: |
+          node scripts/btf2/test-jane-b161-formic-agent.cjs
+          node scripts/btf2/test-jane-b162-formic-verifier.cjs
+      - name: Inspect public opted-in FORMIC PRs and checks (GET only)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/btf2/jane-b162-formic-verifier.cjs --output ecosystem/reports/b162-latest.json
+      - name: Preserve run-specific verification artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: formic-b162-verification
+          path: ecosystem/reports/b162-latest.json
+          if-no-files-found: warn
+          retention-days: 30
