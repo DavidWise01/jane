@@ -1,0 +1,17 @@
+{
+  "schema": "FORMIC-RETRY-AUTHORIZATION-v1",
+  "enabled": false,
+  "repository": "DavidWise01/jane",
+  "repair": "BUG_REPORT_TEMPLATE",
+  "revision": 1,
+  "intent_revision": 2,
+  "previous_pr": null,
+  "previous_head_sha": null,
+  "intent_digest": null,
+  "allowed_actions": [
+    "REVIEW_FOR_DRAFT_PR"
+  ],
+  "expires_at": null,
+  "default_branch": "main",
+  "notes": "EXAMPLE ONLY. Disabled by default. No PR creation or retry permission is granted by this declaration."
+}
