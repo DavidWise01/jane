@@ -4,8 +4,12 @@ on:
     paths:
       - 'scripts/btf2/jane-b169-drift-and-ci.cjs'
       - 'scripts/btf2/test-jane-b169-drift-and-ci.cjs'
+      - 'scripts/btf2/jane-b169-autonomous-scan.cjs'
+      - 'scripts/btf2/test-jane-b169-autonomous-scan.cjs'
       - 'b169/**'
       - '.github/workflows/b169-drift-and-ci.yml'
+  schedule:
+    - cron: '43 10 * * *'
   workflow_dispatch:
     inputs:
       proposal_path:
@@ -32,6 +36,7 @@ jobs:
         run: |
           node scripts/btf2/test-jane-b168-proof-proposal.cjs
           node scripts/btf2/test-jane-b169-drift-and-ci.cjs
+          node scripts/btf2/test-jane-b169-autonomous-scan.cjs
       - name: Observe supplied exact proposal only
         if: ${{ inputs.proposal_path != '' }}
         env:
@@ -40,6 +45,11 @@ jobs:
         run: |
           node -e "const p=process.env.PROPOSAL_PATH; if(!new RegExp('^ecosystem/proposals/[A-Za-z0-9_.-]+[.]json$').test(p||'')) {console.error('HOLD_UNSAFE_PATH'); process.exit(2)}"
           node scripts/btf2/jane-b169-drift-and-ci.cjs --input "$PROPOSAL_PATH" --output ecosystem/reports/b169-latest.json
+      - name: Autonomous read-only scan of committed proposals
+        if: ${{ inputs.proposal_path == '' }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/btf2/jane-b169-autonomous-scan.cjs --output ecosystem/reports/b169-latest.json
       - name: Preserve observed evidence if supplied
         if: always()
         uses: actions/upload-artifact@v4
