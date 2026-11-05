@@ -1,0 +1,77 @@
+{
+  "schema": "JANE-B155-ABC-D-ISA-v1",
+  "notation": "[a:122 , b:122 , c:122 : d: a+b+c :: isa]",
+  "mapping": {
+    "a": {
+      "brace": "H",
+      "witness": "a1",
+      "global": [
+        1,
+        122
+      ]
+    },
+    "b": {
+      "brace": "O",
+      "witness": "b1",
+      "global": [
+        123,
+        244
+      ]
+    },
+    "c": {
+      "brace": "N",
+      "witness": "c1",
+      "global": [
+        245,
+        366
+      ]
+    }
+  },
+  "d": {
+    "type": "DERIVED_READ_ONLY_COMPOSITE_VIEW",
+    "expression": "a+b+c",
+    "addresses": 366,
+    "allocatesIndependentCells": false,
+    "composition": [
+      "a",
+      "b",
+      "c"
+    ]
+  },
+  "isa": {
+    "meaning": "USER_DEFINED_INSTRUCTION_SET_ARCHITECTURE",
+    "ops": [
+      "ADDR",
+      "READ",
+      "STEP",
+      "ASSEMBLE",
+      "WITNESS",
+      "CHECK"
+    ],
+    "pc": {
+      "a": 1,
+      "b": 1,
+      "c": 1
+    },
+    "signedStep": [
+      "-",
+      "+"
+    ],
+    "blocksize": 122,
+    "boxPerRegister": 62,
+    "toroidPerRegister": 60,
+    "separateWitnesses": true,
+    "quorum": false,
+    "physicalPromotion": false
+  },
+  "rootShadow": {
+    "onlyFirstPair": true,
+    "tokens": [
+      -1,
+      1
+    ],
+    "net": 0,
+    "effectivePositions": 1
+  },
+  "scienceStatus": "SYMBOLIC_COMPUTATIONAL_MODEL_HOLD"
+}
