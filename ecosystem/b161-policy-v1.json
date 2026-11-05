@@ -1,0 +1,22 @@
+{
+  "schema": "JANE-B161-FORMIC-PER-REPO-PR-v1",
+  "owner": "DavidWise01",
+  "agentMode": "AUTONOMOUS_SCOUT_WITH_OPT_IN_PR_WRITE_GATE",
+  "repair": "BUG_REPORT_TEMPLATE",
+  "policyPath": ".formic/policy.json",
+  "defaultOptIn": false,
+  "maxReposPerRun": 3,
+  "publicOnly": true,
+  "writeMode": "DRAFT_PR_ON_NON_DEFAULT_BRANCH",
+  "mergesAllowed": false,
+  "defaultBranchWrites": false,
+  "noISA": true,
+  "noQuorum": true,
+  "threeWitnesses": [
+    "a1",
+    "b1",
+    "c1"
+  ],
+  "rollout": "DRY_RUN_UNLESS_REPO_POLICY_AND_WRITE_SECRET",
+  "experimental": true
+}
