@@ -1,5 +1,7 @@
 name: JANE B163 Repair Memory Read Only
 on:
+  schedule:
+    - cron: '37 8 * * *'
   workflow_dispatch:
 permissions:
   contents: read
