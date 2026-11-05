@@ -1,0 +1,30 @@
+name: JANE B160 Autonomous Ecosphere Observation
+on:
+  schedule:
+    - cron: '19 7 * * *'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: jane-ecosphere-observe
+  cancel-in-progress: false
+jobs:
+  inventory:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run offline safety regression
+        run: python3 -m unittest discover -s scripts/btf2 -p 'test_jane_b160*.py' -v
+      - name: Observe public GitHub ecosphere (GET only)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 scripts/btf2/jane-b160-ecosystem-observer.py --limit 2500 --output ecosystem/reports/latest.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: jane-ecosphere-public-inventory
+          path: ecosystem/reports/latest.json
+          retention-days: 30
