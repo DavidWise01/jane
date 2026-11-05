@@ -1,0 +1,131 @@
+{
+  "schema": "JANE-B158-THREE-SOURCE-CONTAINMENT-v1",
+  "inherits": "b157/pre-isa-v1.json",
+  "notation": "[a:122 , b:122 , c:122 : d: a+b+c :: isa]",
+  "owners": [
+    {
+      "register": "a",
+      "brace": "H",
+      "witness": "a1",
+      "globalRange": [
+        1,
+        122
+      ]
+    },
+    {
+      "register": "b",
+      "brace": "O",
+      "witness": "b1",
+      "globalRange": [
+        123,
+        244
+      ]
+    },
+    {
+      "register": "c",
+      "brace": "N",
+      "witness": "c1",
+      "globalRange": [
+        245,
+        366
+      ]
+    }
+  ],
+  "d": {
+    "kind": "DERIVED_READ_ONLY_CONTAINMENT_VIEW",
+    "sourceOrder": [
+      "a",
+      "b",
+      "c"
+    ],
+    "totalAddresses": 366,
+    "allocatesAdditionalCells": 0,
+    "mayChangeSourceOwnership": false
+  },
+  "cellRegions": {
+    "box": {
+      "localRange": [
+        1,
+        62
+      ],
+      "count": 62
+    },
+    "toroid": {
+      "localRange": [
+        63,
+        122
+      ],
+      "count": 60
+    }
+  },
+  "globalBoundaryConventions": {
+    "forward": "+",
+    "reverse": "-",
+    "sourceAuthoritySeams": [
+      [
+        122,
+        123
+      ],
+      [
+        244,
+        245
+      ],
+      [
+        366,
+        1
+      ]
+    ],
+    "reverseAuthoritySeams": [
+      [
+        123,
+        122
+      ],
+      [
+        245,
+        244
+      ],
+      [
+        1,
+        366
+      ]
+    ],
+    "boxToroidSeamsLocal": [
+      [
+        62,
+        63
+      ],
+      [
+        63,
+        62
+      ],
+      [
+        122,
+        1
+      ],
+      [
+        1,
+        122
+      ]
+    ],
+    "semantic": "ADDRESS_ADJACENCY_NOT_PERMISSION"
+  },
+  "witnesses": {
+    "a": "a1",
+    "b": "b1",
+    "c": "c1",
+    "independent": true,
+    "noQuorum": true,
+    "appendOnly": true,
+    "foreignObservationPolicy": "HOLD",
+    "crossSourceResult": "HOLD_SOURCE_WITNESS_REQUIRED"
+  },
+  "isa": {
+    "label": ":: isa",
+    "defined": false,
+    "opcodes": [],
+    "instructions": 0
+  },
+  "firstShadowOnly": true,
+  "physicalPromotion": false,
+  "status": "SYMBOLIC_BOUNDARY_ONLY"
+}
