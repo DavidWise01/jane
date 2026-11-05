@@ -24,7 +24,7 @@ assert.equal(triple.status,'EVIDENCE_BOUND_NO_EXECUTION');
 const scratch=integrate({proposal:proof,base,local,triple});
 assert.equal(scratch.status,'SCRATCH_GIT_PATCH_PASS');
 const content=Buffer.from('# test repository\n','utf8'),blobSha=gitBlob(content);
-const plan={tree:[{path:'README.md',type:'blob',mode:'100644',sha:blobSha,size:content.length}],truncated:false};
+const plan={sha:treeSha,tree:[{path:'README.md',type:'blob',mode:'100644',sha:blobSha,size:content.length}],truncated:false};
 assert.equal(planTree(plan).status,'SNAPSHOT_PLAN');
 assert.equal(planTree({...plan,truncated:true}).status,'HOLD');
 assert.equal(planTree({tree:[{...plan.tree[0],path:'../escape'}],truncated:false}).status,'HOLD');
@@ -46,6 +46,8 @@ const fetchFn=async route=>{
 (async()=>{
  const tree=await readPinned(proof,'',fetchFn);
  assert.equal(tree.files,1);
+ const wrongTree=await readPinned(proof,'',async route=>route.includes('/git/trees/')?{...plan,sha:'f'.repeat(40)}:fetchFn(route)).catch(e=>e.message);
+ assert.equal(wrongTree,'TREE_SHA_MISMATCH');
  const good=applySnapshot({proof,base,local,triple,scratch,tree});
  assert.equal(good.status,'PINNED_TREE_PATCH_PASS');
  assert.equal(good.cleanupConfirmed,true);
