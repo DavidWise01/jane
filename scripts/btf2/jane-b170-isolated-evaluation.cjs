@@ -15,7 +15,7 @@ function examine(proof,{tempRoot=os.tmpdir(),existingTarget=false,makeTemp=fs.mk
  const e=proof.envelope,change=e.proposal.changes[0];
  if(change.operation!=='ADD_FILE'||change.path!==TARGET||change.after!==TEMPLATE||existingTarget)
    return hold('UNSAFE_OR_ALREADY_PRESENT_TARGET',repo);
- let temp=null,result;
+ let temp=null,result,deleted=false;
  const checks=[],record=(name,ok,detail)=>checks.push({name,status:ok?'PASS':'FAIL',detail});
  try{
   temp=makeTemp(path.join(tempRoot,'jane-b170-'));
@@ -41,11 +41,11 @@ function examine(proof,{tempRoot=os.tmpdir(),existingTarget=false,makeTemp=fs.mk
  }catch(err){result=hold('ISOLATED_EVALUATION_ERROR',repo)}
  finally{
   if(temp!==null){
-   try{remove(temp,{recursive:true,force:true})}
+   try{remove(temp,{recursive:true,force:true});deleted=true}
    catch{result=hold('WORKSPACE_CLEANUP_FAILED',repo)}
   }
  }
- result.workspaceDeleted=temp!==null;
+ result.workspaceDeleted=deleted;
  return result;
 }
 function compile(records){
