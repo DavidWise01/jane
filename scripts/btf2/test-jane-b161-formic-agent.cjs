@@ -9,7 +9,7 @@ assert.equal(m.decide(repo,policy).decision,'PROPOSE_DRAFT_PR');
 assert.equal(m.decide(repo,{...policy,enabled:false}).decision,'HOLD_NOT_OPTED_IN');
 assert.equal(m.decide(repo,null).decision,'HOLD_MISSING_POLICY');
 assert.equal(m.decide(repo,{...policy,allowed_repairs:[]}).decision,'HOLD_REPAIR_NOT_ALLOWED');
-assert.equal(m.decide({...repo,private:true},policy).decision,'HOLD_PRIVATE');
+assert.equal(m.decide({...repo,private:true},policy).decision,'HOLD_PRIVATE_OR_NONPUBLIC');
 assert.equal(m.decide({...repo,archived:true},policy).decision,'HOLD_ARCHIVED_DISABLED_OR_FORK');
 assert.equal(m.decide({...repo,full_name:'SomeoneElse/sample'},policy).decision,'HOLD_OUT_OF_SCOPE');
 assert.equal(m.decide(repo,policy,{fileExists:true}).decision,'NO_CHANGE_FILE_EXISTS');
