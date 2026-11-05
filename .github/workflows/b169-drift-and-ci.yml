@@ -38,7 +38,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PROPOSAL_PATH: ${{ inputs.proposal_path }}
         run: |
-          node -e "const p=process.env.PROPOSAL_PATH; if(!/^ecosystem\\/proposals\\/[A-Za-z0-9_.-]+\\.json$/.test(p)) { console.error('HOLD_UNSAFE_PATH'); process.exit(2) }"
+          node -e "const p=process.env.PROPOSAL_PATH; if(!new RegExp('^ecosystem/proposals/[A-Za-z0-9_.-]+[.]json$').test(p||'')) {console.error('HOLD_UNSAFE_PATH'); process.exit(2)}"
           node scripts/btf2/jane-b169-drift-and-ci.cjs --input "$PROPOSAL_PATH" --output ecosystem/reports/b169-latest.json
       - name: Preserve observed evidence if supplied
         if: always()
