@@ -1,0 +1,37 @@
+{
+  "schema": "JANE-B166-LIVE-PROVENANCE-v1",
+  "purpose": "GET-only evidence gathering of live default-branch retry-intent commits",
+  "repositoryScope": "public opted-in DavidWise01 repositories",
+  "mode": "READ_ONLY",
+  "maxEligiblePerRun": 8,
+  "intentFile": ".formic/retry-intent.json",
+  "sourceTruth": "GitHub pinned default branch commit SHA, file bytes, Git blob SHA, latest path-changing commit, previous FORMIC PR",
+  "statuses": [
+    "OWNER_INTENT_EVIDENCE_PRESENT",
+    "HOLD"
+  ],
+  "evidenceRequirements": [
+    "default-branch ref SHA",
+    "same-SHA content read and path-commit query",
+    "exact byte length and Git blob SHA",
+    "latest path-change file SHA",
+    "GitHub verified commit",
+    "expected owner-account attribution",
+    "previous closed PR number and head SHA",
+    "revision and expiry"
+  ],
+  "limitations": [
+    "GitHub verification is account-attribution evidence, not independent authentication of a person",
+    "no explicit authority to retry or create PRs",
+    "B161 closed-PR suppression still applies",
+    "missing inaccessible or mismatched evidence HOLD"
+  ],
+  "governance": {
+    "automaticWrite": false,
+    "automaticRetry": false,
+    "automaticMerge": false,
+    "isaInstructions": 0,
+    "observationLayers": 1,
+    "noQuorum": true
+  }
+}
