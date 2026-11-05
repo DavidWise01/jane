@@ -1,0 +1,31 @@
+'use strict';
+const assert=require('node:assert/strict');
+const m=require('./jane-b158-containment.cjs');
+assert.equal(m.containment().status,'STRUCTURAL_PASS');
+assert.equal(m.containment().derivedAllocation,0);
+assert.deepEqual(m.containment().countBySource,{a:122,b:122,c:122});
+for(const [address,register,local] of [[1,'a',1],[122,'a',122],[123,'b',1],[244,'b',122],[245,'c',1],[366,'c',122]]) {
+ const o=m.ownership(address);assert.equal(o.register,register);assert.equal(o.local,local);
+}
+assert.equal(m.boundary(62,63,'+').kind,'BOX_TOROID_SEAM');
+assert.equal(m.boundary(185,184,'-').kind,'BOX_TOROID_SEAM');
+assert.equal(m.boundary(122,123,'+').status,'HOLD_SOURCE_WITNESS_REQUIRED');
+assert.equal(m.boundary(244,245,'+').needsWitness,'c1');
+assert.equal(m.boundary(123,122,'-').needsWitness,'a1');
+assert.equal(m.boundary(366,1,'+').needsWitness,'a1');
+assert.equal(m.boundary(1,366,'-').needsWitness,'c1');
+assert.equal(m.boundary(122,124,'+').status,'HOLD');
+assert.equal(m.boundary(62,63,'?').status,'HOLD');
+const logs=new m.WitnessLedgers();
+logs.append(m.witnessRecord({register:'a',local:122,observationId:'a1-1',note:'outbound edge'}));
+logs.append(m.witnessRecord({register:'b',local:1,observationId:'b1-1',note:'entry independently witnessed'}));
+logs.append(m.witnessRecord({register:'c',local:33,observationId:'c1-1'}));
+assert.deepEqual(logs.audit().witnessCounts,{a:1,b:1,c:1});
+assert.equal(logs.view().length,3);
+assert.throws(()=>logs.append(m.witnessRecord({register:'a',local:4,observationId:'b1-1'})),/DUPLICATE/);
+assert.throws(()=>logs.append({...m.witnessRecord({register:'c',local:1,observationId:'invalid'}),owner:'a1'}),/FOREIGN/);
+logs.logs.b[0].record.note='changed evidence';
+assert.equal(logs.audit().status,'HOLD');
+const broken=require('./jane-b157-pre-isa-boundary.cjs').sources();broken.b.pop();
+assert.equal(m.containment(broken).status,'HOLD');
+console.log('PASS B158: disjoint source ownership, read-only d, box/torus seams, 3 authority seams, no automatic promotion, independent witness chains');
