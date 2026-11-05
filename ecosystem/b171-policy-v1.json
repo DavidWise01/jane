@@ -1,0 +1,43 @@
+{
+  "schema": "JANE-B171-TRIPLE-EVIDENCE-BOUND-v1",
+  "owner": "DavidWise01",
+  "purpose": "Bind B168 exact proof, B169 live-base evidence and B170 fixed-template validation to one SHA256 within 300 seconds",
+  "scope": {
+    "maxCommittedProofs": 8,
+    "inputDirectory": "ecosystem/proposals",
+    "publicOnly": true
+  },
+  "bindings": {
+    "a1": "B168 audit PASS and immutable proof digest",
+    "b1": "B169 base-commit SHA, repo name, proposal digest, fresh base CI evidence",
+    "c1": "B170 local fixed-template pass, cleanup, same proposal digest",
+    "d": "read-only derived attestation"
+  },
+  "timing": {
+    "ttlSeconds": 300,
+    "measureFrom": "start of remote verification",
+    "futureEvidence": "HOLD",
+    "staleEvidence": "HOLD"
+  },
+  "positive": "EVIDENCE_BOUND_NO_EXECUTION",
+  "negative": "HOLD",
+  "noProof": "HOLD_NO_PROPOSALS",
+  "limitations": [
+    "Base CI is not proposed patch CI",
+    "Local template checks do not prove integration correctness",
+    "Passing B171 does not establish owner authorization",
+    "Hash chain only detects internal evidence changes, not source authenticity"
+  ],
+  "authority": {
+    "mayCreatePR": false,
+    "mayRetry": false,
+    "mayMerge": false,
+    "mayWriteDefaultBranch": false,
+    "repositoryPatchCIExecuted": false
+  },
+  "governance": {
+    "observerDepth": 1,
+    "noQuorum": true,
+    "isaDefined": false
+  }
+}
