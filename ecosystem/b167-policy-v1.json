@@ -1,0 +1,55 @@
+{
+  "schema": "JANE-B167-INDEPENDENT-AUTHORIZATION-EVIDENCE-v1",
+  "owner": "DavidWise01",
+  "mode": "READ_ONLY",
+  "policyPath": ".formic/retry-authorization.json",
+  "policySchema": "FORMIC-RETRY-AUTHORIZATION-v1",
+  "defaultEnabled": false,
+  "scope": {
+    "publicOptedInOnly": true,
+    "maxTargets": 8
+  },
+  "required": {
+    "intent": "B166 verified retry intent and matching historical closed PR",
+    "approval": "Separate owner-attributed GitHub-verified approval-file commit",
+    "sameDefaultBranchPin": true,
+    "approvalFields": [
+      "revision >=1",
+      "intent_revision",
+      "previous_pr",
+      "previous_head_sha",
+      "intent_digest",
+      "allowed_actions = [REVIEW_FOR_DRAFT_PR]",
+      "expires_at within 7 days",
+      "default_branch"
+    ],
+    "branchProtection": [
+      "enforce_admins.enabled",
+      "required_pull_request_reviews.required_approving_review_count >=1"
+    ]
+  },
+  "result": {
+    "pass": "POLICY_EVIDENCE_PRESENT",
+    "fail": "HOLD",
+    "mayCreatePR": false,
+    "mayRetry": false,
+    "mayMerge": false,
+    "mayWriteDefaultBranch": false,
+    "humanIdentityAuthenticated": false
+  },
+  "governance": {
+    "zeroISAInstructions": true,
+    "oneObservationLayer": true,
+    "witnesses": [
+      "a1",
+      "b1",
+      "c1"
+    ],
+    "quorum": false
+  },
+  "limitations": [
+    "GitHub verified commit is evidence of account attribution not proof of human authorization",
+    "Workflow read-only and no consent granted",
+    "Missing permissions or protections return HOLD"
+  ]
+}
