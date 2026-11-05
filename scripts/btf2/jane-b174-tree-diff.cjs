@@ -76,7 +76,7 @@ function verifyInputs174({proof,base,local,triple,scratch,tree}){
   why.push('B173_BLOB_INTEGRITY_INVALID');
  return[...new Set(why)];
 }
-function evaluate({proof,base,local,triple,scratch,tree},{root=os.tmpdir(),gitFn=runGit}={}){
+function evaluate({proof,base,local,triple,scratch,tree},{root=os.tmpdir(),gitFn=runGit,onInventory=null}={}){
  const why=verifyInputs174({proof,base,local,triple,scratch,tree});
  if(why.length)return hold(why.join(','),proof);
  let tmp=null,removed=false,result=hold('EVALUATION_NOT_STARTED',proof);
@@ -91,6 +91,7 @@ function evaluate({proof,base,local,triple,scratch,tree},{root=os.tmpdir(),gitFn
    fs.writeFileSync(name,bytes,{flag:'wx',mode:entry.mode==='100755'?0o700:0o600});
   }
   const before=inventory(work);
+  if(onInventory)onInventory('before',work);
   if(before.length!==tree.blobs.length||
      before.some(f=>!tree.blobs.some(x=>x.entry.path===f.path&&x.entry.sha===f.gitBlob)))
    throw Error('PRE_IMAGE_DIFFERS_FROM_SNAPSHOT');
@@ -99,7 +100,9 @@ function evaluate({proof,base,local,triple,scratch,tree},{root=os.tmpdir(),gitFn
   if(!gitFn(work,['init','--quiet']))throw Error('SCRATCH_GIT_INIT_FAILED');
   if(!gitFn(work,['apply','--check','--',patchFile]))throw Error('PATCH_CHECK_FAILED');
   if(!gitFn(work,['apply','--',patchFile]))throw Error('PATCH_APPLICATION_FAILED');
-  const after=inventory(work),delta=changes(before,after),target=delta.additions[0];
+  const after=inventory(work);
+  if(onInventory)onInventory('after',work);
+  const delta=changes(before,after),target=delta.additions[0];
   if(delta.additions.length!==1||target.path!==TARGET||delta.modifications.length||delta.deletions.length||
       delta.preserved.length!==before.length)throw Error('UNEXPECTED_TREE_DELTA');
   const expected=proof.envelope.proposal.changes[0];
