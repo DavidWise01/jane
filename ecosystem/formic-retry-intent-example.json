@@ -1,0 +1,11 @@
+{
+  "schema": "FORMIC-RETRY-INTENT-v1",
+  "repository": "DavidWise01/jane",
+  "repair": "BUG_REPORT_TEMPLATE",
+  "revision": 2,
+  "allow_retry": false,
+  "previous_pr": null,
+  "previous_head_sha": null,
+  "rationale": "Example only. No authorization unless fully completed, explicitly enabled, and independently verified.",
+  "expires_at": null
+}
