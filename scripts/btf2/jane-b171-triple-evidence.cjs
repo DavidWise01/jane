@@ -79,7 +79,7 @@ async function run({dir=ROOT,token='',now=()=>new Date().toISOString(),inspect=i
   try{l=examine(proof)}
   catch{l={status:'HOLD',schema:'JANE-B170-ISOLATED-REPAIR-EVALUATION-v1'}}
   const time2=now();
-  results.push(bind({proof,base:b,local:l,baseObservedAt:time1,localEvaluatedAt:time2,nowIso:time2}));
+  results.push(bind({proof,base:b,local:l,baseObservedAt:time0,localEvaluatedAt:time2,nowIso:time2}));
  }
  return{schema:'JANE-B171-EVIDENCE-REGISTRY-v1',mode:'READ_ONLY',
    status:results.length?'OBSERVATIONS_RECORDED':'HOLD_NO_PROPOSALS',
