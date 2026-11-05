@@ -74,7 +74,7 @@ async function observe({repos,token='',nowIso=new Date().toISOString(),maxTarget
  for(const repo of list){
   if(reports.length>=maxTargets)break;
   if(repoGate(repo)!=='ELIGIBLE')continue;
-  let p;try{p=await policyFn(repo,token)}catch{continue}
+  let p;try{p=await policyFn(repo,token)}catch{reports.push({repository:repo.full_name,status:'HOLD',reasons:['POLICY_READ_FAILED'],grantWriteAuthority:false});continue}
   if(policyGate(p)!=='ELIGIBLE')continue;
   try{reports.push(await examineFn(repo,nowIso,token))}
   catch(e){reports.push({repository:repo.full_name,status:'HOLD',reasons:['GITHUB_READ_FAILURE'],grantWriteAuthority:false})}
