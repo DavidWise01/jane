@@ -99,8 +99,8 @@ function suppression(memory,repo,repair=REPAIR){
    {decision:'NO_AUTOMATIC_AUTHORIZATION',lastState:row.state};
 }
 function main(){
- const args=process.argv.slice(2),src=args[args.indexOf('--input')+1]||'ecosystem/reports/b162-latest.json',
-  out=args[args.indexOf('--output')+1]||'ecosystem/reports/b163-latest.json';
+ const args=process.argv.slice(2),src=args.includes('--input')?args[args.indexOf('--input')+1]:'ecosystem/reports/b162-latest.json',
+  out=args.includes('--output')?args[args.indexOf('--output')+1]:'ecosystem/reports/b163-latest.json';
  const data=build(JSON.parse(fs.readFileSync(src,'utf8')));
  if(audit(data).status!=='PASS')throw Error('MEMORY_LEDGER_FAILED_AUDIT');
  fs.mkdirSync(path.dirname(out),{recursive:true});fs.writeFileSync(out,JSON.stringify(data,null,2)+'\n');
