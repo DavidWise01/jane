@@ -18,7 +18,7 @@ assert.equal(r.workspaceDeleted,true);
 assert.equal(examine(proof,{existingTarget:true}).status,'HOLD');
 const damaged=JSON.parse(JSON.stringify(proof));damaged.envelope.proposal.changes[0].after='tampered';
 assert.equal(examine(damaged).status,'HOLD');
-const failedRemove=examine(proof,{remove:()=>{throw Error('DELETE_FAILED')}});
+const failedRemove=examine(proof,{remove:(dir,opts)=>{fs.rmSync(dir,opts);throw Error('DELETE_FAILED')}});
 assert.equal(failedRemove.status,'HOLD');
 const summary=compile([r,examine(damaged)]);assert.equal(summary.counts.localPassed,1);
 const temp=fs.mkdtempSync(path.join(os.tmpdir(),'b170-candidates-'));
