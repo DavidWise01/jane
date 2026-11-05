@@ -1,0 +1,62 @@
+{
+  "schema": "JANE-B173-PINNED-TREE-SNAPSHOT-v1",
+  "scope": {
+    "owner": "DavidWise01",
+    "publicOnly": true,
+    "pinnedBase": true,
+    "maxProofsPerRun": 8,
+    "maxTreeEntries": 200,
+    "maxTotalBlobBytes": 2097152,
+    "maxSingleBlobBytes": 524288
+  },
+  "readOnlySources": [
+    "GitHub repository metadata",
+    "default branch ref before and after",
+    "Git commit tree SHA",
+    "recursive Git tree entries",
+    "each Git blob by SHA"
+  ],
+  "pathPolicy": {
+    "absolute": false,
+    "dotDot": false,
+    "dotGit": false,
+    "symlink": false,
+    "submodule": false,
+    "unsafeModes": false
+  },
+  "integration": {
+    "temporaryWorkspace": true,
+    "noGitHubCheckoutCodeExecution": true,
+    "fullTreeMaterializedForBoundedRepos": true,
+    "gitApplyOnly": true,
+    "afterApplyExactFileHash": true,
+    "sourceFilesUnchanged": true,
+    "cleanupRequired": true
+  },
+  "positive": "PINNED_TREE_PATCH_PASS",
+  "negative": "HOLD",
+  "noProof": "HOLD_NO_PROPOSALS",
+  "limits": [
+    "Only repositories with at most 200 entries and at most 2 MiB of blobs are eligible",
+    "No arbitrary scripts from fetched repos run",
+    "A successful patch application is not target repository CI",
+    "Only the canonical B161 fixed template may be applied",
+    "Evidence is not owner authentication"
+  ],
+  "authority": {
+    "noAutomaticPR": true,
+    "noAutomaticMerge": true,
+    "noDefaultBranchWrites": true,
+    "noRepositoryCodeExecution": true
+  },
+  "kernel": {
+    "witnesses": [
+      "a1",
+      "b1",
+      "c1"
+    ],
+    "observerDepth": 1,
+    "noQuorum": true,
+    "isaDefined": false
+  }
+}
