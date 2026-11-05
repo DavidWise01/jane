@@ -1,0 +1,44 @@
+{
+  "schema": "JANE-B164-REPAIR-LIFECYCLE-BOUND-v1",
+  "owner": "DavidWise01",
+  "sourceOfTruth": "GitHub PR history per repository/FORMIC repair branch",
+  "readOnly": true,
+  "maxPerRun": 10,
+  "sourceWitnesses": [
+    "a1",
+    "b1",
+    "c1"
+  ],
+  "observerDepth": 1,
+  "noQuorum": true,
+  "isaInstructionsDefined": 0,
+  "repair": "BUG_REPORT_TEMPLATE",
+  "cooldownDays": 30,
+  "states": [
+    "NO_PREVIOUS_PROPOSAL",
+    "HOLD_EXISTING_OPEN_PR",
+    "HOLD_COOLDOWN",
+    "COOLDOWN_ELAPSED_OWNER_RESET_REQUIRED",
+    "ALREADY_APPLIED_OBSERVE_ONLY",
+    "HOLD_PR_HISTORY_UNAVAILABLE",
+    "HOLD_HISTORY_TRUNCATED"
+  ],
+  "ownerRecovery": {
+    "cooldownExpiryNeverAuthorizes": true,
+    "freshOwnerDecisionRequired": true,
+    "b161OriginalHistorySuppressionStillApplies": true,
+    "automaticRetry": false
+  },
+  "evidence": {
+    "hash": "SHA256 per snapshot",
+    "artifactRetentionDays": 30,
+    "appendOnlyGitHubPRHistory": true,
+    "historyPaginationLimit": 99,
+    "completeScanClaim": false
+  },
+  "writes": {
+    "prCreation": false,
+    "merge": false,
+    "defaultBranch": false
+  }
+}
