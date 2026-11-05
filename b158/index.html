@@ -1,0 +1,91 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>JANE B158 | Three Braces · Containment</title><style>
+:root{color-scheme:dark;--bg:#0b1019;--panel:#172430;--line:#395463;--ink:#f4eee3;--soft:#a1b8bf;--warm:#ffaf70;--h:#ff9861;--o:#69d99f;--n:#70cfe3}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:13px/1.5 Consolas,ui-monospace,monospace}
+header{padding:15px 22px;background:#132331;border-bottom:2px solid var(--line);display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap}h1{font-size:clamp(21px,3vw,28px);color:var(--warm);margin:3px 0}small,.muted{color:var(--soft)}.status{border:1px solid #7c6c57;padding:7px;color:#ffdaaa}
+main{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(300px,1fr);max-width:1460px;margin:auto;padding:17px;gap:16px}.col{min-width:0;display:flex;flex-direction:column;gap:12px}.panel{border:1px solid var(--line);border-radius:6px;background:var(--panel);padding:14px;box-shadow:3px 4px #050b12}h2{color:#98e6cd;font-size:14px;margin:0 0 9px}p{color:#bfd0d6}.screen{border:5px solid #647a83;background:#061525;padding:4px}canvas{display:block;width:100%;height:auto;image-rendering:pixelated;cursor:crosshair}
+button{font:inherit;color:var(--ink);background:#294154;border:1px solid #668393;border-radius:4px;padding:10px;cursor:pointer}button:hover,button:focus-visible{outline:1px solid var(--warm)}button.active{background:#68493b;border-color:var(--warm)}.row{display:flex;gap:7px;flex-wrap:wrap;margin:7px 0}.row>*{flex:1 1 70px}.regs{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}.reg{padding:12px 5px;text-align:center}.reg b{display:block;font-size:22px}.reg small{font-size:10px}.bus{display:flex;height:20px;margin:12px 0;border:1px solid #a8bbc1;overflow:hidden}.bus div{width:33.333%}.bus div:nth-child(1){background:repeating-linear-gradient(90deg,#9f563c,#df9565 5px)}.bus div:nth-child(2){background:repeating-linear-gradient(90deg,#2a806a,#6ed9a8 5px)}.bus div:nth-child(3){background:repeating-linear-gradient(90deg,#317a90,#83cde6 5px)}pre{white-space:pre-wrap;word-break:break-word;background:#081522;border:1px solid #365566;padding:11px;font:12px/1.6 Consolas,monospace;color:#b7ecdd;max-height:270px;overflow:auto}.stripe{background:#382a27;border-left:4px solid var(--warm);padding:9px;font-size:12px}a{color:#9fdcf1}footer{max-width:1460px;margin:auto;padding:0 20px 20px;color:var(--soft);font-size:11px}@media(max-width:900px){main{grid-template-columns:1fr}}@media(max-width:470px){header{padding:12px}main{padding:9px}.panel{padding:10px}}
+</style></head><body>
+<header><div><small>0ROOT / JANE / B158 · ORIGINAL RETRO PIXEL LAB</small><h1>THREE BRACES · SOURCE BOUNDARIES</h1><small>[a:122 , b:122 , c:122 : d: a+b+c :: isa]</small></div><span class="status">:: isa = UNDEFINED · 0 INSTRUCTIONS</span></header>
+<main><div class="col"><section class="panel"><h2>01 · ATOM / 3D-PROJECTED BRACED CAGES</h2><div class="screen"><canvas id="game" width="320" height="200" aria-label="Procedural pixel-art atomic cage with H O N scout sprites and 366 address points"></canvas></div><div class="row"><button id="pause">⏸ PAUSE</button><button id="mode">ATOM / CAGES</button><button id="left">← ORBIT</button><button id="right">ORBIT →</button></div><p class="muted">Procedural pixel sprites; logical cells, not literal atom or electron physics. Drag to rotate.</p></section>
+<section class="panel"><h2>02 · DERIVED ADDRESS VIEW</h2><div class="bus"><div></div><div></div><div></div></div><div class="regs"><div class="reg">a / H<small>001–122</small></div><div class="reg">b / O<small>123–244</small></div><div class="reg">c / N<small>245–366</small></div></div><p>d = a + b + c = <b>366 existing addresses</b>. No fourth register, no new shadow.</p></section></div>
+<div class="col"><section class="panel"><h2>03 · CONTAINMENT / SOURCE AUTHORITY SEAMS</h2>
+<canvas id="seamCanvas" width="480" height="156" style="width:100%;height:auto;border:3px solid #567487;background:#091726;image-rendering:pixelated" aria-label="Three source registers and their authority seams, without transfer of ownership"></canvas>
+<div class="row"><button id="seamAB">a 122 → b 123</button><button id="seamBC">b 244 → c 245</button><button id="seamCA">c 366 → a 001</button></div>
+<div class="row"><button id="seamLocal">Box 062 → Toroid 063</button><button id="seamReverse">− REVERSE CURRENT SEAM</button><button id="seamExport">EXPORT SEAM TRAIL</button></div>
+<pre id="seamStatus">Source boundaries ready. D is a read-only view.</pre>
+<p class="muted">Adjacent addresses do not share authority. Cross-source moves remain HOLD until separately witnessed at the destination.</p></section>
+<section class="panel"><h2>04 · H / O / N REGISTER EXPLORER</h2><div class="regs"><button class="reg active" id="a"><b style="color:var(--h)">{H}</b><small>a / a1</small></button><button class="reg" id="b"><b style="color:var(--o)">{O}</b><small>b / b1</small></button><button class="reg" id="c"><b style="color:var(--n)">{N}</b><small>c / c1</small></button></div><div class="row"><button id="minus">− ONE CELL</button><button id="plus">+ ONE CELL</button><button id="observe">OBSERVE</button></div><div class="row"><button id="audit">CHECK 366</button><button id="export">EXPORT OBSERVATIONS</button></div><pre id="state"></pre><p class="muted">These are manual address movements and observations—not instructions in an ISA.</p></section>
+<section class="panel"><h2>05 · OBSERVATION TRAIL</h2><pre id="events">No observations yet.</pre><p class="muted">Each scout records independently. The session trail is not a verified scientific observation or a cryptographic attestation.</p></section>
+<section class="panel"><h2>06 · UNDEFINED ISA BOUNDARY</h2><div class="stripe"><b>:: isa</b> is reserved syntax, with no defined instruction names, meaning, or authority. Earlier dispatcher/opcode interpretations are historical experiments, not active architecture.</div><pre>{-1,+1} > 1  : first shadow pair only
+a = {H/a1} : Box62 + Toroid60
+b = {O/b1} : Box62 + Toroid60
+c = {N/c1} : Box62 + Toroid60
+d = a+b+c : 366 derived addresses
+S1..S5    : five signed non-shadow spheres
+No quorum. No ISA has been specified.</pre><a href="https://github.com/DavidWise01/jane/tree/main/b157" target="_blank" rel="noopener noreferrer">View canonical B158 files</a></section></div></main>
+<footer>B158 · Computational topology · H/O/N names are symbolic braces. Physical interpretations remain HOLD.</footer>
+<script>
+'use strict';
+const $=id=>document.getElementById(id),cv=$('game'),g=cv.getContext('2d');g.imageSmoothingEnabled=false;
+const COLORS=['#ff9861','#69d99f','#70cfe3'],REG=['a','b','c'],BR=['H','O','N'],W=['a1','b1','c1'];
+const BOX=[1,2,4,6,8,12,12,8,6,2,1],TOR=[1,3,6,9,11,11,9,6,3,1],PC=[1,1,1],logs=[];
+let sel=0,angle=.7,tilt=.2,t=0,playing=true,view='ATOM',last=performance.now();
+function cell(reg,local){const k=REG.indexOf(reg);if(k<0||local<1||local>122)return null;let p=local<=62?local:local-62,counts=local<=62?BOX:TOR,base=0;for(let j=0;j<counts.length;j++){if(p<=base+counts[j])return{reg,brace:BR[k],witness:W[k],local,global:122*k+local,kind:local<=62?'Box62':'Toroid60',layer:j+1,slot:p-base};base+=counts[j]}return null}
+function log(action,result){logs.push({seq:logs.length+1,action,slot:REG[sel],witness:W[sel],result,model:'SYNTHETIC',physicalPromotion:false});state()}
+function state(){for(const [i,r]of REG.entries())$(r).classList.toggle('active',sel===i);const v=cell(REG[sel],PC[sel]);$('state').textContent=REG.map((r,i)=>'{'+BR[i]+' / '+W[i]+'} local '+String(PC[i]).padStart(3,'0')+' global '+String(cell(r,PC[i]).global).padStart(3,'0')).join('\n')+'\n\nFOCUS: '+v.kind+' · layer '+v.layer+' · cell '+v.slot+'\nSOURCES: 122 + 122 + 122 = 366\nISA: UNDEFINED · 0 INSTRUCTIONS';$('events').textContent=logs.length?logs.slice(-12).reverse().map(e=>'#'+e.seq+' ['+e.witness+'] '+e.action+' '+(e.result.global||e.result.status||'')+' '+(e.result.kind||'')).join('\n'):'No observations yet.'}
+for(const [i,r]of REG.entries())$(r).onclick=()=>{sel=i;state()};
+function move(sign){PC[sel]=sign==='+'?PC[sel]%122+1:(PC[sel]+120)%122+1;log('SIGNED '+sign,cell(REG[sel],PC[sel]))}
+$('plus').onclick=()=>move('+');$('minus').onclick=()=>move('-');$('observe').onclick=()=>log('OBSERVE',cell(REG[sel],PC[sel]));
+$('audit').onclick=()=>{const list=REG.flatMap((r,k)=>Array.from({length:122},(_,i)=>cell(r,i+1)));log('STRUCTURAL CHECK',{status:list.length===366&&new Set(list.map(x=>x.global)).size===366?'PASS':'HOLD',total:list.length})};
+$('export').onclick=()=>{const blob=new Blob([JSON.stringify({schema:'JANE-B158-PRE-ISA-BROWSER',observations:logs,registers:PC,d:366,isaDefined:false,physicalPromotion:false},null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='jane-b157-pre-isa-observations.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),700)};
+$('pause').onclick=()=>{playing=!playing;$('pause').textContent=playing?'⏸ PAUSE':'▶ PLAY'};$('mode').onclick=()=>view=view==='ATOM'?'CAGES':'ATOM';$('left').onclick=()=>angle-=.2;$('right').onclick=()=>angle+=.2;
+function box(x,y,w,h,c){g.fillStyle=c;g.fillRect(Math.round(x),Math.round(y),w,h)}function text(s,x,y,c='#d7e6e6',size=7){g.fillStyle=c;g.font=size+'px monospace';g.fillText(s,x,y)}
+function proj(x,y,z){const ca=Math.cos(angle),sa=Math.sin(angle),ct=Math.cos(tilt),st=Math.sin(tilt),X=x*ca-z*sa,Z=x*sa+z*ca,Y=y*ct-Z*st;const q=230/(230+Z*.18);return[160+X*q,82+Y*q]}
+function orbit(r,k){let prev=null;g.strokeStyle=COLORS[k%3];g.beginPath();for(let i=0;i<=72;i++){const u=i*Math.PI*2/72,p=proj(r*Math.cos(u),r*Math.sin(u)*Math.cos(k*.6),r*Math.sin(u)*Math.sin(k*.6));if(prev)g.lineTo(...p);else g.moveTo(...p);prev=p}g.stroke()}
+const MON=['..BBBBB..','.BEEEEE B.','BBEWWWEBB','BBEWEWEBB','.BEEEEE B.','..BBBBB..','..CCCCC..','.CCCCCCC.','.CCCHCCC.','..CCCCC..','..DCCCD..','..D...D..'];
+function monkey(x,y,col){let pal={B:'#4a3037',E:'#ae7655',W:'#ffdcac',C:col,H:'#f4d48b',D:'#777089'};for(let row=0;row<MON.length;row++)for(let i=0;i<MON[row].length;i++){const ch=MON[row][i];if(pal[ch])box(x+i-5,y+row-9,1,1,pal[ch])}}
+function render(){
+ box(0,0,320,200,'#081726');for(let i=0;i<70;i++)box((i*73+7)%318,(i*41+13)%151,1,1,i%4?'#273d4e':'#6a7f9a');
+ if(view==='ATOM'){for(let k=4;k>=0;k--){orbit(22+k*10,k);const u=t*.018*(1+k*.1)+k,p=proj((22+k*10)*Math.cos(u),(22+k*10)*Math.sin(u)*Math.cos(k*.6),(22+k*10)*Math.sin(u)*Math.sin(k*.6));box(p[0]-2,p[1]-2,4,4,COLORS[k%3])}box(155,76,11,11,'#e7ad7b')}
+ else for(let k=0;k<3;k++){for(let j=0;j<122;j++){const r=j<62?19:25,u=j*.36+t*.006+k*.8,p=proj((k-1)*58+r*Math.cos(u),(j%11-5)*3,r*Math.sin(u));box(p[0],p[1],2,2,j<62?'#b58968':COLORS[k])}}
+ text('B158 / NO ISA YET',8,16,'#f3d3a0',9);text(view+' / 366 DERIVED ADDRESSES',8,29,'#b4d7d6');
+ box(0,144,320,56,'#1c3340');box(0,143,320,2,'#4e8991');
+ for(let k=0;k<3;k++){const x=24+k*99;box(x+14,165,45,15,'#314f5a');monkey(x,165,COLORS[k]);text('{'+BR[k]+'}',x+25,174,COLORS[k],8);text(W[k]+' '+String(PC[k]).padStart(3,'0'),x+12,192,COLORS[k],7)}
+}
+let drag=false,px=0,py=0;cv.addEventListener('pointerdown',e=>{drag=true;px=e.clientX;py=e.clientY;cv.setPointerCapture(e.pointerId)});cv.addEventListener('pointerup',()=>drag=false);cv.addEventListener('pointermove',e=>{if(!drag)return;angle+=(e.clientX-px)*.01;tilt=Math.max(-1,Math.min(1,tilt+(e.clientY-py)*.01));px=e.clientX;py=e.clientY});
+function frame(now){const dt=Math.min(50,now-last);last=now;if(playing){t+=dt*.026;angle+=dt*.00024}render();requestAnimationFrame(frame)}
+// B158: an independent, read-only seam observer. No ISA/opcode definitions.
+const SEAMS=[{id:'a→b',from:122,to:123},{id:'b→c',from:244,to:245},{id:'c→a',from:366,to:1},{id:'box→tor',from:62,to:63}];
+const seamCanvas=$('seamCanvas'),sg=seamCanvas.getContext('2d');sg.imageSmoothingEnabled=false;
+let seamSelection=0,seamReverse=false,seamTrail=[],seamSeq=0;
+function globalOwner(global){if(!Number.isInteger(global)||global<1||global>366)return null;const i=Math.floor((global-1)/122);return{reg:REG[i],brace:BR[i],witness:W[i],global,local:(global-1)%122+1}}
+function assessSeam(from,to,sign){
+ const a=globalOwner(from),b=globalOwner(to);
+ if(!a||!b||!['+','-'].includes(sign))return{status:'HOLD',reason:'INVALID_ADDRESS'};
+ const adjacent=sign==='+'?from%366+1:(from+364)%366+1;
+ if(adjacent!==to)return{status:'HOLD',reason:'NON_ADJACENT'};
+ const cross=a.reg!==b.reg;
+ return{status:cross?'HOLD_SOURCE_WITNESS_REQUIRED':'SYMBOLIC_BOUNDARY',from:a,to:b,sign,kind:cross?'SOURCE_AUTHORITY_SEAM':(a.local<=62)!==(b.local<=62)?'BOX_TOROID_SEAM':'INTRA_SOURCE',neededWitness:cross?b.witness:null,physicalPromotion:false};
+}
+function seamRender(){
+ const g=sg;g.fillStyle='#071523';g.fillRect(0,0,480,156);g.font='11px monospace';g.fillStyle='#efd4ae';g.fillText('D = READ-ONLY VIEW OF THREE INDEPENDENT OWNERS',12,17);
+ for(let i=0;i<3;i++){const x=9+157*i;g.fillStyle=['#342323','#1c3731','#1a3540'][i];g.fillRect(x,28,147,62);g.strokeStyle=COLORS[i];g.strokeRect(x+.5,28.5,146,61);g.fillStyle=COLORS[i];g.fillText('{'+BR[i]+' / '+W[i]+'}',x+15,47);g.font='9px monospace';g.fillText(String(1+i*122).padStart(3,'0')+'–'+String((i+1)*122).padStart(3,'0'),x+15,63);g.fillText('[62]  (60)',x+15,79);g.font='11px monospace'}
+ g.fillStyle='#e6b47a';g.fillText('122|123',128,107);g.fillText('244|245',289,107);g.fillText('366|001 LOOP',175,123);
+ let pair=SEAMS[seamSelection],from=seamReverse?pair.to:pair.from,to=seamReverse?pair.from:pair.to,sign=seamReverse?'-':'+',result=assessSeam(from,to,sign);
+ g.fillStyle=result.status==='SYMBOLIC_BOUNDARY'?'#8af0c4':'#ffc383';
+ g.fillText(String(from).padStart(3,'0')+' '+sign+' → '+String(to).padStart(3,'0')+' : '+result.status,12,144);
+}
+function pickSeam(i){seamSelection=i;seamReverse=false;emitSeam()}
+function emitSeam(){
+ const pair=SEAMS[seamSelection],from=seamReverse?pair.to:pair.from,to=seamReverse?pair.from:pair.to,sign=seamReverse?'-':'+',out=assessSeam(from,to,sign);
+ const row={seq:++seamSeq,label:pair.id,from,to,sign,...out,kind:out.kind||'INVALID',witnessAuthority:'NOT_IMPLICIT',physicalPromotion:false};
+ seamTrail.push(row);
+ $('seamStatus').textContent='SEAM '+pair.id+'\n'+from+' → '+to+' / '+sign+'\n'+out.status+'\nOWNER '+(out.from?.brace||'NONE')+' → '+(out.to?.brace||'NONE')+'\n'+(out.neededWitness?'DESTINATION WITNESS REQUIRED: '+out.neededWitness:'SAME OWNER: SYMBOLIC INDEX TRANSITION')+'\nOBSERVATIONS '+seamTrail.length+' · D IS READ ONLY\nNo quorum · no ISA · physics HOLD';
+ seamRender();
+}
+$('seamAB').onclick=()=>pickSeam(0);$('seamBC').onclick=()=>pickSeam(1);$('seamCA').onclick=()=>pickSeam(2);$('seamLocal').onclick=()=>pickSeam(3);
+$('seamReverse').onclick=()=>{seamReverse=!seamReverse;emitSeam()};
+$('seamExport').onclick=()=>{const file={schema:'JANE-B158-READONLY-SEAM-OBSERVATIONS',trail:seamTrail,isaDefined:false,physicalPromotion:false,quorum:false};const blob=new Blob([JSON.stringify(file,null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='jane-b158-source-seams.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),800)};
+emitSeam();
+
+state();requestAnimationFrame(frame);
+</script></body></html>
