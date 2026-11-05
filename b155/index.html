@@ -1,0 +1,555 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>JANE B155 | PIXEL MONKEY BENCHMARK ARCADE</title>
+<style>
+:root{--bg:#0b1120;--ink:#e5f2f0;--teal:#53dfc4;--orange:#ff9d5c;--violet:#b39afd;--edge:#466277;--panel:#142335}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:13px/1.5 Consolas,monospace}header{background:#172334;border-bottom:4px solid #3e526b;padding:12px 17px;display:flex;justify-content:space-between;align-items:center;gap:12px}h1{margin:0;font-size:clamp(16px,2.3vw,26px);color:var(--orange);text-shadow:2px 2px #613e54}h2{margin:0 0 10px;color:var(--teal);font-size:14px;letter-spacing:1px}small{color:#a8bdc9}.pill{border:2px solid #7b657c;padding:5px 10px;color:#ffda95}main{display:grid;grid-template-columns:minmax(300px,1fr) 350px;min-height:calc(100vh - 65px)}.screen{padding:14px;min-width:0}.frame{position:relative;border:6px ridge #687f89;background:#070f1e;box-shadow:0 0 0 5px #243344,0 10px 0 #080f18;aspect-ratio:16/10;overflow:hidden}.frame canvas{display:block;width:100%;height:100%;image-rendering:pixelated;image-rendering:crisp-edges;cursor:crosshair}.topBadge{position:absolute;left:9px;top:7px;color:#ffe2a2;text-shadow:1px 2px #192338;font-size:11px;pointer-events:none}.bottomBadge{position:absolute;right:10px;bottom:7px;background:#081521c9;color:#88e8d7;padding:2px 6px;pointer-events:none}.hud{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin:12px 0}.hud>div{border:2px solid var(--edge);background:#15283a;padding:8px}.hud strong{color:#ffe6b4;font-size:19px;display:block}.hud small{display:block;font-size:10px}aside{background:#111e2c;border-left:4px solid #375064;padding:13px;min-width:0}section{border:2px solid #375366;background:#18283a;padding:11px;margin-bottom:12px}button,select{background:#24394b;border:2px solid #688492;color:#fff7e7;padding:8px 10px;font:inherit;cursor:pointer;box-shadow:2px 3px #0c1621}button:hover,button:focus-visible{outline:1px solid #ffe2a2;background:#3c4b60}button.on{border-color:var(--orange);color:#ffc897}button:disabled{opacity:.5;cursor:default}.row{display:flex;gap:7px;align-items:center;flex-wrap:wrap;margin:8px 0}.row>*{flex:1}.slots{display:grid;grid-template-columns:repeat(5,1fr);gap:5px}.slots button{padding:7px 2px;font-size:11px}.readout{font-size:11px;color:#a9c9d0}input[type=range]{width:100%;accent-color:var(--orange)}pre{background:#071421;color:#a7f4db;padding:9px;max-height:200px;overflow:auto;white-space:pre-wrap;word-break:break-word;margin:7px 0}p{color:#b1c5cd;margin:8px 0}.warn{border-left:4px solid var(--orange);padding:8px;background:#342b30}.tiny{font-size:11px}a{color:#9edcf5}.kbd{color:#ffe5b0}footer{padding:5px 18px;color:#849fae}@media(max-width:950px){main{display:block}.frame{aspect-ratio:16/11}aside{border-left:0;border-top:4px solid #375064}.hud strong{font-size:14px}}
+</style></head><body>
+<header><div><small>JANE // B155 // RETRO PIXEL LABORATORY</small><h1>CODE MONKEYS: A B C :: D ISA</h1><small>ORIGINAL PIXEL SPRITES · ONE SHADOW · FIVE SIGNED SPHERE REGISTERS</small></div><div class="pill">SCIENCE <b>HOLD</b></div></header>
+<main><div class="screen"><div class="frame"><canvas id="game" width="320" height="200" aria-label="Pixel-art atom observatory with monkey coder characters, rotating three-dimensional atomic orbital projection, and animated sphere boundaries"></canvas><span class="topBadge">ROOT0//B151</span><span class="bottomBadge" id="modeLabel">ATOM / 3D PROJECTION</span></div><div class="hud"><div><strong id="tick">0000</strong><small>SIM TICKS</small></div><div><strong id="cross">000</strong><small>SIGNED CROSSINGS</small></div><div><strong id="hold">000</strong><small>BOUNDARY HOLDS</small></div><div><strong id="seat">S1</strong><small>FOCUS SLOT</small></div></div><section><h2>KEYBOARD LAB</h2><p><span class="kbd">← →</span> spin the atom · <span class="kbd">↑ ↓</span> tilt · <span class="kbd">1–5</span> select sphere · <span class="kbd">SPACE</span> run/pause · <span class="kbd">P</span> send a scout. Mouse drag rotates the view.</p><p class="tiny">Three braced pixel scouts H/O/N now traverse exactly 122 cells each: Box62 + Toroid60. The B152 atom and benchmark remain visible. Readings and the independent witness trail survive reload in this browser when local storage is available. No physical measurements are implied.</p></section></div>
+<aside><section><h2>MONKEY WORKSTATION</h2><div class="row"><button id="pause">Ⅱ PAUSE</button><button id="probe">SEND SCOUT</button><button id="reset">RESET</button></div><div class="row"><button id="viewAtom" class="on">ATOM</button><button id="viewSpheres">SPHERES</button><button id="export">EXPORT LOG</button></div><label for="speed">SIM SPEED <span id="speedVal">1.0×</span></label><input id="speed" type="range" min="0.2" max="3" value="1" step="0.1"/><div class="slots" id="slots"></div><p id="focusText" class="readout">S1 — signed sphere register · unassigned physical region</p></section>
+<section><h2>B155 · [a:122 b:122 c:122 : d=a+b+c :: isa]</h2>
+<div class="row"><button id="isaA">{ a / H }</button><button id="isaB">{ b / O }</button><button id="isaC">{ c / N }</button></div>
+<div class="row"><button id="isaMinus">STEP −</button><button id="isaPlus">STEP +</button><button id="isaRead">READ</button></div>
+<div class="row"><button id="isaWitness">WITNESS</button><button id="isaAssemble">ASSEMBLE d</button><button id="isaCheck">CHECK</button><button id="isaExport">EXPORT</button></div>
+<canvas id="isaCanvas" width="480" height="165" style="width:100%;height:auto;image-rendering:pixelated;background:#061725;border:3px solid #72878c" aria-label="Three source 122-cell registers and one derived 366-cell register"></canvas>
+<pre id="isaReadout">ISA INITIALIZING</pre><p class="tiny">D is read-only: 122 + 122 + 122 = 366. No new cells, no quorum, synthetic only.</p></section>
+<section><h2>B155 · CLOSED LOOP MIRROR AUDIT</h2>
+<div class="row"><button id="auditRun">▶ RUN 3 CYCLES</button><button id="auditPause">⏸ PAUSE</button><button id="auditStep">+ STEP</button><button id="auditReset">↺ RESTART</button></div>
+<canvas id="auditCanvas" width="480" height="150" style="display:block;width:100%;height:auto;border:3px solid #69828c;image-rendering:pixelated;background:#071624" aria-label="Three H O N pixel monkeys traversing 122 addresses forward and reverse with individual checkpoints"></canvas>
+<pre id="auditStatus">H/O/N: awaiting independent 122+122 mirror traversal.</pre>
+<div class="row"><button id="auditExport">EXPORT MIRROR TRACES</button><button id="auditVerify">VERIFY CHECKPOINTS</button></div>
+<p class="tiny">Each brace audits 122 unique cells per direction. Two full cycles mean 244 steps per monkey. Failed coverage, invalid seam, or non-mirror order returns HOLD.</p></section>
+<section><h2>H / O / N · BOX62 + TOROID60</h2>
+<canvas id="braceView" width="480" height="268" style="display:block;width:100%;height:auto;image-rendering:pixelated;border:3px solid #5d7e80;background:#061523" aria-label="Three individually braced pixel scout cages with 62 box and 60 toroid registers each"></canvas>
+<div class="row"><button id="bracePlay">⏸ PAUSE CELLS</button><button id="braceStep">STEP +1</button><button id="braceExport">EXPORT H/O/N</button></div>
+<div class="row"><button id="braceMinus">− REVERSE</button><button id="bracePlus" class="on">+ FORWARD</button><button id="braceAll">ALL BRACES</button></div>
+<div class="row"><button id="braceH">{ H }</button><button id="braceO">{ O }</button><button id="braceN">{ N }</button></div>
+<pre id="braceReadout">H/O/N registers initializing...</pre><p class="tiny">Three logical cages. Each has 62 Box and 60 Toroid cells. Signs are traversal labels, not extra cells or measured electrical charges.</p></section><section><h2>BENCHMARK PIT · SAME WORLD / SAME BUDGET</h2>
+<div class="row"><button id="benchRun">RUN BOTH</button><button id="benchStress">ALL HOLD</button><button id="benchExport">EXPORT BENCH</button></div>
+<canvas id="benchRace" width="320" height="132" style="display:block;width:100%;height:auto;image-rendering:pixelated;border:3px solid #587289;background:#0b172a" aria-label="Pixel-art side by side comparison of independent scout exploration"></canvas>
+<pre id="benchReadout">The monkeys are ready to compare two exploration strategies under the same synthetic boundary rules.</pre>
+<p id="benchVerdict" class="warn tiny">The benchmark is simulation-only. Results do not prove physical time dilation or general learning.</p></section>
+<section><h2>ATOMIC THOUGHT</h2><pre>{ -1, +1 }  →  1 position
+ signed net   = 0
+ shadow       = FIRST PAIR ONLY
+
+             ● nucleus
+       ⟲ orbital paths ⟳
+
+ S1 S2 S3 S4 S5 = [- | +]
+ G0 G1 = gravity labels
+ V0 V1 = void labels
+ axis = ±X / ±Y / ±Z</pre><div class="warn tiny">The nucleus, orbital trails, electrons, and five sphere registers are conceptual illustrations. The physical ionosphere, magnetosphere and heliosphere are not concentric atomic orbitals.</div></section>
+<section><h2>SCOUT MEMORY · INDEPENDENT PLANS</h2><pre id="strategy">SCOUT PLANS INITIALIZING...</pre><p id="planStatus" class="tiny">Strategy decisions: append-only local journal</p><div class="row"><button id="replan">REPLAN SCOUTS</button><button id="replayPlans">REPLAY PLANS</button></div><h2>THREE INDEPENDENT WITNESSES</h2><div class="row"><button id="uncertain">UNCERTAIN</button><button id="conflict">CONFLICT</button><button id="clear">HIDE LOG</button><button id="replay">REPLAY</button></div><p id="persist" class="tiny">LOCAL JOURNAL: INITIALIZING</p><pre id="log" aria-live="polite">a1 / b1 / c1 are crossing.
+No quorum, no votes.
+No physical promotion.</pre></section>
+<section><h2>PHYSICAL REGIONS · REFERENCES ONLY</h2><p class="tiny">Earth's ionosphere, plasmasphere, magnetosphere; Sun's heliosphere; and the HD 61005 astrosphere remain independent examples. No S-slot assignment or fixed measured radius is implied.</p><p><a href="https://github.com/DavidWise01/jane/tree/main/b149" target="_blank" rel="noopener">View source / provenance</a></p></section></aside></main>
+<script>
+'use strict';
+const $=id=>document.getElementById(id),cv=$('game'),g=cv.getContext('2d');g.imageSmoothingEnabled=false;
+const W=320,H=200,C=['#ff945c','#ad8dff','#54e2bd','#5caef9','#f0b5eb'],radii=[20,30,40,51,62];let tick=0,spin=.25,tilt=.2,speed=1,playing=true,view='ATOM',focus=0,events=[],pass=0,hold=0,seq=0,scoutStart=-1,drag=false,px=0,py=0;
+const monkeys=[{id:'a1',x:19,shirt:'#ff985b',walk:0},{id:'b1',x:95,shirt:'#78cfad',walk:2},{id:'c1',x:171,shirt:'#b29aff',walk:4}];
+function box(x,y,w,h,c){g.fillStyle=c;g.fillRect(Math.round(x),Math.round(y),Math.ceil(w),Math.ceil(h))}
+function stroke(x,y,w,h,c){g.strokeStyle=c;g.lineWidth=1;g.strokeRect(Math.round(x)+.5,Math.round(y)+.5,w,h)}
+function txt(t,x,y,color='#d5e9ee',size=7){g.font=`${size}px monospace`;g.fillStyle=color;g.fillText(String(t),Math.round(x),Math.round(y))}
+// All sprite pixels are original and draw at the game's native low resolution.
+const SHAPE=['..KKKKKK..','.KBBBBBBK.','KBBTBBTBBK','KBBBBBBBBK','KBSSBBSSBK','KSSSSSSSSK','.KSSNNSSK.','..KSSSSK..','...KKKK...'];
+function sprite(x,y,scale,shirt,step){const p={K:'#332132',B:'#9d623f',T:'#c3895a',S:'#ecc092',N:'#59382d'};const s=Math.max(1,scale);for(let row=0;row<SHAPE.length;row++)for(let col=0;col<SHAPE[row].length;col++){let v=SHAPE[row][col];if(v!=='.')box(x+col*s,y+row*s,s,s,p[v])}box(x+2*s,y+9*s,6*s,3*s,shirt);box(x+(step%2===0?2:3)*s,y+12*s,s,2*s,'#6a5669');box(x+(step%2===0?7:6)*s,y+12*s,s,2*s,'#6a5669');box(x+4*s,y+3*s,s,s,'#121b27');box(x+7*s,y+3*s,s,s,'#121b27')}
+function proj(x,y,z){let ca=Math.cos(spin),sa=Math.sin(spin),ct=Math.cos(tilt),st=Math.sin(tilt);let X=x*ca+z*sa,Z=-x*sa+z*ca,Y=y*ct-Z*st,depth=y*st+Z*ct;let f=220/(220-depth);return{X:162+X*f,Y:87+Y*f,depth,f}}
+function segment3(a,b,color,step=1){let A=proj(...a),B=proj(...b);g.strokeStyle=color;g.beginPath();g.moveTo(Math.round(A.X),Math.round(A.Y));g.lineTo(Math.round(B.X),Math.round(B.Y));g.stroke()}
+function orbital(radius,phase,color,plane){const pts=[];let ct=Math.cos(plane),st=Math.sin(plane);for(let i=0;i<=72;i++){let u=i/72*Math.PI*2;pts.push([radius*Math.cos(u),radius*Math.sin(u)*ct,radius*Math.sin(u)*st])}for(let i=0;i<72;i+=1)segment3(pts[i],pts[i+1],color)}
+function atom(){for(let k=4;k>=0;k--){orbital(radii[k],k*.48,C[k]+'96',k*.55+.2)}
+ for(let k=4;k>=0;k--){let u=tick*.007*(1+.14*k)+k*1.33,rad=radii[k],p=proj(rad*Math.cos(u),rad*Math.sin(u)*Math.cos(k*.55),rad*Math.sin(u)*Math.sin(k*.55));box(p.X-2,p.Y-2,4,4,C[k]);box(p.X-1,p.Y-1,2,2,'#fff7d0')}
+ const center=proj(0,0,0);box(center.X-7,center.Y-7,14,14,'#552d5a');box(center.X-5,center.Y-5,10,10,'#ffae70');box(center.X-1,center.Y-7,3,14,'#fceab2');box(center.X-7,center.Y-1,14,3,'#e36e74');txt('ATOM',150,113,'#ffd5a2')}
+function sphereMode(){for(let k=4;k>=0;k--){let r=radii[k];for(let lat=-1;lat<=1;lat++){let pts=[];for(let i=0;i<=60;i++){const u=i/60*Math.PI*2,rr=r*Math.cos(lat*.5),Y=r*Math.sin(lat*.5);pts.push([rr*Math.cos(u),Y,rr*Math.sin(u)])}for(let i=0;i<60;i++)segment3(pts[i],pts[i+1],C[k]+'a0')}
+ orbital(r,0,C[k],1.57)}txt('5 SIGNED SLOTS',130,103,'#ffd8b4')}
+function backdrop(){box(0,0,W,H,'#0b1123');for(let i=0;i<90;i++){let x=((i*73+19)%318),y=((i*43+23)%160);if(i%4===0||((tick*.03+i*17)%41)<2)box(x,y,i%6===0?2:1,1,i%3===0?'#6c7e9e':'#344363')}
+ box(0,154,320,46,'#273d45');box(0,153,320,2,'#5b91a0');for(let i=0;i<32;i++){box(i*10,168+(i%3)*6,6,2,'#365f63');box(i*10+2,189,6,2,'#405b6b')}
+ box(0,140,320,13,'#132b37');for(let i=0;i<40;i++)box(i*8,144,4,2,i%2===0?'#38948e':'#354d67');}
+function drawLab(){box(7,159,303,38,'#172636');stroke(7,159,303,38,'#4d8290');for(const [i,m]of monkeys.entries()){let x=18+i*96;box(x-2,181,70,4,'#42717e');box(x+45,166,20,16,'#0a1927');stroke(x+45,166,20,16,m.shirt);txt(i===0?'LAB':i===1?'DATA':'TEST',x+47,174,m.shirt,6);sprite(x,164,1,m.shirt,Math.floor(tick/15)+i);txt(m.id,x+12,194,'#d7e7e6',6)}
+ box(270,164,29,23,'#3c354b');stroke(270,164,29,23,'#ac8edb');txt('>>',279,174,'#fbce8a');txt('SCI',275,183,'#e9d8ff',6)}
+function draw(){backdrop();if(view==='ATOM')atom();else sphereMode();drawLab();box(6,15,97,15,'#152a38');stroke(6,15,97,15,'#54798c');txt('S'+(focus+1)+' [- | +]',11,25,C[focus],8);txt(view==='ATOM'?'NUCLEUS: 1 / SHADOW: 0':'BOUNDARY PROBE: SYNTHETIC',8,43,'#a9d8d8',7);if(!playing)txt('PAUSED',146,22,'#ffb07e',9);$('tick').textContent=String(Math.floor(tick)).padStart(4,'0')}
+function event(slot,dir,before,after,u,source='SIMULATION',witness='a1'){const threshold=radii[slot],cross=dir==='OUT'?(before+u<threshold&&after-u>threshold):(before-u>threshold&&after+u<threshold),status=cross&&source==='SIMULATION'?'SIMULATED_CROSSING':'HOLD';let e={id:'pixel-'+(++seq),slot:'S'+(slot+1),direction:dir,witness,time:new Date().toISOString(),frame:'PIXEL_DEMO_FRAME',before,after,uncertainty:u,threshold,source,status,physicalPromotion:false};events.push(e);status==='HOLD'?hold++:pass++;$('cross').textContent=String(pass).padStart(3,'0');$('hold').textContent=String(hold).padStart(3,'0');$('log').textContent=events.slice(-9).reverse().map(e=>e.id+' '+e.witness+' '+e.slot+' '+e.direction+'\n'+e.status+' '+e.before.toFixed(1)+'→'+e.after.toFixed(1)).join('\n\n');}
+function probe(){const r=radii[focus];event(focus,'OUT',r-3,r+3,.2,'SIMULATION',monkeys[seq%3].id);scoutStart=tick}
+function select(i){focus=i;$('seat').textContent='S'+(i+1);$('slots').replaceChildren();for(let s=0;s<5;s++){let b=document.createElement('button');b.textContent='S'+(s+1);b.className=s===focus?'on':'';b.onclick=()=>select(s);$('slots').append(b)}$('focusText').textContent='S'+(i+1)+' · [- | +] · PHYSICAL BOUNDARY UNASSIGNED · VISUAL R='+radii[i];}
+let last=performance.now();function loop(now){let dt=Math.min(50,now-last);last=now;if(playing){tick+=dt*.052*speed;spin+=dt*.00016*speed; if(scoutStart>=0&&tick-scoutStart>20)scoutStart=-1}draw();requestAnimationFrame(loop)}
+$('pause').onclick=()=>{playing=!playing;$('pause').textContent=playing?'Ⅱ PAUSE':'▶ RUN'};$('probe').onclick=probe;$('reset').onclick=()=>{tick=0;spin=.25;tilt=.2;select(0)};$('viewAtom').onclick=()=>{view='ATOM';$('viewAtom').className='on';$('viewSpheres').className='';$('modeLabel').textContent='ATOM / 3D PROJECTION'};$('viewSpheres').onclick=()=>{view='SPHERES';$('viewSpheres').className='on';$('viewAtom').className='';$('modeLabel').textContent='SPHERE BOUNDARIES / 3D'};$('speed').oninput=e=>{speed=Number(e.target.value);$('speedVal').textContent=speed.toFixed(1)+'×'};
+$('uncertain').onclick=()=>{let r=radii[focus];event(focus,'OUT',r-.2,r+.2,.8,'UNVERIFIED','b1')};$('conflict').onclick=()=>{let r=radii[focus];event(focus,'IN',r-3,r+3,.1,'UNVERIFIED','c1')};$('clear').onclick=()=>{events=[];pass=hold=0;$('cross').textContent=$('hold').textContent='000';$('log').textContent='Session log cleared; no physical evidence modified.'};$('export').onclick=()=>{let data={schema:'JANE-B151-PIXEL-SIMULATION',shadowOnlyFirstPair:true,physicalRelease:'HOLD',events};let blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='jane-b149-pixel-witnesses.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)};
+window.addEventListener('keydown',e=>{if(['ArrowLeft','ArrowRight','ArrowUp','ArrowDown','Space'].includes(e.code))e.preventDefault();if(e.code==='ArrowLeft')spin-=.16;if(e.code==='ArrowRight')spin+=.16;if(e.code==='ArrowUp')tilt=Math.min(1.1,tilt+.12);if(e.code==='ArrowDown')tilt=Math.max(-1.1,tilt-.12);if(e.code==='Space')$('pause').click();if(e.code==='KeyP')probe();if(/^Digit[1-5]$/.test(e.code))select(Number(e.code.slice(-1))-1)});
+cv.addEventListener('pointerdown',e=>{drag=true;px=e.clientX;py=e.clientY;cv.setPointerCapture(e.pointerId)});cv.addEventListener('pointermove',e=>{if(!drag)return;spin+=(e.clientX-px)*.01;tilt=Math.max(-1.1,Math.min(1.1,tilt+(e.clientY-py)*.01));px=e.clientX;py=e.clientY});cv.addEventListener('pointerup',()=>drag=false);
+
+// B151 layer: moving pixel scouts, browser-local append journal, deterministic replay.
+// The browser chain is for accidental corruption detection, not cryptographic provenance.
+const STORAGE_KEY='jane-b150-sphere-observations-v1';
+const runners=[
+  {w:'a1',r:5,dir:1,phase:0.1,color:'#ff985b',last:5,trace:[]},
+  {w:'b1',r:27,dir:1,phase:2.25,color:'#78cfad',last:27,trace:[]},
+  {w:'c1',r:53,dir:-1,phase:4.4,color:'#b29aff',last:53,trace:[]}
+];
+let journal=[],journalVisible=true,storageOk=true,runnerLast=performance.now(),journalSequence=0;
+function checksum(str){let h=2166136261;for(let i=0;i<str.length;i++){h^=str.charCodeAt(i);h=Math.imul(h,16777619)}return(h>>>0).toString(16).padStart(8,'0')}
+function ledgerEntry(e){
+ const obs={...e,origin:'PIXEL_SCOUT_SIMULATION',physicalPromotion:false};
+ const prev=journal.length?journal[journal.length-1].hash:'GENESIS';
+ const sequence=journal.length+1;
+ const hash=checksum(JSON.stringify({sequence,prev,obs}));
+ return{sequence,prev,obs,hash};
+}
+function validateJournal(entries){
+ let prev='GENESIS';
+ for(let i=0;i<entries.length;i++){
+  const e=entries[i];
+  if(!e||e.sequence!==i+1||e.prev!==prev||e.hash!==checksum(JSON.stringify({sequence:e.sequence,prev:e.prev,obs:e.obs})))return false;
+  if(e.obs?.physicalPromotion!==false||!['SIMULATED_CROSSING','HOLD'].includes(e.obs?.status))return false;
+  prev=e.hash;
+ }
+ return true;
+}
+function saveJournal(){
+ if(!storageOk)return;
+ try{localStorage.setItem(STORAGE_KEY,JSON.stringify(journal));$('persist').textContent='LOCAL JOURNAL: '+journal.length+' ENTRIES · REPLAY READY · DEMO CHECKSUM'}
+ catch(e){storageOk=false;$('persist').textContent='LOCAL PERSISTENCE UNAVAILABLE · EXPORT JSON TO RETAIN'}
+}
+function refreshJournal(){
+ if(!journalVisible)return;
+ $('log').textContent=journal.length?journal.slice(-11).reverse().map(q=>q.sequence+' '+q.obs.witness+' '+q.obs.slot+' '+q.obs.direction+' '+q.obs.status+'\n'+q.obs.before.toFixed(2)+'→'+q.obs.after.toFixed(2)+' ±'+q.obs.uncertainty+' ['+q.hash+']').join('\n\n'):'NO RECORDED SCOUT OBSERVATIONS';
+ $('cross').textContent=String(journal.filter(q=>q.obs.status==='SIMULATED_CROSSING').length).padStart(3,'0');
+ $('hold').textContent=String(journal.filter(q=>q.obs.status==='HOLD').length).padStart(3,'0');
+}
+function restoreJournal(){
+ try{
+  const raw=localStorage.getItem(STORAGE_KEY);
+  if(raw){const parsed=JSON.parse(raw);
+   if(!Array.isArray(parsed)||!validateJournal(parsed)){storageOk=false;$('persist').textContent='HOLD · LOCAL JOURNAL INTEGRITY FAILURE';return}
+   journal=parsed;seq=Math.max(0,...parsed.map(e=>Number(String(e.obs?.id||'').split('-').at(-1))||0));
+  }
+  $('persist').textContent='LOCAL JOURNAL: '+journal.length+' ENTRIES · REPLAY READY · DEMO CHECKSUM';
+  refreshJournal();
+ }catch(e){storageOk=false;$('persist').textContent='LOCAL STORAGE UNAVAILABLE · SESSION ONLY'}
+}
+const previousEvent=event;
+event=function(slot,dir,before,after,u,source='SIMULATION',witness='a1'){
+ previousEvent(slot,dir,before,after,u,source,witness);
+ const e=events[events.length-1];if(!e)return;
+ const physicalRecord={...e,frame:'B150_VISUAL_UNITS',source:'B150_PIXEL_SCOUT',provenanceKind:'SIMULATION'};
+ if(source!=='SIMULATION')physicalRecord.status='HOLD';
+ const entry=ledgerEntry(physicalRecord);journal.push(entry);saveJournal();refreshJournal();
+};
+function moveRunners(dt){
+ for(const r of runners){
+  const old=r.r;let next=old+dt*.018*speed*r.dir;
+  if(next>70){next=70;r.dir=-1}
+  if(next<4){next=4;r.dir=1}
+  r.r=next;r.phase+=dt*.0004*speed;
+  for(let s=0;s<radii.length;s++){
+   const boundary=radii[s];
+   const sign=r.dir>0?'OUT':'IN';
+   const touched=(r.dir>0&&old<boundary&&next>=boundary)||(r.dir<0&&old>boundary&&next<=boundary);
+   if(touched)event(s,sign,old,next,.01,'SIMULATION',r.w);
+  }
+  const xyz=[r.r*Math.cos(r.phase),r.r*.23*Math.sin(r.phase*.7),r.r*Math.sin(r.phase)];
+  const p=proj(...xyz);
+  r.trace.push([p.X,p.Y]);if(r.trace.length>16)r.trace.shift();
+ }
+}
+function drawRunners(){
+ runners.forEach((r,i)=>{
+  if(r.trace.length>1){for(let k=1;k<r.trace.length;k++)segment2(r.trace[k-1],r.trace[k],r.color)}
+  const end=r.trace.at(-1);if(!end)return;
+  // Original chunky coder sprite, scaled 1:1 pixel for perspective walk.
+  sprite(end[0]-5,end[1]-11,1,r.color,Math.floor(tick/6)+i);
+  txt(r.w,end[0]-5,end[1]-14,r.color,6);
+ });
+ txt('SCOUTS WALKING  [SIGNED - / +]',9,52,'#8fedc7',7);
+}
+function segment2(a,b,color){g.beginPath();g.strokeStyle=color;g.moveTo(Math.round(a[0]),Math.round(a[1]));g.lineTo(Math.round(b[0]),Math.round(b[1]));g.stroke()}
+const priorDraw=draw;
+draw=function(){priorDraw();drawRunners()};
+const priorLoop=loop;
+loop=function(now){const dt=Math.min(50,now-runnerLast);runnerLast=now;if(playing)moveRunners(dt);priorLoop(now)};
+$('clear').onclick=()=>{journalVisible=false;$('log').textContent='DISPLAY HIDDEN · JOURNAL KEPT · CLICK REPLAY TO RESTORE';$('persist').textContent='LOCAL JOURNAL PRESERVED · '+journal.length+' ENTRIES'};
+$('replay').onclick=()=>{journalVisible=true;if(!validateJournal(journal)){$('persist').textContent='HOLD · JOURNAL INTEGRITY FAILURE';return}refreshJournal();$('persist').textContent='REPLAY PASS · '+journal.length+' ENTRIES · NO QUORUM · NO PHYSICAL PROMOTION'};
+$('reset').onclick=()=>{tick=0;spin=.25;tilt=.2;select(0);runners.forEach((r,i)=>{r.r=5+i*22;r.dir=1;r.trace=[]});$('persist').textContent='POSITION RESET · JOURNAL PRESERVED'};
+$('export').onclick=()=>{const bundle={schema:'JANE-B151-LOCAL-DEMO-EXPORT',hashAlgorithm:'FNV32_DEMO_NONCRYPTOGRAPHIC',base:{shadow:'{-1,+1}>1',signedSpheres:['S1','S2','S3','S4','S5']},physicalRelease:'HOLD',journal};const blob=new Blob([JSON.stringify(bundle,null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='jane-b150-pixel-sphere-journal.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)};
+restoreJournal();
+
+
+// B151 independent strategy layer: each witness reads only its own prior B150 journal entries.
+const STRATEGY_KEY='jane-b151-independent-plans-v1',RADS=[20,30,40,51,62];
+let decisions=[],decisionsStorage=true,plannerEnabled=true;
+const remember=(w)=>{
+ const counts=RADS.map((radius,i)=>({slot:'S'+(i+1),radius,visits:0,holds:0}));
+ for(const row of journal){const e=row.obs;
+  if(e.witness!==w||e.source!=='B150_PIXEL_SCOUT'||e.frame!=='B150_VISUAL_UNITS')continue;
+  const j=Number(e.slot?.slice(1))-1;if(!(j>=0&&j<5))continue;
+  if(e.status==='HOLD'){counts[j].visits++;counts[j].holds++}
+  else if(e.status==='SIMULATED_CROSSING')counts[j].visits++;
+ }
+ return counts;
+};
+function choose(r){
+ const prior=r.targetSlot||null;
+ const candidates=remember(r.w).map(x=>({...x,score:100-25*x.visits+35*x.holds-.1*Math.abs(r.r-x.radius)-(prior===x.slot?5:0)}));
+ candidates.sort((a,b)=>b.score-a.score||Number(a.slot.slice(1))-Number(b.slot.slice(1)));
+ const selected=candidates[0];
+ return {witness:r.w,targetSlot:selected.slot,targetRadius:selected.radius,score:selected.score,reason:selected.visits===0?'UNVISITED':selected.holds?'REVISIT_UNCERTAIN':'LOWEST_COVERAGE',basis:'OWN_WITNESS_OBSERVATIONS_ONLY',physicalPromotion:false};
+}
+function decisionEntry(choice){
+ const sequence=decisions.length+1,previous=decisions.at(-1)?.hash||'GENESIS';
+ const record={sequence,previous,choice,observationJournalHead:journal.at(-1)?.hash||'GENESIS',observationsRead:journal.length};
+ return {...record,hash:checksum(JSON.stringify(record))};
+}
+function checkDecisions(items){
+ let prior='GENESIS';
+ for(let i=0;i<items.length;i++){
+  const e=items[i],{hash,...record}=e;
+  if(record.sequence!==i+1||record.previous!==prior||hash!==checksum(JSON.stringify(record))||record.choice?.physicalPromotion!==false||record.choice?.basis!=='OWN_WITNESS_OBSERVATIONS_ONLY'||!['a1','b1','c1'].includes(record.choice.witness))return false;
+  prior=hash;
+ }
+ return true;
+}
+function storeDecisions(){
+ if(!decisionsStorage)return;
+ try{localStorage.setItem(STRATEGY_KEY,JSON.stringify(decisions));$('planStatus').textContent='B151 LOCAL STRATEGY: '+decisions.length+' SAVED · DEMO CHECKSUM'}
+ catch(e){decisionsStorage=false;$('planStatus').textContent='LOCAL STRATEGY STORAGE UNAVAILABLE · SESSION ONLY'}
+}
+function showPlans(){
+ $('strategy').textContent=runners.map(r=>{
+  const h=remember(r.w),seen=h.reduce((n,x)=>n+x.visits,0),uncertain=h.reduce((n,x)=>n+x.holds,0);
+  return r.w+' > '+(r.targetSlot||'...')+' '+(r.choiceReason||'WAIT')+'\n   OBS '+seen+' HOLD '+uncertain+' R='+r.r.toFixed(1)+' → '+(r.goal??r.r).toFixed(1);
+ }).join('\n\n');
+}
+function assign(r){
+ const c=choose(r);r.targetSlot=c.targetSlot;r.choiceReason=c.reason;
+ r.goal=r.r<c.targetRadius?c.targetRadius+1.5:c.targetRadius-1.5;
+ r.travelDir=Math.sign(r.goal-r.r)||1;
+ const d=decisionEntry(c);decisions.push(d);storeDecisions();showPlans();
+}
+function restoreDecisions(){
+ try{const raw=localStorage.getItem(STRATEGY_KEY);
+  if(raw){const parsed=JSON.parse(raw);if(!Array.isArray(parsed)||!checkDecisions(parsed)){decisionsStorage=false;$('planStatus').textContent='HOLD · STRATEGY CHAIN INVALID';return}decisions=parsed}
+  $('planStatus').textContent='B151 LOCAL STRATEGY: '+decisions.length+' REPLAYABLE CHOICES';
+ }catch(e){decisionsStorage=false;$('planStatus').textContent='STRATEGY STORAGE UNAVAILABLE'}
+}
+const previousMoveRunners=moveRunners;
+moveRunners=function(dt){
+ if(!plannerEnabled){previousMoveRunners(dt);return}
+ for(const r of runners){
+  if(r.goal===undefined)assign(r);
+  const old=r.r,step=dt*.018*speed;
+  let next=old+Math.sign(r.goal-old)*Math.min(step,Math.abs(r.goal-old));
+  r.r=next;r.phase+=dt*.0004*speed;
+  const dir=next>old?'OUT':next<old?'IN':null;
+  if(dir){for(let s=0;s<RADS.length;s++){
+   const threshold=RADS[s],crossed=dir==='OUT'?(old<threshold&&next>=threshold):(old>threshold&&next<=threshold);
+   if(crossed)event(s,dir,old,next,.01,'SIMULATION',r.w);
+  }}
+  const xyz=[r.r*Math.cos(r.phase),r.r*.23*Math.sin(r.phase*.7),r.r*Math.sin(r.phase)];
+  const p=proj(...xyz);r.trace.push([p.X,p.Y]);if(r.trace.length>16)r.trace.shift();
+  if(Math.abs(r.r-r.goal)<1e-7)assign(r);
+ }
+ if(Math.floor(tick)%10===0)showPlans();
+};
+const priorReset=$('reset').onclick;
+$('reset').onclick=()=>{priorReset();runners.forEach(r=>{r.goal=undefined;r.targetSlot=null;r.choiceReason='RESET'});showPlans()};
+$('replan').onclick=()=>runners.forEach(r=>assign(r));
+$('replayPlans').onclick=()=>{
+ if(!checkDecisions(decisions)){$('planStatus').textContent='HOLD · STRATEGY JOURNAL INTEGRITY';return}
+ $('planStatus').textContent='REPLAY PASS · '+decisions.length+' INDEPENDENT DECISIONS · NO QUORUM';
+ showPlans();
+};
+const priorExport=$('export').onclick;
+$('export').onclick=()=>{
+ const bundle={schema:'JANE-B151-LOCAL-DEMO-EXPORT',algorithm:'FNV32_DEMO_NONCRYPTOGRAPHIC',
+ physicalRelease:'HOLD',observationJournal:journal,decisionJournal:decisions,
+ summary:runners.map(r=>({witness:r.w,history:remember(r.w),next:choose(r)}))};
+ const blob=new Blob([JSON.stringify(bundle,null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');
+ a.href=url;a.download='jane-b151-scout-memory.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);
+};
+restoreDecisions();showPlans();
+
+
+// B155: parallel deterministic benchmark with no writes to the B150/B151 evidence journals.
+const B52={id:'B155-SYNTHETIC-V1',steps:12,starts:[5,27,53],holdsBeforeClear:[0,0,2,0,1]},slots52=['S1','S2','S3','S4','S5'];
+let raceData=null,raceFrame=0,racePlaying=false,benchSource=null;
+function run52(strategy,witness,scenario){
+ const wi=['a1','b1','c1'].indexOf(witness),visits=[0,0,0,0,0],holds=[0,0,0,0,0],clear=[0,0,0,0,0],seenHold=new Set(),resolved=new Set(),trace=[];
+ let radius=scenario.starts[wi],previous=null,repeatedHolds=0,travel=0;
+ for(let t=0;t<scenario.steps;t++){
+  let i;
+  if(strategy==='ROUND_ROBIN')i=(wi+t)%5;
+  else{
+   const ranking=visits.map((v,k)=>({index:k,score:100-25*v+35*holds[k]-.1*Math.abs(radius-RADS[k])-(previous==='S'+(k+1)?5:0)}));
+   ranking.sort((a,b)=>b.score-a.score||a.index-b.index);i=ranking[0].index;
+  }
+  const before=radius,after=RADS[i],distance=Math.abs(after-before);radius=after;travel+=distance;visits[i]++;
+  const status=visits[i]<=scenario.holdsBeforeClear[i]?'HOLD':'SIMULATED_CROSSING';
+  if(status==='HOLD'){if(seenHold.has('S'+(i+1)))repeatedHolds++;seenHold.add('S'+(i+1));holds[i]++}else{clear[i]++;if(seenHold.has('S'+(i+1)))resolved.add('S'+(i+1))}
+  trace.push({step:t+1,witness,slot:'S'+(i+1),status,before,after,distance,physicalPromotion:false});previous='S'+(i+1);
+ }
+ return{strategy,witness,trace,metrics:{coverage:visits.filter(Boolean).length,uncertaintiesResolved:resolved.size,remainingUnresolved:[...seenHold].filter(s=>!resolved.has(s)).length,repeatedHolds,travelVisualUnits:travel,holds:holds.reduce((a,b)=>a+b,0),visits:scenario.steps}};
+}
+function compare52(scenario){
+ const people=['a1','b1','c1'];
+ const memory=people.map(w=>run52('MEMORY',w,scenario)),roundRobin=people.map(w=>run52('ROUND_ROBIN',w,scenario));
+ const aggregate=rr=>{const out={coverage:0,uncertaintiesResolved:0,remainingUnresolved:0,repeatedHolds:0,travelVisualUnits:0,holds:0,visits:0};rr.forEach(r=>Object.keys(out).forEach(k=>out[k]+=r.metrics[k]));return out};
+ const a=aggregate(memory),b=aggregate(roundRobin);
+ const objectives=[['coverage',1],['uncertaintiesResolved',1],['remainingUnresolved',-1],['repeatedHolds',-1],['travelVisualUnits',-1]];
+ const wins=objectives.filter(([k,s])=>(a[k]-b[k])*s>0).map(x=>x[0]);
+ const losses=objectives.filter(([k,s])=>(a[k]-b[k])*s<0).map(x=>x[0]);
+ const verdict=!losses.length&&wins.length?'MEMORY_PARETO_DOMINATES':!wins.length&&losses.length?'ROUND_ROBIN_PARETO_DOMINATES':!wins.length&&!losses.length?'TIE':'TRADEOFF_NO_UNQUALIFIED_WINNER';
+ return{schema:'JANE-B155-BROWSER_BENCHMARK',scenario,memory,roundRobin,totals:{memory:a,roundRobin:b},wins,losses,verdict,physicalPromotion:false,quorum:false};
+}
+function startBench(stress=false){
+ const scenario=stress?{...B52,id:'ALL_HOLD',holdsBeforeClear:[20,20,20,20,20]}:B52;
+ const result=compare52(scenario);raceData=result;raceFrame=0;racePlaying=true;
+ const a=result.totals.memory,b=result.totals.roundRobin;
+ $('benchReadout').textContent='               MEMORY   ROUND\nCOVERAGE       '+String(a.coverage).padStart(5)+'   '+String(b.coverage).padStart(5)+'\nHOLD RESOLVED  '+String(a.uncertaintiesResolved).padStart(5)+'   '+String(b.uncertaintiesResolved).padStart(5)+'\nUNRESOLVED     '+String(a.remainingUnresolved).padStart(5)+'   '+String(b.remainingUnresolved).padStart(5)+'\nREPEAT HOLDS   '+String(a.repeatedHolds).padStart(5)+'   '+String(b.repeatedHolds).padStart(5)+'\nTRAVEL PIXELS  '+String(a.travelVisualUnits).padStart(5)+'   '+String(b.travelVisualUnits).padStart(5)+'\nVISITS         '+String(a.visits).padStart(5)+'   '+String(b.visits).padStart(5);
+ $('benchVerdict').textContent=scenario.id+' · '+result.verdict+' · '+(result.wins.length?'memory wins '+result.wins.join(', '):'')+(result.losses.length?' · loses '+result.losses.join(', '):'')+'. All evidence: synthetic HOLD for physical promotion.';
+}
+function renderRace(){
+ const cv=$('benchRace'),ctx=cv.getContext('2d');ctx.imageSmoothingEnabled=false;ctx.fillStyle='#0b172a';ctx.fillRect(0,0,320,132);
+ function text(t,x,y,color){ctx.fillStyle=color;ctx.font='8px monospace';ctx.fillText(t,x,y)}
+ text('CODE MONKEY BENCHMARK - '+(raceData?.scenario.id||'READY'),7,12,'#ffc98e');
+ if(!raceData){text('PRESS RUN BOTH TO START',45,70,'#7ce0c7');return}
+ const c=raceData,t=Math.min(c.scenario.steps,Math.floor(raceFrame));
+ for(let si=0;si<2;si++){
+  const row=si===0?c.memory:c.roundRobin,y=27+si*56;
+  text(si===0?'MEMORY SCOUTS':'ROUND-ROBIN SCOUTS',6,y,'#9cbbce');
+  ctx.strokeStyle='#547386';ctx.strokeRect(7,y+6,306,40);
+  for(let j=0;j<3;j++){
+   const entry=row[j].trace[Math.max(0,t-1)],base=y+14+j*10,trackX=19;
+   ctx.fillStyle=['#ff985b','#78cfad','#b29aff'][j];
+   const x=trackX+(entry?entry.after/70:row[j].trace[0].before/70)*264;
+   ctx.fillRect(x-3,base-3,7,6);ctx.fillStyle='#ffe3bf';ctx.fillRect(x-1,base-2,2,2);
+   text(['a1','b1','c1'][j],290,base+2,'#bfd3de');
+   if(t>0)text(entry.slot,Math.min(260,x+6),base+2,entry.status==='HOLD'?'#ff8989':'#70d8b3');
+  }
+ }
+ text('DECISION '+t+'/'+c.scenario.steps+'  |  '+c.verdict,5,129,'#fad3ae');
+}
+let benchLast=performance.now();
+function animateBench(now){if(racePlaying){raceFrame+=(now-benchLast)*.0035;if(raceFrame>=B52.steps){raceFrame=B52.steps;racePlaying=false}}benchLast=now;renderRace();requestAnimationFrame(animateBench)}
+$('benchRun').onclick=()=>startBench(false);
+$('benchStress').onclick=()=>startBench(true);
+$('benchExport').onclick=()=>{if(!raceData)return;const out={...raceData,exportedAt:new Date().toISOString(),status:'SIMULATED_ONLY_NOT_AN_ATTESTATION'};const url=URL.createObjectURL(new Blob([JSON.stringify(out,null,2)],{type:'application/json'}));const a=document.createElement('a');a.href=url;a.download='jane-b152-benchmark-'+raceData.scenario.id.toLowerCase()+'.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),800)};
+requestAnimationFrame(animateBench);startBench(false);
+
+
+// B155: pixelated 3D-projected HON registers, independent from B152 witness/decision journals.
+const BOX153=[1,2,4,6,8,12,12,8,6,2,1],TOR153=[1,3,6,9,11,11,9,6,3,1];
+const BR153=['H','O','N'],WIT153=['a1','b1','c1'],COL153=['#ff9861','#61dfad','#75cfdd'];
+const cageCanvas=$('braceView'),cg=cageCanvas.getContext('2d');cg.imageSmoothingEnabled=false;
+let cageRun=true,cageSign=1,cageFocus=-1,cageAngle=0,cageTicks=0,cageEvents=[],cageLast=performance.now(),cageAcc=0;
+const cageScouts=BR153.map((brace,i)=>({brace,witness:WIT153[i],local:1,global:i*122+1,seen:new Set([1]),crossings:[],trail:[],color:COL153[i]}));
+function cells153(braceIndex){
+ const out=[];let local=0;
+ for(const [kind,counts] of [['BOX',BOX153],['TOROID',TOR153]]){
+  const len=counts.length;
+  for(let layer=0;layer<len;layer++)for(let pos=0;pos<counts[layer];pos++){
+   const t=pos/counts[layer]*Math.PI*2,ratio=layer/(len-1),mid=Math.floor(len/2);
+   let x,y,z;
+   if(kind==='BOX'){
+    const side=.25+.75*(1-Math.abs(layer-mid)/(mid||1));
+    const xx=Math.cos(t),zz=Math.sin(t),q=Math.max(Math.abs(xx),Math.abs(zz))||1;
+    x=side*xx/q;y=(ratio-.5)*1.7;z=side*zz/q;
+   }else{
+    const tube=.18+ratio*.13,major=.69;
+    x=(major+tube*Math.cos(t*2))*Math.cos(t);
+    z=(major+tube*Math.cos(t*2))*Math.sin(t);
+    y=tube*Math.sin(t*2)+(ratio-.5)*.7;
+   }
+   local++;out.push({local,global:braceIndex*122+local,kind,layer:layer+1,slot:pos+1,population:counts[layer],x,y,z});
+  }
+ }
+ return out;
+}
+const cages153=BR153.map((b,i)=>cells153(i));
+function px153(x,y,w,h,color){cg.fillStyle=color;cg.fillRect(Math.round(x),Math.round(y),w,h)}
+function line153(x,y,X,Y,color){cg.strokeStyle=color;cg.beginPath();cg.moveTo(Math.round(x),Math.round(y));cg.lineTo(Math.round(X),Math.round(Y));cg.stroke()}
+function text153(s,x,y,color='#d0eeeb',sz=8){cg.font=sz+'px monospace';cg.fillStyle=color;cg.fillText(String(s),Math.round(x),Math.round(y))}
+function projection153(p,ci){
+ const a=cageAngle+(ci-1)*.22,cs=Math.cos(a),sn=Math.sin(a);
+ const x=p.x*cs-p.z*sn,z=p.x*sn+p.z*cs;
+ const depth=2.4/(2.4+z*.35);
+ return {x:80+ci*160+x*57*depth,y:120+p.y*54*depth+z*7,depth};
+}
+function sprite153(x,y,color,walk){
+ // Original tiny monkey coder sprite: 9x13 1-pixel cells, purpose-built for B155.
+ const pattern=['..BBBBB..','.BECECEB.','BBEEEEEBB','BBEKEKEBB','.BEEEEEB.','..BBBBB..','..CCCCC..','.CCCCCCC.','.CCCHCCC.','..CCCCC..','..DCCCD..','..D...D..','..D...D..'];
+ const palette={B:'#4b2e39',E:'#a66b49',C:color,K:'#fff1bd',H:'#ffdd82',D:'#6c6482'};
+ for(let row=0;row<pattern.length;row++)for(let col=0;col<pattern[row].length;col++){
+  const ch=pattern[row][col];if(ch!=='.')px153(x+col-4,y+row-11,1,1,palette[ch]);
+ }
+ if(Math.floor(walk/8)%2)px153(x+3,y+1,1,2,'#ffcc88');
+}
+function step153(sc,sign=cageSign){
+ const old=sc.local,next=sign>0?old%122+1:(old+120)%122+1;
+ sc.local=next;const ci=BR153.indexOf(sc.brace);sc.global=ci*122+next;sc.seen.add(next);
+ const origin=cages153[ci][old-1],end=cages153[ci][next-1];
+ const row={seq:cageEvents.length+1,witness:sc.witness,brace:sc.brace,fromLocal:old,toLocal:next,fromGlobal:origin.global,toGlobal:end.global,sign:sign>0?'+':'-',fromKind:origin.kind,toKind:end.kind,transition:origin.kind!==end.kind?'BOX_TOROID_SEAM':'INTRA_REGION',source:'B155_PIXELS_ONLY',status:'SIMULATED_STEP',physicalPromotion:false};
+ cageEvents.push(row);sc.crossings.push(row);if(sc.crossings.length>122)sc.crossings.shift();cageTicks++;
+ return row;
+}
+function draw153(){
+ px153(0,0,480,268,'#081624');
+ for(let i=0;i<180;i++){const x=(i*97+11)%480,y=(i*71+19)%245;px153(x,y,1,1,i%4?'#223544':'#456179')}
+ text153('H 001-122      O 123-244      N 245-366',14,14,'#e3bd83',9);
+ for(let ci=0;ci<3;ci++){
+  const base=ci*160,sc=cageScouts[ci],points=cages153[ci],active=cageFocus<0||cageFocus===ci,color=COL153[ci];
+  px153(base+4,22,152,232,active?'#0d2531':'#0c1e2b');
+  cg.strokeStyle=active?color:'#466075';cg.strokeRect(base+5.5,22.5,149,231);
+  text153('{ '+BR153[ci]+' }  / '+sc.witness,base+16,35,color,10);
+  const display=points.map(p=>({p,q:projection153(p,ci)})).sort((a,b)=>a.q.depth-b.q.depth);
+  for(const {p,q}of display){
+   const isFocus=p.local===sc.local;
+   const dim=cageFocus>=0&&cageFocus!==ci;
+   const colorPixel=p.kind==='BOX'?'#cf975b':'#54a8b3';
+   px153(q.x,q.y,isFocus?3:1,isFocus?3:1,isFocus?'#fff4bb':dim?'#35515d':colorPixel);
+  }
+  // Projected bounding cube is a visual guide to the layered box, not a metric surface.
+  const cube=[[-1,-1,-1],[1,-1,-1],[1,1,-1],[-1,1,-1],[-1,-1,1],[1,-1,1],[1,1,1],[-1,1,1]].map(xyz=>projection153({x:xyz[0]*.91,y:xyz[1]*.85,z:xyz[2]*.91},ci));
+  for(const [a,b] of [[0,1],[1,2],[2,3],[3,0],[4,5],[5,6],[6,7],[7,4],[0,4],[1,5],[2,6],[3,7]])line153(cube[a].x,cube[a].y,cube[b].x,cube[b].y,'#34556a');
+  const current=points[sc.local-1],P=projection153(current,ci);
+  sprite153(P.x,P.y,color,cageTicks);
+  text153((cageSign>0?'+':'-')+' CELL '+String(sc.local).padStart(3,'0'),base+16,207,'#f8da96',9);
+  text153('G'+String(sc.global).padStart(3,'0')+' '+current.kind+' L'+current.layer,base+16,221,color,8);
+  text153('VIS '+String(sc.seen.size).padStart(3,'0')+'/122',base+16,234,'#b5d4d9',8);
+  text153(current.kind==='BOX'?'[ 62 BOX ]':'( 60 TOR )',base+16,245,'#89cad5',8);
+ }
+ text153('BOX62 + TOROID60 = 122 x 3 = 366 | ONE ROOT SHADOW ONLY',10,263,'#ddae7e',8);
+}
+function status153(){
+ $('braceReadout').textContent=cageScouts.map(sc=>{
+  const ci=BR153.indexOf(sc.brace),cell=cages153[ci][sc.local-1];
+  return '{'+sc.brace+'} '+sc.witness+'  '+String(sc.local).padStart(3,'0')+'/122'
+     +'  GLOBAL '+String(sc.global).padStart(3,'0')+' '+cell.kind+' L'+cell.layer
+     +' VISITED '+sc.seen.size+'\n';
+ }).join('\n')+'SIGNED '+(cageSign>0?'+':'-')+' · '+cageEvents.length+' SIMULATED STEPS · NO QUORUM\n'+'Physical gravity / electron claims: HOLD';
+}
+function animation153(now){
+ const dt=Math.min(100,now-cageLast);cageLast=now;cageAngle+=dt*.00017;
+ if(cageRun){cageAcc+=dt*speed;if(cageAcc>=180){const steps=Math.min(6,Math.floor(cageAcc/180));cageAcc%=180;for(let i=0;i<steps;i++)cageScouts.forEach(sc=>step153(sc));status153()}}
+ draw153();requestAnimationFrame(animation153);
+}
+$('bracePlay').onclick=()=>{cageRun=!cageRun;$('bracePlay').textContent=cageRun?'⏸ PAUSE CELLS':'▶ PLAY CELLS'};
+$('braceStep').onclick=()=>{cageScouts.forEach(sc=>step153(sc));status153();draw153()};
+function polarity153(sign){cageSign=sign;$('braceMinus').className=sign<0?'on':'';$('bracePlus').className=sign>0?'on':'';status153()}
+$('braceMinus').onclick=()=>polarity153(-1);$('bracePlus').onclick=()=>polarity153(1);
+function focus153(i){cageFocus=i;for(const [index,id]of ['braceH','braceO','braceN'].entries())$(id).className=index===i?'on':'';status153()}
+$('braceAll').onclick=()=>{cageFocus=-1;['braceH','braceO','braceN'].forEach(id=>$(id).className='')};['braceH','braceO','braceN'].forEach((id,i)=>$(id).onclick=()=>focus153(i));
+$('braceExport').onclick=()=>{const report={schema:'JANE-B155-HON-PIXEL-REGISTER',cellCounts:{box:62,toroid:60,perBrace:122,total:366},braces:cageScouts.map(s=>({brace:s.brace,witness:s.w,local:s.local,global:s.global,visited:[...s.seen]})),signedTrace:cageEvents,physicalPromotion:false};const blob=new Blob([JSON.stringify(report,null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='jane-b153-hon-366-cell-trace.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),800)};
+window.addEventListener('keydown',e=>{if(e.code==='KeyH')focus153(0);if(e.code==='KeyO')focus153(1);if(e.code==='KeyN')focus153(2);if(e.code==='BracketLeft')polarity153(-1);if(e.code==='BracketRight')polarity153(1)});
+status153();requestAnimationFrame(animation153);
+
+
+// B155 mirror walk, independent of B153 exploratory position controls and their log.
+const ac=$('auditCanvas'),ag=ac.getContext('2d');ag.imageSmoothingEnabled=false;
+const mirrorRunners=BR153.map((b,i)=>({brace:b,witness:WIT153[i],phase:0,local:1,origin:1,records:[],forwardEdges:[],forwardVisited:new Set(),reverseVisited:new Set(),status:'READY',lastHash:'GENESIS'}));
+let mirrorPlaying=false,mirrorAcc=0,mirrorLast=performance.now(),mirrorVisible=true;
+function auditHash(text){let h=2166136261;for(let i=0;i<text.length;i++){h=Math.imul(h^text.charCodeAt(i),16777619)}return(h>>>0).toString(16).padStart(8,'0')}
+function auditStep154(sc){
+ if(sc.phase>=244)return;
+ const old=sc.local,sign=sc.phase<122?'+':'-',next=sign==='+'?old%122+1:(old+120)%122+1;
+ const from=cages153[BR153.indexOf(sc.brace)][old-1],to=cages153[BR153.indexOf(sc.brace)][next-1];
+ const d=sc.phase<122?sc.forwardVisited:sc.reverseVisited;d.add(old);
+ const row={sequence:sc.phase+1,brace:sc.brace,witness:sc.witness,from:old,to:next,fromKind:from.kind,toKind:to.kind,sign,previous:sc.lastHash,physicalPromotion:false};
+ const hash=auditHash(JSON.stringify(row));sc.records.push({...row,hash});sc.lastHash=hash;
+ if(sc.phase<122)sc.forwardEdges.push([old,next]);
+ sc.local=next;sc.phase++;
+ if(sc.phase===122)sc.status=sc.local===sc.origin&&sc.forwardVisited.size===122?'FORWARD_PASS':'HOLD';
+ if(sc.phase===244)verifyMirror154(sc);
+}
+function verifyMirror154(sc){
+ let local=sc.origin,prev='GENESIS',F=new Set(),R=new Set(),forward=[],reverse=[],okay=true;
+ for(let i=0;i<sc.records.length;i++){
+  const r=sc.records[i],{hash,...row}=r;
+  const direction=i<122?'+':'-',next=direction==='+'?local%122+1:(local+120)%122+1;
+  if(row.sequence!==i+1||row.from!==local||row.to!==next||row.sign!==direction||row.previous!==prev||row.brace!==sc.brace||row.witness!==sc.witness||row.physicalPromotion!==false||hash!==auditHash(JSON.stringify(row)))okay=false;
+  const ci=BR153.indexOf(sc.brace),from=cages153[ci][local-1],to=cages153[ci][next-1];
+  if(row.fromKind!==from.kind||row.toKind!==to.kind)okay=false;
+  (i<122?F:R).add(local);
+  (i<122?forward:reverse).push([local,next]);
+  local=next;prev=hash;
+ }
+ const inverted=[...forward].reverse().map(x=>[x[1],x[0]]);
+ if(sc.records.length!==244||F.size!==122||R.size!==122||local!==sc.origin||JSON.stringify(inverted)!==JSON.stringify(reverse))okay=false;
+ if(!okay)sc.status='HOLD';else sc.status='MIRROR_PASS';
+ return sc.status;
+}
+function spriteAudit154(ctx,x,y,color,n){
+ ctx.fillStyle='#5a3340';ctx.fillRect(x-5,y-8,11,8);ctx.fillStyle='#b77c54';ctx.fillRect(x-4,y-7,9,7);
+ ctx.fillStyle='#fff0ca';ctx.fillRect(x-2,y-6,2,2);ctx.fillRect(x+2,y-6,2,2);
+ ctx.fillStyle=color;ctx.fillRect(x-4,y,9,7);ctx.fillStyle='#554c69';ctx.fillRect(x-3,y+7,2,3);ctx.fillRect(x+2,y+7,2,3);
+ if(n%2)ctx.fillRect(x+5,y+2,3,2);
+}
+function auditFrame154(){
+ ag.fillStyle='#0a1927';ag.fillRect(0,0,480,150);
+ ag.font='9px monospace';ag.fillStyle='#f6cc92';ag.fillText('BOX62 [001-062] / TOROID60 (063-122) / +122 then -122',8,13);
+ mirrorRunners.forEach((s,i)=>{
+  const y=37+i*37,color=COL153[i],x0=52,track=405,ratio=(s.local-1)/121;
+  ag.fillStyle='#133042';ag.fillRect(x0,y-5,track,12);
+  ag.fillStyle='#496479';ag.fillRect(x0,y-3,track,1);
+  ag.fillStyle='#c88956';ag.fillRect(x0,y-5,track*62/122,2);
+  ag.fillStyle='#65aab3';ag.fillRect(x0+track*62/122,y-5,track*60/122,2);
+  ag.fillStyle=color;ag.fillRect(x0+Math.round(ratio*track)-2,y-6,4,14);
+  spriteAudit154(ag,x0+Math.round(ratio*track),y,color,s.phase);
+  ag.fillStyle=color;ag.fillText('{'+s.brace+'}',7,y+4);
+  ag.fillStyle='#d6e2dd';ag.fillText(''+s.phase+'/244 '+s.status+' @'+String(s.local).padStart(3,'0'),70,y+23);
+ });
+ ag.fillStyle='#a8f2df';ag.fillText('MIRROR: '+mirrorRunners.map(s=>s.brace+'='+s.status).join(' / '),6,148);
+}
+function auditSummary154(){
+ $('auditStatus').textContent=mirrorRunners.map(s=>
+  '{'+s.brace+'} '+s.witness+' '+String(s.phase).padStart(3,'0')+'/244'
+  +' | HOME '+s.origin+' | NOW '+String(s.local).padStart(3,'0')
+  +' | BOX/TOR CELLS '+s.forwardVisited.size+'/'+s.reverseVisited.size
+  +' | '+s.status
+ ).join('\n')+'\nSESSION CHECKPOINTS: '+mirrorRunners.reduce((n,s)=>n+s.records.length,0)
+ +' / 732  ·  NO QUORUM  ·  PHYSICS HOLD\nBrowser checksum is DEMO ONLY, not a signature.';
+}
+function advanceMirror154(){for(const s of mirrorRunners)if(s.phase<244)auditStep154(s);auditSummary154();auditFrame154();if(mirrorRunners.every(s=>s.phase===244))mirrorPlaying=false}
+function mirrorLoop154(now){const dt=Math.min(now-mirrorLast,80);mirrorLast=now;if(mirrorPlaying){mirrorAcc+=dt*speed;if(mirrorAcc>=75){const n=Math.min(10,Math.floor(mirrorAcc/75));mirrorAcc%=75;for(let i=0;i<n;i++)advanceMirror154()}}auditFrame154();requestAnimationFrame(mirrorLoop154)}
+$('auditRun').onclick=()=>mirrorPlaying=true;$('auditPause').onclick=()=>mirrorPlaying=false;$('auditStep').onclick=()=>advanceMirror154();
+$('auditReset').onclick=()=>{mirrorPlaying=false;mirrorAcc=0;for(const s of mirrorRunners){s.phase=0;s.local=1;s.records=[];s.forwardEdges=[];s.forwardVisited=new Set();s.reverseVisited=new Set();s.status='READY';s.lastHash='GENESIS'}auditSummary154()};
+$('auditVerify').onclick=()=>{for(const s of mirrorRunners){if(s.phase===244)verifyMirror154(s);else if(s.phase>0)s.status='PARTIAL_HOLD'}auditSummary154()};
+$('auditExport').onclick=()=>{const data={schema:'JANE-B155-BROWSER-MIRROR-SNAPSHOT',hash:'FNV32_DEMO_NONCRYPTOGRAPHIC',braces:mirrorRunners.map(s=>({brace:s.brace,witness:s.witness,phase:s.phase,local:s.local,status:s.status,records:s.records})),physicalPromotion:false};const b=new Blob([JSON.stringify(data,null,2)],{type:'application/json'}),url=URL.createObjectURL(b),a=document.createElement('a');a.href=url;a.download='jane-b154-mirror-audit.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),800)};
+auditSummary154();requestAnimationFrame(mirrorLoop154);
+
+
+// B155 ISA register display and independent instruction ledger.
+const ISA_IDS=['a','b','c'],ISA_COLORS=['#ff9861','#61dfad','#75cfdd'];
+const ISA_PC=[1,1,1],ISA_TRACE=[];let isaFocusIndex=0,isaLast='READY';
+const ISA_CANVAS=$('isaCanvas'),IX=ISA_CANVAS.getContext('2d');IX.imageSmoothingEnabled=false;
+function isaAddress(r,n){let i=ISA_IDS.indexOf(r);if(i<0||!Number.isInteger(n)||n<1||n>122)return null;return{register:r,brace:['H','O','N'][i],witness:['a1','b1','c1'][i],local:n,global:i*122+n}}
+function isaReadCell(r,n){const a=isaAddress(r,n);if(!a)return null;const i=ISA_IDS.indexOf(r),cell=cages153[i][n-1];return{...a,kind:cell.kind,layer:cell.layer,physicalPromotion:false}}
+function isaRecord(op,args,value){const entry={seq:ISA_TRACE.length+1,opcode:op,args,result:value,previous:ISA_TRACE.at(-1)?.hash||'GENESIS',physicalPromotion:false};let n=2166136261,s=JSON.stringify(entry);for(let j=0;j<s.length;j++)n=Math.imul(n^s.charCodeAt(j),16777619);entry.hash=(n>>>0).toString(16).padStart(8,'0');ISA_TRACE.push(entry);isaLast=op+' → '+(value.status||value.global||'PASS');isaStatusView()}
+function isaRun(op,options={}){
+ const id=options.register||ISA_IDS[isaFocusIndex],idx=ISA_IDS.indexOf(id);
+ let result=null;if(op==='READ')result=isaReadCell(id,options.local||ISA_PC[idx]);
+ if(op==='ADDR'){const g=options.global,i=Math.floor((g-1)/122);result=isaAddress(ISA_IDS[i],(g-1)%122+1)}
+ if(op==='STEP'&&idx>=0&&['+','-'].includes(options.sign)){ISA_PC[idx]=options.sign==='+'?ISA_PC[idx]%122+1:(ISA_PC[idx]+120)%122+1;result={status:'SIMULATED_STEP',...isaReadCell(id,ISA_PC[idx]),sign:options.sign}}
+ if(op==='ASSEMBLE')result={status:'PASS',a:122,b:122,c:122,d:366,physicalPromotion:false,allocatedAdditionalCells:0};
+ if(op==='WITNESS'&&idx>=0)result={status:'OBSERVED_SIMULATION',...isaReadCell(id,ISA_PC[idx])};
+ if(op==='CHECK')result={status:ISA_PC.every(x=>x>=1&&x<=122)?'PASS':'HOLD',addresses:366,shadowPairs:1,quorum:false,physicalPromotion:false};
+ if(!result)return{status:'HOLD',reason:'INVALID_OPCODE_OR_OPERAND'};
+ isaRecord(op,options,result);return result;
+}
+function isaStatusView(){$('isaReadout').textContent=ISA_IDS.map((r,i)=>'{'+r+'} '+['H','O','N'][i]+' '+['a1','b1','c1'][i]+' = '+String(ISA_PC[i]).padStart(3,'0')+'/122 · GLOBAL '+String(isaAddress(r,ISA_PC[i]).global).padStart(3,'0')).join('\n')+'\nd = a + b + c = 366 DERIVED, READ ONLY\n'+isaLast+' · '+ISA_TRACE.length+' INSTRUCTIONS · PHYSICS HOLD'}
+function isaDraw(){
+ const g=IX;g.fillStyle='#071725';g.fillRect(0,0,480,165);g.font='9px monospace';g.fillStyle='#ffd6a2';g.fillText(' [ a:122 , b:122 , c:122 : d=a+b+c :: isa ]',8,13);
+ ISA_IDS.forEach((r,i)=>{const y=30+i*34;g.fillStyle=i===isaFocusIndex?'#294555':'#152939';g.fillRect(8,y-10,464,27);g.fillStyle=ISA_COLORS[i];g.fillText('{'+r+'}',13,y+4);for(let c=1;c<=122;c++){const x=Math.floor(49+(c-1)*3.35);g.fillStyle=c<=62?'#c28d65':'#54a2af';g.fillRect(x,y-4,2,9);if(c===ISA_PC[i]){g.fillStyle='#fff2b7';g.fillRect(x-1,y-8,4,18)}}g.fillStyle=ISA_COLORS[i];g.fillText(String(isaAddress(r,ISA_PC[i]).global).padStart(3,'0'),438,y+4)});
+ g.fillStyle='#ffd8a7';g.fillText('d',13,142);for(let k=0;k<366;k++){g.fillStyle=k<122?ISA_COLORS[0]:k<244?ISA_COLORS[1]:ISA_COLORS[2];g.fillRect(Math.floor(45+k*1.12),132,1,9)}g.fillStyle='#a5cecd';g.fillText('NO FOURTH CAGE · NO EXTRA CELLS · NO QUORUM',9,159);
+}
+function isaFocus(r){isaFocusIndex=r;ISA_IDS.forEach((x,i)=>$('isa'+x.toUpperCase()).className=i===r?'on':'');isaStatusView();isaDraw()}
+$('isaA').onclick=()=>isaFocus(0);$('isaB').onclick=()=>isaFocus(1);$('isaC').onclick=()=>isaFocus(2);
+$('isaMinus').onclick=()=>isaRun('STEP',{register:ISA_IDS[isaFocusIndex],sign:'-'});
+$('isaPlus').onclick=()=>isaRun('STEP',{register:ISA_IDS[isaFocusIndex],sign:'+'});
+$('isaRead').onclick=()=>isaRun('READ',{register:ISA_IDS[isaFocusIndex]});
+$('isaWitness').onclick=()=>isaRun('WITNESS',{register:ISA_IDS[isaFocusIndex]});
+$('isaAssemble').onclick=()=>isaRun('ASSEMBLE');
+$('isaCheck').onclick=()=>isaRun('CHECK');
+$('isaExport').onclick=()=>{let blob=new Blob([JSON.stringify({schema:'JANE-B155-BROWSER-ISA',pc:ISA_PC,instructions:ISA_TRACE,d:366,physicalPromotion:false,hash:'NONCRYPTOGRAPHIC_DEMO_FNV32'},null,2)],{type:'application/json'}),u=URL.createObjectURL(blob),a=document.createElement('a');a.href=u;a.download='jane-b155-abc-d-isa.json';a.click();setTimeout(()=>URL.revokeObjectURL(u),800)};
+isaFocus(0);function isaTick(){isaDraw();requestAnimationFrame(isaTick)}requestAnimationFrame(isaTick);
+
+select(0);requestAnimationFrame(loop);
+</script></body></html>
