@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>JANE B156 — Code Monkeys / D Dispatcher</title>
+<style>
+:root{color-scheme:dark;--bg:#0b1019;--panel:#162331;--line:#344e5e;--ink:#f4f0df;--soft:#a7b7bf;--orange:#ffad73;--green:#79dfb7;--cyan:#7cd6e8;--red:#ff8c80}
+*{box-sizing:border-box}body{background:var(--bg);color:var(--ink);font:13px/1.45 ui-monospace,Consolas,monospace;margin:0}
+header{display:flex;gap:18px;justify-content:space-between;align-items:center;padding:16px 22px;border-bottom:2px solid var(--line);background:#101b27}
+.brand small,.subtle{color:var(--soft)}h1{font-size:clamp(20px,3vw,29px);line-height:1.2;margin:3px 0;color:var(--orange);letter-spacing:.04em}
+h2{font-size:13px;margin:0 0 10px;letter-spacing:.08em;color:var(--green)}a{color:var(--cyan)}
+.badge{padding:5px 9px;border:1px solid var(--line);font-size:11px;color:#d0deed;white-space:nowrap}
+.layout{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(310px,.95fr);gap:16px;padding:16px;max-width:1500px;margin:auto}
+.left,.right{min-width:0}.left{display:flex;flex-direction:column;gap:13px}.right{display:flex;flex-direction:column;gap:13px}
+.panel{background:var(--panel);border:1px solid var(--line);padding:13px;border-radius:6px;box-shadow:4px 4px 0 #050b13}
+.screen{background:#071322;border:5px solid #60757d;box-shadow:inset 0 0 0 3px #0a1d2a;position:relative;padding:4px}
+.screen canvas{display:block;width:100%;height:auto;aspect-ratio:16/10;image-rendering:pixelated}
+.screen .screen-title{position:absolute;top:8px;left:9px;color:#ffddae;text-shadow:2px 2px #09101a;font-size:10px;pointer-events:none}
+.stack{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}.stat{background:#0b1b29;border:1px solid var(--line);padding:10px}.stat strong{display:block;font-size:19px;color:#e5d0af}.stat small{color:var(--soft)}
+.actions,.tabs{display:flex;flex-wrap:wrap;gap:6px}.actions button{flex:1 1 80px}button,select,input{font:inherit}button{background:#22374a;color:#f3eddf;border:1px solid #5f7988;border-radius:3px;padding:9px 8px;cursor:pointer;box-shadow:2px 2px #07111d}button:hover,button:focus-visible{outline:1px solid var(--orange)}button.active{background:#594137;color:#ffe5aa;border-color:#fab477}button:disabled{opacity:.45;cursor:default}
+.tab-body{display:none}.tab-body.active{display:block}.tabs button{flex:1}
+.note{font-size:11px;color:var(--soft);margin:8px 0 0}p{margin:5px 0 9px;color:#c3d1d9}
+.regs{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}.reg{background:#0b1c2a;border:1px solid var(--line);padding:10px;text-align:left;cursor:pointer}.reg.active{outline:2px solid var(--orange)}.reg b{font-size:18px;display:block}.reg span{display:block;font-size:11px;color:var(--soft)}.reg.h b{color:var(--orange)}.reg.o b{color:var(--green)}.reg.n b{color:var(--cyan)}
+.bar{display:flex;height:17px;overflow:hidden;border:1px solid #6b8790;background:#09141e;margin:12px 0 5px}.bar div:nth-child(1){width:33.333%;background:repeating-linear-gradient(90deg,#b76d45,#c58c67 4px,#aa6145 6px)}.bar div:nth-child(2){width:33.333%;background:repeating-linear-gradient(90deg,#44977f,#66d2a1 4px,#2e7968 6px)}.bar div:nth-child(3){width:33.334%;background:repeating-linear-gradient(90deg,#3d8f9b,#7ccee2 4px,#33697d 6px)}
+pre{margin:9px 0 0;white-space:pre-wrap;word-break:break-word;background:#071522;border:1px solid #2b4557;color:#b9f0d9;padding:12px;font:12px/1.65 ui-monospace,Consolas,monospace;max-height:280px;overflow:auto}
+footer{max-width:1500px;margin:auto;padding:5px 18px 18px;color:var(--soft);font-size:11px}
+@media(max-width:980px){.layout{grid-template-columns:1fr}.screen canvas{max-height:68vh}.regs{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:480px){header{padding:12px;flex-wrap:wrap}.layout{padding:9px;gap:10px}.panel{padding:10px}.stat strong{font-size:15px}}
+</style></head><body>
+<header><div class="brand"><small>0ROOT / JANE / CODE MONKEY ATOM LAB / B156</small><h1>THE D DISPATCHER</h1><small>ONE SHADOW · THREE BRACES · 366 ADDRESSES · NO QUORUM</small></div><div class="badge">PHYSICAL CLAIMS: HOLD</div></header>
+<main class="layout">
+<div class="left">
+<section class="panel"><h2>01 / ATOMIC FIELD · PIXEL SIMULATOR</h2><div class="screen"><canvas id="game" width="320" height="200" aria-label="Original pixel-art code monkey laboratory with rotating atomic trajectories and three indexed register cages"></canvas><span class="screen-title">H / O / N · 62 BOX + 60 TOROID</span></div><div class="stack" style="margin-top:12px"><div class="stat"><strong id="ticks">0000</strong><small>SIM TICKS</small></div><div class="stat"><strong id="opCount">000</strong><small>ISA RECORDS</small></div><div class="stat"><strong id="runState">READY</strong><small>DISPATCH STATE</small></div></div><div class="actions" style="margin-top:12px"><button id="play">▶ ANIMATE</button><button id="orbit">◎ ATOM / CAGES</button><button id="orbitLeft">← ROTATE</button><button id="orbitRight">ROTATE →</button></div><p class="note">Pixel-rendered 3D projection, not physical electron orbits. Move the atom by dragging the screen. The H/O/N cages are logical registers.</p></section>
+<section class="panel"><h2>02 / ADDRESS BUS · D = A + B + C</h2><div class="bar"><div></div><div></div><div></div></div><div class="stack"><div class="stat"><strong>001–122</strong><small>a · H · a1</small></div><div class="stat"><strong>123–244</strong><small>b · O · b1</small></div><div class="stat"><strong>245–366</strong><small>c · N · c1</small></div></div><p class="note">Each brace has Box62 + Toroid60. The 366-address D view is derived, read-only and requires no fourth cage.</p></section>
+</div>
+<div class="right">
+<section class="panel"><h2>03 / ISA CONTROL ROOM</h2><div class="regs"><button class="reg h active" data-reg="a" id="regA"><b>{ a }</b><span>H / a1</span><span id="posA">001 / 001</span></button><button class="reg o" data-reg="b" id="regB"><b>{ b }</b><span>O / b1</span><span id="posB">001 / 123</span></button><button class="reg n" data-reg="c" id="regC"><b>{ c }</b><span>N / c1</span><span id="posC">001 / 245</span></button></div><div class="actions" style="margin-top:12px"><button id="prev">− STEP</button><button id="next">+ STEP</button><button id="read">READ</button><button id="witness">WITNESS</button><button id="assemble">ASSEMBLE D</button><button id="check">CHECK</button></div><div class="actions" style="margin-top:7px"><button id="interrupt">⏹ INTERRUPT</button><button id="resume">↺ RESUME</button><button id="audit">VERIFY REPLAY</button></div><p class="note">Every instruction enters through D. An interrupt freezes counters until a valid checkpoint resumes them.</p></section>
+<section class="panel"><h2>04 / OBSERVER CONSOLE</h2><div class="tabs" role="tablist" aria-label="console tabs"><button class="active" data-tab="status" role="tab">STATE</button><button data-tab="trace" role="tab">TRACE</button><button data-tab="invariant" role="tab">INVARIANTS</button></div><div class="tab-body active" id="tab-status"><pre id="stateText"></pre></div><div class="tab-body" id="tab-trace"><pre id="traceText"></pre></div><div class="tab-body" id="tab-invariant"><pre>ISA [ a:122 , b:122 , c:122 : d=a+b+c :: isa ]
+
+{H / a1} = 1–122
+{O / b1} = 123–244
+{N / c1} = 245–366
+
+Each: [Box62] + (Toroid60) = 122
+D = 366 addresses, not 488.
+
+ROOT: {-1,+1} > 1
+Only the first pair is shadowed.
+Five sphere registers still carry −/+.
+
+NO QUORUM · NO VOTES.
+Simulation is not physical evidence.
+Box/Toroid seams: 62↔63 locally.
+Register seams: 122↔123; 244↔245 globally.</pre></div><div class="actions" style="margin-top:12px"><button id="export">↓ EXPORT SESSION</button><button id="replay">↻ REPLAY</button></div><p class="note" id="result">READY · Node reference uses SHA-256. Browser trace uses a demonstration checksum only and is not a digital signature.</p></section>
+<section class="panel"><h2>05 / BOUNDARY NOTES</h2><p>Register D dispatches instructions, not governance votes. There are three program counters, independent witnesses and one simulated source record per instruction.</p><p class="note">Canvas2D runs without dependencies. This clean page is the current B156 edition; prior B155 remains a versioned historical artifact.</p><a href="https://github.com/DavidWise01/jane/tree/main/b156" target="_blank" rel="noopener noreferrer">Browse source and ISA tests</a></section>
+</div>
+</main><footer>JANE / ROOT0 · ORIGINAL PROCEDURAL PIXEL SPRITES · COMPUTATIONAL MODEL, NOT MEASURED QUANTUM PHYSICS</footer>
+<script>
+'use strict';
+const $=x=>document.getElementById(x),cv=$('game'),g=cv.getContext('2d');g.imageSmoothingEnabled=false;
+const COLORS=['#ff9d68','#74d8a6','#7fd1df'],REG=['a','b','c'],NAMES=['H','O','N'],IDS=['a1','b1','c1'];
+const BOX=[1,2,4,6,8,12,12,8,6,2,1],TOR=[1,3,6,9,11,11,9,6,3,1];
+let state={pc:{a:1,b:1,c:1},halted:false,checkpoint:null,dispatchCount:0},journal=[],active=0,tick=0,spin=.5,tilt=.3,running=true,mode='ATOM',last=performance.now(),lastResult='READY';
+function copy(x){return JSON.parse(JSON.stringify(x))}
+function fhash(x){let h=2166136261,s=JSON.stringify(x);for(let i=0;i<s.length;i++)h=Math.imul(h^s.charCodeAt(i),16777619);return(h>>>0).toString(16).padStart(8,'0')}
+function address(r,n){const k=REG.indexOf(r);if(k<0||!Number.isInteger(n)||n<1||n>122)return null;return {register:r,brace:NAMES[k],witness:IDS[k],local:n,global:122*k+n}}
+function decode(global){if(!Number.isInteger(global)||global<1||global>366)return null;return address(REG[Math.floor((global-1)/122)],(global-1)%122+1)}
+function cell(r,at){const a=address(r,at);if(!a)return null;const counts=at<=62?BOX:TOR;const p=at<=62?at:at-62;let sum=0;for(let i=0;i<counts.length;i++){if(p<=sum+counts[i])return {...a,kind:at<=62?'Box62':'Toroid60',layer:i+1,slot:p-sum,physicalPromotion:false};sum+=counts[i]}return null}
+function executeS(s,cmd){
+ if(cmd.via!=='d'||!['STEP','READ','WITNESS','ASSEMBLE','CHECK','INTERRUPT','RESUME'].includes(cmd.opcode))return{status:'HOLD',reason:'INVALID_OPCODE',physicalPromotion:false};
+ const op=cmd.opcode;if(s.halted&&op!=='RESUME'&&op!=='CHECK')return{status:'HOLD',reason:'INTERRUPTED_NO_SOURCE_MUTATION',physicalPromotion:false};
+ if(op==='INTERRUPT'){if(s.halted)return{status:'HOLD',reason:'ALREADY_HALTED',physicalPromotion:false};s.halted=true;const snap={pc:copy(s.pc),dispatchCount:s.dispatchCount};s.checkpoint={...snap,hash:fhash(snap)};return{status:'INTERRUPTED',checkpoint:copy(s.checkpoint),physicalPromotion:false}}
+ if(op==='RESUME'){if(!s.halted||!s.checkpoint)return{status:'HOLD',reason:'NO_CHECKPOINT',physicalPromotion:false};const{hash,...sn}=s.checkpoint;if(fhash(sn)!==hash||JSON.stringify(sn.pc)!==JSON.stringify(s.pc)||sn.dispatchCount!==s.dispatchCount)return{status:'HOLD',reason:'CHECKPOINT_INVALID',physicalPromotion:false};s.halted=false;return{status:'RESUMED',checkpointHash:hash,physicalPromotion:false}}
+ if(op==='ASSEMBLE')return{status:'PASS',d:{length:366,sourceRegisters:3,additionalCells:0},physicalPromotion:false};
+ if(op==='CHECK')return{status:'PASS',pc:copy(s.pc),halted:s.halted,quorum:false,oneShadowOnly:true,physicalPromotion:false};
+ const r=cmd.register||decode(cmd.global)?.register;if(!REG.includes(r))return{status:'HOLD',reason:'INVALID_REGISTER',physicalPromotion:false};
+ if(cmd.global!==undefined&&decode(cmd.global)?.register!==r)return{status:'HOLD',reason:'ADDRESS_REGISTER_MISMATCH',physicalPromotion:false};
+ if(op==='STEP'){if(!['+','-'].includes(cmd.sign)||cmd.local!==undefined||cmd.global!==undefined)return{status:'HOLD',reason:'INVALID_STEP',physicalPromotion:false};
+ const from=address(r,s.pc[r]),next=cmd.sign==='+'?s.pc[r]%122+1:(s.pc[r]+120)%122+1;s.pc[r]=next;s.dispatchCount++;return{status:'SIMULATED_STEP',from,to:address(r,next),sign:cmd.sign,physicalPromotion:false}}
+ const at=cmd.global!==undefined?decode(cmd.global)?.local:cmd.local??s.pc[r],c=cell(r,at);if(!c)return{status:'HOLD',reason:'INVALID_CELL',physicalPromotion:false};s.dispatchCount++;
+ return op==='READ'?{status:'SIMULATED_READ',cell:c,physicalPromotion:false}:{status:'SIMULATED_WITNESS',witness:c.witness,cell:c,physicalPromotion:false};
+}
+function dispatch(cmd){const command=copy(cmd),result=executeS(state,command),payload={seq:journal.length+1,previous:journal.at(-1)?.hash||'GENESIS',command,result:copy(result)},e={...payload,hash:fhash(payload)};journal.push(e);lastResult=result.status+' / '+(result.reason||result.to?.global||result.cell?.global||'D');refresh();return result}
+function auditTrace(){let s={pc:{a:1,b:1,c:1},halted:false,checkpoint:null,dispatchCount:0},prev='GENESIS';for(let i=0;i<journal.length;i++){let e=journal[i],{hash,...payload}=e;if(e.seq!==i+1||e.previous!==prev||hash!==fhash(payload))return'HOLD: CHAIN';const actual=executeS(s,e.command);if(JSON.stringify(actual)!==JSON.stringify(e.result))return'HOLD: REPLAY';prev=hash}return JSON.stringify(s)===JSON.stringify(state)?'PASS: DETERMINISTIC REPLAY':'HOLD: STATE'}
+function refresh(){
+ for(let i=0;i<3;i++){let r=REG[i],el=$('pos'+r.toUpperCase());el.textContent=String(state.pc[r]).padStart(3,'0')+' / '+String(address(r,state.pc[r]).global).padStart(3,'0')}
+ $('opCount').textContent=String(journal.length).padStart(3,'0');
+ $('runState').textContent=state.halted?'HALTED':'ACTIVE';
+ $('stateText').textContent=REG.map((r,i)=>'{ '+r.toUpperCase()+' / '+NAMES[i]+' } '+IDS[i]+'\n  POINTER '+String(state.pc[r]).padStart(3,'0')+' · GLOBAL '+String(address(r,state.pc[r]).global).padStart(3,'0')+' · '+cell(r,state.pc[r]).kind).join('\n\n')+'\n\nD = A + B + C = 366\nDISPATCH '+state.dispatchCount+' · '+(state.halted?'FROZEN':'OPEN')+'\nLAST '+lastResult;
+ $('traceText').textContent=journal.length?journal.slice(-16).reverse().map(e=>'#'+String(e.seq).padStart(3,'0')+' '+e.command.opcode+' '+(e.command.register||'d')+' '+(e.command.sign||'')+'\n'+e.result.status+' ['+e.hash+']').join('\n\n'):'NO EVENTS · READY';
+ $('result').textContent=lastResult+' · '+journal.length+' appended records · '+(state.halted?'checkpoint active':'dispatcher open')+' · simulation only';
+}
+function choose(i){active=i;for(let j=0;j<3;j++)$('reg'+REG[j].toUpperCase()).className='reg '+['h','o','n'][j]+(j===i?' active':'');refresh()}
+REG.forEach((r,i)=>$('reg'+r.toUpperCase()).onclick=()=>choose(i));
+$('prev').onclick=()=>dispatch({via:'d',opcode:'STEP',register:REG[active],sign:'-'});
+$('next').onclick=()=>dispatch({via:'d',opcode:'STEP',register:REG[active],sign:'+'});
+$('read').onclick=()=>dispatch({via:'d',opcode:'READ',register:REG[active]});
+$('witness').onclick=()=>dispatch({via:'d',opcode:'WITNESS',register:REG[active]});
+$('assemble').onclick=()=>dispatch({via:'d',opcode:'ASSEMBLE'});
+$('check').onclick=()=>dispatch({via:'d',opcode:'CHECK'});
+$('interrupt').onclick=()=>dispatch({via:'d',opcode:'INTERRUPT'});
+$('resume').onclick=()=>dispatch({via:'d',opcode:'RESUME'});
+$('audit').onclick=()=>{lastResult=auditTrace();refresh()};
+$('replay').onclick=()=>{lastResult=auditTrace();refresh();document.querySelector('[data-tab=trace]').click()};
+$('export').onclick=()=>{const payload={schema:'JANE-B156-BROWSER_DEMO_EXPORT',checksum:'FNV32_NONCRYPTOGRAPHIC',state,journal,audit:auditTrace(),physicalPromotion:false};const b=new Blob([JSON.stringify(payload,null,2)],{type:'application/json'}),u=URL.createObjectURL(b),a=document.createElement('a');a.href=u;a.download='jane-b156-d-isa-trace.json';a.click();setTimeout(()=>URL.revokeObjectURL(u),700)};
+document.querySelectorAll('[data-tab]').forEach(b=>b.onclick=()=>{document.querySelectorAll('[data-tab]').forEach(x=>x.classList.toggle('active',x===b));document.querySelectorAll('.tab-body').forEach(x=>x.classList.toggle('active',x.id==='tab-'+b.dataset.tab))});
+$('play').onclick=()=>{running=!running;$('play').textContent=running?'⏸ PAUSE':'▶ ANIMATE'};
+$('orbit').onclick=()=>{mode=mode==='ATOM'?'CAGES':'ATOM';$('orbit').textContent=mode+' / TOGGLE'};
+$('orbitLeft').onclick=()=>spin-=.18;$('orbitRight').onclick=()=>spin+=.18;
+function pixel(x,y,w,h,color){g.fillStyle=color;g.fillRect(Math.round(x),Math.round(y),w,h)}
+function line(x,y,X,Y,c){g.strokeStyle=c;g.beginPath();g.moveTo(Math.round(x),Math.round(y));g.lineTo(Math.round(X),Math.round(Y));g.stroke()}
+function text(s,x,y,c='#d6e9dc',size=7){g.font=size+'px monospace';g.fillStyle=c;g.fillText(s,x,y)}
+function project(x,y,z){const ca=Math.cos(spin),sa=Math.sin(spin),ct=Math.cos(tilt),st=Math.sin(tilt);const X=x*ca+z*sa,Z=-x*sa+z*ca,Y=y*ct-Z*st,dep=y*st+Z*ct,fac=240/(240-dep);return[160+X*fac,80+Y*fac]}
+function orbit(r,phase,color){let prev=null;for(let k=0;k<=90;k++){const u=k*Math.PI*2/90,x=r*Math.cos(u),y=r*Math.sin(u)*Math.cos(phase),z=r*Math.sin(u)*Math.sin(phase),p=project(x,y,z);if(prev)line(...prev,...p,color);prev=p}}
+const FACE=['..BBBBB..','.BEEEEE B.','BBEWWWEBB','BBEWEWEBB','.BEEEEE B.','..BBBBB..','..CCCCC..','.CCCCCCC.','.CCCHCCC.','..CCCCC..','..DCCCD..','..D...D..'];
+function monkey(x,y,c,n){const pal={B:'#4a2c34',E:'#ae714b',W:'#f7e0a8',C:c,H:'#f5d77f',D:'#777489'};for(let j=0;j<FACE.length;j++)for(let i=0;i<FACE[j].length;i++){const k=FACE[j][i];if(pal[k])pixel(x+i-5,y+j-9,1,1,pal[k])}if(Math.floor(n/11)%2)pixel(x+5,y,2,2,c)}
+function draw(){
+ pixel(0,0,320,200,'#091624');for(let k=0;k<70;k++){let x=(k*67+29)%320,y=(k*49+13)%150;pixel(x,y,1,1,k%4?'#243646':'#6e7690')}
+ const rad=[21,31,42,53,64];
+ if(mode==='ATOM'){
+  for(let k=4;k>=0;k--){orbit(rad[k],k*.47,COLORS[k%3]+'aa');let u=tick*.025*(1+k*.12)+k*1.7,p=project(rad[k]*Math.cos(u),rad[k]*Math.sin(u)*Math.cos(k*.47),rad[k]*Math.sin(u)*Math.sin(k*.47));pixel(p[0]-2,p[1]-2,4,4,COLORS[k%3])}
+  pixel(154,74,12,12,'#e79c71');pixel(159,70,3,19,'#ffe4a2');pixel(150,79,20,3,'#f0898d');
+ }else{
+  for(let j=0;j<3;j++){const offset=(j-1)*66;for(let k=0;k<122;k++){const rr=k<62?18:24,u=k*.47+tick*.004+j*.6,x=offset+rr*Math.cos(u),y=(k%11-5)*3.3,z=rr*Math.sin(u),p=project(x,y,z);pixel(p[0],p[1],2,2,k<62?'#b4815f':COLORS[j])}}
+ }
+ text(mode+' / 3D PROJECTION',8,17,'#fed6a7',8);text('62 BOX + 60 TOROID = 122',8,30,'#9fd5d3');
+ pixel(0,143,320,57,'#172d3b');pixel(0,142,320,2,'#50838e');
+ for(let j=0;j<3;j++){const x=21+j*99,c=COLORS[j];pixel(x+15,162,46,19,'#0a1a29');pixel(x+17,165,42,13,'#24485b');text('{'+REG[j]+'}',x+24,173,c,8);pixel(x-1,180,75,3,'#537c86');monkey(x,166,c,tick);text(IDS[j]+' '+String(state.pc[REG[j]]).padStart(3,'0'),x+4,194,c,7)}
+ text(state.halted?'CPU HALTED':'CPU RUNNING',231,15,state.halted?'#ff8b83':'#84efbc');
+ $('ticks').textContent=String(Math.floor(tick)).padStart(4,'0');
+}
+let pointer=false,px=0,py=0;
+cv.onpointerdown=e=>{pointer=true;px=e.clientX;py=e.clientY;cv.setPointerCapture(e.pointerId)};
+cv.onpointerup=()=>pointer=false;cv.onpointermove=e=>{if(!pointer)return;spin+=(e.clientX-px)*.012;tilt=Math.max(-1,Math.min(1,tilt+(e.clientY-py)*.009));px=e.clientX;py=e.clientY};
+function frame(now){const dt=Math.min(50,now-last);last=now;if(running){tick+=dt*.024;spin+=dt*.00023}draw();requestAnimationFrame(frame)}
+choose(0);requestAnimationFrame(frame);
+</script></body></html>
