@@ -1,0 +1,37 @@
+name: JANE B166 Live Owner Provenance
+on:
+  schedule:
+    - cron: '31 9 * * *'
+  workflow_dispatch:
+permissions:
+  contents: read
+  pull-requests: read
+concurrency:
+  group: jane-b166-live-provenance
+  cancel-in-progress: false
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Offline regression, native SHA256
+        run: |
+          node scripts/btf2/test-jane-b164-durable-repair.cjs
+          node scripts/btf2/test-jane-b165-owner-intent.cjs
+          node scripts/btf2/test-jane-b166-live-provenance.cjs
+      - name: Read public opted-in provenance only
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/btf2/jane-b166-live-provenance.cjs --output ecosystem/reports/b166-latest.json
+      - name: Preserve one-run evidence artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: jane-b166-provenance
+          path: ecosystem/reports/b166-latest.json
+          if-no-files-found: warn
+          retention-days: 30
