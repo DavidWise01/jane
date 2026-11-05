@@ -1,0 +1,60 @@
+{
+  "schema": "JANE-B159-PAIRWISE-BOUNDARY-OBSERVATIONS-v1",
+  "inherits": "b158/containment-v1.json",
+  "notation": "[a:122,b:122,c:122:d=a+b+c::isa]",
+  "observationDepth": {
+    "sourceWitnesses": 3,
+    "readOnlyCompositeViews": 1,
+    "observerOfObservers": 0
+  },
+  "crossSourceSeams": [
+    {
+      "from": 122,
+      "to": 123,
+      "departure": "a1",
+      "arrival": "b1"
+    },
+    {
+      "from": 244,
+      "to": 245,
+      "departure": "b1",
+      "arrival": "c1"
+    },
+    {
+      "from": 366,
+      "to": 1,
+      "departure": "c1",
+      "arrival": "a1"
+    }
+  ],
+  "reverseUsesSwappedRoles": true,
+  "reportFields": [
+    "id",
+    "boundaryId",
+    "side",
+    "witness",
+    "sawCrossing",
+    "note",
+    "physicalPromotion"
+  ],
+  "outcomes": [
+    "UNMATCHED_HOLD",
+    "TWO_SIDES_RECORDED",
+    "DISAGREEMENT_PRESERVED"
+  ],
+  "agreementRequired": false,
+  "quorum": false,
+  "oneShadowOnly": true,
+  "isa": {
+    "defined": false,
+    "instructions": 0,
+    "opcodes": []
+  },
+  "d": {
+    "view": "DERIVED_READ_ONLY",
+    "addresses": 366,
+    "allocatesCells": 0
+  },
+  "physicalPromotion": false,
+  "status": "SIMULATED_CONTAINMENT_OBSERVATIONS"
+}
