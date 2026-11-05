@@ -1,0 +1,9 @@
+{
+  "schema": "FORMIC-REPO-POLICY-v1",
+  "enabled": true,
+  "allowed_repairs": [
+    "BUG_REPORT_TEMPLATE"
+  ],
+  "max_open_pull_requests": 1,
+  "notes": "Pilot: jane only; this permits one proposed draft PR for a missing bug report template. Never merges automatically. FORMIC_REPO_TOKEN with scoped permissions and FORMIC_ENABLE_PR_CREATION=true are separately required."
+}
