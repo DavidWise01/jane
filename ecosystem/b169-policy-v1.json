@@ -1,0 +1,50 @@
+{
+  "schema": "JANE-B169-LIVE-DRIFT-AND-CI-v1",
+  "scope": {
+    "owner": "DavidWise01",
+    "publicOnly": true,
+    "maxProposalsPerRun": 8,
+    "source": "B168 cryptographically auditable proposal JSON",
+    "automaticDiscoveryOfProofs": false
+  },
+  "preconditions": [
+    "valid B168 immutable proposal",
+    "repo still exists, is public and owner unchanged",
+    "live default branch still equals pinned named branch",
+    "live default branch SHA equals exact proof base SHA",
+    "target file still absent at pinned SHA",
+    "GitHub check-runs and commit statuses both accessible and not truncated",
+    "no failing, unresolved or absent CI evidence",
+    "default branch SHA unchanged after evidence retrieval"
+  ],
+  "outputs": {
+    "positive": "BASE_OBSERVED_PASS_NOT_PROPOSAL_VALIDATED",
+    "negative": "HOLD",
+    "meaning": "actual CI evidence is for base commit only, NOT unexecuted proposal content"
+  },
+  "authority": {
+    "mayCreatePR": false,
+    "mayRetry": false,
+    "mayMerge": false,
+    "mayWriteDefaultBranch": false,
+    "codeExecution": false,
+    "proposalTestsExecuted": false
+  },
+  "workflow": {
+    "scheduled": false,
+    "onPushTests": true,
+    "manual": "provide exact committed B168 proposal path in ecosystem/proposals",
+    "noProposal": "HOLD_NO_PROPOSALS",
+    "token": "GITHUB_TOKEN read only"
+  },
+  "kernel": {
+    "witnesses": [
+      "a1",
+      "b1",
+      "c1"
+    ],
+    "observerDepth": 1,
+    "isaDefined": false,
+    "noQuorum": true
+  }
+}
