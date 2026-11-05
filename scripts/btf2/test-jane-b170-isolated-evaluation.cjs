@@ -1,0 +1,32 @@
+'use strict';
+const assert=require('node:assert/strict'),fs=require('node:fs'),os=require('node:os'),path=require('node:path');
+const {build}=require('./jane-b168-proof-proposal.cjs');
+const {examine,compile,candidates}=require('./jane-b170-isolated-evaluation.cjs');
+const repo={full_name:'DavidWise01/jane',default_branch:'main',private:false,visibility:'public',archived:false,disabled:false,fork:false};
+const policy={schema:'FORMIC-REPO-POLICY-v1',enabled:true,allowed_repairs:['BUG_REPORT_TEMPLATE'],max_open_pull_requests:1};
+const b167={repository:repo.full_name,status:'POLICY_EVIDENCE_PRESENT',mayCreatePR:false,mayRetry:false,mayMerge:false};
+const proof=build({repo,policy,baseSha:'a'.repeat(40),b167});
+assert.equal(proof.status,'PROPOSAL_ONLY');
+const r=examine(proof);
+assert.equal(r.status,'LOCAL_CHECKS_PASS');
+assert.equal(r.checks.length,7);
+assert.equal(r.checks.every(c=>c.status==='PASS'),true);
+assert.equal(r.proposalTestsExecuted,true);
+assert.equal(r.githubCiObserved,false);
+assert.equal(r.mayCreatePR,false);
+assert.equal(r.workspaceDeleted,true);
+assert.equal(examine(proof,{existingTarget:true}).status,'HOLD');
+const damaged=JSON.parse(JSON.stringify(proof));damaged.envelope.proposal.changes[0].after='tampered';
+assert.equal(examine(damaged).status,'HOLD');
+const failedRemove=examine(proof,{remove:()=>{throw Error('DELETE_FAILED')}});
+assert.equal(failedRemove.status,'HOLD');
+const summary=compile([r,examine(damaged)]);assert.equal(summary.counts.localPassed,1);
+const temp=fs.mkdtempSync(path.join(os.tmpdir(),'b170-candidates-'));
+try{
+ assert.deepEqual(candidates(temp),[]);
+ fs.writeFileSync(path.join(temp,'one.json'),'{}');
+ assert.equal(candidates(temp).length,1);
+ for(let i=0;i<8;i++)fs.writeFileSync(path.join(temp,'extra'+i+'.json'),'{}');
+ assert.throws(()=>candidates(temp),/TOO_MANY/);
+}finally{fs.rmSync(temp,{recursive:true,force:true})}
+console.log('PASS B170: actual isolated fixed-template checks, no repo code, no CI conflation, tamper HOLD, bounded input');
