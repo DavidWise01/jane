@@ -1,0 +1,41 @@
+{
+  "schema": "JANE-B175-REPRODUCIBILITY-v1",
+  "owner": "DavidWise01",
+  "purpose": "Two independent disposable B174 evaluations agree on entire normalized before and after inventories and exact delta",
+  "sourceProof": "B168 exact proof, B169 live baseline, B170 fixed local check, B171 300-second binding, B172 scratch apply, B173 pinned Git tree",
+  "restrictions": {
+    "source": "ecosystem/proposals",
+    "maxProofs": 8,
+    "repeatCount": 2,
+    "sameEvidencePerPair": true,
+    "independentTemporaryWorkspaces": true,
+    "executeRepositoryCode": false
+  },
+  "comparisons": [
+    "same repository and pinned base",
+    "before inventories identical SHA256 GitBlob bytes and executable bit",
+    "after inventories identical",
+    "exact single addition",
+    "no modified or deleted files",
+    "every source manifest passes B174 audit",
+    "both temporary workspaces deleted"
+  ],
+  "positive": "REPRODUCIBLE_TREE_DELTA_NO_EXECUTION",
+  "negative": "HOLD",
+  "noProof": "HOLD_NO_PROPOSALS",
+  "qualifiers": [
+    "Two repeats of the same implementation are not independent implementations or witness sources",
+    "Reproducibility does not mean target repository CI passed",
+    "Manifest digest not an owner signature",
+    "No automatic PR, retry or merge authority"
+  ],
+  "governance": {
+    "a1": "B168 proof witness",
+    "b1": "B169 live base witness",
+    "c1": "B170 local check witness",
+    "observerDepth": 1,
+    "noQuorum": true,
+    "isaDefined": false,
+    "automaticWrites": false
+  }
+}
