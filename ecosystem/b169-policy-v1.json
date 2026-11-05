@@ -5,7 +5,8 @@
     "publicOnly": true,
     "maxProposalsPerRun": 8,
     "source": "B168 cryptographically auditable proposal JSON",
-    "automaticDiscoveryOfProofs": false
+    "automaticDiscoveryOfProofs": true,
+    "discoveryRestriction": "only committed files in ecosystem/proposals; no generated or inferred authorization"
   },
   "preconditions": [
     "valid B168 immutable proposal",
@@ -31,9 +32,10 @@
     "proposalTestsExecuted": false
   },
   "workflow": {
-    "scheduled": false,
+    "scheduled": "daily 10:43 UTC",
     "onPushTests": true,
-    "manual": "provide exact committed B168 proposal path in ecosystem/proposals",
+    "automatic": "scan at most 8 real JSON proof envelopes committed under ecosystem/proposals; no proof gives HOLD_NO_PROPOSALS",
+    "manual": "optional exact proposal path under ecosystem/proposals",
     "noProposal": "HOLD_NO_PROPOSALS",
     "token": "GITHUB_TOKEN read only"
   },
