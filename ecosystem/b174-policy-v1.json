@@ -1,0 +1,54 @@
+{
+  "schema": "JANE-B174-EXACT-TREE-DIFF-v1",
+  "owner": "DavidWise01",
+  "intent": "Deterministic before-and-after file-manifest proof for one exact fixed template addition to a pinned target Git tree",
+  "source": "B168 proof, B169 fresh base, B170 local check, B171 triple evidence, B172 scratch success, B173 pinned tree snapshot",
+  "snapshot": {
+    "maxFiles": 200,
+    "maxTotalBytes": 2097152,
+    "treeShaPinned": true,
+    "perFileGitBlobVerified": true
+  },
+  "manifest": {
+    "sortedPaths": true,
+    "fields": [
+      "path",
+      "bytes",
+      "sha256",
+      "gitBlob",
+      "executable"
+    ],
+    "requireExactlyOneAddition": ".github/ISSUE_TEMPLATE/bug_report.md",
+    "noOriginalChanges": true,
+    "noDeletions": true,
+    "manifestSha256": true,
+    "cleanupRequired": true
+  },
+  "results": {
+    "pass": "EXACT_ONE_FILE_ADDITION",
+    "fail": "HOLD",
+    "empty": "HOLD_NO_PROPOSALS"
+  },
+  "limitations": [
+    "No scripts downloaded from target repositories are executed",
+    "A copied tree is not target CI",
+    "SHA-256 manifests are integrity digests, not independent identity authentication",
+    "No owner write permission is inferred"
+  ],
+  "authority": {
+    "noAutoPR": true,
+    "noAutoRetry": true,
+    "noMerge": true,
+    "noDefaultBranchWrite": true
+  },
+  "governance": {
+    "witnesses": [
+      "a1",
+      "b1",
+      "c1"
+    ],
+    "observerDepth": 1,
+    "noQuorum": true,
+    "isaDefined": false
+  }
+}
