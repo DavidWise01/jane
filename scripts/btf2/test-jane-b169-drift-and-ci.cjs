@@ -23,6 +23,7 @@ const corrupt=JSON.parse(JSON.stringify(proposal));corrupt.envelope.proposal.cha
 assert.equal(classify(corrupt,known).status,'HOLD');
 const ref='/repos/DavidWise01/jane/git/ref/heads/main';
 const mock=async url=>{
+ if(url==='/repos/DavidWise01/jane')return{full_name:repo.full_name,owner:{login:'DavidWise01'},private:false,archived:false,disabled:false,fork:false,default_branch:'main'};
  if(url===ref)return{object:{sha}};
  if(url.includes('/contents/'))return null;
  if(url.endsWith('/check-runs?per_page=100'))return{total_count:1,check_runs:green};
@@ -34,6 +35,8 @@ const mock=async url=>{
  let reads=0;
  const drift=await inspect(proposal,'',async url=>url===ref?{object:{sha:++reads===1?sha:'c'.repeat(40)}}:mock(url));
  assert.equal(drift.status,'HOLD');
+ const changedBranch=await inspect(proposal,'',async url=>url==='/repos/DavidWise01/jane'?{...(await mock(url)),default_branch:'master'}:mock(url));
+ assert.equal(changedBranch.status,'HOLD');
  const inaccessible=await inspect(proposal,'',async url=>url.includes('/check-runs')?Promise.reject(Error('403')):mock(url));
  assert.equal(inaccessible.status,'HOLD');
  const record=report([one,drift]);assert.equal(record.counts.baseObservedPass,1);assert.equal(record.governance.automaticWrites,false);
