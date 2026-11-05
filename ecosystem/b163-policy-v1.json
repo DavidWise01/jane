@@ -1,0 +1,43 @@
+{
+  "schema": "JANE-B163-FORMIC-REPAIR-MEMORY-v1",
+  "scope": {
+    "owner": "DavidWise01",
+    "publicOnly": true,
+    "requiresRepoPolicy": true,
+    "limit": 10,
+    "repair": "BUG_REPORT_TEMPLATE"
+  },
+  "memory": {
+    "source": "B162_CURRENT_PR_HISTORY_AND_CHECK_SNAPSHOT",
+    "durableReference": "GitHub pull request history even if closed",
+    "artifact": "run-specific 30-day GitHub Actions artifact",
+    "state": "derived read-only, never rewrite historical PR evidence",
+    "hash": "SHA256 per-run evidence chain",
+    "notClaimed": "permanent cross-run memory database"
+  },
+  "classifications": {
+    "NO_FORMIC_PR": "UNTRIED",
+    "REVIEW_READY_NO_AUTO_MERGE": "CHECKS_GREEN",
+    "HOLD_CHECKS_FAILED": "FAILED_CHECKS",
+    "HOLD_CLOSED_PR_RETRY_SUPPRESSED": "CLOSED_UNMERGED",
+    "HOLD_CHECKS_PENDING": "PENDING_CHECKS"
+  },
+  "gates": {
+    "failedOrClosed": "SUPPRESS_REPAIR",
+    "green": "HUMAN_REVIEW_ONLY",
+    "unknownOrUnavailable": "HOLD",
+    "noAutomaticMerge": true,
+    "noDirectDefaultBranchWrites": true,
+    "noISA": true
+  },
+  "topology": {
+    "witnesses": [
+      "a1",
+      "b1",
+      "c1"
+    ],
+    "observerDepth": 1,
+    "noQuorum": true,
+    "d": "derived read-only view"
+  }
+}
