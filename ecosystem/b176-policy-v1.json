@@ -1,0 +1,45 @@
+{
+  "schema": "JANE-B176-INDEPENDENT-TREE-INVENTORY-v1",
+  "scope": {
+    "owner": "DavidWise01",
+    "maxProofs": 8,
+    "source": "ecosystem/proposals",
+    "sourceTreePinned": true
+  },
+  "independence": "Second implementation uses its own directory traversal, SHA-1 Git blob hashing and SHA-256 digesting; B174 only supplies observation points",
+  "required": [
+    "B168 proof audited",
+    "B169 current base and B170 local checks",
+    "B171 evidence 300 second bound",
+    "B172 scratch pass",
+    "B173 complete pinned snapshot",
+    "B174 on-disk before/after audits",
+    "B176 independent before/after snapshots match B174 exactly",
+    "single canonical B161 template addition; no existing changes"
+  ],
+  "positive": "DIFFERENTIAL_TREE_AGREEMENT_NO_EXECUTION",
+  "negative": "HOLD",
+  "empty": "HOLD_NO_PROPOSALS",
+  "limits": [
+    "Both inventories examine the same scratch worktree, not independently sourced GitHub data",
+    "Equal manifests do not prove target repository CI passed",
+    "No owner consent is inferred",
+    "No remote code execution"
+  ],
+  "authority": {
+    "mayCreatePR": false,
+    "mayRetry": false,
+    "mayMerge": false,
+    "defaultBranchWrites": false
+  },
+  "governance": {
+    "witnesses": [
+      "a1",
+      "b1",
+      "c1"
+    ],
+    "observerDepth": 1,
+    "noQuorum": true,
+    "isaDefined": false
+  }
+}
