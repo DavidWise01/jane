@@ -1,0 +1,20 @@
+name: Jane B159 Pairwise Boundary Witnesses
+on:
+  push:
+    paths:
+      - 'b159/**'
+      - 'scripts/btf2/jane-b159-boundary-pairs.cjs'
+      - 'scripts/btf2/test-jane-b159-boundary-pairs.cjs'
+      - '.github/workflows/b159-boundary-pairs.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node scripts/btf2/test-jane-b159-boundary-pairs.cjs
