@@ -93,7 +93,7 @@ async function inspect(proof,token='',requestFn=request){
   const state=file.status==='fulfilled'?(file.value===null?'ABSENT':'PRESENT'):'UNKNOWN';
   const cr=runResult.status==='fulfilled'?runResult.value:null;
   const st=statusResult.status==='fulfilled'?statusResult.value:null;
-  const checksComplete=!!cr&&Array.isArray(cr.check_runs)&&Number.isInteger(cr.total_count)&&cr.total_count<=100;
+  const checksComplete=!!cr&&Array.isArray(cr.check_runs)&&Number.isInteger(cr.total_count)&&cr.total_count<=100&&cr.check_runs.length===cr.total_count;
   // Combined status payload includes total_count for statuses if available; if count is missing,
   // fail closed rather than claiming complete. Source API can truncate at 100.
   const statusesComplete=!!st&&Array.isArray(st.statuses)&&
