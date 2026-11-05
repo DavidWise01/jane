@@ -27,10 +27,10 @@ function resolveAttestation(repo,content,commits,detail,nowIso){
  let raw,intent;
  try{raw=Buffer.from(content.content.replace(/\s/g,''),'base64').toString('utf8');intent=JSON.parse(raw)}
  catch{return{status:'HOLD',reason:'MALFORMED_INTENT'}};
- if(blobSha(raw)!==content.sha)return{status:'HOLD',reason:'GIT_BLOB_MISMATCH'};
- if(commits.length!==1||!commits[0]?.sha||detail.sha!==commits[0].sha)return{status:'HOLD',reason:'HISTORY_TRUNCATED_OR_UNPINNED'};
+ if(Buffer.byteLength(raw,'utf8')!==content.size||blobSha(raw)!==content.sha)return{status:'HOLD',reason:'GIT_BLOB_MISMATCH'};
+ if((!commits.length||commits.length>2)||!commits[0]?.sha||detail.sha!==commits[0].sha)return{status:'HOLD',reason:'HISTORY_TRUNCATED_OR_UNPINNED'};
  const fileChanges=detail.files;
- if(!Array.isArray(fileChanges)||!fileChanges.some(f=>f.filename===INTENT_PATH&&['added','modified'].includes(f.status)))
+ if(!Array.isArray(fileChanges)||!fileChanges.some(f=>f.filename===INTENT_PATH&&['added','modified'].includes(f.status)&&f.sha===content.sha))
   return{status:'HOLD',reason:'UNVERIFIED_INTENT_PATH_CHANGE'};
  const ver=detail.commit?.verification;
  if(!ver||ver.verified!==true)return{status:'HOLD',reason:'UNVERIFIED_COMMIT'};
@@ -49,9 +49,12 @@ async function examine(repo,nowIso,token,fetchFn=api){
   return{repository:repo?.full_name||'OUT_OF_SCOPE',status:'HOLD',reasons:['REPO_GATE']};
  const full=repo.full_name,base=repo.default_branch,root='/repos/'+full;
  // Only default-branch intent; never import arbitrary branch-supplied directives.
- const content=await fetchFn(root+'/contents/'+INTENT_PATH+'?ref='+enc(base),token,{optional:true});
+ const branch=await fetchFn(root+'/git/ref/heads/'+enc(base),token);
+ const pinned=branch?.object?.sha;
+ if(typeof pinned!=='string'||!/^[a-f0-9]{40}$/i.test(pinned))return{repository:full,status:'HOLD',reasons:['DEFAULT_REF_UNVERIFIED'],grantWriteAuthority:false};
+ const content=await fetchFn(root+'/contents/'+INTENT_PATH+'?ref='+enc(pinned),token,{optional:true});
  if(!content)return{repository:full,status:'HOLD',reasons:['MISSING_INTENT'],grantWriteAuthority:false};
- const commits=await fetchFn(root+'/commits?path='+enc(INTENT_PATH)+'&sha='+enc(base)+'&per_page=2',token);
+ const commits=await fetchFn(root+'/commits?path='+enc(INTENT_PATH)+'&sha='+enc(pinned)+'&per_page=2',token);
  if(!Array.isArray(commits)||commits.length!==1)
   return{repository:full,status:'HOLD',reasons:['HISTORY_INCOMPLETE_OR_CHANGED'],grantWriteAuthority:false};
  const detail=await fetchFn(root+'/commits/'+enc(commits[0].sha),token);
