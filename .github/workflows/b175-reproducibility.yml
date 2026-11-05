@@ -1,0 +1,48 @@
+name: JANE B175 Reproducible Tree Diff
+on:
+  push:
+    paths:
+      - 'scripts/btf2/jane-b175-reproducibility.cjs'
+      - 'scripts/btf2/test-jane-b175-reproducibility.cjs'
+      - 'scripts/btf2/jane-b175-autonomous-reproducibility.cjs'
+      - 'scripts/btf2/test-jane-b175-autonomous-reproducibility.cjs'
+      - 'ecosystem/proposals/**'
+      - 'b175/**'
+      - '.github/workflows/b175-reproducibility.yml'
+  schedule:
+    - cron: '29 13 * * *'
+  workflow_dispatch:
+permissions:
+  contents: read
+  checks: read
+  statuses: read
+concurrency:
+  group: jane-b175-reproducibility
+  cancel-in-progress: false
+jobs:
+  repeat-tree-diff:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Native B174-B175 regression tests
+        run: |
+          node scripts/btf2/test-jane-b174-tree-diff.cjs
+          node scripts/btf2/test-jane-b174-autonomous-manifest.cjs
+          node scripts/btf2/test-jane-b175-reproducibility.cjs
+          node scripts/btf2/test-jane-b175-autonomous-reproducibility.cjs
+      - name: Repeat real B174 tree-diff evaluation on pinned snapshots
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/btf2/jane-b175-autonomous-reproducibility.cjs --output ecosystem/reports/b175-latest.json
+      - name: Preserve B175 reproducibility evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: jane-b175-reproducibility
+          path: ecosystem/reports/b175-latest.json
+          if-no-files-found: warn
+          retention-days: 30
