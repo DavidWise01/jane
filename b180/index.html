@@ -1,0 +1,76 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>JANE B180 · Deterministic Fuzz Observatory</title>
+<style>
+:root{color-scheme:dark;--bg:#08121c;--panel:#172835;--stroke:#385666;--fg:#e7f3ef;--mint:#7de3b7;--amber:#ffb47c;--teal:#80cfdf}*{box-sizing:border-box}body{margin:0;color:var(--fg);background:radial-gradient(ellipse at 50% 0,#1e424d,var(--bg) 66%);font:14px/1.55 ui-monospace,Consolas,monospace}
+header,main{max-width:1250px;margin:auto;padding:24px}header{padding-bottom:6px}h1{font-size:clamp(25px,4.4vw,46px);margin:0 0 8px}h2{font-size:16px;color:var(--teal);margin:0 0 14px}.eyebrow{font-size:12px;letter-spacing:2px;color:var(--amber)}.muted{color:#abc5ce}.grid{display:grid;grid-template-columns:1.2fr 1fr;gap:16px}.panel{border:1px solid var(--stroke);border-radius:12px;background:var(--panel);padding:18px;margin-bottom:16px}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:17px}.stat{padding:12px;border:1px solid var(--stroke);background:#0d1f2c;border-radius:9px}.stat b{display:block;color:var(--mint);font-size:27px}.stat small{color:#a4c2c8;font-size:10px}pre{background:#091824;border-radius:8px;padding:14px;white-space:pre-wrap;overflow-wrap:anywhere;font-size:12px}.button{cursor:pointer;display:inline-block;border:1px solid #5d8992;background:#264250;color:#ecffff;padding:9px 13px;text-decoration:none;border-radius:7px;font:inherit;margin:4px 4px 4px 0}a{color:#8bdfd5}input[type=file]{display:none}table{width:100%;border-collapse:collapse;font-size:12px}td,th{text-align:left;padding:8px;border-bottom:1px solid #365363;vertical-align:top}svg{display:block;width:100%;height:auto}.scroll{max-height:430px;overflow:auto}.foot{border-top:1px solid var(--stroke);padding-top:14px;font-size:12px;color:#acbec8}@media(max-width:850px){.grid{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}}
+</style></head><body><header><div class="eyebrow">DAVIDWISE01 / JANE / FORMIC / B180</div><h1>DETERMINISTIC <span style="color:var(--mint)">FUZZ</span> OBSERVATORY</h1><p class="muted">400 SEEDED INPUTS · 20 MUTATION OPERATORS · TWO INDEPENDENT PARSERS · NO WRITES</p></header>
+<main><div class="stats"><div class="stat"><b id="expected">400</b><small>GENERATED CASES</small></div><div class="stat"><b id="agreed">—</b><small>PARSER AGREEMENT</small></div><div class="stat"><b id="held">—</b><small>DISAGREEMENTS</small></div><div class="stat"><b id="operators">20</b><small>MUTATION OPERATORS</small></div></div>
+<div class="grid"><div>
+<section class="panel"><h2>B177 / B179 TWO-PARSER COMPARISON</h2>
+<svg viewBox="0 0 720 285" role="img" aria-label="Deterministic input generator fans out to two independent parsers and feeds a fail-closed comparator">
+<rect x="8" y="8" width="704" height="269" rx="12" fill="#0a1a27" stroke="#395a68"/>
+<g fill="none" stroke="#6498a6" stroke-width="3"><path d="M360 75V104H173V130M360 104H540V130M173 194V225H360M540 194V225H360"/></g>
+<rect x="187" y="22" width="346" height="52" rx="8" fill="#28424a" stroke="#e6aa77" stroke-width="2"/>
+<rect x="64" y="130" width="218" height="64" rx="8" fill="#223b45" stroke="#71cfab" stroke-width="2"/>
+<rect x="430" y="130" width="218" height="64" rx="8" fill="#223b45" stroke="#80cfdf" stroke-width="2"/>
+<rect x="189" y="225" width="342" height="37" rx="8" fill="#344653" stroke="#f0ba7c" stroke-width="2"/>
+<g fill="#edf7f3" font-family="monospace" font-weight="bold" text-anchor="middle"><text x="360" y="45" font-size="15">XORSHIFT32 / FIXED SEED</text><text x="360" y="62" font-size="12">20 OPERATORS × 20 ROUNDS</text><text x="173" y="157" font-size="15">B177 PARSER</text><text x="173" y="178" font-size="12">EXISTING GRAMMAR</text><text x="540" y="157" font-size="15">B179 PARSER</text><text x="540" y="178" font-size="12">INDEPENDENT TOKENIZER</text><text x="360" y="250" font-size="14">MATCH ERRORS OR HOLD</text></g></svg>
+<p class="muted">A parser disagreement, unexpected acceptance, or wrong error category results in HOLD. The positive state is observation only.</p></section>
+<section class="panel"><h2>WORKFLOW EVIDENCE</h2>
+<label for="report" class="button">IMPORT B180 JSON<input type="file" id="report" accept=".json,application/json"></label><a class="button" href="https://github.com/DavidWise01/jane/actions/workflows/b180-deterministic-fuzz.yml" target="_blank" rel="noopener noreferrer">OPEN GITHUB ACTIONS</a>
+<p id="status" class="muted">No live report imported; success is not assumed.</p>
+<div class="scroll"><table><thead><tr><th>CASE</th><th>OPERATOR</th><th>B177 / B179 / EXPECTED</th><th>STATUS</th></tr></thead><tbody id="rows"><tr><td colspan="4">Awaiting B180 artifact.</td></tr></tbody></table></div></section></div>
+<div>
+<section class="panel"><h2>CANONICAL OPERATION</h2><pre>INPUT: B161 FIXED ISSUE TEMPLATE
+SEED: 0x180b179
+OPERATORS: 20
+ROUNDS / OPERATOR: 20
+
+1. ACCEPT CANONICAL CONTROL
+2. GENERATE MUTATIONS DETERMINISTICALLY
+3. CHECK BOTH PARSER DECISIONS
+4. REQUIRE THE EXPECTED ERROR CATEGORY
+5. RECORD BOUNDED COUNTEREXAMPLES
+6. VERIFY COMPLETE CASE INVENTORY
+7. COMPUTE REPORT SHA256
+8. NEVER GRANT WRITE AUTHORITY
+
+PASS → DETERMINISTIC_FUZZ_AGREEMENT_NO_EXECUTION
+FAIL → HOLD</pre></section>
+<section class="panel"><h2>ATTESTATION / COUNTEREXAMPLES</h2><pre id="detail">No report loaded.
+Up to 12 failing inputs are retained with
+SHA256, byte count and a short preview.</pre>
+<p class="muted">The browser displays imported evidence but does not verify the digest or the reported execution. Native code checks are separate.</p></section>
+<section class="panel"><h2>GITHUB SOURCES</h2><p><a href="https://github.com/DavidWise01/jane/blob/main/scripts/btf2/jane-b180-deterministic-fuzz.cjs">B180 deterministic mutation kernel</a></p><p><a href="https://github.com/DavidWise01/jane/blob/main/scripts/btf2/test-jane-b180-deterministic-fuzz.cjs">B180 regression suite</a></p><p><a href="https://github.com/DavidWise01/jane/blob/main/governance/JANE-B180-DETERMINISTIC-FUZZ-v1.0.md">B180 governing invariant</a></p></section></div></div>
+<div class="foot">B180 · THREE SOURCE WITNESSES · ONE OBSERVER LAYER · NO QUORUM · ZERO ISA INSTRUCTIONS</div></main>
+<script>
+const get=id=>document.getElementById(id);
+get('report').addEventListener('change',async event=>{
+ const f=event.target.files?.[0];if(!f)return;
+ try{
+  const r=JSON.parse(await f.text());
+  if(r?.schema!=='JANE-B180-DETERMINISTIC-FUZZ-v1'||!Array.isArray(r.rows)||
+   !Array.isArray(r.issues)||!Array.isArray(r.counterexamples)||
+   r.authority?.mayCreatePR!==false||r.authority?.mayMerge!==false||
+   r.governance?.repositoryCodeExecuted!==false)throw Error('B180 report boundary mismatch');
+  get('expected').textContent=r.counts?.expected??'—';
+  get('agreed').textContent=r.counts?.agreed??'—';
+  get('held').textContent=r.counts?.disagreements??'—';
+  get('operators').textContent=r.counts?.operators??'—';
+  const body=get('rows');body.replaceChildren();
+  for(const item of r.rows.slice(0,400)){
+   const tr=document.createElement('tr');
+   for(const value of [item.id,item.operator,
+      item.primaryError+' / '+item.independentError+' / '+item.expectedError,
+      item.agreement===true?'PASS':'HOLD']){
+    const td=document.createElement('td');td.textContent=String(value);tr.append(td);
+   }body.append(tr);
+  }
+  get('detail').textContent='SEED: '+r.seed+'\nSTATUS: '+r.status+
+   '\nINPUT DIGEST: '+r.inputDigest+'\nATTESTATION: '+r.attestationSha256+
+   '\nISSUES: '+r.issues.join(' | ')+
+   '\nCOUNTEREXAMPLES: '+r.counterexamples.length+
+   (r.counterexamples.length?'\n'+r.counterexamples.slice(0,12).map(x=>x.id+' '+x.inputSha256+' '+x.inputPreview).join('\n'):'');
+  get('status').textContent='Imported '+r.rows.length+' local fuzz decisions. Viewer does not authenticate a GitHub run.';
+ }catch(e){get('status').textContent='HOLD: '+e.message}
+});
+</script></body></html>
