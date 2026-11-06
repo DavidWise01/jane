@@ -1,0 +1,11 @@
+'use strict';
+const assert=require('node:assert/strict');
+const {execute}=require('./jane-b178-coverage-runner.cjs');
+const {audit}=require('./jane-b178-constraint-coverage.cjs');
+const report=execute();
+assert.equal(report.status,'CONSTRAINT_COVERAGE_PASS_NO_EXECUTION');
+assert.equal(report.required,48);
+assert.equal(audit(report).status,'PASS');
+assert.equal(report.governance.repoCodeExecuted,false);
+assert.equal(report.authority.mayMerge,false);
+console.log('PASS B178 read-only CLI report: 48 constraints covered and verified');
