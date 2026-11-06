@@ -1,0 +1,61 @@
+{
+  "schema": "JANE-B177-SEMANTIC-ISSUE-TEMPLATE-v1",
+  "owner": "DavidWise01",
+  "intent": "Static non-executing semantic audit of the canonical B161 issue template tied to B176 differential proof",
+  "source": "Committed B168 proofs with a complete B176 live evidence chain",
+  "limits": {
+    "maxProofs": 8,
+    "sourceDirectory": "ecosystem/proposals",
+    "maxTemplateBytes": 8192
+  },
+  "requiredFields": [
+    "name",
+    "about",
+    "title",
+    "labels",
+    "assignees"
+  ],
+  "requiredHeadings": [
+    "Description",
+    "Steps to reproduce",
+    "Expected behavior",
+    "Actual behavior",
+    "Environment",
+    "Supporting evidence"
+  ],
+  "guards": [
+    "fixed field names and exact values",
+    "duplicate YAML fields HOLD",
+    "no YAML alias or interpolation syntax",
+    "no dynamic front matter values",
+    "no active HTML or linked-content markers",
+    "fixed redaction warning",
+    "exact reproduction prompts",
+    "exact canonical B161 template SHA256",
+    "B176 same proposal and base SHA"
+  ],
+  "positive": "SEMANTICALLY_VALID_FIXED_TEMPLATE_NO_EXECUTION",
+  "negative": "HOLD",
+  "noProof": "HOLD_NO_PROPOSALS",
+  "authority": {
+    "mayCreatePR": false,
+    "mayRetry": false,
+    "mayMerge": false,
+    "mayWriteDefaultBranch": false
+  },
+  "limitations": [
+    "Fixed-template checks do not prove arbitrary user-supplied templates safe",
+    "Neither target repository CI nor owner authorization is established",
+    "No downloaded target repository code is executed"
+  ],
+  "governance": {
+    "observerDepth": 1,
+    "witnesses": [
+      "a1",
+      "b1",
+      "c1"
+    ],
+    "noQuorum": true,
+    "isaDefined": false
+  }
+}
