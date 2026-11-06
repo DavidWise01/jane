@@ -1,0 +1,37 @@
+{
+  "schema": "JANE-B180-DETERMINISTIC-FUZZ-v1",
+  "purpose": "Seeded bounded mutation corpus comparing B177 and independently implemented B179 parser",
+  "seed": 25211257,
+  "roundsPerOperator": 20,
+  "operators": 20,
+  "totalCases": 400,
+  "inputSizeCapBytes": 9216,
+  "maxRetainedCounterexamples": 12,
+  "require": [
+    "canonical accepted identically",
+    "all generated mutants rejected by both parsers with expected category",
+    "exact immutable generated case identities and input strings",
+    "all 400 cases present once",
+    "no unexpected acceptance",
+    "counterexample digest and bounded literal preview on disagreement"
+  ],
+  "positive": "DETERMINISTIC_FUZZ_AGREEMENT_NO_EXECUTION",
+  "negative": "HOLD",
+  "scope": {
+    "template": "canonical B161 bug report only",
+    "network": false,
+    "repoCodeExecution": false,
+    "repoCIExecution": false
+  },
+  "authority": {
+    "mayCreatePR": false,
+    "mayRetry": false,
+    "mayMerge": false,
+    "mayWriteDefaultBranch": false
+  },
+  "limitations": [
+    "400 deterministic examples do not constitute mathematical proof of parser security",
+    "both implementations share a stated expected grammar and test categories",
+    "no owner authorization, target CI, or repository-write authority"
+  ]
+}
