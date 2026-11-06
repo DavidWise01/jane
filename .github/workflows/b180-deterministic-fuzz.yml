@@ -1,0 +1,44 @@
+name: JANE B180 Deterministic Parser Fuzz
+on:
+  push:
+    paths:
+      - 'scripts/btf2/jane-b180-deterministic-fuzz.cjs'
+      - 'scripts/btf2/test-jane-b180-deterministic-fuzz.cjs'
+      - 'scripts/btf2/jane-b180-fuzz-runner.cjs'
+      - 'scripts/btf2/test-jane-b180-fuzz-runner.cjs'
+      - 'scripts/btf2/jane-b177-semantic-template.cjs'
+      - 'scripts/btf2/jane-b179-independent-parser.cjs'
+      - 'b180/**'
+      - '.github/workflows/b180-deterministic-fuzz.yml'
+  schedule:
+    - cron: '37 15 * * *'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: jane-b180-deterministic-fuzz
+  cancel-in-progress: false
+jobs:
+  bounded-fuzz:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Native B179 and B180 regressions
+        run: |
+          node scripts/btf2/test-jane-b179-independent-parser.cjs
+          node scripts/btf2/test-jane-b180-deterministic-fuzz.cjs
+          node scripts/btf2/test-jane-b180-fuzz-runner.cjs
+      - name: Emit all generated parser decisions and counterexamples
+        run: node scripts/btf2/jane-b180-fuzz-runner.cjs --output ecosystem/reports/b180-latest.json
+      - name: Preserve read-only fuzz report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: jane-b180-deterministic-fuzz
+          path: ecosystem/reports/b180-latest.json
+          if-no-files-found: warn
+          retention-days: 30
