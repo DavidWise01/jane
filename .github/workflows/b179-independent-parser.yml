@@ -1,0 +1,44 @@
+name: JANE B179 Independent Parser Differential
+on:
+  push:
+    paths:
+      - 'scripts/btf2/jane-b179-independent-parser.cjs'
+      - 'scripts/btf2/test-jane-b179-independent-parser.cjs'
+      - 'scripts/btf2/jane-b178-constraint-coverage.cjs'
+      - 'scripts/btf2/jane-b177-semantic-template.cjs'
+      - 'b179/**'
+      - '.github/workflows/b179-independent-parser.yml'
+  schedule:
+    - cron: '11 15 * * *'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: jane-b179-independent-parser
+  cancel-in-progress: false
+jobs:
+  differential:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Execute parser regression matrix
+        run: |
+          node scripts/btf2/test-jane-b177-semantic-template.cjs
+          node scripts/btf2/test-jane-b178-constraint-coverage.cjs
+          node scripts/btf2/test-jane-b179-independent-parser.cjs
+      - name: Emit B179 differential proof
+        run: |
+          mkdir -p ecosystem/reports
+          node -e "const fs=require('node:fs');const m=require('./scripts/btf2/jane-b179-independent-parser.cjs');const r=m.run();fs.writeFileSync('ecosystem/reports/b179-latest.json',JSON.stringify(r,null,2)+'\n');if(r.status!=='INDEPENDENT_PARSER_AGREEMENT_NO_EXECUTION'||m.audit(r).status!=='PASS')process.exit(1)"
+      - name: Preserve independent parser report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: jane-b179-parser-differential
+          path: ecosystem/reports/b179-latest.json
+          if-no-files-found: warn
+          retention-days: 30
