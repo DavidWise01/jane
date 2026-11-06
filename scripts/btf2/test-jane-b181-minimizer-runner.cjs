@@ -1,0 +1,10 @@
+'use strict';
+const assert=require('node:assert/strict');
+const {execute}=require('./jane-b181-minimizer-runner.cjs');
+const {audit}=require('./jane-b181-counterexample-minimizer.cjs');
+const r=execute();
+assert.equal(r.status,'NO_COUNTEREXAMPLES');
+assert.equal(r.generated,400);
+assert.equal(r.examples.length,0);
+assert.equal(audit(r).status,'PASS');
+console.log('PASS B181 runner: no counterexamples invented, 400 test decisions preserved');
