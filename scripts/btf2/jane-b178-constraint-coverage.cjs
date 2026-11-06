@@ -46,7 +46,9 @@ function fixtures(){
  return result;
 }
 function expectedIds(){return fixtures().map(x=>x.id).sort()}
-function run({cases=fixtures(),parser=parseTemplate,requiredIds=expectedIds()}={}){
+function run({cases=fixtures(),parser=parseTemplate}={}){
+ const reference=fixtures(),requiredIds=reference.map(c=>c.id).sort();
+ const referenceById=new Map(reference.map(c=>[c.id,c]));
  if(!Array.isArray(cases)||!Array.isArray(requiredIds))throw Error('INVALID_FIXTURES');
  const errors=[],observations=[],seen=new Set(),required=new Set(requiredIds);
  if(requiredIds.length!==required.size)errors.push('DUPLICATE_REQUIRED_ID');
@@ -57,16 +59,19 @@ function run({cases=fixtures(),parser=parseTemplate,requiredIds=expectedIds()}={
   if(!c||typeof c.id!=='string'||seen.has(c.id)){errors.push('INVALID_OR_DUPLICATE_FIXTURE');continue}
   seen.add(c.id);
   if(!required.has(c.id))errors.push('UNEXPECTED_FIXTURE:'+c.id);
+  const baselineCase=referenceById.get(c.id);
+  if(baselineCase&&(baselineCase.error!==c.error||baselineCase.group!==c.group||baselineCase.rule!==c.rule))
+   errors.push('FIXTURE_CONTRACT_CHANGED:'+c.id);
   let reason;
   try{
    const mutated=c.make();
    if(typeof mutated!=='string'||mutated===TEMPLATE)reason='NOT_MUTATED';
    else{try{parser(mutated);reason='UNEXPECTED_ACCEPTANCE'}catch(e){reason=e.message}}
   }catch(e){reason='FIXTURE_ERROR:'+e.message}
-  const passed=reason===c.error;
+  const passed=reason===baselineCase?.error;
   if(!passed)errors.push('FIXTURE_FAILED:'+c.id+':'+reason);
   observations.push({id:c.id,group:c.group,rule:c.rule,
-   canonicalAccepted:!!baseline,mutationRejectedAsExpected:passed,expectedError:c.error,observedError:reason});
+   canonicalAccepted:!!baseline,mutationRejectedAsExpected:passed,expectedError:baselineCase?.error??null,observedError:reason});
  }
  for(const id of required)if(!seen.has(id))errors.push('MISSING_FIXTURE:'+id);
  const groups={};
