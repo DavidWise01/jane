@@ -12,7 +12,7 @@ function fixtures(){
  for(const [k,v]of fields){
   add('field-value-'+k,'fields','FIELD_VALUE',()=>replace(k+': '+v,k+': '+v+' other'),'FIELD_VALUE');
   add('field-duplicate-'+k,'fields','UNIQUE_FIELD',()=>replace(k+': '+v,k+': '+v+'\n'+k+': '+v),'FRONT_MATTER');
-  add('field-removed-'+k,'fields','REQUIRED_FIELD',()=>replace(k+': '+v+'\n',''),'FIELD_DUPLICATE_OR_UNKNOWN');
+  add('field-removed-'+k,'fields','REQUIRED_FIELD',()=>replace(k+': '+v+'\n',''),'FRONT_MATTER');
  }
  for(const h of headings){
   const slug=h.toLowerCase().replaceAll(' ','-');
