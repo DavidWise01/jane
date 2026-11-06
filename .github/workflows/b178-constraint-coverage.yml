@@ -1,0 +1,43 @@
+name: JANE B178 Constraint Coverage
+on:
+  push:
+    paths:
+      - 'scripts/btf2/jane-b178-constraint-coverage.cjs'
+      - 'scripts/btf2/test-jane-b178-constraint-coverage.cjs'
+      - 'scripts/btf2/jane-b178-coverage-runner.cjs'
+      - 'scripts/btf2/test-jane-b178-coverage-runner.cjs'
+      - 'scripts/btf2/jane-b177-semantic-template.cjs'
+      - 'b178/**'
+      - '.github/workflows/b178-constraint-coverage.yml'
+  schedule:
+    - cron: '41 14 * * *'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: jane-b178-constraint-coverage
+  cancel-in-progress: false
+jobs:
+  coverage:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Execute native B177/B178 semantic regression matrix
+        run: |
+          node scripts/btf2/test-jane-b177-semantic-template.cjs
+          node scripts/btf2/test-jane-b178-constraint-coverage.cjs
+          node scripts/btf2/test-jane-b178-coverage-runner.cjs
+      - name: Emit full B178 constraint evidence
+        run: node scripts/btf2/jane-b178-coverage-runner.cjs --output ecosystem/reports/b178-latest.json
+      - name: Preserve coverage evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: jane-b178-coverage-evidence
+          path: ecosystem/reports/b178-latest.json
+          if-no-files-found: warn
+          retention-days: 30
