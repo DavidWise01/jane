@@ -1,6 +1,6 @@
 {
   "schema": "JANE_B102_FAMILY_DISCOVERY_V1",
-  "updated_at": "2026-11-06T10:41:39.908Z",
+  "updated_at": "2026-11-06T19:14:43.814Z",
   "scan_scope": "PUBLIC_OWNER_REPOSITORIES",
   "members": [
     {
@@ -5688,6 +5688,13 @@
       "presence": "RESERVED"
     },
     {
+      "repo": "DavidWise01/quanta",
+      "channel": "btf2:davidwise01/quanta",
+      "observer": "FORMIC-95c933c6a0a1c6a4",
+      "url": "https://github.com/DavidWise01/quanta",
+      "presence": "RESERVED"
+    },
+    {
       "repo": "DavidWise01/quantum-box",
       "channel": "btf2:davidwise01/quantum-box",
       "observer": "FORMIC-96347619120da124",
@@ -6462,6 +6469,13 @@
       "channel": "btf2:davidwise01/sonnet-channel",
       "observer": "FORMIC-3ae3d72b74a3d640",
       "url": "https://github.com/DavidWise01/sonnet-channel",
+      "presence": "RESERVED"
+    },
+    {
+      "repo": "DavidWise01/sophia",
+      "channel": "btf2:davidwise01/sophia",
+      "observer": "FORMIC-5ab7177f6b83fa68",
+      "url": "https://github.com/DavidWise01/sophia",
       "presence": "RESERVED"
     },
     {
@@ -15033,8 +15047,8 @@
       "presence": "RESERVED"
     }
   ],
-  "first_seen_total": 2147,
-  "new_children_this_run": 0,
-  "discovery_events": 2147,
+  "first_seen_total": 2149,
+  "new_children_this_run": 2,
+  "discovery_events": 2149,
   "note": "A child identity is not a continuously executing AI process."
 }
