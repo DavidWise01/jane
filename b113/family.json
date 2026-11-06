@@ -1,13 +1,14 @@
 {
   "schema": "JANE_B113_GRANDMOTHER_CONTINUITY_V1",
-  "generated_at": "2026-11-06T07:27:19.196Z",
+  "generated_at": "2026-11-06T19:44:12.966Z",
   "source": "B112 stable hex + B102 append-only discovery events",
   "scope": "PUBLIC_REPOS_ONLY",
-  "member_count": 2147,
+  "member_count": 2149,
   "cohorts": {
-    "ARRIVAL_2026-11-03": 2147
+    "ARRIVAL_2026-11-03": 2147,
+    "ARRIVAL_2026-11-06": 2
   },
-  "unknown_lineage_count": 2147,
+  "unknown_lineage_count": 2149,
   "members": [
     {
       "repo": "DavidWise01/0root",
@@ -14626,6 +14627,24 @@
       "status": "OBSERVED_LOGICAL_IDENTITY"
     },
     {
+      "repo": "DavidWise01/quanta",
+      "formic": "FORMIC-95c933c6a0a1c6a4",
+      "channel": "btf2:davidwise01/quanta",
+      "presence": "RESERVED",
+      "hex": {
+        "q": 13,
+        "r": 14,
+        "sector": 2
+      },
+      "first_seen": "2026-11-06T19:14:43.814Z",
+      "generation": "ARRIVAL_2026-11-06",
+      "lineage": {
+        "parent_repo": null,
+        "parentage": "UNKNOWN"
+      },
+      "status": "OBSERVED_LOGICAL_IDENTITY"
+    },
+    {
       "repo": "DavidWise01/quantum-box",
       "formic": "FORMIC-96347619120da124",
       "channel": "btf2:davidwise01/quantum-box",
@@ -16617,6 +16636,24 @@
       },
       "first_seen": "2026-11-03T02:51:53.797Z",
       "generation": "ARRIVAL_2026-11-03",
+      "lineage": {
+        "parent_repo": null,
+        "parentage": "UNKNOWN"
+      },
+      "status": "OBSERVED_LOGICAL_IDENTITY"
+    },
+    {
+      "repo": "DavidWise01/sophia",
+      "formic": "FORMIC-5ab7177f6b83fa68",
+      "channel": "btf2:davidwise01/sophia",
+      "presence": "RESERVED",
+      "hex": {
+        "q": 14,
+        "r": 13,
+        "sector": 1
+      },
+      "first_seen": "2026-11-06T19:14:43.814Z",
+      "generation": "ARRIVAL_2026-11-06",
       "lineage": {
         "parent_repo": null,
         "parentage": "UNKNOWN"
