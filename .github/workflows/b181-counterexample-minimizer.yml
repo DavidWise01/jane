@@ -1,0 +1,43 @@
+name: JANE B181 Counterexample Minimization
+on:
+  push:
+    paths:
+      - 'scripts/btf2/jane-b181-counterexample-minimizer.cjs'
+      - 'scripts/btf2/test-jane-b181-counterexample-minimizer.cjs'
+      - 'scripts/btf2/jane-b181-minimizer-runner.cjs'
+      - 'scripts/btf2/test-jane-b181-minimizer-runner.cjs'
+      - 'scripts/btf2/jane-b180-deterministic-fuzz.cjs'
+      - 'b181/**'
+      - '.github/workflows/b181-counterexample-minimizer.yml'
+  schedule:
+    - cron: '03 16 * * *'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: jane-b181-counterexample-minimizer
+  cancel-in-progress: false
+jobs:
+  minimize:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Run native B180 and B181 regressions
+        run: |
+          node scripts/btf2/test-jane-b180-deterministic-fuzz.cjs
+          node scripts/btf2/test-jane-b181-counterexample-minimizer.cjs
+          node scripts/btf2/test-jane-b181-minimizer-runner.cjs
+      - name: Preserve bounded and fully attributed counterexample report
+        run: node scripts/btf2/jane-b181-minimizer-runner.cjs --output ecosystem/reports/b181-latest.json
+      - name: Upload B181 evidence even on HOLD
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: jane-b181-counterexamples
+          path: ecosystem/reports/b181-latest.json
+          if-no-files-found: warn
+          retention-days: 30
