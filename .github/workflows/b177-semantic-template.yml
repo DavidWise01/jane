@@ -1,0 +1,48 @@
+name: JANE B177 Fixed Template Semantic Audit
+on:
+  push:
+    paths:
+      - 'scripts/btf2/jane-b177-semantic-template.cjs'
+      - 'scripts/btf2/test-jane-b177-semantic-template.cjs'
+      - 'scripts/btf2/jane-b177-autonomous-semantic.cjs'
+      - 'scripts/btf2/test-jane-b177-autonomous-semantic.cjs'
+      - 'ecosystem/proposals/**'
+      - 'b177/**'
+      - '.github/workflows/b177-semantic-template.yml'
+  schedule:
+    - cron: '17 14 * * *'
+  workflow_dispatch:
+permissions:
+  contents: read
+  checks: read
+  statuses: read
+concurrency:
+  group: jane-b177-semantic-template
+  cancel-in-progress: false
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Native B176 and B177 regression tests
+        run: |
+          node scripts/btf2/test-jane-b176-differential-tree.cjs
+          node scripts/btf2/test-jane-b176-autonomous-differential.cjs
+          node scripts/btf2/test-jane-b177-semantic-template.cjs
+          node scripts/btf2/test-jane-b177-autonomous-semantic.cjs
+      - name: Read-only semantic audit of committed proofs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/btf2/jane-b177-autonomous-semantic.cjs --output ecosystem/reports/b177-latest.json
+      - name: Preserve B177 semantic evidence artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: jane-b177-semantic-evidence
+          path: ecosystem/reports/b177-latest.json
+          if-no-files-found: warn
+          retention-days: 30
