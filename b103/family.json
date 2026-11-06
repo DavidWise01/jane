@@ -1,6 +1,6 @@
 {
   "schema": "JANE_B103_V1",
-  "generated_at": "2026-11-06T06:53:37.952Z",
+  "generated_at": "2026-11-06T19:28:18.509Z",
   "domain_owner": "USER_DECLARED",
   "persistence_policy": "ALWAYS_ON",
   "bridge": {
@@ -8,7 +8,7 @@
     "state": "HTTP_ERROR",
     "http_status": 404,
     "page_title": null,
-    "checked_at": "2026-11-06T06:53:37.952Z"
+    "checked_at": "2026-11-06T19:28:18.509Z"
   },
   "children": [
     {
@@ -6508,6 +6508,14 @@
       "home": "https://github.com/DavidWise01/qd-prim-life-ledger"
     },
     {
+      "repo": "DavidWise01/quanta",
+      "formic": "FORMIC-95c933c6a0a1c6a4",
+      "channel": "btf2:davidwise01/quanta",
+      "presence": "RESERVED",
+      "first_seen": "2026-11-06T19:14:43.814Z",
+      "home": "https://github.com/DavidWise01/quanta"
+    },
+    {
       "repo": "DavidWise01/quantum-box",
       "formic": "FORMIC-96347619120da124",
       "channel": "btf2:davidwise01/quantum-box",
@@ -7394,6 +7402,14 @@
       "presence": "RESERVED",
       "first_seen": "2026-11-03T02:51:53.797Z",
       "home": "https://github.com/DavidWise01/sonnet-channel"
+    },
+    {
+      "repo": "DavidWise01/sophia",
+      "formic": "FORMIC-5ab7177f6b83fa68",
+      "channel": "btf2:davidwise01/sophia",
+      "presence": "RESERVED",
+      "first_seen": "2026-11-06T19:14:43.814Z",
+      "home": "https://github.com/DavidWise01/sophia"
     },
     {
       "repo": "DavidWise01/sophie-germain",
