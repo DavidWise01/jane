@@ -1,0 +1,45 @@
+{
+  "schema": "JANE-B181-COUNTEREXAMPLE-SHRINK-v1",
+  "purpose": "Preserve and minimize deterministic B180 differential parser counterexamples without inventing failures",
+  "source": "B180 seeded 20 x 20 bounded mutations; exact B161 fixed template only",
+  "limits": {
+    "maxInputBytes": 9216,
+    "maxShrinkAttemptsPerInput": 300,
+    "maxRetainedExamples": 12,
+    "maxPreviewChars": 320
+  },
+  "preservation": [
+    "Original generated input full text and SHA256",
+    "Minimized full text and SHA256",
+    "Exact two-parser acceptance/error signature",
+    "Bounded deterministic deletion attempts",
+    "Deterministic B180 generator seed and report digest"
+  ],
+  "statuses": {
+    "noFailures": "NO_COUNTEREXAMPLES",
+    "failures": "COUNTEREXAMPLES_PRESERVED",
+    "error": "HOLD"
+  },
+  "scope": {
+    "globalMinimumClaim": false,
+    "network": false,
+    "repoCodeExecuted": false,
+    "repoCIExecuted": false
+  },
+  "authority": {
+    "mayCreatePR": false,
+    "mayRetry": false,
+    "mayMerge": false,
+    "mayWriteDefaultBranch": false
+  },
+  "governance": {
+    "observerDepth": 1,
+    "witnesses": [
+      "a1",
+      "b1",
+      "c1"
+    ],
+    "noQuorum": true,
+    "isaDefined": false
+  }
+}
