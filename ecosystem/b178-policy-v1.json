@@ -1,0 +1,47 @@
+{
+  "schema": "JANE-B178-CONSTRAINT-COVERAGE-v1",
+  "purpose": "Prove B177 static template parser's named positive baseline and negative mutation coverage for every listed field, heading, unsafe-content and encoding rule",
+  "caseCount": 48,
+  "fixtureGroups": {
+    "fields": 15,
+    "headings": 12,
+    "grammar": 4,
+    "body": 12,
+    "encoding": 5
+  },
+  "contract": {
+    "canonicalControl": "B161 exact template accepted",
+    "negativeFixture": "each mutation must be rejected with its expected error class",
+    "coverage": "every fixed case ID present exactly once",
+    "unexpectedFixtures": "HOLD",
+    "changedExpectations": "HOLD",
+    "falsePositive": "HOLD",
+    "baselineRejection": "HOLD",
+    "integrityDigest": "SHA256 of report"
+  },
+  "scope": {
+    "target": "B177 semantic validator",
+    "runsTargetRepoCode": false,
+    "runsTargetRepoCI": false,
+    "usesGitHubNetwork": false
+  },
+  "positive": "CONSTRAINT_COVERAGE_PASS_NO_EXECUTION",
+  "negative": "HOLD",
+  "authority": {
+    "mayCreatePR": false,
+    "mayRetry": false,
+    "mayMerge": false,
+    "mayWriteDefaultBranch": false
+  },
+  "governance": {
+    "witnesses": [
+      "a1",
+      "b1",
+      "c1"
+    ],
+    "observerDepth": 1,
+    "noQuorum": true,
+    "isaDefined": false
+  },
+  "limitation": "This proves the enumerated regression matrix, not completeness of every conceivable unsafe input; it does not independently authorize a repository change."
+}
