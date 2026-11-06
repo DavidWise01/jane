@@ -1,0 +1,11 @@
+'use strict';
+const assert=require('node:assert/strict');
+const {execute}=require('./jane-b180-fuzz-runner.cjs');
+const {audit}=require('./jane-b180-deterministic-fuzz.cjs');
+const out=execute();
+assert.equal(out.status,'DETERMINISTIC_FUZZ_AGREEMENT_NO_EXECUTION');
+assert.equal(out.counts.expected,400);
+assert.equal(out.counts.agreed,400);
+assert.equal(audit(out).status,'PASS');
+assert.equal(out.authority.mayMerge,false);
+console.log('PASS B180 runner: complete 400-case bounded fixed-seed evidence');
