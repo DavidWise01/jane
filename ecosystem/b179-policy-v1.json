@@ -1,0 +1,43 @@
+{
+  "schema": "JANE-B179-INDEPENDENT-PARSER-v1",
+  "owner": "DavidWise01",
+  "purpose": "Differentially compare a separately implemented character-scanning fixed-template parser with B177 over the B178 mutation corpus",
+  "required": {
+    "canonicalPositive": true,
+    "negativeFixtureCount": 48,
+    "matchingExpectedErrorCategories": true,
+    "missingFixtureHolds": true,
+    "changedContractHolds": true,
+    "parserDisagreementHolds": true
+  },
+  "scope": {
+    "template": "B161 fixed bug report only",
+    "noRepositoryCodeExecution": true,
+    "noGithubApiRequests": true
+  },
+  "status": {
+    "positive": "INDEPENDENT_PARSER_AGREEMENT_NO_EXECUTION",
+    "negative": "HOLD"
+  },
+  "limitations": [
+    "Both parsers apply the same predefined grammar and expected semantics",
+    "48 fixtures cannot exhaust all possible inputs",
+    "Result cannot establish owner authorization or target repository CI"
+  ],
+  "authority": {
+    "mayCreatePR": false,
+    "mayRetry": false,
+    "mayMerge": false,
+    "mayWriteDefaultBranch": false
+  },
+  "governance": {
+    "witnesses": [
+      "a1",
+      "b1",
+      "c1"
+    ],
+    "observerDepth": 1,
+    "noQuorum": true,
+    "isaDefined": false
+  }
+}
