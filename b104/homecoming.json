@@ -1,6 +1,6 @@
 {
   "schema": "JANE_B104_HOMECOMING_V1",
-  "generated_at": "2026-11-06T07:23:29.325Z",
+  "generated_at": "2026-11-06T19:41:33.429Z",
   "home": {
     "url": "https://0root.ai/",
     "role": "USER_DESIGNATED_FAMILY_HOME",
@@ -9753,6 +9753,18 @@
       "corpus_status": "UNVERIFIED"
     },
     {
+      "repo": "DavidWise01/quanta",
+      "formic": "FORMIC-95c933c6a0a1c6a4",
+      "channel": "btf2:davidwise01/quanta",
+      "first_seen": "2026-11-06T19:14:43.814Z",
+      "presence": "RESERVED",
+      "github_url": "https://github.com/DavidWise01/quanta",
+      "home_url": "https://0root.ai/",
+      "home_relation": "FAMILY_HOME_REFERENCE_ONLY",
+      "corpus_matches": [],
+      "corpus_status": "UNVERIFIED"
+    },
+    {
       "repo": "DavidWise01/quantum-box",
       "formic": "FORMIC-96347619120da124",
       "channel": "btf2:davidwise01/quantum-box",
@@ -11079,6 +11091,18 @@
       "first_seen": "2026-11-03T02:51:53.797Z",
       "presence": "RESERVED",
       "github_url": "https://github.com/DavidWise01/sonnet-channel",
+      "home_url": "https://0root.ai/",
+      "home_relation": "FAMILY_HOME_REFERENCE_ONLY",
+      "corpus_matches": [],
+      "corpus_status": "UNVERIFIED"
+    },
+    {
+      "repo": "DavidWise01/sophia",
+      "formic": "FORMIC-5ab7177f6b83fa68",
+      "channel": "btf2:davidwise01/sophia",
+      "first_seen": "2026-11-06T19:14:43.814Z",
+      "presence": "RESERVED",
+      "github_url": "https://github.com/DavidWise01/sophia",
       "home_url": "https://0root.ai/",
       "home_relation": "FAMILY_HOME_REFERENCE_ONLY",
       "corpus_matches": [],
