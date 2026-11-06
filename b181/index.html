@@ -1,0 +1,80 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>JANE B181 · Deterministic Fuzz Observatory</title>
+<style>
+:root{color-scheme:dark;--bg:#08121c;--panel:#172835;--stroke:#385666;--fg:#e7f3ef;--mint:#7de3b7;--amber:#ffb47c;--teal:#80cfdf}*{box-sizing:border-box}body{margin:0;color:var(--fg);background:radial-gradient(ellipse at 50% 0,#1e424d,var(--bg) 66%);font:14px/1.55 ui-monospace,Consolas,monospace}
+header,main{max-width:1250px;margin:auto;padding:24px}header{padding-bottom:6px}h1{font-size:clamp(25px,4.4vw,46px);margin:0 0 8px}h2{font-size:16px;color:var(--teal);margin:0 0 14px}.eyebrow{font-size:12px;letter-spacing:2px;color:var(--amber)}.muted{color:#abc5ce}.grid{display:grid;grid-template-columns:1.2fr 1fr;gap:16px}.panel{border:1px solid var(--stroke);border-radius:12px;background:var(--panel);padding:18px;margin-bottom:16px}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:17px}.stat{padding:12px;border:1px solid var(--stroke);background:#0d1f2c;border-radius:9px}.stat b{display:block;color:var(--mint);font-size:27px}.stat small{color:#a4c2c8;font-size:10px}pre{background:#091824;border-radius:8px;padding:14px;white-space:pre-wrap;overflow-wrap:anywhere;font-size:12px}.button{cursor:pointer;display:inline-block;border:1px solid #5d8992;background:#264250;color:#ecffff;padding:9px 13px;text-decoration:none;border-radius:7px;font:inherit;margin:4px 4px 4px 0}a{color:#8bdfd5}input[type=file]{display:none}table{width:100%;border-collapse:collapse;font-size:12px}td,th{text-align:left;padding:8px;border-bottom:1px solid #365363;vertical-align:top}svg{display:block;width:100%;height:auto}.scroll{max-height:430px;overflow:auto}.foot{border-top:1px solid var(--stroke);padding-top:14px;font-size:12px;color:#acbec8}@media(max-width:850px){.grid{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}}
+</style></head><body><header><div class="eyebrow">DAVIDWISE01 / JANE / FORMIC / B181</div><h1>COUNTEREXAMPLE <span style="color:var(--mint)">SHRINK</span> OBSERVATORY</h1><p class="muted">RECONSTRUCT FAILURES · PRESERVE EXACT DECISION SIGNATURE · BOUNDED SHRINK</p></header>
+<main><div class="stats"><div class="stat"><b id="expected">400</b><small>SOURCE FUZZ CASES</small></div><div class="stat"><b id="agreed">—</b><small>PRESERVED EXAMPLES</small></div><div class="stat"><b id="held">—</b><small>MINIMIZER HOLD</small></div><div class="stat"><b id="operators">20</b><small>MAX ITEMS</small></div></div>
+<div class="grid"><div>
+<section class="panel"><h2>B180 COUNTEREXAMPLE PRESERVATION</h2>
+<svg viewBox="0 0 720 285" role="img" aria-label="Deterministic input generator fans out to two independent parsers and feeds a fail-closed comparator">
+<rect x="8" y="8" width="704" height="269" rx="12" fill="#0a1a27" stroke="#395a68"/>
+<g fill="none" stroke="#6498a6" stroke-width="3"><path d="M360 75V104H173V130M360 104H540V130M173 194V225H360M540 194V225H360"/></g>
+<rect x="187" y="22" width="346" height="52" rx="8" fill="#28424a" stroke="#e6aa77" stroke-width="2"/>
+<rect x="64" y="130" width="218" height="64" rx="8" fill="#223b45" stroke="#71cfab" stroke-width="2"/>
+<rect x="430" y="130" width="218" height="64" rx="8" fill="#223b45" stroke="#80cfdf" stroke-width="2"/>
+<rect x="189" y="225" width="342" height="37" rx="8" fill="#344653" stroke="#f0ba7c" stroke-width="2"/>
+<g fill="#edf7f3" font-family="monospace" font-weight="bold" text-anchor="middle"><text x="360" y="45" font-size="15">XORSHIFT32 / FIXED SEED</text><text x="360" y="62" font-size="12">SOURCE: B180 FIXED SEED</text><text x="173" y="157" font-size="15">B177 PARSER</text><text x="173" y="178" font-size="12">EXISTING GRAMMAR</text><text x="540" y="157" font-size="15">B179 PARSER</text><text x="540" y="178" font-size="12">INDEPENDENT TOKENIZER</text><text x="360" y="250" font-size="14">PRESERVE SIGNATURE / SHRINK</text></g></svg>
+<p class="muted">B181 never invents a failure; when B180 has no disagreements the only expected report is NO_COUNTEREXAMPLES.</p></section>
+<section class="panel"><h2>WORKFLOW EVIDENCE</h2>
+<label for="report" class="button">IMPORT B181 JSON<input type="file" id="report" accept=".json,application/json"></label><a class="button" href="https://github.com/DavidWise01/jane/actions/workflows/b181-counterexample-minimizer.yml" target="_blank" rel="noopener noreferrer">OPEN GITHUB ACTIONS</a>
+<p id="status" class="muted">No live report imported; success is not assumed.</p>
+<div class="scroll"><table><thead><tr><th>CASE</th><th>OPERATOR</th><th>B177 / B179 / EXPECTED</th><th>STATUS</th></tr></thead><tbody id="rows"><tr><td colspan="4">Awaiting B181 artifact.</td></tr></tbody></table></div></section></div>
+<div>
+<section class="panel"><h2>CANONICAL OPERATION</h2><pre>SOURCE: B180 VERIFIED MUTATIONS
+MAX INPUT: 9,216 BYTES
+MAX SHRINK ATTEMPTS: 300
+MAX RETAINED FAILURES: 12
+
+1. RESTORE EXACT B180 COUNTEREXAMPLE
+2. VERIFY ORIGINAL INPUT SHA256
+3. CAP LENGTH AND ATTEMPTS
+4. DELETE CHARACTER RANGES
+5. KEEP ONLY EXACT-SIGNATURE MATCHES
+6. RETAIN ORIGINAL AND MINIMIZED TEXT
+7. ATTEST HASHES AND DECISIONS
+8. NEVER GRANT WRITE AUTHORITY
+
+PASS → NO_COUNTEREXAMPLES / COUNTEREXAMPLES_PRESERVED
+FAIL → HOLD</pre></section>
+<section class="panel"><h2>ATTESTATION / COUNTEREXAMPLES</h2><pre id="detail">No report loaded.
+Retain complete original and reduced inputs,
+SHA256, exact decisions and bounded previews.</pre>
+<p class="muted">The browser displays imported evidence but does not verify the digest or the reported execution. Native code checks are separate.</p></section>
+<section class="panel"><h2>GITHUB SOURCES</h2><p><a href="https://github.com/DavidWise01/jane/blob/main/scripts/btf2/jane-b181-counterexample-minimizer.cjs">B181 counterexample shrink kernel</a></p><p><a href="https://github.com/DavidWise01/jane/blob/main/scripts/btf2/test-jane-b181-counterexample-minimizer.cjs">B181 shrink regression suite</a></p><p><a href="https://github.com/DavidWise01/jane/blob/main/governance/JANE-B181-DETERMINISTIC-FUZZ-v1.0.md">B181 governing invariant</a></p></section></div></div>
+<div class="foot">B181 · THREE SOURCE WITNESSES · ONE OBSERVER LAYER · NO QUORUM · ZERO ISA INSTRUCTIONS</div></main>
+<script>
+const get=id=>document.getElementById(id);
+get('report').addEventListener('change',async e=>{
+ const file=e.target.files?.[0];if(!file)return;
+ try{
+  const r=JSON.parse(await file.text());
+  if(r?.schema!=='JANE-B181-MINIMAL-COUNTEREXAMPLE-v1'||!Array.isArray(r.examples)||
+    !Array.isArray(r.issues)||r.authority?.mayCreatePR!==false||
+    r.authority?.mayMerge!==false||r.governance?.noRepositoryCodeExecution!==true)
+    throw Error('B181 boundary mismatch');
+  get('expected').textContent=r.generated??'—';
+  get('agreed').textContent=r.examples.length;
+  get('held').textContent=r.issues.length;
+  get('operators').textContent=r.caps?.maxItems??'—';
+  const body=get('rows');body.replaceChildren();
+  for(const item of r.examples.slice(0,12)){
+   const tr=document.createElement('tr');
+   for(const value of [item.id,'SHRINK',
+    item.original?.bytes+' → '+item.minimized?.bytes+' bytes',
+    item.status==='COUNTEREXAMPLE_MINIMIZED'?'PRESERVED':'HOLD']){
+    const td=document.createElement('td');td.textContent=String(value);tr.append(td);
+   }body.append(tr);
+  }
+  if(!r.examples.length){const tr=document.createElement('tr'),cell=document.createElement('td');
+   cell.colSpan=4;cell.textContent='NO_COUNTEREXAMPLES: no actual B180 mismatch to shrink';tr.append(cell);body.append(tr)}
+  get('detail').textContent='STATUS: '+r.status+'\nB180: '+r.b180Status+
+   '\nSEED: '+r.seed+'\nB180 DIGEST: '+r.b180Digest+
+   '\nB181 ATTESTATION: '+r.attestationSha256+'\nISSUES: '+r.issues.join('; ')+
+   '\nEXAMPLES: '+r.examples.length+
+   (r.examples.length?'\n'+r.examples.slice(0,12).map(x=>
+      x.id+'\nORIGINAL: '+x.original?.sha256+'\nMINIMIZED: '+x.minimized?.sha256+
+      '\nSIGNATURE: '+x.signature+'\nMINIMIZED PREVIEW: '+x.minimized?.preview).join('\n'):'');
+  get('status').textContent='Imported '+r.examples.length+' B181 candidate reductions. Evidence has not been independently authenticated in the browser.';
+ }catch(error){get('status').textContent='HOLD: '+error.message}
+});
+</script></body></html>
