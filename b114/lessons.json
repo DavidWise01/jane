@@ -1,6 +1,6 @@
 {
   "schema": "JANE_B114_EVIDENCE_LEARNING_V1",
-  "generated_at": "2026-11-06T19:39:08.584Z",
+  "generated_at": "2026-11-07T05:54:52.922Z",
   "scope": "PUBLIC_GITHUB_METADATA_ONLY",
   "source_verified": "SHA256_B87_RUNS",
   "source_runs": [
@@ -8432,7 +8432,7 @@
           "sha256": "72cb15e5188fad3e18797f4a39973a9c657029af1dca2cf900aa9992a00c43dd"
         }
       ],
-      "arrival_cohort": "UNKNOWN"
+      "arrival_cohort": "ARRIVAL_2026-11-06"
     },
     {
       "id": "f0e357ba9a44cb9f9360d028",
@@ -8456,7 +8456,7 @@
           "sha256": "72cb15e5188fad3e18797f4a39973a9c657029af1dca2cf900aa9992a00c43dd"
         }
       ],
-      "arrival_cohort": "UNKNOWN"
+      "arrival_cohort": "ARRIVAL_2026-11-06"
     },
     {
       "id": "8d6076266cfe6cf5f68aa358",
