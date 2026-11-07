@@ -1,11 +1,11 @@
 {
   "schema": "JANE_B115_TEACHING_MEMORY_V1",
-  "generated_at": "2026-11-06T19:39:08.713Z",
+  "generated_at": "2026-11-07T06:30:12.980Z",
   "source": "b114/lessons.json",
   "evidence_scope": "PUBLIC_GITHUB_METADATA_ONLY",
   "family_registry_available": true,
   "lesson_count": 2,
-  "suggestion_count": 293,
+  "suggestion_count": 295,
   "cards": [
     {
       "lesson_id": "LESSON-aff5fc932e2dc28fd357",
@@ -2229,6 +2229,22 @@
       "repo": "DavidWise01/solar-jetman",
       "channel": "btf2:davidwise01/solar-jetman",
       "generation": "ARRIVAL_2026-11-03",
+      "lesson_id": "LESSON-a6d3141b9762536f2aae",
+      "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
+      "mode": "AVAILABLE_NOT_SENT"
+    },
+    {
+      "repo": "DavidWise01/sophia",
+      "channel": "btf2:davidwise01/sophia",
+      "generation": "ARRIVAL_2026-11-06",
+      "lesson_id": "LESSON-aff5fc932e2dc28fd357",
+      "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
+      "mode": "AVAILABLE_NOT_SENT"
+    },
+    {
+      "repo": "DavidWise01/sophia",
+      "channel": "btf2:davidwise01/sophia",
+      "generation": "ARRIVAL_2026-11-06",
       "lesson_id": "LESSON-a6d3141b9762536f2aae",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
