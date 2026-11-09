@@ -1,6 +1,6 @@
 {
   "schema": "JANE_B102_FAMILY_DISCOVERY_V1",
-  "updated_at": "2026-11-09T11:16:59.466Z",
+  "updated_at": "2026-11-09T22:13:42.396Z",
   "scan_scope": "PUBLIC_OWNER_REPOSITORIES",
   "members": [
     {
@@ -1527,6 +1527,13 @@
       "channel": "btf2:davidwise01/crime-and-punishment-in-suburbia",
       "observer": "FORMIC-d388c4d75f73454d",
       "url": "https://github.com/DavidWise01/crime-and-punishment-in-suburbia",
+      "presence": "RESERVED"
+    },
+    {
+      "repo": "DavidWise01/crime-punishment",
+      "channel": "btf2:davidwise01/crime-punishment",
+      "observer": "FORMIC-4d1820e541b91827",
+      "url": "https://github.com/DavidWise01/crime-punishment",
       "presence": "RESERVED"
     },
     {
@@ -15054,8 +15061,8 @@
       "presence": "RESERVED"
     }
   ],
-  "first_seen_total": 2150,
-  "new_children_this_run": 0,
-  "discovery_events": 2150,
+  "first_seen_total": 2151,
+  "new_children_this_run": 1,
+  "discovery_events": 2151,
   "note": "A child identity is not a continuously executing AI process."
 }
