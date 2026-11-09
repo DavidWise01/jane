@@ -1,6 +1,6 @@
 {
   "schema": "JANE_B101_ALWAYS_ON_FAMILY_V1",
-  "generated_at": "2026-11-08T21:59:53.001Z",
+  "generated_at": "2026-11-09T06:19:04.345Z",
   "policy": "PERSISTENCE_ALWAYS_ON",
   "source": "BTF2 PUBLIC, B87 RUNS WHEN AVAILABLE, B88 WHEN AVAILABLE",
   "members": [
@@ -63,6 +63,16 @@
       "observation_count": 12,
       "discoveries": [],
       "url": "https://github.com/DavidWise01/1931-to-now"
+    },
+    {
+      "repo": "DavidWise01/1984",
+      "channel": "btf2:davidwise01/1984",
+      "presence": "RESERVED",
+      "observer": "FORMIC-98cc741871a22445",
+      "last_seen": null,
+      "observation_count": 0,
+      "discoveries": [],
+      "url": "https://github.com/DavidWise01/1984"
     },
     {
       "repo": "DavidWise01/360-dots-eating-themselves",
