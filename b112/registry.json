@@ -1,15 +1,15 @@
 {
   "schema": "JANE_B112_FORMIC_HEX_V1",
-  "generated_at": "2026-11-09T07:16:45.285Z",
+  "generated_at": "2026-11-09T22:36:49.479Z",
   "source": "btf2/catalog.json",
-  "source_count": 2150,
-  "member_count": 2150,
-  "new_assignments": 0,
+  "source_count": 2151,
+  "member_count": 2151,
+  "new_assignments": 1,
   "radius_bound": 27,
   "sector_counts": [
     718,
     716,
-    716
+    717
   ],
   "reserved_positions": [],
   "rules": {
@@ -2198,6 +2198,16 @@
       "r": 7,
       "sector": 0,
       "ring": 8,
+      "presence": "RESERVED"
+    },
+    {
+      "repo": "DavidWise01/crime-punishment",
+      "formic": "FORMIC-4d1820e541b91827",
+      "channel": "btf2:davidwise01/crime-punishment",
+      "q": 16,
+      "r": 11,
+      "sector": 2,
+      "ring": 27,
       "presence": "RESERVED"
     },
     {
