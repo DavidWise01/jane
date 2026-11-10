@@ -1,0 +1,33 @@
+{
+  "version": "JANE-117",
+  "kind": "DISCOVERY_CANDIDATE",
+  "scout_choice": "Can separate URLs share one origin?",
+  "candidate": "compare root ancestry, not URL count",
+  "source": {
+    "url": "https://www.w3.org/TR/prov-o/",
+    "origin": "W3C:PROV-O",
+    "excerpt": "Entities can be connected by derivation relationships.",
+    "trust": "UNTRUSTED_DATA"
+  },
+  "exploration": [
+    {
+      "finding": "source_ancestry",
+      "old_rule_errors": 2
+    }
+  ],
+  "holdout": {
+    "cases": 4,
+    "known_cases": 3,
+    "old_correct": 1,
+    "revised_correct": 3,
+    "abstentions": 1
+  },
+  "status": "JANE_REVIEW_REQUIRED",
+  "learning_applied": false,
+  "jane_decision": "UNDECIDED",
+  "limitations": [
+    "Synthetic fixtures, not live internet discovery",
+    "Origin labels supplied, not independently verified",
+    "Distinct roots are a simplified independence model"
+  ]
+}
