@@ -1,0 +1,18 @@
+{
+  "version": "JANE-116",
+  "kind": "public-source-observation",
+  "retrieved_for": "ancestry distinction",
+  "source_url": "https://www.w3.org/TR/prov-o/",
+  "title": "W3C PROV-O",
+  "observed_fact": "PROV-O defines prov:wasDerivedFrom for representing derivation relationships between entities.",
+  "declared_origin": "W3C:PROV-O",
+  "untrusted_source": true,
+  "independent_corroborations": 0,
+  "flay_missing": [
+    "independent corroboration",
+    "Jane evaluation on novel cases"
+  ],
+  "decision": "UNDECIDED",
+  "learning_applied": false,
+  "note": "Reference observed via public web search, not fetched by autonomous scout."
+}
