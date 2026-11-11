@@ -1,0 +1,7 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>JANE 125 · Chronos</title><style>body{background:#08131d;color:#e9f3f5;max-width:880px;margin:auto;padding:32px;font:17px system-ui}h1{color:#ff9e45}h2{color:#73e7dc}pre{background:#142331;padding:25px;border:1px solid #416079;border-radius:14px;white-space:pre-wrap}a{color:#ffb572}</style><small>ROOT0 · JANE / HIVE / FLAY</small><h1>125 · CHRONOS COORDINATE</h1><pre>{{ - year:month:day || hour:minute:second || degree.arcminute.arcsecond || }}</pre><p>One immutable structured coordinate for event records, hive packets and witness receipts. Calendar and time are interpreted with explicit UTC offset metadata. Angle is signed degrees/minutes/seconds, not a full 3D position.</p><h2>Witness of witness</h2><pre>  JANE  ->  EVENT HEAD  ->  CHRONOS
+                  |
+       OWNED / EXTERNAL A / EXTERNAL B
+                  |
+                FLAY
+                  |
+          JANE REVIEW ONLY</pre><h2>25/25 local tests passed</h2><p>Offline prototype. Custody and signature claims are supplied data, not independently authenticated. No public-web autonomous learning is performed.</p><p><a href="chronos.py">Coordinate source</a> · <a href="test_chronos.py">Repository test subset</a> · <a href="README.md">Specification</a></p>
