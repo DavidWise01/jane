@@ -1,15 +1,16 @@
 {
   "schema": "JANE_B113_GRANDMOTHER_CONTINUITY_V1",
-  "generated_at": "2026-11-10T20:03:54.293Z",
+  "generated_at": "2026-11-11T07:16:42.897Z",
   "source": "B112 stable hex + B102 append-only discovery events",
   "scope": "PUBLIC_REPOS_ONLY",
-  "member_count": 2151,
+  "member_count": 2152,
   "cohorts": {
     "ARRIVAL_2026-11-03": 2147,
     "ARRIVAL_2026-11-09": 2,
+    "ARRIVAL_2026-11-11": 1,
     "ARRIVAL_2026-11-06": 2
   },
-  "unknown_lineage_count": 2151,
+  "unknown_lineage_count": 2152,
   "members": [
     {
       "repo": "DavidWise01/0root",
@@ -2381,6 +2382,24 @@
       },
       "first_seen": "2026-11-03T02:51:53.797Z",
       "generation": "ARRIVAL_2026-11-03",
+      "lineage": {
+        "parent_repo": null,
+        "parentage": "UNKNOWN"
+      },
+      "status": "OBSERVED_LOGICAL_IDENTITY"
+    },
+    {
+      "repo": "DavidWise01/bravenewworld",
+      "formic": "FORMIC-be9e84f3ebe49ffe",
+      "channel": "btf2:davidwise01/bravenewworld",
+      "presence": "RESERVED",
+      "hex": {
+        "q": 17,
+        "r": 10,
+        "sector": 1
+      },
+      "first_seen": "2026-11-11T05:51:24.499Z",
+      "generation": "ARRIVAL_2026-11-11",
       "lineage": {
         "parent_repo": null,
         "parentage": "UNKNOWN"
