@@ -1,6 +1,6 @@
 {
   "schema": "JANE_B103_V1",
-  "generated_at": "2026-11-10T19:47:04.565Z",
+  "generated_at": "2026-11-11T06:32:13.062Z",
   "domain_owner": "USER_DECLARED",
   "persistence_policy": "ALWAYS_ON",
   "bridge": {
@@ -8,7 +8,7 @@
     "state": "HTTP_ERROR",
     "http_status": 404,
     "page_title": null,
-    "checked_at": "2026-11-10T19:47:04.565Z"
+    "checked_at": "2026-11-11T06:32:13.062Z"
   },
   "children": [
     {
@@ -1066,6 +1066,14 @@
       "presence": "RESERVED",
       "first_seen": "2026-11-03T02:51:53.797Z",
       "home": "https://github.com/DavidWise01/brave-new-world"
+    },
+    {
+      "repo": "DavidWise01/bravenewworld",
+      "formic": "FORMIC-be9e84f3ebe49ffe",
+      "channel": "btf2:davidwise01/bravenewworld",
+      "presence": "RESERVED",
+      "first_seen": "2026-11-11T05:51:24.499Z",
+      "home": "https://github.com/DavidWise01/bravenewworld"
     },
     {
       "repo": "DavidWise01/breakdown-tree",
