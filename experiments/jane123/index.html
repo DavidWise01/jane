@@ -1,0 +1,15 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>JANE 123 · Recovery Ledger</title><style>body{margin:auto;background:#08141b;color:#e8f4f5;font:17px system-ui;max-width:850px;padding:30px}h1{color:#ff9d43}h2{color:#62e7d8}pre{white-space:pre-wrap;background:#142430;border:1px solid #40617a;border-radius:12px;padding:22px}a{color:#ffb979}</style><small>ROOT0 / JANE · FLAY · MoE</small><h1>123 · KNOWLEDGE RECOVERY</h1><p>Reversible activation, append-only rule lineage. Restore known-good v1, retain failed-later v2, preserve the seven-event history.</p><pre>         {{ i }} JANE
+               |
+         FREEZE v1 PASS
+               |
+         PROPOSE v2 PASS
+               |
+         ACTIVATE v2
+               |
+         DRIFT REPLAY FAIL
+               |
+         RESTORE v1
+          /         \\
+      v1 ACTIVE   v2 RETAINED
+               |
+        HASHED EVENT CHAIN</pre><h2>Local 29/29 test validation</h2><p>Hash-chain tampering is detectable, but tail truncation requires an external checkpoint. Actor string JANE is not cryptographic identity. Offline prototype, not the live Jane agent.</p><a href="lineage.py">Ledger code</a> · <a href="test_lineage.py">Reproducible 15-test subset</a></html>
