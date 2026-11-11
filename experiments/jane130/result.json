@@ -1,0 +1,24 @@
+{
+  "version": "JANE-130",
+  "status": "SIMPSON_REVERSAL",
+  "n": 200,
+  "raw_difference": "23/50",
+  "adjusted_difference": "-1/10",
+  "strata": [
+    {
+      "c": "high",
+      "on": 90,
+      "off": 10,
+      "difference": "-1/10"
+    },
+    {
+      "c": "low",
+      "on": 10,
+      "off": 90,
+      "difference": "-1/10"
+    }
+  ],
+  "learning_applied": false,
+  "jane_decision": "UNDECIDED",
+  "limit": "Synthetic supplied fixtures; no causal identification; no live retrieval."
+}
