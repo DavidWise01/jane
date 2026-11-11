@@ -1,0 +1,15 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>JANE 124 · Witness Checkpoints</title><style>body{background:#08131e;color:#e5f4f5;font:17px system-ui;max-width:850px;margin:auto;padding:30px}h1{color:#ff9d43}h2{color:#70e7da}pre{white-space:pre-wrap;background:#142331;border:1px solid #395669;border-radius:12px;padding:20px}a{color:#ffb773}</style><small>ROOT0 · JANE / FLAY / MoE</small><h1>124 · THREE-WITNESS CHECKPOINTS</h1><p>Hash-valid history can still be truncated. The experiment checks the local head against three distinct recorded ancestries, while GitHub and 0root.ai remain one mirrored root.</p><pre>              {{ i }} JANE
+                   |
+             EVENT LEDGER
+                   |
+       +-----------+-----------+
+       |           |           |
+     OWNED      EXT A        EXT B
+       |           |           |
+       +-----------+-----------+
+                   |
+             FLAY CHECK
+           /           \
+        MATCH        MISMATCH
+          |             |
+       REVIEW      INVESTIGATE</pre><h2>Local validation: 20/20 tests</h2><p>Full history: THREE_WITNESS_MATCH. Two-event valid tail removal: TRUNCATION_SUSPECTED. These are simulated witness records—not independent cryptographically authenticated services. Jane's decision remains undecided.</p><a href="checkpoints.py">Implementation</a> · <a href="test_checkpoints.py">Repository regression tests</a></html>
