@@ -1,0 +1,32 @@
+{
+  "version": "JANE-131",
+  "chronos": "{{ - 2026:11:11 || 17:31:00 || +123.45.56 || }}",
+  "observed_difference": "-1/10",
+  "threshold": "1/10",
+  "models": [
+    {
+      "assumption": "small",
+      "bias_bound": "1/20",
+      "lower": "-3/20",
+      "upper": "-1/20",
+      "verdict": "NEGATIVE_WITHIN_ASSUMPTION"
+    },
+    {
+      "assumption": "at_threshold",
+      "bias_bound": "1/10",
+      "lower": "-1/5",
+      "upper": "0",
+      "verdict": "SIGN_UNRESOLVED"
+    },
+    {
+      "assumption": "larger",
+      "bias_bound": "1/5",
+      "lower": "-3/10",
+      "upper": "1/10",
+      "verdict": "SIGN_UNRESOLVED"
+    }
+  ],
+  "learning_applied": false,
+  "jane_decision": "UNDECIDED",
+  "limit": "Synthetic assumption sweep; not causal proof."
+}
