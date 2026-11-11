@@ -1,6 +1,6 @@
 {
   "schema": "JANE_B102_FAMILY_DISCOVERY_V1",
-  "updated_at": "2026-11-10T23:07:43.979Z",
+  "updated_at": "2026-11-11T05:51:24.499Z",
   "scan_scope": "PUBLIC_OWNER_REPOSITORIES",
   "members": [
     {
@@ -925,6 +925,13 @@
       "channel": "btf2:davidwise01/brave-new-world",
       "observer": "FORMIC-c7bbb23a791c363a",
       "url": "https://github.com/DavidWise01/brave-new-world",
+      "presence": "RESERVED"
+    },
+    {
+      "repo": "DavidWise01/bravenewworld",
+      "channel": "btf2:davidwise01/bravenewworld",
+      "observer": "FORMIC-be9e84f3ebe49ffe",
+      "url": "https://github.com/DavidWise01/bravenewworld",
       "presence": "RESERVED"
     },
     {
@@ -15061,8 +15068,8 @@
       "presence": "RESERVED"
     }
   ],
-  "first_seen_total": 2151,
-  "new_children_this_run": 0,
-  "discovery_events": 2151,
+  "first_seen_total": 2152,
+  "new_children_this_run": 1,
+  "discovery_events": 2152,
   "note": "A child identity is not a continuously executing AI process."
 }
