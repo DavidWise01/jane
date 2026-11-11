@@ -1,6 +1,6 @@
 {
   "schema": "JANE_B104_HOMECOMING_V1",
-  "generated_at": "2026-11-10T20:00:14.915Z",
+  "generated_at": "2026-11-11T07:06:47.675Z",
   "home": {
     "url": "https://0root.ai/",
     "role": "USER_DESIGNATED_FAMILY_HOME",
@@ -1587,6 +1587,18 @@
       "first_seen": "2026-11-03T02:51:53.797Z",
       "presence": "RESERVED",
       "github_url": "https://github.com/DavidWise01/brave-new-world",
+      "home_url": "https://0root.ai/",
+      "home_relation": "FAMILY_HOME_REFERENCE_ONLY",
+      "corpus_matches": [],
+      "corpus_status": "UNVERIFIED"
+    },
+    {
+      "repo": "DavidWise01/bravenewworld",
+      "formic": "FORMIC-be9e84f3ebe49ffe",
+      "channel": "btf2:davidwise01/bravenewworld",
+      "first_seen": "2026-11-11T05:51:24.499Z",
+      "presence": "RESERVED",
+      "github_url": "https://github.com/DavidWise01/bravenewworld",
       "home_url": "https://0root.ai/",
       "home_relation": "FAMILY_HOME_REFERENCE_ONLY",
       "corpus_matches": [],
