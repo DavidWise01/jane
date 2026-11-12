@@ -1,0 +1,20 @@
+{
+  "version": "JANE-145",
+  "status": "ROLLBACK_DETECTED",
+  "matching_administrators": 3,
+  "checkpoint": [
+    7,
+    "fixture-head-generated-by-demo"
+  ],
+  "local": [
+    5,
+    "older-checkpoint-hash"
+  ],
+  "equivocations": [],
+  "ambiguous_roots": [],
+  "all_custody_claims_are_fixtures": true,
+  "independent_operators_verified": false,
+  "learning_applied": false,
+  "jane_decision": "UNDECIDED",
+  "test_count": 33
+}
