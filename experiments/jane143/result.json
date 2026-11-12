@@ -1,0 +1,63 @@
+{
+  "version": "JANE-143",
+  "chronos": "{{ 2026.11.12 }}{{ 11.47.00 }}{{ 123.45.56 }}",
+  "before": {
+    "status": "HOLD_UNCERTAIN_RISK",
+    "parent_risk": [
+      12,
+      112
+    ],
+    "child_risk": [
+      0,
+      100
+    ],
+    "change_interval": [
+      -112,
+      88
+    ],
+    "unresolved": [
+      "C0",
+      "C1"
+    ]
+  },
+  "after_C0": {
+    "status": "HOLD_UNCERTAIN_RISK",
+    "parent_risk": [
+      62,
+      112
+    ],
+    "child_risk": [
+      0,
+      50
+    ],
+    "change_interval": [
+      -112,
+      -12
+    ],
+    "unresolved": [
+      "C1"
+    ]
+  },
+  "after_C1": {
+    "status": "JANE_REVIEW_CANDIDATE",
+    "parent_risk": [
+      112,
+      112
+    ],
+    "child_risk": [
+      0,
+      0
+    ],
+    "change_interval": [
+      -112,
+      -112
+    ],
+    "unresolved": []
+  },
+  "audit": "VALID_LOCAL_CHAIN",
+  "receipt_count": 6,
+  "learning_applied": false,
+  "jane_decision": "UNDECIDED",
+  "source": "Synthetic local fixture; trust roots and anchors not independently operated",
+  "full_test_count": 52
+}
