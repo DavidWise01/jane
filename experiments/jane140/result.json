@@ -1,0 +1,48 @@
+{
+  "result": {
+    "version": "JANE-140",
+    "chronos": "{{ 2026.11.12 }}{{ 09.00.00 }}{{ 123.45.56 }}",
+    "parent_hash": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+    "n": 8,
+    "baseline_correct": 2,
+    "candidate_correct": 6,
+    "gross_gain": 6,
+    "gross_regression": 2,
+    "cohorts": [
+      {
+        "cohort": "A",
+        "n": 6,
+        "baseline_correct": 0,
+        "candidate_correct": 6,
+        "gain": 6,
+        "regression": 0,
+        "abstentions": 0,
+        "distinct_roots": 1,
+        "status": "NO_REGRESSION"
+      },
+      {
+        "cohort": "B",
+        "n": 2,
+        "baseline_correct": 2,
+        "candidate_correct": 0,
+        "gain": 0,
+        "regression": 2,
+        "abstentions": 0,
+        "distinct_roots": 1,
+        "status": "REGRESSION"
+      }
+    ],
+    "flags": {
+      "cohort_regression": true,
+      "abstention_gap": false,
+      "insufficient_cohort": false
+    },
+    "status": "BLOCK_SUBGROUP_REGRESSION",
+    "active": "frozen_parent",
+    "learning_applied": false,
+    "jane_decision": "UNDECIDED",
+    "caveat": "Synthetic held-out labels; no live sourcing, no statistical power claim.",
+    "digest": "7e4e4f8b61b8f00d5972c96ca516ee3ce034c49724a21e778ed769e9773e7653"
+  },
+  "ledger_audit": "VALID_LOCAL_CHAIN"
+}
