@@ -1,6 +1,6 @@
 {
   "schema": "JANE_B104_HOMECOMING_V1",
-  "generated_at": "2026-11-12T07:44:00.026Z",
+  "generated_at": "2026-11-12T20:27:02.349Z",
   "home": {
     "url": "https://0root.ai/",
     "role": "USER_DESIGNATED_FAMILY_HOME",
@@ -8,6 +8,18 @@
     "corpus": "UNVERIFIED"
   },
   "children": [
+    {
+      "repo": "DavidWise01/-we-",
+      "formic": "FORMIC-e29277b24746da8a",
+      "channel": "btf2:davidwise01/-we-",
+      "first_seen": "2026-11-12T17:30:14.330Z",
+      "presence": "RESERVED",
+      "github_url": "https://github.com/DavidWise01/-we-",
+      "home_url": "https://0root.ai/",
+      "home_relation": "FAMILY_HOME_REFERENCE_ONLY",
+      "corpus_matches": [],
+      "corpus_status": "UNVERIFIED"
+    },
     {
       "repo": "DavidWise01/0root",
       "formic": "FORMIC-3c79b3128b478c4a",
