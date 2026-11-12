@@ -1,0 +1,17 @@
+{
+  "version": "JANE-141",
+  "chronos": "{{ 2026.11.12 }}{{ 09.00.00 }}{{ 123.45.56 }}",
+  "n": 8,
+  "parent_cost": 12,
+  "child_cost": 100,
+  "new_severe_errors": 2,
+  "cohorts": [
+    {"cohort":"critical","cases":2,"parent_cost":0,"child_cost":100,"new_severe_errors":2,"budget":0,"within_budget":false},
+    {"cohort":"routine","cases":6,"parent_cost":12,"child_cost":0,"new_severe_errors":0,"budget":12,"within_budget":true}
+  ],
+  "status": "BLOCK_NEW_SEVERE_ERRORS",
+  "active": "frozen_parent",
+  "learning_applied": false,
+  "jane_decision": "UNDECIDED",
+  "fixture_note": "Synthetic summary. Execute risk.py for complete digest-bearing output."
+}
