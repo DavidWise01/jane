@@ -4,11 +4,11 @@
   "matching_administrators": 3,
   "checkpoint": [
     7,
-    "fixture-head-generated-by-demo"
+    "cda81df4e9d69f0582dc3b9ca1a4b2ad73c59a53f7d47dbe3bd23b4a8644a417"
   ],
   "local": [
     5,
-    "older-checkpoint-hash"
+    "e6075d72e480004b3224650cabc4ff37ec8ddc4285d56949251b348597f2fbe1"
   ],
   "equivocations": [],
   "ambiguous_roots": [],
@@ -16,5 +16,5 @@
   "independent_operators_verified": false,
   "learning_applied": false,
   "jane_decision": "UNDECIDED",
-  "test_count": 33
+  "digest": "45437f823e9e18be9faa66b7865f8246de15dda1bc8c02179f7d1cf34422ac7e"
 }
