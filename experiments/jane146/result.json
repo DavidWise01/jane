@@ -1,0 +1,30 @@
+{
+  "version": "JANE-146",
+  "chronos": "{{ 2026.11.12 }}{{ 17.27.00 }}{{ 123.45.56 }}",
+  "challenge": "CHALLENGE_ISSUED",
+  "enrollment": "ENROLLED_REGISTRY_CLAIM",
+  "rotation": "ROTATED_SAME_CUSTODY",
+  "checkpoint": {
+    "head": "9b2ffd53df6238d1310407ba40d6c476b5663866747e0d9a679912cb9c30e05e",
+    "count": 3
+  },
+  "report": {
+    "version": "JANE-146",
+    "registered_custody": [
+      {
+        "root": "external:demo",
+        "operator": "operator:demo",
+        "key_id": "k1",
+        "generation": 1
+      }
+    ],
+    "audit": "MATCHED_LOCAL_ANCHOR",
+    "root_count": 1,
+    "operational_independence": "UNVERIFIED",
+    "active": "frozen_parent",
+    "learning_applied": false,
+    "jane_decision": "UNDECIDED"
+  },
+  "fixture_only": true,
+  "note": "Ephemeral local test keys; no external operators contacted"
+}
