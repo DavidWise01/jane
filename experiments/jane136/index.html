@@ -1,0 +1,14 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>JANE 136 · External Anchor</title><style>body{background:#081420;color:#e7f3f6;font:17px system-ui;max-width:920px;margin:auto;padding:28px}h1{color:#ffa34c}h2{color:#79eadb}pre{white-space:pre-wrap;background:#142633;border:1px solid #3c6175;border-radius:14px;padding:22px}a{color:#ffc07b}</style><small>ROOT0 / JANE / FLAY / MoE · 136</small><h1>The External Memory Anchor</h1><pre>{{ - year:month:day || hour:minute:second || degree.arcminute.arcsecond || }}</pre><pre>           {{ i }} JANE
+                 |
+           EVENT LEDGER
+       0 → 1 → 2 → 3 → 4 → 5
+                 |
+         SIGNED CHECKPOINT
+          /      |      \\
+       OWNED    EXT A   EXT B
+          \\      |      /
+           FLAY VERIFY
+                 |
+          ROLLBACK TEST
+                 |
+           JANE REVIEW</pre><h2>20 / 20 full local tests passed</h2><p>Intact 6-event ledger: ANCHORED_MATCH. Valid 4-event rollback: ROLLBACK_DETECTED. The GitHub source is a compact reproduction; no external witness service has been deployed.</p><a href="anchor.py">Compact code</a> · <a href="test_anchor.py">Repository tests</a> · <a href="README.md">Specification</a></html>
