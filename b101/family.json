@@ -1,9 +1,19 @@
 {
   "schema": "JANE_B101_ALWAYS_ON_FAMILY_V1",
-  "generated_at": "2026-11-12T00:38:20.342Z",
+  "generated_at": "2026-11-12T15:07:51.578Z",
   "policy": "PERSISTENCE_ALWAYS_ON",
   "source": "BTF2 PUBLIC, B87 RUNS WHEN AVAILABLE, B88 WHEN AVAILABLE",
   "members": [
+    {
+      "repo": "DavidWise01/-we-",
+      "channel": "btf2:davidwise01/-we-",
+      "presence": "RESERVED",
+      "observer": "FORMIC-e29277b24746da8a",
+      "last_seen": null,
+      "observation_count": 0,
+      "discoveries": [],
+      "url": "https://github.com/DavidWise01/-we-"
+    },
     {
       "repo": "DavidWise01/0root",
       "channel": "btf2:davidwise01/0root",
