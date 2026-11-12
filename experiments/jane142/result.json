@@ -1,0 +1,54 @@
+{
+  "version": "JANE-142",
+  "chronos": "{{ 2026.11.12 }}{{ 09.51.00 }}{{ 123.45.56 }}",
+  "status": "HOLD_UNCERTAIN_RISK",
+  "n": 8,
+  "unknown_count": 2,
+  "parent_risk": [
+    12,
+    112
+  ],
+  "child_risk": [
+    0,
+    100
+  ],
+  "change_interval": [
+    -112,
+    88
+  ],
+  "cohorts": [
+    {
+      "cohort": "critical",
+      "unknown": 2,
+      "parent": [
+        0,
+        100
+      ],
+      "child": [
+        0,
+        100
+      ],
+      "ceiling": 0
+    },
+    {
+      "cohort": "routine",
+      "unknown": 0,
+      "parent": [
+        12,
+        12
+      ],
+      "child": [
+        0,
+        0
+      ],
+      "ceiling": 12
+    }
+  ],
+  "next_probe": "C0",
+  "probe_score": "25",
+  "probe_executed": false,
+  "active": "frozen_parent",
+  "learning_applied": false,
+  "jane_decision": "UNDECIDED",
+  "fixture_note": "Deterministic synthetic summary; execute uncertainty.py for hashed output."
+}
