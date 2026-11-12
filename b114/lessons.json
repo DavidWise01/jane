@@ -1,6 +1,6 @@
 {
   "schema": "JANE_B114_EVIDENCE_LEARNING_V1",
-  "generated_at": "2026-11-12T20:21:13.972Z",
+  "generated_at": "2026-11-12T23:35:31.991Z",
   "scope": "PUBLIC_GITHUB_METADATA_ONLY",
   "source_verified": "SHA256_B87_RUNS",
   "source_runs": [
@@ -10856,7 +10856,7 @@
           "sha256": "37b5257ec34023cf87768a907b1535b19f94ea35fa0184c00bab325db18027a4"
         }
       ],
-      "arrival_cohort": "UNKNOWN"
+      "arrival_cohort": "ARRIVAL_2026-11-12"
     }
   ],
   "notes": "No causal claims, model training, child autonomy, or actual ancestry inferred."
