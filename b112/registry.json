@@ -1,13 +1,13 @@
 {
   "schema": "JANE_B112_FORMIC_HEX_V1",
-  "generated_at": "2026-11-12T07:48:09.230Z",
+  "generated_at": "2026-11-12T20:14:57.646Z",
   "source": "btf2/catalog.json",
-  "source_count": 2152,
-  "member_count": 2152,
-  "new_assignments": 0,
+  "source_count": 2153,
+  "member_count": 2153,
+  "new_assignments": 1,
   "radius_bound": 27,
   "sector_counts": [
-    718,
+    719,
     717,
     717
   ],
@@ -20,6 +20,16 @@
     "claim": "logical routing addresses only"
   },
   "members": [
+    {
+      "repo": "DavidWise01/-we-",
+      "formic": "FORMIC-e29277b24746da8a",
+      "channel": "btf2:davidwise01/-we-",
+      "q": 18,
+      "r": 9,
+      "sector": 0,
+      "ring": 27,
+      "presence": "RESERVED"
+    },
     {
       "repo": "DavidWise01/0root",
       "formic": "FORMIC-3c79b3128b478c4a",
