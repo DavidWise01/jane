@@ -1,8 +1,15 @@
 {
   "schema": "JANE_B102_FAMILY_DISCOVERY_V1",
-  "updated_at": "2026-11-12T07:48:09.031Z",
+  "updated_at": "2026-11-12T17:30:14.330Z",
   "scan_scope": "PUBLIC_OWNER_REPOSITORIES",
   "members": [
+    {
+      "repo": "DavidWise01/-we-",
+      "channel": "btf2:davidwise01/-we-",
+      "observer": "FORMIC-e29277b24746da8a",
+      "url": "https://github.com/DavidWise01/-we-",
+      "presence": "RESERVED"
+    },
     {
       "repo": "DavidWise01/0root",
       "channel": "btf2:davidwise01/0root",
@@ -15068,8 +15075,8 @@
       "presence": "RESERVED"
     }
   ],
-  "first_seen_total": 2152,
-  "new_children_this_run": 0,
-  "discovery_events": 2152,
+  "first_seen_total": 2153,
+  "new_children_this_run": 1,
+  "discovery_events": 2153,
   "note": "A child identity is not a continuously executing AI process."
 }
