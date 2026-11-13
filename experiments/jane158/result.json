@@ -1,0 +1,154 @@
+{
+  "result": {
+    "version": "JANE-158",
+    "status": "PROVEN_NO_BOUNDED_INTERVAL",
+    "initial": 0,
+    "declared_forces": [
+      {
+        "name": "increment",
+        "kind": "shift",
+        "amount": 1,
+        "globally_enabled": true
+      },
+      {
+        "name": "reflection",
+        "kind": "reflect",
+        "amount": 20,
+        "globally_enabled": true
+      }
+    ],
+    "candidate_checks": [
+      {
+        "interval": [
+          0,
+          0
+        ],
+        "outcome": {
+          "status": "NOT_INDUCTIVE",
+          "failure": {
+            "transition": "increment",
+            "state": 0,
+            "output": 1,
+            "interval": [
+              0,
+              0
+            ]
+          }
+        }
+      },
+      {
+        "interval": [
+          -1,
+          1
+        ],
+        "outcome": {
+          "status": "NOT_INDUCTIVE",
+          "failure": {
+            "transition": "increment",
+            "state": 1,
+            "output": 2,
+            "interval": [
+              -1,
+              1
+            ]
+          }
+        }
+      },
+      {
+        "interval": [
+          -2,
+          2
+        ],
+        "outcome": {
+          "status": "NOT_INDUCTIVE",
+          "failure": {
+            "transition": "increment",
+            "state": 2,
+            "output": 3,
+            "interval": [
+              -2,
+              2
+            ]
+          }
+        }
+      },
+      {
+        "interval": [
+          -3,
+          3
+        ],
+        "outcome": {
+          "status": "NOT_INDUCTIVE",
+          "failure": {
+            "transition": "increment",
+            "state": 3,
+            "output": 4,
+            "interval": [
+              -3,
+              3
+            ]
+          }
+        }
+      },
+      {
+        "interval": [
+          -4,
+          4
+        ],
+        "outcome": {
+          "status": "NOT_INDUCTIVE",
+          "failure": {
+            "transition": "increment",
+            "state": 4,
+            "output": 5,
+            "interval": [
+              -4,
+              4
+            ]
+          }
+        }
+      },
+      {
+        "interval": [
+          -5,
+          5
+        ],
+        "outcome": {
+          "status": "NOT_INDUCTIVE",
+          "failure": {
+            "transition": "increment",
+            "state": 5,
+            "output": 6,
+            "interval": [
+              -5,
+              5
+            ]
+          }
+        }
+      }
+    ],
+    "certificates": [
+      {
+        "initial": 0,
+        "step": 1,
+        "transition": "increment",
+        "scope": "globally enabled integer translation",
+        "claim": "NO_FINITE_INDUCTIVE_INTERVAL_CONTAINING_INITIAL",
+        "digest": "d6ca835cd4b32008129ddf124792c4be4f224e89c8dac81a28e4e1fd49934466"
+      }
+    ],
+    "proof_scope": "unconditional integer translation sufficient condition only",
+    "sample_failures_are_not_proof": true,
+    "parent": "FROZEN",
+    "jane_activation": false,
+    "learning_applied": false,
+    "external_custody_verified": false,
+    "digest": "08aed20c191a55f9c7d8f61ad3b4fb447fba41ff38bacc2c00eb0e95eb6f7151",
+    "local_ledger_head": "e9bfb9ad9f6993d508e949d3b0b9a39ca4b0029f4b90c0ba45586723e286ee07"
+  },
+  "audit": "VALID_LOCAL_CHAIN",
+  "tests": {
+    "passed": 45,
+    "run": 45
+  }
+}
