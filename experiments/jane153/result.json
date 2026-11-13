@@ -1,0 +1,41 @@
+{
+  "result": {
+    "version": "JANE-153",
+    "chronos": "{{ 2026.11.13 }}{{ 11.34.00 }}{{ 123.45.56 }}",
+    "status": "COUNTEREXAMPLE_FOUND",
+    "declared_domain": [
+      -3,
+      3
+    ],
+    "states_checked": 7,
+    "invalid_orders": 3,
+    "counterexample_count": 3,
+    "smallest_counterexample": {
+      "state": -1,
+      "AB": {
+        "valid": true,
+        "final": 0,
+        "trace": [
+          -1,
+          0,
+          0
+        ]
+      },
+      "BA": {
+        "valid": false,
+        "final": null,
+        "trace": [
+          -1
+        ],
+        "error": "precondition: value >= 0"
+      }
+    },
+    "scope": "declared finite integer domain only",
+    "active": "frozen_parent",
+    "learning_applied": false,
+    "jane_decision": "UNDECIDED",
+    "independent_witness_increment": 0,
+    "digest": "e81ccfa41526213a6faf99aac6e856c9c97d178ab024132bb7439751bb6e97c7"
+  },
+  "audit": "VALID_LOCAL_CHAIN"
+}
