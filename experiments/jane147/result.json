@@ -1,0 +1,10 @@
+{
+  "version": "JANE-147",
+  "first": "VERIFIED_PORTABLE_FIXTURE",
+  "replay": "REPLAY",
+  "audit": "VALID_LOCAL_EVENT_CHAIN",
+  "registered_operator_roots": 1,
+  "independent_witness_service_deployed": false,
+  "learning_applied": false,
+  "jane_decision": "UNDECIDED"
+}
