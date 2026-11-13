@@ -1,12 +1,12 @@
 {
   "schema": "HON184_B89_V1",
   "mission": "HEGEMON M001 / Internet Time Dilation",
-  "generated_at": "2026-11-12T17:38:51.466Z",
+  "generated_at": "2026-11-13T17:16:01.597Z",
   "status": "DERIVED_GITHUB_PUBLIC_METADATA",
   "slot_count": 184,
-  "pin_count": 2153,
+  "pin_count": 2154,
   "collision_slots": 184,
-  "unknown_count": 2073,
+  "unknown_count": 2074,
   "source": "BTF2 PUBLIC CATALOG",
   "pins": [
     {
@@ -2337,6 +2337,17 @@
       "agent_id": "FORMIC-8a67b33cdf4257d8",
       "hon184_slot": 53,
       "band": "H",
+      "observation_status": "UNKNOWN",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "pin": "BTF2",
+      "repo": "DavidWise01/convergence",
+      "url": "https://github.com/DavidWise01/convergence",
+      "agent_id": "FORMIC-91a365b1e6e74b2f",
+      "hon184_slot": 90,
+      "band": "O",
       "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
@@ -24052,7 +24063,7 @@
     },
     {
       "slot": 90,
-      "occupancy": 6
+      "occupancy": 7
     },
     {
       "slot": 91,
