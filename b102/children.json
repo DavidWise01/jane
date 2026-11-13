@@ -1,6 +1,6 @@
 {
   "schema": "JANE_B102_FAMILY_DISCOVERY_V1",
-  "updated_at": "2026-11-13T06:18:12.977Z",
+  "updated_at": "2026-11-13T06:51:18.520Z",
   "scan_scope": "PUBLIC_OWNER_REPOSITORIES",
   "members": [
     {
@@ -15083,7 +15083,7 @@
     }
   ],
   "first_seen_total": 2154,
-  "new_children_this_run": 1,
+  "new_children_this_run": 0,
   "discovery_events": 2154,
   "note": "A child identity is not a continuously executing AI process."
 }
