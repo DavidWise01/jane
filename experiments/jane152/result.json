@@ -1,0 +1,22 @@
+{
+  "version": "JANE-152",
+  "chronos": "{{ 2026.11.13 }}{{ 10.07.00 }}{{ 123.45.56 }}",
+  "ancestor": {
+    "count": 2
+  },
+  "branchA": "add count 3",
+  "branchB": "multiply count 2",
+  "order_ab": {
+    "count": 10
+  },
+  "order_ba": {
+    "count": 7
+  },
+  "status": "NONCOMMUTING_BRANCHES",
+  "independent_witness_increment": 0,
+  "learning_applied": false,
+  "jane_decision": "UNDECIDED",
+  "full_suite_local_tests": 40,
+  "repository_subset_tests": 10,
+  "limitations": "Synthetic event DSL; no independent attestation, no automatic merge."
+}
