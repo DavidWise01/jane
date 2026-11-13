@@ -1,0 +1,116 @@
+{
+  "combined": {
+    "version": "JANE-157",
+    "status": "MULTIFORCE_COUNTEREXAMPLES",
+    "region": [
+      0,
+      20
+    ],
+    "initial": 0,
+    "initial_inside": true,
+    "forces": [
+      {
+        "force": "reflection",
+        "a": -1,
+        "b": 20,
+        "endpoint_images": [
+          20,
+          0
+        ],
+        "preserves": true,
+        "smallest_failure": null,
+        "method": "exact affine endpoint proof"
+      },
+      {
+        "force": "increment",
+        "a": 1,
+        "b": 1,
+        "endpoint_images": [
+          1,
+          21
+        ],
+        "preserves": false,
+        "smallest_failure": {
+          "state": 20,
+          "next_state": 21,
+          "force": "increment",
+          "trace": [
+            20,
+            21
+          ],
+          "region": [
+            0,
+            20
+          ]
+        },
+        "method": "exact affine endpoint proof"
+      },
+      {
+        "force": "doubling",
+        "a": 2,
+        "b": 0,
+        "endpoint_images": [
+          0,
+          40
+        ],
+        "preserves": false,
+        "smallest_failure": {
+          "state": 11,
+          "next_state": 22,
+          "force": "doubling",
+          "trace": [
+            11,
+            22
+          ],
+          "region": [
+            0,
+            20
+          ]
+        },
+        "method": "exact affine endpoint proof"
+      }
+    ],
+    "all_transitions_preserve": false,
+    "inductive": false,
+    "model_scope": "integer affine transitions on declared closed interval",
+    "parent_unchanged": true,
+    "jane_decision": "UNDECIDED",
+    "learning_applied": false,
+    "independent_witnesses_observed": 0,
+    "digest": "151ad6890e1a2852319ce43fde1f2fc1d6beaf076c3481d008be352c678f3d20"
+  },
+  "restricted": {
+    "version": "JANE-157",
+    "status": "MULTIFORCE_INVARIANT_PROVEN",
+    "region": [
+      0,
+      20
+    ],
+    "initial": 0,
+    "initial_inside": true,
+    "forces": [
+      {
+        "force": "reflection",
+        "a": -1,
+        "b": 20,
+        "endpoint_images": [
+          20,
+          0
+        ],
+        "preserves": true,
+        "smallest_failure": null,
+        "method": "exact affine endpoint proof"
+      }
+    ],
+    "all_transitions_preserve": true,
+    "inductive": true,
+    "model_scope": "integer affine transitions on declared closed interval",
+    "parent_unchanged": true,
+    "jane_decision": "UNDECIDED",
+    "learning_applied": false,
+    "independent_witnesses_observed": 0,
+    "digest": "510e839312e555322974b619a7ab41fda42ff1f43aebbcd9b61ccfb6e42b7d3c"
+  },
+  "audit": "VALID_LOCAL_CHAIN",
+  "restricted_audit": "VALID_LOCAL_CHAIN"
+}
