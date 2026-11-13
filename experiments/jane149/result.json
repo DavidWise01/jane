@@ -1,0 +1,16 @@
+{
+  "version": "JANE-149",
+  "chronos": "{{ 2026.11.12 }}{{ 22.02.00 }}{{ 123.45.56 }}",
+  "scenario": "Offline at checkpoint 004; contiguous two-link catchup to 006",
+  "result": {
+    "status": "CATCHUP_ACCEPTED",
+    "from_sequence": 4,
+    "to_sequence": 6,
+    "active": "frozen_parent",
+    "learning_applied": false,
+    "jane_decision": "UNDECIDED"
+  },
+  "audit": "VALID_LOCAL_CHAIN",
+  "tests_passed": 31,
+  "limitations": "Locally generated hash links; no externally signed or independently operated witness"
+}
