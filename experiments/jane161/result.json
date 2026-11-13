@@ -1,0 +1,52 @@
+{
+  "version": "JANE-161",
+  "contract": {
+    "max_wait": 3,
+    "meaning": "consecutive fully observed enabled ticks without service"
+  },
+  "status": "BOUNDED_FAIRNESS_BREACH",
+  "audit": "VALID_LOCAL_CHAIN",
+  "ticks": 5,
+  "coverage_complete": true,
+  "violations": [
+    {
+      "agent": "B",
+      "deadline_tick": 2,
+      "consecutive_unserved": 3,
+      "stamp": 2
+    }
+  ],
+  "coverage": [
+    {
+      "stamp": 0,
+      "enabled": 2,
+      "chosen": "A"
+    },
+    {
+      "stamp": 1,
+      "enabled": 2,
+      "chosen": "A"
+    },
+    {
+      "stamp": 2,
+      "enabled": 2,
+      "chosen": "A"
+    },
+    {
+      "stamp": 3,
+      "enabled": 2,
+      "chosen": "B"
+    },
+    {
+      "stamp": 4,
+      "enabled": 2,
+      "chosen": "A"
+    }
+  ],
+  "head": "2401169c8e4a19331c53e8690b9a36794b0bf1c8a840cc98069b7b444d43123b",
+  "scope": "finite observed interval only; no assertion of infinite fairness",
+  "active": "frozen_parent",
+  "learning_applied": false,
+  "independent_witness_increment": 0,
+  "digest": "977bf66d876425c2360190620853f34a2268453cf4e8e9ac35a042622403509b"
+}
