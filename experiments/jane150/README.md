@@ -12,7 +12,7 @@ Two chains share events 000–003 and diverge at event 004. Mesh A and Mesh B ea
 
 ## Verification
 
-Run `python -m unittest discover -s . -p 'test_*.py' -v` in this folder. The identical `partition.py` and `test_partition.py` files passed **30/30 local tests**.
+Run `python -m unittest discover -s . -p 'test_*.py' -v` in this folder. The complete downloaded `partition.py` and `test_partition.py` passed **30/30 local tests**. The repository source is a matching implementation but has not been separately run in CI.
 
 `result.json` captures the locally computed `PARTITION_FORK` and hash-chain audit. `index.html` contains the interactive Canvas2D witness partition scene.
 
