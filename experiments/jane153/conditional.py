@@ -85,8 +85,8 @@ class FLAY:
             prev=event["head"]
         return "EXTERNAL_HEAD_MISMATCH" if external_head is not None and external_head!=prev else "VALID_LOCAL_CHAIN"
 def demo():
-    # Multiplication by 0 and assignment to 0 commute at s=0 only, not elsewhere.
-    engine=FLAY(Operation("multiply",0),Operation("set",0),Domain(-3,3))
+    # Setting to 0 and a no-op conditional addition commute for s>=0; negative s fails the reverse precondition.
+    engine=FLAY(Operation("set",0),Operation("conditional_add",0),Domain(-3,3))
     return engine,engine.evaluate()
 if __name__=="__main__":
     f,r=demo()
