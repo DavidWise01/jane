@@ -1,6 +1,6 @@
 {
   "schema": "JANE_B114_EVIDENCE_LEARNING_V1",
-  "generated_at": "2026-11-13T07:08:25.665Z",
+  "generated_at": "2026-11-13T19:38:11.908Z",
   "scope": "PUBLIC_GITHUB_METADATA_ONLY",
   "source_verified": "SHA256_B87_RUNS",
   "source_runs": [
@@ -105,10 +105,16 @@
       "at": "2026-11-12T16:48:20.216Z",
       "file": "btf2/memory/runs/43262450491-1-2026-11-12T16-48-20-202Z.jsonl",
       "sha256": "37b5257ec34023cf87768a907b1535b19f94ea35fa0184c00bab325db18027a4"
+    },
+    {
+      "run_id": "43455403120-1-2026-11-13T15-44-38-661Z",
+      "at": "2026-11-13T15:44:38.677Z",
+      "file": "btf2/memory/runs/43455403120-1-2026-11-13T15-44-38-661Z.jsonl",
+      "sha256": "c556032d7f74231754820094b1db66b2d471f0d8e4ba061d610046039880476b"
     }
   ],
-  "observed_repositories": 2153,
-  "transition_count": 446,
+  "observed_repositories": 2154,
+  "transition_count": 447,
   "patterns": [
     {
       "field": "updated_at",
@@ -133,8 +139,8 @@
     },
     {
       "field": "pushed_at",
-      "observed_transitions": 222,
-      "distinct_repositories": 153,
+      "observed_transitions": 223,
+      "distinct_repositories": 154,
       "evidence_ids": [
         "e8a463bb2eb631a2ae6515e1",
         "1318f042b6a06d9ba654a206",
@@ -10854,6 +10860,30 @@
           "run": "43262450491-1-2026-11-12T16-48-20-202Z",
           "file": "btf2/memory/runs/43262450491-1-2026-11-12T16-48-20-202Z.jsonl",
           "sha256": "37b5257ec34023cf87768a907b1535b19f94ea35fa0184c00bab325db18027a4"
+        }
+      ],
+      "arrival_cohort": "ARRIVAL_2026-11-12"
+    },
+    {
+      "id": "c1e702d7ec32d8c10f4d9c6c",
+      "repo": "DavidWise01/-we-",
+      "field": "pushed_at",
+      "previous": "2026-11-12T15:53:16Z",
+      "current": "2026-11-13T14:06:15Z",
+      "previous_run": "43262450491-1-2026-11-12T16-48-20-202Z",
+      "current_run": "43455403120-1-2026-11-13T15-44-38-661Z",
+      "observed_at": "2026-11-13T15:44:38.677Z",
+      "confidence": "METADATA_TRANSITION_ONLY",
+      "evidence": [
+        {
+          "run": "43262450491-1-2026-11-12T16-48-20-202Z",
+          "file": "btf2/memory/runs/43262450491-1-2026-11-12T16-48-20-202Z.jsonl",
+          "sha256": "37b5257ec34023cf87768a907b1535b19f94ea35fa0184c00bab325db18027a4"
+        },
+        {
+          "run": "43455403120-1-2026-11-13T15-44-38-661Z",
+          "file": "btf2/memory/runs/43455403120-1-2026-11-13T15-44-38-661Z.jsonl",
+          "sha256": "c556032d7f74231754820094b1db66b2d471f0d8e4ba061d610046039880476b"
         }
       ],
       "arrival_cohort": "ARRIVAL_2026-11-12"
