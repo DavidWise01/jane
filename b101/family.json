@@ -1,6 +1,6 @@
 {
   "schema": "JANE_B101_ALWAYS_ON_FAMILY_V1",
-  "generated_at": "2026-11-12T23:35:18.934Z",
+  "generated_at": "2026-11-13T06:37:36.894Z",
   "policy": "PERSISTENCE_ALWAYS_ON",
   "source": "BTF2 PUBLIC, B87 RUNS WHEN AVAILABLE, B88 WHEN AVAILABLE",
   "members": [
@@ -2131,6 +2131,16 @@
       "observation_count": 17,
       "discoveries": [],
       "url": "https://github.com/DavidWise01/continuity-index"
+    },
+    {
+      "repo": "DavidWise01/convergence",
+      "channel": "btf2:davidwise01/convergence",
+      "presence": "RESERVED",
+      "observer": "FORMIC-91a365b1e6e74b2f",
+      "last_seen": null,
+      "observation_count": 0,
+      "discoveries": [],
+      "url": "https://github.com/DavidWise01/convergence"
     },
     {
       "repo": "DavidWise01/copy-suppression-head",
