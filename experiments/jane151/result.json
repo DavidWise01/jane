@@ -1,0 +1,46 @@
+{
+  "proposal": {
+    "version": "JANE-151",
+    "chronos": "{{ 2026.11.13 }}{{ 07.28.00 }}{{ 123.45.56 }}",
+    "status": "TWO_PARENT_REVIEW_PROPOSAL",
+    "ancestor_sequence": 3,
+    "ancestor_head": "9df54798872b893ca593e5b719e7d521659cd99973a967cae677ecaca9826ddc",
+    "parents": [
+      {
+        "branch": "MESH-A",
+        "head": "f613f963e4bbee3197a21044c64661a2db4448e8e55529623496b67a047752fa",
+        "tail_heads": [
+          "1c458d7ae22a258c00513f88b11be0558edd040ba3044d0d9595647d99d68842",
+          "f613f963e4bbee3197a21044c64661a2db4448e8e55529623496b67a047752fa"
+        ],
+        "declared_roots": [
+          "external:A",
+          "external:B",
+          "owned:canonical"
+        ]
+      },
+      {
+        "branch": "MESH-B",
+        "head": "d02aec4eab840a31976014c456781ba4d0a726063ee380f705ed9f9ae7c69bb5",
+        "tail_heads": [
+          "756d9c558b4cd2345ecb84d580e97f162ece7d0494bf6d6dfa13385e80e28a59",
+          "d02aec4eab840a31976014c456781ba4d0a726063ee380f705ed9f9ae7c69bb5"
+        ],
+        "declared_roots": [
+          "external:C",
+          "external:D"
+        ]
+      }
+    ],
+    "shared_events": 4,
+    "preserved_event_references": 8,
+    "independent_witnesses_verified": 0,
+    "evidence_authenticated": false,
+    "active": "frozen_parent",
+    "learning_applied": false,
+    "jane_decision": "UNDECIDED",
+    "caveat": "Locally built hash chains and declared roots, not independently authenticated custody.",
+    "proposal_digest": "320928395bd7c53fb48d6515e1543f78d31bf63a17b0d1f13d5e17ee2272f346"
+  },
+  "audit": "VALID_LOCAL_CHAIN"
+}
