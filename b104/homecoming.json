@@ -1,6 +1,6 @@
 {
   "schema": "JANE_B104_HOMECOMING_V1",
-  "generated_at": "2026-11-12T20:27:02.349Z",
+  "generated_at": "2026-11-13T07:17:13.135Z",
   "home": {
     "url": "https://0root.ai/",
     "role": "USER_DESIGNATED_FAMILY_HOME",
@@ -2547,6 +2547,18 @@
       "first_seen": "2026-11-03T02:51:53.797Z",
       "presence": "RESERVED",
       "github_url": "https://github.com/DavidWise01/continuity-index",
+      "home_url": "https://0root.ai/",
+      "home_relation": "FAMILY_HOME_REFERENCE_ONLY",
+      "corpus_matches": [],
+      "corpus_status": "UNVERIFIED"
+    },
+    {
+      "repo": "DavidWise01/convergence",
+      "formic": "FORMIC-91a365b1e6e74b2f",
+      "channel": "btf2:davidwise01/convergence",
+      "first_seen": "2026-11-13T06:18:12.977Z",
+      "presence": "RESERVED",
+      "github_url": "https://github.com/DavidWise01/convergence",
       "home_url": "https://0root.ai/",
       "home_relation": "FAMILY_HOME_REFERENCE_ONLY",
       "corpus_matches": [],
