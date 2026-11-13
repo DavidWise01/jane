@@ -1,15 +1,15 @@
 {
   "schema": "JANE_B112_FORMIC_HEX_V1",
-  "generated_at": "2026-11-12T20:30:00.236Z",
+  "generated_at": "2026-11-13T07:00:51.607Z",
   "source": "btf2/catalog.json",
-  "source_count": 2153,
-  "member_count": 2153,
-  "new_assignments": 0,
+  "source_count": 2154,
+  "member_count": 2154,
+  "new_assignments": 1,
   "radius_bound": 27,
   "sector_counts": [
     719,
     717,
-    717
+    718
   ],
   "reserved_positions": [],
   "rules": {
@@ -2138,6 +2138,16 @@
       "r": -1,
       "sector": 0,
       "ring": 8,
+      "presence": "RESERVED"
+    },
+    {
+      "repo": "DavidWise01/convergence",
+      "formic": "FORMIC-91a365b1e6e74b2f",
+      "channel": "btf2:davidwise01/convergence",
+      "q": 19,
+      "r": 8,
+      "sector": 2,
+      "ring": 27,
       "presence": "RESERVED"
     },
     {
