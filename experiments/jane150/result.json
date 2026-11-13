@@ -1,0 +1,38 @@
+{
+  "result": {
+    "version": "JANE-150",
+    "chronos": "{{ 2026.11.13 }}{{ 07.28.00 }}{{ 123.45.56 }}",
+    "status": "PARTITION_FORK",
+    "ancestor": {
+      "sequence": 3,
+      "head": "d81fc4ef5106399cbe0bfa0b08badffe8a720a2126b76d4183029ba2cc720914"
+    },
+    "branches": {
+      "A": {
+        "sequence": 5,
+        "head": "6295d146448367911b13eb39db1ce95552c920f6c18fe72de65fec1c77a16cd9",
+        "post_ancestor_events": 2,
+        "eligible_root_count": 3,
+        "eligible_administrators": 3,
+        "fixture_quorum": true
+      },
+      "B": {
+        "sequence": 5,
+        "head": "91311b7617221637473e7f2fc5159a14a7627df5af5d6704b5e712c333dab246",
+        "post_ancestor_events": 2,
+        "eligible_root_count": 2,
+        "eligible_administrators": 2,
+        "fixture_quorum": false
+      }
+    },
+    "disqualified_roots": [],
+    "preserve_both": true,
+    "automatic_merge": false,
+    "active": "frozen_parent",
+    "learning_applied": false,
+    "jane_decision": "UNDECIDED",
+    "limitations": "Signatures, operator identities and witness independence supplied as fixture claims; not authenticated live custodians.",
+    "digest": "23278cd2686bfc7d460491e48babb41ac96254bd164d7a89f1db963d9584dc27"
+  },
+  "audit": "VALID_LOCAL_CHAIN"
+}
