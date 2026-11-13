@@ -1,0 +1,333 @@
+{
+  "always_enabled": {
+    "none": {
+      "experiment": "JANE-160",
+      "status": "POSSIBLE_NOT_INEVITABLE",
+      "fairness": "none",
+      "progress_path": [
+        {
+          "source": "s0",
+          "action": "advance",
+          "target": "goal"
+        }
+      ],
+      "nonprogress_lasso": {
+        "prefix": [],
+        "cycle": [
+          {
+            "source": "s0",
+            "action": "stutter",
+            "target": "s0"
+          }
+        ],
+        "states": [
+          "s0"
+        ],
+        "fairness": "none"
+      },
+      "initial": "s0",
+      "goal": [
+        "goal"
+      ],
+      "states": [
+        "goal",
+        "s0"
+      ],
+      "edges": [
+        {
+          "source": "s0",
+          "action": "stutter",
+          "target": "s0"
+        },
+        {
+          "source": "s0",
+          "action": "advance",
+          "target": "goal"
+        },
+        {
+          "source": "goal",
+          "action": "rest",
+          "target": "goal"
+        }
+      ],
+      "scope": "finite explicit transition graph and specified fairness only",
+      "active": "frozen_parent",
+      "learning_applied": false,
+      "independent_witness_increment": 0,
+      "digest": "4842b6c18a39f10413af6990dd20b2e47d397567e9d8e787e8378ead199b90ab"
+    },
+    "weak": {
+      "experiment": "JANE-160",
+      "status": "PROGRESS_UNDER_WEAK_FAIRNESS",
+      "fairness": "weak",
+      "progress_path": [
+        {
+          "source": "s0",
+          "action": "advance",
+          "target": "goal"
+        }
+      ],
+      "nonprogress_lasso": null,
+      "initial": "s0",
+      "goal": [
+        "goal"
+      ],
+      "states": [
+        "goal",
+        "s0"
+      ],
+      "edges": [
+        {
+          "source": "s0",
+          "action": "stutter",
+          "target": "s0"
+        },
+        {
+          "source": "s0",
+          "action": "advance",
+          "target": "goal"
+        },
+        {
+          "source": "goal",
+          "action": "rest",
+          "target": "goal"
+        }
+      ],
+      "scope": "finite explicit transition graph and specified fairness only",
+      "active": "frozen_parent",
+      "learning_applied": false,
+      "independent_witness_increment": 0,
+      "digest": "ac9d517ae6b4af99e614e44220450346e8ad79abab9aed21c5d9e55f7f75c20b"
+    },
+    "strong": {
+      "experiment": "JANE-160",
+      "status": "PROGRESS_UNDER_STRONG_FAIRNESS",
+      "fairness": "strong",
+      "progress_path": [
+        {
+          "source": "s0",
+          "action": "advance",
+          "target": "goal"
+        }
+      ],
+      "nonprogress_lasso": null,
+      "initial": "s0",
+      "goal": [
+        "goal"
+      ],
+      "states": [
+        "goal",
+        "s0"
+      ],
+      "edges": [
+        {
+          "source": "s0",
+          "action": "stutter",
+          "target": "s0"
+        },
+        {
+          "source": "s0",
+          "action": "advance",
+          "target": "goal"
+        },
+        {
+          "source": "goal",
+          "action": "rest",
+          "target": "goal"
+        }
+      ],
+      "scope": "finite explicit transition graph and specified fairness only",
+      "active": "frozen_parent",
+      "learning_applied": false,
+      "independent_witness_increment": 0,
+      "digest": "94e1303b9a5f3db318c5a74d2746165bd3e504b7526c904546d5f85464b1c31a"
+    }
+  },
+  "intermittently_enabled": {
+    "none": {
+      "experiment": "JANE-160",
+      "status": "POSSIBLE_NOT_INEVITABLE",
+      "fairness": "none",
+      "progress_path": [
+        {
+          "source": "s0",
+          "action": "advance",
+          "target": "goal"
+        }
+      ],
+      "nonprogress_lasso": {
+        "prefix": [],
+        "cycle": [
+          {
+            "source": "s0",
+            "action": "switch",
+            "target": "s1"
+          },
+          {
+            "source": "s1",
+            "action": "switch",
+            "target": "s0"
+          }
+        ],
+        "states": [
+          "s0",
+          "s1"
+        ],
+        "fairness": "none"
+      },
+      "initial": "s0",
+      "goal": [
+        "goal"
+      ],
+      "states": [
+        "goal",
+        "s0",
+        "s1"
+      ],
+      "edges": [
+        {
+          "source": "s0",
+          "action": "switch",
+          "target": "s1"
+        },
+        {
+          "source": "s1",
+          "action": "switch",
+          "target": "s0"
+        },
+        {
+          "source": "s0",
+          "action": "advance",
+          "target": "goal"
+        },
+        {
+          "source": "goal",
+          "action": "rest",
+          "target": "goal"
+        }
+      ],
+      "scope": "finite explicit transition graph and specified fairness only",
+      "active": "frozen_parent",
+      "learning_applied": false,
+      "independent_witness_increment": 0,
+      "digest": "ff5b69167cff6a63726d21a4f6ef15df32b52e1e4cb90e7249b793f99630d603"
+    },
+    "weak": {
+      "experiment": "JANE-160",
+      "status": "POSSIBLE_NOT_INEVITABLE",
+      "fairness": "weak",
+      "progress_path": [
+        {
+          "source": "s0",
+          "action": "advance",
+          "target": "goal"
+        }
+      ],
+      "nonprogress_lasso": {
+        "prefix": [],
+        "cycle": [
+          {
+            "source": "s0",
+            "action": "switch",
+            "target": "s1"
+          },
+          {
+            "source": "s1",
+            "action": "switch",
+            "target": "s0"
+          }
+        ],
+        "states": [
+          "s0",
+          "s1"
+        ],
+        "fairness": "weak"
+      },
+      "initial": "s0",
+      "goal": [
+        "goal"
+      ],
+      "states": [
+        "goal",
+        "s0",
+        "s1"
+      ],
+      "edges": [
+        {
+          "source": "s0",
+          "action": "switch",
+          "target": "s1"
+        },
+        {
+          "source": "s1",
+          "action": "switch",
+          "target": "s0"
+        },
+        {
+          "source": "s0",
+          "action": "advance",
+          "target": "goal"
+        },
+        {
+          "source": "goal",
+          "action": "rest",
+          "target": "goal"
+        }
+      ],
+      "scope": "finite explicit transition graph and specified fairness only",
+      "active": "frozen_parent",
+      "learning_applied": false,
+      "independent_witness_increment": 0,
+      "digest": "c5161afc95ff5479bff3e1c97fc3df72f788dda9ab3f6e973e1710a489759e5e"
+    },
+    "strong": {
+      "experiment": "JANE-160",
+      "status": "PROGRESS_UNDER_STRONG_FAIRNESS",
+      "fairness": "strong",
+      "progress_path": [
+        {
+          "source": "s0",
+          "action": "advance",
+          "target": "goal"
+        }
+      ],
+      "nonprogress_lasso": null,
+      "initial": "s0",
+      "goal": [
+        "goal"
+      ],
+      "states": [
+        "goal",
+        "s0",
+        "s1"
+      ],
+      "edges": [
+        {
+          "source": "s0",
+          "action": "switch",
+          "target": "s1"
+        },
+        {
+          "source": "s1",
+          "action": "switch",
+          "target": "s0"
+        },
+        {
+          "source": "s0",
+          "action": "advance",
+          "target": "goal"
+        },
+        {
+          "source": "goal",
+          "action": "rest",
+          "target": "goal"
+        }
+      ],
+      "scope": "finite explicit transition graph and specified fairness only",
+      "active": "frozen_parent",
+      "learning_applied": false,
+      "independent_witness_increment": 0,
+      "digest": "111427eb5c3e9e22352741e0b8b3ec009f016f85e30a606db561030d832e7d46"
+    }
+  }
+}
