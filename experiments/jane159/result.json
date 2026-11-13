@@ -1,0 +1,163 @@
+{
+  "guarded": {
+    "experiment": "JANE-159",
+    "status": "BOUNDED_REACHABLE_SET",
+    "initial": 0,
+    "claimed_bounds": [
+      0,
+      20
+    ],
+    "states_seen": 21,
+    "states_examined": 21,
+    "enabled_edges_examined": 20,
+    "complete": true,
+    "counterexample": null,
+    "unbounded_path_certificate": null,
+    "assumptions": "integer states, additive transitions, guards as declared, nondeterministic choice; bounded by explicit exploration budget",
+    "scope": "complete reachable graph only when complete=True; global positive drift certificate independently valid",
+    "active_parent": "FROZEN",
+    "learning_applied": false,
+    "witness_votes_added": 0,
+    "digest": "2102c060cffe7e46e79826a0f8c1b50ded2bd81e15ade74b08af4913671ac879"
+  },
+  "unconditional": {
+    "experiment": "JANE-159",
+    "status": "BOUND_VIOLATED",
+    "initial": 0,
+    "claimed_bounds": [
+      0,
+      20
+    ],
+    "states_seen": 32,
+    "states_examined": 32,
+    "enabled_edges_examined": 32,
+    "complete": false,
+    "counterexample": {
+      "from": 20,
+      "rule": "unconditional_increment",
+      "to": 21,
+      "path": [
+        [
+          0,
+          "unconditional_increment",
+          1
+        ],
+        [
+          1,
+          "unconditional_increment",
+          2
+        ],
+        [
+          2,
+          "unconditional_increment",
+          3
+        ],
+        [
+          3,
+          "unconditional_increment",
+          4
+        ],
+        [
+          4,
+          "unconditional_increment",
+          5
+        ],
+        [
+          5,
+          "unconditional_increment",
+          6
+        ],
+        [
+          6,
+          "unconditional_increment",
+          7
+        ],
+        [
+          7,
+          "unconditional_increment",
+          8
+        ],
+        [
+          8,
+          "unconditional_increment",
+          9
+        ],
+        [
+          9,
+          "unconditional_increment",
+          10
+        ],
+        [
+          10,
+          "unconditional_increment",
+          11
+        ],
+        [
+          11,
+          "unconditional_increment",
+          12
+        ],
+        [
+          12,
+          "unconditional_increment",
+          13
+        ],
+        [
+          13,
+          "unconditional_increment",
+          14
+        ],
+        [
+          14,
+          "unconditional_increment",
+          15
+        ],
+        [
+          15,
+          "unconditional_increment",
+          16
+        ],
+        [
+          16,
+          "unconditional_increment",
+          17
+        ],
+        [
+          17,
+          "unconditional_increment",
+          18
+        ],
+        [
+          18,
+          "unconditional_increment",
+          19
+        ],
+        [
+          19,
+          "unconditional_increment",
+          20
+        ],
+        [
+          20,
+          "unconditional_increment",
+          21
+        ]
+      ]
+    },
+    "unbounded_path_certificate": {
+      "kind": "UNBOUNDED_ALLOWED_PATH",
+      "rule": "unconditional_increment",
+      "delta": 1,
+      "reason": "repeated globally enabled positive translation",
+      "sequence": "s(n)=start+n*delta for every natural n"
+    },
+    "assumptions": "integer states, additive transitions, guards as declared, nondeterministic choice; bounded by explicit exploration budget",
+    "scope": "complete reachable graph only when complete=True; global positive drift certificate independently valid",
+    "active_parent": "FROZEN",
+    "learning_applied": false,
+    "witness_votes_added": 0,
+    "digest": "5fbe19ea1783f5cccaa8dbbfe344d8d4889dd274cc8acf842218592f938a779b"
+  },
+  "guarded_audit": "LOCAL_LEDGER_VALID",
+  "unconditional_audit": "LOCAL_LEDGER_VALID"
+}
