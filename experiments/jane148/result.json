@@ -1,0 +1,51 @@
+{
+  "version": "JANE-148",
+  "scenarios": {
+    "match": {
+      "status": "MATCHED_FIXTURE_QUORUM",
+      "custody_roots": 3,
+      "active": "frozen_parent",
+      "jane_decision": "UNDECIDED",
+      "learning_applied": false,
+      "caveat": "Configured endpoint identities and administrator claims are fixtures, not verified independent external operators."
+    },
+    "rollback": {
+      "status": "ROLLBACK_DETECTED",
+      "custody_roots": 3,
+      "active": "frozen_parent",
+      "jane_decision": "UNDECIDED",
+      "learning_applied": false,
+      "caveat": "Configured endpoint identities and administrator claims are fixtures, not verified independent external operators."
+    },
+    "fork": {
+      "status": "FORK_DETECTED",
+      "custody_roots": 3,
+      "active": "frozen_parent",
+      "jane_decision": "UNDECIDED",
+      "learning_applied": false,
+      "caveat": "Configured endpoint identities and administrator claims are fixtures, not verified independent external operators."
+    },
+    "conflict": {
+      "status": "CROSS_ROOT_CONFLICT",
+      "custody_roots": 3,
+      "active": "frozen_parent",
+      "jane_decision": "UNDECIDED",
+      "learning_applied": false,
+      "caveat": "Configured endpoint identities and administrator claims are fixtures, not verified independent external operators."
+    },
+    "outage": {
+      "status": "UNAVAILABLE",
+      "snapshot_count": 1,
+      "learning_applied": false
+    },
+    "replay": {
+      "status": "REPLAY",
+      "snapshot_count": 2,
+      "learning_applied": false
+    }
+  },
+  "tests_passed": 34,
+  "active": "frozen_parent",
+  "live_hosts_contacted": false,
+  "external_admin_independence_verified": false
+}
