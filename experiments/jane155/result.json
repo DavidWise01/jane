@@ -1,0 +1,154 @@
+{
+  "safe": {
+    "version": "JANE-155",
+    "chronos": "{{ 2026.11.13 }}{{ 13.06.00 }}{{ 123.45.56 }}",
+    "region": "all nonnegative integers",
+    "predicate": "s>=0",
+    "initial_state": 0,
+    "initial_valid": true,
+    "certificates": [
+      {
+        "rule": "increment",
+        "a": 1,
+        "b": 1,
+        "valid_for_all_nonnegative": true,
+        "proof": "a>=0 and b>=0 imply a*s+b>=0 for all integer s>=0",
+        "minimum_counterexample": null
+      },
+      {
+        "rule": "double",
+        "a": 2,
+        "b": 0,
+        "valid_for_all_nonnegative": true,
+        "proof": "a>=0 and b>=0 imply a*s+b>=0 for all integer s>=0",
+        "minimum_counterexample": null
+      }
+    ],
+    "first_transition_counterexample": null,
+    "finite_sample": {
+      "range": [
+        0,
+        5
+      ],
+      "states_tested": 6,
+      "transitions_tested": 12,
+      "failures": [],
+      "meaning": "finite search only \u2014 not a global proof"
+    },
+    "status": "INDUCTIVE_INVARIANT_CERTIFIED",
+    "proof_scope": "integer affine transitions only",
+    "source_root": "owned:canonical",
+    "independent_witness_increment": 0,
+    "active": "frozen_parent",
+    "learning_applied": false,
+    "jane_decision": "UNDECIDED",
+    "digest": "f077417b797858a858846e3dde11934498fd55bc6175c06092e0dc5a3dbc30b0"
+  },
+  "unsafe": {
+    "version": "JANE-155",
+    "chronos": "{{ 2026.11.13 }}{{ 13.06.00 }}{{ 123.45.56 }}",
+    "region": "all nonnegative integers",
+    "predicate": "s>=0",
+    "initial_state": 0,
+    "initial_valid": true,
+    "certificates": [
+      {
+        "rule": "decrement",
+        "a": 1,
+        "b": -1,
+        "valid_for_all_nonnegative": false,
+        "proof": null,
+        "minimum_counterexample": {
+          "input": 0,
+          "output": -1
+        }
+      },
+      {
+        "rule": "increment",
+        "a": 1,
+        "b": 1,
+        "valid_for_all_nonnegative": true,
+        "proof": "a>=0 and b>=0 imply a*s+b>=0 for all integer s>=0",
+        "minimum_counterexample": null
+      }
+    ],
+    "first_transition_counterexample": {
+      "rule": "decrement",
+      "input": 0,
+      "output": -1
+    },
+    "finite_sample": {
+      "range": [
+        0,
+        5
+      ],
+      "states_tested": 6,
+      "transitions_tested": 12,
+      "failures": [
+        {
+          "state": 0,
+          "rule": "decrement",
+          "output": -1
+        }
+      ],
+      "meaning": "finite search only \u2014 not a global proof"
+    },
+    "status": "INDUCTIVE_STEP_FAILED",
+    "proof_scope": "integer affine transitions only",
+    "source_root": "owned:canonical",
+    "independent_witness_increment": 0,
+    "active": "frozen_parent",
+    "learning_applied": false,
+    "jane_decision": "UNDECIDED",
+    "digest": "2758a8a9105651f6ec651589dab2c494c60a76dea1c1f9783556c52a34a3ce4d"
+  },
+  "latent": {
+    "version": "JANE-155",
+    "chronos": "{{ 2026.11.13 }}{{ 13.06.00 }}{{ 123.45.56 }}",
+    "region": "all nonnegative integers",
+    "predicate": "s>=0",
+    "initial_state": 0,
+    "initial_valid": true,
+    "certificates": [
+      {
+        "rule": "hidden_negative_slope",
+        "a": -1,
+        "b": 20,
+        "valid_for_all_nonnegative": false,
+        "proof": null,
+        "minimum_counterexample": {
+          "input": 21,
+          "output": -1
+        }
+      }
+    ],
+    "first_transition_counterexample": {
+      "rule": "hidden_negative_slope",
+      "input": 21,
+      "output": -1
+    },
+    "finite_sample": {
+      "range": [
+        0,
+        5
+      ],
+      "states_tested": 6,
+      "transitions_tested": 6,
+      "failures": [],
+      "meaning": "finite search only \u2014 not a global proof"
+    },
+    "status": "INDUCTIVE_STEP_FAILED",
+    "proof_scope": "integer affine transitions only",
+    "source_root": "owned:canonical",
+    "independent_witness_increment": 0,
+    "active": "frozen_parent",
+    "learning_applied": false,
+    "jane_decision": "UNDECIDED",
+    "digest": "cf9342a550f35a64097cfb03a45ddbd90b365a8905fd16792c24b8fbf3a80456"
+  },
+  "audits": [
+    "VALID_LOCAL_CHAIN",
+    "VALID_LOCAL_CHAIN",
+    "VALID_LOCAL_CHAIN"
+  ]
+}
