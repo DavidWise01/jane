@@ -1,0 +1,59 @@
+{
+  "result": {
+    "version": "JANE-154",
+    "chronos": "{{ 2026.11.13 }}{{ 13.06.00 }}{{ 123.45.56 }}",
+    "declared_core": [
+      0,
+      3
+    ],
+    "state_floor_ceiling": [
+      -3,
+      6
+    ],
+    "budget": 6,
+    "core_verified": true,
+    "core_count": 4,
+    "states_tested_outside": 4,
+    "tested_outside": {
+      "left": [],
+      "right": [
+        4,
+        5,
+        6
+      ]
+    },
+    "first_failure": {
+      "left": {
+        "state": -1,
+        "AB": {
+          "valid": true,
+          "trace": [
+            -1,
+            0,
+            0
+          ],
+          "result": 0
+        },
+        "BA": {
+          "valid": false,
+          "trace": [
+            -1
+          ],
+          "result": null,
+          "error": "requires nonnegative input"
+        },
+        "compatible": false,
+        "reason": "INVALID_ORDER"
+      },
+      "right": null
+    },
+    "status": "BOUNDARY_COUNTEREXAMPLE",
+    "scope": "finite explicitly tested integer states only",
+    "active": "frozen_parent",
+    "jane_decision": "UNDECIDED",
+    "learning_applied": false,
+    "independent_witness_increment": 0,
+    "digest": "65bdb0f00f4304b58c7275f36751906ae7e724605368ddfc0bfd1f168dc89e51"
+  },
+  "audit": "VALID_LOCAL_CHAIN"
+}
