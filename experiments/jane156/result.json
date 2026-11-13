@@ -1,0 +1,17 @@
+{
+  "experiment":"JANE-156",
+  "status":"REFINEMENT_PROVEN_IN_MODEL",
+  "original":{"lo":0,"hi":null},
+  "initial":0,
+  "transition":{"a":-1,"b":20},
+  "original_failure":{"status":"INDUCTIVE_FAILURE","witness":21,"next":-1,"reason":"unbounded_negative_slope"},
+  "refined_region":{"lo":0,"hi":20},
+  "proof":{"status":"INDUCTIVE_PROVEN","proof":"affine extremal values at interval endpoints"},
+  "candidates_tested":1,
+  "scope":"affine integer transition and exact interval-induction model only",
+  "active_parent":"FROZEN","jane_decision":"UNDECIDED",
+  "independent_witness_increment":0,"learning_applied":false,
+  "ledger_head":"81cd25ca792e59da2900f0de7a6c483478e924755f9825148e0fb50ffad7f735",
+  "ledger_audit":"VALID_LOCAL_CHAIN",
+  "digest":"a37ba80569e1305369d035322ec0a75ba5ec704539344ee0890b955ae17560eb"
+}
