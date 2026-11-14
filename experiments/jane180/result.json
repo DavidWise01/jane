@@ -1,0 +1,65 @@
+{
+  "accepted": {
+    "version": "JANE-180",
+    "decision_id": "decision-004",
+    "verdict": "PRE_RISK_ANCHORED_FIXTURE",
+    "accepted_fixture_roots": 3,
+    "accepted_custodians": [
+      "custodyA",
+      "custodyB",
+      "custodyC"
+    ],
+    "findings": [],
+    "compromise_interval": [
+      100,
+      200
+    ],
+    "decision_claimed_time": 50,
+    "active_parent": "FROZEN",
+    "learning_applied": false,
+    "independence_verified": false,
+    "scope": "synthetic signed fixture claims; no physical execution proof",
+    "digest": "ee174cc54a4537a7816b35c2339722df64264f4cd597e24554478fba5a0fc196"
+  },
+  "unanchored_due_to_late_custody": {
+    "version": "JANE-180",
+    "decision_id": "decision-004",
+    "verdict": "HISTORIC_SIGNATURE_UNCORROBORATED",
+    "accepted_fixture_roots": 0,
+    "accepted_custodians": [],
+    "findings": [
+      "ANCHOR_NOT_PREDATING_RISK"
+    ],
+    "compromise_interval": [
+      100,
+      200
+    ],
+    "decision_claimed_time": 50,
+    "active_parent": "FROZEN",
+    "learning_applied": false,
+    "independence_verified": false,
+    "scope": "synthetic signed fixture claims; no physical execution proof",
+    "digest": "7c9f5fa63a0e8352b89dbe5ce13cd5c43fc7e86e255af20fe7abaf53dfedc991"
+  },
+  "ambiguous": {
+    "version": "JANE-180",
+    "decision_id": "decision-004",
+    "verdict": "POTENTIALLY_ATTACKER_AUTHORED",
+    "accepted_fixture_roots": 0,
+    "accepted_custodians": [],
+    "findings": [
+      "ANCHOR_NOT_PREDATING_RISK"
+    ],
+    "compromise_interval": [
+      100,
+      200
+    ],
+    "decision_claimed_time": 150,
+    "active_parent": "FROZEN",
+    "learning_applied": false,
+    "independence_verified": false,
+    "scope": "synthetic signed fixture claims; no physical execution proof",
+    "digest": "3f486733c5ab9b56b04dd47079cf02ce1868c6bb9bff51a788efe0379d8ebf2e"
+  },
+  "audit": "VALID_LOCAL_CHAIN"
+}
