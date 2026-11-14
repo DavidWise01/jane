@@ -1,0 +1,91 @@
+{
+  "result": {
+    "version": "JANE-196",
+    "status": "ASSUMPTION_CONDITIONAL_ESTIMATE",
+    "total_population": 16,
+    "rows": [
+      {
+        "label": "day",
+        "population": 8,
+        "sampled": 6,
+        "observed": 6,
+        "unobserved": 2,
+        "selection_fraction": {
+          "numerator": 3,
+          "denominator": 4,
+          "decimal": 0.75
+        },
+        "response_fraction": {
+          "numerator": 1,
+          "denominator": 1,
+          "decimal": 1.0
+        },
+        "observed_rate": {
+          "numerator": 5,
+          "denominator": 6,
+          "decimal": 0.83333333
+        },
+        "declared_roots": [
+          "dayA",
+          "dayB"
+        ],
+        "independent_roots_established": false
+      },
+      {
+        "label": "night",
+        "population": 8,
+        "sampled": 2,
+        "observed": 2,
+        "unobserved": 6,
+        "selection_fraction": {
+          "numerator": 1,
+          "denominator": 4,
+          "decimal": 0.25
+        },
+        "response_fraction": {
+          "numerator": 1,
+          "denominator": 1,
+          "decimal": 1.0
+        },
+        "observed_rate": {
+          "numerator": 0,
+          "denominator": 1,
+          "decimal": 0.0
+        },
+        "declared_roots": [
+          "nightA",
+          "nightB"
+        ],
+        "independent_roots_established": false
+      }
+    ],
+    "population_outcome_bounds": {
+      "lower": {
+        "numerator": 5,
+        "denominator": 16,
+        "decimal": 0.3125
+      },
+      "upper": {
+        "numerator": 13,
+        "denominator": 16,
+        "decimal": 0.8125
+      }
+    },
+    "conditional_population_estimate": {
+      "numerator": 5,
+      "denominator": 12,
+      "decimal": 0.41666667
+    },
+    "point_estimate_assumption": "within_stratum_exchangeability",
+    "unobserved_strata": [],
+    "insufficient_declared_ancestry": [],
+    "shared_ancestry_across_strata": [],
+    "scope": "finite declared population; binary outcomes; no physical source independence established",
+    "active": "frozen_parent",
+    "jane_decision": "UNDECIDED",
+    "auto_learning": false,
+    "independent_witness_increment": 0,
+    "digest": "5b789076875ec520284dfb3f864a0c7e48193547dbf71d3bbaefffd1deb6940a"
+  },
+  "audit": "VALID_LOCAL_CHAIN"
+}
