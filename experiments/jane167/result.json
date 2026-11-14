@@ -1,0 +1,54 @@
+{
+  "consistent": {
+    "version": "JANE-167",
+    "status": "CALIBRATION_CONSISTENT_FIXTURE",
+    "clock_claim": [
+      950,
+      1050
+    ],
+    "reference_overlap": [
+      995,
+      1008
+    ],
+    "reference_count": 3,
+    "reference_ancestries": [
+      "root-A",
+      "root-B",
+      "root-C"
+    ],
+    "dropped_shared_ancestry_or_admin": [],
+    "rejections": [],
+    "uncertainty_tightened": false,
+    "source_independence_verified": false,
+    "physical_time_verified": false,
+    "active_parent": "FROZEN",
+    "jane_activation": false,
+    "scope": "signed local fixtures; claimed administrative ancestry is not verified independence",
+    "digest": "a77ea4965cc074b101c69a9d2bacda092b2de8b1e3d152f794cff32db22d89be"
+  },
+  "contradictory": {
+    "version": "JANE-167",
+    "status": "REFERENCE_CONFLICT",
+    "clock_claim": [
+      950,
+      1050
+    ],
+    "reference_overlap": null,
+    "reference_count": 3,
+    "reference_ancestries": [
+      "root-A",
+      "root-B",
+      "root-C"
+    ],
+    "dropped_shared_ancestry_or_admin": [],
+    "rejections": [],
+    "uncertainty_tightened": false,
+    "source_independence_verified": false,
+    "physical_time_verified": false,
+    "active_parent": "FROZEN",
+    "jane_activation": false,
+    "scope": "signed local fixtures; claimed administrative ancestry is not verified independence",
+    "digest": "4b61ed56dd067873cc9c4d6504caa6814fadf656817018f9266a81310f1f5f5e"
+  },
+  "ledger": "LOCAL_CHAIN_VALID"
+}
