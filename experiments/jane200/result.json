@@ -1,0 +1,218 @@
+{
+  "biased": {
+    "experiment": "JANE-200",
+    "verdict": "NO_STRATUM_SUPPORT",
+    "plan": "cherry_picked",
+    "declared_selection": "selected_favorable_only",
+    "frozen_digest": "ed89a69e4b72caec1b4ba4fa033e3a1b937b6b026140457f9a886ef74e2caf9e",
+    "sampling_plan_digest": "429a3ab848acdca169788b2e3bc073fc12b3a86a9f761d9bf4b4aa0eccdfb6d8",
+    "population": 16,
+    "selected": 8,
+    "excluded_ids": [
+      "008",
+      "009",
+      "010",
+      "011",
+      "012",
+      "013",
+      "014",
+      "015"
+    ],
+    "labeled_selected": 8,
+    "observed_correct": 8,
+    "selected_accuracy": {
+      "n": 1,
+      "d": 1,
+      "percent": 100.0
+    },
+    "conditional_stratified_estimate": null,
+    "factual_bounds_from_selected_labels": {
+      "lower": {
+        "n": 1,
+        "d": 2,
+        "percent": 50.0
+      },
+      "upper": {
+        "n": 1,
+        "d": 1,
+        "percent": 100.0
+      }
+    },
+    "population_truth_in_synthetic_fixture": {
+      "n": 1,
+      "d": 2,
+      "percent": 50.0
+    },
+    "strata": [
+      {
+        "name": "EASY",
+        "population": 8,
+        "selected": 8,
+        "labeled": 8,
+        "correct": 8,
+        "observed_accuracy": {
+          "n": 1,
+          "d": 1,
+          "percent": 100.0
+        },
+        "coverage": {
+          "n": 1,
+          "d": 1,
+          "percent": 100.0
+        },
+        "declared_inclusion_probability": {
+          "n": 1,
+          "d": 1,
+          "percent": 100.0
+        },
+        "positivity": true
+      },
+      {
+        "name": "HARD",
+        "population": 8,
+        "selected": 0,
+        "labeled": 0,
+        "correct": 0,
+        "observed_accuracy": null,
+        "coverage": {
+          "n": 0,
+          "d": 1,
+          "percent": 0.0
+        },
+        "declared_inclusion_probability": {
+          "n": 0,
+          "d": 1,
+          "percent": 0.0
+        },
+        "positivity": false
+      }
+    ],
+    "source_roots": [
+      "lab-A",
+      "lab-B"
+    ],
+    "witness_root": "witness-X",
+    "upstream_root": "owned-corpus",
+    "flags": [
+      "POSITIVITY_FAILURE"
+    ],
+    "population_generalization_proven": false,
+    "random_selection_verified": false,
+    "parent": "FROZEN",
+    "learning_applied": false,
+    "caveat": "A declared random process and a point estimate do not certify random selection, independence, or real-world generalization.",
+    "digest": "4e7411e091affbe9aff9ccbbe49a4a5d6e06192045452f1741b20bc65c8b523f"
+  },
+  "balanced": {
+    "experiment": "JANE-200",
+    "verdict": "COVERAGE_BALANCED_NOT_PROVEN_RANDOM",
+    "plan": "balanced_fixture",
+    "declared_selection": "declared_stratified_selection_not_verified",
+    "frozen_digest": "ed89a69e4b72caec1b4ba4fa033e3a1b937b6b026140457f9a886ef74e2caf9e",
+    "sampling_plan_digest": "e5d76d37f8a4e9c6e3c3d30c4a5f4cb3c14e4249683feafa225cf4cd2257a589",
+    "population": 16,
+    "selected": 8,
+    "excluded_ids": [
+      "001",
+      "003",
+      "005",
+      "007",
+      "009",
+      "011",
+      "013",
+      "015"
+    ],
+    "labeled_selected": 8,
+    "observed_correct": 4,
+    "selected_accuracy": {
+      "n": 1,
+      "d": 2,
+      "percent": 50.0
+    },
+    "conditional_stratified_estimate": {
+      "n": 1,
+      "d": 2,
+      "percent": 50.0
+    },
+    "factual_bounds_from_selected_labels": {
+      "lower": {
+        "n": 1,
+        "d": 4,
+        "percent": 25.0
+      },
+      "upper": {
+        "n": 3,
+        "d": 4,
+        "percent": 75.0
+      }
+    },
+    "population_truth_in_synthetic_fixture": {
+      "n": 1,
+      "d": 2,
+      "percent": 50.0
+    },
+    "strata": [
+      {
+        "name": "EASY",
+        "population": 8,
+        "selected": 4,
+        "labeled": 4,
+        "correct": 4,
+        "observed_accuracy": {
+          "n": 1,
+          "d": 1,
+          "percent": 100.0
+        },
+        "coverage": {
+          "n": 1,
+          "d": 2,
+          "percent": 50.0
+        },
+        "declared_inclusion_probability": {
+          "n": 1,
+          "d": 2,
+          "percent": 50.0
+        },
+        "positivity": true
+      },
+      {
+        "name": "HARD",
+        "population": 8,
+        "selected": 4,
+        "labeled": 4,
+        "correct": 0,
+        "observed_accuracy": {
+          "n": 0,
+          "d": 1,
+          "percent": 0.0
+        },
+        "coverage": {
+          "n": 1,
+          "d": 2,
+          "percent": 50.0
+        },
+        "declared_inclusion_probability": {
+          "n": 1,
+          "d": 2,
+          "percent": 50.0
+        },
+        "positivity": true
+      }
+    ],
+    "source_roots": [
+      "lab-A"
+    ],
+    "witness_root": "witness-Y",
+    "upstream_root": "owned-corpus",
+    "flags": [
+      "INSUFFICIENT_DECLARED_SOURCE_ANCESTRY"
+    ],
+    "population_generalization_proven": false,
+    "random_selection_verified": false,
+    "parent": "FROZEN",
+    "learning_applied": false,
+    "caveat": "A declared random process and a point estimate do not certify random selection, independence, or real-world generalization.",
+    "digest": "f50657ae24acc5581d5035f71bec1e97b64450d6a2fb4a180ec532abb474a0b1"
+  },
+  "local_audit_valid": true
+}
