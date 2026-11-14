@@ -1,0 +1,72 @@
+{
+  "fresh": {
+    "version": "JANE-165",
+    "decision": "FRESH_FIXTURE_QUORUM_NO_COMPLETENESS_PROOF",
+    "rows": [
+      {
+        "status": "FRESH_HISTORY",
+        "root": "fixture-0"
+      },
+      {
+        "status": "FRESH_HISTORY",
+        "root": "fixture-1"
+      },
+      {
+        "status": "FRESH_HISTORY",
+        "root": "fixture-2"
+      }
+    ],
+    "now": 1700000300,
+    "policy": {
+      "max_age": 300,
+      "future_skew": 30,
+      "quorum": 3
+    },
+    "signed_checkpoint_count": 3,
+    "fresh_count": 3,
+    "local_head": "abababababababababababababababababababababababababababababababab",
+    "local_sequence": 6,
+    "independence_verified": false,
+    "global_completeness_verified": false,
+    "active_parent": "frozen_parent",
+    "learning_applied": false,
+    "caveat": "Configured fixture administrators and caller-supplied clock are not independent external evidence",
+    "digest": "8f5bac3250e8920c91dd0065e7b343fad37c6d59cc5eaa3646fadd46ce06082a"
+  },
+  "stale": {
+    "version": "JANE-165",
+    "decision": "AUTHENTIC_HISTORIC_ONLY",
+    "rows": [
+      {
+        "status": "STALE_HISTORY",
+        "root": "fixture-0"
+      },
+      {
+        "status": "STALE_HISTORY",
+        "root": "fixture-1"
+      },
+      {
+        "status": "STALE_HISTORY",
+        "root": "fixture-2"
+      }
+    ],
+    "now": 1700000300,
+    "policy": {
+      "max_age": 300,
+      "future_skew": 30,
+      "quorum": 3
+    },
+    "signed_checkpoint_count": 3,
+    "fresh_count": 0,
+    "local_head": "abababababababababababababababababababababababababababababababab",
+    "local_sequence": 6,
+    "independence_verified": false,
+    "global_completeness_verified": false,
+    "active_parent": "frozen_parent",
+    "learning_applied": false,
+    "caveat": "Configured fixture administrators and caller-supplied clock are not independent external evidence",
+    "digest": "35a2e1d3ff332c861706ae4c0b051ee0d3bc5aa6bd61cf7c37ac4fff54b933e3"
+  },
+  "ledger_a": "VALID_LOCAL_CHAIN",
+  "ledger_b": "VALID_LOCAL_CHAIN"
+}
