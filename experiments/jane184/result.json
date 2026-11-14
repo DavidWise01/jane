@@ -1,0 +1,13 @@
+{
+  "experiment": "JANE-184",
+  "status": "AUTHENTICATED_DELIVERY_FIXTURE",
+  "replay": "REPLAY",
+  "restart_replay": "REPLAY",
+  "chain": "VALID_LOCAL_CHAIN",
+  "old_size": 6,
+  "new_size": 9,
+  "original_checkpoint_signatures": 3,
+  "relay_signature_verified": true,
+  "independent_custodians_verified": false,
+  "active_parent_changed": false
+}
