@@ -1,6 +1,6 @@
 {
   "schema": "JANE_B104_HOMECOMING_V1",
-  "generated_at": "2026-11-14T06:59:59.121Z",
+  "generated_at": "2026-11-14T18:29:03.633Z",
   "home": {
     "url": "https://0root.ai/",
     "role": "USER_DESIGNATED_FAMILY_HOME",
@@ -111,6 +111,18 @@
       "first_seen": "2026-11-03T02:51:53.797Z",
       "presence": "RESERVED",
       "github_url": "https://github.com/DavidWise01/360-dots-eating-themselves",
+      "home_url": "https://0root.ai/",
+      "home_relation": "FAMILY_HOME_REFERENCE_ONLY",
+      "corpus_matches": [],
+      "corpus_status": "UNVERIFIED"
+    },
+    {
+      "repo": "DavidWise01/3bodyproblem",
+      "formic": "FORMIC-1d6d4b1388ac151a",
+      "channel": "btf2:davidwise01/3bodyproblem",
+      "first_seen": "2026-11-14T18:10:12.554Z",
+      "presence": "RESERVED",
+      "github_url": "https://github.com/DavidWise01/3bodyproblem",
       "home_url": "https://0root.ai/",
       "home_relation": "FAMILY_HOME_REFERENCE_ONLY",
       "corpus_matches": [],
