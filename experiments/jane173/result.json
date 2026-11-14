@@ -1,0 +1,32 @@
+{
+  "experiment": "JANE-173",
+  "tests_scope": "local deterministic fixtures",
+  "scenarios": {
+    "agree": {
+      "status": "CORROBORATED_FIXTURE_CLAIMS",
+      "roots": 2,
+      "audit": "VALID_LOCAL_CHAIN"
+    },
+    "collusion": {
+      "status": "SHARED_OR_INSUFFICIENT_ACQUISITION_ANCESTRY",
+      "roots": 0,
+      "audit": "VALID_LOCAL_CHAIN"
+    },
+    "conflict": {
+      "status": "PHYSICAL_SOURCE_CLAIM_CONFLICT",
+      "roots": 2,
+      "audit": "VALID_LOCAL_CHAIN"
+    },
+    "false_claim": {
+      "status": "CONFLICTING_SIGNED_CLAIMS",
+      "roots": 2,
+      "audit": "VALID_LOCAL_CHAIN"
+    },
+    "shared": {
+      "status": "SHARED_OR_INSUFFICIENT_ACQUISITION_ANCESTRY",
+      "roots": 1,
+      "audit": "VALID_LOCAL_CHAIN"
+    }
+  },
+  "jane_activation": false
+}
