@@ -1,0 +1,37 @@
+{
+  "version": "JANE-169",
+  "stable": {
+    "status": "WITHIN_PROFILE",
+    "accepted": true,
+    "uncertainty_ms": 3,
+    "condition_changed": false,
+    "recalibration_required": false
+  },
+  "changed": {
+    "status": "CONDITION_CHANGE_ACCEPTED",
+    "accepted": true,
+    "uncertainty_ms": 4,
+    "condition_changed": true,
+    "recalibration_required": false
+  },
+  "jump": {
+    "status": "CLOCK_JUMP",
+    "accepted": false,
+    "uncertainty_ms": 5,
+    "condition_changed": false,
+    "recalibration_required": true
+  },
+  "unknown_profile": {
+    "status": "UNKNOWN_CONDITION",
+    "accepted": false,
+    "uncertainty_ms": null,
+    "last_bounded_uncertainty_ms": 3,
+    "condition_changed": true,
+    "recalibration_required": true
+  },
+  "audit": "VALID_LOCAL_CHAIN",
+  "active": "FROZEN_PARENT",
+  "proof_scope": "declared deterministic condition labels and bounds only",
+  "real_clock_authenticated": false,
+  "learning_applied": false
+}
