@@ -1,0 +1,73 @@
+{
+  "version": "JANE-175/1",
+  "cases": {
+    "equivalent_fixture": {
+      "schema": "JANE-175/1",
+      "status": "DECLARED_FIXTURE_REPRODUCTION",
+      "matching_numbers": true,
+      "protocol_equivalent_under_declared_policy": true,
+      "declared_root_distinct": true,
+      "declared_independent_fixture_roots": true,
+      "differences": [],
+      "explicit_equivalences": [],
+      "original_hash": "e0a3fde3c594b9fe6caf8ed68713e609e5d761d0876a18de57c8fec594da924e",
+      "repeat_hash": "c475efc88d6937e5592eaedabf5976901d5e1eb2879d01c24db66bda0f40a507",
+      "raw_commitments_match": false,
+      "absolute_value_difference": "0",
+      "tolerance": "2",
+      "physical_independence_verified": false,
+      "active_parent": "FROZEN",
+      "jane_activation": false,
+      "scope": "declared protocol and synthetic fixture only",
+      "digest": "63234c899247ff70a0b7d81cd97a4094cffe48be5d522ed6a7f10ecf9c47ef97"
+    },
+    "matching_but_biased": {
+      "schema": "JANE-175/1",
+      "status": "PROTOCOL_DRIFT",
+      "matching_numbers": true,
+      "protocol_equivalent_under_declared_policy": false,
+      "declared_root_distinct": true,
+      "declared_independent_fixture_roots": true,
+      "differences": [
+        {
+          "dimension": "sampling",
+          "field": "selection_rule",
+          "original": "uniform sample",
+          "repeat": "select favorable responders"
+        }
+      ],
+      "explicit_equivalences": [],
+      "original_hash": "e0a3fde3c594b9fe6caf8ed68713e609e5d761d0876a18de57c8fec594da924e",
+      "repeat_hash": "f8c92da58eb6aa1e9799c6273d094f86d91b333d5492bae0f4cc70beed937cb9",
+      "raw_commitments_match": false,
+      "absolute_value_difference": "0",
+      "tolerance": "2",
+      "physical_independence_verified": false,
+      "active_parent": "FROZEN",
+      "jane_activation": false,
+      "scope": "declared protocol and synthetic fixture only",
+      "digest": "44e5f8c7cc88dc6e297934d459b2f214547c01109f8e6a6334b06e402fafc859"
+    },
+    "shared_root": {
+      "schema": "JANE-175/1",
+      "status": "SHARED_ACQUISITION_ANCESTRY",
+      "matching_numbers": true,
+      "protocol_equivalent_under_declared_policy": true,
+      "declared_root_distinct": false,
+      "declared_independent_fixture_roots": false,
+      "differences": [],
+      "explicit_equivalences": [],
+      "original_hash": "e0a3fde3c594b9fe6caf8ed68713e609e5d761d0876a18de57c8fec594da924e",
+      "repeat_hash": "9bacda2ea6d5df5230faab87f8556d48be1e029187e4205f563181c5fa747045",
+      "raw_commitments_match": false,
+      "absolute_value_difference": "0",
+      "tolerance": "2",
+      "physical_independence_verified": false,
+      "active_parent": "FROZEN",
+      "jane_activation": false,
+      "scope": "declared protocol and synthetic fixture only",
+      "digest": "d3648725dc13dd9f241cfa7e7ed73424654e814ae989b9165fdd119026baaba1"
+    }
+  },
+  "test_fixture_only": true
+}
