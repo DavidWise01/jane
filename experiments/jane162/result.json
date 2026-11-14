@@ -1,0 +1,31 @@
+{
+  "version": "JANE-162",
+  "captures": [
+    "ACCEPTED",
+    "ACCEPTED",
+    "ACCEPTED",
+    "ACCEPTED"
+  ],
+  "reconciliation": {
+    "status": "OBSERVER_OMISSION",
+    "missing_source": [],
+    "missing_observer": [
+      2
+    ],
+    "contradictions": [],
+    "duplicates": [],
+    "window": [
+      0,
+      3
+    ],
+    "external_anchor": "NOT_PROVIDED",
+    "independence_verified": false,
+    "physical_execution_verified": false,
+    "active_parent": "FROZEN",
+    "jane_approval": false
+  },
+  "ledger_audit": "VALID_LOCAL_CHAIN",
+  "ledger_head": "9ab9669868ef6e4aeb4c6ab2167c65ca961ba97598232cc5c1414bceefe129e0",
+  "scope": "locally signed synthetic scheduler receipts; not proof of real execution",
+  "independent_witness_increment": 0
+}
