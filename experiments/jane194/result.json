@@ -1,0 +1,88 @@
+{
+  "result": {
+    "id": "JANE-194",
+    "plan_digest": "78f5cee9ff3d3437e81989c9a2bd34f7e3382ee3723232ce1b74b101c971a5d3",
+    "rounds_total": 8,
+    "published": 3,
+    "missing": 4,
+    "unresolved": 1,
+    "missing_fraction_all": 0.5,
+    "longest_missing_run": 2,
+    "baseline_missing_probability": 0.2,
+    "binomial_upper_tail_resolved": 0.03334400000000001,
+    "rows": [
+      {
+        "round": 40,
+        "status": "PUBLISHED_OBSERVED",
+        "published": 3,
+        "absent": 0,
+        "outage": 0,
+        "observed_roots": 3
+      },
+      {
+        "round": 41,
+        "status": "NOT_OBSERVED_AFTER_DEADLINE",
+        "published": 0,
+        "absent": 3,
+        "outage": 0,
+        "observed_roots": 3
+      },
+      {
+        "round": 42,
+        "status": "NOT_OBSERVED_AFTER_DEADLINE",
+        "published": 0,
+        "absent": 3,
+        "outage": 0,
+        "observed_roots": 3
+      },
+      {
+        "round": 43,
+        "status": "PUBLISHED_OBSERVED",
+        "published": 3,
+        "absent": 0,
+        "outage": 0,
+        "observed_roots": 3
+      },
+      {
+        "round": 44,
+        "status": "NOT_OBSERVED_AFTER_DEADLINE",
+        "published": 0,
+        "absent": 3,
+        "outage": 0,
+        "observed_roots": 3
+      },
+      {
+        "round": 45,
+        "status": "OUTAGE_OR_INCOMPLETE",
+        "published": 0,
+        "absent": 0,
+        "outage": 3,
+        "observed_roots": 3
+      },
+      {
+        "round": 46,
+        "status": "PUBLISHED_OBSERVED",
+        "published": 3,
+        "absent": 0,
+        "outage": 0,
+        "observed_roots": 3
+      },
+      {
+        "round": 47,
+        "status": "NOT_OBSERVED_AFTER_DEADLINE",
+        "published": 0,
+        "absent": 3,
+        "outage": 0,
+        "observed_roots": 3
+      }
+    ],
+    "scope": "declared local fixture observations",
+    "intent_proven": false,
+    "independent_physical_roots_verified": false,
+    "parent_active": "frozen",
+    "learning_applied": false,
+    "digest": "c8718a123f5323fb61b99d1f5e531463285ffea06b3d6bc563b57b7c153710d2"
+  },
+  "chain": "LOCAL_CHAIN_VALID",
+  "event_count": 2
+}
