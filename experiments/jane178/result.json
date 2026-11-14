@@ -1,0 +1,10 @@
+{
+  "parent": "GRANT_ACCEPTED",
+  "child": "GRANT_ACCEPTED",
+  "authorized": "AUTHORIZED_FIXTURE",
+  "revoked": "REVOKED",
+  "after_revoke": "REVOKED",
+  "audit": "VALID_LOCAL_CHAIN",
+  "active_parent": "frozen_parent",
+  "real_world_authority_verified": false
+}
