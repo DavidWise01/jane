@@ -1,0 +1,27 @@
+{
+  "experiment": "JANE-171",
+  "local_regression_tests": {
+    "passed": 35,
+    "total": 35
+  },
+  "shared_upstream": {
+    "status": "SHARED_MEASUREMENT_ANCESTRY",
+    "reports": 3,
+    "distinct_administrator_labels": 3,
+    "distinct_signing_key_labels": 3,
+    "declared_measurement_roots": 1,
+    "max_disjoint_report_count": 1
+  },
+  "distinct_fixture_roots": {
+    "status": "DECLARED_ROOT_QUORUM",
+    "reports": 3,
+    "declared_measurement_roots": 3,
+    "max_disjoint_report_count": 3
+  },
+  "operational_independence_verified": false,
+  "signature_verification_performed": false,
+  "learning_applied": false,
+  "active_parent": "FROZEN",
+  "scope": "declared synthetic measurement ancestry only",
+  "note": "Complete executed engine and 35-test suite are in local downloadable ZIP; this repository result is a summary, not byte-equivalent to local result.json."
+}
