@@ -1,0 +1,9 @@
+{
+  "receipt_only": "RECEIPT_ONLY",
+  "unsupported_success": "SUCCESS_CLAIM_UNCORROBORATED",
+  "independent_fixture_effects": "CORROBORATED_FIXTURE_EFFECT",
+  "replay": "REPLAY",
+  "ledger_ok": true,
+  "tests_scope": "local signed fixtures; no real world execution or independent custody",
+  "active": "frozen_parent"
+}
