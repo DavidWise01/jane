@@ -1,0 +1,363 @@
+{
+  "experiment": "JANE-197",
+  "scenarios": [
+    {
+      "version": "JANE-197",
+      "status": "MNAR_SCENARIO_CONDITIONAL",
+      "assumption": "equal-within-stratum",
+      "evidence_digest": "39dc942273ef0b3a0f63cabd7f9b786d0dc60c4f5459582a4085c7b5609b294a",
+      "population": 16,
+      "bounds": {
+        "lower": {
+          "numerator": 5,
+          "denominator": 16,
+          "percentage": 31.25
+        },
+        "upper": {
+          "numerator": 13,
+          "denominator": 16,
+          "percentage": 81.25
+        },
+        "missing": 8
+      },
+      "estimate": {
+        "numerator": 5,
+        "denominator": 12,
+        "percentage": 41.666667
+      },
+      "strata": [
+        {
+          "name": "day",
+          "observed_rate": {
+            "numerator": 5,
+            "denominator": 6,
+            "percentage": 83.333333
+          },
+          "assumed_missing_rate": {
+            "numerator": 5,
+            "denominator": 6,
+            "percentage": 83.333333
+          },
+          "missing": 2,
+          "delta": {
+            "numerator": 0,
+            "denominator": 1,
+            "percentage": 0.0
+          }
+        },
+        {
+          "name": "night",
+          "observed_rate": {
+            "numerator": 0,
+            "denominator": 1,
+            "percentage": 0.0
+          },
+          "assumed_missing_rate": {
+            "numerator": 0,
+            "denominator": 1,
+            "percentage": 0.0
+          },
+          "missing": 6,
+          "delta": {
+            "numerator": 0,
+            "denominator": 1,
+            "percentage": 0.0
+          }
+        }
+      ],
+      "ancestry_warning": false,
+      "inference_scope": "scenario conditional on unobserved-outcome assumptions; not observed truth",
+      "active_parent": "frozen",
+      "learning_applied": false,
+      "independent_witness_increment": 0,
+      "digest": "c2a14ddb7ceb724dd222b01afcdb12a99d174386a09b1284734fafa0e8d8f67e"
+    },
+    {
+      "version": "JANE-197",
+      "status": "MNAR_SCENARIO_CONDITIONAL",
+      "assumption": "missing-less-likely",
+      "evidence_digest": "39dc942273ef0b3a0f63cabd7f9b786d0dc60c4f5459582a4085c7b5609b294a",
+      "population": 16,
+      "bounds": {
+        "lower": {
+          "numerator": 5,
+          "denominator": 16,
+          "percentage": 31.25
+        },
+        "upper": {
+          "numerator": 13,
+          "denominator": 16,
+          "percentage": 81.25
+        },
+        "missing": 8
+      },
+      "estimate": {
+        "numerator": 37,
+        "denominator": 96,
+        "percentage": 38.541667
+      },
+      "strata": [
+        {
+          "name": "day",
+          "observed_rate": {
+            "numerator": 5,
+            "denominator": 6,
+            "percentage": 83.333333
+          },
+          "assumed_missing_rate": {
+            "numerator": 7,
+            "denominator": 12,
+            "percentage": 58.333333
+          },
+          "missing": 2,
+          "delta": {
+            "numerator": -1,
+            "denominator": 4,
+            "percentage": -25.0
+          }
+        },
+        {
+          "name": "night",
+          "observed_rate": {
+            "numerator": 0,
+            "denominator": 1,
+            "percentage": 0.0
+          },
+          "assumed_missing_rate": {
+            "numerator": 0,
+            "denominator": 1,
+            "percentage": 0.0
+          },
+          "missing": 6,
+          "delta": {
+            "numerator": -1,
+            "denominator": 4,
+            "percentage": -25.0
+          }
+        }
+      ],
+      "ancestry_warning": false,
+      "inference_scope": "scenario conditional on unobserved-outcome assumptions; not observed truth",
+      "active_parent": "frozen",
+      "learning_applied": false,
+      "independent_witness_increment": 0,
+      "digest": "48e5b9fcc00bf0b8f37fc32a7bf1d845246dbb4db62cd2ccc8b32fae4a3b302b"
+    },
+    {
+      "version": "JANE-197",
+      "status": "MNAR_SCENARIO_CONDITIONAL",
+      "assumption": "missing-more-likely",
+      "evidence_digest": "39dc942273ef0b3a0f63cabd7f9b786d0dc60c4f5459582a4085c7b5609b294a",
+      "population": 16,
+      "bounds": {
+        "lower": {
+          "numerator": 5,
+          "denominator": 16,
+          "percentage": 31.25
+        },
+        "upper": {
+          "numerator": 13,
+          "denominator": 16,
+          "percentage": 81.25
+        },
+        "missing": 8
+      },
+      "estimate": {
+        "numerator": 17,
+        "denominator": 32,
+        "percentage": 53.125
+      },
+      "strata": [
+        {
+          "name": "day",
+          "observed_rate": {
+            "numerator": 5,
+            "denominator": 6,
+            "percentage": 83.333333
+          },
+          "assumed_missing_rate": {
+            "numerator": 1,
+            "denominator": 1,
+            "percentage": 100.0
+          },
+          "missing": 2,
+          "delta": {
+            "numerator": 1,
+            "denominator": 4,
+            "percentage": 25.0
+          }
+        },
+        {
+          "name": "night",
+          "observed_rate": {
+            "numerator": 0,
+            "denominator": 1,
+            "percentage": 0.0
+          },
+          "assumed_missing_rate": {
+            "numerator": 1,
+            "denominator": 4,
+            "percentage": 25.0
+          },
+          "missing": 6,
+          "delta": {
+            "numerator": 1,
+            "denominator": 4,
+            "percentage": 25.0
+          }
+        }
+      ],
+      "ancestry_warning": false,
+      "inference_scope": "scenario conditional on unobserved-outcome assumptions; not observed truth",
+      "active_parent": "frozen",
+      "learning_applied": false,
+      "independent_witness_increment": 0,
+      "digest": "4e1cb8f458ec4e780eed8bfd341064bb5993be074751e114850fd88a91fdf28a"
+    },
+    {
+      "version": "JANE-197",
+      "status": "MNAR_SCENARIO_CONDITIONAL",
+      "assumption": "extreme-low",
+      "evidence_digest": "39dc942273ef0b3a0f63cabd7f9b786d0dc60c4f5459582a4085c7b5609b294a",
+      "population": 16,
+      "bounds": {
+        "lower": {
+          "numerator": 5,
+          "denominator": 16,
+          "percentage": 31.25
+        },
+        "upper": {
+          "numerator": 13,
+          "denominator": 16,
+          "percentage": 81.25
+        },
+        "missing": 8
+      },
+      "estimate": {
+        "numerator": 5,
+        "denominator": 16,
+        "percentage": 31.25
+      },
+      "strata": [
+        {
+          "name": "day",
+          "observed_rate": {
+            "numerator": 5,
+            "denominator": 6,
+            "percentage": 83.333333
+          },
+          "assumed_missing_rate": {
+            "numerator": 0,
+            "denominator": 1,
+            "percentage": 0.0
+          },
+          "missing": 2,
+          "delta": {
+            "numerator": -1,
+            "denominator": 1,
+            "percentage": -100.0
+          }
+        },
+        {
+          "name": "night",
+          "observed_rate": {
+            "numerator": 0,
+            "denominator": 1,
+            "percentage": 0.0
+          },
+          "assumed_missing_rate": {
+            "numerator": 0,
+            "denominator": 1,
+            "percentage": 0.0
+          },
+          "missing": 6,
+          "delta": {
+            "numerator": -1,
+            "denominator": 1,
+            "percentage": -100.0
+          }
+        }
+      ],
+      "ancestry_warning": false,
+      "inference_scope": "scenario conditional on unobserved-outcome assumptions; not observed truth",
+      "active_parent": "frozen",
+      "learning_applied": false,
+      "independent_witness_increment": 0,
+      "digest": "d39e89f9a23225ebcfbe0cde8bf34314b15c0e562c513b553f3d316b6c0b5204"
+    },
+    {
+      "version": "JANE-197",
+      "status": "MNAR_SCENARIO_CONDITIONAL",
+      "assumption": "extreme-high",
+      "evidence_digest": "39dc942273ef0b3a0f63cabd7f9b786d0dc60c4f5459582a4085c7b5609b294a",
+      "population": 16,
+      "bounds": {
+        "lower": {
+          "numerator": 5,
+          "denominator": 16,
+          "percentage": 31.25
+        },
+        "upper": {
+          "numerator": 13,
+          "denominator": 16,
+          "percentage": 81.25
+        },
+        "missing": 8
+      },
+      "estimate": {
+        "numerator": 13,
+        "denominator": 16,
+        "percentage": 81.25
+      },
+      "strata": [
+        {
+          "name": "day",
+          "observed_rate": {
+            "numerator": 5,
+            "denominator": 6,
+            "percentage": 83.333333
+          },
+          "assumed_missing_rate": {
+            "numerator": 1,
+            "denominator": 1,
+            "percentage": 100.0
+          },
+          "missing": 2,
+          "delta": {
+            "numerator": 1,
+            "denominator": 1,
+            "percentage": 100.0
+          }
+        },
+        {
+          "name": "night",
+          "observed_rate": {
+            "numerator": 0,
+            "denominator": 1,
+            "percentage": 0.0
+          },
+          "assumed_missing_rate": {
+            "numerator": 1,
+            "denominator": 1,
+            "percentage": 100.0
+          },
+          "missing": 6,
+          "delta": {
+            "numerator": 1,
+            "denominator": 1,
+            "percentage": 100.0
+          }
+        }
+      ],
+      "ancestry_warning": false,
+      "inference_scope": "scenario conditional on unobserved-outcome assumptions; not observed truth",
+      "active_parent": "frozen",
+      "learning_applied": false,
+      "independent_witness_increment": 0,
+      "digest": "da3e347fccc0a09a2dd2f436ef9acacc1e0d021b30d5ad960ad164c724c39f3c"
+    }
+  ],
+  "audit": "VALID_LOCAL_CHAIN",
+  "scenario_count": 5,
+  "tests": "run test_sensitivity.py"
+}
