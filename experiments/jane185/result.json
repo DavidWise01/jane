@@ -1,0 +1,22 @@
+{
+  "result": {
+    "status": "SELECTIVE_SUPPRESSION",
+    "outbox_size": 3,
+    "received": [
+      1,
+      3
+    ],
+    "missing": [
+      2
+    ],
+    "overdue": [
+      2
+    ],
+    "outbox_head": "33a9637b97aed39e1b3ee1fa8bbbfc44993b3174d444ac337c4e1c1f6929d655",
+    "active_parent": "frozen_parent",
+    "learning_applied": false,
+    "independent_custody_verified": false
+  },
+  "audit": "VALID_LOCAL_CHAIN",
+  "tests": "execute test_delivery.py"
+}
