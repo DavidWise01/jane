@@ -1,0 +1,87 @@
+{
+  "version": "JANE-166",
+  "matching": {
+    "status": "MATCHED_FIXTURE_INTERVAL",
+    "intersection": [
+      99986,
+      100014
+    ],
+    "interval_claims": [
+      {
+        "root": "root0",
+        "source": "local-clock-0",
+        "interval": [
+          99974,
+          100014
+        ]
+      },
+      {
+        "root": "root1",
+        "source": "local-clock-1",
+        "interval": [
+          99980,
+          100020
+        ]
+      },
+      {
+        "root": "root2",
+        "source": "local-clock-2",
+        "interval": [
+          99986,
+          100026
+        ]
+      }
+    ],
+    "roots": 3,
+    "quorum": 3,
+    "failures": [],
+    "independent_operators_verified": false,
+    "temporal_scope": "configured signed uncertainty intervals; accuracy not independently validated"
+  },
+  "disagreement": {
+    "status": "CLOCK_CONFLICT",
+    "intersection": null,
+    "interval_claims": [
+      {
+        "root": "root0",
+        "source": "local-clock-0",
+        "interval": [
+          99974,
+          100014
+        ]
+      },
+      {
+        "root": "root1",
+        "source": "local-clock-1",
+        "interval": [
+          99980,
+          100020
+        ]
+      },
+      {
+        "root": "root2",
+        "source": "local-clock-2",
+        "interval": [
+          100997,
+          101003
+        ]
+      }
+    ],
+    "roots": 3,
+    "quorum": 3,
+    "failures": [],
+    "independent_operators_verified": false,
+    "temporal_scope": "configured signed uncertainty intervals; accuracy not independently validated"
+  },
+  "ingestion": [
+    "ACCEPTED",
+    "ACCEPTED",
+    "ACCEPTED"
+  ],
+  "ordered": "DEFINITELY_BEFORE",
+  "ambiguous": "OVERLAP_UNORDERED",
+  "audit": "VALID_LOCAL_AUDIT",
+  "audit_head": "cc6e33c1b8fa61aa08e7751f49fb7c6b7e5cf19e62413e0a0b4a519f25946c5c",
+  "active": "frozen_parent",
+  "learning_applied": false
+}
