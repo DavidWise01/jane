@@ -1,0 +1,48 @@
+{
+  "experiment": "JANE-168",
+  "scope": "local fixtures; no physical clock calibration",
+  "cases": {
+    "nominal": {
+      "decision": {
+        "status": "CALIBRATION_CONSISTENT_FIXTURE",
+        "reason": "observations consistent with declared envelope",
+        "predicted_uncertainty_ms": 3,
+        "elapsed_ms": 10000,
+        "observed_offset_change_ms": 1
+      },
+      "ledger_audit": "VALID_LOCAL_CHAIN",
+      "active": "frozen_parent"
+    },
+    "jump": {
+      "decision": {
+        "status": "CLOCK_JUMP",
+        "reason": "offset change exceeds conservative drift envelope",
+        "predicted_uncertainty_ms": 3,
+        "elapsed_ms": 10000,
+        "observed_offset_change_ms": 50
+      },
+      "ledger_audit": "VALID_LOCAL_CHAIN",
+      "active": "frozen_parent"
+    },
+    "expired": {
+      "decision": {
+        "status": "CALIBRATION_EXPIRED",
+        "reason": "elapsed beyond calibration age",
+        "predicted_uncertainty_ms": 6,
+        "elapsed_ms": 40000,
+        "observed_offset_change_ms": 0
+      },
+      "ledger_audit": "VALID_LOCAL_CHAIN",
+      "active": "frozen_parent"
+    },
+    "forecast_10000": {
+      "status": "WITHIN_DECLARED_ENVELOPE",
+      "reason": "prediction only; not a measurement",
+      "predicted_uncertainty_ms": 3,
+      "elapsed_ms": 10000,
+      "observed_offset_change_ms": null
+    }
+  },
+  "learning_applied": false,
+  "independent_custodians_verified": false
+}
