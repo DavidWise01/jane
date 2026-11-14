@@ -1,0 +1,13 @@
+{
+  "experiment": "JANE-182",
+  "status": "CONSISTENT_APPEND_ONLY_FIXTURE",
+  "old_size": 6,
+  "new_size": 9,
+  "old_root": "b9b3a5b9b0e8b8501a2c347e44d5bebf91968330df23e103e9a221708c29c64c",
+  "new_root": "2e5a2aea7ca9eb7ab7aa3cc0da07b0f22769c1693c4c101ee9c848b7ca2a8d76",
+  "audit": "VALID_LOCAL_CHAIN",
+  "independence_verified": false,
+  "active_parent_changed": false,
+  "proof_type": "explicit prefix inclusion (O(n log n))",
+  "scope": "local synthetic witness fixtures"
+}
