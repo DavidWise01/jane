@@ -1,0 +1,53 @@
+{
+  "experiment": "JANE-198",
+  "verdict": "NONIDENTIFIABLE_COMPETING_MODELS",
+  "frozen_observation_digest": "25fbd0b24971418eb04477ffb73c708d3a5bc1f9a15153c8c43cebcd482216ce",
+  "bounds": {
+    "lower": {
+      "numerator": 5,
+      "denominator": 16,
+      "percentage": 31.25
+    },
+    "upper": {
+      "numerator": 13,
+      "denominator": 16,
+      "percentage": 81.25
+    },
+    "observed_successes": 5,
+    "unknown_outcomes": 8,
+    "population": 16
+  },
+  "candidates": [
+    {
+      "name": "low-latent-success",
+      "compatible": true,
+      "projected_digest": "25fbd0b24971418eb04477ffb73c708d3a5bc1f9a15153c8c43cebcd482216ce",
+      "population_rate": {
+        "numerator": 5,
+        "denominator": 16,
+        "percentage": 31.25
+      },
+      "candidate_digest": "7bf1e7cc4214eb578434ddf00f0bfaaf2e4577561f97ddd71e6b76dc932a02c3",
+      "ancestry": "synthetic-source-one"
+    },
+    {
+      "name": "high-latent-success",
+      "compatible": true,
+      "projected_digest": "25fbd0b24971418eb04477ffb73c708d3a5bc1f9a15153c8c43cebcd482216ce",
+      "population_rate": {
+        "numerator": 13,
+        "denominator": 16,
+        "percentage": 81.25
+      },
+      "candidate_digest": "28a3d615a2f456196d1a4ccb30ce037aa959d00eff1b8079f3f98b9401571bf8",
+      "ancestry": "synthetic-source-one"
+    }
+  ],
+  "compatible_count": 2,
+  "causal_identification": false,
+  "observer_roots_are_independent": false,
+  "learning_applied": false,
+  "active_parent": "frozen",
+  "warning": "Candidate models and latent outcomes are constructed fixtures, not observed causes.",
+  "digest": "f42aea3f3cb5ce2d005f81c6c140861f901c389dbbb8abbb3a68d40570242d45"
+}
