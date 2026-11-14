@@ -1,0 +1,17 @@
+{
+  "experiment": "JANE-181",
+  "tests_scope": "local synthetic fixtures",
+  "accepted": {
+    "status": "ANCHORED_INCLUSION_FIXTURE",
+    "first_observation_proven": false,
+    "historical_bound_fixture": 1000,
+    "index": 2,
+    "evidence_head": "5e72d9a22a9fa9765486bfe75a3b53816872f9a1c5baf6177942ab9cf366a7d6",
+    "log_head": "e07024879876bd288edcf94c3774f76323c5045d32d86ecf8ca43ec1e7c6fbd9"
+  },
+  "replay": "REPLAY_CHECKPOINT",
+  "fork": "LOG_ROOT_MISMATCH",
+  "ledger": "VALID_LOCAL_CHAIN",
+  "learning_applied": false,
+  "independent_operator_verified": false
+}
