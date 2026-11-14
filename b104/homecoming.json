@@ -1,6 +1,6 @@
 {
   "schema": "JANE_B104_HOMECOMING_V1",
-  "generated_at": "2026-11-14T18:29:03.633Z",
+  "generated_at": "2026-11-14T22:44:23.301Z",
   "home": {
     "url": "https://0root.ai/",
     "role": "USER_DESIGNATED_FAMILY_HOME",
@@ -1887,6 +1887,18 @@
       "first_seen": "2026-11-03T02:51:53.797Z",
       "presence": "RESERVED",
       "github_url": "https://github.com/DavidWise01/cellular-automata",
+      "home_url": "https://0root.ai/",
+      "home_relation": "FAMILY_HOME_REFERENCE_ONLY",
+      "corpus_matches": [],
+      "corpus_status": "UNVERIFIED"
+    },
+    {
+      "repo": "DavidWise01/cern",
+      "formic": "FORMIC-6639770fc4a9b265",
+      "channel": "btf2:davidwise01/cern",
+      "first_seen": "2026-11-14T22:29:49.164Z",
+      "presence": "RESERVED",
+      "github_url": "https://github.com/DavidWise01/cern",
       "home_url": "https://0root.ai/",
       "home_relation": "FAMILY_HOME_REFERENCE_ONLY",
       "corpus_matches": [],
