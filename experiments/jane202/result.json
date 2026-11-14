@@ -1,0 +1,211 @@
+{
+  "experiment": "JANE 202",
+  "cases": {
+    "summary_leak": {
+      "verdict": "SEALED_INFORMATION_INFLUENCED_SELECTION",
+      "head": "05238fbdb0bef81d266dcdcad2c9bce1310f3f0e316b73bd9232cd8bd291c85e",
+      "events": 5,
+      "exposures": [
+        {
+          "event": "test",
+          "kind": "evaluation",
+          "actor": "evaluator",
+          "sealed_ancestry": [
+            "sealed",
+            "sealed-dataset-info"
+          ]
+        },
+        {
+          "event": "agg",
+          "kind": "summary",
+          "actor": "evaluator",
+          "sealed_ancestry": [
+            "sealed",
+            "sealed-dataset-info"
+          ]
+        },
+        {
+          "event": "partner",
+          "kind": "report",
+          "actor": "partner",
+          "sealed_ancestry": [
+            "sealed",
+            "sealed-dataset-info"
+          ]
+        }
+      ],
+      "affected_decisions": [
+        {
+          "event": "select",
+          "model": "model-1",
+          "sealed_ancestry": [
+            "sealed",
+            "sealed-dataset-info"
+          ]
+        }
+      ],
+      "declared_declassifications": [],
+      "scope": "recorded lineage only; out-of-band disclosure not excluded"
+    },
+    "embedding_leak": {
+      "verdict": "SEALED_INFORMATION_INFLUENCED_SELECTION",
+      "head": "479a537e89fbc93b7476f39defeec465ac3b92140dddae2325b8ef4aeedf359a",
+      "events": 4,
+      "exposures": [
+        {
+          "event": "test",
+          "kind": "evaluation",
+          "actor": "evaluator",
+          "sealed_ancestry": [
+            "sealed",
+            "sealed-dataset-info"
+          ]
+        },
+        {
+          "event": "vector",
+          "kind": "embedding",
+          "actor": "evaluator",
+          "sealed_ancestry": [
+            "sealed",
+            "sealed-dataset-info"
+          ]
+        }
+      ],
+      "affected_decisions": [
+        {
+          "event": "select",
+          "model": "model-1",
+          "sealed_ancestry": [
+            "sealed",
+            "sealed-dataset-info"
+          ]
+        }
+      ],
+      "declared_declassifications": [],
+      "scope": "recorded lineage only; out-of-band disclosure not excluded"
+    },
+    "score_leak": {
+      "verdict": "SEALED_INFORMATION_INFLUENCED_SELECTION",
+      "head": "9d1070879d2b9c2321978f92f2fcd2ed1028d5c6640312396942ed51495ad220",
+      "events": 4,
+      "exposures": [
+        {
+          "event": "test",
+          "kind": "evaluation",
+          "actor": "evaluator",
+          "sealed_ancestry": [
+            "sealed",
+            "sealed-dataset-info"
+          ]
+        },
+        {
+          "event": "score1",
+          "kind": "score",
+          "actor": "evaluator",
+          "sealed_ancestry": [
+            "sealed",
+            "sealed-dataset-info"
+          ]
+        }
+      ],
+      "affected_decisions": [
+        {
+          "event": "select",
+          "model": "model-1",
+          "sealed_ancestry": [
+            "sealed",
+            "sealed-dataset-info"
+          ]
+        }
+      ],
+      "declared_declassifications": [],
+      "scope": "recorded lineage only; out-of-band disclosure not excluded"
+    },
+    "isolated": {
+      "verdict": "INDIRECT_EXPOSURE_NO_SELECTION_PATH",
+      "head": "53f40253216df64b07139439d864232f975894d91d85448550cedeb05ed763b8",
+      "events": 4,
+      "exposures": [
+        {
+          "event": "test",
+          "kind": "evaluation",
+          "actor": "evaluator",
+          "sealed_ancestry": [
+            "sealed",
+            "sealed-dataset-info"
+          ]
+        },
+        {
+          "event": "agg",
+          "kind": "summary",
+          "actor": "evaluator",
+          "sealed_ancestry": [
+            "sealed",
+            "sealed-dataset-info"
+          ]
+        }
+      ],
+      "affected_decisions": [],
+      "declared_declassifications": [],
+      "scope": "recorded lineage only; out-of-band disclosure not excluded"
+    },
+    "no_access": {
+      "verdict": "INDIRECT_EXPOSURE_NO_SELECTION_PATH",
+      "head": "4a59eadd98280731f3f7889b51621ddad48824458ade5a3d042d2693d80e82b8",
+      "events": 2,
+      "exposures": [
+        {
+          "event": "test",
+          "kind": "evaluation",
+          "actor": "evaluator",
+          "sealed_ancestry": [
+            "sealed",
+            "sealed-dataset-info"
+          ]
+        }
+      ],
+      "affected_decisions": [],
+      "declared_declassifications": [],
+      "scope": "recorded lineage only; out-of-band disclosure not excluded"
+    },
+    "declared_release": {
+      "verdict": "SEALED_INFORMATION_INFLUENCED_SELECTION",
+      "head": "de63fda7bd7889a7db8f526baae911c3056c1adc533ad52714f4d49fb0b7d7da",
+      "events": 5,
+      "exposures": [
+        {
+          "event": "test",
+          "kind": "evaluation",
+          "actor": "evaluator",
+          "sealed_ancestry": [
+            "sealed",
+            "sealed-dataset-info"
+          ]
+        },
+        {
+          "event": "agg",
+          "kind": "summary",
+          "actor": "evaluator",
+          "sealed_ancestry": [
+            "sealed",
+            "sealed-dataset-info"
+          ]
+        }
+      ],
+      "affected_decisions": [
+        {
+          "event": "select",
+          "model": "model-1",
+          "sealed_ancestry": [
+            "sealed",
+            "sealed-dataset-info"
+          ]
+        }
+      ],
+      "declared_declassifications": [
+        "agg"
+      ],
+      "scope": "recorded lineage only; out-of-band disclosure not excluded"
+    }
+  }
+}
