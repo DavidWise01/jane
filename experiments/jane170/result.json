@@ -1,0 +1,115 @@
+{
+  "case": "synthetic signed sensor audit",
+  "valid": {
+    "version": "JANE-170",
+    "status": "CONDITION_SUPPORTED_FIXTURE",
+    "accepted": 3,
+    "required": 3,
+    "roots": [
+      "root1",
+      "root2",
+      "root3"
+    ],
+    "administrators": [
+      "admin1",
+      "admin2",
+      "admin3"
+    ],
+    "reported_conditions": [
+      "normal"
+    ],
+    "rejections": [],
+    "allowed_drift_ppm": 10,
+    "recalibration_required": false,
+    "independent_operators_verified": false,
+    "physical_condition_verified": false,
+    "parent": "frozen_parent",
+    "jane_decision": "UNDECIDED",
+    "learning_applied": false,
+    "digest": "0d7b5b5390d8f8e55dd96f1c63543ff253af43314257bc0c4cac07646dc2872a"
+  },
+  "conflict": {
+    "version": "JANE-170",
+    "status": "SENSOR_CONFLICT",
+    "accepted": 3,
+    "required": 3,
+    "roots": [
+      "root1",
+      "root2",
+      "root3"
+    ],
+    "administrators": [
+      "admin1",
+      "admin2",
+      "admin3"
+    ],
+    "reported_conditions": [
+      "hot_battery",
+      "normal"
+    ],
+    "rejections": [],
+    "allowed_drift_ppm": null,
+    "recalibration_required": true,
+    "independent_operators_verified": false,
+    "physical_condition_verified": false,
+    "parent": "frozen_parent",
+    "jane_decision": "UNDECIDED",
+    "learning_applied": false,
+    "digest": "f689c5701dd588831bfd27095f109dec74e4d86ed72c4df78e13a4f31899f475"
+  },
+  "missing": {
+    "version": "JANE-170",
+    "status": "INSUFFICIENT_PROVENANCE",
+    "accepted": 2,
+    "required": 3,
+    "roots": [
+      "root1",
+      "root2"
+    ],
+    "administrators": [
+      "admin1",
+      "admin2"
+    ],
+    "reported_conditions": [
+      "normal"
+    ],
+    "rejections": [],
+    "allowed_drift_ppm": null,
+    "recalibration_required": true,
+    "independent_operators_verified": false,
+    "physical_condition_verified": false,
+    "parent": "frozen_parent",
+    "jane_decision": "UNDECIDED",
+    "learning_applied": false,
+    "digest": "a04b6587ca9d730df70e4404b1df6cf3fd49e5556da0ecfeda944cd2fb854b43"
+  },
+  "unknown": {
+    "version": "JANE-170",
+    "status": "UNKNOWN_CONDITION",
+    "accepted": 3,
+    "required": 3,
+    "roots": [
+      "root1",
+      "root2",
+      "root3"
+    ],
+    "administrators": [
+      "admin1",
+      "admin2",
+      "admin3"
+    ],
+    "reported_conditions": [
+      "mystery"
+    ],
+    "rejections": [],
+    "allowed_drift_ppm": null,
+    "recalibration_required": true,
+    "independent_operators_verified": false,
+    "physical_condition_verified": false,
+    "parent": "frozen_parent",
+    "jane_decision": "UNDECIDED",
+    "learning_applied": false,
+    "digest": "42406abd9a38b3b9e071e899947bae288cc3714e1552a7bbef506c6db53fc65a"
+  },
+  "ledger": "VALID_LOCAL_CHAIN"
+}
