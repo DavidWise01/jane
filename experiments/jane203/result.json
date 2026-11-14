@@ -1,0 +1,65 @@
+{
+  "verdict": "ADAPTIVE_DISCLOSURE_RECORDED",
+  "used": 6,
+  "remaining": 6,
+  "total_queries": 2,
+  "reused_subsets": 0,
+  "adaptations": 1,
+  "covered_cases": 5,
+  "holdout_cases": 8,
+  "sealed": false,
+  "root": "42263c99b3e3a72c26a081885c44a02f494dbaaa51da4be9e7259e04ad9fe672",
+  "limits": "Policy credits are illustrative only; no formal privacy, secrecy, or physical provenance guarantee.",
+  "denied": "CUMULATIVE_BUDGET_EXCEEDED",
+  "events": [
+    {
+      "n": 1,
+      "kind": "query",
+      "body": {
+        "id": "q1",
+        "model": "A",
+        "subset": [
+          "r00",
+          "r01",
+          "r02",
+          "r03"
+        ],
+        "answer": 0.75,
+        "cost": 2,
+        "overlap": 0,
+        "repeated": false
+      },
+      "hash": "12cce6a3d162506ec1602d1c46b47093225b446dc5c083e54a1785ce19aaa176"
+    },
+    {
+      "n": 2,
+      "kind": "query",
+      "body": {
+        "id": "q2",
+        "model": "B",
+        "subset": [
+          "r02",
+          "r03",
+          "r04"
+        ],
+        "answer": 0.67,
+        "cost": 4,
+        "overlap": 2,
+        "repeated": false
+      },
+      "hash": "05a82d595620a16170b70e309a0bd3e953822f7897f02a5994655a4098e14a13"
+    },
+    {
+      "n": 3,
+      "kind": "adapt",
+      "body": {
+        "model": "C",
+        "based_on": [
+          "q1",
+          "q2"
+        ]
+      },
+      "hash": "42263c99b3e3a72c26a081885c44a02f494dbaaa51da4be9e7259e04ad9fe672"
+    }
+  ]
+}
