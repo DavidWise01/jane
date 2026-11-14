@@ -1,14 +1,14 @@
 {
   "schema": "JANE_B112_FORMIC_HEX_V1",
-  "generated_at": "2026-11-14T07:06:10.471Z",
+  "generated_at": "2026-11-14T18:23:12.385Z",
   "source": "btf2/catalog.json",
-  "source_count": 2154,
-  "member_count": 2154,
-  "new_assignments": 0,
+  "source_count": 2155,
+  "member_count": 2155,
+  "new_assignments": 1,
   "radius_bound": 27,
   "sector_counts": [
     719,
-    717,
+    718,
     718
   ],
   "reserved_positions": [],
@@ -108,6 +108,16 @@
       "r": 0,
       "sector": 2,
       "ring": 1,
+      "presence": "RESERVED"
+    },
+    {
+      "repo": "DavidWise01/3bodyproblem",
+      "formic": "FORMIC-1d6d4b1388ac151a",
+      "channel": "btf2:davidwise01/3bodyproblem",
+      "q": 20,
+      "r": 7,
+      "sector": 1,
+      "ring": 27,
       "presence": "RESERVED"
     },
     {
