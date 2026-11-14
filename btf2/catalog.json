@@ -3,8 +3,8 @@
   "pin_label": "BTF2",
   "owner": "DavidWise01",
   "source": "GitHub public owner REST API",
-  "generated_at": "2026-11-14T18:32:39.944Z",
-  "count": 2155,
+  "generated_at": "2026-11-14T22:38:53.201Z",
+  "count": 2156,
   "complete": true,
   "repos": [
     {
@@ -1578,6 +1578,16 @@
       "default_branch": "main"
     },
     {
+      "name": "cern",
+      "url": "https://github.com/DavidWise01/cern",
+      "description": "",
+      "homepage": "",
+      "fork": false,
+      "archived": false,
+      "updated_at": "2026-11-14T22:06:33Z",
+      "default_branch": "main"
+    },
+    {
       "name": "chair-vs-hypercube",
       "url": "https://github.com/DavidWise01/chair-vs-hypercube",
       "description": "chair-vs-hypercube — a UD0 sphere · David Lee Wise (ROOT0)",
@@ -2974,7 +2984,7 @@
       "homepage": "",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-07-27T15:57:46Z",
+      "updated_at": "2026-11-14T19:29:38Z",
       "default_branch": "main"
     },
     {
@@ -3134,7 +3144,7 @@
       "homepage": "",
       "fork": false,
       "archived": false,
-      "updated_at": "2026-07-27T15:58:01Z",
+      "updated_at": "2026-11-14T19:29:52Z",
       "default_branch": "main"
     },
     {
