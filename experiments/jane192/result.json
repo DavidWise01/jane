@@ -1,0 +1,10 @@
+{
+  "experiment": "JANE-192",
+  "verified": "FUTURE_BEACON_FIXTURE_VERIFIED",
+  "challenge": "0e52fe55bb27df71aaaecac750ae8e67e8997284e222771e0be1aeb3c9b63edc",
+  "replay_after_restart": "REPLAY_TASK",
+  "audit_valid": true,
+  "tests": "run separately",
+  "real_world_independence_verified": false,
+  "automatic_activation": false
+}
