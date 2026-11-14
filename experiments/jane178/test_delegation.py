@@ -1,0 +1,75 @@
+import unittest,tempfile,os
+from cryptography.hazmat.primitives.asymmetric.ed25519 import Ed25519PrivateKey
+from delegation import Authority,sign_grant,public_hex,canonical,digest,demo
+class DelegationTests(unittest.TestCase):
+ def setUp(self):
+  self.r,self.a,self.b,self.c=[Ed25519PrivateKey.generate() for _ in range(4)]
+  self.auth=Authority(root_keys={'ROOT':public_hex(self.r)},root_scopes=('sensor','calibration'),depth=3)
+  for id,key in [('a',self.a),('b',self.b),('c',self.c)]:self.auth.register(id,public_hex(key))
+ def tearDown(self):self.auth.db.close()
+ def grant(self,key=None,**overrides):
+  d=dict(grant_id='g1',issuer='ROOT',subject='a',scopes=('sensor',),start=10,end=80,depth=2,parent='ROOT',nonce='n1');d.update(overrides)
+  return sign_grant(key or self.r,**d)
+ def base(self):self.assertEqual(self.auth.enroll(self.grant(),20),'GRANT_ACCEPTED')
+ def child(self,**kw):
+  d=dict(grant_id='g2',issuer='a',subject='b',scopes=('sensor',),start=20,end=60,depth=1,parent='g1',nonce='n2');d.update(kw)
+  return sign_grant(self.a,**d)
+ def test_01_demo(self):self.assertEqual(demo()['after_revoke'],'REVOKED')
+ def test_02_parent(self):self.base()
+ def test_03_child(self):self.base();self.assertEqual(self.auth.enroll(self.child(),25),'GRANT_ACCEPTED')
+ def test_04_use(self):self.base();self.auth.enroll(self.child(),25);self.assertEqual(self.auth.authorize('g2','b','sensor',30),'AUTHORIZED_FIXTURE')
+ def test_05_restricted_scope(self):self.base();self.auth.enroll(self.child(),25);self.assertEqual(self.auth.authorize('g2','b','calibration',30),'SCOPE_DENIED')
+ def test_06_wrong_subject(self):self.base();self.assertEqual(self.auth.authorize('g1','b','sensor',20),'SCOPE_DENIED')
+ def test_07_scope_escalation(self):self.base();self.assertEqual(self.auth.enroll(self.child(scopes=('calibration',)),25),'ESCALATION')
+ def test_08_start_escalation(self):self.base();self.assertEqual(self.auth.enroll(self.child(start=0),25),'ESCALATION')
+ def test_09_end_escalation(self):self.base();self.assertEqual(self.auth.enroll(self.child(end=90),25),'ESCALATION')
+ def test_10_depth_escalation(self):self.base();self.assertEqual(self.auth.enroll(self.child(depth=2),25),'ESCALATION')
+ def test_11_negative_depth(self):self.base();self.assertEqual(self.auth.enroll(self.child(depth=-1),25),'ESCALATION')
+ def test_12_bad_parent(self):self.assertEqual(self.auth.enroll(self.child(),25),'MISSING_PARENT')
+ def test_13_wrong_issuer(self):self.base();self.assertEqual(self.auth.enroll(self.child(issuer='c'),25),'BAD_SIGNATURE')
+ def test_14_bad_signature(self):self.assertEqual(self.auth.enroll(self.grant(key=self.b),20),'BAD_SIGNATURE')
+ def test_15_tamper(self):
+  g=self.grant();object.__setattr__(g,'end',90);self.assertEqual(self.auth.enroll(g,20),'BAD_SIGNATURE')
+ def test_16_future(self):self.assertEqual(self.auth.enroll(self.grant(),5),'NOT_EFFECTIVE')
+ def test_17_expired(self):self.assertEqual(self.auth.enroll(self.grant(),81),'NOT_EFFECTIVE')
+ def test_18_root_expired(self):self.assertEqual(self.auth.enroll(self.grant(start=10,end=110),101),'ROOT_EXPIRED')
+ def test_19_root_scope(self):self.assertEqual(self.auth.enroll(self.grant(scopes=('admin',)),20),'ESCALATION')
+ def test_20_duplicate_id(self):self.base();self.assertEqual(self.auth.enroll(self.grant(),20),'GRANT_ID_REPLAY')
+ def test_21_nonce(self):self.base();self.assertEqual(self.auth.enroll(self.grant(grant_id='different'),20),'NONCE_REPLAY')
+ def test_22_revoke(self):self.base();self.assertEqual(self.auth.revoke('g1','ROOT',30,self.r),'REVOKED')
+ def test_23_revoke_effect(self):self.base();self.auth.revoke('g1','ROOT',30,self.r);self.assertEqual(self.auth.authorize('g1','a','sensor',31),'REVOKED')
+ def test_24_descendant_revoked(self):self.base();self.auth.enroll(self.child(),25);self.auth.revoke('g1','ROOT',30,self.r);self.assertEqual(self.auth.authorize('g2','b','sensor',31),'REVOKED')
+ def test_25_revocation_time(self):self.base();self.auth.revoke('g1','ROOT',30,self.r);self.assertEqual(self.auth.authorize('g1','a','sensor',29),'AUTHORIZED_FIXTURE')
+ def test_26_wrong_revoker(self):self.base();self.assertEqual(self.auth.revoke('g1','a',30,self.a),'REVOCATION_UNAUTHORIZED')
+ def test_27_revoke_bad_key(self):self.base();self.assertEqual(self.auth.revoke('g1','ROOT',30,self.b),'BAD_REVOCATION_SIGNATURE')
+ def test_28_revoke_twice(self):self.base();self.auth.revoke('g1','ROOT',30,self.r);self.assertEqual(self.auth.revoke('g1','ROOT',31,self.r),'ALREADY_REVOKED')
+ def test_29_unknown_revoke(self):self.assertEqual(self.auth.revoke('missing','ROOT',1,self.r),'UNKNOWN_GRANT')
+ def test_30_audit(self):self.base();self.assertEqual(self.auth.audit(),'VALID_LOCAL_CHAIN')
+ def test_31_external_head(self):self.base();self.assertEqual(self.auth.audit('f'*64),'EXTERNAL_HEAD_MISMATCH')
+ def test_32_audit_tamper(self):self.base();self.auth.db.execute("UPDATE audit SET body='forged' WHERE seq=0");self.assertEqual(self.auth.audit(),'AUDIT_TAMPERED')
+ def test_33_frozen(self):self.assertEqual(self.auth.active_parent,'frozen_parent')
+ def test_34_key_conflict(self):
+  with self.assertRaises(ValueError):self.auth.register('a',public_hex(self.b))
+ def test_35_self_grant(self):self.assertEqual(self.auth.enroll(self.grant(subject='ROOT'),20),'INVALID_GRANT')
+ def test_36_bad_interval(self):self.assertEqual(self.auth.enroll(self.grant(start=50,end=20),30),'INVALID_INTERVAL')
+ def test_37_empty_scope(self):self.assertEqual(self.auth.enroll(self.grant(scopes=()),20),'INVALID_SCOPE')
+ def test_38_nested(self):
+  self.base();self.auth.enroll(self.child(),25)
+  g=sign_grant(self.b,grant_id='g3',issuer='b',subject='c',scopes=('sensor',),start=30,end=40,depth=0,parent='g2',nonce='n3')
+  self.assertEqual(self.auth.enroll(g,35),'GRANT_ACCEPTED');self.assertEqual(self.auth.authorize('g3','c','sensor',35),'AUTHORIZED_FIXTURE')
+ def test_39_cycle(self):
+  self.base();self.auth.enroll(self.child(),25)
+  g=sign_grant(self.b,grant_id='g3',issuer='b',subject='a',scopes=('sensor',),start=30,end=40,depth=0,parent='g2',nonce='n3')
+  self.assertEqual(self.auth.enroll(g,35),'IDENTITY_CYCLE')
+ def test_40_parent_invalidated(self):self.base();self.auth.revoke('g1','ROOT',30,self.r);self.assertEqual(self.auth.enroll(self.child(),31),'REVOKED')
+ def test_41_restart(self):
+  f=tempfile.NamedTemporaryFile(delete=False);f.close()
+  try:
+   first=Authority(f.name,root_keys={'ROOT':public_hex(self.r)});self.assertEqual(first.enroll(self.grant(),20),'GRANT_ACCEPTED');first.db.close()
+   second=Authority(f.name,root_keys={'ROOT':public_hex(self.r)});self.assertEqual(second.enroll(self.grant(grant_id='g-other'),20),'NONCE_REPLAY');second.db.close()
+  finally:os.unlink(f.name)
+ def test_42_signing(self):self.assertEqual(len(self.grant().signature),128)
+ def test_43_hash(self):self.assertEqual(len(digest({'v':1})),64)
+ def test_44_root_expiration(self):self.base();self.assertEqual(self.auth.authorize('g1','a','sensor',101),'EXPIRED_ANCESTRY')
+ def test_45_late_use(self):self.base();self.assertEqual(self.auth.authorize('g1','a','sensor',90),'EXPIRED_ANCESTRY')
+if __name__=='__main__':unittest.main(verbosity=2)
