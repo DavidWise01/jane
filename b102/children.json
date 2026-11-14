@@ -1,6 +1,6 @@
 {
   "schema": "JANE_B102_FAMILY_DISCOVERY_V1",
-  "updated_at": "2026-11-14T19:51:24.793Z",
+  "updated_at": "2026-11-14T22:29:49.164Z",
   "scan_scope": "PUBLIC_OWNER_REPOSITORIES",
   "members": [
     {
@@ -1100,6 +1100,13 @@
       "channel": "btf2:davidwise01/cellular-automata",
       "observer": "FORMIC-00103ab8629347e5",
       "url": "https://github.com/DavidWise01/cellular-automata",
+      "presence": "RESERVED"
+    },
+    {
+      "repo": "DavidWise01/cern",
+      "channel": "btf2:davidwise01/cern",
+      "observer": "FORMIC-6639770fc4a9b265",
+      "url": "https://github.com/DavidWise01/cern",
       "presence": "RESERVED"
     },
     {
@@ -15089,8 +15096,8 @@
       "presence": "RESERVED"
     }
   ],
-  "first_seen_total": 2155,
-  "new_children_this_run": 0,
-  "discovery_events": 2155,
+  "first_seen_total": 2156,
+  "new_children_this_run": 1,
+  "discovery_events": 2156,
   "note": "A child identity is not a continuously executing AI process."
 }

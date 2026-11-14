@@ -1,6 +1,6 @@
 {
   "schema": "JANE_B103_V1",
-  "generated_at": "2026-11-14T18:10:12.617Z",
+  "generated_at": "2026-11-14T22:29:49.211Z",
   "domain_owner": "USER_DECLARED",
   "persistence_policy": "ALWAYS_ON",
   "bridge": {
@@ -8,7 +8,7 @@
     "state": "HTTP_ERROR",
     "http_status": 404,
     "page_title": null,
-    "checked_at": "2026-11-14T18:10:12.617Z"
+    "checked_at": "2026-11-14T22:29:49.211Z"
   },
   "children": [
     {
@@ -1266,6 +1266,14 @@
       "presence": "RESERVED",
       "first_seen": "2026-11-03T02:51:53.797Z",
       "home": "https://github.com/DavidWise01/cellular-automata"
+    },
+    {
+      "repo": "DavidWise01/cern",
+      "formic": "FORMIC-6639770fc4a9b265",
+      "channel": "btf2:davidwise01/cern",
+      "presence": "RESERVED",
+      "first_seen": "2026-11-14T22:29:49.164Z",
+      "home": "https://github.com/DavidWise01/cern"
     },
     {
       "repo": "DavidWise01/chair-vs-hypercube",
