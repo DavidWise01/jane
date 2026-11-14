@@ -1,0 +1,38 @@
+{
+  "experiment": "JANE-164",
+  "tests_passed": 39,
+  "tests_run": 39,
+  "complete": {
+    "status": "ANCHORED_MATCH",
+    "accepted": true,
+    "claimed_roots": 3,
+    "declared_admins": 3,
+    "highest_anchored_sequence": 6,
+    "returned_end": 6,
+    "independent_operators_verified": false,
+    "physical_execution_verified": false,
+    "jane_activation": false
+  },
+  "suffix_truncated": {
+    "status": "CLEAN_SUFFIX_TRUNCATION",
+    "accepted": false,
+    "expected_end": 6,
+    "returned_end": 4
+  },
+  "extended": {
+    "status": "VALID_EXTENSION",
+    "accepted": true,
+    "claimed_roots": 3,
+    "declared_admins": 3,
+    "highest_anchored_sequence": 6,
+    "returned_end": 9,
+    "independent_operators_verified": false,
+    "physical_execution_verified": false,
+    "jane_activation": false
+  },
+  "notes": [
+    "fixture custody database separate from local returned history",
+    "independent real-world operators not verified",
+    "no Jane activation"
+  ]
+}
