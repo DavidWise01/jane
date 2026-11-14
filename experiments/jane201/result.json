@@ -1,0 +1,72 @@
+{
+  "cases": {
+    "adapt": {
+      "audit_head": "fd7ca854f157407b19b87fda3438614c2d2c191f6860c58d5d50827cd2469f20",
+      "development_evaluations": 2,
+      "development_reused": true,
+      "development_selection_after_feedback": true,
+      "event_count": 11,
+      "final_disclosures": 1,
+      "final_evaluations": 1,
+      "final_exposure_preseal": [],
+      "issues": [
+        "model development after final exposure"
+      ],
+      "limits": "Local declared chronology and membership; no external custody or unseen access proof.",
+      "overlap_member_hashes": [],
+      "verdict": "FINAL_TEST_WITHHELD"
+    },
+    "leaked": {
+      "audit_head": "c9c40a2d734f387062484074797f4088c688b3808f245132391439234b7f600e",
+      "development_evaluations": 2,
+      "development_reused": true,
+      "development_selection_after_feedback": true,
+      "event_count": 12,
+      "final_disclosures": 1,
+      "final_evaluations": 1,
+      "final_exposure_preseal": [
+        3,
+        4
+      ],
+      "issues": [
+        "final set exposed before seal"
+      ],
+      "limits": "Local declared chronology and membership; no external custody or unseen access proof.",
+      "overlap_member_hashes": [],
+      "verdict": "FINAL_TEST_WITHHELD"
+    },
+    "retest": {
+      "audit_head": "fad7c2fb868fd5c24ce41b49f24090df70d443368f69ccf6f694ed9126689e4d",
+      "development_evaluations": 2,
+      "development_reused": true,
+      "development_selection_after_feedback": true,
+      "event_count": 11,
+      "final_disclosures": 1,
+      "final_evaluations": 2,
+      "final_exposure_preseal": [],
+      "issues": [
+        "repeated final evaluation",
+        "premature final disclosure"
+      ],
+      "limits": "Local declared chronology and membership; no external custody or unseen access proof.",
+      "overlap_member_hashes": [],
+      "verdict": "FINAL_TEST_WITHHELD"
+    },
+    "sealed": {
+      "audit_head": "830f082aa10819ec330b3d214ebc0c0473a3dff4e9d7ae5c03fe3eebe037ff8c",
+      "development_evaluations": 2,
+      "development_reused": true,
+      "development_selection_after_feedback": true,
+      "event_count": 10,
+      "final_disclosures": 1,
+      "final_evaluations": 1,
+      "final_exposure_preseal": [],
+      "issues": [],
+      "limits": "Local declared chronology and membership; no external custody or unseen access proof.",
+      "overlap_member_hashes": [],
+      "verdict": "SEALED_FINAL_FIXTURE"
+    }
+  },
+  "experiment": "JANE 201",
+  "invariant": "Holdout reuse != independent validation"
+}
