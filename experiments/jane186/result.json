@@ -1,0 +1,33 @@
+{
+  "status": "ACK_EVIDENCE_GAP",
+  "items": [
+    {
+      "seq": 1,
+      "status": "DELIVERED_ON_TIME",
+      "deadline": [
+        400,
+        410
+      ]
+    },
+    {
+      "seq": 2,
+      "status": "ACK_EVIDENCE_GAP",
+      "deadline": [
+        400,
+        410
+      ]
+    },
+    {
+      "seq": 3,
+      "status": "DELIVERED_ON_TIME",
+      "deadline": [
+        400,
+        410
+      ]
+    }
+  ],
+  "active": "frozen_parent",
+  "learning_applied": false,
+  "cause": "NOT_ESTABLISHED",
+  "audit_valid": true
+}
