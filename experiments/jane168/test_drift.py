@@ -1,0 +1,62 @@
+import unittest
+from dataclasses import replace
+from drift import Policy,Observation,DriftLedger,Decision,fixture,demo,hexdigest
+class DriftTests(unittest.TestCase):
+    def setUp(self):self.p=Policy();self.a=fixture(0,0,0);self.l=DriftLedger(self.p,self.a)
+    def test_nominal(self):self.assertEqual(self.l.check(fixture(1,1000,1)).status,'CALIBRATION_CONSISTENT_FIXTURE')
+    def test_jump(self):self.assertEqual(self.l.check(fixture(1,1000,50)).status,'CLOCK_JUMP')
+    def test_expired(self):self.assertEqual(self.l.check(fixture(1,30001,0)).status,'CALIBRATION_EXPIRED')
+    def test_uncertainty(self):self.assertEqual(DriftLedger(Policy(max_uncertainty_ms=2),self.a).forecast(10000).status,'UNCERTAINTY_EXPIRED')
+    def test_fresh(self):self.assertEqual(self.l.forecast(10000).status,'WITHIN_DECLARED_ENVELOPE')
+    def test_growth(self):self.assertEqual(self.l.forecast(10000).predicted_uncertainty_ms,3)
+    def test_zero_growth(self):self.assertEqual(self.l.forecast(0).predicted_uncertainty_ms,2)
+    def test_future(self):self.assertEqual(self.l.forecast(30001).status,'CALIBRATION_EXPIRED')
+    def test_replay(self):self.assertEqual(self.l.check(fixture(0,1,0)).status,'REPLAY_OR_REORDER')
+    def test_reversed_ref(self):self.assertEqual(self.l.check(fixture(1,0,0)).status,'CLOCK_REVERSAL')
+    def test_noninteger_now(self):
+        with self.assertRaises(ValueError):self.l.forecast(0.5)
+    def test_negative_now(self):
+        with self.assertRaises(ValueError):self.l.forecast(-1)
+    def test_invalid_policy(self):
+        with self.assertRaises(ValueError):Policy(max_age_ms=-1)
+    def test_bool_policy(self):
+        with self.assertRaises(ValueError):Policy(max_age_ms=True)
+    def test_invalid_obs_time(self):
+        with self.assertRaises(ValueError):fixture(1,-1,0)
+    def test_invalid_obs_uncertainty(self):
+        with self.assertRaises(ValueError):fixture(1,0,0,-1)
+    def test_invalid_obs_hash(self):
+        with self.assertRaises(ValueError):Observation(1,0,0,2,'x','bogus')
+    def test_invalid_obs_source(self):
+        with self.assertRaises(ValueError):Observation(1,0,0,2,'','a'*64)
+    def test_invalid_obs_seq(self):
+        with self.assertRaises(ValueError):fixture(-1,0,0)
+    def test_bad_obs_type(self):
+        with self.assertRaises(ValueError):Observation(1,1.1,0,0,'x','a'*64)
+    def test_no_activation(self):self.assertEqual(self.l.active,'frozen_parent')
+    def test_no_promotion(self):self.assertFalse(demo()['learning_applied'])
+    def test_no_independent_roots(self):self.assertFalse(demo()['independent_custodians_verified'])
+    def test_result_nominal(self):self.assertEqual(demo()['cases']['nominal']['decision']['status'],'CALIBRATION_CONSISTENT_FIXTURE')
+    def test_result_jump(self):self.assertEqual(demo()['cases']['jump']['decision']['status'],'CLOCK_JUMP')
+    def test_result_expired(self):self.assertEqual(demo()['cases']['expired']['decision']['status'],'CALIBRATION_EXPIRED')
+    def test_ledger(self):self.assertEqual(self.l.audit(),'VALID_LOCAL_CHAIN')
+    def test_ledger_external(self):self.assertEqual(self.l.audit('f'*64),'EXTERNAL_HEAD_MISMATCH')
+    def test_ledger_external_match(self):self.assertEqual(self.l.audit(self.l.log[-1]['hash']),'VALID_LOCAL_CHAIN')
+    def test_tamper(self):self.l.log[0]['kind']='bad';self.assertEqual(self.l.audit(),'TAMPERED')
+    def test_tamper_second(self):self.l.check(fixture(1,1000,0));self.l.log[1]['payload']['observation']['offset_ms']=123;self.assertEqual(self.l.audit(),'TAMPERED')
+    def test_failed_not_baseline(self):self.l.check(fixture(1,1000,50));self.assertEqual(len(self.l.history),1)
+    def test_success_baseline(self):self.l.check(fixture(1,1000,0));self.assertEqual(len(self.l.history),2)
+    def test_failed_still_logged(self):self.l.check(fixture(1,1000,50));self.assertEqual(len(self.l.log),2)
+    def test_return_to_good(self):self.l.check(fixture(1,1000,50));self.assertEqual(self.l.check(fixture(2,2000,0)).status,'CALIBRATION_CONSISTENT_FIXTURE')
+    def test_max_age_equal(self):self.assertNotEqual(self.l.forecast(30000).status,'CALIBRATION_EXPIRED')
+    def test_offset_symmetric(self):self.assertEqual(self.l.check(fixture(1,1000,-50)).status,'CLOCK_JUMP')
+    def test_floor_slack(self):self.assertEqual(self.l.check(fixture(1,1000,7)).status,'CALIBRATION_CONSISTENT_FIXTURE')
+    def test_above_slack(self):self.assertEqual(self.l.check(fixture(1,1000,9)).status,'CLOCK_JUMP')
+    def test_deterministic(self):self.assertEqual(demo(),demo())
+    def test_hash_len(self):self.assertEqual(len(hexdigest({'x':1})),64)
+    def test_no_future_causality(self):self.assertEqual(self.l.forecast(1).elapsed_ms,1)
+    def test_accepted_followup(self):self.l.check(fixture(1,1000,0));self.assertEqual(self.l.forecast(1000).predicted_uncertainty_ms,2)
+    def test_audit_after_jump(self):self.l.check(fixture(1,1000,50));self.assertEqual(self.l.audit(),'VALID_LOCAL_CHAIN')
+    def test_expired_not_new_baseline(self):self.l.check(fixture(1,40000,0));self.assertEqual(self.l.history[-1],self.a)
+    def test_uncertainty_not_tightened(self):self.assertGreaterEqual(self.l.forecast(10000).predicted_uncertainty_ms,self.a.uncertainty_ms)
+if __name__=='__main__':unittest.main(verbosity=2)
