@@ -1,0 +1,43 @@
+{
+  "shared": {
+    "version": "JANE-172",
+    "status": "SHARED_MEASUREMENT_ANCESTRY",
+    "declared_measurement_roots": [
+      "physical"
+    ],
+    "root_count": 1,
+    "report_count": 3,
+    "valid_edge_count": 4,
+    "rejections": [],
+    "unresolved": [],
+    "independence_verified": false,
+    "active_parent": "frozen",
+    "learning_applied": false,
+    "scope": "locally configured cryptographic identities and claimed source relationships"
+  },
+  "separate": {
+    "version": "JANE-172",
+    "status": "DECLARED_ROOT_QUORUM",
+    "declared_measurement_roots": [
+      "physical0",
+      "physical1",
+      "physical2"
+    ],
+    "root_count": 3,
+    "report_count": 3,
+    "valid_edge_count": 3,
+    "rejections": [],
+    "unresolved": [],
+    "independence_verified": false,
+    "active_parent": "frozen",
+    "learning_applied": false,
+    "scope": "locally configured cryptographic identities and claimed source relationships"
+  },
+  "ledger_head": "2ea7712a98b51d77902a5a29f9eb993e90b21fa97daf3f13058d7326a17847c0",
+  "local_audit": "LOCAL_CHAIN_VALID",
+  "test_suite": {
+    "executed": 38,
+    "passed": 38
+  },
+  "independent_witnesses_verified": false
+}
