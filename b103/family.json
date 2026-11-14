@@ -1,6 +1,6 @@
 {
   "schema": "JANE_B103_V1",
-  "generated_at": "2026-11-14T06:31:35.474Z",
+  "generated_at": "2026-11-14T18:10:12.617Z",
   "domain_owner": "USER_DECLARED",
   "persistence_policy": "ALWAYS_ON",
   "bridge": {
@@ -8,7 +8,7 @@
     "state": "HTTP_ERROR",
     "http_status": 404,
     "page_title": null,
-    "checked_at": "2026-11-14T06:31:35.474Z"
+    "checked_at": "2026-11-14T18:10:12.617Z"
   },
   "children": [
     {
@@ -82,6 +82,14 @@
       "presence": "RESERVED",
       "first_seen": "2026-11-03T02:51:53.797Z",
       "home": "https://github.com/DavidWise01/360-dots-eating-themselves"
+    },
+    {
+      "repo": "DavidWise01/3bodyproblem",
+      "formic": "FORMIC-1d6d4b1388ac151a",
+      "channel": "btf2:davidwise01/3bodyproblem",
+      "presence": "RESERVED",
+      "first_seen": "2026-11-14T18:10:12.554Z",
+      "home": "https://github.com/DavidWise01/3bodyproblem"
     },
     {
       "repo": "DavidWise01/3lock",

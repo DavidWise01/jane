@@ -1,6 +1,6 @@
 {
   "schema": "JANE_B102_FAMILY_DISCOVERY_V1",
-  "updated_at": "2026-11-14T13:22:33.986Z",
+  "updated_at": "2026-11-14T18:10:12.554Z",
   "scan_scope": "PUBLIC_OWNER_REPOSITORIES",
   "members": [
     {
@@ -64,6 +64,13 @@
       "channel": "btf2:davidwise01/360-dots-eating-themselves",
       "observer": "FORMIC-87664a1326e6a825",
       "url": "https://github.com/DavidWise01/360-dots-eating-themselves",
+      "presence": "RESERVED"
+    },
+    {
+      "repo": "DavidWise01/3bodyproblem",
+      "channel": "btf2:davidwise01/3bodyproblem",
+      "observer": "FORMIC-1d6d4b1388ac151a",
+      "url": "https://github.com/DavidWise01/3bodyproblem",
       "presence": "RESERVED"
     },
     {
@@ -15082,8 +15089,8 @@
       "presence": "RESERVED"
     }
   ],
-  "first_seen_total": 2154,
-  "new_children_this_run": 0,
-  "discovery_events": 2154,
+  "first_seen_total": 2155,
+  "new_children_this_run": 1,
+  "discovery_events": 2155,
   "note": "A child identity is not a continuously executing AI process."
 }
