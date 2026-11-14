@@ -1,0 +1,23 @@
+{
+  "experiment": "JANE-187",
+  "gap": {
+    "status": "WATERMARK_COVERAGE_GAP",
+    "missing": [
+      2
+    ],
+    "signed_watermark": 3,
+    "active": "frozen_parent",
+    "independent_physical_custody": false,
+    "automatic_learning": false
+  },
+  "complete": {
+    "status": "COMPLETE_SIGNED_INBOX_FIXTURE",
+    "covered": 3,
+    "through": 3,
+    "active": "frozen_parent",
+    "independent_physical_custody": false,
+    "automatic_learning": false
+  },
+  "audit_chain_valid": true,
+  "scope": "signed local synthetic custody fixtures; not proof of physical delivery"
+}
