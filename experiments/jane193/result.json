@@ -1,0 +1,13 @@
+{
+  "audit": "VALID_LOCAL_CHAIN",
+  "experiment": "JANE-193",
+  "last_head": "44facafd2675068f8f6c9ed5229af26e382411f1fc2d41a177e013cf1fc6ba2c",
+  "scenario_statuses": {
+    "conflict": "AVAILABILITY_CONFLICT",
+    "missing": "NOT_OBSERVED_BY_FIXTURE_QUORUM",
+    "outage": "NETWORK_UNAVAILABLE_OR_WITHHELD",
+    "published": "PUBLISHED_FIXTURE_OBSERVED"
+  },
+  "scope": "synthetic signed availability claims; absence does not prove deliberate withholding",
+  "tests": "executed separately"
+}
