@@ -1,0 +1,19 @@
+{
+  "result": {
+    "status": "AUTHORIZED_REPLAY",
+    "principal": "steward",
+    "authority_ancestry": "fixture-admin-01",
+    "scope": "calibration.clock",
+    "evidence_digest": "cbb96de0a3622566fdff68ac9924924d7a81c8a61ec8330ddaa1357b1fc2638e",
+    "parent_digest": "4788cda72f8deb54cb435bed1c33c8c766f696b753dc12f190cf98287cf589cb",
+    "policy_digest": "f17bafd83170188487858251acfcd985b66e164450b84501307574663d8eeabb",
+    "revision_digest": "690e7e5f1fccd683877638d081cf3df4bf971af4e22c005e407dab65d3ad7ea3",
+    "old_verdict": "ACCEPT",
+    "new_verdict": "REJECT",
+    "policy_induced_change": true,
+    "active_policy": "4788cda72f8deb54cb435bed1c33c8c766f696b753dc12f190cf98287cf589cb",
+    "policy_activated": false,
+    "independent_authority_verified": false
+  },
+  "audit": "LOCAL_CHAIN_VALID"
+}
