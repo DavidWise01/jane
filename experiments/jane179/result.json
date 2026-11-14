@@ -1,0 +1,13 @@
+{
+  "experiment": "JANE-179",
+  "before": "ACCEPTED_FIXTURE",
+  "compromise": "COMPROMISE_RECORDED",
+  "quarantined": "COMPROMISED_KEY_QUARANTINED",
+  "recovery": "RECOVERED_SAME_IDENTITY",
+  "new_epoch_decision": "ACCEPTED_FIXTURE",
+  "audit": "VALID_LOCAL_CHAIN",
+  "head": "6b11ab3a30d15295fa3c058f89002ac6335571dad4541ca26e695f888353d427",
+  "active_parent": "frozen",
+  "independence_verified": false,
+  "physical_compromise_verified": false
+}
