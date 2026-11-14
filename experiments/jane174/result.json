@@ -1,0 +1,49 @@
+{
+  "result": {
+    "experiment": "JANE-174",
+    "status": "REPRODUCED_DECLARED_FIXTURE",
+    "policy": {
+      "procedure": "capture-v1",
+      "tolerance_milli": 5,
+      "max_age": 300,
+      "required_roots": 2,
+      "max_receipts": 32
+    },
+    "valid_acquisitions": 3,
+    "rejected": [],
+    "declared_independent_support": [
+      {
+        "device": "A",
+        "run": "A-001",
+        "roots": [
+          "instrument-A"
+        ],
+        "value_milli": 1000
+      },
+      {
+        "device": "B",
+        "run": "B-001",
+        "roots": [
+          "instrument-B"
+        ],
+        "value_milli": 1002
+      },
+      {
+        "device": "C",
+        "run": "C-001",
+        "roots": [
+          "instrument-C"
+        ],
+        "value_milli": 999
+      }
+    ],
+    "learning_applied": false,
+    "active": "FROZEN_PARENT",
+    "physical_independence_verified": false,
+    "scope": "signed local fixtures; no physical device or external custodian verification",
+    "evidence_digest": "19db92fd40a7f589baa45606a11ffb40cbe7405aad18b0b508e45fa197956ccd",
+    "local_head": "0f74b2a65b54507927198e2a0ff043f672ec25b9015e0c34723e43cad5707f0e"
+  },
+  "ledger_check": "VALID_LOCAL_CHAIN",
+  "receipt_count": 3
+}
