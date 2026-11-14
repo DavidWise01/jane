@@ -1,0 +1,9 @@
+{
+  "experiment": "JANE-189",
+  "status": "FRESH_EFFECT_FIXTURE_CORROBORATED",
+  "replay": "REPLAY",
+  "audit_ok": true,
+  "fixture_only": true,
+  "active": "frozen_parent",
+  "learning_applied": false
+}
