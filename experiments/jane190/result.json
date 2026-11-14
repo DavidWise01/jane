@@ -1,0 +1,11 @@
+{
+  "experiment": "JANE-190",
+  "valid": "CHRONOLOGY_CONSISTENT_FIXTURE",
+  "replay": "REPLAY",
+  "replay_after_restart": "REPLAY",
+  "reported_leak": "PREMATURE_DISCLOSURE_REPORTED",
+  "chain": "VALID_LOCAL_CHAIN",
+  "active": "frozen_parent",
+  "independent_witnesses_verified": false,
+  "physical_execution_verified": false
+}
