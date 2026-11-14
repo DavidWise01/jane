@@ -1,0 +1,41 @@
+{
+  "version": "JANE-195",
+  "status": "SELECTION_COVERAGE_IMBALANCE",
+  "population_rounds": 16,
+  "selected_rounds": 8,
+  "by_band": {
+    "day": {
+      "population": 8,
+      "selected": 6,
+      "observable": 6,
+      "published": 4,
+      "not_observed": 2,
+      "outages": 0,
+      "coverage": 0.75
+    },
+    "night": {
+      "population": 8,
+      "selected": 2,
+      "observable": 2,
+      "published": 1,
+      "not_observed": 1,
+      "outages": 0,
+      "coverage": 0.25
+    }
+  },
+  "uncovered_bands": [],
+  "unequal_selection_rates": true,
+  "selected_observers": 3,
+  "declared_observation_roots": 2,
+  "shared_ancestry": true,
+  "population_published_fraction_bounds": [
+    0.3125,
+    0.8125
+  ],
+  "scope": "finite declared population, synthetic observer declarations",
+  "causal_claim": false,
+  "independence_established": false,
+  "active_parent": "frozen",
+  "policy_digest": "c2c616b5e719e79d29af03164e9fbf668324e427e86f88af1fa79fdc03f13c87",
+  "digest": "dacac56535c01c71113271a89cc7f19f5dea375635c8fc9f13d84a1d046e5b4d"
+}
