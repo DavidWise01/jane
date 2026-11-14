@@ -1,18 +1,19 @@
 {
   "schema": "JANE_B113_GRANDMOTHER_CONTINUITY_V1",
-  "generated_at": "2026-11-14T07:06:10.529Z",
+  "generated_at": "2026-11-14T18:32:40.245Z",
   "source": "B112 stable hex + B102 append-only discovery events",
   "scope": "PUBLIC_REPOS_ONLY",
-  "member_count": 2154,
+  "member_count": 2155,
   "cohorts": {
     "ARRIVAL_2026-11-12": 1,
     "ARRIVAL_2026-11-03": 2147,
     "ARRIVAL_2026-11-09": 2,
+    "ARRIVAL_2026-11-14": 1,
     "ARRIVAL_2026-11-11": 1,
     "ARRIVAL_2026-11-13": 1,
     "ARRIVAL_2026-11-06": 2
   },
-  "unknown_lineage_count": 2154,
+  "unknown_lineage_count": 2155,
   "members": [
     {
       "repo": "DavidWise01/-we-",
@@ -170,6 +171,24 @@
       },
       "first_seen": "2026-11-03T02:51:53.797Z",
       "generation": "ARRIVAL_2026-11-03",
+      "lineage": {
+        "parent_repo": null,
+        "parentage": "UNKNOWN"
+      },
+      "status": "OBSERVED_LOGICAL_IDENTITY"
+    },
+    {
+      "repo": "DavidWise01/3bodyproblem",
+      "formic": "FORMIC-1d6d4b1388ac151a",
+      "channel": "btf2:davidwise01/3bodyproblem",
+      "presence": "RESERVED",
+      "hex": {
+        "q": 20,
+        "r": 7,
+        "sector": 1
+      },
+      "first_seen": "2026-11-14T18:10:12.554Z",
+      "generation": "ARRIVAL_2026-11-14",
       "lineage": {
         "parent_repo": null,
         "parentage": "UNKNOWN"
