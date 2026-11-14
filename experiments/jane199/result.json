@@ -1,0 +1,83 @@
+{
+  "result": {
+    "experiment": "JANE-199",
+    "verdict": "PROXY_CAUSAL_NONIDENTIFIABILITY",
+    "frozen_digest": "d80574afa642272df3ef29b68195dd9d54291a235d16150ce3cb232bc2d1fc15",
+    "population": 16,
+    "selected": 8,
+    "missing": 8,
+    "proxy_recorded": 16,
+    "observed_successes": 5,
+    "assumption_free_bounds": {
+      "lower": {
+        "numerator": 5,
+        "denominator": 16,
+        "percent": 31.25
+      },
+      "upper": {
+        "numerator": 13,
+        "denominator": 16,
+        "percent": 81.25
+      }
+    },
+    "calibration": {
+      "rows": 8,
+      "root": "synthetic-calibration",
+      "upstream": "shared-observed-corpus",
+      "coverage": "SELECTED_ONLY",
+      "independent_custody_verified": false
+    },
+    "candidates": [
+      {
+        "name": "A_proxy_reliable",
+        "compatible": true,
+        "candidate_rate": {
+          "numerator": 5,
+          "denominator": 16,
+          "percent": 31.25
+        },
+        "observed_proxy_accuracy": {
+          "numerator": 1,
+          "denominator": 1,
+          "percent": 100.0
+        },
+        "unobserved_proxy_accuracy_HYPOTHETICAL": {
+          "numerator": 1,
+          "denominator": 1,
+          "percent": 100.0
+        },
+        "calibration_agrees": true,
+        "ancestry": "synthetic-root-A",
+        "candidate_digest": "62731a2d410e19cfc4a029f309b6d662bf981c1e74ab4a8f86cc3bb8661f3252"
+      },
+      {
+        "name": "B_proxy_misleading",
+        "compatible": true,
+        "candidate_rate": {
+          "numerator": 13,
+          "denominator": 16,
+          "percent": 81.25
+        },
+        "observed_proxy_accuracy": {
+          "numerator": 1,
+          "denominator": 1,
+          "percent": 100.0
+        },
+        "unobserved_proxy_accuracy_HYPOTHETICAL": {
+          "numerator": 0,
+          "denominator": 1,
+          "percent": 0.0
+        },
+        "calibration_agrees": true,
+        "ancestry": "synthetic-root-B",
+        "candidate_digest": "5eb466a708ff21d609cf044c331e97d687d82a0b294a6d68bc9501da83c659b2"
+      }
+    ],
+    "causal_identified": false,
+    "parent": "FROZEN",
+    "learning_applied": false,
+    "warning": "Proxy accuracy on observed records does not validate proxy errors on missing records. Synthetic fixtures only.",
+    "digest": "da78b207edcadaac883cdce95ecfab2b732428b2931430610964ba35d45997e0"
+  },
+  "audit_status": "VALID_LOCAL_CHAIN"
+}
