@@ -1,0 +1,8 @@
+{
+  "experiment": "JANE-191",
+  "valid": "WITNESSED_REVEAL_FIXTURE",
+  "replay": "REPLAY",
+  "reported_early_disclosure": "PREMATURE_DISCLOSURE_REPORTED",
+  "custody_independence": "UNVERIFIED_FIXTURE",
+  "active_parent": "FROZEN"
+}
