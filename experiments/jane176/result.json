@@ -1,0 +1,36 @@
+{
+  "result": {
+    "experiment": "JANE-176",
+    "invariant": "unchanged evidence != unchanged interpretation",
+    "evidence_digest": "5b8103480928454f1eb5afac6a15a81aeb08df651157b17334caf807af96e188",
+    "old": {
+      "policy_version": "v1",
+      "policy_digest": "3d5f65e3d94b532a3b0e44fcd1b4ab2713b19345ccab658f112704f0471fd832",
+      "evidence_digest": "5b8103480928454f1eb5afac6a15a81aeb08df651157b17334caf807af96e188",
+      "delta": 3,
+      "failures": [],
+      "verdict": "DECLARED_FIXTURE_MATCH",
+      "scope": "declared synthetic evidence; not physical reproduction"
+    },
+    "new": {
+      "policy_version": "v2",
+      "policy_digest": "ffbb1c1c84274e0e228a4102428db9d387c9be49736f846dfd93fa6d06579412",
+      "evidence_digest": "5b8103480928454f1eb5afac6a15a81aeb08df651157b17334caf807af96e188",
+      "delta": 3,
+      "failures": [
+        "OUTSIDE_TOLERANCE"
+      ],
+      "verdict": "REJECTED",
+      "scope": "declared synthetic evidence; not physical reproduction"
+    },
+    "policy_changed": true,
+    "verdict_changed": true,
+    "status": "POLICY_INDUCED_VERDICT_CHANGE",
+    "active_parent": "FROZEN",
+    "learning_applied": false,
+    "witness_independence_verified": false,
+    "result_digest": "733cff9c7866c6693075430c9c9ac9d7e3c54f49137482d3140c534795882448"
+  },
+  "ledger_verification": "VALID_LOCAL_CHAIN",
+  "ledger_head": "7d89b82843640e5706296fed422f05acfa825a718bc6d5282f7c5c0b2c97bd0d"
+}
