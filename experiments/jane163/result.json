@@ -1,0 +1,58 @@
+{
+  "matched": {
+    "version": "JANE-163",
+    "status": "MATCHED_FIXTURE_CUSTODY",
+    "accepted": 3,
+    "rejected": [],
+    "claimed_independent_admins": 3,
+    "real_independence_verified": false,
+    "conflicts": [],
+    "local_log_mismatches": [],
+    "missing_sequences": [],
+    "suffix_truncation": false,
+    "expected_end": 6,
+    "active_parent": "FROZEN",
+    "jane_learning_applied": false,
+    "scope": "local fixture with configured operator claims",
+    "digest": "6f4f93265416357e02ed035201011978e84eae4f4548dae9eac4e0c70cf0093e"
+  },
+  "two_custodians": {
+    "version": "JANE-163",
+    "status": "INSUFFICIENT_DECLARED_CUSTODY",
+    "accepted": 2,
+    "rejected": [],
+    "claimed_independent_admins": 2,
+    "real_independence_verified": false,
+    "conflicts": [],
+    "local_log_mismatches": [],
+    "missing_sequences": [],
+    "suffix_truncation": false,
+    "expected_end": 6,
+    "active_parent": "FROZEN",
+    "jane_learning_applied": false,
+    "scope": "local fixture with configured operator claims",
+    "digest": "c887fd3082140309a0945f9d7f6435d1e46d7cf8d7397f64874b608b287f2226"
+  },
+  "suffix_truncated": {
+    "version": "JANE-163",
+    "status": "TRUNCATED_OR_MISSING_RANGE",
+    "accepted": 3,
+    "rejected": [],
+    "claimed_independent_admins": 3,
+    "real_independence_verified": false,
+    "conflicts": [],
+    "local_log_mismatches": [],
+    "missing_sequences": [
+      5,
+      6
+    ],
+    "suffix_truncation": true,
+    "expected_end": 6,
+    "active_parent": "FROZEN",
+    "jane_learning_applied": false,
+    "scope": "local fixture with configured operator claims",
+    "digest": "87bc2d4897204b0a69c1209f9bcbfb62194d790143c5a0d952e879984224d84d"
+  },
+  "ledger": "VALID_LOCAL_CHAIN",
+  "tests": "run test_witness.py"
+}
