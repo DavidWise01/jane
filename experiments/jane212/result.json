@@ -1,0 +1,90 @@
+{
+  "experiment": 212,
+  "results": {
+    "altered": {
+      "altered": [
+        3
+      ],
+      "executed": 3,
+      "limitation": "Signed local witnesses cannot establish that all real executions were captured.",
+      "missing_execution": [],
+      "omitted": [],
+      "planned": 3,
+      "reported": 3,
+      "unplanned": [],
+      "verdict": "REPORTED_RESULT_INCONSISTENT",
+      "witness_roots": [
+        "alpha",
+        "beta"
+      ]
+    },
+    "complete": {
+      "altered": [],
+      "executed": 3,
+      "limitation": "Signed local witnesses cannot establish that all real executions were captured.",
+      "missing_execution": [],
+      "omitted": [],
+      "planned": 3,
+      "reported": 3,
+      "unplanned": [],
+      "verdict": "DECLARED_SEARCH_CONSISTENT_FIXTURE",
+      "witness_roots": [
+        "alpha",
+        "beta"
+      ]
+    },
+    "missing": {
+      "altered": [],
+      "executed": 2,
+      "limitation": "Signed local witnesses cannot establish that all real executions were captured.",
+      "missing_execution": [
+        3
+      ],
+      "omitted": [],
+      "planned": 3,
+      "reported": 2,
+      "unplanned": [],
+      "verdict": "PLANNED_EXECUTION_MISSING",
+      "witness_roots": [
+        "alpha",
+        "beta"
+      ]
+    },
+    "omitted": {
+      "altered": [],
+      "executed": 3,
+      "limitation": "Signed local witnesses cannot establish that all real executions were captured.",
+      "missing_execution": [],
+      "omitted": [
+        3
+      ],
+      "planned": 3,
+      "reported": 2,
+      "unplanned": [],
+      "verdict": "EXECUTED_QUERY_OMITTED_FROM_REPORT",
+      "witness_roots": [
+        "alpha",
+        "beta"
+      ]
+    },
+    "unplanned": {
+      "altered": [],
+      "executed": 4,
+      "limitation": "Signed local witnesses cannot establish that all real executions were captured.",
+      "missing_execution": [],
+      "omitted": [
+        4
+      ],
+      "planned": 3,
+      "reported": 3,
+      "unplanned": [
+        4
+      ],
+      "verdict": "EXECUTION_OUTSIDE_COMMITTED_PLAN",
+      "witness_roots": [
+        "alpha",
+        "beta"
+      ]
+    }
+  }
+}
