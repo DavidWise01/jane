@@ -1,0 +1,71 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>JANE 228 — The Witness That Shared the Runner</title><style>
+:root{--bg:#0b1420;--panel:#12283a;--line:#2d5062;--teal:#4de1d1;--orange:#ff9c55;--lav:#b69cfa;--txt:#e9eef9}*{box-sizing:border-box}body{margin:0;color:var(--txt);background:radial-gradient(circle at 20% 0%,#204356,var(--bg) 63%);font:15px/1.55 system-ui,sans-serif}main{max-width:1000px;margin:auto;padding:24px}h1{color:var(--orange);font-size:clamp(25px,4vw,43px)}p{color:#d3dce8}.muted{color:#a0bdc8}.panel{border:1px solid var(--line);background:#12283add;border-radius:14px;padding:18px;margin:16px 0}.status{color:var(--orange);font-weight:700}button{background:#205267;border:1px solid var(--teal);border-radius:8px;color:white;padding:10px 15px;cursor:pointer}canvas{width:100%;height:auto;display:block;border-radius:10px;background:#091724}pre{overflow:auto;white-space:pre-wrap;color:var(--teal)}.small{font-size:13px}code{color:var(--lav)}</style></head><body><main><small class="muted">ROOT0 · JANE · Natural invariant 228 · no images · local experiment</small><h1>The Witness That Shared the Runner</h1><p><strong>Two execution receipts ≠ two independent execution witnesses.</strong> Multiple certificates may share one runner, one owner credential, and a common GitHub platform trust root.</p><section class="panel"><h2>Three claimed witnesses, one trust ancestry</h2><canvas id="map" width="920" height="380" aria-label="Network diagram of three GitHub receipts joined through the shared GitHub platform root"></canvas><p class="small">Redundant observation paths are not independent origins. This is a diagram of declared synthetic fixture roots.</p><button id="toggle">Show shared dependencies</button><p id="analysis" class="status" aria-live="polite">SHARED_EXECUTION_ANCESTRY</p></section><section class="panel"><h2>Actual local fixture result</h2><pre id="receipt">Loading embedded results…</pre></section><section class="panel"><h2>FLAY boundary</h2><p><code>UNKNOWN</code> stays unresolved; different names do not certify independent execution. No live agent replied. Jane's choice is <strong>UNRESOLVED</strong>.</p><p class="muted">Past observes. Present deserves. Future reserves.</p></section></main><script>
+const receipt={
+  "action_executed": false,
+  "collisions": [
+    {
+      "a": "github226-a",
+      "b": "github227-b",
+      "shared": [
+        "artifact_root",
+        "credential_root",
+        "operator_root",
+        "platform_root",
+        "runner_root",
+        "source_root"
+      ]
+    },
+    {
+      "a": "github226-a",
+      "b": "github228-c",
+      "shared": [
+        "artifact_root",
+        "credential_root",
+        "operator_root",
+        "platform_root",
+        "runner_root",
+        "source_root"
+      ]
+    },
+    {
+      "a": "github227-b",
+      "b": "github228-c",
+      "shared": [
+        "artifact_root",
+        "credential_root",
+        "operator_root",
+        "platform_root",
+        "runner_root",
+        "source_root"
+      ]
+    }
+  ],
+  "components": [
+    [
+      "github226-a",
+      "github227-b",
+      "github228-c"
+    ]
+  ],
+  "independent_execution_witnesses_established": 0,
+  "jane_collective_decision": "UNRESOLVED",
+  "notes": [
+    "Identity labels and metadata alone are not independent platform attestations.",
+    "Self-reported metadata: github226-a, github227-b, github228-c"
+  ],
+  "result_sha256": "ff752e024a7e635bf6b29eb8b97f72edfe5a6730301e59bb96ceee67463d3a8d",
+  "schema": "jane228.execution-ancestry/1",
+  "unknowns": [],
+  "verdict": "SHARED_EXECUTION_ANCESTRY",
+  "verified_physical_or_hardware_independence": false,
+  "witnesses_examined": 3
+}
+;
+let expanded=false;const canvas=document.getElementById('map'),ctx=canvas.getContext('2d');
+const nodes=[{x:170,y:90,name:'Receipt A'},{x:460,y:90,name:'Receipt B'},{x:750,y:90,name:'Receipt C'}];
+function line(a,b,color){ctx.strokeStyle=color;ctx.lineWidth=2;ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke()}
+function dot(x,y,txt,c,r=30){ctx.shadowColor=c;ctx.shadowBlur=14;ctx.fillStyle='#102c3e';ctx.strokeStyle=c;ctx.lineWidth=2;ctx.beginPath();ctx.arc(x,y,r,0,Math.PI*2);ctx.fill();ctx.stroke();ctx.shadowBlur=0;ctx.fillStyle='#e6eff7';ctx.font='14px system-ui';ctx.textAlign='center';ctx.fillText(txt,x,y+r+22)}
+function draw(){ctx.clearRect(0,0,920,380);const root={x:460,y:267};for(const n of nodes)line(n,root,expanded?'#ff955b':'#5bded1');for(const n of nodes)dot(n.x,n.y,n.name,'#b69cfa',25);dot(root.x,root.y,'github.com/actions','#ff955b',36);if(expanded){ctx.fillStyle='#ffd3ab';ctx.font='15px monospace';ctx.textAlign='center';ctx.fillText('shared: credential • runner pool • artifact storage • operator',460,355)}}
+document.getElementById('toggle').onclick=()=>{expanded=!expanded;draw()};
+document.getElementById('receipt').textContent=JSON.stringify({verdict:receipt.verdict,witnesses_examined:receipt.witnesses_examined,components:receipt.components,shared_roots:receipt.collisions[0]?.shared||[],independent_execution_witnesses_established:receipt.independent_execution_witnesses_established,jane_collective_decision:receipt.jane_collective_decision},null,2);draw();
+</script></body></html>
