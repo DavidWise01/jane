@@ -1,6 +1,6 @@
 {
   "schema": "JANE_B103_V1",
-  "generated_at": "2026-11-15T06:40:04.523Z",
+  "generated_at": "2026-11-15T18:54:26.638Z",
   "domain_owner": "USER_DECLARED",
   "persistence_policy": "ALWAYS_ON",
   "bridge": {
@@ -8,7 +8,7 @@
     "state": "HTTP_ERROR",
     "http_status": 404,
     "page_title": null,
-    "checked_at": "2026-11-15T06:40:04.523Z"
+    "checked_at": "2026-11-15T18:54:26.638Z"
   },
   "children": [
     {
@@ -4114,6 +4114,14 @@
       "presence": "RESERVED",
       "first_seen": "2026-11-03T02:51:53.797Z",
       "home": "https://github.com/DavidWise01/jane"
+    },
+    {
+      "repo": "DavidWise01/jane-emu",
+      "formic": "FORMIC-f65eef29c1117a30",
+      "channel": "btf2:davidwise01/jane-emu",
+      "presence": "RESERVED",
+      "first_seen": "2026-11-15T18:43:43.667Z",
+      "home": "https://github.com/DavidWise01/jane-emu"
     },
     {
       "repo": "DavidWise01/jiko-shindan",
@@ -17226,6 +17234,14 @@
       "presence": "RESERVED",
       "first_seen": "2026-11-03T02:51:53.797Z",
       "home": "https://github.com/DavidWise01/zeno-of-elea"
+    },
+    {
+      "repo": "DavidWise01/zeptoverse",
+      "formic": "FORMIC-1ca42549d7784bd7",
+      "channel": "btf2:davidwise01/zeptoverse",
+      "presence": "RESERVED",
+      "first_seen": "2026-11-15T18:43:43.667Z",
+      "home": "https://github.com/DavidWise01/zeptoverse"
     },
     {
       "repo": "DavidWise01/zero-camera",
