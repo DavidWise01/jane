@@ -1,0 +1,58 @@
+{
+  "experiment": 219,
+  "invariant": "Self-Signed Instrument Identity != Trusted Instrument Identity",
+  "fixture_only": true,
+  "results": {
+    "valid": {
+      "verdict": "DECLARED_ENROLLMENT_CHAIN_CONSISTENT_FIXTURE",
+      "nonce": "219-valid-fixture-0001",
+      "count": 2,
+      "physical_identity_proven": false
+    },
+    "self": {
+      "verdict": "SELF_DECLARED_INSTRUMENT",
+      "nonce": "219-self-fixture-0001"
+    },
+    "shared": {
+      "verdict": "SHARED_INSTRUMENT_ANCESTRY",
+      "nonce": "219-shared-fixture-0001"
+    },
+    "expired": {
+      "verdict": "ENROLLMENT_EXPIRED_OR_NOT_YET_VALID",
+      "nonce": "219-expired-fixture-0001"
+    },
+    "substituted": {
+      "verdict": "INSTRUMENT_SIGNATURE_INVALID",
+      "nonce": "219-substituted-fixture-0001"
+    },
+    "issuer": {
+      "verdict": "UNTRUSTED_ENROLLMENT_ISSUER",
+      "nonce": "219-issuer-fixture-0001"
+    },
+    "stale": {
+      "verdict": "INVALID_CAPTURE_CHRONOLOGY",
+      "nonce": "219-stale-fixture-0001"
+    },
+    "mismatch": {
+      "verdict": "RESPONSE_MISMATCH",
+      "nonce": "219-mismatch-fixture-0001"
+    },
+    "duplicate": {
+      "verdict": "DUPLICATE_CAPTURE",
+      "nonce": "219-duplicate-fixture-0001"
+    },
+    "revoked": {
+      "verdict": "REVOKED_INSTRUMENT",
+      "nonce": "219-revoked-fixture-0001"
+    },
+    "forged": {
+      "verdict": "INSTRUMENT_SIGNATURE_INVALID",
+      "nonce": "219-forged-fixture-0001"
+    },
+    "insufficient": {
+      "verdict": "INSUFFICIENT_ENROLLED_INSTRUMENTS",
+      "nonce": "219-insufficient-fixture-0001",
+      "count": 1
+    }
+  }
+}
