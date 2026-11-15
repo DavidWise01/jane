@@ -1,0 +1,35 @@
+{
+  "experiment": 218,
+  "invariant": "Valid Response Attestation != Independent Physical Measurement",
+  "fixture_only": true,
+  "results": {
+    "independent": {
+      "verdict": "DECLARED_INSTRUMENT_CONSISTENCY_FIXTURE",
+      "challenge_nonce": "218-fixture-nonce-001",
+      "external_claims": 2,
+      "root_count": 2,
+      "physical_causation_proven": false
+    },
+    "simulated": {
+      "verdict": "ONLY_SIMULATED_OR_INSUFFICIENT_INSTRUMENTATION",
+      "challenge_nonce": "218-fixture-nonce-001",
+      "external_claims": 0
+    },
+    "shared": {
+      "verdict": "SHARED_ACQUISITION_ANCESTRY",
+      "challenge_nonce": "218-fixture-nonce-001"
+    },
+    "copied": {
+      "verdict": "DUPLICATED_CAPTURE",
+      "challenge_nonce": "218-fixture-nonce-001"
+    },
+    "stale": {
+      "verdict": "INVALID_ACQUISITION_CHRONOLOGY",
+      "challenge_nonce": "218-fixture-nonce-001"
+    },
+    "mismatch": {
+      "verdict": "ACQUISITION_CONTENT_MISMATCH",
+      "challenge_nonce": "218-fixture-nonce-001"
+    }
+  }
+}
