@@ -1,0 +1,25 @@
+name: JANE 228 - execution ancestry audit
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  ancestry:
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Regression checks
+        working-directory: experiments/jane228
+        run: python -W error -m unittest -q test_ancestry.py
+      - name: Audit declared sample roots (NOT independent attestations)
+        working-directory: experiments/jane228
+        run: python ancestry.py --input observations.json --output execution-ancestry-receipt.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: jane228-ancestry-receipt
+          path: experiments/jane228/execution-ancestry-receipt.json
+          retention-days: 30
