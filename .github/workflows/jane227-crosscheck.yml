@@ -1,0 +1,77 @@
+name: JANE 227 — cross-check historical runner receipt
+on:
+  workflow_dispatch:
+    inputs:
+      source_run_id:
+        description: 'A completed JANE 226 workflow run ID (no automatic dispatch)'
+        required: true
+        type: string
+permissions:
+  contents: read
+  actions: read
+jobs:
+  crosscheck:
+    if: github.repository == 'DavidWise01/jane'
+    runs-on: ubuntu-latest
+    timeout-minutes: 7
+    env:
+      GH_TOKEN: ${{ github.token }}
+      SOURCE_RUN_ID: ${{ inputs.source_run_id }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Test independent metadata cross-check
+        working-directory: experiments/jane227
+        run: python -W error -m unittest -q test_run_attestation.py
+      - name: Retrieve separate platform records and download original artifact
+        working-directory: experiments/jane227
+        shell: bash
+        run: |
+          set -euo pipefail
+          [[ "$SOURCE_RUN_ID" =~ ^[1-9][0-9]{0,18}$ ]] || exit 2
+          mkdir -p remote-receipt
+          gh api "repos/DavidWise01/jane/actions/runs/${SOURCE_RUN_ID}" > run.json
+          gh api "repos/DavidWise01/jane/actions/runs/${SOURCE_RUN_ID}/jobs?per_page=100" > jobs.json
+          gh api "repos/DavidWise01/jane/actions/runs/${SOURCE_RUN_ID}/artifacts?per_page=100" > artifacts.json
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          run=json.loads(Path('run.json').read_text())
+          Path('run-head.txt').write_text(run['head_sha'])
+          PY
+          gh api "repos/DavidWise01/jane/commits/$(cat run-head.txt)" > commit.json
+          gh run download "$SOURCE_RUN_ID" --repo DavidWise01/jane --name jane226-runtime-receipt --dir remote-receipt
+          test -f remote-receipt/execution-receipt.json
+      - name: Cross-check downloaded receipt against GitHub metadata
+        working-directory: experiments/jane227
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          from run_attestation import verify
+          receipt=json.loads(Path('remote-receipt/execution-receipt.json').read_text())
+          run=json.loads(Path('run.json').read_text())
+          commit=json.loads(Path('commit.json').read_text())
+          jobs=json.loads(Path('jobs.json').read_text()).get('jobs',[])
+          artifacts=json.loads(Path('artifacts.json').read_text()).get('artifacts',[])
+          selected_jobs=[j for j in jobs if j.get('run_id')==run['id'] and j.get('name')=='observe']
+          selected_artifacts=[a for a in artifacts if a.get('name')=='jane226-runtime-receipt']
+          result=verify(receipt,run,commit,selected_jobs[0] if len(selected_jobs)==1 else None,
+                        selected_artifacts[0] if len(selected_artifacts)==1 else None)
+          Path('crosscheck-result.json').write_text(json.dumps(result,indent=2,sort_keys=True)+'\n')
+          print(result['verdict'])
+          if result['verdict']!='GITHUB_METADATA_AND_JOB_CORROBORATED':
+              raise SystemExit(2)
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: jane227-crosscheck-report
+          path: experiments/jane227/crosscheck-result.json
+          if-no-files-found: warn
+          retention-days: 30
