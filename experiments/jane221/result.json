@@ -1,0 +1,57 @@
+{
+  "experiment": 221,
+  "invariant": "Signed Manufacturing History != Independent Evidence of Manufacture",
+  "scenarios": {
+    "consistent": {
+      "verdict": "DECLARED_PRODUCTION_OBSERVATIONS_CONSISTENT_FIXTURE",
+      "physical_manufacture_verified": false,
+      "jane_parent_mutated": false,
+      "roots": [
+        "physical-root-1",
+        "physical-root-2"
+      ],
+      "event_hash": "c6792a8b9f9dcb642cd4f0eb4d8471f0a70473489ac6fe5fcaa9fa2d5e3f5a5d"
+    },
+    "factory_only": {
+      "verdict": "NO_PRODUCTION_OBSERVATION",
+      "physical_manufacture_verified": false,
+      "jane_parent_mutated": false
+    },
+    "document_copies": {
+      "verdict": "DOCUMENT_ONLY_CORROBORATION",
+      "physical_manufacture_verified": false,
+      "jane_parent_mutated": false
+    },
+    "shared_root": {
+      "verdict": "SHARED_PRODUCTION_ANCESTRY",
+      "physical_manufacture_verified": false,
+      "jane_parent_mutated": false
+    },
+    "shared_instrument": {
+      "verdict": "SHARED_PRODUCTION_ANCESTRY",
+      "physical_manufacture_verified": false,
+      "jane_parent_mutated": false
+    },
+    "wrong_process": {
+      "verdict": "PROCESS_DISAGREEMENT",
+      "physical_manufacture_verified": false,
+      "jane_parent_mutated": false
+    },
+    "late_sensor": {
+      "verdict": "OBSERVATION_TIME_INVALID",
+      "physical_manufacture_verified": false,
+      "jane_parent_mutated": false
+    },
+    "forged_observer": {
+      "verdict": "INVALID_OBSERVER_SIGNATURE",
+      "physical_manufacture_verified": false,
+      "jane_parent_mutated": false
+    },
+    "duplicate_witness": {
+      "verdict": "DUPLICATE_WITNESS",
+      "physical_manufacture_verified": false,
+      "jane_parent_mutated": false
+    }
+  },
+  "limitations": "All keys, witnesses, manufacturing records, and sensors are synthetic. No physical manufacture verified."
+}
