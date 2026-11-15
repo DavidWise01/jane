@@ -1,0 +1,221 @@
+{
+  "large_drift": {
+    "details": [
+      {
+        "after": [
+          500,
+          1000
+        ],
+        "after_interval": [
+          0.46464899958599776,
+          0.5353510004140022
+        ],
+        "before": [
+          900,
+          1000
+        ],
+        "before_interval": [
+          0.8766958528432758,
+          0.9193051288198577
+        ],
+        "declared_roots": [
+          "large-baseline",
+          "large-current"
+        ],
+        "difference_estimate": -0.4,
+        "difference_interval": [
+          -0.45465612923385995,
+          -0.3413448524292736
+        ],
+        "name": "large",
+        "result": "MATERIAL_DRIFT_SUPPORTED_CONDITIONAL"
+      }
+    ],
+    "frozen_digest": "16f3b9f9273855a7bd14c452e5bf18cf7dcd2c516483fa845c0c8fd4cb6e49be",
+    "margin": 0.1,
+    "min_n": 30,
+    "notice": "Signed or independent custody not established. Nominal Bonferroni-adjusted Wilson 95% difference interval; finite-sample Wilson coverage is approximate, not a guaranteed simultaneous bound.",
+    "verdict": "MATERIAL_DRIFT_SUPPORTED_CONDITIONAL"
+  },
+  "large_equal": {
+    "details": [
+      {
+        "after": [
+          500,
+          1000
+        ],
+        "after_interval": [
+          0.46464899958599776,
+          0.5353510004140022
+        ],
+        "before": [
+          500,
+          1000
+        ],
+        "before_interval": [
+          0.46464899958599776,
+          0.5353510004140022
+        ],
+        "declared_roots": [
+          "large-baseline",
+          "large-current"
+        ],
+        "difference_estimate": 0.0,
+        "difference_interval": [
+          -0.07070200082800443,
+          0.07070200082800443
+        ],
+        "name": "large",
+        "result": "EQUIVALENCE_SUPPORTED_CONDITIONAL"
+      }
+    ],
+    "frozen_digest": "a2f5488982978bac1f45ce00fe887c4b9699eef7df82843cd559a99be8387e00",
+    "margin": 0.1,
+    "min_n": 30,
+    "notice": "Signed or independent custody not established. Nominal Bonferroni-adjusted Wilson 95% difference interval; finite-sample Wilson coverage is approximate, not a guaranteed simultaneous bound.",
+    "verdict": "EQUIVALENCE_SUPPORTED_CONDITIONAL"
+  },
+  "mixed": {
+    "details": [
+      {
+        "after": [
+          500,
+          1000
+        ],
+        "after_interval": [
+          0.46464899958599776,
+          0.5353510004140022
+        ],
+        "before": [
+          500,
+          1000
+        ],
+        "before_interval": [
+          0.46464899958599776,
+          0.5353510004140022
+        ],
+        "declared_roots": [
+          "large-baseline",
+          "large-current"
+        ],
+        "difference_estimate": 0.0,
+        "difference_interval": [
+          -0.07070200082800443,
+          0.07070200082800443
+        ],
+        "name": "large",
+        "result": "EQUIVALENCE_SUPPORTED_CONDITIONAL"
+      },
+      {
+        "after": [
+          2,
+          4
+        ],
+        "after_interval": [
+          0.12692762161400167,
+          0.8730723783859984
+        ],
+        "before": [
+          2,
+          4
+        ],
+        "before_interval": [
+          0.12692762161400167,
+          0.8730723783859984
+        ],
+        "declared_roots": [
+          "tiny-baseline",
+          "tiny-current"
+        ],
+        "difference_estimate": 0.0,
+        "difference_interval": [
+          -0.7461447567719968,
+          0.7461447567719968
+        ],
+        "name": "tiny",
+        "result": "INSUFFICIENT_SUBGROUP_SAMPLE"
+      }
+    ],
+    "frozen_digest": "2e0ddd1ee5c5d0083905d8c10bb58bf283f41e27efaaa661dd84e236ea110873",
+    "margin": 0.1,
+    "min_n": 30,
+    "notice": "Signed or independent custody not established. Nominal Bonferroni-adjusted Wilson 95% difference interval; finite-sample Wilson coverage is approximate, not a guaranteed simultaneous bound.",
+    "verdict": "INSUFFICIENT_SUBGROUP_SAMPLE"
+  },
+  "moderate_equal": {
+    "details": [
+      {
+        "after": [
+          15,
+          30
+        ],
+        "after_interval": [
+          0.31063150224799896,
+          0.689368497752001
+        ],
+        "before": [
+          15,
+          30
+        ],
+        "before_interval": [
+          0.31063150224799896,
+          0.689368497752001
+        ],
+        "declared_roots": [
+          "moderate-baseline",
+          "moderate-current"
+        ],
+        "difference_estimate": 0.0,
+        "difference_interval": [
+          -0.3787369955040021,
+          0.3787369955040021
+        ],
+        "name": "moderate",
+        "result": "STABILITY_NOT_ESTABLISHED"
+      }
+    ],
+    "frozen_digest": "aea20fdcac20e605ee24fa9d8e6f8f8783e0cafe4556cc00f18505ec679fbe85",
+    "margin": 0.1,
+    "min_n": 30,
+    "notice": "Signed or independent custody not established. Nominal Bonferroni-adjusted Wilson 95% difference interval; finite-sample Wilson coverage is approximate, not a guaranteed simultaneous bound.",
+    "verdict": "STABILITY_NOT_ESTABLISHED"
+  },
+  "small_equal": {
+    "details": [
+      {
+        "after": [
+          2,
+          4
+        ],
+        "after_interval": [
+          0.12692762161400167,
+          0.8730723783859984
+        ],
+        "before": [
+          2,
+          4
+        ],
+        "before_interval": [
+          0.12692762161400167,
+          0.8730723783859984
+        ],
+        "declared_roots": [
+          "tiny-baseline",
+          "tiny-current"
+        ],
+        "difference_estimate": 0.0,
+        "difference_interval": [
+          -0.7461447567719968,
+          0.7461447567719968
+        ],
+        "name": "tiny",
+        "result": "INSUFFICIENT_SUBGROUP_SAMPLE"
+      }
+    ],
+    "frozen_digest": "c4a874db13182fe93f30eb67ed3985b63bdcb8703bdf568370c74c7575313eaf",
+    "margin": 0.1,
+    "min_n": 30,
+    "notice": "Signed or independent custody not established. Nominal Bonferroni-adjusted Wilson 95% difference interval; finite-sample Wilson coverage is approximate, not a guaranteed simultaneous bound.",
+    "verdict": "INSUFFICIENT_SUBGROUP_SAMPLE"
+  }
+}
