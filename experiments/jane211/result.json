@@ -1,0 +1,721 @@
+{
+  "exploratory": {
+    "evidence_digest": "703def6db65b2ebe5c8867a93a2c13ad3f3fbbee579a76808487aa74733f3a08",
+    "experiment": 211,
+    "family_size": 20,
+    "frozen_parent": true,
+    "limitations": "Synthetic, fixed-hypothesis independent Bernoulli model; declared final-test separation is not externally verified.",
+    "plan_digest": "76d9162d2875993fc35e4d7ec83a61ddc31041e2922903c704f995d2f1826568",
+    "rows": [
+      {
+        "ancestry": "scout-0",
+        "group": "G01",
+        "holm_p": 1.0,
+        "raw_p": 1.0,
+        "successes": 8,
+        "trials": 16
+      },
+      {
+        "ancestry": "scout-1",
+        "group": "G02",
+        "holm_p": 1.0,
+        "raw_p": 0.803619384765625,
+        "successes": 9,
+        "trials": 16
+      },
+      {
+        "ancestry": "scout-2",
+        "group": "G03",
+        "holm_p": 1.0,
+        "raw_p": 0.454498291015625,
+        "successes": 10,
+        "trials": 16
+      },
+      {
+        "ancestry": "scout-3",
+        "group": "G04",
+        "holm_p": 1.0,
+        "raw_p": 1.0,
+        "successes": 8,
+        "trials": 16
+      },
+      {
+        "ancestry": "scout-4",
+        "group": "G05",
+        "holm_p": 1.0,
+        "raw_p": 0.803619384765625,
+        "successes": 9,
+        "trials": 16
+      },
+      {
+        "ancestry": "scout-5",
+        "group": "G06",
+        "holm_p": 1.0,
+        "raw_p": 0.454498291015625,
+        "successes": 10,
+        "trials": 16
+      },
+      {
+        "ancestry": "scout-6",
+        "group": "G07",
+        "holm_p": 1.0,
+        "raw_p": 1.0,
+        "successes": 8,
+        "trials": 16
+      },
+      {
+        "ancestry": "scout-7",
+        "group": "G08",
+        "holm_p": 0.0006103515625,
+        "raw_p": 3.0517578125e-05,
+        "successes": 16,
+        "trials": 16
+      },
+      {
+        "ancestry": "scout-8",
+        "group": "G09",
+        "holm_p": 1.0,
+        "raw_p": 0.454498291015625,
+        "successes": 10,
+        "trials": 16
+      },
+      {
+        "ancestry": "scout-9",
+        "group": "G10",
+        "holm_p": 1.0,
+        "raw_p": 1.0,
+        "successes": 8,
+        "trials": 16
+      },
+      {
+        "ancestry": "scout-10",
+        "group": "G11",
+        "holm_p": 1.0,
+        "raw_p": 0.803619384765625,
+        "successes": 9,
+        "trials": 16
+      },
+      {
+        "ancestry": "scout-11",
+        "group": "G12",
+        "holm_p": 1.0,
+        "raw_p": 0.454498291015625,
+        "successes": 10,
+        "trials": 16
+      },
+      {
+        "ancestry": "scout-12",
+        "group": "G13",
+        "holm_p": 1.0,
+        "raw_p": 1.0,
+        "successes": 8,
+        "trials": 16
+      },
+      {
+        "ancestry": "scout-13",
+        "group": "G14",
+        "holm_p": 1.0,
+        "raw_p": 0.803619384765625,
+        "successes": 9,
+        "trials": 16
+      },
+      {
+        "ancestry": "scout-14",
+        "group": "G15",
+        "holm_p": 1.0,
+        "raw_p": 0.454498291015625,
+        "successes": 10,
+        "trials": 16
+      },
+      {
+        "ancestry": "scout-15",
+        "group": "G16",
+        "holm_p": 1.0,
+        "raw_p": 1.0,
+        "successes": 8,
+        "trials": 16
+      },
+      {
+        "ancestry": "scout-16",
+        "group": "G17",
+        "holm_p": 1.0,
+        "raw_p": 0.803619384765625,
+        "successes": 9,
+        "trials": 16
+      },
+      {
+        "ancestry": "scout-17",
+        "group": "G18",
+        "holm_p": 1.0,
+        "raw_p": 0.454498291015625,
+        "successes": 10,
+        "trials": 16
+      },
+      {
+        "ancestry": "scout-18",
+        "group": "G19",
+        "holm_p": 1.0,
+        "raw_p": 1.0,
+        "successes": 8,
+        "trials": 16
+      },
+      {
+        "ancestry": "scout-19",
+        "group": "G20",
+        "holm_p": 1.0,
+        "raw_p": 0.803619384765625,
+        "successes": 9,
+        "trials": 16
+      }
+    ],
+    "selected": "G08",
+    "selected_holm_p": 0.0006103515625,
+    "selected_raw_p": 3.0517578125e-05,
+    "selection_adjusted_discovery": true,
+    "validation": null,
+    "verdict": "EXPLORATORY_NOT_VALIDATED"
+  },
+  "validation_failed": {
+    "evidence_digest": "9b027761180f2138424732581030184d9cfe1647815dccd309896bf125990a1e",
+    "experiment": 211,
+    "family_size": 20,
+    "frozen_parent": true,
+    "limitations": "Synthetic, fixed-hypothesis independent Bernoulli model; declared final-test separation is not externally verified.",
+    "plan_digest": "76d9162d2875993fc35e4d7ec83a61ddc31041e2922903c704f995d2f1826568",
+    "rows": [
+      {
+        "ancestry": "scout-0",
+        "group": "G01",
+        "holm_p": 1.0,
+        "raw_p": 1.0,
+        "successes": 8,
+        "trials": 16
+      },
+      {
+        "ancestry": "scout-1",
+        "group": "G02",
+        "holm_p": 1.0,
+        "raw_p": 0.803619384765625,
+        "successes": 9,
+        "trials": 16
+      },
+      {
+        "ancestry": "scout-2",
+        "group": "G03",
+        "holm_p": 1.0,
+        "raw_p": 0.454498291015625,
+        "successes": 10,
+        "trials": 16
+      },
+      {
+        "ancestry": "scout-3",
+        "group": "G04",
+        "holm_p": 1.0,
+        "raw_p": 1.0,
+        "successes": 8,
+        "trials": 16
+      },
+      {
+        "ancestry": "scout-4",
+        "group": "G05",
+        "holm_p": 1.0,
+        "raw_p": 0.803619384765625,
+        "successes": 9,
+        "trials": 16
+      },
+      {
+        "ancestry": "scout-5",
+        "group": "G06",
+        "holm_p": 1.0,
+        "raw_p": 0.454498291015625,
+        "successes": 10,
+        "trials": 16
+      },
+      {
+        "ancestry": "scout-6",
+        "group": "G07",
+        "holm_p": 1.0,
+        "raw_p": 1.0,
+        "successes": 8,
+        "trials": 16
+      },
+      {
+        "ancestry": "scout-7",
+        "group": "G08",
+        "holm_p": 0.0006103515625,
+        "raw_p": 3.0517578125e-05,
+        "successes": 16,
+        "trials": 16
+      },
+      {
+        "ancestry": "scout-8",
+        "group": "G09",
+        "holm_p": 1.0,
+        "raw_p": 0.454498291015625,
+        "successes": 10,
+        "trials": 16
+      },
+      {
+        "ancestry": "scout-9",
+        "group": "G10",
+        "holm_p": 1.0,
+        "raw_p": 1.0,
+        "successes": 8,
+        "trials": 16
+      },
+      {
+        "ancestry": "scout-10",
+        "group": "G11",
+        "holm_p": 1.0,
+        "raw_p": 0.803619384765625,
+        "successes": 9,
+        "trials": 16
+      },
+      {
+        "ancestry": "scout-11",
+        "group": "G12",
+        "holm_p": 1.0,
+        "raw_p": 0.454498291015625,
+        "successes": 10,
+        "trials": 16
+      },
+      {
+        "ancestry": "scout-12",
+        "group": "G13",
+        "holm_p": 1.0,
+        "raw_p": 1.0,
+        "successes": 8,
+        "trials": 16
+      },
+      {
+        "ancestry": "scout-13",
+        "group": "G14",
+        "holm_p": 1.0,
+        "raw_p": 0.803619384765625,
+        "successes": 9,
+        "trials": 16
+      },
+      {
+        "ancestry": "scout-14",
+        "group": "G15",
+        "holm_p": 1.0,
+        "raw_p": 0.454498291015625,
+        "successes": 10,
+        "trials": 16
+      },
+      {
+        "ancestry": "scout-15",
+        "group": "G16",
+        "holm_p": 1.0,
+        "raw_p": 1.0,
+        "successes": 8,
+        "trials": 16
+      },
+      {
+        "ancestry": "scout-16",
+        "group": "G17",
+        "holm_p": 1.0,
+        "raw_p": 0.803619384765625,
+        "successes": 9,
+        "trials": 16
+      },
+      {
+        "ancestry": "scout-17",
+        "group": "G18",
+        "holm_p": 1.0,
+        "raw_p": 0.454498291015625,
+        "successes": 10,
+        "trials": 16
+      },
+      {
+        "ancestry": "scout-18",
+        "group": "G19",
+        "holm_p": 1.0,
+        "raw_p": 1.0,
+        "successes": 8,
+        "trials": 16
+      },
+      {
+        "ancestry": "scout-19",
+        "group": "G20",
+        "holm_p": 1.0,
+        "raw_p": 0.803619384765625,
+        "successes": 9,
+        "trials": 16
+      }
+    ],
+    "selected": "G08",
+    "selected_holm_p": 0.0006103515625,
+    "selected_raw_p": 3.0517578125e-05,
+    "selection_adjusted_discovery": true,
+    "validation": {
+      "group": "G08",
+      "p": 1.0,
+      "successes": 8,
+      "trials": 16
+    },
+    "verdict": "INDEPENDENT_VALIDATION_NOT_CONFIRMED"
+  },
+  "validation_leaked": {
+    "evidence_digest": "9e87b0c7b9accdd2599a95b696de702523729d09cb11085196c3142756c1bdf5",
+    "experiment": 211,
+    "family_size": 20,
+    "frozen_parent": true,
+    "limitations": "Synthetic, fixed-hypothesis independent Bernoulli model; declared final-test separation is not externally verified.",
+    "plan_digest": "76d9162d2875993fc35e4d7ec83a61ddc31041e2922903c704f995d2f1826568",
+    "rows": [
+      {
+        "ancestry": "scout-0",
+        "group": "G01",
+        "holm_p": 1.0,
+        "raw_p": 1.0,
+        "successes": 8,
+        "trials": 16
+      },
+      {
+        "ancestry": "scout-1",
+        "group": "G02",
+        "holm_p": 1.0,
+        "raw_p": 0.803619384765625,
+        "successes": 9,
+        "trials": 16
+      },
+      {
+        "ancestry": "scout-2",
+        "group": "G03",
+        "holm_p": 1.0,
+        "raw_p": 0.454498291015625,
+        "successes": 10,
+        "trials": 16
+      },
+      {
+        "ancestry": "scout-3",
+        "group": "G04",
+        "holm_p": 1.0,
+        "raw_p": 1.0,
+        "successes": 8,
+        "trials": 16
+      },
+      {
+        "ancestry": "scout-4",
+        "group": "G05",
+        "holm_p": 1.0,
+        "raw_p": 0.803619384765625,
+        "successes": 9,
+        "trials": 16
+      },
+      {
+        "ancestry": "scout-5",
+        "group": "G06",
+        "holm_p": 1.0,
+        "raw_p": 0.454498291015625,
+        "successes": 10,
+        "trials": 16
+      },
+      {
+        "ancestry": "scout-6",
+        "group": "G07",
+        "holm_p": 1.0,
+        "raw_p": 1.0,
+        "successes": 8,
+        "trials": 16
+      },
+      {
+        "ancestry": "scout-7",
+        "group": "G08",
+        "holm_p": 0.0006103515625,
+        "raw_p": 3.0517578125e-05,
+        "successes": 16,
+        "trials": 16
+      },
+      {
+        "ancestry": "scout-8",
+        "group": "G09",
+        "holm_p": 1.0,
+        "raw_p": 0.454498291015625,
+        "successes": 10,
+        "trials": 16
+      },
+      {
+        "ancestry": "scout-9",
+        "group": "G10",
+        "holm_p": 1.0,
+        "raw_p": 1.0,
+        "successes": 8,
+        "trials": 16
+      },
+      {
+        "ancestry": "scout-10",
+        "group": "G11",
+        "holm_p": 1.0,
+        "raw_p": 0.803619384765625,
+        "successes": 9,
+        "trials": 16
+      },
+      {
+        "ancestry": "scout-11",
+        "group": "G12",
+        "holm_p": 1.0,
+        "raw_p": 0.454498291015625,
+        "successes": 10,
+        "trials": 16
+      },
+      {
+        "ancestry": "scout-12",
+        "group": "G13",
+        "holm_p": 1.0,
+        "raw_p": 1.0,
+        "successes": 8,
+        "trials": 16
+      },
+      {
+        "ancestry": "scout-13",
+        "group": "G14",
+        "holm_p": 1.0,
+        "raw_p": 0.803619384765625,
+        "successes": 9,
+        "trials": 16
+      },
+      {
+        "ancestry": "scout-14",
+        "group": "G15",
+        "holm_p": 1.0,
+        "raw_p": 0.454498291015625,
+        "successes": 10,
+        "trials": 16
+      },
+      {
+        "ancestry": "scout-15",
+        "group": "G16",
+        "holm_p": 1.0,
+        "raw_p": 1.0,
+        "successes": 8,
+        "trials": 16
+      },
+      {
+        "ancestry": "scout-16",
+        "group": "G17",
+        "holm_p": 1.0,
+        "raw_p": 0.803619384765625,
+        "successes": 9,
+        "trials": 16
+      },
+      {
+        "ancestry": "scout-17",
+        "group": "G18",
+        "holm_p": 1.0,
+        "raw_p": 0.454498291015625,
+        "successes": 10,
+        "trials": 16
+      },
+      {
+        "ancestry": "scout-18",
+        "group": "G19",
+        "holm_p": 1.0,
+        "raw_p": 1.0,
+        "successes": 8,
+        "trials": 16
+      },
+      {
+        "ancestry": "scout-19",
+        "group": "G20",
+        "holm_p": 1.0,
+        "raw_p": 0.803619384765625,
+        "successes": 9,
+        "trials": 16
+      }
+    ],
+    "selected": "G08",
+    "selected_holm_p": 0.0006103515625,
+    "selected_raw_p": 3.0517578125e-05,
+    "selection_adjusted_discovery": true,
+    "validation": {
+      "group": "G08",
+      "p": 3.0517578125e-05,
+      "successes": 16,
+      "trials": 16
+    },
+    "verdict": "VALIDATION_CONTAMINATED"
+  },
+  "validation_passed_fixture": {
+    "evidence_digest": "21c4975e89cfa36f7d3316be63b42a6961ba8f62a35bddfe9c2026ee8c21b733",
+    "experiment": 211,
+    "family_size": 20,
+    "frozen_parent": true,
+    "limitations": "Synthetic, fixed-hypothesis independent Bernoulli model; declared final-test separation is not externally verified.",
+    "plan_digest": "76d9162d2875993fc35e4d7ec83a61ddc31041e2922903c704f995d2f1826568",
+    "rows": [
+      {
+        "ancestry": "scout-0",
+        "group": "G01",
+        "holm_p": 1.0,
+        "raw_p": 1.0,
+        "successes": 8,
+        "trials": 16
+      },
+      {
+        "ancestry": "scout-1",
+        "group": "G02",
+        "holm_p": 1.0,
+        "raw_p": 0.803619384765625,
+        "successes": 9,
+        "trials": 16
+      },
+      {
+        "ancestry": "scout-2",
+        "group": "G03",
+        "holm_p": 1.0,
+        "raw_p": 0.454498291015625,
+        "successes": 10,
+        "trials": 16
+      },
+      {
+        "ancestry": "scout-3",
+        "group": "G04",
+        "holm_p": 1.0,
+        "raw_p": 1.0,
+        "successes": 8,
+        "trials": 16
+      },
+      {
+        "ancestry": "scout-4",
+        "group": "G05",
+        "holm_p": 1.0,
+        "raw_p": 0.803619384765625,
+        "successes": 9,
+        "trials": 16
+      },
+      {
+        "ancestry": "scout-5",
+        "group": "G06",
+        "holm_p": 1.0,
+        "raw_p": 0.454498291015625,
+        "successes": 10,
+        "trials": 16
+      },
+      {
+        "ancestry": "scout-6",
+        "group": "G07",
+        "holm_p": 1.0,
+        "raw_p": 1.0,
+        "successes": 8,
+        "trials": 16
+      },
+      {
+        "ancestry": "scout-7",
+        "group": "G08",
+        "holm_p": 0.0006103515625,
+        "raw_p": 3.0517578125e-05,
+        "successes": 16,
+        "trials": 16
+      },
+      {
+        "ancestry": "scout-8",
+        "group": "G09",
+        "holm_p": 1.0,
+        "raw_p": 0.454498291015625,
+        "successes": 10,
+        "trials": 16
+      },
+      {
+        "ancestry": "scout-9",
+        "group": "G10",
+        "holm_p": 1.0,
+        "raw_p": 1.0,
+        "successes": 8,
+        "trials": 16
+      },
+      {
+        "ancestry": "scout-10",
+        "group": "G11",
+        "holm_p": 1.0,
+        "raw_p": 0.803619384765625,
+        "successes": 9,
+        "trials": 16
+      },
+      {
+        "ancestry": "scout-11",
+        "group": "G12",
+        "holm_p": 1.0,
+        "raw_p": 0.454498291015625,
+        "successes": 10,
+        "trials": 16
+      },
+      {
+        "ancestry": "scout-12",
+        "group": "G13",
+        "holm_p": 1.0,
+        "raw_p": 1.0,
+        "successes": 8,
+        "trials": 16
+      },
+      {
+        "ancestry": "scout-13",
+        "group": "G14",
+        "holm_p": 1.0,
+        "raw_p": 0.803619384765625,
+        "successes": 9,
+        "trials": 16
+      },
+      {
+        "ancestry": "scout-14",
+        "group": "G15",
+        "holm_p": 1.0,
+        "raw_p": 0.454498291015625,
+        "successes": 10,
+        "trials": 16
+      },
+      {
+        "ancestry": "scout-15",
+        "group": "G16",
+        "holm_p": 1.0,
+        "raw_p": 1.0,
+        "successes": 8,
+        "trials": 16
+      },
+      {
+        "ancestry": "scout-16",
+        "group": "G17",
+        "holm_p": 1.0,
+        "raw_p": 0.803619384765625,
+        "successes": 9,
+        "trials": 16
+      },
+      {
+        "ancestry": "scout-17",
+        "group": "G18",
+        "holm_p": 1.0,
+        "raw_p": 0.454498291015625,
+        "successes": 10,
+        "trials": 16
+      },
+      {
+        "ancestry": "scout-18",
+        "group": "G19",
+        "holm_p": 1.0,
+        "raw_p": 1.0,
+        "successes": 8,
+        "trials": 16
+      },
+      {
+        "ancestry": "scout-19",
+        "group": "G20",
+        "holm_p": 1.0,
+        "raw_p": 0.803619384765625,
+        "successes": 9,
+        "trials": 16
+      }
+    ],
+    "selected": "G08",
+    "selected_holm_p": 0.0006103515625,
+    "selected_raw_p": 3.0517578125e-05,
+    "selection_adjusted_discovery": true,
+    "validation": {
+      "group": "G08",
+      "p": 3.0517578125e-05,
+      "successes": 16,
+      "trials": 16
+    },
+    "verdict": "INDEPENDENT_VALIDATION_CONDITIONAL"
+  }
+}
