@@ -1,6 +1,6 @@
 {
   "schema": "JANE_B102_FAMILY_DISCOVERY_V1",
-  "updated_at": "2026-11-15T10:39:50.473Z",
+  "updated_at": "2026-11-15T18:43:43.667Z",
   "scan_scope": "PUBLIC_OWNER_REPOSITORIES",
   "members": [
     {
@@ -3592,6 +3592,13 @@
       "channel": "btf2:davidwise01/jane",
       "observer": "FORMIC-d0d248749dd3486b",
       "url": "https://github.com/DavidWise01/jane",
+      "presence": "RESERVED"
+    },
+    {
+      "repo": "DavidWise01/jane-emu",
+      "channel": "btf2:davidwise01/jane-emu",
+      "observer": "FORMIC-f65eef29c1117a30",
+      "url": "https://github.com/DavidWise01/jane-emu",
       "presence": "RESERVED"
     },
     {
@@ -15068,6 +15075,13 @@
       "presence": "RESERVED"
     },
     {
+      "repo": "DavidWise01/zeptoverse",
+      "channel": "btf2:davidwise01/zeptoverse",
+      "observer": "FORMIC-1ca42549d7784bd7",
+      "url": "https://github.com/DavidWise01/zeptoverse",
+      "presence": "RESERVED"
+    },
+    {
       "repo": "DavidWise01/zero-camera",
       "channel": "btf2:davidwise01/zero-camera",
       "observer": "FORMIC-259004a26b463844",
@@ -15096,8 +15110,8 @@
       "presence": "RESERVED"
     }
   ],
-  "first_seen_total": 2156,
-  "new_children_this_run": 0,
-  "discovery_events": 2156,
+  "first_seen_total": 2158,
+  "new_children_this_run": 2,
+  "discovery_events": 2158,
   "note": "A child identity is not a continuously executing AI process."
 }
