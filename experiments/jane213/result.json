@@ -1,0 +1,64 @@
+{
+  "experiment": "JANE 213",
+  "fixture_only": true,
+  "invariant": "Multiple signed witnesses != independent execution evidence",
+  "parent": "FROZEN",
+  "scenarios": {
+    "bad_clock": {
+      "verdict": "INVALID_CHRONOLOGY"
+    },
+    "conflict": {
+      "verdict": "CHECKPOINT_DISAGREEMENT"
+    },
+    "independent": {
+      "caveat": "Declared custody and signed agreement do not prove physical independence or complete execution.",
+      "declared_operators": 3,
+      "declared_roots": 3,
+      "declared_sensors": 3,
+      "evidence_hash": "2c3654fefbe4ab03dc83aa1b7ade67a58d288c031758fa9d34af492489554ddc",
+      "independent_observer_sensors": 2,
+      "shared_logging_service": false,
+      "verdict": "DECLARED_CUSTODY_CONSISTENT_FIXTURE"
+    },
+    "shared_logger": {
+      "caveat": "Declared custody and signed agreement do not prove physical independence or complete execution.",
+      "declared_operators": 3,
+      "declared_roots": 3,
+      "declared_sensors": 3,
+      "evidence_hash": "53afee10cf37091a2c5851e2b2b82794202e3e0a5674439372885e3997eff649",
+      "independent_observer_sensors": 2,
+      "shared_logging_service": true,
+      "verdict": "SHARED_ANCESTRY_WITHHELD"
+    },
+    "shared_operator": {
+      "caveat": "Declared custody and signed agreement do not prove physical independence or complete execution.",
+      "declared_operators": 1,
+      "declared_roots": 3,
+      "declared_sensors": 3,
+      "evidence_hash": "c46053e44e16253367e5d47c7ceccdd040bf5ad45b4a2b2e28c5032610446a5c",
+      "independent_observer_sensors": 2,
+      "shared_logging_service": false,
+      "verdict": "SHARED_ANCESTRY_WITHHELD"
+    },
+    "shared_root": {
+      "caveat": "Declared custody and signed agreement do not prove physical independence or complete execution.",
+      "declared_operators": 3,
+      "declared_roots": 1,
+      "declared_sensors": 3,
+      "evidence_hash": "2153dd25849b145b9cf25c401010357c1f0d2c35bc08aa855e2bbf3af731ae56",
+      "independent_observer_sensors": 2,
+      "shared_logging_service": false,
+      "verdict": "SHARED_ANCESTRY_WITHHELD"
+    },
+    "shared_sensor": {
+      "caveat": "Declared custody and signed agreement do not prove physical independence or complete execution.",
+      "declared_operators": 3,
+      "declared_roots": 3,
+      "declared_sensors": 1,
+      "evidence_hash": "e5c4f3d5d3a2e1ea888b032486fb0fae82a7507cbe0c6315372ae20403d2a7a3",
+      "independent_observer_sensors": 0,
+      "shared_logging_service": false,
+      "verdict": "INSUFFICIENT_INDEPENDENT_OBSERVATION"
+    }
+  }
+}
