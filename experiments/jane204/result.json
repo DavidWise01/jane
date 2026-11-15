@@ -1,0 +1,64 @@
+{
+  "audit": {
+    "agents": {
+      "ada": 4,
+      "bert": 4,
+      "clio": 3
+    },
+    "caveat": "No proof of unreported agent communication, physical independence, or privacy.",
+    "distinct_payloads": 3,
+    "events": 3,
+    "global_cap": 12,
+    "global_credits": 11,
+    "head": "779774efb8392621fe72213b398eac563380d963c3330bad4e41bf28beb4c768",
+    "recipient_groups": {
+      "collector": {
+        "agents": [
+          "ada",
+          "bert"
+        ],
+        "credits": 8,
+        "shared_roots": [
+          "holdout-204"
+        ],
+        "union_subset": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "other": {
+        "agents": [
+          "clio"
+        ],
+        "credits": 3,
+        "shared_roots": [
+          "holdout-204"
+        ],
+        "union_subset": [
+          4,
+          5,
+          6
+        ]
+      }
+    },
+    "verdict": "RECORDED_COMPLIANT_NOT_PROVEN_SECRET"
+  },
+  "chapter": "JANE 204",
+  "event_ids": [
+    "e1",
+    "e2",
+    "e4"
+  ],
+  "global_refusal": "GLOBAL_BUDGET_EXCEEDED",
+  "invariant": "Independent Query Budgets != Independent Information",
+  "policy": {
+    "agent": 8,
+    "global": 12,
+    "recipient": 8
+  },
+  "recipient_refusal": "RECIPIENT_BUDGET_EXCEEDED",
+  "verified_fixture_only": true
+}
