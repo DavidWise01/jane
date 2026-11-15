@@ -1,0 +1,60 @@
+{
+  "action_executed": false,
+  "collisions": [
+    {
+      "a": "github226-a",
+      "b": "github227-b",
+      "shared": [
+        "artifact_root",
+        "credential_root",
+        "operator_root",
+        "platform_root",
+        "runner_root",
+        "source_root"
+      ]
+    },
+    {
+      "a": "github226-a",
+      "b": "github228-c",
+      "shared": [
+        "artifact_root",
+        "credential_root",
+        "operator_root",
+        "platform_root",
+        "runner_root",
+        "source_root"
+      ]
+    },
+    {
+      "a": "github227-b",
+      "b": "github228-c",
+      "shared": [
+        "artifact_root",
+        "credential_root",
+        "operator_root",
+        "platform_root",
+        "runner_root",
+        "source_root"
+      ]
+    }
+  ],
+  "components": [
+    [
+      "github226-a",
+      "github227-b",
+      "github228-c"
+    ]
+  ],
+  "independent_execution_witnesses_established": 0,
+  "jane_collective_decision": "UNRESOLVED",
+  "notes": [
+    "Identity labels and metadata alone are not independent platform attestations.",
+    "Self-reported metadata: github226-a, github227-b, github228-c"
+  ],
+  "result_sha256": "ff752e024a7e635bf6b29eb8b97f72edfe5a6730301e59bb96ceee67463d3a8d",
+  "schema": "jane228.execution-ancestry/1",
+  "unknowns": [],
+  "verdict": "SHARED_EXECUTION_ANCESTRY",
+  "verified_physical_or_hardware_independence": false,
+  "witnesses_examined": 3
+}
