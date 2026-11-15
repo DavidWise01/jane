@@ -1,0 +1,728 @@
+{
+  "composition": {
+    "audit_digest": "d96744102086a9c491a5d36888b873dea367b24a2dd6b3d88a2d79615133e91e",
+    "baseline_digest": "ea816b4176ced7202e9df5834d07bb8f72803b3a5734b72ce37fd417316c8254",
+    "baseline_overall": {
+      "decimal": 0.68,
+      "denominator": 25,
+      "numerator": 17
+    },
+    "claim_limit": "Fixture rates and declared ancestry only; no measured real-world calibration.",
+    "current_digest": "9e7571d092feed904b50757a00bc0d538972686d04151a5f31a185966dc16b2b",
+    "current_overall": {
+      "decimal": 0.32,
+      "denominator": 25,
+      "numerator": 8
+    },
+    "experiment": "JANE 209",
+    "groups": [
+      {
+        "baseline_n": 40,
+        "baseline_rate": {
+          "decimal": 0.8,
+          "denominator": 5,
+          "numerator": 4
+        },
+        "baseline_root": "root-A",
+        "baseline_weight": {
+          "decimal": 0.8,
+          "denominator": 5,
+          "numerator": 4
+        },
+        "current_n": 10,
+        "current_rate": {
+          "decimal": 0.8,
+          "denominator": 5,
+          "numerator": 4
+        },
+        "current_root": "root-A",
+        "current_weight": {
+          "decimal": 0.2,
+          "denominator": 5,
+          "numerator": 1
+        },
+        "group": "A",
+        "rate_delta": {
+          "decimal": 0.0,
+          "denominator": 1,
+          "numerator": 0
+        }
+      },
+      {
+        "baseline_n": 10,
+        "baseline_rate": {
+          "decimal": 0.2,
+          "denominator": 5,
+          "numerator": 1
+        },
+        "baseline_root": "root-B",
+        "baseline_weight": {
+          "decimal": 0.2,
+          "denominator": 5,
+          "numerator": 1
+        },
+        "current_n": 40,
+        "current_rate": {
+          "decimal": 0.2,
+          "denominator": 5,
+          "numerator": 1
+        },
+        "current_root": "root-B",
+        "current_weight": {
+          "decimal": 0.8,
+          "denominator": 5,
+          "numerator": 4
+        },
+        "group": "B",
+        "rate_delta": {
+          "decimal": 0.0,
+          "denominator": 1,
+          "numerator": 0
+        }
+      }
+    ],
+    "policy": {
+      "maximum_baseline_age": 30,
+      "minimum_per_group": 5,
+      "tolerance": {
+        "decimal": 0.1,
+        "denominator": 10,
+        "numerator": 1
+      }
+    },
+    "reasons": [
+      "COMPOSITION_SHIFT"
+    ],
+    "standardized_baseline": {
+      "decimal": 0.68,
+      "denominator": 25,
+      "numerator": 17
+    },
+    "standardized_current": {
+      "decimal": 0.68,
+      "denominator": 25,
+      "numerator": 17
+    },
+    "verdict": "TRANSFER_WITHHELD"
+  },
+  "masked": {
+    "audit_digest": "d7c9b303c19e996984cc7e7dba8e53a83a4d286f10c02554dbeeb68f1aee2caa",
+    "baseline_digest": "613642f41ac4ca2c28791c242c943332148b9ca9d5cba26952257e44fb3b55b1",
+    "baseline_overall": {
+      "decimal": 0.5,
+      "denominator": 2,
+      "numerator": 1
+    },
+    "claim_limit": "Fixture rates and declared ancestry only; no measured real-world calibration.",
+    "current_digest": "e413148ca6fc6289b9bbcd271dcb11ad565521d2f48ded85b4fedb2d05358306",
+    "current_overall": {
+      "decimal": 0.5,
+      "denominator": 2,
+      "numerator": 1
+    },
+    "experiment": "JANE 209",
+    "groups": [
+      {
+        "baseline_n": 10,
+        "baseline_rate": {
+          "decimal": 0.9,
+          "denominator": 10,
+          "numerator": 9
+        },
+        "baseline_root": "root-A",
+        "baseline_weight": {
+          "decimal": 0.5,
+          "denominator": 2,
+          "numerator": 1
+        },
+        "current_n": 10,
+        "current_rate": {
+          "decimal": 0.6,
+          "denominator": 5,
+          "numerator": 3
+        },
+        "current_root": "root-A",
+        "current_weight": {
+          "decimal": 0.5,
+          "denominator": 2,
+          "numerator": 1
+        },
+        "group": "A",
+        "rate_delta": {
+          "decimal": -0.3,
+          "denominator": 10,
+          "numerator": -3
+        }
+      },
+      {
+        "baseline_n": 10,
+        "baseline_rate": {
+          "decimal": 0.1,
+          "denominator": 10,
+          "numerator": 1
+        },
+        "baseline_root": "root-B",
+        "baseline_weight": {
+          "decimal": 0.5,
+          "denominator": 2,
+          "numerator": 1
+        },
+        "current_n": 10,
+        "current_rate": {
+          "decimal": 0.4,
+          "denominator": 5,
+          "numerator": 2
+        },
+        "current_root": "root-B",
+        "current_weight": {
+          "decimal": 0.5,
+          "denominator": 2,
+          "numerator": 1
+        },
+        "group": "B",
+        "rate_delta": {
+          "decimal": 0.3,
+          "denominator": 10,
+          "numerator": 3
+        }
+      }
+    ],
+    "policy": {
+      "maximum_baseline_age": 30,
+      "minimum_per_group": 5,
+      "tolerance": {
+        "decimal": 0.1,
+        "denominator": 10,
+        "numerator": 1
+      }
+    },
+    "reasons": [
+      "AGGREGATE_MASKED_SUBGROUP_DRIFT",
+      "SUBGROUP_RATE_DRIFT"
+    ],
+    "standardized_baseline": {
+      "decimal": 0.5,
+      "denominator": 2,
+      "numerator": 1
+    },
+    "standardized_current": {
+      "decimal": 0.5,
+      "denominator": 2,
+      "numerator": 1
+    },
+    "verdict": "TRANSFER_WITHHELD"
+  },
+  "missing_group": {
+    "audit_digest": "93f6cbf68a71c9c851e80d072c5610b16414e60b1215a2eb1c948cc40de81d42",
+    "baseline_digest": "613642f41ac4ca2c28791c242c943332148b9ca9d5cba26952257e44fb3b55b1",
+    "baseline_overall": {
+      "decimal": 0.5,
+      "denominator": 2,
+      "numerator": 1
+    },
+    "claim_limit": "Fixture rates and declared ancestry only; no measured real-world calibration.",
+    "current_digest": "e12fb449726a5a4b06533254d9d67e1391b2d9c84e5b6802186f242a841e5eac",
+    "current_overall": {
+      "decimal": 0.6,
+      "denominator": 5,
+      "numerator": 3
+    },
+    "experiment": "JANE 209",
+    "groups": [
+      {
+        "baseline_n": 10,
+        "baseline_rate": {
+          "decimal": 0.9,
+          "denominator": 10,
+          "numerator": 9
+        },
+        "baseline_root": "root-A",
+        "baseline_weight": {
+          "decimal": 0.5,
+          "denominator": 2,
+          "numerator": 1
+        },
+        "current_n": 10,
+        "current_rate": {
+          "decimal": 0.6,
+          "denominator": 5,
+          "numerator": 3
+        },
+        "current_root": "root-A",
+        "current_weight": {
+          "decimal": 1.0,
+          "denominator": 1,
+          "numerator": 1
+        },
+        "group": "A",
+        "rate_delta": {
+          "decimal": -0.3,
+          "denominator": 10,
+          "numerator": -3
+        }
+      },
+      {
+        "baseline_n": 10,
+        "baseline_rate": {
+          "decimal": 0.1,
+          "denominator": 10,
+          "numerator": 1
+        },
+        "baseline_root": "root-B",
+        "baseline_weight": {
+          "decimal": 0.5,
+          "denominator": 2,
+          "numerator": 1
+        },
+        "current_n": null,
+        "current_rate": null,
+        "current_root": null,
+        "current_weight": null,
+        "group": "B",
+        "rate_delta": null
+      }
+    ],
+    "policy": {
+      "maximum_baseline_age": 30,
+      "minimum_per_group": 5,
+      "tolerance": {
+        "decimal": 0.1,
+        "denominator": 10,
+        "numerator": 1
+      }
+    },
+    "reasons": [
+      "AGGREGATE_MASKED_SUBGROUP_DRIFT",
+      "COMPOSITION_SHIFT",
+      "INSUFFICIENT_SUBGROUP_SUPPORT",
+      "SUBGROUP_COVERAGE_MISMATCH",
+      "SUBGROUP_RATE_DRIFT"
+    ],
+    "standardized_baseline": null,
+    "standardized_current": null,
+    "verdict": "TRANSFER_WITHHELD"
+  },
+  "shared_root": {
+    "audit_digest": "0a8e6c7af23abdd58e9df50d77a1f08d4e9b7dbe4fb1cfa05907bdf41f999a08",
+    "baseline_digest": "613642f41ac4ca2c28791c242c943332148b9ca9d5cba26952257e44fb3b55b1",
+    "baseline_overall": {
+      "decimal": 0.5,
+      "denominator": 2,
+      "numerator": 1
+    },
+    "claim_limit": "Fixture rates and declared ancestry only; no measured real-world calibration.",
+    "current_digest": "1c4459302048bf2efd9bb264174659ae37c30aacc4d586a751502a22af1fc98d",
+    "current_overall": {
+      "decimal": 0.5,
+      "denominator": 2,
+      "numerator": 1
+    },
+    "experiment": "JANE 209",
+    "groups": [
+      {
+        "baseline_n": 10,
+        "baseline_rate": {
+          "decimal": 0.9,
+          "denominator": 10,
+          "numerator": 9
+        },
+        "baseline_root": "root-A",
+        "baseline_weight": {
+          "decimal": 0.5,
+          "denominator": 2,
+          "numerator": 1
+        },
+        "current_n": 10,
+        "current_rate": {
+          "decimal": 0.9,
+          "denominator": 10,
+          "numerator": 9
+        },
+        "current_root": "shared",
+        "current_weight": {
+          "decimal": 0.5,
+          "denominator": 2,
+          "numerator": 1
+        },
+        "group": "A",
+        "rate_delta": {
+          "decimal": 0.0,
+          "denominator": 1,
+          "numerator": 0
+        }
+      },
+      {
+        "baseline_n": 10,
+        "baseline_rate": {
+          "decimal": 0.1,
+          "denominator": 10,
+          "numerator": 1
+        },
+        "baseline_root": "root-B",
+        "baseline_weight": {
+          "decimal": 0.5,
+          "denominator": 2,
+          "numerator": 1
+        },
+        "current_n": 10,
+        "current_rate": {
+          "decimal": 0.1,
+          "denominator": 10,
+          "numerator": 1
+        },
+        "current_root": "shared",
+        "current_weight": {
+          "decimal": 0.5,
+          "denominator": 2,
+          "numerator": 1
+        },
+        "group": "B",
+        "rate_delta": {
+          "decimal": 0.0,
+          "denominator": 1,
+          "numerator": 0
+        }
+      }
+    ],
+    "policy": {
+      "maximum_baseline_age": 30,
+      "minimum_per_group": 5,
+      "tolerance": {
+        "decimal": 0.1,
+        "denominator": 10,
+        "numerator": 1
+      }
+    },
+    "reasons": [
+      "SHARED_DECLARED_ANCESTRY"
+    ],
+    "standardized_baseline": {
+      "decimal": 0.5,
+      "denominator": 2,
+      "numerator": 1
+    },
+    "standardized_current": {
+      "decimal": 0.5,
+      "denominator": 2,
+      "numerator": 1
+    },
+    "verdict": "TRANSFER_WITHHELD"
+  },
+  "stable": {
+    "audit_digest": "1264aa601c453b65d8d620f6f366e5740bd629d7f503046a9fe5ab2e0cd4da23",
+    "baseline_digest": "613642f41ac4ca2c28791c242c943332148b9ca9d5cba26952257e44fb3b55b1",
+    "baseline_overall": {
+      "decimal": 0.5,
+      "denominator": 2,
+      "numerator": 1
+    },
+    "claim_limit": "Fixture rates and declared ancestry only; no measured real-world calibration.",
+    "current_digest": "2dd5da8222a7bfc467e4ff47a452c8e306c53a2df7870a54a53715762f576932",
+    "current_overall": {
+      "decimal": 0.5,
+      "denominator": 2,
+      "numerator": 1
+    },
+    "experiment": "JANE 209",
+    "groups": [
+      {
+        "baseline_n": 10,
+        "baseline_rate": {
+          "decimal": 0.9,
+          "denominator": 10,
+          "numerator": 9
+        },
+        "baseline_root": "root-A",
+        "baseline_weight": {
+          "decimal": 0.5,
+          "denominator": 2,
+          "numerator": 1
+        },
+        "current_n": 10,
+        "current_rate": {
+          "decimal": 0.9,
+          "denominator": 10,
+          "numerator": 9
+        },
+        "current_root": "root-A",
+        "current_weight": {
+          "decimal": 0.5,
+          "denominator": 2,
+          "numerator": 1
+        },
+        "group": "A",
+        "rate_delta": {
+          "decimal": 0.0,
+          "denominator": 1,
+          "numerator": 0
+        }
+      },
+      {
+        "baseline_n": 10,
+        "baseline_rate": {
+          "decimal": 0.1,
+          "denominator": 10,
+          "numerator": 1
+        },
+        "baseline_root": "root-B",
+        "baseline_weight": {
+          "decimal": 0.5,
+          "denominator": 2,
+          "numerator": 1
+        },
+        "current_n": 10,
+        "current_rate": {
+          "decimal": 0.1,
+          "denominator": 10,
+          "numerator": 1
+        },
+        "current_root": "root-B",
+        "current_weight": {
+          "decimal": 0.5,
+          "denominator": 2,
+          "numerator": 1
+        },
+        "group": "B",
+        "rate_delta": {
+          "decimal": 0.0,
+          "denominator": 1,
+          "numerator": 0
+        }
+      }
+    ],
+    "policy": {
+      "maximum_baseline_age": 30,
+      "minimum_per_group": 5,
+      "tolerance": {
+        "decimal": 0.1,
+        "denominator": 10,
+        "numerator": 1
+      }
+    },
+    "reasons": [],
+    "standardized_baseline": {
+      "decimal": 0.5,
+      "denominator": 2,
+      "numerator": 1
+    },
+    "standardized_current": {
+      "decimal": 0.5,
+      "denominator": 2,
+      "numerator": 1
+    },
+    "verdict": "CONDITIONAL_SUBGROUP_STABILITY_FIXTURE"
+  },
+  "stale": {
+    "audit_digest": "7dccb5c4d1f72a7ca5d28ada90682c4fca5b1c1e954cc4034785c50cbcbc6897",
+    "baseline_digest": "613642f41ac4ca2c28791c242c943332148b9ca9d5cba26952257e44fb3b55b1",
+    "baseline_overall": {
+      "decimal": 0.5,
+      "denominator": 2,
+      "numerator": 1
+    },
+    "claim_limit": "Fixture rates and declared ancestry only; no measured real-world calibration.",
+    "current_digest": "0099c42b5265f2ff9438bea316c84eb13d968b103916688500e3f538c989f55d",
+    "current_overall": {
+      "decimal": 0.5,
+      "denominator": 2,
+      "numerator": 1
+    },
+    "experiment": "JANE 209",
+    "groups": [
+      {
+        "baseline_n": 10,
+        "baseline_rate": {
+          "decimal": 0.9,
+          "denominator": 10,
+          "numerator": 9
+        },
+        "baseline_root": "root-A",
+        "baseline_weight": {
+          "decimal": 0.5,
+          "denominator": 2,
+          "numerator": 1
+        },
+        "current_n": 10,
+        "current_rate": {
+          "decimal": 0.9,
+          "denominator": 10,
+          "numerator": 9
+        },
+        "current_root": "root-A",
+        "current_weight": {
+          "decimal": 0.5,
+          "denominator": 2,
+          "numerator": 1
+        },
+        "group": "A",
+        "rate_delta": {
+          "decimal": 0.0,
+          "denominator": 1,
+          "numerator": 0
+        }
+      },
+      {
+        "baseline_n": 10,
+        "baseline_rate": {
+          "decimal": 0.1,
+          "denominator": 10,
+          "numerator": 1
+        },
+        "baseline_root": "root-B",
+        "baseline_weight": {
+          "decimal": 0.5,
+          "denominator": 2,
+          "numerator": 1
+        },
+        "current_n": 10,
+        "current_rate": {
+          "decimal": 0.1,
+          "denominator": 10,
+          "numerator": 1
+        },
+        "current_root": "root-B",
+        "current_weight": {
+          "decimal": 0.5,
+          "denominator": 2,
+          "numerator": 1
+        },
+        "group": "B",
+        "rate_delta": {
+          "decimal": 0.0,
+          "denominator": 1,
+          "numerator": 0
+        }
+      }
+    ],
+    "policy": {
+      "maximum_baseline_age": 30,
+      "minimum_per_group": 5,
+      "tolerance": {
+        "decimal": 0.1,
+        "denominator": 10,
+        "numerator": 1
+      }
+    },
+    "reasons": [
+      "STALE_BASELINE"
+    ],
+    "standardized_baseline": {
+      "decimal": 0.5,
+      "denominator": 2,
+      "numerator": 1
+    },
+    "standardized_current": {
+      "decimal": 0.5,
+      "denominator": 2,
+      "numerator": 1
+    },
+    "verdict": "TRANSFER_WITHHELD"
+  },
+  "underpowered": {
+    "audit_digest": "3ea3fc4cba1a97461f9091402d7ec27d09d5218601f379c2df940551747858c4",
+    "baseline_digest": "613642f41ac4ca2c28791c242c943332148b9ca9d5cba26952257e44fb3b55b1",
+    "baseline_overall": {
+      "decimal": 0.5,
+      "denominator": 2,
+      "numerator": 1
+    },
+    "claim_limit": "Fixture rates and declared ancestry only; no measured real-world calibration.",
+    "current_digest": "dffde5ce281f43fcb056e0e3b7bb853db13ce610eee8afcda8bbe519d78af269",
+    "current_overall": {
+      "decimal": 0.85,
+      "denominator": 20,
+      "numerator": 17
+    },
+    "experiment": "JANE 209",
+    "groups": [
+      {
+        "baseline_n": 10,
+        "baseline_rate": {
+          "decimal": 0.9,
+          "denominator": 10,
+          "numerator": 9
+        },
+        "baseline_root": "root-A",
+        "baseline_weight": {
+          "decimal": 0.5,
+          "denominator": 2,
+          "numerator": 1
+        },
+        "current_n": 19,
+        "current_rate": {
+          "decimal": 0.894737,
+          "denominator": 19,
+          "numerator": 17
+        },
+        "current_root": "root-A",
+        "current_weight": {
+          "decimal": 0.95,
+          "denominator": 20,
+          "numerator": 19
+        },
+        "group": "A",
+        "rate_delta": {
+          "decimal": -0.005263,
+          "denominator": 190,
+          "numerator": -1
+        }
+      },
+      {
+        "baseline_n": 10,
+        "baseline_rate": {
+          "decimal": 0.1,
+          "denominator": 10,
+          "numerator": 1
+        },
+        "baseline_root": "root-B",
+        "baseline_weight": {
+          "decimal": 0.5,
+          "denominator": 2,
+          "numerator": 1
+        },
+        "current_n": 1,
+        "current_rate": {
+          "decimal": 0.0,
+          "denominator": 1,
+          "numerator": 0
+        },
+        "current_root": "root-B",
+        "current_weight": {
+          "decimal": 0.05,
+          "denominator": 20,
+          "numerator": 1
+        },
+        "group": "B",
+        "rate_delta": {
+          "decimal": -0.1,
+          "denominator": 10,
+          "numerator": -1
+        }
+      }
+    ],
+    "policy": {
+      "maximum_baseline_age": 30,
+      "minimum_per_group": 5,
+      "tolerance": {
+        "decimal": 0.1,
+        "denominator": 10,
+        "numerator": 1
+      }
+    },
+    "reasons": [
+      "COMPOSITION_SHIFT",
+      "INSUFFICIENT_SUBGROUP_SUPPORT"
+    ],
+    "standardized_baseline": {
+      "decimal": 0.5,
+      "denominator": 2,
+      "numerator": 1
+    },
+    "standardized_current": {
+      "decimal": 0.447368,
+      "denominator": 38,
+      "numerator": 17
+    },
+    "verdict": "TRANSFER_WITHHELD"
+  }
+}
