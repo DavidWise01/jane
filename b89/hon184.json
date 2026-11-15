@@ -1,12 +1,12 @@
 {
   "schema": "HON184_B89_V1",
   "mission": "HEGEMON M001 / Internet Time Dilation",
-  "generated_at": "2026-11-14T15:52:21.418Z",
+  "generated_at": "2026-11-15T16:26:39.792Z",
   "status": "DERIVED_GITHUB_PUBLIC_METADATA",
   "slot_count": 184,
-  "pin_count": 2155,
+  "pin_count": 2158,
   "collision_slots": 184,
-  "unknown_count": 2075,
+  "unknown_count": 2078,
   "source": "BTF2 PUBLIC CATALOG",
   "pins": [
     {
@@ -1732,6 +1732,17 @@
       "agent_id": "FORMIC-00103ab8629347e5",
       "hon184_slot": 89,
       "band": "O",
+      "observation_status": "UNKNOWN",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "pin": "BTF2",
+      "repo": "DavidWise01/cern",
+      "url": "https://github.com/DavidWise01/cern",
+      "agent_id": "FORMIC-6639770fc4a9b265",
+      "hon184_slot": 144,
+      "band": "N",
       "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
@@ -5637,6 +5648,17 @@
       "agent_id": "FORMIC-d0d248749dd3486b",
       "hon184_slot": 157,
       "band": "N",
+      "observation_status": "UNKNOWN",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "pin": "BTF2",
+      "repo": "DavidWise01/jane-emu",
+      "url": "https://github.com/DavidWise01/jane-emu",
+      "agent_id": "FORMIC-f65eef29c1117a30",
+      "hon184_slot": 82,
+      "band": "O",
       "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
@@ -23672,6 +23694,17 @@
     },
     {
       "pin": "BTF2",
+      "repo": "DavidWise01/zeptoverse",
+      "url": "https://github.com/DavidWise01/zeptoverse",
+      "agent_id": "FORMIC-1ca42549d7784bd7",
+      "hon184_slot": 2,
+      "band": "H",
+      "observation_status": "UNKNOWN",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "pin": "BTF2",
       "repo": "DavidWise01/zero-camera",
       "url": "https://github.com/DavidWise01/zero-camera",
       "agent_id": "FORMIC-259004a26b463844",
@@ -23722,7 +23755,7 @@
     },
     {
       "slot": 2,
-      "occupancy": 8
+      "occupancy": 9
     },
     {
       "slot": 3,
@@ -24042,7 +24075,7 @@
     },
     {
       "slot": 82,
-      "occupancy": 20
+      "occupancy": 21
     },
     {
       "slot": 83,
@@ -24290,7 +24323,7 @@
     },
     {
       "slot": 144,
-      "occupancy": 12
+      "occupancy": 13
     },
     {
       "slot": 145,
