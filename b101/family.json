@@ -1,6 +1,6 @@
 {
   "schema": "JANE_B101_ALWAYS_ON_FAMILY_V1",
-  "generated_at": "2026-11-15T06:22:50.455Z",
+  "generated_at": "2026-11-15T18:48:05.661Z",
   "policy": "PERSISTENCE_ALWAYS_ON",
   "source": "BTF2 PUBLIC, B87 RUNS WHEN AVAILABLE, B88 WHEN AVAILABLE",
   "members": [
@@ -5141,6 +5141,16 @@
       "observation_count": 19,
       "discoveries": [],
       "url": "https://github.com/DavidWise01/jane"
+    },
+    {
+      "repo": "DavidWise01/jane-emu",
+      "channel": "btf2:davidwise01/jane-emu",
+      "presence": "RESERVED",
+      "observer": "FORMIC-f65eef29c1117a30",
+      "last_seen": null,
+      "observation_count": 0,
+      "discoveries": [],
+      "url": "https://github.com/DavidWise01/jane-emu"
     },
     {
       "repo": "DavidWise01/jiko-shindan",
@@ -21531,6 +21541,16 @@
       "observation_count": 19,
       "discoveries": [],
       "url": "https://github.com/DavidWise01/zeno-of-elea"
+    },
+    {
+      "repo": "DavidWise01/zeptoverse",
+      "channel": "btf2:davidwise01/zeptoverse",
+      "presence": "RESERVED",
+      "observer": "FORMIC-1ca42549d7784bd7",
+      "last_seen": null,
+      "observation_count": 0,
+      "discoveries": [],
+      "url": "https://github.com/DavidWise01/zeptoverse"
     },
     {
       "repo": "DavidWise01/zero-camera",
