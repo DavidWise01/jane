@@ -1,0 +1,125 @@
+{
+  "cases": {
+    "additional": {
+      "distinct_declared_roots": 2,
+      "evidence_count": 2,
+      "evidence_digest": "1ba99b3734563d4e2c3ac91df7c231b2579f21542f3f75b14977cd4b10c4baaa",
+      "experiment": 207,
+      "leading_candidates": [
+        "1010"
+      ],
+      "limitations": [
+        "Probabilities and calibration are supplied assumptions, not verified facts",
+        "Distinct root labels do not prove independent collection",
+        "Conditional point mass is not proof of true identity",
+        "This toy model contains exactly two candidate records"
+      ],
+      "maximum_probability": "27/29",
+      "posterior": {
+        "0101": "2/29",
+        "1010": "27/29"
+      },
+      "verdict": "HIGH_CONFIDENCE_UNVERIFIED"
+    },
+    "conflict": {
+      "distinct_declared_roots": 1,
+      "evidence_count": 1,
+      "evidence_digest": "582971f04e78ff259b9891ecef89e5d96f796e30351c583c4e51606734d66cb6",
+      "experiment": 207,
+      "leading_candidates": [],
+      "maximum_probability": null,
+      "posterior": null,
+      "reason": "No candidate has nonzero likelihood under the stated model",
+      "verdict": "ZERO_LIKELIHOOD_CONFLICT"
+    },
+    "noisy": {
+      "distinct_declared_roots": 1,
+      "evidence_count": 1,
+      "evidence_digest": "c7c56578cdcfc19cc793f99f96d5ebb94d3583c7c31bdab0355df9752c37a1e7",
+      "experiment": 207,
+      "leading_candidates": [
+        "1010"
+      ],
+      "limitations": [
+        "Probabilities and calibration are supplied assumptions, not verified facts",
+        "Distinct root labels do not prove independent collection",
+        "Conditional point mass is not proof of true identity",
+        "This toy model contains exactly two candidate records"
+      ],
+      "maximum_probability": "9/11",
+      "posterior": {
+        "0101": "2/11",
+        "1010": "9/11"
+      },
+      "verdict": "HIGH_CONFIDENCE_UNVERIFIED"
+    },
+    "non-discriminating": {
+      "distinct_declared_roots": 1,
+      "evidence_count": 1,
+      "evidence_digest": "573a05f2d591555d3091f96e313cf5fd0d7cbed4a0fce4ba7eb1b8f2e14a421e",
+      "experiment": 207,
+      "leading_candidates": [
+        "0101",
+        "1010"
+      ],
+      "limitations": [
+        "Probabilities and calibration are supplied assumptions, not verified facts",
+        "Distinct root labels do not prove independent collection",
+        "Conditional point mass is not proof of true identity",
+        "This toy model contains exactly two candidate records"
+      ],
+      "maximum_probability": "1/2",
+      "posterior": {
+        "0101": "1/2",
+        "1010": "1/2"
+      },
+      "verdict": "NO_UPDATE_FROM_DECLARED_EVIDENCE"
+    },
+    "point-mass": {
+      "distinct_declared_roots": 1,
+      "evidence_count": 1,
+      "evidence_digest": "1d44b1eff8ca1d15a733c81961e81a2c315328d9bd88aae2162e8c4bd45ee0ff",
+      "experiment": 207,
+      "leading_candidates": [
+        "1010"
+      ],
+      "limitations": [
+        "Probabilities and calibration are supplied assumptions, not verified facts",
+        "Distinct root labels do not prove independent collection",
+        "Conditional point mass is not proof of true identity",
+        "This toy model contains exactly two candidate records"
+      ],
+      "maximum_probability": "1",
+      "posterior": {
+        "0101": "0",
+        "1010": "1"
+      },
+      "verdict": "MODEL_CONDITIONAL_POINT_MASS"
+    },
+    "poor-calibration": {
+      "distinct_declared_roots": 1,
+      "evidence_count": 1,
+      "evidence_digest": "0b70c5a966b330cdbceed0fd4b88dda122e02f1a2e5eae4ef13edc89d9978747",
+      "experiment": 207,
+      "leading_candidates": [],
+      "maximum_probability": null,
+      "posterior": null,
+      "reason": "A declared calibration sample is below the policy minimum",
+      "verdict": "INSUFFICIENT_CALIBRATION"
+    },
+    "shared-root": {
+      "distinct_declared_roots": 1,
+      "evidence_count": 2,
+      "evidence_digest": "70ad6c52e9cebcc96d96f8d981b5e950d00e648d5c3e9618300fd7636178152e",
+      "experiment": 207,
+      "leading_candidates": [],
+      "maximum_probability": null,
+      "posterior": null,
+      "reason": "A declared source root appears more than once",
+      "verdict": "SHARED_ANCESTRY_WITHHELD"
+    }
+  },
+  "experiment": 207,
+  "frozen_parent": true,
+  "physical_measurements": false
+}
