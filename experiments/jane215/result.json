@@ -1,0 +1,31 @@
+{
+  "experiment": "JANE 215",
+  "invariant": "Fresh metadata != fresh sensor content",
+  "scenarios": {
+    "changed_pixels": {
+      "evidence": "8dd444790e3f89dc4ad9a929b005b08ff58bb398878b2b151ade02899ed647a9",
+      "fingerprint": "ece7dcad1243961a2410c507e59b1afd72d614fe0519719bc790103bbe4ae58d",
+      "physical_freshness_proven": false,
+      "repeated_sensors": [],
+      "verdict": "NOVEL_CONTENT_FIXTURE"
+    },
+    "first": {
+      "evidence": "5e08cab1d484114371e81edbcfb215786688587e0e08d4c5058f998bc7df627d",
+      "fingerprint": "5fa31a0f00eaef25e649fec3b7e879b7ec932309662da585101586ed3278c7bf",
+      "physical_freshness_proven": false,
+      "repeated_sensors": [],
+      "verdict": "NOVEL_CONTENT_FIXTURE"
+    },
+    "same_pixels_new_encoding": {
+      "evidence": "7ab6164351a419b6e10fc34ad2552f4bb96fdff19c2dc49e6843664e351b9be5",
+      "fingerprint": "5fa31a0f00eaef25e649fec3b7e879b7ec932309662da585101586ed3278c7bf",
+      "physical_freshness_proven": false,
+      "repeated_sensors": [
+        "sensor-a",
+        "sensor-b"
+      ],
+      "verdict": "REPEATED_CONTENT_SUSPECTED"
+    }
+  },
+  "tests": "run python -W error -m unittest -q test_frames.py"
+}
