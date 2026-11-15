@@ -1,0 +1,32 @@
+{
+  "experiment": 214,
+  "cases": {
+    "fresh": {
+      "verdict": "FRESH_ACQUISITION_FIXTURE",
+      "roots": 2,
+      "sensors": 2,
+      "evidence_hash": "1947ad16a7f37ad5c13b94e7f67fe35339e76cf6b1517484c5d3b27dc0fe7b0b"
+    },
+    "shared_sensor": {
+      "verdict": "SHARED_SENSOR"
+    },
+    "late_capture": {
+      "verdict": "INVALID_CAPTURE_CHRONOLOGY"
+    },
+    "shared_root": {
+      "verdict": "SHARED_ANCESTRY"
+    },
+    "first": {
+      "verdict": "FRESH_ACQUISITION_FIXTURE",
+      "roots": 2,
+      "sensors": 2,
+      "evidence_hash": "1947ad16a7f37ad5c13b94e7f67fe35339e76cf6b1517484c5d3b27dc0fe7b0b"
+    },
+    "replay": {
+      "verdict": "REPLAY_CHALLENGE"
+    }
+  },
+  "limitations": [
+    "Synthetic keys, sensor metadata, and clocks; signatures cannot prove physical acquisition or independent hardware."
+  ]
+}
