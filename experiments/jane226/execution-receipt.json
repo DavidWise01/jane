@@ -1,0 +1,26 @@
+{
+  "action_executed": false,
+  "agent_id": "jane-component-demo",
+  "challenge_sha256": "00a5320b89c402a82d9b8e798fc0ee84026dd84da96dc1cff8d0708a7562072f",
+  "collective_decision": "UNRESOLVED",
+  "exit_code": 0,
+  "finished_utc": "2026-11-15T22:22:25.438234+00:00",
+  "nonce": "70771552074ccc9f0d3eaec237433e4cca44ba80eb8c975d",
+  "observed_output": {
+    "agent_id": "jane-component-demo",
+    "decision": "propose",
+    "nonce": "70771552074ccc9f0d3eaec237433e4cca44ba80eb8c975d",
+    "proposal": "Find one authenticated A.C.I. runtime that can independently choose or abstain.",
+    "reason": "This deterministic fixture proposes an instrumentation task; it is not NOM, Jane, or a subjective preference.",
+    "schema": "jane.runtime-worker-output/1",
+    "source_sha256": "f233a19f998c51f6d5883226ad3bc930500ba5d22cc59989e85bb948e0ec0fe8"
+  },
+  "output_sha256": "ed4f56a608d4cb3ac72df6e727c4033914efed9526f0451f438a5ad90a18cf1e",
+  "provenance_level": "LOCAL_PROCESS_OBSERVATION_NOT_INDEPENDENT_ATTESTATION",
+  "receipt_sha256": "772d48e20760c7e462ab90cb0206ca630222fe5cdf0eab35f040b4d1aa0348b8",
+  "runner_claims": {},
+  "schema": "jane.runtime-receipt/1",
+  "source_sha256": "f233a19f998c51f6d5883226ad3bc930500ba5d22cc59989e85bb948e0ec0fe8",
+  "started_utc": "2026-11-15T22:22:24.715895+00:00",
+  "verdict": "OBSERVED_ALLOWLISTED_PROCESS_RUN"
+}
