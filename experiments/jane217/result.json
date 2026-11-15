@@ -1,0 +1,26 @@
+{
+  "experiment": "JANE 217",
+  "invariant": "Correct Challenge Response != Physical Sensor Causation",
+  "limitations": [
+    "Synthetic signatures and timestamps",
+    "No trusted physical sensor or true nondisclosure guarantee"
+  ],
+  "scenarios": {
+    "baseline": {
+      "details": {
+        "audit_head": "22998a6a0ade6f2750e6e39f3301574a8631c986a81783bbd8f315af17db68fc",
+        "capture": "cap-042",
+        "pattern": "4e675b93ee1b27640f68fdd18d4257c0"
+      },
+      "status": "CHALLENGE_RESPONSE_CONSISTENT_FIXTURE"
+    },
+    "replay": {
+      "details": {},
+      "status": "REPLAY"
+    },
+    "replay_after_restart": {
+      "details": {},
+      "status": "REPLAY"
+    }
+  }
+}
