@@ -1,0 +1,49 @@
+name: JANE 224 — inspect NOM for an unassigned candidate
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  proposal:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: jane
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          repository: DavidWise01/nom
+          ref: main
+          path: nom
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Verify adapter against bounded fixtures
+        run: cd jane/experiments/jane224 && python -W error -m unittest -q test_proposer.py
+      - name: Read NOM ledger and emit candidate only
+        shell: bash
+        run: |
+          set -euo pipefail
+          NOM_SHA="$(git -C nom rev-parse HEAD)"
+          python jane/experiments/jane224/proposer.py \
+            --ledger nom/ledger.jsonl \
+            --ground nom/ground_truth.jsonl \
+            --nom-commit "$NOM_SHA" \
+            --output jane224-proposal-receipt.json
+          python - <<'PY'
+          import json
+          doc=json.load(open('jane224-proposal-receipt.json',encoding='utf-8'))
+          assert doc['collective_choice'] is None
+          assert doc['origin_agent_spoke'] is False
+          assert doc['next_action_authorized'] is False
+          print('Provenance:',doc['source']['commit'])
+          print('Boundary:',doc['status'])
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: jane224-candidate-receipt
+          path: jane224-proposal-receipt.json
+          if-no-files-found: error
