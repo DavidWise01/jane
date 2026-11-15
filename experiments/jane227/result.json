@@ -1,0 +1,9 @@
+{
+  "action_executed": false,
+  "collective_decision": "UNRESOLVED",
+  "evidence_scope": "GITHUB_API_METADATA_CORROBORATION_NOT_HARDWARE_OR_PROCESS_ATTESTATION",
+  "local_receipt_sha256": "2a6532109c6f622b5fea82efd5f8c961d512ac9ed33704d6211abab033c2dc19",
+  "runner_attestation": "NOT_ESTABLISHED",
+  "schema": "jane.github-run-crosscheck/1",
+  "verdict": "INVALID_RUNNER_IDENTITY_CLAIM"
+}
