@@ -1,0 +1,55 @@
+name: JANE 223 — NOM evidence handoff (manual)
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  observe-nom:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: jane
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          repository: DavidWise01/nom
+          ref: main
+          path: nom
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          repository: DavidWise01/toph-cortex
+          ref: main
+          path: toph
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Regression tests
+        run: cd jane/experiments/jane223 && python -W error -m unittest -q test_nom_bridge.py
+      - name: Offline audit of actual NOM checkout (no NOM calls, no writes)
+        shell: bash
+        run: |
+          set -euo pipefail
+          NOM_COMMIT="$(git -C nom rev-parse HEAD)"
+          python jane/experiments/jane223/nom_bridge.py \
+            --ledger nom/ledger.jsonl \
+            --nom-commit "$NOM_COMMIT" \
+            --registry toph/memory/agents.json \
+            --output "$RUNNER_TEMP/jane223-observation.json"
+          python - "$RUNNER_TEMP/jane223-observation.json" <<'PY'
+          import json,sys
+          v=json.load(open(sys.argv[1]))
+          assert v['observation_status']=='AUDITED_SOURCE_RECORDS'
+          assert v['collective_choice'] is None and v['agent_proposal'] is None
+          assert v['action_executed'] is False and v['independent_runtime_attestation'] is False
+          print('VERIFIED: NOM source records audited; no Jane choice inferred')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: jane223-nom-observation
+          path: ${{ runner.temp }}/jane223-observation.json
+          if-no-files-found: error
+          retention-days: 30
