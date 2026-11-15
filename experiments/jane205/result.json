@@ -1,0 +1,76 @@
+{
+  "chapter": "JANE 205",
+  "invariant": "Budget Compliance != Reconstruction Resistance",
+  "releases": [
+    {
+      "verdict": "RELEASE_ALLOWED_FIXTURE",
+      "before": {
+        "rank": 0,
+        "candidate_count": 16,
+        "fixed_coordinates": {},
+        "fully_reconstructed": false,
+        "consistent": true
+      },
+      "after": {
+        "rank": 1,
+        "candidate_count": 8,
+        "fixed_coordinates": {},
+        "fully_reconstructed": false,
+        "consistent": true
+      },
+      "cumulative_credits": 1
+    },
+    {
+      "verdict": "RELEASE_ALLOWED_FIXTURE",
+      "before": {
+        "rank": 1,
+        "candidate_count": 8,
+        "fixed_coordinates": {},
+        "fully_reconstructed": false,
+        "consistent": true
+      },
+      "after": {
+        "rank": 2,
+        "candidate_count": 4,
+        "fixed_coordinates": {},
+        "fully_reconstructed": false,
+        "consistent": true
+      },
+      "cumulative_credits": 2
+    },
+    {
+      "verdict": "RELEASE_ALLOWED_FIXTURE",
+      "before": {
+        "rank": 2,
+        "candidate_count": 4,
+        "fixed_coordinates": {},
+        "fully_reconstructed": false,
+        "consistent": true
+      },
+      "after": {
+        "rank": 3,
+        "candidate_count": 2,
+        "fixed_coordinates": {},
+        "fully_reconstructed": false,
+        "consistent": true
+      },
+      "cumulative_credits": 3
+    }
+  ],
+  "blocked": "FULL_RECONSTRUCTION",
+  "state": {
+    "verdict": "RECONSTRUCTION_GUARD_FIXTURE",
+    "events": 3,
+    "head": "09eeb754a8da08a4d158611178661ecc9668a1d0d1e60c77472767ad87b9ea26",
+    "analysis": {
+      "rank": 3,
+      "candidate_count": 2,
+      "fixed_coordinates": {},
+      "fully_reconstructed": false,
+      "consistent": true
+    },
+    "credits_used": 3
+  },
+  "frozen_parent": true,
+  "claim_scope": "synthetic binary aggregate fixtures only"
+}
