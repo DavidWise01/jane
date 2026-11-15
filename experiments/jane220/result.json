@@ -1,0 +1,64 @@
+{
+  "experiment": "JANE 220",
+  "invariant": "Trusted enrollment signature != genuine device provenance",
+  "physical_hardware_contacted": false,
+  "results": {
+    "broken": {
+      "nonce": "jane220-broken-nonce-0001",
+      "sequence": 1,
+      "verdict": "BROKEN_CUSTODY_CHAIN"
+    },
+    "expired": {
+      "nonce": "jane220-expired-nonce-0001",
+      "sequence": 1,
+      "verdict": "ENROLLMENT_EXPIRED"
+    },
+    "false-maker": {
+      "nonce": "jane220-false-maker-nonce-0001",
+      "sequence": 1,
+      "verdict": "UNTRUSTED_MANUFACTURER_CLAIM"
+    },
+    "impostor": {
+      "nonce": "jane220-impostor-nonce-0001",
+      "sequence": 1,
+      "verdict": "MANUFACTURING_ENROLLMENT_MISMATCH"
+    },
+    "late": {
+      "nonce": "jane220-late-nonce-0001",
+      "sequence": 1,
+      "verdict": "CAPTURE_OUTSIDE_WINDOW"
+    },
+    "mismatch": {
+      "nonce": "jane220-mismatch-nonce-0001",
+      "sequence": 1,
+      "verdict": "RESPONSE_MISMATCH"
+    },
+    "missing": {
+      "nonce": "jane220-missing-nonce-0001",
+      "sequence": 1,
+      "verdict": "MISSING_CUSTODY_CHAIN"
+    },
+    "revoked": {
+      "nonce": "jane220-revoked-nonce-0001",
+      "sequence": 1,
+      "verdict": "REVOKED_DEVICE"
+    },
+    "self-signed": {
+      "nonce": "jane220-self-signed-nonce-0001",
+      "sequence": 1,
+      "verdict": "SELF_DECLARED_DEVICE"
+    },
+    "shared": {
+      "nonce": "jane220-shared-nonce-0001",
+      "sequence": 1,
+      "verdict": "SHARED_PROVENANCE_OR_CAPTURE"
+    },
+    "valid": {
+      "devices": 2,
+      "nonce": "jane220-valid-nonce-0001",
+      "physical_origin_proven": false,
+      "sequence": 1,
+      "verdict": "DECLARED_SUPPLY_CHAIN_CONSISTENT_FIXTURE"
+    }
+  }
+}
