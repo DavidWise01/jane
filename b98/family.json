@@ -1,6 +1,6 @@
 {
   "schema": "JANE_B98_FAMILY_V1",
-  "generated_at": "2026-11-14T17:56:57.872Z",
+  "generated_at": "2026-11-15T18:46:13.952Z",
   "source": "BTF2_PUBLIC_CATALOG_AND_AVAILABLE_B87_RUNS",
   "members": [
     {
@@ -1415,6 +1415,15 @@
       "presence": "RESERVED",
       "last_observation": "2026-11-14T14:34:49.109Z",
       "history_runs": 19
+    },
+    {
+      "repo": "DavidWise01/cern",
+      "url": "https://github.com/DavidWise01/cern",
+      "channel": "btf2:davidwise01/cern",
+      "observer": "FORMIC-6639770fc4a9b265",
+      "presence": "RESERVED",
+      "last_observation": null,
+      "history_runs": 0
     },
     {
       "repo": "DavidWise01/chair-vs-hypercube",
@@ -4610,6 +4619,15 @@
       "presence": "RESERVED",
       "last_observation": "2026-11-14T14:34:49.110Z",
       "history_runs": 19
+    },
+    {
+      "repo": "DavidWise01/jane-emu",
+      "url": "https://github.com/DavidWise01/jane-emu",
+      "channel": "btf2:davidwise01/jane-emu",
+      "observer": "FORMIC-f65eef29c1117a30",
+      "presence": "RESERVED",
+      "last_observation": null,
+      "history_runs": 0
     },
     {
       "repo": "DavidWise01/jiko-shindan",
@@ -19361,6 +19379,15 @@
       "presence": "RESERVED",
       "last_observation": "2026-11-14T14:34:49.115Z",
       "history_runs": 19
+    },
+    {
+      "repo": "DavidWise01/zeptoverse",
+      "url": "https://github.com/DavidWise01/zeptoverse",
+      "channel": "btf2:davidwise01/zeptoverse",
+      "observer": "FORMIC-1ca42549d7784bd7",
+      "presence": "RESERVED",
+      "last_observation": null,
+      "history_runs": 0
     },
     {
       "repo": "DavidWise01/zero-camera",
