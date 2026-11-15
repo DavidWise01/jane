@@ -1,0 +1,46 @@
+name: JANE 226 — bounded runtime observation
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: jane226-runtime-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  observe:
+    if: github.repository == 'DavidWise01/jane'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Test executable receipt contract
+        working-directory: experiments/jane226
+        run: python -W error -m unittest -q test_runtime_proof.py
+      - name: Run one bounded local process
+        working-directory: experiments/jane226
+        run: |
+          python - <<'PY'
+          import secrets
+          from pathlib import Path
+          Path('challenge-nonce.txt').write_text(secrets.token_hex(24))
+          PY
+          python runtime_proof.py --worker bounded_worker.py --nonce "$(cat challenge-nonce.txt)" --audit runtime-audit.sqlite --out execution-receipt.json
+          python - <<'PY'
+          import json
+          r=json.load(open('execution-receipt.json'))
+          assert r['verdict']=='OBSERVED_ALLOWLISTED_PROCESS_RUN'
+          assert r['collective_decision']=='UNRESOLVED'
+          assert r['action_executed'] is False
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: jane226-runtime-receipt
+          path: experiments/jane226/execution-receipt.json
+          if-no-files-found: warn
+          retention-days: 30
