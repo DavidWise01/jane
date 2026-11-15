@@ -1,0 +1,48 @@
+{
+  "audit_integrity": true,
+  "auxiliary_result": {
+    "action": "AUXILIARY_COMPLETES_RECONSTRUCTION",
+    "after": 1,
+    "ancestry_roots": [],
+    "before": 2,
+    "candidate_digest": "d47a61dfed560a091a4de4c641e9ecb979d99fdadf0c4497da18434dca841605",
+    "fact_provenance": {
+      "root": "external-root",
+      "source": "public-register"
+    },
+    "fixed_indices": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "fully_reconstructed": true,
+    "inconsistent": false,
+    "limitations": "Enumerated binary fixture only; external knowledge and custody are declared, not independently verified.",
+    "newly_fixed": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "retained": false
+  },
+  "before_candidates": [
+    [
+      0,
+      1,
+      0,
+      1
+    ],
+    [
+      1,
+      0,
+      1,
+      0
+    ]
+  ],
+  "invariant": "Multiple compatible records != privacy against auxiliary knowledge",
+  "name": "JANE 206",
+  "parent_activated": false,
+  "retained_count": 2
+}
