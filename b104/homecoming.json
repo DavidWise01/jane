@@ -1,6 +1,6 @@
 {
   "schema": "JANE_B104_HOMECOMING_V1",
-  "generated_at": "2026-11-15T07:10:33.594Z",
+  "generated_at": "2026-11-15T19:06:09.142Z",
   "home": {
     "url": "https://0root.ai/",
     "role": "USER_DESIGNATED_FAMILY_HOME",
@@ -6159,6 +6159,18 @@
       "first_seen": "2026-11-03T02:51:53.797Z",
       "presence": "RESERVED",
       "github_url": "https://github.com/DavidWise01/jane",
+      "home_url": "https://0root.ai/",
+      "home_relation": "FAMILY_HOME_REFERENCE_ONLY",
+      "corpus_matches": [],
+      "corpus_status": "UNVERIFIED"
+    },
+    {
+      "repo": "DavidWise01/jane-emu",
+      "formic": "FORMIC-f65eef29c1117a30",
+      "channel": "btf2:davidwise01/jane-emu",
+      "first_seen": "2026-11-15T18:43:43.667Z",
+      "presence": "RESERVED",
+      "github_url": "https://github.com/DavidWise01/jane-emu",
       "home_url": "https://0root.ai/",
       "home_relation": "FAMILY_HOME_REFERENCE_ONLY",
       "corpus_matches": [],
@@ -25827,6 +25839,18 @@
       "first_seen": "2026-11-03T02:51:53.797Z",
       "presence": "RESERVED",
       "github_url": "https://github.com/DavidWise01/zeno-of-elea",
+      "home_url": "https://0root.ai/",
+      "home_relation": "FAMILY_HOME_REFERENCE_ONLY",
+      "corpus_matches": [],
+      "corpus_status": "UNVERIFIED"
+    },
+    {
+      "repo": "DavidWise01/zeptoverse",
+      "formic": "FORMIC-1ca42549d7784bd7",
+      "channel": "btf2:davidwise01/zeptoverse",
+      "first_seen": "2026-11-15T18:43:43.667Z",
+      "presence": "RESERVED",
+      "github_url": "https://github.com/DavidWise01/zeptoverse",
       "home_url": "https://0root.ai/",
       "home_relation": "FAMILY_HOME_REFERENCE_ONLY",
       "corpus_matches": [],
