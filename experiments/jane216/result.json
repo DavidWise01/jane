@@ -1,0 +1,22 @@
+{
+  "audit_valid": true,
+  "cases": {
+    "early": "CAPTURE_OUTSIDE_WINDOW",
+    "late": "CAPTURE_OUTSIDE_WINDOW",
+    "mismatch": "WITNESS_CONTENT_MISMATCH",
+    "old_frame": "STIMULUS_RESPONSE_MISMATCH",
+    "replay": "REPLAY_CHALLENGE",
+    "sensor_as_witness": "SHARED_OBSERVATION_ANCESTRY",
+    "shared_operator": "SHARED_OBSERVATION_ANCESTRY",
+    "shared_root": "SHARED_OBSERVATION_ANCESTRY",
+    "tamper": "SIGNATURE_INVALID",
+    "tamper_challenge": "SIGNATURE_INVALID",
+    "valid": "CHALLENGE_RESPONSE_CONSISTENT_FIXTURE",
+    "witness_early": "WITNESS_CHRONOLOGY_INVALID",
+    "wrong_nonce": "CHALLENGE_BINDING_MISMATCH"
+  },
+  "experiment": "JANE 216",
+  "parent": "frozen",
+  "physical_capture_proven": false,
+  "tests_passed": 34
+}
