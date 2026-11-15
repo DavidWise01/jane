@@ -1,0 +1,204 @@
+{
+  "experiment": 208,
+  "fixtures": {
+    "artifact": {
+      "age_days": 10,
+      "calibration_n": 120,
+      "calibration_transfer_supported": false,
+      "calibration_window": [
+        80,
+        100
+      ],
+      "caveat": "All measurements, dates, and provenance are self-reported fixture metadata; not authenticated externally",
+      "declared_rate_gap": "1/20",
+      "deployment_day": 110,
+      "evidence_digest": "36a0af0a965f786e60d2ad08d5a40b624eab0862b229f89d9b185040f0e830be",
+      "experiment": 208,
+      "population_from": "lab-A",
+      "population_to": "lab-A",
+      "posterior": null,
+      "verdict": "ARTIFACT_VERSION_MISMATCH"
+    },
+    "boundary": {
+      "age_days": 30,
+      "calibration_n": 120,
+      "calibration_transfer_supported": true,
+      "calibration_window": [
+        80,
+        100
+      ],
+      "caveat": "All measurements, dates, and provenance are self-reported fixture metadata; not authenticated externally",
+      "declared_rate_gap": "1/10",
+      "deployment_day": 130,
+      "evidence_digest": "122b004f5aed7701bc5d460aeb3327614677ea8c8ab04fd3ae8397b3d973ac51",
+      "experiment": 208,
+      "limitations": [
+        "Matching metadata does not establish distributional equivalence",
+        "Single summary rate cannot rule out calibration drift or concept shift",
+        "Posterior is conditional on unverified likelihoods and prior"
+      ],
+      "population_from": "lab-A",
+      "population_to": "lab-A",
+      "posterior": {
+        "0101": "2/11",
+        "1010": "9/11"
+      },
+      "verdict": "CONDITIONAL_TRANSFER_FIXTURE"
+    },
+    "current": {
+      "age_days": 10,
+      "calibration_n": 120,
+      "calibration_transfer_supported": true,
+      "calibration_window": [
+        80,
+        100
+      ],
+      "caveat": "All measurements, dates, and provenance are self-reported fixture metadata; not authenticated externally",
+      "declared_rate_gap": "1/20",
+      "deployment_day": 110,
+      "evidence_digest": "e2bb1fb2efd6dfeff9fbff8eb72ee2cc46043c4b4bc34b349399ffee2df1ce4f",
+      "experiment": 208,
+      "limitations": [
+        "Matching metadata does not establish distributional equivalence",
+        "Single summary rate cannot rule out calibration drift or concept shift",
+        "Posterior is conditional on unverified likelihoods and prior"
+      ],
+      "population_from": "lab-A",
+      "population_to": "lab-A",
+      "posterior": {
+        "0101": "2/11",
+        "1010": "9/11"
+      },
+      "verdict": "CONDITIONAL_TRANSFER_FIXTURE"
+    },
+    "future": {
+      "age_days": null,
+      "calibration_n": 120,
+      "calibration_transfer_supported": false,
+      "calibration_window": [
+        80,
+        100
+      ],
+      "caveat": "All measurements, dates, and provenance are self-reported fixture metadata; not authenticated externally",
+      "declared_rate_gap": "1/20",
+      "deployment_day": 99,
+      "evidence_digest": "df5465e5ac0631fb16052ec13dc45d98536374b8784729d6b823f717a81c9c17",
+      "experiment": 208,
+      "population_from": "lab-A",
+      "population_to": "lab-A",
+      "posterior": null,
+      "verdict": "CALIBRATION_FROM_FUTURE"
+    },
+    "identity": {
+      "age_days": 10,
+      "calibration_n": 120,
+      "calibration_transfer_supported": false,
+      "calibration_window": [
+        80,
+        100
+      ],
+      "caveat": "All measurements, dates, and provenance are self-reported fixture metadata; not authenticated externally",
+      "declared_rate_gap": "1/20",
+      "deployment_day": 110,
+      "evidence_digest": "0b99fea2eb96ea29f847a489208f7673823a0cf2eba66ce07afdcafcd4560c49",
+      "experiment": 208,
+      "population_from": "lab-A",
+      "population_to": "lab-A",
+      "posterior": null,
+      "verdict": "CALIBRATION_ID_MISMATCH"
+    },
+    "monitoring-shift": {
+      "age_days": 10,
+      "calibration_n": 120,
+      "calibration_transfer_supported": false,
+      "calibration_window": [
+        80,
+        100
+      ],
+      "caveat": "All measurements, dates, and provenance are self-reported fixture metadata; not authenticated externally",
+      "declared_rate_gap": "2/5",
+      "deployment_day": 110,
+      "evidence_digest": "e97b84a0716266b8df9fa8f3b7a1eab353e599757eb4a4ee1226ce11326113c2",
+      "experiment": 208,
+      "population_from": "lab-A",
+      "population_to": "lab-A",
+      "posterior": null,
+      "verdict": "MONITORING_SHIFT_DETECTED"
+    },
+    "population": {
+      "age_days": 10,
+      "calibration_n": 120,
+      "calibration_transfer_supported": false,
+      "calibration_window": [
+        80,
+        100
+      ],
+      "caveat": "All measurements, dates, and provenance are self-reported fixture metadata; not authenticated externally",
+      "declared_rate_gap": "1/20",
+      "deployment_day": 110,
+      "evidence_digest": "02ec826fa952715498f9689657aa4231e0a42a60343497e47968bc836662da58",
+      "experiment": 208,
+      "population_from": "lab-A",
+      "population_to": "lab-B",
+      "posterior": null,
+      "verdict": "POPULATION_TRANSFER_UNVERIFIED"
+    },
+    "small": {
+      "age_days": 10,
+      "calibration_n": 3,
+      "calibration_transfer_supported": false,
+      "calibration_window": [
+        80,
+        100
+      ],
+      "caveat": "All measurements, dates, and provenance are self-reported fixture metadata; not authenticated externally",
+      "declared_rate_gap": "1/20",
+      "deployment_day": 110,
+      "evidence_digest": "a6c0ef0dd13dda390016edec1ee588234543ed34efc0b1fe2bc7bd7be5df36a7",
+      "experiment": 208,
+      "population_from": "lab-A",
+      "population_to": "lab-A",
+      "posterior": null,
+      "verdict": "INSUFFICIENT_CALIBRATION"
+    },
+    "stale": {
+      "age_days": 80,
+      "calibration_n": 120,
+      "calibration_transfer_supported": false,
+      "calibration_window": [
+        80,
+        100
+      ],
+      "caveat": "All measurements, dates, and provenance are self-reported fixture metadata; not authenticated externally",
+      "declared_rate_gap": "1/20",
+      "deployment_day": 180,
+      "evidence_digest": "b3ceb602828b2944a3a74539bac7a5de8888d22f95dcedf8e512a87cf4267aea",
+      "experiment": 208,
+      "population_from": "lab-A",
+      "population_to": "lab-A",
+      "posterior": null,
+      "verdict": "STALE_CALIBRATION"
+    },
+    "zero": {
+      "age_days": 10,
+      "calibration_n": 120,
+      "calibration_transfer_supported": false,
+      "calibration_window": [
+        80,
+        100
+      ],
+      "caveat": "All measurements, dates, and provenance are self-reported fixture metadata; not authenticated externally",
+      "declared_rate_gap": "1/20",
+      "deployment_day": 110,
+      "evidence_digest": "d48cdc311877e09737639f4af05fe46daaa776c6a83ca5ec5141202fa338d618",
+      "experiment": 208,
+      "population_from": "lab-A",
+      "population_to": "lab-A",
+      "posterior": null,
+      "verdict": "ZERO_LIKELIHOOD_CONFLICT"
+    }
+  },
+  "frozen_parent": true,
+  "invariant": "Past Calibration != Present Accuracy",
+  "simulated_only": true
+}
