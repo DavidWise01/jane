@@ -2154,3 +2154,5 @@
 {"event":"GENERATION_REGISTERED","repo":"DavidWise01/convergence","formic":"FORMIC-91a365b1e6e74b2f","generation":"ARRIVAL_2026-11-13","first_seen":"2026-11-13T06:18:12.977Z","at":"2026-11-13T07:25:41.488Z"}
 {"event":"GENERATION_REGISTERED","repo":"DavidWise01/3bodyproblem","formic":"FORMIC-1d6d4b1388ac151a","generation":"ARRIVAL_2026-11-14","first_seen":"2026-11-14T18:10:12.554Z","at":"2026-11-14T18:32:40.245Z"}
 {"event":"GENERATION_REGISTERED","repo":"DavidWise01/cern","formic":"FORMIC-6639770fc4a9b265","generation":"ARRIVAL_2026-11-14","first_seen":"2026-11-14T22:29:49.164Z","at":"2026-11-14T22:46:46.173Z"}
+{"event":"GENERATION_REGISTERED","repo":"DavidWise01/jane-emu","formic":"FORMIC-f65eef29c1117a30","generation":"ARRIVAL_2026-11-15","first_seen":"2026-11-15T18:43:43.667Z","at":"2026-11-15T19:09:19.700Z"}
+{"event":"GENERATION_REGISTERED","repo":"DavidWise01/zeptoverse","formic":"FORMIC-1ca42549d7784bd7","generation":"ARRIVAL_2026-11-15","first_seen":"2026-11-15T18:43:43.667Z","at":"2026-11-15T19:09:19.700Z"}
