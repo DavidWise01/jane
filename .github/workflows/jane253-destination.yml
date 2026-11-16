@@ -1,0 +1,27 @@
+name: JANE 253 destination fencing
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  destination-fence:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify destination-fence race and regression suite
+        working-directory: experiments/jane253
+        run: |
+          python -m unittest -v test_destination_fence.py 2>&1 | tee tests.log
+          python destination_fence.py --db demo-destination.sqlite --output result.json
+      - name: Preserve evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: jane253-destination-fence
+          path: |
+            experiments/jane253/tests.log
+            experiments/jane253/result.json
