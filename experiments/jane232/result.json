@@ -1,0 +1,12 @@
+{
+  "actions_executed": 0,
+  "active_key": null,
+  "authenticated_events": 0,
+  "custody_state": "UNKNOWN",
+  "errors": [],
+  "event_count": 0,
+  "exclusive_custody_proven": false,
+  "jane_collective_choice": "UNRESOLVED",
+  "schema": "jane232.custody/1",
+  "verdict": "NO_CUSTODY_EVIDENCE"
+}
