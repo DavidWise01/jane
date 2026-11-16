@@ -1,0 +1,43 @@
+{
+  "a_delayed_attempt": {
+    "committed": false,
+    "verdict": "FENCED_STALE_EPOCH"
+  },
+  "a_prechecked_before_takeover": true,
+  "attempts": [
+    {
+      "epoch": 1,
+      "holder": "host-a",
+      "operation_id": "a-delayed",
+      "verdict": "FENCED_STALE_EPOCH"
+    },
+    {
+      "epoch": 2,
+      "holder": "host-b",
+      "operation_id": "b-work",
+      "verdict": "COMMITTED"
+    }
+  ],
+  "authority": {
+    "epoch": 2,
+    "holder": "host-b"
+  },
+  "b_current_attempt": {
+    "committed": true,
+    "sha256": "2da7fdf67c502b601dcd6ea349916aecb9f7e6fe8d461c445421c8b8159755d0",
+    "verdict": "COMMITTED"
+  },
+  "claim": "LOCAL_DESTINATION_TRANSACTION_ONLY",
+  "collective_choice": "UNRESOLVED",
+  "effects": [
+    {
+      "epoch": 2,
+      "holder": "host-b",
+      "operation_id": "b-work",
+      "payload_hash": "2da7fdf67c502b601dcd6ea349916aecb9f7e6fe8d461c445421c8b8159755d0"
+    }
+  ],
+  "experiment": "JANE-253",
+  "external_actions": 0,
+  "resource": "jane-task"
+}
