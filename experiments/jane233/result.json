@@ -1,0 +1,14 @@
+{
+  "actions_executed": 0,
+  "active_key": null,
+  "authenticated_live_witnesses": 0,
+  "clean_environment_proven": false,
+  "errors": [],
+  "events_checked": 0,
+  "exclusive_key_custody_proven": false,
+  "inherited_compromise_roots": [],
+  "jane_collective_choice": "UNRESOLVED",
+  "note": "No claim about physical host integrity or exclusive control",
+  "schema": "jane233.inheritance/1",
+  "verdict": "NO_RUNTIME_CUSTODY_EVIDENCE"
+}
