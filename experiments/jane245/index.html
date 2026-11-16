@@ -1,0 +1,27 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>JANE 245 · The Clock That Certified Its Own Time</title><style>:root{color-scheme:dark}body{background:#080e18;color:#e2effc;font:16px system-ui;margin:0 auto;max-width:960px;padding:32px 22px}h1{font-size:clamp(27px,5vw,46px);line-height:1.12}h2{margin-top:35px;color:#79e9de}.sub{color:#9faec5}.panel{border:1px solid #294257;background:#101d2e;border-radius:16px;padding:22px;margin:22px 0}.pill{display:inline-block;border:1px solid #b9a873;color:#ffdf8e;padding:4px 10px;border-radius:999px;font-size:12px;letter-spacing:.06em}pre{overflow-x:auto;color:#b2f4e2;line-height:1.5}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:13px}.value{font-size:24px;font-weight:800;color:#93efe4}a{color:#87bdfb}canvas{width:100%;height:300px;background:#061420;border:1px solid #315066;border-radius:13px}</style></head><body><div class="sub">THE SOURCE / JANE · 245 / NATURAL INVARIANT</div><h1>The Clock That<br>Certified Its Own Time</h1><span class="pill">SIGNED CLAIMS ≠ TRUSTED TIME</span><p>Three clocks can agree and still be wrong. Different signatures can trace back to the same controller. This experiment checks the declared ancestry and uncertainty windows, but refuses to manufacture a trustworthy source of time.</p><canvas id="clock" width="920" height="300" aria-label="Three signed clocks converge on a bounded time interval"></canvas><div class="grid"><div class="panel"><div class="sub">Regression tests</div><div class="value">35 / 35</div></div><div class="panel"><div class="sub">Test-only clock claims</div><div class="value">3</div></div><div class="panel"><div class="sub">Live enrolled clocks</div><div class="value">0</div></div></div><div class="panel"><h2>Two receipts, two different outcomes</h2><pre>FIXTURE WITH MATCHING SIGNED WINDOWS:
+  SIGNED_CLOCK_CLAIMS_CONSISTENT
+  Real clock truth: NOT ESTABLISHED
+
+REPLAYED ACQUISITION FROM YESTERDAY:
+  WITHHOLD / STALE_OR_UNBOUNDED_ACQUISITION
+
+EMPTY RUNTIME:
+  WITHHOLD / NO_TIME_WITNESSES
+  Jane choice: UNRESOLVED
+  Actions executed: 0</pre></div><h2>Three roots are a hypothesis to audit</h2><pre>                 {{ i }} JANE
+                      |
+            EVENT + FRESH CHALLENGE
+                      |
+          +-----------+-----------+
+          |           |           |
+       CLOCK A     CLOCK B     CLOCK C
+          |           |           |
+       SIGNATURE + UNCERTAINTY BOUNDS
+          \           |           /
+               OVERLAP TEST
+                      |
+                DECLARED ROOTS
+                      |
+                FLAY / HOLD
+                      |
+           TRUE UTC STILL UNPROVEN</pre><p class="sub">The keys used here are deterministic test fixtures. Cryptographic consistency is not clock accuracy, physical independence, or proof of unreported dependencies.</p><p><a href="README.md">Read the protocol</a> · <a href="https://github.com/DavidWise01/jane">Jane repository</a></p><script>(()=>{const c=document.querySelector('canvas'),x=c.getContext('2d');let t=0;function frame(){t+=.014;x.clearRect(0,0,920,300);x.strokeStyle='#234b5d';x.lineWidth=1;for(let i=0;i<18;i++){let xx=28+i*51;x.beginPath();x.moveTo(xx,18);x.lineTo(xx,282);x.stroke()}for(let i=0;i<3;i++){let yy=67+i*86;let v=460+Math.sin(t+i*.9)*16;x.lineWidth=7;x.strokeStyle=['#55dfda','#8d9dfc','#efbb89'][i];x.beginPath();x.moveTo(v-160,yy);x.lineTo(v+160,yy);x.stroke();x.lineWidth=1.7;x.fillStyle='#d8edff';x.font='15px monospace';x.fillText('CLOCK '+String.fromCharCode(65+i),30,yy+5);x.beginPath();x.moveTo(v,yy-10);x.lineTo(v,yy+10);x.stroke();}x.fillStyle='#f2df91';x.font='bold 14px monospace';x.fillText('OVERLAPPING BOUNDS ≠ ABSOLUTE TIME',524,28);requestAnimationFrame(frame)}frame()})();</script></body></html>
