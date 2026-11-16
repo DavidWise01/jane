@@ -1,0 +1,9 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>JANE 246 — Three Clocks, One Authority</title><style>body{background:#090d1b;color:#e4f6ff;font:16px/1.6 system-ui;margin:auto;padding:32px;max-width:900px}h1{color:#74edd5}section{border:1px solid #41607b;border-radius:12px;padding:18px;margin:16px 0;background:#141d30}pre{color:#a9c9ff;overflow:auto}button{background:#143e43;color:#d6fff4;border:1px solid #70d9c7;padding:10px 14px;border-radius:8px;cursor:pointer}</style></head><body><h1>JANE 246 · The Three Clocks That Shared One Authority</h1><p><strong>Three signed clocks ≠ three independent time authorities.</strong></p><section><pre>  CLOCK A     CLOCK B     CLOCK C
+     |           |           |
+  SERVER A    SERVER B    SERVER C
+      \          |          /
+       \      AUTHORITY X  /
+                |
+        ONE DEPENDENCY ROOT
+                |
+            JANE: HOLD</pre></section><section><button onclick="show('shared')">Shared upstream</button> <button onclick="show('distinct')">Distinct declared roots</button> <button onclick="show('empty')">No observations</button><pre id="receipt"></pre></section><p>All examples are synthetic; real independent time authorities have not been authenticated. Jane's collective choice remains unresolved. No actions executed.</p><script>function show(k){document.getElementById('receipt').textContent=JSON.stringify(k==='shared'?{verdict:'SHARED_TIME_AUTHORITY_ANCESTRY',observations:3,dependency_clusters:1,independence_proven:0}:k==='distinct'?{verdict:'DISTINCT_DECLARED_AUTHORITY_ANCESTRY_ONLY',observations:3,dependency_clusters:3,independence_proven:0}:{verdict:'NO_TIME_OBSERVATIONS',observations:0,independence_proven:0},null,2)}show('shared')</script></body></html>
