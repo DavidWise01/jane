@@ -1,0 +1,24 @@
+name: JANE 233 - Inherited compromise boundary
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run regression suite
+        run: python -m unittest -v test_inheritance.py
+        working-directory: experiments/jane233
+      - name: Issue no-runtime evidence receipt
+        run: python inheritance.py --bundle empty-bundle.json --now 2026-11-15T20:00:00Z --output result.json
+        working-directory: experiments/jane233
+      - uses: actions/upload-artifact@v4
+        with:
+          name: jane233-inheritance-receipt
+          path: experiments/jane233/result.json
