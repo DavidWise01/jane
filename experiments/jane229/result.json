@@ -1,0 +1,11 @@
+{
+  "action_executed": false,
+  "authenticated_signers": [],
+  "collective_decision": "UNRESOLVED",
+  "declared_dependency_clusters": [],
+  "independent_physical_roots_proven": false,
+  "reasons": [],
+  "receipt_sha256": "a1066410d63dead545801c132e95fde59e9c2c8c179e3a2fede0e81030de4ec5",
+  "schema": "jane229.root-auth/1",
+  "verdict": "NO_SIGNED_RESPONSES"
+}
