@@ -1,0 +1,30 @@
+name: JANE 229 — authenticate declared roots (read only)
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  root-auth:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install pinned runtime dependency
+        run: pip install -r experiments/jane229/requirements.txt
+      - name: Run regression tests
+        working-directory: experiments/jane229
+        run: python -W error -m unittest -q test_root_auth.py
+      - name: Produce non-answer receipt (no real enrolled keys)
+        working-directory: experiments/jane229
+        run: >-
+          python root_auth.py --bundle empty-bundle.json
+          --challenge nonce-unique-1234567890
+          --claim aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+          --now 2026-11-15T23:00:00Z --out result.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: jane229-root-auth-receipt
+          path: experiments/jane229/result.json
