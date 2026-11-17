@@ -1,12 +1,12 @@
 {
   "schema": "HON184_B89_V1",
   "mission": "HEGEMON M001 / Internet Time Dilation",
-  "generated_at": "2026-11-16T19:41:27.324Z",
+  "generated_at": "2026-11-17T18:39:11.972Z",
   "status": "DERIVED_GITHUB_PUBLIC_METADATA",
   "slot_count": 184,
   "pin_count": 2158,
   "collision_slots": 184,
-  "unknown_count": 0,
+  "unknown_count": 2,
   "source": "BTF2 PUBLIC CATALOG",
   "pins": [
     {
@@ -15383,7 +15383,7 @@
       "agent_id": "FORMIC-90e705277ac22a53",
       "hon184_slot": 88,
       "band": "O",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -15449,7 +15449,7 @@
       "agent_id": "FORMIC-a78ca84173cd0c52",
       "hon184_slot": 106,
       "band": "O",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -23699,7 +23699,7 @@
       "agent_id": "FORMIC-1ca42549d7784bd7",
       "hon184_slot": 2,
       "band": "H",
-      "observation_status": "CHANGED",
+      "observation_status": "UNCHANGED",
       "archived": false,
       "fork": false
     },
