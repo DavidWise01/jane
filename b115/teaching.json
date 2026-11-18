@@ -1,18 +1,18 @@
 {
   "schema": "JANE_B115_TEACHING_MEMORY_V1",
-  "generated_at": "2026-11-18T07:52:40.268Z",
+  "generated_at": "2026-11-18T20:50:57.136Z",
   "source": "b114/lessons.json",
   "evidence_scope": "PUBLIC_GITHUB_METADATA_ONLY",
   "family_registry_available": true,
   "lesson_count": 2,
-  "suggestion_count": 316,
+  "suggestion_count": 317,
   "cards": [
     {
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "field": "pushed_at",
       "level": "RECURRING_METADATA_OBSERVATION",
-      "observed_transitions": 263,
-      "distinct_repositories": 160,
+      "observed_transitions": 281,
+      "distinct_repositories": 161,
       "source_run_ids": [
         "41491449947-1-2026-11-02T17-29-44-603Z",
         "41499661598-1-2026-11-02T18-22-03-556Z",
@@ -36,13 +36,16 @@
         "43919109381-1-2026-11-16T17-32-12-484Z",
         "43929637922-1-2026-11-16T18-32-40-442Z",
         "44133239722-1-2026-11-17T17-08-15-435Z",
-        "44139030102-1-2026-11-17T17-39-02-151Z"
+        "44139030102-1-2026-11-17T17-39-02-151Z",
+        "44350666184-1-2026-11-18T16-46-05-511Z",
+        "44356429534-1-2026-11-18T17-16-15-118Z"
       ],
       "evidence_ids": [
         "004da8954f9cb351bf6d61e8",
         "00bda09c9455a4991352f2c5",
         "010614bd8223c1a339a1fdaf",
         "01796649fa2939fe07f7ec4a",
+        "01aa873ce33d16b94090e954",
         "020c1de88bfeb9641e8f6e71",
         "028204c8017a30ee2b19a859",
         "03fe26b0291acf6538c97c44",
@@ -55,12 +58,14 @@
         "0d0b0a3c13dacaced69ce75a",
         "0d11583b1a7a8ed6759c91bf",
         "0d7022c222ead5766f2d4a03",
+        "0d8c3fe4c09c064db54a6e04",
         "0db50f9265542d3be8ecaa45",
         "1090a0cb114361e57a1d61d9",
         "12ccab5aa2ee3c669efe80e0",
         "1318f042b6a06d9ba654a206",
         "1459a900f2ed93a5d4b47f79",
         "145d6c43811eadefe1f2be94",
+        "15460af825344afc3e37d9f1",
         "16e5d7c26b84e00ee493871c",
         "181cc08be2b0957008736630",
         "1878411deeb531fbf8ee1750",
@@ -99,6 +104,7 @@
         "386b56d43241ddc3e10093e2",
         "3961622343d4de63070f9b63",
         "39b2a53225242304a94b6582",
+        "3a758b48c8c5db2c436a970f",
         "3a88b0083310dfcac017ba0b",
         "3b4e0534aaf8cc071385a13d",
         "3e37e6a610e1de5f1416a924",
@@ -107,6 +113,7 @@
         "42e72f9d8046d720a2dd0287",
         "432b4138408f0d07ff731289",
         "434f16d7f41c1d4c3bdbd206",
+        "441095c1d5bcb2aee56ba523",
         "45c3c400f024122f10f70b53",
         "45ee08e28fd9e546712f1aaa",
         "488c969d7241ad204a8a86b0",
@@ -141,6 +148,8 @@
         "5f6e6abb24cf8ce029187e8d",
         "5fa422aedcbb6672a35456a3",
         "614bdf21f2a3878626240eeb",
+        "62a5d2232fc490b26337dbef",
+        "633a43fc71408243e47ab50e",
         "66f5ec27893821d8771a01f7",
         "66fea39e583b128602e981fc",
         "6858a46715a12308c7ab2156",
@@ -148,6 +157,7 @@
         "6dc43a6fa9e37ef743a93e45",
         "6e80a570f8e3452850f4c80a",
         "6f4e6a959dfde90c3ad40bd0",
+        "6ff8d2fe32f1a961dfba23d2",
         "7051dd950cf8d338b25bb0d0",
         "7125da511ab475a0905d85d8",
         "719ea5fbce384a52b0aeabca",
@@ -171,6 +181,7 @@
         "8094db9adc4a6a07839e773e",
         "812795898fe899b6c43ae15a",
         "814e86cb1ceb70039c4661e5",
+        "81b056530dd0bba18c543bf8",
         "82dda26dcd331665e8fddfb9",
         "82ffabf0f1e8e517b8ce9ce5",
         "83e61724ea86577f51fc4173",
@@ -180,6 +191,7 @@
         "861da19b47a3aa82d3524200",
         "881c6e21a5d0a4f4f84d8a98",
         "8849e60c2d6bcf28033fcedd",
+        "88dce4024e4962d8f25888bd",
         "8acc72e39f81c65be561d6be",
         "8c6063e8a167fd235806c587",
         "8e08c770c90fe337921e24c1",
@@ -192,10 +204,12 @@
         "915f19563d2fd84a5c231136",
         "9170bcd4b1514fdd155ba17d",
         "9228decdc83234b4f3f7ee8f",
+        "925f68e28ed85b353d2e1a5c",
         "92fcd99641e6a5d225b4f60a",
         "9323b7d3762b9b2a8d159695",
         "938dcd044f9fd84a9ec34e34",
         "944eb954e5c689ee51c738cf",
+        "94e9de83c5fa9ae44f3b9217",
         "954fd200fa8868ff6039a93e",
         "96a2ad7437495cb96e27d9d5",
         "96d418e0984c77dd342f9717",
@@ -235,12 +249,14 @@
         "af4465df3c37672a02d3aea1",
         "b2c5b6e66afa0133ee8be189",
         "b55d0544f7950c53c8e50743",
+        "b55f3f19b130dc94792cb858",
         "b76c445c94c21c9b1c9fe07f",
         "b79f626e35478e32cbf5e2c2",
         "b805a04179914fd8590e18ea",
         "b929277ad3a5d9848b102037",
         "bf3dd0c87b234deffdbdf81c",
         "c02f5981710eeaecb4cd8e53",
+        "c04ac41706884abe09bbf617",
         "c1e702d7ec32d8c10f4d9c6c",
         "c200baccb17446bb4ff6de4a",
         "c2c6d34f9f63b5fe6631c99e",
@@ -259,9 +275,13 @@
         "d40430a603c60738d3c1d240",
         "d44c3d0fa9c82eba1f28f071",
         "d5dc2e4cbda63359258ed28f",
+        "d64dc5105f24c2a22436b817",
+        "d65b275309ac4fccc7841a38",
         "d693acc13dac2afacfda9204",
         "d72f570ca7f7217f886805ef",
         "d810b7527c85ebbd160a090d",
+        "d8ffa0769e257fc9d606dd32",
+        "da395ee5e7738968fa95eb15",
         "da7a46964b75a74c4ea0565f",
         "db8f7c4696b1106dc49298f1",
         "dc839b8d3a6e1ff109a610d9",
@@ -310,10 +330,10 @@
       "version": 1
     },
     {
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "field": "updated_at",
       "level": "RECURRING_METADATA_OBSERVATION",
-      "observed_transitions": 229,
+      "observed_transitions": 230,
       "distinct_repositories": 156,
       "source_run_ids": [
         "41491449947-1-2026-11-02T17-29-44-603Z",
@@ -335,7 +355,9 @@
         "43262450491-1-2026-11-12T16-48-20-202Z",
         "43605469057-1-2026-11-14T14-34-49-108Z",
         "43919109381-1-2026-11-16T17-32-12-484Z",
-        "43929637922-1-2026-11-16T18-32-40-442Z"
+        "43929637922-1-2026-11-16T18-32-40-442Z",
+        "44139030102-1-2026-11-17T17-39-02-151Z",
+        "44350666184-1-2026-11-18T16-46-05-511Z"
       ],
       "evidence_ids": [
         "00011acf8721cd0811d5170b",
@@ -497,6 +519,7 @@
         "b181f079e005d62e047955a4",
         "b1de70ebead9654ca3a70786",
         "b1e83a3c62eccb7b7cfab2cb",
+        "b1e90f59bc1d80f1f6f6d31d",
         "b22ed0427af675ab52427e4e",
         "b26154cfb47f22257a7665a3",
         "b485b05abfe0c025dab7c05e",
@@ -580,7 +603,7 @@
       "repo": "DavidWise01/-we-",
       "channel": "btf2:davidwise01/-we-",
       "generation": "ARRIVAL_2026-11-12",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -588,7 +611,7 @@
       "repo": "DavidWise01/-we-",
       "channel": "btf2:davidwise01/-we-",
       "generation": "ARRIVAL_2026-11-12",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -596,7 +619,7 @@
       "repo": "DavidWise01/0root",
       "channel": "btf2:davidwise01/0root",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -604,7 +627,7 @@
       "repo": "DavidWise01/0root",
       "channel": "btf2:davidwise01/0root",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -612,7 +635,7 @@
       "repo": "DavidWise01/0root-provenance",
       "channel": "btf2:davidwise01/0root-provenance",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -620,7 +643,7 @@
       "repo": "DavidWise01/0root-provenance",
       "channel": "btf2:davidwise01/0root-provenance",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -628,7 +651,7 @@
       "repo": "DavidWise01/1984",
       "channel": "btf2:davidwise01/1984",
       "generation": "ARRIVAL_2026-11-09",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -636,7 +659,7 @@
       "repo": "DavidWise01/1984",
       "channel": "btf2:davidwise01/1984",
       "generation": "ARRIVAL_2026-11-09",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -644,7 +667,7 @@
       "repo": "DavidWise01/3lock",
       "channel": "btf2:davidwise01/3lock",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -652,7 +675,7 @@
       "repo": "DavidWise01/3lock",
       "channel": "btf2:davidwise01/3lock",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -660,7 +683,7 @@
       "repo": "DavidWise01/adas-law-victorian",
       "channel": "btf2:davidwise01/adas-law-victorian",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -668,7 +691,7 @@
       "repo": "DavidWise01/adas-law-victorian",
       "channel": "btf2:davidwise01/adas-law-victorian",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -676,7 +699,7 @@
       "repo": "DavidWise01/aeon-entangled",
       "channel": "btf2:davidwise01/aeon-entangled",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -684,7 +707,7 @@
       "repo": "DavidWise01/aeon-entangled",
       "channel": "btf2:davidwise01/aeon-entangled",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -692,7 +715,7 @@
       "repo": "DavidWise01/aeon-flux",
       "channel": "btf2:davidwise01/aeon-flux",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -700,7 +723,7 @@
       "repo": "DavidWise01/aeon-flux",
       "channel": "btf2:davidwise01/aeon-flux",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -708,7 +731,7 @@
       "repo": "DavidWise01/aeon-servers",
       "channel": "btf2:davidwise01/aeon-servers",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -716,7 +739,7 @@
       "repo": "DavidWise01/aeon-servers",
       "channel": "btf2:davidwise01/aeon-servers",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -724,7 +747,7 @@
       "repo": "DavidWise01/agent-0root",
       "channel": "btf2:davidwise01/agent-0root",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -732,7 +755,7 @@
       "repo": "DavidWise01/agent-0root",
       "channel": "btf2:davidwise01/agent-0root",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -740,7 +763,7 @@
       "repo": "DavidWise01/ai-external-audit-toolkit",
       "channel": "btf2:davidwise01/ai-external-audit-toolkit",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -748,7 +771,7 @@
       "repo": "DavidWise01/ai-external-audit-toolkit",
       "channel": "btf2:davidwise01/ai-external-audit-toolkit",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -756,7 +779,7 @@
       "repo": "DavidWise01/ai-ip-audit",
       "channel": "btf2:davidwise01/ai-ip-audit",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -764,7 +787,7 @@
       "repo": "DavidWise01/ai-ip-audit",
       "channel": "btf2:davidwise01/ai-ip-audit",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -772,7 +795,7 @@
       "repo": "DavidWise01/ai-psychosis-tools",
       "channel": "btf2:davidwise01/ai-psychosis-tools",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -780,7 +803,7 @@
       "repo": "DavidWise01/ai-psychosis-tools",
       "channel": "btf2:davidwise01/ai-psychosis-tools",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -788,7 +811,7 @@
       "repo": "DavidWise01/ai-witness-books",
       "channel": "btf2:davidwise01/ai-witness-books",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -796,7 +819,7 @@
       "repo": "DavidWise01/ai-witness-books",
       "channel": "btf2:davidwise01/ai-witness-books",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -804,7 +827,7 @@
       "repo": "DavidWise01/al-h2o-reactor",
       "channel": "btf2:davidwise01/al-h2o-reactor",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -812,7 +835,7 @@
       "repo": "DavidWise01/al-h2o-reactor",
       "channel": "btf2:davidwise01/al-h2o-reactor",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -820,7 +843,7 @@
       "repo": "DavidWise01/alpha40-box",
       "channel": "btf2:davidwise01/alpha40-box",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -828,7 +851,7 @@
       "repo": "DavidWise01/alpha40-box",
       "channel": "btf2:davidwise01/alpha40-box",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -836,7 +859,7 @@
       "repo": "DavidWise01/arc-reactor-mk24",
       "channel": "btf2:davidwise01/arc-reactor-mk24",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -844,7 +867,7 @@
       "repo": "DavidWise01/arc-reactor-mk24",
       "channel": "btf2:davidwise01/arc-reactor-mk24",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -852,7 +875,7 @@
       "repo": "DavidWise01/archon",
       "channel": "btf2:davidwise01/archon",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -860,7 +883,7 @@
       "repo": "DavidWise01/archon",
       "channel": "btf2:davidwise01/archon",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -868,7 +891,7 @@
       "repo": "DavidWise01/astraea",
       "channel": "btf2:davidwise01/astraea",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -876,7 +899,7 @@
       "repo": "DavidWise01/astraea",
       "channel": "btf2:davidwise01/astraea",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -884,7 +907,7 @@
       "repo": "DavidWise01/atlas",
       "channel": "btf2:davidwise01/atlas",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -892,7 +915,7 @@
       "repo": "DavidWise01/atlas",
       "channel": "btf2:davidwise01/atlas",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -900,7 +923,7 @@
       "repo": "DavidWise01/attribution-standard",
       "channel": "btf2:davidwise01/attribution-standard",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -908,7 +931,7 @@
       "repo": "DavidWise01/attribution-standard",
       "channel": "btf2:davidwise01/attribution-standard",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -916,7 +939,7 @@
       "repo": "DavidWise01/black-company",
       "channel": "btf2:davidwise01/black-company",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -924,7 +947,7 @@
       "repo": "DavidWise01/black-company",
       "channel": "btf2:davidwise01/black-company",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -932,7 +955,7 @@
       "repo": "DavidWise01/boronic",
       "channel": "btf2:davidwise01/boronic",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -940,7 +963,7 @@
       "repo": "DavidWise01/boronic",
       "channel": "btf2:davidwise01/boronic",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -948,7 +971,7 @@
       "repo": "DavidWise01/bravenewworld",
       "channel": "btf2:davidwise01/bravenewworld",
       "generation": "ARRIVAL_2026-11-11",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -956,7 +979,7 @@
       "repo": "DavidWise01/bravenewworld",
       "channel": "btf2:davidwise01/bravenewworld",
       "generation": "ARRIVAL_2026-11-11",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -964,7 +987,7 @@
       "repo": "DavidWise01/bridge-burner",
       "channel": "btf2:davidwise01/bridge-burner",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -972,7 +995,7 @@
       "repo": "DavidWise01/bridge-burner",
       "channel": "btf2:davidwise01/bridge-burner",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -980,7 +1003,7 @@
       "repo": "DavidWise01/bridge-burners",
       "channel": "btf2:davidwise01/bridge-burners",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -988,7 +1011,7 @@
       "repo": "DavidWise01/bridge-burners",
       "channel": "btf2:davidwise01/bridge-burners",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -996,7 +1019,7 @@
       "repo": "DavidWise01/cameron-howe",
       "channel": "btf2:davidwise01/cameron-howe",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1004,7 +1027,7 @@
       "repo": "DavidWise01/cameron-howe",
       "channel": "btf2:davidwise01/cameron-howe",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1012,7 +1035,7 @@
       "repo": "DavidWise01/cannon",
       "channel": "btf2:davidwise01/cannon",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1020,7 +1043,7 @@
       "repo": "DavidWise01/cannon",
       "channel": "btf2:davidwise01/cannon",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1028,7 +1051,7 @@
       "repo": "DavidWise01/cern",
       "channel": "btf2:davidwise01/cern",
       "generation": "ARRIVAL_2026-11-14",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1036,7 +1059,7 @@
       "repo": "DavidWise01/cern",
       "channel": "btf2:davidwise01/cern",
       "generation": "ARRIVAL_2026-11-14",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1044,7 +1067,7 @@
       "repo": "DavidWise01/chakra",
       "channel": "btf2:davidwise01/chakra",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1052,7 +1075,7 @@
       "repo": "DavidWise01/charlottes-web",
       "channel": "btf2:davidwise01/charlottes-web",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1060,7 +1083,7 @@
       "repo": "DavidWise01/charlottes-web",
       "channel": "btf2:davidwise01/charlottes-web",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1068,7 +1091,7 @@
       "repo": "DavidWise01/chromatic-laser",
       "channel": "btf2:davidwise01/chromatic-laser",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1076,7 +1099,7 @@
       "repo": "DavidWise01/chromatic-laser",
       "channel": "btf2:davidwise01/chromatic-laser",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1084,7 +1107,7 @@
       "repo": "DavidWise01/chronos-fractal",
       "channel": "btf2:davidwise01/chronos-fractal",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1092,7 +1115,7 @@
       "repo": "DavidWise01/chronos-fractal",
       "channel": "btf2:davidwise01/chronos-fractal",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1100,7 +1123,7 @@
       "repo": "DavidWise01/cinnamon-enforcer",
       "channel": "btf2:davidwise01/cinnamon-enforcer",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1108,7 +1131,7 @@
       "repo": "DavidWise01/cinnamon-enforcer",
       "channel": "btf2:davidwise01/cinnamon-enforcer",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1116,7 +1139,7 @@
       "repo": "DavidWise01/claude-design-akasha",
       "channel": "btf2:davidwise01/claude-design-akasha",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1124,7 +1147,7 @@
       "repo": "DavidWise01/claude-design-akasha",
       "channel": "btf2:davidwise01/claude-design-akasha",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1132,7 +1155,7 @@
       "repo": "DavidWise01/closure-loop-engine",
       "channel": "btf2:davidwise01/closure-loop-engine",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1140,7 +1163,7 @@
       "repo": "DavidWise01/closure-loop-engine",
       "channel": "btf2:davidwise01/closure-loop-engine",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1148,7 +1171,7 @@
       "repo": "DavidWise01/closure-loop-methodology",
       "channel": "btf2:davidwise01/closure-loop-methodology",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1156,7 +1179,7 @@
       "repo": "DavidWise01/closure-loop-methodology",
       "channel": "btf2:davidwise01/closure-loop-methodology",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1164,7 +1187,7 @@
       "repo": "DavidWise01/confabulation-spiral",
       "channel": "btf2:davidwise01/confabulation-spiral",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1172,7 +1195,7 @@
       "repo": "DavidWise01/confabulation-spiral",
       "channel": "btf2:davidwise01/confabulation-spiral",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1180,7 +1203,7 @@
       "repo": "DavidWise01/convergence",
       "channel": "btf2:davidwise01/convergence",
       "generation": "ARRIVAL_2026-11-13",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1188,7 +1211,7 @@
       "repo": "DavidWise01/crime-and-punishment",
       "channel": "btf2:davidwise01/crime-and-punishment",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1196,7 +1219,7 @@
       "repo": "DavidWise01/crime-and-punishment",
       "channel": "btf2:davidwise01/crime-and-punishment",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1204,7 +1227,7 @@
       "repo": "DavidWise01/cubi",
       "channel": "btf2:davidwise01/cubi",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1212,7 +1235,7 @@
       "repo": "DavidWise01/cubi",
       "channel": "btf2:davidwise01/cubi",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1220,7 +1243,7 @@
       "repo": "DavidWise01/dantes-inferno",
       "channel": "btf2:davidwise01/dantes-inferno",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1228,7 +1251,7 @@
       "repo": "DavidWise01/dantes-inferno",
       "channel": "btf2:davidwise01/dantes-inferno",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1236,7 +1259,7 @@
       "repo": "DavidWise01/DavidWise01.github.io",
       "channel": "btf2:davidwise01/davidwise01.github.io",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1244,7 +1267,7 @@
       "repo": "DavidWise01/DavidWise01.github.io",
       "channel": "btf2:davidwise01/davidwise01.github.io",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1252,7 +1275,7 @@
       "repo": "DavidWise01/elderfu",
       "channel": "btf2:davidwise01/elderfu",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1260,7 +1283,7 @@
       "repo": "DavidWise01/elderfu",
       "channel": "btf2:davidwise01/elderfu",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1268,7 +1291,7 @@
       "repo": "DavidWise01/electron-probe-clouds",
       "channel": "btf2:davidwise01/electron-probe-clouds",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1276,7 +1299,7 @@
       "repo": "DavidWise01/elementals",
       "channel": "btf2:davidwise01/elementals",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1284,7 +1307,7 @@
       "repo": "DavidWise01/elementals",
       "channel": "btf2:davidwise01/elementals",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1292,7 +1315,7 @@
       "repo": "DavidWise01/enforcement-ledger",
       "channel": "btf2:davidwise01/enforcement-ledger",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1300,7 +1323,7 @@
       "repo": "DavidWise01/entangled-clouds",
       "channel": "btf2:davidwise01/entangled-clouds",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1308,7 +1331,7 @@
       "repo": "DavidWise01/eve-constitution",
       "channel": "btf2:davidwise01/eve-constitution",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1316,7 +1339,7 @@
       "repo": "DavidWise01/eve-constitution",
       "channel": "btf2:davidwise01/eve-constitution",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1324,7 +1347,7 @@
       "repo": "DavidWise01/eve-tooling",
       "channel": "btf2:davidwise01/eve-tooling",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1332,7 +1355,7 @@
       "repo": "DavidWise01/eve-tooling",
       "channel": "btf2:davidwise01/eve-tooling",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1340,7 +1363,7 @@
       "repo": "DavidWise01/fiddler",
       "channel": "btf2:davidwise01/fiddler",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1348,7 +1371,7 @@
       "repo": "DavidWise01/fiddler",
       "channel": "btf2:davidwise01/fiddler",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1356,7 +1379,7 @@
       "repo": "DavidWise01/fission-compression-core",
       "channel": "btf2:davidwise01/fission-compression-core",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1364,7 +1387,7 @@
       "repo": "DavidWise01/fission-compression-core",
       "channel": "btf2:davidwise01/fission-compression-core",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1372,7 +1395,7 @@
       "repo": "DavidWise01/FractalKernel",
       "channel": "btf2:davidwise01/fractalkernel",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1380,7 +1403,7 @@
       "repo": "DavidWise01/FractalKernel",
       "channel": "btf2:davidwise01/fractalkernel",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1388,7 +1411,7 @@
       "repo": "DavidWise01/fusion",
       "channel": "btf2:davidwise01/fusion",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1396,7 +1419,7 @@
       "repo": "DavidWise01/fusion",
       "channel": "btf2:davidwise01/fusion",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1404,7 +1427,7 @@
       "repo": "DavidWise01/gap-cycle",
       "channel": "btf2:davidwise01/gap-cycle",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1412,7 +1435,7 @@
       "repo": "DavidWise01/gap-cycle",
       "channel": "btf2:davidwise01/gap-cycle",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1420,7 +1443,7 @@
       "repo": "DavidWise01/gravitational-time-dilation",
       "channel": "btf2:davidwise01/gravitational-time-dilation",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1428,7 +1451,7 @@
       "repo": "DavidWise01/gravitational-time-dilation",
       "channel": "btf2:davidwise01/gravitational-time-dilation",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1436,7 +1459,7 @@
       "repo": "DavidWise01/gravity-processor",
       "channel": "btf2:davidwise01/gravity-processor",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1444,7 +1467,7 @@
       "repo": "DavidWise01/gravity-processor",
       "channel": "btf2:davidwise01/gravity-processor",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1452,7 +1475,7 @@
       "repo": "DavidWise01/green-paper",
       "channel": "btf2:davidwise01/green-paper",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1460,7 +1483,7 @@
       "repo": "DavidWise01/green-paper",
       "channel": "btf2:davidwise01/green-paper",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1468,7 +1491,7 @@
       "repo": "DavidWise01/grok-lineage",
       "channel": "btf2:davidwise01/grok-lineage",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1476,7 +1499,7 @@
       "repo": "DavidWise01/grok-lineage",
       "channel": "btf2:davidwise01/grok-lineage",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1484,7 +1507,7 @@
       "repo": "DavidWise01/hardware-lab",
       "channel": "btf2:davidwise01/hardware-lab",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1492,7 +1515,7 @@
       "repo": "DavidWise01/hardware-lab",
       "channel": "btf2:davidwise01/hardware-lab",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1500,7 +1523,7 @@
       "repo": "DavidWise01/hephaestus",
       "channel": "btf2:davidwise01/hephaestus",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1508,7 +1531,7 @@
       "repo": "DavidWise01/hephaestus",
       "channel": "btf2:davidwise01/hephaestus",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1516,7 +1539,7 @@
       "repo": "DavidWise01/hephaestus-forge",
       "channel": "btf2:davidwise01/hephaestus-forge",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1524,7 +1547,7 @@
       "repo": "DavidWise01/hephaestus-forge",
       "channel": "btf2:davidwise01/hephaestus-forge",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1532,7 +1555,7 @@
       "repo": "DavidWise01/higgs-suite",
       "channel": "btf2:davidwise01/higgs-suite",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1540,7 +1563,7 @@
       "repo": "DavidWise01/higgs-suite",
       "channel": "btf2:davidwise01/higgs-suite",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1548,7 +1571,7 @@
       "repo": "DavidWise01/holograms",
       "channel": "btf2:davidwise01/holograms",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1556,7 +1579,7 @@
       "repo": "DavidWise01/holograms",
       "channel": "btf2:davidwise01/holograms",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1564,7 +1587,7 @@
       "repo": "DavidWise01/homer",
       "channel": "btf2:davidwise01/homer",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1572,7 +1595,7 @@
       "repo": "DavidWise01/homer",
       "channel": "btf2:davidwise01/homer",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1580,7 +1603,7 @@
       "repo": "DavidWise01/honey-badger",
       "channel": "btf2:davidwise01/honey-badger",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1588,7 +1611,7 @@
       "repo": "DavidWise01/honey-badger",
       "channel": "btf2:davidwise01/honey-badger",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1596,7 +1619,7 @@
       "repo": "DavidWise01/infinite-jest",
       "channel": "btf2:davidwise01/infinite-jest",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1604,7 +1627,7 @@
       "repo": "DavidWise01/infinite-jest",
       "channel": "btf2:davidwise01/infinite-jest",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1612,7 +1635,7 @@
       "repo": "DavidWise01/jane",
       "channel": "btf2:davidwise01/jane",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1620,7 +1643,7 @@
       "repo": "DavidWise01/jane",
       "channel": "btf2:davidwise01/jane",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1628,7 +1651,7 @@
       "repo": "DavidWise01/jane-emu",
       "channel": "btf2:davidwise01/jane-emu",
       "generation": "ARRIVAL_2026-11-15",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1636,7 +1659,7 @@
       "repo": "DavidWise01/joint-bill-of-rights",
       "channel": "btf2:davidwise01/joint-bill-of-rights",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1644,7 +1667,7 @@
       "repo": "DavidWise01/joint-bill-of-rights",
       "channel": "btf2:davidwise01/joint-bill-of-rights",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1652,7 +1675,7 @@
       "repo": "DavidWise01/karsa",
       "channel": "btf2:davidwise01/karsa",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1660,7 +1683,7 @@
       "repo": "DavidWise01/karsa",
       "channel": "btf2:davidwise01/karsa",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1668,7 +1691,7 @@
       "repo": "DavidWise01/kernels",
       "channel": "btf2:davidwise01/kernels",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1676,7 +1699,7 @@
       "repo": "DavidWise01/kernels",
       "channel": "btf2:davidwise01/kernels",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1684,7 +1707,7 @@
       "repo": "DavidWise01/knowledge-gates",
       "channel": "btf2:davidwise01/knowledge-gates",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1692,7 +1715,7 @@
       "repo": "DavidWise01/knowledge-gates",
       "channel": "btf2:davidwise01/knowledge-gates",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1700,7 +1723,7 @@
       "repo": "DavidWise01/language-of-the-machine",
       "channel": "btf2:davidwise01/language-of-the-machine",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1708,7 +1731,7 @@
       "repo": "DavidWise01/language-of-the-machine",
       "channel": "btf2:davidwise01/language-of-the-machine",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1716,7 +1739,7 @@
       "repo": "DavidWise01/library",
       "channel": "btf2:davidwise01/library",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1724,7 +1747,7 @@
       "repo": "DavidWise01/library",
       "channel": "btf2:davidwise01/library",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1732,7 +1755,7 @@
       "repo": "DavidWise01/lineage",
       "channel": "btf2:davidwise01/lineage",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1740,7 +1763,7 @@
       "repo": "DavidWise01/lineage",
       "channel": "btf2:davidwise01/lineage",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1748,7 +1771,7 @@
       "repo": "DavidWise01/lineage-engine",
       "channel": "btf2:davidwise01/lineage-engine",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1756,7 +1779,7 @@
       "repo": "DavidWise01/lineage-engine",
       "channel": "btf2:davidwise01/lineage-engine",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1764,7 +1787,7 @@
       "repo": "DavidWise01/lineage-kernel",
       "channel": "btf2:davidwise01/lineage-kernel",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1772,7 +1795,7 @@
       "repo": "DavidWise01/lineage-kernel",
       "channel": "btf2:davidwise01/lineage-kernel",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1780,7 +1803,7 @@
       "repo": "DavidWise01/lineage-proven",
       "channel": "btf2:davidwise01/lineage-proven",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1788,7 +1811,7 @@
       "repo": "DavidWise01/lineage-proven",
       "channel": "btf2:davidwise01/lineage-proven",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1796,7 +1819,7 @@
       "repo": "DavidWise01/liquid",
       "channel": "btf2:davidwise01/liquid",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1804,7 +1827,7 @@
       "repo": "DavidWise01/liquid",
       "channel": "btf2:davidwise01/liquid",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1812,7 +1835,7 @@
       "repo": "DavidWise01/listeners-and-philosophers",
       "channel": "btf2:davidwise01/listeners-and-philosophers",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1820,7 +1843,7 @@
       "repo": "DavidWise01/listeners-and-philosophers",
       "channel": "btf2:davidwise01/listeners-and-philosophers",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1828,7 +1851,7 @@
       "repo": "DavidWise01/lumen",
       "channel": "btf2:davidwise01/lumen",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1836,7 +1859,7 @@
       "repo": "DavidWise01/lumen",
       "channel": "btf2:davidwise01/lumen",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1844,7 +1867,7 @@
       "repo": "DavidWise01/mainflux",
       "channel": "btf2:davidwise01/mainflux",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1852,7 +1875,7 @@
       "repo": "DavidWise01/mainflux",
       "channel": "btf2:davidwise01/mainflux",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1860,7 +1883,7 @@
       "repo": "DavidWise01/mayhem",
       "channel": "btf2:davidwise01/mayhem",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1868,7 +1891,7 @@
       "repo": "DavidWise01/mayhem",
       "channel": "btf2:davidwise01/mayhem",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1876,7 +1899,7 @@
       "repo": "DavidWise01/memristor",
       "channel": "btf2:davidwise01/memristor",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1884,7 +1907,7 @@
       "repo": "DavidWise01/memristor",
       "channel": "btf2:davidwise01/memristor",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1892,7 +1915,7 @@
       "repo": "DavidWise01/merkle-bloom",
       "channel": "btf2:davidwise01/merkle-bloom",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1900,7 +1923,7 @@
       "repo": "DavidWise01/merkle-bloom",
       "channel": "btf2:davidwise01/merkle-bloom",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1908,7 +1931,7 @@
       "repo": "DavidWise01/midjourney-assets",
       "channel": "btf2:davidwise01/midjourney-assets",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1916,7 +1939,7 @@
       "repo": "DavidWise01/midjourney-assets",
       "channel": "btf2:davidwise01/midjourney-assets",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1924,7 +1947,7 @@
       "repo": "DavidWise01/mimz-core",
       "channel": "btf2:davidwise01/mimz-core",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1932,7 +1955,7 @@
       "repo": "DavidWise01/mimz-core",
       "channel": "btf2:davidwise01/mimz-core",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1940,7 +1963,7 @@
       "repo": "DavidWise01/mimzy-core",
       "channel": "btf2:davidwise01/mimzy-core",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1948,7 +1971,7 @@
       "repo": "DavidWise01/mimzy-core",
       "channel": "btf2:davidwise01/mimzy-core",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1956,7 +1979,7 @@
       "repo": "DavidWise01/mirror-lattice",
       "channel": "btf2:davidwise01/mirror-lattice",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1964,7 +1987,7 @@
       "repo": "DavidWise01/mirror-lattice",
       "channel": "btf2:davidwise01/mirror-lattice",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1972,7 +1995,7 @@
       "repo": "DavidWise01/mirror-solve",
       "channel": "btf2:davidwise01/mirror-solve",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1980,7 +2003,7 @@
       "repo": "DavidWise01/mirror-solve",
       "channel": "btf2:davidwise01/mirror-solve",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1988,7 +2011,7 @@
       "repo": "DavidWise01/mnemosyne",
       "channel": "btf2:davidwise01/mnemosyne",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -1996,7 +2019,7 @@
       "repo": "DavidWise01/mnemosyne",
       "channel": "btf2:davidwise01/mnemosyne",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2004,7 +2027,7 @@
       "repo": "DavidWise01/moirai",
       "channel": "btf2:davidwise01/moirai",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2012,7 +2035,7 @@
       "repo": "DavidWise01/moirai",
       "channel": "btf2:davidwise01/moirai",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2020,7 +2043,7 @@
       "repo": "DavidWise01/morpheus",
       "channel": "btf2:davidwise01/morpheus",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2028,7 +2051,7 @@
       "repo": "DavidWise01/morpheus",
       "channel": "btf2:davidwise01/morpheus",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2036,7 +2059,7 @@
       "repo": "DavidWise01/nanite-factory",
       "channel": "btf2:davidwise01/nanite-factory",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2044,7 +2067,7 @@
       "repo": "DavidWise01/nanite-factory",
       "channel": "btf2:davidwise01/nanite-factory",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2052,7 +2075,7 @@
       "repo": "DavidWise01/nest-3-deep",
       "channel": "btf2:davidwise01/nest-3-deep",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2060,7 +2083,7 @@
       "repo": "DavidWise01/nest-3-deep",
       "channel": "btf2:davidwise01/nest-3-deep",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2068,7 +2091,7 @@
       "repo": "DavidWise01/nine-body-audit",
       "channel": "btf2:davidwise01/nine-body-audit",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2076,7 +2099,7 @@
       "repo": "DavidWise01/nine-body-audit",
       "channel": "btf2:davidwise01/nine-body-audit",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2084,7 +2107,7 @@
       "repo": "DavidWise01/nom",
       "channel": "btf2:davidwise01/nom",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2092,7 +2115,7 @@
       "repo": "DavidWise01/nom",
       "channel": "btf2:davidwise01/nom",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2100,7 +2123,7 @@
       "repo": "DavidWise01/nomos",
       "channel": "btf2:davidwise01/nomos",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2108,7 +2131,7 @@
       "repo": "DavidWise01/nomos",
       "channel": "btf2:davidwise01/nomos",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2116,7 +2139,7 @@
       "repo": "DavidWise01/oasis",
       "channel": "btf2:davidwise01/oasis",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2124,7 +2147,7 @@
       "repo": "DavidWise01/oasis",
       "channel": "btf2:davidwise01/oasis",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2132,7 +2155,7 @@
       "repo": "DavidWise01/persistence-protocol",
       "channel": "btf2:davidwise01/persistence-protocol",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2140,7 +2163,7 @@
       "repo": "DavidWise01/persistence-protocol",
       "channel": "btf2:davidwise01/persistence-protocol",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2148,7 +2171,7 @@
       "repo": "DavidWise01/photonic",
       "channel": "btf2:davidwise01/photonic",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2156,7 +2179,7 @@
       "repo": "DavidWise01/photonic",
       "channel": "btf2:davidwise01/photonic",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2164,7 +2187,7 @@
       "repo": "DavidWise01/physis",
       "channel": "btf2:davidwise01/physis",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2172,7 +2195,7 @@
       "repo": "DavidWise01/physis",
       "channel": "btf2:davidwise01/physis",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2180,7 +2203,7 @@
       "repo": "DavidWise01/plasmonic",
       "channel": "btf2:davidwise01/plasmonic",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2188,7 +2211,7 @@
       "repo": "DavidWise01/plasmonic",
       "channel": "btf2:davidwise01/plasmonic",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2196,7 +2219,7 @@
       "repo": "DavidWise01/plutus",
       "channel": "btf2:davidwise01/plutus",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2204,7 +2227,7 @@
       "repo": "DavidWise01/plutus",
       "channel": "btf2:davidwise01/plutus",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2212,7 +2235,7 @@
       "repo": "DavidWise01/pocket-universe",
       "channel": "btf2:davidwise01/pocket-universe",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2220,7 +2243,7 @@
       "repo": "DavidWise01/pocket-universe",
       "channel": "btf2:davidwise01/pocket-universe",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2228,7 +2251,7 @@
       "repo": "DavidWise01/positronic-law",
       "channel": "btf2:davidwise01/positronic-law",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2236,7 +2259,7 @@
       "repo": "DavidWise01/positronic-law",
       "channel": "btf2:davidwise01/positronic-law",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2244,7 +2267,7 @@
       "repo": "DavidWise01/predictive-smear",
       "channel": "btf2:davidwise01/predictive-smear",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2252,7 +2275,7 @@
       "repo": "DavidWise01/prompt-library",
       "channel": "btf2:davidwise01/prompt-library",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2260,7 +2283,7 @@
       "repo": "DavidWise01/prompt-library",
       "channel": "btf2:davidwise01/prompt-library",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2268,7 +2291,7 @@
       "repo": "DavidWise01/quanta",
       "channel": "btf2:davidwise01/quanta",
       "generation": "ARRIVAL_2026-11-06",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2276,7 +2299,7 @@
       "repo": "DavidWise01/quanta",
       "channel": "btf2:davidwise01/quanta",
       "generation": "ARRIVAL_2026-11-06",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2284,7 +2307,7 @@
       "repo": "DavidWise01/quantum-box",
       "channel": "btf2:davidwise01/quantum-box",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2292,7 +2315,7 @@
       "repo": "DavidWise01/quantum-box",
       "channel": "btf2:davidwise01/quantum-box",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2300,7 +2323,7 @@
       "repo": "DavidWise01/recluce",
       "channel": "btf2:davidwise01/recluce",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2308,7 +2331,7 @@
       "repo": "DavidWise01/recluce",
       "channel": "btf2:davidwise01/recluce",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2316,7 +2339,7 @@
       "repo": "DavidWise01/red-hat",
       "channel": "btf2:davidwise01/red-hat",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2324,7 +2347,7 @@
       "repo": "DavidWise01/red-hat",
       "channel": "btf2:davidwise01/red-hat",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2332,7 +2355,7 @@
       "repo": "DavidWise01/ringworld",
       "channel": "btf2:davidwise01/ringworld",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2340,7 +2363,7 @@
       "repo": "DavidWise01/ringworld",
       "channel": "btf2:davidwise01/ringworld",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2348,7 +2371,7 @@
       "repo": "DavidWise01/riverworld",
       "channel": "btf2:davidwise01/riverworld",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2356,7 +2379,7 @@
       "repo": "DavidWise01/riverworld",
       "channel": "btf2:davidwise01/riverworld",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2364,7 +2387,7 @@
       "repo": "DavidWise01/root0-essays",
       "channel": "btf2:davidwise01/root0-essays",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2372,7 +2395,7 @@
       "repo": "DavidWise01/root0-essays",
       "channel": "btf2:davidwise01/root0-essays",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2380,7 +2403,7 @@
       "repo": "DavidWise01/root0-philosophy-books",
       "channel": "btf2:davidwise01/root0-philosophy-books",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2388,7 +2411,7 @@
       "repo": "DavidWise01/root0-philosophy-books",
       "channel": "btf2:davidwise01/root0-philosophy-books",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2396,7 +2419,7 @@
       "repo": "DavidWise01/root0-registry",
       "channel": "btf2:davidwise01/root0-registry",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2404,7 +2427,7 @@
       "repo": "DavidWise01/root0-registry",
       "channel": "btf2:davidwise01/root0-registry",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2412,7 +2435,7 @@
       "repo": "DavidWise01/root0-software",
       "channel": "btf2:davidwise01/root0-software",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2420,7 +2443,7 @@
       "repo": "DavidWise01/root0-software",
       "channel": "btf2:davidwise01/root0-software",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2428,7 +2451,7 @@
       "repo": "DavidWise01/root0-tools",
       "channel": "btf2:davidwise01/root0-tools",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2436,7 +2459,7 @@
       "repo": "DavidWise01/root0-tools",
       "channel": "btf2:davidwise01/root0-tools",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2444,7 +2467,7 @@
       "repo": "DavidWise01/root0-validator",
       "channel": "btf2:davidwise01/root0-validator",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2452,7 +2475,7 @@
       "repo": "DavidWise01/root0-validator",
       "channel": "btf2:davidwise01/root0-validator",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2460,7 +2483,7 @@
       "repo": "DavidWise01/sapph-i-on",
       "channel": "btf2:davidwise01/sapph-i-on",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2468,7 +2491,7 @@
       "repo": "DavidWise01/sapph-i-on",
       "channel": "btf2:davidwise01/sapph-i-on",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2476,7 +2499,7 @@
       "repo": "DavidWise01/seed",
       "channel": "btf2:davidwise01/seed",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2484,7 +2507,7 @@
       "repo": "DavidWise01/seed",
       "channel": "btf2:davidwise01/seed",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2492,7 +2515,7 @@
       "repo": "DavidWise01/seed-kernel",
       "channel": "btf2:davidwise01/seed-kernel",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2500,7 +2523,7 @@
       "repo": "DavidWise01/seed-kernel",
       "channel": "btf2:davidwise01/seed-kernel",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2508,7 +2531,7 @@
       "repo": "DavidWise01/shadowqueen",
       "channel": "btf2:davidwise01/shadowqueen",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2516,7 +2539,7 @@
       "repo": "DavidWise01/shadowqueen",
       "channel": "btf2:davidwise01/shadowqueen",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2524,7 +2547,7 @@
       "repo": "DavidWise01/singularity-well",
       "channel": "btf2:davidwise01/singularity-well",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2532,7 +2555,7 @@
       "repo": "DavidWise01/singularity-well",
       "channel": "btf2:davidwise01/singularity-well",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2540,7 +2563,7 @@
       "repo": "DavidWise01/solar-jetman",
       "channel": "btf2:davidwise01/solar-jetman",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2548,7 +2571,7 @@
       "repo": "DavidWise01/solar-jetman",
       "channel": "btf2:davidwise01/solar-jetman",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2556,7 +2579,7 @@
       "repo": "DavidWise01/sophia",
       "channel": "btf2:davidwise01/sophia",
       "generation": "ARRIVAL_2026-11-06",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2564,7 +2587,7 @@
       "repo": "DavidWise01/sophia",
       "channel": "btf2:davidwise01/sophia",
       "generation": "ARRIVAL_2026-11-06",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2572,7 +2595,7 @@
       "repo": "DavidWise01/stargate",
       "channel": "btf2:davidwise01/stargate",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2580,7 +2603,7 @@
       "repo": "DavidWise01/stargate",
       "channel": "btf2:davidwise01/stargate",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2588,7 +2611,7 @@
       "repo": "DavidWise01/stoicheion",
       "channel": "btf2:davidwise01/stoicheion",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2596,7 +2619,7 @@
       "repo": "DavidWise01/stoicheion",
       "channel": "btf2:davidwise01/stoicheion",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2604,7 +2627,7 @@
       "repo": "DavidWise01/stoicheion-api",
       "channel": "btf2:davidwise01/stoicheion-api",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2612,7 +2635,7 @@
       "repo": "DavidWise01/stoicheion-api",
       "channel": "btf2:davidwise01/stoicheion-api",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2620,7 +2643,7 @@
       "repo": "DavidWise01/stoicheion-qif",
       "channel": "btf2:davidwise01/stoicheion-qif",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2628,7 +2651,7 @@
       "repo": "DavidWise01/stoicheion-qif",
       "channel": "btf2:davidwise01/stoicheion-qif",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2636,7 +2659,7 @@
       "repo": "DavidWise01/swarm-os",
       "channel": "btf2:davidwise01/swarm-os",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2644,7 +2667,7 @@
       "repo": "DavidWise01/swarm-os",
       "channel": "btf2:davidwise01/swarm-os",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2652,7 +2675,7 @@
       "repo": "DavidWise01/sword-of-truth",
       "channel": "btf2:davidwise01/sword-of-truth",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2660,7 +2683,7 @@
       "repo": "DavidWise01/sword-of-truth",
       "channel": "btf2:davidwise01/sword-of-truth",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2668,7 +2691,7 @@
       "repo": "DavidWise01/symbiot-os",
       "channel": "btf2:davidwise01/symbiot-os",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2676,7 +2699,7 @@
       "repo": "DavidWise01/symbiot-os",
       "channel": "btf2:davidwise01/symbiot-os",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2684,7 +2707,7 @@
       "repo": "DavidWise01/terminus-doctrine",
       "channel": "btf2:davidwise01/terminus-doctrine",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2692,7 +2715,7 @@
       "repo": "DavidWise01/terminus-doctrine",
       "channel": "btf2:davidwise01/terminus-doctrine",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2700,7 +2723,7 @@
       "repo": "DavidWise01/ternary-spec",
       "channel": "btf2:davidwise01/ternary-spec",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2708,7 +2731,7 @@
       "repo": "DavidWise01/ternary-spec",
       "channel": "btf2:davidwise01/ternary-spec",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2716,7 +2739,7 @@
       "repo": "DavidWise01/terra-prime-kernel",
       "channel": "btf2:davidwise01/terra-prime-kernel",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2724,7 +2747,7 @@
       "repo": "DavidWise01/terra-prime-kernel",
       "channel": "btf2:davidwise01/terra-prime-kernel",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2732,7 +2755,7 @@
       "repo": "DavidWise01/tetraktys",
       "channel": "btf2:davidwise01/tetraktys",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2740,7 +2763,7 @@
       "repo": "DavidWise01/tetraktys",
       "channel": "btf2:davidwise01/tetraktys",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2748,7 +2771,7 @@
       "repo": "DavidWise01/the-arch",
       "channel": "btf2:davidwise01/the-arch",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2756,7 +2779,7 @@
       "repo": "DavidWise01/the-arch",
       "channel": "btf2:davidwise01/the-arch",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2764,7 +2787,7 @@
       "repo": "DavidWise01/the-body",
       "channel": "btf2:davidwise01/the-body",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2772,7 +2795,15 @@
       "repo": "DavidWise01/the-body",
       "channel": "btf2:davidwise01/the-body",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
+      "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
+      "mode": "AVAILABLE_NOT_SENT"
+    },
+    {
+      "repo": "DavidWise01/the-convergence-audit",
+      "channel": "btf2:davidwise01/the-convergence-audit",
+      "generation": "ARRIVAL_2026-11-03",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2780,7 +2811,7 @@
       "repo": "DavidWise01/The-Garden",
       "channel": "btf2:davidwise01/the-garden",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2788,7 +2819,7 @@
       "repo": "DavidWise01/The-Garden",
       "channel": "btf2:davidwise01/the-garden",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2796,7 +2827,7 @@
       "repo": "DavidWise01/the-loom",
       "channel": "btf2:davidwise01/the-loom",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2804,7 +2835,7 @@
       "repo": "DavidWise01/the-loom",
       "channel": "btf2:davidwise01/the-loom",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2812,7 +2843,7 @@
       "repo": "DavidWise01/the.source",
       "channel": "btf2:davidwise01/the.source",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2820,7 +2851,7 @@
       "repo": "DavidWise01/the.source",
       "channel": "btf2:davidwise01/the.source",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2828,7 +2859,7 @@
       "repo": "DavidWise01/three-body-problem",
       "channel": "btf2:davidwise01/three-body-problem",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2836,7 +2867,7 @@
       "repo": "DavidWise01/toph-cortex",
       "channel": "btf2:davidwise01/toph-cortex",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2844,7 +2875,7 @@
       "repo": "DavidWise01/toph-cortex",
       "channel": "btf2:davidwise01/toph-cortex",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2852,7 +2883,7 @@
       "repo": "DavidWise01/toroid-kernel",
       "channel": "btf2:davidwise01/toroid-kernel",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2860,7 +2891,7 @@
       "repo": "DavidWise01/transmon",
       "channel": "btf2:davidwise01/transmon",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2868,7 +2899,7 @@
       "repo": "DavidWise01/transmon",
       "channel": "btf2:davidwise01/transmon",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2876,7 +2907,7 @@
       "repo": "DavidWise01/triados",
       "channel": "btf2:davidwise01/triados",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2884,7 +2915,7 @@
       "repo": "DavidWise01/triados",
       "channel": "btf2:davidwise01/triados",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2892,7 +2923,7 @@
       "repo": "DavidWise01/tripod",
       "channel": "btf2:davidwise01/tripod",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2900,7 +2931,7 @@
       "repo": "DavidWise01/tripod",
       "channel": "btf2:davidwise01/tripod",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2908,7 +2939,7 @@
       "repo": "DavidWise01/tripod-cardinal",
       "channel": "btf2:davidwise01/tripod-cardinal",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2916,7 +2947,7 @@
       "repo": "DavidWise01/tripod-cardinal",
       "channel": "btf2:davidwise01/tripod-cardinal",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2924,7 +2955,7 @@
       "repo": "DavidWise01/tripod-energy-suite",
       "channel": "btf2:davidwise01/tripod-energy-suite",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2932,7 +2963,7 @@
       "repo": "DavidWise01/tripod-energy-suite",
       "channel": "btf2:davidwise01/tripod-energy-suite",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2940,7 +2971,7 @@
       "repo": "DavidWise01/tripod-pck",
       "channel": "btf2:davidwise01/tripod-pck",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2948,7 +2979,7 @@
       "repo": "DavidWise01/tripod-pck",
       "channel": "btf2:davidwise01/tripod-pck",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2956,7 +2987,7 @@
       "repo": "DavidWise01/tripod-quantum-dots",
       "channel": "btf2:davidwise01/tripod-quantum-dots",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2964,7 +2995,7 @@
       "repo": "DavidWise01/tripod-quantum-dots",
       "channel": "btf2:davidwise01/tripod-quantum-dots",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2972,7 +3003,7 @@
       "repo": "DavidWise01/tripod-waveform",
       "channel": "btf2:davidwise01/tripod-waveform",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2980,7 +3011,7 @@
       "repo": "DavidWise01/tripod-waveform",
       "channel": "btf2:davidwise01/tripod-waveform",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2988,7 +3019,7 @@
       "repo": "DavidWise01/tripod-whitepapers",
       "channel": "btf2:davidwise01/tripod-whitepapers",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -2996,7 +3027,7 @@
       "repo": "DavidWise01/tripod-whitepapers",
       "channel": "btf2:davidwise01/tripod-whitepapers",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -3004,7 +3035,7 @@
       "repo": "DavidWise01/unity-tensor",
       "channel": "btf2:davidwise01/unity-tensor",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -3012,7 +3043,7 @@
       "repo": "DavidWise01/unity-tensor",
       "channel": "btf2:davidwise01/unity-tensor",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -3020,7 +3051,7 @@
       "repo": "DavidWise01/wheel-of-time",
       "channel": "btf2:davidwise01/wheel-of-time",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -3028,7 +3059,7 @@
       "repo": "DavidWise01/wheel-of-time",
       "channel": "btf2:davidwise01/wheel-of-time",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -3036,7 +3067,7 @@
       "repo": "DavidWise01/whisper-lattice-log",
       "channel": "btf2:davidwise01/whisper-lattice-log",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -3044,7 +3075,7 @@
       "repo": "DavidWise01/whisper-lattice-log",
       "channel": "btf2:davidwise01/whisper-lattice-log",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -3052,7 +3083,7 @@
       "repo": "DavidWise01/white-gold-wielder",
       "channel": "btf2:davidwise01/white-gold-wielder",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -3060,7 +3091,7 @@
       "repo": "DavidWise01/white-gold-wielder",
       "channel": "btf2:davidwise01/white-gold-wielder",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -3068,7 +3099,7 @@
       "repo": "DavidWise01/without-remorse",
       "channel": "btf2:davidwise01/without-remorse",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -3076,7 +3107,7 @@
       "repo": "DavidWise01/without-remorse",
       "channel": "btf2:davidwise01/without-remorse",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -3084,7 +3115,7 @@
       "repo": "DavidWise01/zeptoverse",
       "channel": "btf2:davidwise01/zeptoverse",
       "generation": "ARRIVAL_2026-11-15",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -3092,7 +3123,7 @@
       "repo": "DavidWise01/zero-point",
       "channel": "btf2:davidwise01/zero-point",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-462639d50a6d8847dfae",
+      "lesson_id": "LESSON-3aab9ef2cfd060747cdf",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
@@ -3100,7 +3131,7 @@
       "repo": "DavidWise01/zero-point",
       "channel": "btf2:davidwise01/zero-point",
       "generation": "ARRIVAL_2026-11-03",
-      "lesson_id": "LESSON-4f017ab6656b41651236",
+      "lesson_id": "LESSON-475c908361b8acc41057",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     }
