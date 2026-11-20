@@ -1,6 +1,6 @@
 {
   "schema": "JANE_B102_FAMILY_DISCOVERY_V1",
-  "updated_at": "2026-11-20T11:16:38.939Z",
+  "updated_at": "2026-11-20T19:56:33.342Z",
   "scan_scope": "PUBLIC_OWNER_REPOSITORIES",
   "members": [
     {
@@ -4915,6 +4915,13 @@
       "channel": "btf2:davidwise01/neuromorphic",
       "observer": "FORMIC-e8e557e75270d58a",
       "url": "https://github.com/DavidWise01/neuromorphic",
+      "presence": "RESERVED"
+    },
+    {
+      "repo": "DavidWise01/neuroscape",
+      "channel": "btf2:davidwise01/neuroscape",
+      "observer": "FORMIC-ca798993fa8efc42",
+      "url": "https://github.com/DavidWise01/neuroscape",
       "presence": "RESERVED"
     },
     {
@@ -15110,8 +15117,8 @@
       "presence": "RESERVED"
     }
   ],
-  "first_seen_total": 2158,
-  "new_children_this_run": 0,
-  "discovery_events": 2158,
+  "first_seen_total": 2159,
+  "new_children_this_run": 1,
+  "discovery_events": 2159,
   "note": "A child identity is not a continuously executing AI process."
 }
