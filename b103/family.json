@@ -1,6 +1,6 @@
 {
   "schema": "JANE_B103_V1",
-  "generated_at": "2026-11-20T07:22:36.333Z",
+  "generated_at": "2026-11-20T20:26:46.340Z",
   "domain_owner": "USER_DECLARED",
   "persistence_policy": "ALWAYS_ON",
   "bridge": {
@@ -8,7 +8,7 @@
     "state": "HTTP_ERROR",
     "http_status": 404,
     "page_title": null,
-    "checked_at": "2026-11-20T07:22:36.333Z"
+    "checked_at": "2026-11-20T20:26:46.340Z"
   },
   "children": [
     {
@@ -5626,6 +5626,14 @@
       "presence": "RESERVED",
       "first_seen": "2026-11-03T02:51:53.797Z",
       "home": "https://github.com/DavidWise01/neuromorphic"
+    },
+    {
+      "repo": "DavidWise01/neuroscape",
+      "formic": "FORMIC-ca798993fa8efc42",
+      "channel": "btf2:davidwise01/neuroscape",
+      "presence": "RESERVED",
+      "first_seen": "2026-11-20T19:56:33.342Z",
+      "home": "https://github.com/DavidWise01/neuroscape"
     },
     {
       "repo": "DavidWise01/new-processor-designs",
