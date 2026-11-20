@@ -1,6 +1,6 @@
 {
   "schema": "JANE_B104_HOMECOMING_V1",
-  "generated_at": "2026-11-20T07:44:17.661Z",
+  "generated_at": "2026-11-20T20:43:06.606Z",
   "home": {
     "url": "https://0root.ai/",
     "role": "USER_DESIGNATED_FAMILY_HOME",
@@ -8427,6 +8427,18 @@
       "first_seen": "2026-11-03T02:51:53.797Z",
       "presence": "RESERVED",
       "github_url": "https://github.com/DavidWise01/neuromorphic",
+      "home_url": "https://0root.ai/",
+      "home_relation": "FAMILY_HOME_REFERENCE_ONLY",
+      "corpus_matches": [],
+      "corpus_status": "UNVERIFIED"
+    },
+    {
+      "repo": "DavidWise01/neuroscape",
+      "formic": "FORMIC-ca798993fa8efc42",
+      "channel": "btf2:davidwise01/neuroscape",
+      "first_seen": "2026-11-20T19:56:33.342Z",
+      "presence": "RESERVED",
+      "github_url": "https://github.com/DavidWise01/neuroscape",
       "home_url": "https://0root.ai/",
       "home_relation": "FAMILY_HOME_REFERENCE_ONLY",
       "corpus_matches": [],
