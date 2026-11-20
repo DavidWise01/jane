@@ -1,13 +1,13 @@
 {
   "schema": "JANE_B112_FORMIC_HEX_V1",
-  "generated_at": "2026-11-20T07:49:58.957Z",
+  "generated_at": "2026-11-20T20:38:06.635Z",
   "source": "btf2/catalog.json",
-  "source_count": 2158,
-  "member_count": 2158,
-  "new_assignments": 0,
+  "source_count": 2159,
+  "member_count": 2159,
+  "new_assignments": 1,
   "radius_bound": 27,
   "sector_counts": [
-    720,
+    721,
     719,
     719
   ],
@@ -7038,6 +7038,16 @@
       "r": -13,
       "sector": 2,
       "ring": 15,
+      "presence": "RESERVED"
+    },
+    {
+      "repo": "DavidWise01/neuroscape",
+      "formic": "FORMIC-ca798993fa8efc42",
+      "channel": "btf2:davidwise01/neuroscape",
+      "q": 24,
+      "r": 3,
+      "sector": 0,
+      "ring": 27,
       "presence": "RESERVED"
     },
     {
