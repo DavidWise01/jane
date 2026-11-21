@@ -1,11 +1,11 @@
 {
   "schema": "JANE_B115_TEACHING_MEMORY_V1",
-  "generated_at": "2026-11-20T20:40:12.702Z",
+  "generated_at": "2026-11-21T07:38:29.267Z",
   "source": "b114/lessons.json",
   "evidence_scope": "PUBLIC_GITHUB_METADATA_ONLY",
   "family_registry_available": true,
   "lesson_count": 2,
-  "suggestion_count": 318,
+  "suggestion_count": 319,
   "cards": [
     {
       "lesson_id": "LESSON-8caaac7145bb5dfcf854",
@@ -2123,6 +2123,14 @@
       "channel": "btf2:davidwise01/nest-3-deep",
       "generation": "ARRIVAL_2026-11-03",
       "lesson_id": "LESSON-a58c6605b8e768334575",
+      "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
+      "mode": "AVAILABLE_NOT_SENT"
+    },
+    {
+      "repo": "DavidWise01/neuroscape",
+      "channel": "btf2:davidwise01/neuroscape",
+      "generation": "ARRIVAL_2026-11-20",
+      "lesson_id": "LESSON-8caaac7145bb5dfcf854",
       "reason": "MATCHING_PRIOR_OBSERVED_FIELD",
       "mode": "AVAILABLE_NOT_SENT"
     },
