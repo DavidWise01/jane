@@ -1,6 +1,6 @@
 {
   "schema": "JANE_B103_V1",
-  "generated_at": "2026-11-21T19:21:15.186Z",
+  "generated_at": "2026-11-22T06:56:14.831Z",
   "domain_owner": "USER_DECLARED",
   "persistence_policy": "ALWAYS_ON",
   "bridge": {
@@ -8,7 +8,7 @@
     "state": "HTTP_ERROR",
     "http_status": 404,
     "page_title": null,
-    "checked_at": "2026-11-21T19:21:15.186Z"
+    "checked_at": "2026-11-22T06:56:14.831Z"
   },
   "children": [
     {
