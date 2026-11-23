@@ -1,12 +1,12 @@
 {
   "schema": "HON184_B89_V1",
   "mission": "HEGEMON M001 / Internet Time Dilation",
-  "generated_at": "2026-11-19T18:23:08.417Z",
+  "generated_at": "2026-11-23T21:31:55.169Z",
   "status": "DERIVED_GITHUB_PUBLIC_METADATA",
   "slot_count": 184,
-  "pin_count": 2158,
+  "pin_count": 2160,
   "collision_slots": 184,
-  "unknown_count": 689,
+  "unknown_count": 877,
   "source": "BTF2 PUBLIC CATALOG",
   "pins": [
     {
@@ -16,7 +16,7 @@
       "agent_id": "FORMIC-e29277b24746da8a",
       "hon184_slot": 155,
       "band": "N",
-      "observation_status": "UNCHANGED",
+      "observation_status": "CHANGED",
       "archived": false,
       "fork": false
     },
@@ -1743,7 +1743,7 @@
       "agent_id": "FORMIC-6639770fc4a9b265",
       "hon184_slot": 144,
       "band": "N",
-      "observation_status": "UNCHANGED",
+      "observation_status": "CHANGED",
       "archived": false,
       "fork": false
     },
@@ -2370,7 +2370,7 @@
       "agent_id": "FORMIC-91a365b1e6e74b2f",
       "hon184_slot": 90,
       "band": "O",
-      "observation_status": "CHANGED",
+      "observation_status": "UNCHANGED",
       "archived": false,
       "fork": false
     },
@@ -4378,6 +4378,17 @@
     },
     {
       "pin": "BTF2",
+      "repo": "DavidWise01/gemini",
+      "url": "https://github.com/DavidWise01/gemini",
+      "agent_id": "FORMIC-aac7dd64f844456f",
+      "hon184_slot": 61,
+      "band": "H",
+      "observation_status": "UNCHANGED",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "pin": "BTF2",
       "repo": "DavidWise01/general-relativity",
       "url": "https://github.com/DavidWise01/general-relativity",
       "agent_id": "FORMIC-6e1c491390fcb95a",
@@ -5659,7 +5670,7 @@
       "agent_id": "FORMIC-f65eef29c1117a30",
       "hon184_slot": 82,
       "band": "O",
-      "observation_status": "UNCHANGED",
+      "observation_status": "CHANGED",
       "archived": false,
       "fork": false
     },
@@ -7733,6 +7744,17 @@
     },
     {
       "pin": "BTF2",
+      "repo": "DavidWise01/neuroscape",
+      "url": "https://github.com/DavidWise01/neuroscape",
+      "agent_id": "FORMIC-ca798993fa8efc42",
+      "hon184_slot": 156,
+      "band": "N",
+      "observation_status": "CHANGED",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "pin": "BTF2",
       "repo": "DavidWise01/new-processor-designs",
       "url": "https://github.com/DavidWise01/new-processor-designs",
       "agent_id": "FORMIC-812526c5aa599d39",
@@ -7991,7 +8013,7 @@
       "agent_id": "FORMIC-c07172c062fcde7f",
       "hon184_slot": 89,
       "band": "O",
-      "observation_status": "UNCHANGED",
+      "observation_status": "CHANGED",
       "archived": false,
       "fork": false
     },
@@ -8519,7 +8541,7 @@
       "agent_id": "FORMIC-77b43b1da3c3cd8a",
       "hon184_slot": 118,
       "band": "O",
-      "observation_status": "UNCHANGED",
+      "observation_status": "CHANGED",
       "archived": false,
       "fork": false
     },
@@ -9036,7 +9058,7 @@
       "agent_id": "FORMIC-95c933c6a0a1c6a4",
       "hon184_slot": 135,
       "band": "N",
-      "observation_status": "UNCHANGED",
+      "observation_status": "CHANGED",
       "archived": false,
       "fork": false
     },
@@ -14107,7 +14129,7 @@
       "agent_id": "FORMIC-bb215fac0f13d527",
       "hon184_slot": 77,
       "band": "O",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -14118,7 +14140,7 @@
       "agent_id": "FORMIC-ba7edb3fbfe88223",
       "hon184_slot": 184,
       "band": "N",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -14129,7 +14151,7 @@
       "agent_id": "FORMIC-00a63c2bd3cee2b2",
       "hon184_slot": 108,
       "band": "O",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -14140,7 +14162,7 @@
       "agent_id": "FORMIC-9c35e5050ae37742",
       "hon184_slot": 46,
       "band": "H",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -14151,7 +14173,7 @@
       "agent_id": "FORMIC-e59b25b1823be910",
       "hon184_slot": 162,
       "band": "N",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -14162,7 +14184,7 @@
       "agent_id": "FORMIC-f9bcc66b7ea7d5ff",
       "hon184_slot": 124,
       "band": "N",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -14173,7 +14195,7 @@
       "agent_id": "FORMIC-01a312ead4009452",
       "hon184_slot": 35,
       "band": "H",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -14184,7 +14206,7 @@
       "agent_id": "FORMIC-54202000670759da",
       "hon184_slot": 169,
       "band": "N",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -14195,7 +14217,7 @@
       "agent_id": "FORMIC-34aab9b40f765b02",
       "hon184_slot": 13,
       "band": "H",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -14206,7 +14228,7 @@
       "agent_id": "FORMIC-5313d846910a216b",
       "hon184_slot": 95,
       "band": "O",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -14217,7 +14239,7 @@
       "agent_id": "FORMIC-cf50da46dda4c13f",
       "hon184_slot": 111,
       "band": "O",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -14228,7 +14250,7 @@
       "agent_id": "FORMIC-73143a6b8daedd91",
       "hon184_slot": 140,
       "band": "N",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -14239,7 +14261,7 @@
       "agent_id": "FORMIC-bbd43d580a988273",
       "hon184_slot": 145,
       "band": "N",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -14250,7 +14272,7 @@
       "agent_id": "FORMIC-1fd5c6c5e358d703",
       "hon184_slot": 142,
       "band": "N",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -14261,7 +14283,7 @@
       "agent_id": "FORMIC-2d5a2f81b26e3496",
       "hon184_slot": 42,
       "band": "H",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -14272,7 +14294,7 @@
       "agent_id": "FORMIC-7df4b1c75f52b380",
       "hon184_slot": 184,
       "band": "N",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -14283,7 +14305,7 @@
       "agent_id": "FORMIC-1d88cf373e417e94",
       "hon184_slot": 16,
       "band": "H",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -14294,7 +14316,7 @@
       "agent_id": "FORMIC-24c0859dd926b9bd",
       "hon184_slot": 14,
       "band": "H",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -14305,7 +14327,7 @@
       "agent_id": "FORMIC-f2f2ce7b646cca45",
       "hon184_slot": 116,
       "band": "O",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -14316,7 +14338,7 @@
       "agent_id": "FORMIC-77c90a85152b6918",
       "hon184_slot": 126,
       "band": "N",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -14327,7 +14349,7 @@
       "agent_id": "FORMIC-f702d4f1bb39acc3",
       "hon184_slot": 90,
       "band": "O",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -14338,7 +14360,7 @@
       "agent_id": "FORMIC-f0ed1a614ba87d37",
       "hon184_slot": 26,
       "band": "H",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -14349,7 +14371,7 @@
       "agent_id": "FORMIC-501c406646d386d0",
       "hon184_slot": 39,
       "band": "H",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -14360,7 +14382,7 @@
       "agent_id": "FORMIC-649d415ade38195a",
       "hon184_slot": 75,
       "band": "O",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -14371,7 +14393,7 @@
       "agent_id": "FORMIC-022db757dada5d3e",
       "hon184_slot": 176,
       "band": "N",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -14382,7 +14404,7 @@
       "agent_id": "FORMIC-0b4fa314f8559777",
       "hon184_slot": 69,
       "band": "O",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -14393,7 +14415,7 @@
       "agent_id": "FORMIC-eaa6f1de0b4f0bd4",
       "hon184_slot": 87,
       "band": "O",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -14404,7 +14426,7 @@
       "agent_id": "FORMIC-6a00b6adf8d11559",
       "hon184_slot": 86,
       "band": "O",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -14415,7 +14437,7 @@
       "agent_id": "FORMIC-b5cd1d0e1f926170",
       "hon184_slot": 95,
       "band": "O",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -14426,7 +14448,7 @@
       "agent_id": "FORMIC-eaa5940dfd3caa3e",
       "hon184_slot": 142,
       "band": "N",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -14437,7 +14459,7 @@
       "agent_id": "FORMIC-095e0d5a07c0bf29",
       "hon184_slot": 115,
       "band": "O",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -14448,7 +14470,7 @@
       "agent_id": "FORMIC-5e1fed1f354d4eb6",
       "hon184_slot": 64,
       "band": "O",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -14459,7 +14481,7 @@
       "agent_id": "FORMIC-47f5b33afd3fc40c",
       "hon184_slot": 3,
       "band": "H",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -14470,7 +14492,7 @@
       "agent_id": "FORMIC-d5e4e1303081ac8c",
       "hon184_slot": 17,
       "band": "H",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -14481,7 +14503,7 @@
       "agent_id": "FORMIC-b901420cc3800278",
       "hon184_slot": 109,
       "band": "O",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -14492,7 +14514,7 @@
       "agent_id": "FORMIC-b58bba45d299281d",
       "hon184_slot": 142,
       "band": "N",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -14503,7 +14525,7 @@
       "agent_id": "FORMIC-e39943381f092ab1",
       "hon184_slot": 105,
       "band": "O",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -14514,7 +14536,7 @@
       "agent_id": "FORMIC-44cf7c86a8b895f8",
       "hon184_slot": 135,
       "band": "N",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -14525,7 +14547,7 @@
       "agent_id": "FORMIC-e5d4309a7b51541f",
       "hon184_slot": 179,
       "band": "N",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -14536,7 +14558,7 @@
       "agent_id": "FORMIC-ec38f0fd348b98c1",
       "hon184_slot": 30,
       "band": "H",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -14547,7 +14569,7 @@
       "agent_id": "FORMIC-57704b9b159680ed",
       "hon184_slot": 12,
       "band": "H",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -14558,7 +14580,7 @@
       "agent_id": "FORMIC-dd030a853b0254ec",
       "hon184_slot": 86,
       "band": "O",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -14569,7 +14591,7 @@
       "agent_id": "FORMIC-4cf4585d80f37ba6",
       "hon184_slot": 6,
       "band": "H",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -14580,7 +14602,7 @@
       "agent_id": "FORMIC-47ebcb9a31ab41d4",
       "hon184_slot": 35,
       "band": "H",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -14591,7 +14613,7 @@
       "agent_id": "FORMIC-c27fbbeb79608d42",
       "hon184_slot": 140,
       "band": "N",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -14602,7 +14624,7 @@
       "agent_id": "FORMIC-53f07195de3e5f83",
       "hon184_slot": 14,
       "band": "H",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -14613,7 +14635,7 @@
       "agent_id": "FORMIC-d5e21eb61c9724e9",
       "hon184_slot": 31,
       "band": "H",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -14624,7 +14646,7 @@
       "agent_id": "FORMIC-2c6231d3bd1d78dc",
       "hon184_slot": 60,
       "band": "H",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -14635,7 +14657,7 @@
       "agent_id": "FORMIC-0c8066a9907f2b30",
       "hon184_slot": 66,
       "band": "O",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -14646,7 +14668,7 @@
       "agent_id": "FORMIC-01e7a2637a662d7f",
       "hon184_slot": 116,
       "band": "O",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -14657,7 +14679,7 @@
       "agent_id": "FORMIC-a934ba1ee97ac247",
       "hon184_slot": 31,
       "band": "H",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -14668,7 +14690,7 @@
       "agent_id": "FORMIC-21dc4c5c11804e8a",
       "hon184_slot": 133,
       "band": "N",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -14679,7 +14701,7 @@
       "agent_id": "FORMIC-e41ba600acfb7245",
       "hon184_slot": 113,
       "band": "O",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -14690,7 +14712,7 @@
       "agent_id": "FORMIC-2657fd9f9a79ca36",
       "hon184_slot": 152,
       "band": "N",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -14701,7 +14723,7 @@
       "agent_id": "FORMIC-f11793e9e1c08e30",
       "hon184_slot": 98,
       "band": "O",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -14712,7 +14734,7 @@
       "agent_id": "FORMIC-956ca871a017c4dc",
       "hon184_slot": 162,
       "band": "N",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -14723,7 +14745,7 @@
       "agent_id": "FORMIC-73e782eae36b3ff4",
       "hon184_slot": 59,
       "band": "H",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -14734,7 +14756,7 @@
       "agent_id": "FORMIC-427320aca717c8df",
       "hon184_slot": 165,
       "band": "N",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -14745,7 +14767,7 @@
       "agent_id": "FORMIC-9a4d60f4932ca9c3",
       "hon184_slot": 117,
       "band": "O",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -14756,7 +14778,7 @@
       "agent_id": "FORMIC-fc99fac233ca517b",
       "hon184_slot": 179,
       "band": "N",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -14767,7 +14789,7 @@
       "agent_id": "FORMIC-6106aa099d69a9a3",
       "hon184_slot": 42,
       "band": "H",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -14778,7 +14800,7 @@
       "agent_id": "FORMIC-384e591649fc51ad",
       "hon184_slot": 135,
       "band": "N",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -14789,7 +14811,7 @@
       "agent_id": "FORMIC-6278ba8db9536b25",
       "hon184_slot": 102,
       "band": "O",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -14800,7 +14822,7 @@
       "agent_id": "FORMIC-9652aaf6243f6caf",
       "hon184_slot": 71,
       "band": "O",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -14811,7 +14833,7 @@
       "agent_id": "FORMIC-8456a7b709d76438",
       "hon184_slot": 32,
       "band": "H",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -14822,7 +14844,7 @@
       "agent_id": "FORMIC-ce85268c60553a97",
       "hon184_slot": 45,
       "band": "H",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -14833,7 +14855,7 @@
       "agent_id": "FORMIC-444e684723b867e9",
       "hon184_slot": 24,
       "band": "H",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -14844,7 +14866,7 @@
       "agent_id": "FORMIC-97b9fd149be789e3",
       "hon184_slot": 13,
       "band": "H",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -14855,7 +14877,7 @@
       "agent_id": "FORMIC-c8ebb2b89b0d7a46",
       "hon184_slot": 161,
       "band": "N",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -14866,7 +14888,7 @@
       "agent_id": "FORMIC-322d259b2e03b015",
       "hon184_slot": 44,
       "band": "H",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -14877,7 +14899,7 @@
       "agent_id": "FORMIC-5d7fdabf1f064a4c",
       "hon184_slot": 176,
       "band": "N",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -14888,7 +14910,7 @@
       "agent_id": "FORMIC-d3006c4a0209b510",
       "hon184_slot": 139,
       "band": "N",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -14899,7 +14921,7 @@
       "agent_id": "FORMIC-dc74b1ccbc33f233",
       "hon184_slot": 61,
       "band": "H",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -14910,7 +14932,7 @@
       "agent_id": "FORMIC-c1f4fd4ea01faae9",
       "hon184_slot": 103,
       "band": "O",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -14921,7 +14943,7 @@
       "agent_id": "FORMIC-66024011fbb30513",
       "hon184_slot": 130,
       "band": "N",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -14932,7 +14954,7 @@
       "agent_id": "FORMIC-dd156d97b71234f2",
       "hon184_slot": 80,
       "band": "O",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -14943,7 +14965,7 @@
       "agent_id": "FORMIC-5b24388147071e37",
       "hon184_slot": 66,
       "band": "O",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -14954,7 +14976,7 @@
       "agent_id": "FORMIC-6971b49248721061",
       "hon184_slot": 123,
       "band": "N",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -14965,7 +14987,7 @@
       "agent_id": "FORMIC-351c6571b94920b8",
       "hon184_slot": 122,
       "band": "O",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -14976,7 +14998,7 @@
       "agent_id": "FORMIC-da6a16a4b22b21a6",
       "hon184_slot": 125,
       "band": "N",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -14987,7 +15009,7 @@
       "agent_id": "FORMIC-cbf70ee8d1819082",
       "hon184_slot": 113,
       "band": "O",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -14998,7 +15020,7 @@
       "agent_id": "FORMIC-c3ea66539df02a0b",
       "hon184_slot": 148,
       "band": "N",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -15009,7 +15031,7 @@
       "agent_id": "FORMIC-6c921343e3341ba5",
       "hon184_slot": 100,
       "band": "O",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -15020,7 +15042,7 @@
       "agent_id": "FORMIC-3b29af58f9c4d1a9",
       "hon184_slot": 161,
       "band": "N",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -15031,7 +15053,7 @@
       "agent_id": "FORMIC-25af2be1bff6ba4d",
       "hon184_slot": 146,
       "band": "N",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -15042,7 +15064,7 @@
       "agent_id": "FORMIC-14a805690f9f8051",
       "hon184_slot": 34,
       "band": "H",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -15053,7 +15075,7 @@
       "agent_id": "FORMIC-7d0a3372cafabe7e",
       "hon184_slot": 99,
       "band": "O",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -15064,7 +15086,7 @@
       "agent_id": "FORMIC-d9380a1924670e09",
       "hon184_slot": 2,
       "band": "H",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -15075,7 +15097,7 @@
       "agent_id": "FORMIC-522d70b7dd1ae641",
       "hon184_slot": 80,
       "band": "O",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -15086,7 +15108,7 @@
       "agent_id": "FORMIC-8bc27de1aaca0386",
       "hon184_slot": 74,
       "band": "O",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -15097,7 +15119,7 @@
       "agent_id": "FORMIC-443dd456031fcc6b",
       "hon184_slot": 95,
       "band": "O",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -15108,7 +15130,7 @@
       "agent_id": "FORMIC-036249f7ff5f38e6",
       "hon184_slot": 96,
       "band": "O",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -15119,7 +15141,7 @@
       "agent_id": "FORMIC-c0f9bbd4dbaf02ed",
       "hon184_slot": 149,
       "band": "N",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -15130,7 +15152,7 @@
       "agent_id": "FORMIC-3c8499d4ae10f937",
       "hon184_slot": 53,
       "band": "H",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -15141,7 +15163,7 @@
       "agent_id": "FORMIC-ab7b7a9a95081542",
       "hon184_slot": 35,
       "band": "H",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -15152,7 +15174,7 @@
       "agent_id": "FORMIC-04f08d3081964b8e",
       "hon184_slot": 49,
       "band": "H",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -15163,7 +15185,7 @@
       "agent_id": "FORMIC-f01aafd0d9dadc48",
       "hon184_slot": 65,
       "band": "O",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -15174,7 +15196,7 @@
       "agent_id": "FORMIC-27420849eb1fba32",
       "hon184_slot": 66,
       "band": "O",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -15185,7 +15207,7 @@
       "agent_id": "FORMIC-b2d02f9acf0c3046",
       "hon184_slot": 51,
       "band": "H",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -15196,7 +15218,7 @@
       "agent_id": "FORMIC-07dff2d75d70258d",
       "hon184_slot": 56,
       "band": "H",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -15207,7 +15229,7 @@
       "agent_id": "FORMIC-d16f4f67dacda4a5",
       "hon184_slot": 152,
       "band": "N",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -15218,7 +15240,7 @@
       "agent_id": "FORMIC-6b6fb984bb5720d2",
       "hon184_slot": 45,
       "band": "H",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -15229,7 +15251,7 @@
       "agent_id": "FORMIC-807dedb2846f45f2",
       "hon184_slot": 43,
       "band": "H",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -15240,7 +15262,7 @@
       "agent_id": "FORMIC-ce2f83a139eef0f8",
       "hon184_slot": 146,
       "band": "N",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -15251,7 +15273,7 @@
       "agent_id": "FORMIC-07474f6bc3474199",
       "hon184_slot": 92,
       "band": "O",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -15262,7 +15284,7 @@
       "agent_id": "FORMIC-52b47e8148d495b2",
       "hon184_slot": 18,
       "band": "H",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -15273,7 +15295,7 @@
       "agent_id": "FORMIC-b8e1de8904628081",
       "hon184_slot": 138,
       "band": "N",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -15284,7 +15306,7 @@
       "agent_id": "FORMIC-2549f7d571066764",
       "hon184_slot": 150,
       "band": "N",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -15295,7 +15317,7 @@
       "agent_id": "FORMIC-dd921eab01b119ab",
       "hon184_slot": 68,
       "band": "O",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -15306,7 +15328,7 @@
       "agent_id": "FORMIC-57c210c3843000da",
       "hon184_slot": 84,
       "band": "O",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -15317,7 +15339,7 @@
       "agent_id": "FORMIC-da201790d996fb04",
       "hon184_slot": 17,
       "band": "H",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -15328,7 +15350,7 @@
       "agent_id": "FORMIC-f570f54bfc43bb0f",
       "hon184_slot": 108,
       "band": "O",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -15339,7 +15361,7 @@
       "agent_id": "FORMIC-b6031624419c953d",
       "hon184_slot": 53,
       "band": "H",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -15350,7 +15372,7 @@
       "agent_id": "FORMIC-32fb1699599384a1",
       "hon184_slot": 34,
       "band": "H",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -15361,7 +15383,7 @@
       "agent_id": "FORMIC-35d4307f901a1898",
       "hon184_slot": 184,
       "band": "N",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -15372,7 +15394,7 @@
       "agent_id": "FORMIC-075e06ba291a949d",
       "hon184_slot": 67,
       "band": "O",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -15383,7 +15405,7 @@
       "agent_id": "FORMIC-90e705277ac22a53",
       "hon184_slot": 88,
       "band": "O",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -15394,7 +15416,7 @@
       "agent_id": "FORMIC-d88eaac2614eb046",
       "hon184_slot": 179,
       "band": "N",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -15405,7 +15427,7 @@
       "agent_id": "FORMIC-032301f97ab7cb0d",
       "hon184_slot": 74,
       "band": "O",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -15416,7 +15438,7 @@
       "agent_id": "FORMIC-d32ff0473b60d55b",
       "hon184_slot": 104,
       "band": "O",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -15427,7 +15449,7 @@
       "agent_id": "FORMIC-5039713440975cb8",
       "hon184_slot": 29,
       "band": "H",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -15438,7 +15460,7 @@
       "agent_id": "FORMIC-1d35afec0b58d7a0",
       "hon184_slot": 21,
       "band": "H",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -15449,7 +15471,7 @@
       "agent_id": "FORMIC-a78ca84173cd0c52",
       "hon184_slot": 106,
       "band": "O",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -15460,7 +15482,7 @@
       "agent_id": "FORMIC-c32d3312bf8dc097",
       "hon184_slot": 115,
       "band": "O",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -15471,7 +15493,7 @@
       "agent_id": "FORMIC-f3a46dd81ecf43d9",
       "hon184_slot": 25,
       "band": "H",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -15482,7 +15504,7 @@
       "agent_id": "FORMIC-2bfcc6446a224aff",
       "hon184_slot": 21,
       "band": "H",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -15493,7 +15515,7 @@
       "agent_id": "FORMIC-e492ef134c401dd9",
       "hon184_slot": 180,
       "band": "N",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -15504,7 +15526,7 @@
       "agent_id": "FORMIC-279b17920581f449",
       "hon184_slot": 19,
       "band": "H",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -15515,7 +15537,7 @@
       "agent_id": "FORMIC-d6e401b8660c7aa9",
       "hon184_slot": 129,
       "band": "N",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -15526,7 +15548,7 @@
       "agent_id": "FORMIC-69457246e6de52be",
       "hon184_slot": 143,
       "band": "N",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -15537,7 +15559,7 @@
       "agent_id": "FORMIC-30488dc5329c5ebb",
       "hon184_slot": 150,
       "band": "N",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -15548,7 +15570,7 @@
       "agent_id": "FORMIC-bcb16ea3a2d80245",
       "hon184_slot": 148,
       "band": "N",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -15559,7 +15581,7 @@
       "agent_id": "FORMIC-575a44074a3cc0f2",
       "hon184_slot": 128,
       "band": "N",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -15570,7 +15592,7 @@
       "agent_id": "FORMIC-0a1da609d56b9386",
       "hon184_slot": 50,
       "band": "H",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -15581,7 +15603,7 @@
       "agent_id": "FORMIC-b3d2db645f31c606",
       "hon184_slot": 29,
       "band": "H",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -15592,7 +15614,7 @@
       "agent_id": "FORMIC-989ededfa841b548",
       "hon184_slot": 160,
       "band": "N",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -15603,7 +15625,7 @@
       "agent_id": "FORMIC-a54ec2c6cc2aa51a",
       "hon184_slot": 119,
       "band": "O",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -15614,7 +15636,7 @@
       "agent_id": "FORMIC-66341db57dd0d378",
       "hon184_slot": 110,
       "band": "O",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -15625,7 +15647,7 @@
       "agent_id": "FORMIC-28887ab95801c075",
       "hon184_slot": 50,
       "band": "H",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -15636,7 +15658,7 @@
       "agent_id": "FORMIC-9264cfa0e8c09638",
       "hon184_slot": 81,
       "band": "O",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -15647,7 +15669,7 @@
       "agent_id": "FORMIC-f0f4ce3066e119f7",
       "hon184_slot": 97,
       "band": "O",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -15658,7 +15680,7 @@
       "agent_id": "FORMIC-8b239d43596f8cac",
       "hon184_slot": 76,
       "band": "O",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -15669,7 +15691,7 @@
       "agent_id": "FORMIC-49ad5f974a1e3845",
       "hon184_slot": 32,
       "band": "H",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -15680,7 +15702,7 @@
       "agent_id": "FORMIC-79bbc3486437b719",
       "hon184_slot": 65,
       "band": "O",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -15691,7 +15713,7 @@
       "agent_id": "FORMIC-76c5f2e42675e47a",
       "hon184_slot": 141,
       "band": "N",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -15702,7 +15724,7 @@
       "agent_id": "FORMIC-5c5060e025dec431",
       "hon184_slot": 129,
       "band": "N",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -15713,7 +15735,7 @@
       "agent_id": "FORMIC-c69b55b46a2a080e",
       "hon184_slot": 93,
       "band": "O",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -15724,7 +15746,7 @@
       "agent_id": "FORMIC-59d5af59cde278cf",
       "hon184_slot": 82,
       "band": "O",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -15735,7 +15757,7 @@
       "agent_id": "FORMIC-fc1488d42f7a644a",
       "hon184_slot": 61,
       "band": "H",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -15746,7 +15768,7 @@
       "agent_id": "FORMIC-98f53a1609e06842",
       "hon184_slot": 135,
       "band": "N",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -15757,7 +15779,7 @@
       "agent_id": "FORMIC-662f13eb570cd42e",
       "hon184_slot": 20,
       "band": "H",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -15768,7 +15790,7 @@
       "agent_id": "FORMIC-c0dd2f3b3c077c79",
       "hon184_slot": 60,
       "band": "H",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -15779,7 +15801,7 @@
       "agent_id": "FORMIC-bed4024409438142",
       "hon184_slot": 29,
       "band": "H",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -15790,7 +15812,7 @@
       "agent_id": "FORMIC-825e5759f17c2d7a",
       "hon184_slot": 130,
       "band": "N",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -15801,7 +15823,7 @@
       "agent_id": "FORMIC-df7d6f31bd5a2153",
       "hon184_slot": 146,
       "band": "N",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -15812,7 +15834,7 @@
       "agent_id": "FORMIC-19b50325236bb2a9",
       "hon184_slot": 166,
       "band": "N",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -15823,7 +15845,7 @@
       "agent_id": "FORMIC-c45bfa86d05d296c",
       "hon184_slot": 119,
       "band": "O",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -15834,7 +15856,7 @@
       "agent_id": "FORMIC-e1f5d37dabd6019d",
       "hon184_slot": 46,
       "band": "H",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -15845,7 +15867,7 @@
       "agent_id": "FORMIC-9286b2f1323f026c",
       "hon184_slot": 82,
       "band": "O",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -15856,7 +15878,7 @@
       "agent_id": "FORMIC-95c757b7a684a4a2",
       "hon184_slot": 72,
       "band": "O",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -15867,7 +15889,7 @@
       "agent_id": "FORMIC-49466d02f53ab18b",
       "hon184_slot": 171,
       "band": "N",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -15878,7 +15900,7 @@
       "agent_id": "FORMIC-a985f1f9e8bd3d21",
       "hon184_slot": 178,
       "band": "N",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -15889,7 +15911,7 @@
       "agent_id": "FORMIC-c2dc76ab16a90574",
       "hon184_slot": 108,
       "band": "O",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -15900,7 +15922,7 @@
       "agent_id": "FORMIC-1093e97a5dbe616b",
       "hon184_slot": 139,
       "band": "N",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -15911,7 +15933,7 @@
       "agent_id": "FORMIC-5cdad7d7eced9db4",
       "hon184_slot": 40,
       "band": "H",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -15922,7 +15944,7 @@
       "agent_id": "FORMIC-a28b10297e92c192",
       "hon184_slot": 34,
       "band": "H",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -15933,7 +15955,7 @@
       "agent_id": "FORMIC-6235fceb0a493e4a",
       "hon184_slot": 44,
       "band": "H",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -15944,7 +15966,7 @@
       "agent_id": "FORMIC-31c6b649d29fa090",
       "hon184_slot": 114,
       "band": "O",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -15955,7 +15977,7 @@
       "agent_id": "FORMIC-bf8befec6f88e697",
       "hon184_slot": 117,
       "band": "O",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -15966,7 +15988,7 @@
       "agent_id": "FORMIC-c819e0785fae736d",
       "hon184_slot": 1,
       "band": "H",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -15977,7 +15999,7 @@
       "agent_id": "FORMIC-bdbebca289578361",
       "hon184_slot": 19,
       "band": "H",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -15988,7 +16010,7 @@
       "agent_id": "FORMIC-db4a1ec1f30d340e",
       "hon184_slot": 170,
       "band": "N",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -15999,7 +16021,7 @@
       "agent_id": "FORMIC-61d6ff8889b77d55",
       "hon184_slot": 65,
       "band": "O",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -16010,7 +16032,7 @@
       "agent_id": "FORMIC-269da256948c41d0",
       "hon184_slot": 183,
       "band": "N",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -16021,7 +16043,7 @@
       "agent_id": "FORMIC-18a53e86a280ef75",
       "hon184_slot": 39,
       "band": "H",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -16032,7 +16054,7 @@
       "agent_id": "FORMIC-3f4e396469268f8d",
       "hon184_slot": 53,
       "band": "H",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -16043,7 +16065,7 @@
       "agent_id": "FORMIC-6416facf58607c2a",
       "hon184_slot": 176,
       "band": "N",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -16054,7 +16076,7 @@
       "agent_id": "FORMIC-1de19fecb3e4fa3c",
       "hon184_slot": 141,
       "band": "N",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -16065,7 +16087,7 @@
       "agent_id": "FORMIC-620ce554e9a07daf",
       "hon184_slot": 53,
       "band": "H",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -16076,7 +16098,7 @@
       "agent_id": "FORMIC-f78937a8206c153a",
       "hon184_slot": 25,
       "band": "H",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -16087,7 +16109,7 @@
       "agent_id": "FORMIC-98f9ac820b9f252d",
       "hon184_slot": 115,
       "band": "O",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -16098,7 +16120,7 @@
       "agent_id": "FORMIC-b1d63ff287752e2f",
       "hon184_slot": 99,
       "band": "O",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -16109,7 +16131,7 @@
       "agent_id": "FORMIC-9d84f25f51a69349",
       "hon184_slot": 16,
       "band": "H",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -16120,7 +16142,7 @@
       "agent_id": "FORMIC-eb0deadf6dd1bb47",
       "hon184_slot": 120,
       "band": "O",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -16131,7 +16153,7 @@
       "agent_id": "FORMIC-d38d49924d9a41b8",
       "hon184_slot": 179,
       "band": "N",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -16142,7 +16164,7 @@
       "agent_id": "FORMIC-790b1d36dabf6b34",
       "hon184_slot": 127,
       "band": "N",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -16153,7 +16175,7 @@
       "agent_id": "FORMIC-5f38d5de74f6e6d4",
       "hon184_slot": 159,
       "band": "N",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -16164,7 +16186,7 @@
       "agent_id": "FORMIC-3b3faf10d66957a3",
       "hon184_slot": 57,
       "band": "H",
-      "observation_status": "UNCHANGED",
+      "observation_status": "UNKNOWN",
       "archived": false,
       "fork": false
     },
@@ -23991,7 +24013,7 @@
     },
     {
       "slot": 61,
-      "occupancy": 15
+      "occupancy": 16
     },
     {
       "slot": 62,
@@ -24371,7 +24393,7 @@
     },
     {
       "slot": 156,
-      "occupancy": 12
+      "occupancy": 13
     },
     {
       "slot": 157,
