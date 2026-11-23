@@ -1,6 +1,6 @@
 {
   "schema": "JANE_B103_V1",
-  "generated_at": "2026-11-23T07:45:55.743Z",
+  "generated_at": "2026-11-23T23:57:25.935Z",
   "domain_owner": "USER_DECLARED",
   "persistence_policy": "ALWAYS_ON",
   "bridge": {
@@ -8,7 +8,7 @@
     "state": "HTTP_ERROR",
     "http_status": 404,
     "page_title": null,
-    "checked_at": "2026-11-23T07:45:55.743Z"
+    "checked_at": "2026-11-23T23:57:25.935Z"
   },
   "children": [
     {
@@ -3186,6 +3186,14 @@
       "presence": "RESERVED",
       "first_seen": "2026-11-03T02:51:53.797Z",
       "home": "https://github.com/DavidWise01/gap-cycle"
+    },
+    {
+      "repo": "DavidWise01/gemini",
+      "formic": "FORMIC-aac7dd64f844456f",
+      "channel": "btf2:davidwise01/gemini",
+      "presence": "RESERVED",
+      "first_seen": "2026-11-23T23:57:25.887Z",
+      "home": "https://github.com/DavidWise01/gemini"
     },
     {
       "repo": "DavidWise01/general-relativity",

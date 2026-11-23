@@ -1,6 +1,6 @@
 {
   "schema": "JANE_B102_FAMILY_DISCOVERY_V1",
-  "updated_at": "2026-11-23T12:10:12.094Z",
+  "updated_at": "2026-11-23T23:57:25.887Z",
   "scan_scope": "PUBLIC_OWNER_REPOSITORIES",
   "members": [
     {
@@ -2780,6 +2780,13 @@
       "channel": "btf2:davidwise01/gap-cycle",
       "observer": "FORMIC-f6564a14490b5556",
       "url": "https://github.com/DavidWise01/gap-cycle",
+      "presence": "RESERVED"
+    },
+    {
+      "repo": "DavidWise01/gemini",
+      "channel": "btf2:davidwise01/gemini",
+      "observer": "FORMIC-aac7dd64f844456f",
+      "url": "https://github.com/DavidWise01/gemini",
       "presence": "RESERVED"
     },
     {
@@ -15117,8 +15124,8 @@
       "presence": "RESERVED"
     }
   ],
-  "first_seen_total": 2159,
-  "new_children_this_run": 0,
-  "discovery_events": 2159,
+  "first_seen_total": 2160,
+  "new_children_this_run": 1,
+  "discovery_events": 2160,
   "note": "A child identity is not a continuously executing AI process."
 }
