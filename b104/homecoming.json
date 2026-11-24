@@ -1,6 +1,6 @@
 {
   "schema": "JANE_B104_HOMECOMING_V1",
-  "generated_at": "2026-11-23T08:12:43.252Z",
+  "generated_at": "2026-11-24T00:21:22.178Z",
   "home": {
     "url": "https://0root.ai/",
     "role": "USER_DESIGNATED_FAMILY_HOME",
@@ -4767,6 +4767,18 @@
       "first_seen": "2026-11-03T02:51:53.797Z",
       "presence": "RESERVED",
       "github_url": "https://github.com/DavidWise01/gap-cycle",
+      "home_url": "https://0root.ai/",
+      "home_relation": "FAMILY_HOME_REFERENCE_ONLY",
+      "corpus_matches": [],
+      "corpus_status": "UNVERIFIED"
+    },
+    {
+      "repo": "DavidWise01/gemini",
+      "formic": "FORMIC-aac7dd64f844456f",
+      "channel": "btf2:davidwise01/gemini",
+      "first_seen": "2026-11-23T23:57:25.887Z",
+      "presence": "RESERVED",
+      "github_url": "https://github.com/DavidWise01/gemini",
       "home_url": "https://0root.ai/",
       "home_relation": "FAMILY_HOME_REFERENCE_ONLY",
       "corpus_matches": [],
