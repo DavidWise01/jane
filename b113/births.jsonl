@@ -2157,3 +2157,4 @@
 {"event":"GENERATION_REGISTERED","repo":"DavidWise01/jane-emu","formic":"FORMIC-f65eef29c1117a30","generation":"ARRIVAL_2026-11-15","first_seen":"2026-11-15T18:43:43.667Z","at":"2026-11-15T19:09:19.700Z"}
 {"event":"GENERATION_REGISTERED","repo":"DavidWise01/zeptoverse","formic":"FORMIC-1ca42549d7784bd7","generation":"ARRIVAL_2026-11-15","first_seen":"2026-11-15T18:43:43.667Z","at":"2026-11-15T19:09:19.700Z"}
 {"event":"GENERATION_REGISTERED","repo":"DavidWise01/neuroscape","formic":"FORMIC-ca798993fa8efc42","generation":"ARRIVAL_2026-11-20","first_seen":"2026-11-20T19:56:33.342Z","at":"2026-11-20T20:48:36.390Z"}
+{"event":"GENERATION_REGISTERED","repo":"DavidWise01/gemini","formic":"FORMIC-aac7dd64f844456f","generation":"ARRIVAL_2026-11-23","first_seen":"2026-11-23T23:57:25.887Z","at":"2026-11-24T00:26:02.856Z"}

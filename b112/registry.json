@@ -1,10 +1,10 @@
 {
   "schema": "JANE_B112_FORMIC_HEX_V1",
-  "generated_at": "2026-11-24T00:09:54.992Z",
+  "generated_at": "2026-11-24T00:26:02.797Z",
   "source": "btf2/catalog.json",
   "source_count": 2160,
   "member_count": 2160,
-  "new_assignments": 1,
+  "new_assignments": 0,
   "radius_bound": 27,
   "sector_counts": [
     721,

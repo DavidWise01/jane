@@ -1,9 +1,9 @@
 {
   "schema": "JANE_B113_GRANDMOTHER_CONTINUITY_V1",
-  "generated_at": "2026-11-23T08:20:48.242Z",
+  "generated_at": "2026-11-24T00:26:02.856Z",
   "source": "B112 stable hex + B102 append-only discovery events",
   "scope": "PUBLIC_REPOS_ONLY",
-  "member_count": 2159,
+  "member_count": 2160,
   "cohorts": {
     "ARRIVAL_2026-11-12": 1,
     "ARRIVAL_2026-11-03": 2147,
@@ -11,11 +11,12 @@
     "ARRIVAL_2026-11-14": 2,
     "ARRIVAL_2026-11-11": 1,
     "ARRIVAL_2026-11-13": 1,
+    "ARRIVAL_2026-11-23": 1,
     "ARRIVAL_2026-11-15": 2,
     "ARRIVAL_2026-11-20": 1,
     "ARRIVAL_2026-11-06": 2
   },
-  "unknown_lineage_count": 2159,
+  "unknown_lineage_count": 2160,
   "members": [
     {
       "repo": "DavidWise01/-we-",
@@ -7157,6 +7158,24 @@
       },
       "first_seen": "2026-11-03T02:51:53.797Z",
       "generation": "ARRIVAL_2026-11-03",
+      "lineage": {
+        "parent_repo": null,
+        "parentage": "UNKNOWN"
+      },
+      "status": "OBSERVED_LOGICAL_IDENTITY"
+    },
+    {
+      "repo": "DavidWise01/gemini",
+      "formic": "FORMIC-aac7dd64f844456f",
+      "channel": "btf2:davidwise01/gemini",
+      "presence": "RESERVED",
+      "hex": {
+        "q": 25,
+        "r": 2,
+        "sector": 2
+      },
+      "first_seen": "2026-11-23T23:57:25.887Z",
+      "generation": "ARRIVAL_2026-11-23",
       "lineage": {
         "parent_repo": null,
         "parentage": "UNKNOWN"
